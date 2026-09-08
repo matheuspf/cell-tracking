@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "study_id": "annotation-selection-v1",
+  "status": "planned_not_executed",
+  "source_repo_base": "08be34e4e67a20a48ae263d053c879fa7390d7c0",
+  "official_metric_snapshot": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "paths": {
+    "data": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "notebook_environment": "/kaggle/envs/cell-tracking-notebooks",
+    "work": "work/annotation-selection-v1",
+    "outputs": "/kaggle/working/cell-tracking/annotation-selection-v1"
+  },
+  "outer_split": "leave_one_embryo_out_both_directions",
+  "inner_split": "up_to_3_source_only_overlap_group_folds",
+  "freeze_both_directions_before_outer_reveal": true,
+  "seeds": [20260908, 314159],
+  "keep_fractions": [1.0, 0.9, 0.8, 0.7, 0.5, 0.3, 0.1],
+  "random_filter_seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "tabular": {
+    "families": ["constant", "logistic_regression", "hist_gradient_boosting"],
+    "logistic_C": [0.1, 1.0, 10.0],
+    "boosting_max_leaf_nodes": [7, 15],
+    "boosting_l2_regularization": [1.0],
+    "boosting_max_iter": 150,
+    "feature_groups": ["geometry_time", "appearance_quality", "predicted_temporal", "all"]
+  },
+  "image_probe": {
+    "families": ["small_patch_image_only", "small_patch_plus_tabular"],
+    "max_epochs_per_fit": 12,
+    "total_gpu_hours_cap": 12,
+    "early_stopping": "source_inner_only",
+    "centers": "predicted_not_ground_truth"
+  },
+  "policies": ["identity", "random_nodes", "random_tracklets", "quality_nodes", "quality_tracklets",
+    "membership_nodes", "membership_tracklets", "membership_tracklets_fork_protected",
+    "quality_tracklets_fork_protected"],
+  "tracklet_score_quantile": 0.9,
+  "fork_context_hops": 2,
+  "source_selection_tie_tolerance": 0.001,
+  "source_selection_tie_preference": "less_deletion_then_simpler_model",
+  "paired_cluster_bootstrap_draws": 2000,
+  "independent_census": {"initial_rois_per_embryo": 24, "human_labels_required_to_continue": false},
+  "soft_limits": {"gpu_gib": 20, "host_ram_gib": 32, "patch_cache_gib": 50, "new_outputs_gib": 150},
+  "promotion": {"minimum_pooled_score_delta": 0.002, "both_outer_directions_positive": true,
+    "gt_free_inference_required": true, "clean_provenance_required": true},
+  "stages": ["S000", "S010", "S020", "S030", "S040", "S050", "S060", "S070", "S080", "S090", "S100", "S110"],
+  "automatic_kaggle_submission": false,
+  "paid_external_calls": false,
+  "primary_seed": 20260908,
+  "secondary_seed_role": "robustness_only_not_hindsight_selection"
+}

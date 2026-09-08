@@ -1,0 +1,13 @@
+{
+  "study_id": "annotation-selection-v1",
+  "status": "planned_not_executed",
+  "competition_data_accessed_in_authoring_session": false,
+  "gpu_experiments_run_in_authoring_session": false,
+  "official_graph_integration_tests_run": false,
+  "synthetic_helper_tests": {"passed": 29, "failed": 0},
+  "real_annotation_prevalence": null,
+  "heldout_classifier_results": null,
+  "official_score_delta": null,
+  "next_stage": "S000",
+  "note": "No data experiment or score improvement is claimed. Local Codex must implement the protocol and integration adapters."
+}
