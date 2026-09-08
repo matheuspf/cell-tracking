@@ -85,6 +85,13 @@ ordinary setup and sync do not call a model API.
 
 See [development notes](docs/development.md) for environment updates and checks.
 
+## Interactive competition guide
+
+The [competition field guide](docs/guide/README.md) teaches the task through real
+microscopy controls, lineage examples, a score sandbox, embryo validation splits,
+and a notebook runtime planner. Its standalone HTML works offline; the source and
+rebuild instructions are tracked under `docs/guide/`.
+
 ## Public notebook mirrors
 
 Three notebooks with the highest verified current scores from the Code page are
