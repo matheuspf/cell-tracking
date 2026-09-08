@@ -1,0 +1,20 @@
+# Direct dependencies. requirements-local.txt is the resolved Python 3.12 lock.
+kaggle>=2.2,<3
+httpx>=0.28,<1
+playwright>=1.50,<2
+markdownify>=1,<2
+python-slugify>=8,<9
+beautifulsoup4>=4.12,<5
+pyyaml>=6,<7
+numpy>=2,<3
+pandas>=2,<4
+scipy>=1.14,<2
+scikit-image>=0.25,<1
+zarr>=3,<4
+tifffile
+pyarrow
+matplotlib>=3.9,<4
+ipykernel>=6,<8
+jupyterlab>=4,<5
+pytest>=8,<10
+ruff

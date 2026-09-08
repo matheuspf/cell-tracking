@@ -1,0 +1,51 @@
+{
+  "selected_at": "2026-09-08T14:46:48.189216+00:00",
+  "source": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/code?sortBy=scoreDescending",
+  "selection": "Highest current scores verified on the individual published-version pages. Excludes stale pre-rescore values in the Code listing.",
+  "archive_root": "/kaggle/notebooks/biohub-cell-tracking-during-development",
+  "environment": "/kaggle/envs/cell-tracking-notebooks",
+  "notebooks": [
+    {
+      "ref": "flexonafft/biohub-harmonic-fusion",
+      "scriptVersionId": 347965685,
+      "version": 29,
+      "public_score": "0.946",
+      "list_score": 0.946,
+      "source": "/code/flexonafft/biohub-harmonic-fusion",
+      "sources": [
+        "/datasets/pilkwang/biohub-deepcenter-unet3d-center-prior-v1",
+        "/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1",
+        "/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1",
+        "/competitions/biohub-cell-tracking-during-development"
+      ]
+    },
+    {
+      "ref": "redoctopusk/biohub-942tta",
+      "scriptVersionId": 347821442,
+      "version": 1,
+      "public_score": "0.946",
+      "list_score": 0.946,
+      "source": "/code/redoctopusk/biohub-942tta",
+      "sources": [
+        "/datasets/pilkwang/biohub-deepcenter-unet3d-center-prior-v1",
+        "/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1",
+        "/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1",
+        "/competitions/biohub-cell-tracking-during-development"
+      ]
+    },
+    {
+      "ref": "brucezheng666/biohub-942tta-repro-20260907",
+      "scriptVersionId": 347995146,
+      "version": 1,
+      "public_score": "0.945",
+      "list_score": 0.945,
+      "source": "/code/brucezheng666/biohub-942tta-repro-20260907",
+      "sources": [
+        "/datasets/pilkwang/biohub-deepcenter-unet3d-center-prior-v1",
+        "/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1",
+        "/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1",
+        "/competitions/biohub-cell-tracking-during-development"
+      ]
+    }
+  ]
+}

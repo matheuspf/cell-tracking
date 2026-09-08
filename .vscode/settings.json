@@ -1,0 +1,15 @@
+{
+  "python.defaultInterpreterPath": "${env:HOME}/.conda/envs/cell-tracking/bin/python",
+  "python.analysis.extraPaths": ["${workspaceFolder}/tools"],
+  "terminal.integrated.env.linux": {
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "terminal.integrated.profiles.linux": {
+    "conda-cell-tracking": {
+      "path": "/bin/zsh",
+      "args": ["-c", "eval \"$(conda shell.zsh hook)\" && conda activate cell-tracking && exec zsh"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "conda-cell-tracking"
+}
