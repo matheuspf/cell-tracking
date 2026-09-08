@@ -1,3 +1,6 @@
+<!-- local-execution-result -->
+Local execution is complete. See [measured results](../../results/annotation-selection-v1/README.md) and [reproduction instructions](../../docs/annotation-selection-v1.md). The original handover below is preserved.
+
 # Annotation-selection study v1
 
 **Status: handover only; no competition-data experiment has run in this PR.**

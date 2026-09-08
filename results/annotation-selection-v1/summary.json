@@ -1,5 +1,37 @@
 {
-  "annotation_estimated_coverage": [
+  "clean_primary": [
+    {
+      "annotation_recall": 0.9774203688181056,
+      "baseline_score": 0.7030718155462877,
+      "delta": 0.012257204720476644,
+      "embryo": "44b6",
+      "n": 71,
+      "phi": 0.021016934217791113,
+      "realized_keep": 0.9001344391989555,
+      "score": 0.7153290202667644
+    },
+    {
+      "annotation_recall": 0.9636710914029581,
+      "baseline_score": 0.6689079629333697,
+      "delta": 0.0010557123482151098,
+      "embryo": "6bba",
+      "n": 128,
+      "phi": 0.04659840811046204,
+      "realized_keep": 0.9003977944335492,
+      "score": 0.6699636752815848
+    },
+    {
+      "annotation_recall": 0.9658000405597242,
+      "baseline_score": 0.6741160444705704,
+      "delta": 0.002790679234791149,
+      "embryo": "pooled",
+      "n": 199,
+      "phi": 0.0343011567949106,
+      "realized_keep": 0.900249597939206,
+      "score": 0.6769067237053615
+    }
+  ],
+  "coverage": [
     {
       "annotated_edges": 19826,
       "annotated_nodes": 20197,
@@ -55,28 +87,46 @@
       "true_cell_prevalence": null
     }
   ],
-  "competition_data_accessed_in_authoring_session": false,
-  "competition_data_accessed_in_local_execution": true,
-  "gpu_experiments_run_in_authoring_session": false,
-  "gpu_experiments_run_in_local_execution": true,
-  "heldout_classifier_results": "/kaggle/working/cell-tracking/annotation-selection-v1/classifier_metrics.csv",
+  "created": "2026-09-08T21:39:13.827253+00:00",
+  "data_hash": "b235b4d1922f6e6b73614f4fd12d4fe1d881cedf067f55be8a9d4b700857db89",
+  "gt_unavailable_reproduction": true,
+  "independent_groups_per_embryo": 1,
   "local_dashboard": "/kaggle/working/cell-tracking/annotation-selection-v1/dashboard.html",
-  "local_execution_completed": true,
-  "local_execution_date": "2026-09-08T21:40:08.948452+00:00",
   "local_report": "/kaggle/working/cell-tracking/annotation-selection-v1/final_report.md",
-  "next_stage": null,
-  "note": "Protocol executed locally; fixed-setting fallback because independent source overlap groups could not be certified. True-cell prevalence remains unknown. See local final report and sanitized results.",
-  "official_graph_integration_tests_run": true,
-  "official_score_delta": {
-    "44b6": 0.012257204720476644,
-    "6bba": 0.0010557123482151098,
-    "pooled": 0.002790679234791149
-  },
-  "real_annotation_prevalence": null,
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "no_hidden_test_claim": true,
+  "no_submission_or_publication": true,
+  "primary_outcome": "gain_in_both_directions",
+  "public_diagnostic_primary": [
+    {
+      "baseline_score": 0.9125211431134657,
+      "delta": -0.034869954984375284,
+      "embryo": "44b6",
+      "n": 71,
+      "realized_keep": 0.9006676329331913,
+      "score": 0.8776511881290904
+    },
+    {
+      "baseline_score": 0.9115967648894652,
+      "delta": -0.03917890991922213,
+      "embryo": "6bba",
+      "n": 128,
+      "realized_keep": 0.9007952889103934,
+      "score": 0.872417854970243
+    },
+    {
+      "baseline_score": 0.9117740142186423,
+      "delta": -0.038451681246440494,
+      "embryo": "pooled",
+      "n": 199,
+      "realized_keep": 0.9007341387966723,
+      "score": 0.8733223329722019
+    }
+  ],
+  "schema_version": 1,
+  "source_selection": "preregistered_fixed_setting_fallback",
+  "split_hash": "ee0614076597db076eb1f227894dfd4d271846e02a31fe578eb2809d02f17504",
   "status": "promising_but_uncertain",
   "study_id": "annotation-selection-v1",
-  "synthetic_helper_tests": {
-    "failed": 0,
-    "passed": 29
-  }
+  "true_cell_prevalence": null
 }
