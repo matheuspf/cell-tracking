@@ -1,0 +1,31 @@
+{
+  "created": "2026-09-08T18:04:00.925683+00:00",
+  "data_manifest_hash": "fe17554f3fcdbda58b6c1455c0d625eae38a5723b988984378fcc476820909ed",
+  "environment_policy": "Isolated venv inherits notebook packages; existing environments unchanged",
+  "executable": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+  "gpu": "NVIDIA GeForce RTX 4090, 610.57.04, 24564 MiB",
+  "metric_files": {
+    "src/tracking_cellmot/division_metrics.py": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+    "src/tracking_cellmot/metrics.py": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444"
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "packages": {
+    "geff": "1.2.0.1.1",
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "polars": "1.42.0",
+    "psutil": "7.2.2",
+    "pyarrow": "25.0.1",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "zarr": "3.2.1"
+  },
+  "platform": "Linux-7.2.3-arch1-3-x86_64-with-glibc2.44",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "reference_manifest_hash": "b6b5a2d35156d26f84dec41254365139d79f2e62c7991c96237cec067778096c",
+  "repo_revision": "71a78579111c5606b0bf2bb13e5239bf63e20d85"
+}

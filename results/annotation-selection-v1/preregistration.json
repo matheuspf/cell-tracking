@@ -1,0 +1,180 @@
+{
+  "candidate_config_hash": "e9b6fcb7b8325234a23c248bde1e79e9fbfb1b225822c3d89e7981b20c654b00",
+  "class_weighting": false,
+  "controls": [
+    "groupwise_tracklet_label_shuffle",
+    "independent_tracklet_random_labels",
+    "post_lock_oracle"
+  ],
+  "created": "2026-09-08T18:26:11.930076+00:00",
+  "deviations_before_reveal": [
+    "No independent source inner groups can be certified from released metadata; fixed settings replace inner tuning, uncertainty cannot assume independent clips",
+    "Primary classical linker is one-to-one with no learned division rule; division recall ceiling is explicitly zero",
+    "Pilot chosen from image quantiles only, spanning both source directions; no outcomes viewed"
+  ],
+  "feature_schema_hash": "91e1f14c5d3fd99e8ac3306abcbe19e7f5ebdb287d35173d2853f40a54d4c0eb",
+  "image_architecture": "3-channel triplanar Conv2d 16/32/48 channels, global average pool, 32-wide head",
+  "image_batch_size": 256,
+  "image_checkpoint_choice": "fixed epoch 6; no validation-based selection due unresolved source overlap",
+  "image_epochs": 6,
+  "image_fit_candidates": 30000,
+  "image_jitter": "random shared x/y flips, random integer roll -1..1 with reflected input borders; applied to both labels",
+  "image_normalizer": "source-sample mean/std only",
+  "image_optimizer": "AdamW lr=0.001 weight_decay=0.001",
+  "image_seeds": [
+    20260908,
+    314159
+  ],
+  "original": {
+    "automatic_kaggle_submission": false,
+    "fork_context_hops": 2,
+    "freeze_both_directions_before_outer_reveal": true,
+    "image_probe": {
+      "centers": "predicted_not_ground_truth",
+      "early_stopping": "source_inner_only",
+      "families": [
+        "small_patch_image_only",
+        "small_patch_plus_tabular"
+      ],
+      "max_epochs_per_fit": 12,
+      "total_gpu_hours_cap": 12
+    },
+    "independent_census": {
+      "human_labels_required_to_continue": false,
+      "initial_rois_per_embryo": 24
+    },
+    "inner_split": "up_to_3_source_only_overlap_group_folds",
+    "keep_fractions": [
+      1.0,
+      0.9,
+      0.8,
+      0.7,
+      0.5,
+      0.3,
+      0.1
+    ],
+    "official_metric_snapshot": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+    "outer_split": "leave_one_embryo_out_both_directions",
+    "paid_external_calls": false,
+    "paired_cluster_bootstrap_draws": 2000,
+    "paths": {
+      "data": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+      "notebook_environment": "/kaggle/envs/cell-tracking-notebooks",
+      "outputs": "/kaggle/working/cell-tracking/annotation-selection-v1",
+      "work": "work/annotation-selection-v1"
+    },
+    "policies": [
+      "identity",
+      "random_nodes",
+      "random_tracklets",
+      "quality_nodes",
+      "quality_tracklets",
+      "membership_nodes",
+      "membership_tracklets",
+      "membership_tracklets_fork_protected",
+      "quality_tracklets_fork_protected"
+    ],
+    "primary_seed": 20260908,
+    "promotion": {
+      "both_outer_directions_positive": true,
+      "clean_provenance_required": true,
+      "gt_free_inference_required": true,
+      "minimum_pooled_score_delta": 0.002
+    },
+    "random_filter_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "schema_version": 1,
+    "secondary_seed_role": "robustness_only_not_hindsight_selection",
+    "seeds": [
+      20260908,
+      314159
+    ],
+    "soft_limits": {
+      "gpu_gib": 20,
+      "host_ram_gib": 32,
+      "new_outputs_gib": 150,
+      "patch_cache_gib": 50
+    },
+    "source_repo_base": "08be34e4e67a20a48ae263d053c879fa7390d7c0",
+    "source_selection_tie_preference": "less_deletion_then_simpler_model",
+    "source_selection_tie_tolerance": 0.001,
+    "stages": [
+      "S000",
+      "S010",
+      "S020",
+      "S030",
+      "S040",
+      "S050",
+      "S060",
+      "S070",
+      "S080",
+      "S090",
+      "S100",
+      "S110"
+    ],
+    "status": "planned_not_executed",
+    "study_id": "annotation-selection-v1",
+    "tabular": {
+      "boosting_l2_regularization": [
+        1.0
+      ],
+      "boosting_max_iter": 150,
+      "boosting_max_leaf_nodes": [
+        7,
+        15
+      ],
+      "families": [
+        "constant",
+        "logistic_regression",
+        "hist_gradient_boosting"
+      ],
+      "feature_groups": [
+        "geometry_time",
+        "appearance_quality",
+        "predicted_temporal",
+        "all"
+      ],
+      "logistic_C": [
+        0.1,
+        1.0,
+        10.0
+      ]
+    },
+    "tracklet_score_quantile": 0.9
+  },
+  "primary_keep": 0.9,
+  "primary_model": "hgb_all_leaf7",
+  "primary_policy": "membership_tracklets",
+  "primary_selection": "Fixed before outer outcomes; no valid inner groups, so no source tuning or early stopping",
+  "public_pilot_samples": [
+    "44b6_0113de3b",
+    "6bba_05b6850b"
+  ],
+  "sensitivity_models": [
+    "hgb_all_leaf7_ambiguous_excluded",
+    "hgb_all_leaf7_high_confidence"
+  ],
+  "split_hash": "ee0614076597db076eb1f227894dfd4d271846e02a31fe578eb2809d02f17504",
+  "tabular_max_fit_candidates": 120000,
+  "tabular_sampling": "uniform without replacement, natural prevalence, source only"
+}

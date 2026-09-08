@@ -1,0 +1,100 @@
+{
+  "outer_results_revealed": true,
+  "stages": {
+    "S000": {
+      "data_files_crc_verified": 24886,
+      "helper_tests": 29,
+      "inspection_environment_tests": 7,
+      "inspection_optional_skips": 2,
+      "status": "complete",
+      "study_environment_tests": 22,
+      "updated": "2026-09-08T21:40:08.947094+00:00",
+      "upstream_tests": 102
+    },
+    "S010": {
+      "conservative_groups": 2,
+      "embryos": 2,
+      "positive_overlap_pairs": 73,
+      "samples": 199,
+      "status": "complete",
+      "updated": "2026-09-08T18:26:11.930434+00:00"
+    },
+    "S020": {
+      "clean_samples": 199,
+      "public_graph_parity": true,
+      "public_provenance": "contaminated_diagnostic_only",
+      "public_samples": 199,
+      "public_spatial_exception_nodes": 6,
+      "status": "complete",
+      "updated": "2026-09-08T21:40:08.947362+00:00"
+    },
+    "S030": {
+      "one_to_one": true,
+      "outer_results_revealed": false,
+      "samples": 199,
+      "status": "complete",
+      "updated": "2026-09-08T18:26:25.625704+00:00"
+    },
+    "S040": {
+      "blinded_candidate_crops": 48,
+      "blinded_rois": 48,
+      "exact_true_cell_prevalence": null,
+      "offline_viewers_validated": true,
+      "status": "automated_audit_complete_manual_census_unavailable",
+      "updated": "2026-09-08T21:40:08.947745+00:00"
+    },
+    "S050": {
+      "directions": 2,
+      "models_per_direction": 25,
+      "selection": "fixed; source inner grouping unavailable",
+      "status": "complete",
+      "updated": "2026-09-08T18:28:06.246803+00:00"
+    },
+    "S060": {
+      "directions": 2,
+      "gpu": "RTX4090",
+      "image_fits_per_direction": 4,
+      "status": "complete",
+      "updated": "2026-09-08T18:28:26.478052+00:00"
+    },
+    "S070": {
+      "identity_test": true,
+      "policies": "all preregistered budgets",
+      "status": "complete",
+      "updated": "2026-09-08T18:36:03.879080+00:00"
+    },
+    "S080": {
+      "gt_unavailable_reproduction": true,
+      "samples": 199,
+      "source_inner_tuning_available": false,
+      "status": "complete_fixed_setting_fallback",
+      "updated": "2026-09-08T18:36:03.879264+00:00"
+    },
+    "S090": {
+      "public_samples": 199,
+      "public_score_rows": 64675,
+      "public_variants": 325,
+      "samples": 199,
+      "score_rows": 158205,
+      "status": "complete",
+      "updated": "2026-09-08T21:40:08.947560+00:00",
+      "variants": 795
+    },
+    "S100": {
+      "bootstrap_draws": 2000,
+      "independent_groups_per_embryo": 1,
+      "status": "complete_with_identifiability_limits",
+      "updated": "2026-09-08T21:39:15.958415+00:00"
+    },
+    "S110": {
+      "dashboard": "/kaggle/working/cell-tracking/annotation-selection-v1/dashboard.html",
+      "decision": "promising_but_uncertain",
+      "report": "/kaggle/working/cell-tracking/annotation-selection-v1/final_report.md",
+      "status": "complete",
+      "updated": "2026-09-08T21:40:09.196527+00:00"
+    }
+  },
+  "status": "promising_but_uncertain",
+  "study_id": "annotation-selection-v1",
+  "updated": "2026-09-08T21:40:09.196538+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "controls": [
+    "detector_confidence",
+    "random_nodes",
+    "random_tracklets",
+    "hindsight_oracle"
+  ],
+  "created": "2026-09-08T18:36:42.841686+00:00",
+  "fractions": [
+    1,
+    0.9,
+    0.8,
+    0.7,
+    0.5,
+    0.3,
+    0.1
+  ],
+  "inference_contains_gt": false,
+  "lane": "diagnostic_contaminated",
+  "model_ids": [
+    "hgb_all_leaf7",
+    "image_only_seed20260908",
+    "image_plus_tabular_seed20260908"
+  ],
+  "no_claim_of_clean_public_checkpoint_validation": true,
+  "policies": [
+    "nodes",
+    "tracklets",
+    "tracklets_fork_protected"
+  ],
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "source": "Frozen opposite-embryo clean-candidate selectors, transferred to public graph candidates without refitting"
+}

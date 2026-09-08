@@ -1,0 +1,244 @@
+{
+  "created": "2026-09-08T22:21:31.268199+00:00",
+  "passed": true,
+  "exported_hashes_verified": 32,
+  "csv_rows": {
+    "matched_budget_summary.csv": 78,
+    "calibration.csv": 323,
+    "matching_summary.csv": 2,
+    "coverage.csv": 3,
+    "random_exact_seed_results.csv": 3,
+    "uncertainty.csv": 8,
+    "public_retention.csv": 975,
+    "classifier_metrics.csv": 184,
+    "feature_profiles.csv": 277,
+    "retention.csv": 2385,
+    "image_seed_results.csv": 12
+  },
+  "relative_links_checked": 119,
+  "individual_coordinate_fields_absent": true,
+  "html_sha256": "820d9cae34376692d0b2e569e9a3608b3e85f76d60e0591a70dc556198cecc5f",
+  "offline": true,
+  "browser_checks": [
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "clean",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "44b6",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "6bba",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "hgb_all_leaf7",
+      "policy": "tracklets_fork_protected"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "nodes"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets"
+    },
+    {
+      "lane": "public",
+      "embryo": "pooled",
+      "model": "image_only_seed20260908",
+      "policy": "tracklets_fork_protected"
+    }
+  ],
+  "mobile_no_horizontal_overflow": true,
+  "downloaded_embedded_plot_data": true,
+  "javascript_errors": [],
+  "network_requests": []
+}

@@ -1,9 +1,9 @@
 <!-- local-execution-result -->
-Local execution is complete. See [measured results](../../results/annotation-selection-v1/README.md) and [reproduction instructions](../../docs/annotation-selection-v1.md). The original handover below is preserved.
+Local execution is complete. **Start with [NEXT_AGENT.md](NEXT_AGENT.md)** for the measured results, stronger-public-baseline comparison, portable report/dashboard, and [FOCUS-3D assessment](FOCUS3D.md). See [reproduction instructions](../../docs/annotation-selection-v1.md) for the existing implementation. The original execution brief below is preserved as historical context; do not restart the completed experiment from it.
 
 # Annotation-selection study v1
 
-**Status: handover only; no competition-data experiment has run in this PR.**
+**Historical status at initial handover: no experiment had run. Superseded by the completed local execution on 2026-09-08.**
 
 Goal: measure whether annotation membership is predictable on unseen embryos,
 and whether label-blind filtering of a frozen tracking graph improves the actual
