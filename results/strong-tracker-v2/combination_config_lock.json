@@ -1,0 +1,15 @@
+{
+  "E": "E_hgb_m0.5",
+  "created": "2026-09-09T15:09:32.808644+00:00",
+  "filtering_transfer": "Filters trained on original final graph; applied to the association-repaired graph with new groups/protection. Explicit transfer arms.",
+  "filters": [
+    "native_quality_0.99",
+    "native_geometry_0.98",
+    "risk_threshold",
+    "temporal_0.99"
+  ],
+  "image_model_lock_sha256": "57bc930a2168252a3957d2a1939917c7580a6949f6e0799ddf88b17ff6ffc4aa",
+  "model_lock_sha256": "33a625799b278b3afc6c8415c8737381463657494934d106832aa9ef938a4ec6",
+  "risk_model_lock_sha256": "040e1e5bfc2c933b39d6a03827327e3816f9e014501dbae13627da23523e3be1",
+  "selection": "Exploratory complementarity check after inspecting main-arm results; not a prespecified primary comparison"
+}

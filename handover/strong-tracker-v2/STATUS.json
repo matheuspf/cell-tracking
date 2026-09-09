@@ -1,0 +1,16 @@
+{
+  "study_id": "strong-tracker-v2",
+  "status": "planned_not_executed",
+  "reviewed_source_commit": "f14c9eb368a80ce4cc7aaebae016fb182b1b6978",
+  "authoring_validation": {
+    "arithmetic_unit_tests_passed": 16,
+    "real_data_experiments_run": false,
+    "gpu_training_run": false,
+    "official_graph_rescoring_run": false
+  },
+  "delivery": "GitHub branch handover/strong-tracker-v2 based on handover/annotation-selection-v1",
+  "next_stage": "V200",
+  "main_target": "Harmonic Fusion strong baseline, not the classical feasibility tracker",
+  "base_branch": "handover/annotation-selection-v1",
+  "branch": "handover/strong-tracker-v2"
+}

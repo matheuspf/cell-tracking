@@ -1,0 +1,42 @@
+{
+  "caps": {
+    "aggregate_ram_gib": 128,
+    "cpu_quota_cores": 40.96,
+    "gpu_gib": 20,
+    "minimum_free_disk_gib": 20,
+    "new_v2_disk_gib": 60,
+    "nonfocus_gpu_hours": 16
+  },
+  "created": "2026-09-09T15:42:53.878369+00:00",
+  "cuda": "12.8",
+  "executable": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_bytes": 25250627584,
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "metric_sources": {
+    "src/tracking_cellmot/__init__.py": "f9df2098dd85934d0b0d48d477420b1f9ed20a9a55ca6294a1874b964e9166e6",
+    "src/tracking_cellmot/division_metrics.py": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+    "src/tracking_cellmot/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "src/tracking_cellmot/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "src/tracking_cellmot/metrics.py": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+    "src/tracking_cellmot/models/__init__.py": "0861b0bf0d5a574dd0d582c529b763e75c8d271f4df48df15fae3cf5b5fbb127",
+    "src/tracking_cellmot/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "src/tracking_cellmot/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  },
+  "packages": {
+    "highspy": null,
+    "joblib": "1.6.0",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "polars": "1.42.0",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "zarr": "3.2.1"
+  },
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "root_remote_environment_sha256": "213e7af908f567e5bd4a54c3659298a98cab85d634f3c585b35163527a6bcc1d",
+  "study_metadata_exception": "Pinned evaluator validated on existing torch 2.8.0+cu128; upstream package metadata requests a later torch. Shared stack unchanged."
+}

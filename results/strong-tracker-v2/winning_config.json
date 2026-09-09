@@ -1,0 +1,20 @@
+{
+  "annotation_reads": 0,
+  "byte_identical_to_scored_graphs": true,
+  "changes": [
+    "Set OUTPUT_MOTION_RELINK=False; retain original learned associations",
+    "Clip serialized z/y/x to the image bounds; separately rescored with no score change"
+  ],
+  "consecutive_frames": true,
+  "created": "2026-09-09T15:20:57.837991+00:00",
+  "duplicate_edges": 0,
+  "forbidden_merges": 0,
+  "full_sample_set": true,
+  "notebook_sha256": "444c24a274ee752fae332b63fae2e8e328131d046daa27972843592889966e3b",
+  "original_neural_predictions": "Reused sealed Harmonic Fusion neural GEFF graphs, exported into v2 raw NPZ cache",
+  "original_other_settings": "Unchanged: edge validity, single-parent guard, gap/gap2 closing, DeepCenter-gated safe divisions, pruning, smoothing",
+  "provenance": "Public upstream checkpoint contamination remains",
+  "selection": "Exploratory stage ablation, chosen after diagnostic census; not an untouched prespecified primary winner",
+  "strict_coordinates": true,
+  "variant": "bypass_motion_bounds"
+}

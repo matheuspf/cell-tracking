@@ -1,0 +1,410 @@
+{
+  "both_directions_frozen": true,
+  "created": "2026-09-09T14:36:58.197246+00:00",
+  "hypotheses": "Top four physical/native alternatives; frozen retained continuation; distinct daughter persistence; bounded component ILP",
+  "model_lock_sha256": "33a625799b278b3afc6c8415c8737381463657494934d106832aa9ef938a4ec6",
+  "primary": {
+    "D": "D_temporal_p0.05",
+    "E": "E_hgb_m1.5",
+    "F": "F_risk_threshold"
+  },
+  "scoring_has_started": false,
+  "variants": {
+    "DEF_native_transfer": {
+      "D": "D_temporal_p0.05",
+      "E": "E_hgb_m1.5",
+      "F": "F_hgb_quality_fork_protected_r0.99",
+      "filter_graph_version": "trained on original final graph; transfer diagnostic",
+      "kind": "DEF"
+    },
+    "DE_primary": {
+      "D": "D_temporal_p0.05",
+      "E": "E_hgb_m1.5",
+      "kind": "DE"
+    },
+    "D_graph_p0.02": {
+      "kind": "D",
+      "model": "D_graph",
+      "threshold": 0.02
+    },
+    "D_graph_p0.05": {
+      "kind": "D",
+      "model": "D_graph",
+      "threshold": 0.05
+    },
+    "D_graph_p0.1": {
+      "kind": "D",
+      "model": "D_graph",
+      "threshold": 0.1
+    },
+    "D_hgb_p0.02": {
+      "kind": "D",
+      "model": "D_hgb",
+      "threshold": 0.02
+    },
+    "D_hgb_p0.05": {
+      "kind": "D",
+      "model": "D_hgb",
+      "threshold": 0.05
+    },
+    "D_hgb_p0.1": {
+      "kind": "D",
+      "model": "D_hgb",
+      "threshold": 0.1
+    },
+    "D_score_p0.02": {
+      "kind": "D",
+      "model": "D_score",
+      "threshold": 0.02
+    },
+    "D_score_p0.05": {
+      "kind": "D",
+      "model": "D_score",
+      "threshold": 0.05
+    },
+    "D_score_p0.1": {
+      "kind": "D",
+      "model": "D_score",
+      "threshold": 0.1
+    },
+    "D_temporal_p0.02": {
+      "kind": "D",
+      "model": "D_temporal",
+      "threshold": 0.02
+    },
+    "D_temporal_p0.05": {
+      "kind": "D",
+      "model": "D_temporal",
+      "threshold": 0.05
+    },
+    "D_temporal_p0.1": {
+      "kind": "D",
+      "model": "D_temporal",
+      "threshold": 0.1
+    },
+    "E_hgb_m0.5": {
+      "kind": "E",
+      "margin": 0.5,
+      "model": "E_hgb"
+    },
+    "E_hgb_m1.5": {
+      "kind": "E",
+      "margin": 1.5,
+      "model": "E_hgb"
+    },
+    "E_logistic_m0.5": {
+      "kind": "E",
+      "margin": 0.5,
+      "model": "E_logistic"
+    },
+    "E_logistic_m1.5": {
+      "kind": "E",
+      "margin": 1.5,
+      "model": "E_logistic"
+    },
+    "E_native_m0.5": {
+      "kind": "E",
+      "margin": 0.5,
+      "model": "E_native"
+    },
+    "E_native_m1.5": {
+      "kind": "E",
+      "margin": 1.5,
+      "model": "E_native"
+    },
+    "F_hgb_geometry_tracklet_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_geometry_tracklet_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_geometry"
+    },
+    "F_hgb_quality_fork_protected_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_fork_protected_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "fork_protected",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_node_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "node",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_segment_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "segment",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_hgb_quality_tracklet_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_hgb_quality"
+    },
+    "F_logistic_quality_tracklet_r0.5": {
+      "keep": 0.5,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.7": {
+      "keep": 0.7,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.8": {
+      "keep": 0.8,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.9": {
+      "keep": 0.9,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.95": {
+      "keep": 0.95,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.98": {
+      "keep": 0.98,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.99": {
+      "keep": 0.99,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_logistic_quality_tracklet_r0.995": {
+      "keep": 0.995,
+      "kind": "F",
+      "mode": "tracklet",
+      "model": "F_logistic_quality"
+    },
+    "F_v1_transfer_control": {
+      "kind": "transfer"
+    },
+    "identity": {
+      "kind": "identity"
+    }
+  }
+}

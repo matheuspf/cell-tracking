@@ -1,0 +1,50 @@
+{
+  "cached_repair_timings": {
+    "identity": {
+      "44b6": {
+        "clips_missing_timing": 2,
+        "clips_timed": 69,
+        "clips_total": 71,
+        "summed_worker_seconds": 2269.521780846175
+      },
+      "6bba": {
+        "clips_missing_timing": 0,
+        "clips_timed": 128,
+        "clips_total": 128,
+        "summed_worker_seconds": 2375.576667740941
+      },
+      "pooled": {
+        "clips_missing_timing": 2,
+        "clips_timed": 197,
+        "clips_total": 199,
+        "summed_worker_seconds": 4645.098448587116
+      }
+    },
+    "no_motion": {
+      "44b6": {
+        "clips_missing_timing": 0,
+        "clips_timed": 71,
+        "clips_total": 71,
+        "summed_worker_seconds": 706.6281422097236
+      },
+      "6bba": {
+        "clips_missing_timing": 0,
+        "clips_timed": 128,
+        "clips_total": 128,
+        "summed_worker_seconds": 738.4838325819001
+      },
+      "pooled": {
+        "clips_missing_timing": 0,
+        "clips_timed": 199,
+        "clips_total": 199,
+        "summed_worker_seconds": 1445.1119747916237
+      }
+    }
+  },
+  "interpretation": "Sum of per-clip worker wall time, excluding cached neural inference; parallel execution means this is not elapsed study duration.",
+  "minimum_free_disk_gib": 77.96818923950195,
+  "official_evaluation_seconds": "Summed per-variant per-sample elapsed scorer time in operating_points.csv",
+  "peak_aggregate_rss_gib": 21.45526123046875,
+  "peak_gpu_used_gib": 3.5478515625,
+  "temporal_gpu_synchronized_training_hours": 0.09813410122995264
+}

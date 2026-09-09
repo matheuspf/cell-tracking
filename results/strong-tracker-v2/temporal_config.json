@@ -1,0 +1,36 @@
+{
+  "augmentation": "Shared intensity gain only; no independent panel transforms or rolled borders",
+  "batch_size": 256,
+  "checkpoint": "Fixed final step; stop early only for nonfinite loss, resource cap, or GPU failure",
+  "created": "2026-09-09T14:52:17.805448+00:00",
+  "feature_geometry": false,
+  "frames": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "full_context_um": 26.0,
+  "learning_rate": 0.0003,
+  "local_context_um": 13.0,
+  "max_gpu_allocated_gib": 20,
+  "max_nonfocus_gpu_hours": 16,
+  "negative_sampling": "Uniform predicted tracklet strata; inverse selection weights restore natural negative population",
+  "optimizer": "AdamW",
+  "panels": [
+    "XY",
+    "XZ",
+    "YZ"
+  ],
+  "positive_group_fractions": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "positive_sampling": "Every positive in chosen source tracklet groups; deterministic shuffled cycles",
+  "scope": "Exploratory native annotation membership, not biological cell truth",
+  "seed": 20260909,
+  "steps": 5000,
+  "weight_decay": 0.01
+}
