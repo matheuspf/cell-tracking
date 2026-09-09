@@ -1,0 +1,58 @@
+{
+  "source_repo": "matheuspf/cell-tracking",
+  "source_branch": "handover/annotation-selection-v1",
+  "source_commit": "f14c9eb368a80ce4cc7aaebae016fb182b1b6978",
+  "metric_commit": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "evidence_date": "2026-09-08",
+  "source_paths": [
+    "results/annotation-selection-v1/public_summary.json",
+    "results/annotation-selection-v1/README.md",
+    "results/annotation-selection-v1/preregistration.json",
+    "tools/annotation_selection/train.py",
+    "tools/annotation_selection/public_analysis.py"
+  ],
+  "public_pooled": {
+    "n": 199,
+    "candidate_nodes": 4133687,
+    "matched_nodes": 130959,
+    "gt_nodes": 133318,
+    "edge_tp": 122201,
+    "edge_fp": 6885,
+    "edge_fn": 6682,
+    "edge_jaccard": 0.9000721819574569,
+    "adjusted_edge_jaccard": 0.9024998206702552,
+    "division_tp": 23,
+    "division_fp": 97,
+    "division_fn": 128,
+    "score": 0.9117740142186423,
+    "count_ratio_of_sums": 0.8748327290096732,
+    "filter_score": 0.873322,
+    "filter_score_is_rounded": true
+  },
+  "clean_pooled": {
+    "score": 0.674116,
+    "filtered_score": 0.676907,
+    "delta": 0.002790679234791149,
+    "score_values_rounded_in_report": true
+  },
+  "public_selection_comparison": {
+    "learned_or_confidence_settings": 72,
+    "settings_improving_pooled_score": 0,
+    "best_hindsight_score_rounded": 0.911222
+  },
+  "probe_sampling": {
+    "image_candidates_per_source": 30000,
+    "image_epochs": 6,
+    "tabular_candidates_per_source": 120000,
+    "classical_candidate_prevalence": {
+      "44b6": 0.0066036423820439605,
+      "6bba": 0.04638501247698825
+    }
+  },
+  "caveats": [
+    "Public checkpoints trained or selected on supplied embryos; diagnostic not clean OOF.",
+    "Source values copied from committed aggregate artifacts, not recomputed from microscopy here.",
+    "v1 outcomes have been seen; v2 is exploratory development, not an untouched holdout.",
+    "No v2 data/GPU experiment has run."
+  ]
+}

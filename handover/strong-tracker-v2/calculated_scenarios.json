@@ -1,0 +1,263 @@
+{
+  "status": "calculated_scenarios_not_experiment_results",
+  "source_commit": "f14c9eb368a80ce4cc7aaebae016fb182b1b6978",
+  "baseline_score": 0.9117740142186423,
+  "division_scenarios": [
+    {
+      "division_tp": 23,
+      "division_fp": 97,
+      "division_fn": 128,
+      "division_jaccard": 0.09274193548387097,
+      "score": 0.9117740142186423,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.0
+    },
+    {
+      "division_tp": 23,
+      "division_fp": 0,
+      "division_fn": 128,
+      "division_jaccard": 0.152317880794702,
+      "score": 0.9177316087497255,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.005957594531083132
+    },
+    {
+      "division_tp": 50,
+      "division_fp": 70,
+      "division_fn": 101,
+      "division_jaccard": 0.22624434389140272,
+      "score": 0.9251242550593956,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.013350240840753202
+    },
+    {
+      "division_tp": 60,
+      "division_fp": 60,
+      "division_fn": 91,
+      "division_jaccard": 0.2843601895734597,
+      "score": 0.9309358396276012,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.019161825408958832
+    },
+    {
+      "division_tp": 75,
+      "division_fp": 50,
+      "division_fn": 76,
+      "division_jaccard": 0.373134328358209,
+      "score": 0.9398132535060761,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.028039239287433793
+    },
+    {
+      "division_tp": 80,
+      "division_fp": 40,
+      "division_fn": 71,
+      "division_jaccard": 0.418848167539267,
+      "score": 0.944384637424182,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.032610623205539646
+    },
+    {
+      "division_tp": 100,
+      "division_fp": 40,
+      "division_fn": 51,
+      "division_jaccard": 0.5235602094240838,
+      "score": 0.9548558416126636,
+      "assumption": "adjusted edge contribution unchanged; counts are scenarios",
+      "score_delta": 0.04308182739402122
+    }
+  ],
+  "filtering_requirements": [
+    {
+      "keep": 1.0,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.0,
+      "required_uniform_tp_retention": 1.0,
+      "independent_endpoint_recall_approximation": 1.0,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 1.0,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.0,
+      "required_uniform_tp_retention": 1.0265928030680118,
+      "independent_endpoint_recall_approximation": 1.0132091605724909,
+      "feasible_by_retention_alone": false,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.99,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.0008757957948294744,
+      "required_uniform_tp_retention": 0.9990305297388296,
+      "independent_endpoint_recall_approximation": 0.9995151473283582,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.99,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.0008757957948294744,
+      "required_uniform_tp_retention": 1.0255975518751057,
+      "independent_endpoint_recall_approximation": 1.0127179034040554,
+      "feasible_by_retention_alone": false,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.95,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.0043789789741473725,
+      "required_uniform_tp_retention": 0.9951713735331948,
+      "independent_endpoint_recall_approximation": 0.9975827652546905,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.95,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.0043789789741473725,
+      "required_uniform_tp_retention": 1.021635769888486,
+      "independent_endpoint_recall_approximation": 1.0107599961852893,
+      "feasible_by_retention_alone": false,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.9,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.008757957948294735,
+      "required_uniform_tp_retention": 0.9903891542505441,
+      "independent_endpoint_recall_approximation": 0.9951829752616069,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.9,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.008757957948294735,
+      "required_uniform_tp_retention": 1.0167263779902236,
+      "independent_endpoint_recall_approximation": 1.0083285069808468,
+      "feasible_by_retention_alone": false,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.8,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.01751591589658947,
+      "required_uniform_tp_retention": 0.9809612866384738,
+      "independent_endpoint_recall_approximation": 0.9904348977285048,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.8,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.01751591589658947,
+      "required_uniform_tp_retention": 1.0070477969513942,
+      "independent_endpoint_recall_approximation": 1.0035177113291993,
+      "feasible_by_retention_alone": false,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.7,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.026273873844884214,
+      "required_uniform_tp_retention": 0.9717112209356873,
+      "independent_endpoint_recall_approximation": 0.9857541381783225,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.7,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.026273873844884214,
+      "required_uniform_tp_retention": 0.9975517460730073,
+      "independent_endpoint_recall_approximation": 0.9987751228745174,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.5,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.043789789741473684,
+      "required_uniform_tp_retention": 0.9537247484705863,
+      "independent_endpoint_recall_approximation": 0.9765883208755808,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.5,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.043789789741473684,
+      "required_uniform_tp_retention": 0.9790869628877537,
+      "independent_endpoint_recall_approximation": 0.9894882328192456,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.3,
+      "target_score_gain": 0.0,
+      "count_only_max_gain_under_assumptions": 0.06130570563806315,
+      "required_uniform_tp_retention": 0.9363920376417808,
+      "independent_endpoint_recall_approximation": 0.9676735181050378,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    },
+    {
+      "keep": 0.3,
+      "target_score_gain": 0.024,
+      "count_only_max_gain_under_assumptions": 0.06130570563806315,
+      "required_uniform_tp_retention": 0.961293326693243,
+      "independent_endpoint_recall_approximation": 0.9804556729874344,
+      "feasible_by_retention_alone": true,
+      "assumption": "same fractional TP/node retention in every sample; fixed FP/divisions; no clipping/rematching effects"
+    }
+  ],
+  "association_scenarios": [
+    {
+      "corrected_wrong_links": 0,
+      "edge_tp": 122201,
+      "edge_fp": 6885,
+      "edge_fn": 6682,
+      "raw_edge_jaccard": 0.9000721819574569,
+      "assumption": "each repair replaces one FP by one missing GT edge; not an adjusted score",
+      "raw_edge_jaccard_delta": 0.0
+    },
+    {
+      "corrected_wrong_links": 500,
+      "edge_tp": 122701,
+      "edge_fp": 6385,
+      "edge_fn": 6182,
+      "raw_edge_jaccard": 0.907095543661472,
+      "assumption": "each repair replaces one FP by one missing GT edge; not an adjusted score",
+      "raw_edge_jaccard_delta": 0.007023361704015185
+    },
+    {
+      "corrected_wrong_links": 1000,
+      "edge_tp": 123201,
+      "edge_fp": 5885,
+      "edge_fn": 5682,
+      "raw_edge_jaccard": 0.914171019826665,
+      "assumption": "each repair replaces one FP by one missing GT edge; not an adjusted score",
+      "raw_edge_jaccard_delta": 0.01409883786920818
+    },
+    {
+      "corrected_wrong_links": 1500,
+      "edge_tp": 123701,
+      "edge_fp": 5385,
+      "edge_fn": 5182,
+      "raw_edge_jaccard": 0.9212991926594573,
+      "assumption": "each repair replaces one FP by one missing GT edge; not an adjusted score",
+      "raw_edge_jaccard_delta": 0.021227010702000393
+    },
+    {
+      "corrected_wrong_links": 2000,
+      "edge_tp": 124201,
+      "edge_fp": 4885,
+      "edge_fn": 4682,
+      "raw_edge_jaccard": 0.9284806530709886,
+      "assumption": "each repair replaces one FP by one missing GT edge; not an adjusted score",
+      "raw_edge_jaccard_delta": 0.02840847111353173
+    }
+  ]
+}

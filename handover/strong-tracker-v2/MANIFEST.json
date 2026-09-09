@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "handover_not_executed",
+  "files": {
+    "handover/strong-tracker-v2/CODEX_PROMPT.md": {
+      "sha256": "ef406e16e351d5c2c5f9ab70ee27aee96c9780c376b8ec4d765cdc6d592a58d7",
+      "bytes": 3684
+    },
+    "handover/strong-tracker-v2/EXPERIMENTS.md": {
+      "sha256": "efa3dc0770ac8037b5cdd71c2faa6aea1b00d8bdd9c89731603f94c9423e45c5",
+      "bytes": 17476
+    },
+    "handover/strong-tracker-v2/README.md": {
+      "sha256": "dd0a9a615d96762a2398b0aff61b239c9d2576088146aca0a02a3a208b1d1665",
+      "bytes": 2737
+    },
+    "handover/strong-tracker-v2/REVIEW.md": {
+      "sha256": "b8320bc43f1e4581997ffd002894421848eabba5c6dc3e14d2e66130a887c760",
+      "bytes": 8833
+    },
+    "handover/strong-tracker-v2/STATUS.json": {
+      "sha256": "354ca9213626d3fc1e2913d1d19f94be4e59aba21c6a10deeb88f708d5351f57",
+      "bytes": 642
+    },
+    "handover/strong-tracker-v2/calculated_scenarios.json": {
+      "sha256": "2f7719892ce4c25d6f5e310680f0efed6674dd945d47b79af92953d10ecd123a",
+      "bytes": 10695
+    },
+    "handover/strong-tracker-v2/headroom.py": {
+      "sha256": "6a39a33ef3e4f7fa31697c6b9a3df8c2a3f1579e7e8a5c0b7f3014d95120a7a6",
+      "bytes": 5458
+    },
+    "handover/strong-tracker-v2/measured_baseline.json": {
+      "sha256": "2a2335e31eef16ebae3b8ecd7c7e63f1b5b23eae472dc1556c93c1fc93dc5d52",
+      "bytes": 1972
+    },
+    "handover/strong-tracker-v2/test_headroom.py": {
+      "sha256": "584e2d105697192fdcb3d8aa82c983cfff868573fefa326787fd78de8f3bf44d",
+      "bytes": 3768
+    }
+  },
+  "unit_tests_passed": 16
+}
