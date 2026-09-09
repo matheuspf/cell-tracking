@@ -1,0 +1,16 @@
+{
+  "study_id": "multidata-training-v4",
+  "status": "planned_not_executed",
+  "next_stage": "W400",
+  "reviewed_parent": "292ecc2569f3a16676de92d80e382be02024d904",
+  "incumbent_score": 0.934802374260586,
+  "authoring_validation": {
+    "reference_tests_passed": 40,
+    "competition_data_read": false,
+    "external_raw_data_read": false,
+    "training_run": false,
+    "official_graph_evaluation_run": false
+  },
+  "new_score": null,
+  "external_data_gain": null
+}

@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "source_of_record": "docs/external-data-guide/dataset_inventory.json",
+  "snapshot": "2026-09-08_prepared_documentation_2026-09-09",
+  "runtime_reverification_required": true,
+  "records": [
+    {
+      "id": "synthetic_static",
+      "count": 1539,
+      "centers": 423853,
+      "source_path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/static",
+      "prepared": "synthetic/vol_*_labels.npz",
+      "role": "center_image_pretraining",
+      "images": true,
+      "temporal_labels": false,
+      "label_quality": "generated_dense_centers",
+      "use_status": "CC0_declaration_recorded_verify_archive",
+      "calibration_dependencies": [
+        "44b6"
+      ]
+    },
+    {
+      "id": "synthetic_sequences",
+      "count": 2174,
+      "nodes": 4056226,
+      "edges": 3460295,
+      "division_parents": 165267,
+      "source_path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/sequences",
+      "prepared": "synthetic/seq_*_labels.npz",
+      "role": "dense_image_edge_event_pretraining",
+      "images": true,
+      "temporal_labels": true,
+      "label_quality": "generated_dense_graph",
+      "grid": "already_6x64x64x64_images_native_label_yx_divide_by_4",
+      "use_status": "CC0_declaration_recorded_verify_archive",
+      "calibration_dependencies": [
+        "44b6"
+      ]
+    },
+    {
+      "id": "zoo_zebrafish",
+      "nodes": 11851323,
+      "division_parents": 159053,
+      "prepared": "zoo/zebrafish_graph.npz",
+      "role": "primary_weak_geometry",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_zebrafish_acquisition"
+    },
+    {
+      "id": "zoo_drosophila",
+      "nodes": 1877876,
+      "division_parents": 74760,
+      "prepared": "zoo/drosophila_graph.npz",
+      "role": "optional_multispecies_weak_geometry",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_drosophila_acquisition"
+    },
+    {
+      "id": "zoo_mouse",
+      "nodes": 7349203,
+      "division_parents": 0,
+      "prepared": "zoo/mouse_graph.npz",
+      "role": "optional_continuity_only_no_event_loss",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_mouse_acquisition"
+    },
+    {
+      "id": "zoo_ascidian",
+      "nodes": 17052,
+      "division_parents": 334,
+      "prepared": "zoo/ascidian_graph.npz",
+      "role": "optional_multispecies_weak_geometry",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_ascidian_acquisition"
+    },
+    {
+      "id": "zoo_elegans",
+      "nodes": 110899,
+      "division_parents": 665,
+      "prepared": "zoo/elegans_graph.npz",
+      "role": "optional_multispecies_weak_geometry",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_elegans_acquisition"
+    },
+    {
+      "id": "zoo_tribolium",
+      "nodes": 305622,
+      "division_parents": 10969,
+      "prepared": "zoo/tribolium_graph.npz",
+      "role": "optional_multispecies_weak_geometry",
+      "images": false,
+      "temporal_labels": true,
+      "label_quality": "experimental_tracking_output_weak_not_manual_dense_truth",
+      "use_status": "per_source_terms_audit",
+      "physical_scale_verified": false,
+      "frame_duration_verified": false,
+      "alias_group": "zoo_tribolium_acquisition"
+    },
+    {
+      "id": "riken_animal_a",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_a_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    },
+    {
+      "id": "riken_animal_b",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_b_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    },
+    {
+      "id": "riken_animal_c",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_c_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": true
+    },
+    {
+      "id": "riken_dorsal",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_dorsal_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    },
+    {
+      "id": "riken_in_toto_mzoep",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_in_toto_mzoep_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    },
+    {
+      "id": "riken_in_toto_wt",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_in_toto_wt_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    },
+    {
+      "id": "riken_ventral",
+      "source_path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_ventral_bdml3.0.zip",
+      "role": "audit_only",
+      "images": false,
+      "temporal_labels": "not_found_in_animal_c_uninspected_others",
+      "use_status": "CC_BY_NC_SA_use_case_unresolved",
+      "deep_audit": false
+    }
+  ],
+  "duplicate_exclusions": [
+    "Synthetic explorer reuses builder release",
+    "Zoo base/enriched stores and rebuilt beetle ZIP",
+    "Ascidian/worm CSV versus prepared Zoo graphs",
+    "RIKEN ZIP versus separately hosted members"
+  ],
+  "no_dense_segmentation_masks": true
+}

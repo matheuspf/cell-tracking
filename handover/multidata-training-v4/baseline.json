@@ -1,0 +1,20 @@
+{
+  "study_id": "strong-tracker-v3",
+  "variant": "A_residual_m3.0",
+  "reviewed_commit": "292ecc2569f3a16676de92d80e382be02024d904",
+  "samples": 199,
+  "score": 0.934802374260586,
+  "embryo_scores": {
+    "44b6": 0.931664468721842,
+    "6bba": 0.935221784097327
+  },
+  "nodes": 4108943,
+  "edge_tp": 123135,
+  "edge_fp": 4965,
+  "edge_fn": 5748,
+  "division_tp": 29,
+  "division_fp": 92,
+  "division_fn": 122,
+  "provenance": "Repository-reported operational exploratory result; upstream target exposure and repeated embryo reuse",
+  "source_path": "results/strong-tracker-v3/final_report.md"
+}
