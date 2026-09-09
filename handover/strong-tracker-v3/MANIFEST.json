@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "study_id": "strong-tracker-v3",
+  "scope": "payload hashes; manifest excludes itself",
+  "files": {
+    "CODEX_PROMPT.md": {
+      "bytes": 4089,
+      "sha256": "b4c73b7c8acd131a8021234d5959652b03ab4601e4c880f7d6b1e83459e0e80c"
+    },
+    "EXPERIMENTS.md": {
+      "bytes": 16342,
+      "sha256": "14b0162bd460114a353947eaef46331e102d1af8e4a7b375f942c97bea26d01b"
+    },
+    "IMPLEMENTATION.md": {
+      "bytes": 8261,
+      "sha256": "e21b52b6074cfeeae0aa57b06a434849d23174cb90b98f5b34aec5fa6385fef0"
+    },
+    "README.md": {
+      "bytes": 3008,
+      "sha256": "044e633f94cacfaf2fdedebfdc1be2fe577869d2179b6ec6eb37199fcebdfca4"
+    },
+    "REVIEW.md": {
+      "bytes": 6178,
+      "sha256": "bc83d9e0ef042aa198a87df5abc27e43fbcc915b2aca9bac95ee4dc5663252f9"
+    },
+    "SOURCES.md": {
+      "bytes": 2601,
+      "sha256": "f11d83bc5b9f59dc8eb7a805e343109544803b89a23e18a8c8f95cd7f6d82b8c"
+    },
+    "STATUS.json": {
+      "bytes": 774,
+      "sha256": "ae2aa48402becdf3a772be3aa20d7196bf63b25eb348052005e6b54c7116067a"
+    },
+    "calculated_scenarios.json": {
+      "bytes": 1281,
+      "sha256": "58752292b11b114f40d167aac911bb4d1bab6ac54c9ac2ded7a1dffc85277c0f"
+    },
+    "experiments.json": {
+      "bytes": 2884,
+      "sha256": "43b169258682ad70254792b7e88ecaa8ea2868ab1c7b49e70c19ce62bb2357ae"
+    },
+    "graph_edits.py": {
+      "bytes": 4255,
+      "sha256": "bec603468cfed73f7fa95a18897e8c0d4290aa259f3f71e69e6230004d1f24af"
+    },
+    "measured_baseline.json": {
+      "bytes": 1054,
+      "sha256": "9259ec4e464f6200e85c36e05457ea321b4645a2a80b497e3694a89cdef92dcf"
+    },
+    "preflight.py": {
+      "bytes": 3475,
+      "sha256": "f17763bdd73565d94730dbf73ea50eb62c0de6c7686f8c1c69b1de9ea0b7f8db"
+    },
+    "scorecard.py": {
+      "bytes": 6302,
+      "sha256": "f1a80e71513b3e1dac9f5c618d8c520fd195c67ea528299be3a270dfc90d747d"
+    },
+    "test_helpers.py": {
+      "bytes": 8421,
+      "sha256": "7e7c08cfea5eac15423b5d80b80870565994dae42a6fb545e2fb96b3c4477a1d"
+    }
+  }
+}

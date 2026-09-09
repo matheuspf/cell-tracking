@@ -1,0 +1,47 @@
+[
+  {
+    "division_tp": 29,
+    "division_fp": 92,
+    "division_fn": 122,
+    "division_jaccard": 0.11934156378600823,
+    "score": 0.9342063149703405,
+    "delta": 1.1102230246251565e-16,
+    "assumption": "adjusted edge score held fixed; hypothetical"
+  },
+  {
+    "division_tp": 29,
+    "division_fp": 0,
+    "division_fn": 122,
+    "division_jaccard": 0.19205298013245034,
+    "score": 0.9414774566049846,
+    "delta": 0.0072711416346442626,
+    "assumption": "adjusted edge score held fixed; hypothetical"
+  },
+  {
+    "division_tp": 60,
+    "division_fp": 60,
+    "division_fn": 91,
+    "division_jaccard": 0.2843601895734597,
+    "score": 0.9507081775490855,
+    "delta": 0.016501862578745197,
+    "assumption": "adjusted edge score held fixed; hypothetical"
+  },
+  {
+    "division_tp": 75,
+    "division_fp": 50,
+    "division_fn": 76,
+    "division_jaccard": 0.373134328358209,
+    "score": 0.9595855914275605,
+    "delta": 0.025379276457220157,
+    "assumption": "adjusted edge score held fixed; hypothetical"
+  },
+  {
+    "division_tp": 80,
+    "division_fp": 40,
+    "division_fn": 71,
+    "division_jaccard": 0.418848167539267,
+    "score": 0.9641569753456664,
+    "delta": 0.02995066037532601,
+    "assumption": "adjusted edge score held fixed; hypothetical"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "study_id": "strong-tracker-v3",
+  "status": "planned_not_executed",
+  "base_commit": "a58c80b041db0a05262a58b3d1b5f34045b8d2ff",
+  "branch": "handover/strong-tracker-v3",
+  "next_stage": "V300",
+  "incumbent_variant": "bypass_motion_bounds",
+  "incumbent_score_from_v2": 0.9342063149703403,
+  "authoring_validation": {
+    "synthetic_reference_tests_passed": 40,
+    "python_compilation_passed": true,
+    "cli_help_from_foreign_workdir_passed": true,
+    "local_markdown_links_passed": true,
+    "competition_images_read": false,
+    "gpu_experiments_run": false,
+    "official_v3_graph_rescoring_run": false
+  },
+  "v3_score": null,
+  "v3_gain": null,
+  "note": "Read results/strong-tracker-v2 for completed v2; historical handover STATUS is not execution status."
+}
