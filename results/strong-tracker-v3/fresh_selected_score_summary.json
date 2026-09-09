@@ -1,0 +1,86 @@
+{
+  "all_counts_and_scores_match": true,
+  "annotations_used_for_inference": false,
+  "comparison_only_annotation_access": true,
+  "fingerprint": "3f0a18b07901f4015602372ad9f6bb33161d8ef0e5e0159628f534e4fc381a12",
+  "fresh_whole_graph_matching": true,
+  "results": {
+    "44b6": {
+      "adj_edge_jaccard": 0.9170811353885086,
+      "count_parity": true,
+      "counts": {
+        "division_fn": 19,
+        "division_fp": 22,
+        "division_tp": 7,
+        "edge_fn": 960,
+        "edge_fp": 1085,
+        "edge_tp": 18866,
+        "num_pred_nodes": 1972750
+      },
+      "delta_cached_selected": 0.0,
+      "delta_v2": 5.208194451100656e-05,
+      "division_fn": 19,
+      "division_fp": 22,
+      "division_jaccard": 0.14583333333333334,
+      "division_tp": 7,
+      "edge_jaccard": 0.9022045813208359,
+      "n": 71,
+      "n_adj": 71,
+      "node_recall": 0.9877569341470968,
+      "score": 0.9316644687218418,
+      "score_parity": true
+    },
+    "6bba": {
+      "adj_edge_jaccard": 0.9239397328152761,
+      "count_parity": true,
+      "counts": {
+        "division_fn": 103,
+        "division_fp": 70,
+        "division_tp": 22,
+        "edge_fn": 4788,
+        "edge_fp": 3880,
+        "edge_tp": 104269,
+        "num_pred_nodes": 2136193
+      },
+      "delta_cached_selected": 0.0,
+      "delta_v2": 0.0006965342277943654,
+      "division_fn": 103,
+      "division_fp": 70,
+      "division_jaccard": 0.11282051282051282,
+      "division_tp": 22,
+      "edge_jaccard": 0.9232492451543781,
+      "n": 128,
+      "n_adj": 128,
+      "node_recall": 0.9795753914358454,
+      "score": 0.9352217840973274,
+      "score_parity": true
+    },
+    "pooled": {
+      "adj_edge_jaccard": 0.9228682178819851,
+      "count_parity": true,
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5748,
+        "edge_fp": 4965,
+        "edge_tp": 123135,
+        "num_pred_nodes": 4108943
+      },
+      "delta_cached_selected": 0.0,
+      "delta_v2": 0.000596059290245643,
+      "division_fn": 122,
+      "division_fp": 92,
+      "division_jaccard": 0.11934156378600823,
+      "division_tp": 29,
+      "edge_jaccard": 0.9199614488076027,
+      "n": 199,
+      "n_adj": 199,
+      "node_recall": 0.982494434312724,
+      "score": 0.934802374260586,
+      "score_parity": true
+    }
+  },
+  "samples": 199,
+  "variant": "A_residual_m3.0"
+}

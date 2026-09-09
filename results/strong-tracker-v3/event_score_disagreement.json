@@ -1,0 +1,59 @@
+{
+  "candidate_weighted_mean_absolute_seed_difference": 0.03504950301726938,
+  "candidates": 190139632,
+  "clips": 199,
+  "interpretation": "Sigmoid-score probability variability across two fixed training seeds, weighted over candidate rows. This is not calibration, a confidence interval, independent biological event counting, or a generalization estimate.",
+  "probability_lock_sha256": "800d5ec74eb01d5685d3169cdb1fcc20235312c8c23f016a7a4664f456187bde",
+  "seed_threshold_disagreement": {
+    "0.1": 10408540,
+    "0.2": 9083867,
+    "0.4": 7342912
+  },
+  "source_directions": {
+    "44b6": {
+      "candidate_weighted_mean_absolute_seed_difference": 0.021096268180063063,
+      "candidates": 92267674,
+      "clips": 128,
+      "image_primary_above_p020": 1954597,
+      "image_secondary_above_p020": 2954958,
+      "target": "6bba"
+    },
+    "6bba": {
+      "candidate_weighted_mean_absolute_seed_difference": 0.04820375628361147,
+      "candidates": 97871958,
+      "clips": 71,
+      "image_primary_above_p020": 11262223,
+      "image_secondary_above_p020": 15196993,
+      "target": "44b6"
+    }
+  },
+  "table": {
+    "path": "/kaggle/working/cell-tracking/strong-tracker-v3/event_seed_disagreement.parquet",
+    "rows": 597,
+    "seeds": [
+      20260909,
+      314159
+    ],
+    "sha256": "81b03084426512d0f2500bde4250a5e87270ac50adb11274e813d02ff3432597"
+  },
+  "threshold_counts": {
+    "image_20260909": {
+      "0.05": 21439628,
+      "0.1": 17265767,
+      "0.2": 13216820,
+      "0.4": 9081345
+    },
+    "image_314159": {
+      "0.05": 27287881,
+      "0.1": 22767133,
+      "0.2": 18151951,
+      "0.4": 13103059
+    },
+    "logistic": {
+      "0.05": 168176650,
+      "0.1": 132589416,
+      "0.2": 81574100,
+      "0.4": 48134284
+    }
+  }
+}

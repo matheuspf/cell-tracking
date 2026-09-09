@@ -1,0 +1,20 @@
+{
+  "annotation_reads": 0,
+  "attempted_annotation_reads": 0,
+  "byte_identical_to_scored_graphs": true,
+  "created": "2026-09-09T20:12:12.998682+00:00",
+  "full_sample_set": true,
+  "notebook_sha256": "444c24a274ee752fae332b63fae2e8e328131d046daa27972843592889966e3b",
+  "official_score_rows_sha256": "5bb2ae55a530b77c3b1891a91201cc51bf7cb6a2366af285fb3f5c6b61b03510",
+  "samples": 199,
+  "scored_graph_attestation_sha256": "71f32b4ecc079a8648c05f4ee45fa52d8071f4c57c1a320db2f79cf7d1bda372",
+  "selection_configuration": {
+    "policy": {
+      "association": {
+        "margin": 3.0,
+        "model": "residual"
+      }
+    }
+  },
+  "variant": "A_residual_m3.0"
+}

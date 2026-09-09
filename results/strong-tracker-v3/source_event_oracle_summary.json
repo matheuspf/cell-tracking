@@ -1,0 +1,138 @@
+{
+  "created": "2026-09-09T19:47:39.758433+00:00",
+  "frozen_prediction_lock_sha256": "b98782f24db58cd73410801b4ce96d2861458158c6fa2ffff0e4203968649a23",
+  "interpretation": "legal incumbent-fixed-fork add-only heuristic; not a global bound; no target-oracle tuning or promotion",
+  "source_only": true,
+  "summary": {
+    "source_existing_pool": {
+      "44b6": {
+        "adj_edge_jaccard": 0.9172299870739357,
+        "counts": {
+          "division_fn": 11,
+          "division_fp": 23,
+          "division_tp": 15,
+          "edge_fn": 957,
+          "edge_fp": 1085,
+          "edge_tp": 18869,
+          "num_pred_nodes": 1972750
+        },
+        "division_fn": 11,
+        "division_fp": 23,
+        "division_jaccard": 0.30612244897959184,
+        "division_tp": 15,
+        "edge_jaccard": 0.9023480464827125,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9877569341470968,
+        "score": 0.9478422319718949
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9234633799928655,
+        "counts": {
+          "division_fn": 54,
+          "division_fp": 70,
+          "division_tp": 71,
+          "edge_fn": 4862,
+          "edge_fp": 3858,
+          "edge_tp": 104195,
+          "num_pred_nodes": 2136193
+        },
+        "division_fn": 54,
+        "division_fp": 70,
+        "division_jaccard": 0.3641025641025641,
+        "division_tp": 71,
+        "edge_jaccard": 0.9227737678784926,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9795753914358454,
+        "score": 0.959873636403122
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9224893803266739,
+        "counts": {
+          "division_fn": 65,
+          "division_fp": 93,
+          "division_tp": 86,
+          "edge_fn": 5819,
+          "edge_fp": 4943,
+          "edge_tp": 123064,
+          "num_pred_nodes": 4108943
+        },
+        "division_fn": 65,
+        "division_fp": 93,
+        "division_jaccard": 0.3524590163934426,
+        "division_tp": 86,
+        "edge_jaccard": 0.9195821439780013,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.982494434312724,
+        "score": 0.9577352819660182
+      }
+    },
+    "source_expanded_pool": {
+      "44b6": {
+        "adj_edge_jaccard": 0.9168210988551917,
+        "counts": {
+          "division_fn": 7,
+          "division_fp": 23,
+          "division_tp": 19,
+          "edge_fn": 960,
+          "edge_fp": 1091,
+          "edge_tp": 18866,
+          "num_pred_nodes": 1972750
+        },
+        "division_fn": 7,
+        "division_fp": 23,
+        "division_jaccard": 0.3877551020408163,
+        "division_tp": 19,
+        "edge_jaccard": 0.9019457857245303,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9877569341470968,
+        "score": 0.9555966090592733
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9233233744434294,
+        "counts": {
+          "division_fn": 34,
+          "division_fp": 71,
+          "division_tp": 91,
+          "edge_fn": 4864,
+          "edge_fp": 3873,
+          "edge_tp": 104193,
+          "num_pred_nodes": 2136193
+        },
+        "division_fn": 34,
+        "division_fp": 71,
+        "division_jaccard": 0.4642857142857143,
+        "division_tp": 91,
+        "edge_jaccard": 0.9226334897724254,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9795753914358454,
+        "score": 0.9697519458720008
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9223072284074393,
+        "counts": {
+          "division_fn": 41,
+          "division_fp": 94,
+          "division_tp": 110,
+          "edge_fn": 5824,
+          "edge_fp": 4964,
+          "edge_tp": 123059,
+          "num_pred_nodes": 4108943
+        },
+        "division_fn": 41,
+        "division_fp": 94,
+        "division_jaccard": 0.4489795918367347,
+        "division_tp": 110,
+        "edge_jaccard": 0.9194005095370087,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.982494434312724,
+        "score": 0.9672051875911127
+      }
+    }
+  }
+}

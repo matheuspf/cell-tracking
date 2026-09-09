@@ -1,0 +1,2335 @@
+{
+  "artifact_schema_note": "The per-clip proposal NPZ existing_pool array is an unused approximate geometric mask. The measured D_existing arms and source_existing_pool oracle rebuild the actual pure v2 hypotheses helper on the current incumbent and require its selected daughter paths; they do not use this approximate flag.",
+  "comparison_status": "Complete: TEN variants \u00d7199 fresh official scores, plus two evaluation-only source feasibility diagnostics \u00d7199; no event variant qualifies for promotion.",
+  "completed": "2026-09-09T19:53:54.965301+00:00",
+  "coverage": {
+    "base": {
+      "44b6": {
+        "coverage": 0.7692307692307693,
+        "covered_events": 20,
+        "negative_groups": 10831,
+        "negative_population": 364658,
+        "positive_alternatives": 202,
+        "positive_event_groups": 20,
+        "proposals": 40449946,
+        "rows_with_local_roles": 24,
+        "sampled_negative": 44221,
+        "total_events": 26,
+        "unknown": 40085086
+      },
+      "6bba": {
+        "coverage": 0.688,
+        "covered_events": 86,
+        "negative_groups": 39528,
+        "negative_population": 841168,
+        "positive_alternatives": 778,
+        "positive_event_groups": 86,
+        "proposals": 38399260,
+        "rows_with_local_roles": 103,
+        "sampled_negative": 149411,
+        "total_events": 125,
+        "unknown": 37557314
+      }
+    },
+    "fallback": {
+      "44b6": {
+        "coverage": 0.7692307692307693,
+        "covered_events": 20,
+        "negative_groups": 16155,
+        "negative_population": 857868,
+        "positive_alternatives": 244,
+        "positive_event_groups": 20,
+        "proposals": 97871958,
+        "rows_with_local_roles": 24,
+        "sampled_negative": 65482,
+        "total_events": 26,
+        "unknown": 97013846
+      },
+      "6bba": {
+        "coverage": 0.736,
+        "covered_events": 92,
+        "negative_groups": 69689,
+        "negative_population": 2188832,
+        "positive_alternatives": 938,
+        "positive_event_groups": 92,
+        "proposals": 92267674,
+        "rows_with_local_roles": 103,
+        "sampled_negative": 272359,
+        "total_events": 125,
+        "unknown": 90077904
+      }
+    },
+    "fallback_trigger": "source-only event coverage <85%",
+    "outer_scores_exposed": false,
+    "source_selected_pool": {
+      "44b6": "fallback",
+      "6bba": "fallback"
+    }
+  },
+  "created": "2026-09-09T19:11:52.909057+00:00",
+  "decode_summary": {
+    "created": "2026-09-09T19:40:50.354103+00:00",
+    "event_round_lock_sha256": "b98782f24db58cd73410801b4ce96d2861458158c6fa2ffff0e4203968649a23",
+    "interpretation": "Prediction edit counts only; official edge/division TP/FP effects must come from fresh comparative scoring",
+    "threshold_interpretation": "Accepted edit counts need not decrease with threshold. Lower thresholds can connect more feasible alternatives into oversized components that abstain completely, and the fixed edge-change budget is applied to complete components. This is logged conservative abstention, not a monotonic posterior threshold rule.",
+    "variants": {
+      "D_existing_p005_control": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 1053,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 382
+          },
+          {
+            "added": 886,
+            "dataset": "44b6_18ced818",
+            "removed": 510
+          },
+          {
+            "added": 992,
+            "dataset": "6bba_05db0fb1",
+            "removed": 350
+          },
+          {
+            "added": 817,
+            "dataset": "44b6_e31261b4",
+            "removed": 465
+          },
+          {
+            "added": 918,
+            "dataset": "6bba_b329af44",
+            "removed": 326
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 6621,
+          "owner_cost_or_margin": 961650,
+          "owner_fork_boundary": 2598,
+          "protected_individual_owner": 79493
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 55139,
+          "actions": 326253,
+          "actions_in_abstained_components": 113488,
+          "buffered_actions": 326253,
+          "components": 74209,
+          "edges_added": 55383,
+          "edges_removed": 22468,
+          "edit_cap_abstentions": 43531,
+          "forks_after": 58752,
+          "forks_before": 3613,
+          "oversized_stream_components": 102,
+          "resource_keys": 2812511,
+          "solved_components": 30678,
+          "streamed_actions": 439741,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_existing_p020": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 1434,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 1
+          },
+          {
+            "added": 1247,
+            "dataset": "44b6_18ced818",
+            "removed": 149
+          },
+          {
+            "added": 1338,
+            "dataset": "6bba_05db0fb1",
+            "removed": 4
+          },
+          {
+            "added": 1120,
+            "dataset": "44b6_e31261b4",
+            "removed": 162
+          },
+          {
+            "added": 1235,
+            "dataset": "6bba_b329af44",
+            "removed": 9
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 6613,
+          "owner_cost_or_margin": 1178287,
+          "owner_fork_boundary": 2170,
+          "protected_individual_owner": 74292
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 70284,
+          "actions": 164851,
+          "actions_in_abstained_components": 3094,
+          "buffered_actions": 164851,
+          "components": 73876,
+          "edges_added": 70502,
+          "edges_removed": 3607,
+          "edit_cap_abstentions": 20791,
+          "forks_after": 73897,
+          "forks_before": 3613,
+          "oversized_stream_components": 6,
+          "resource_keys": 1337708,
+          "solved_components": 53085,
+          "streamed_actions": 167945,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_image_p010": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 832,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 603
+          },
+          {
+            "added": 777,
+            "dataset": "6bba_05db0fb1",
+            "removed": 565
+          },
+          {
+            "added": 732,
+            "dataset": "6bba_b329af44",
+            "removed": 512
+          },
+          {
+            "added": 660,
+            "dataset": "6bba_ebdf3b34",
+            "removed": 486
+          },
+          {
+            "added": 630,
+            "dataset": "6bba_786893ac",
+            "removed": 477
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 66992,
+          "daughter_fork_boundary": 33297,
+          "owner_cost_or_margin": 7973970,
+          "owner_fork_boundary": 50239,
+          "protected_individual_owner": 1457565
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 34720,
+          "actions": 213770,
+          "actions_in_abstained_components": 364537,
+          "buffered_actions": 213770,
+          "components": 34894,
+          "edges_added": 45778,
+          "edges_removed": 27166,
+          "edit_cap_abstentions": 13337,
+          "forks_after": 38333,
+          "forks_before": 3613,
+          "oversized_stream_components": 180,
+          "resource_keys": 2219318,
+          "solved_components": 21557,
+          "streamed_actions": 578307,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_image_p020": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 837,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 598
+          },
+          {
+            "added": 750,
+            "dataset": "6bba_05db0fb1",
+            "removed": 541
+          },
+          {
+            "added": 653,
+            "dataset": "6bba_ebdf3b34",
+            "removed": 493
+          },
+          {
+            "added": 640,
+            "dataset": "6bba_786893ac",
+            "removed": 467
+          },
+          {
+            "added": 621,
+            "dataset": "6bba_b329af44",
+            "removed": 430
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 51788,
+          "daughter_fork_boundary": 25026,
+          "owner_cost_or_margin": 5664526,
+          "owner_fork_boundary": 36342,
+          "protected_individual_owner": 1023077
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 38240,
+          "actions": 212686,
+          "actions_in_abstained_components": 194766,
+          "buffered_actions": 212686,
+          "components": 36874,
+          "edges_added": 49002,
+          "edges_removed": 25934,
+          "edit_cap_abstentions": 12918,
+          "forks_after": 41853,
+          "forks_before": 3613,
+          "oversized_stream_components": 142,
+          "resource_keys": 1741318,
+          "solved_components": 23956,
+          "streamed_actions": 407452,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_image_p040": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 846,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 589
+          },
+          {
+            "added": 652,
+            "dataset": "6bba_ebdf3b34",
+            "removed": 494
+          },
+          {
+            "added": 653,
+            "dataset": "6bba_b329af44",
+            "removed": 473
+          },
+          {
+            "added": 644,
+            "dataset": "6bba_786893ac",
+            "removed": 463
+          },
+          {
+            "added": 639,
+            "dataset": "6bba_05db0fb1",
+            "removed": 449
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 36318,
+          "daughter_fork_boundary": 16630,
+          "owner_cost_or_margin": 3505960,
+          "owner_fork_boundary": 23226,
+          "protected_individual_owner": 621860
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 40054,
+          "actions": 191469,
+          "actions_in_abstained_components": 78827,
+          "buffered_actions": 191469,
+          "components": 37490,
+          "edges_added": 50424,
+          "edges_removed": 23589,
+          "edit_cap_abstentions": 10946,
+          "forks_after": 43667,
+          "forks_before": 3613,
+          "oversized_stream_components": 75,
+          "resource_keys": 1286633,
+          "solved_components": 26544,
+          "streamed_actions": 270296,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_replace_p020": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 835,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 600
+          },
+          {
+            "added": 751,
+            "dataset": "6bba_05db0fb1",
+            "removed": 550
+          },
+          {
+            "added": 652,
+            "dataset": "6bba_ebdf3b34",
+            "removed": 494
+          },
+          {
+            "added": 640,
+            "dataset": "6bba_786893ac",
+            "removed": 467
+          },
+          {
+            "added": 621,
+            "dataset": "6bba_b329af44",
+            "removed": 439
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "no_op": 2845,
+          "owner_cost_or_margin": 5798674,
+          "protected_individual_owner": 1046869
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 38312,
+          "actions": 213140,
+          "actions_in_abstained_components": 196101,
+          "buffered_actions": 213140,
+          "components": 37265,
+          "edges_added": 48973,
+          "edges_removed": 26046,
+          "edit_cap_abstentions": 13271,
+          "forks_after": 41683,
+          "forks_before": 3613,
+          "oversized_stream_components": 144,
+          "resource_keys": 1747020,
+          "solved_components": 23994,
+          "streamed_actions": 409241,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_replace_p040": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 846,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 589
+          },
+          {
+            "added": 651,
+            "dataset": "6bba_ebdf3b34",
+            "removed": 495
+          },
+          {
+            "added": 653,
+            "dataset": "6bba_b329af44",
+            "removed": 482
+          },
+          {
+            "added": 643,
+            "dataset": "6bba_786893ac",
+            "removed": 464
+          },
+          {
+            "added": 638,
+            "dataset": "6bba_05db0fb1",
+            "removed": 459
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "no_op": 2735,
+          "owner_cost_or_margin": 3599481,
+          "protected_individual_owner": 638780
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 40098,
+          "actions": 192476,
+          "actions_in_abstained_components": 79624,
+          "buffered_actions": 192476,
+          "components": 37962,
+          "edges_added": 50320,
+          "edges_removed": 23731,
+          "edit_cap_abstentions": 11361,
+          "forks_after": 43401,
+          "forks_before": 3613,
+          "oversized_stream_components": 77,
+          "resource_keys": 1292680,
+          "solved_components": 26601,
+          "streamed_actions": 272100,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_tabular_p010": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 509,
+            "dataset": "44b6_7e557709",
+            "removed": 365
+          },
+          {
+            "added": 391,
+            "dataset": "44b6_d29c9ab2",
+            "removed": 323
+          },
+          {
+            "added": 423,
+            "dataset": "44b6_3a861e03",
+            "removed": 290
+          },
+          {
+            "added": 348,
+            "dataset": "44b6_668e0cc7",
+            "removed": 303
+          },
+          {
+            "added": 383,
+            "dataset": "44b6_97725144",
+            "removed": 268
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 220165,
+          "daughter_fork_boundary": 144818,
+          "owner_cost_or_margin": 46586532,
+          "owner_fork_boundary": 216308,
+          "protected_individual_owner": 6419221
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 14614,
+          "actions": 99420,
+          "actions_in_abstained_components": 1148002,
+          "buffered_actions": 99420,
+          "components": 12321,
+          "edges_added": 30151,
+          "edges_removed": 20881,
+          "edit_cap_abstentions": 3339,
+          "forks_after": 18227,
+          "forks_before": 3613,
+          "oversized_stream_components": 184,
+          "resource_keys": 4136921,
+          "solved_components": 8982,
+          "streamed_actions": 1247422,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_tabular_p020": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 631,
+            "dataset": "6bba_ebff6e76",
+            "removed": 347
+          },
+          {
+            "added": 651,
+            "dataset": "6bba_edf14583",
+            "removed": 326
+          },
+          {
+            "added": 553,
+            "dataset": "44b6_7e557709",
+            "removed": 321
+          },
+          {
+            "added": 539,
+            "dataset": "44b6_12dfb391",
+            "removed": 326
+          },
+          {
+            "added": 536,
+            "dataset": "44b6_7a302da0",
+            "removed": 321
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 147851,
+          "daughter_fork_boundary": 109485,
+          "owner_cost_or_margin": 31688008,
+          "owner_fork_boundary": 131751,
+          "protected_individual_owner": 3807479
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 19909,
+          "actions": 146437,
+          "actions_in_abstained_components": 648336,
+          "buffered_actions": 146437,
+          "components": 18546,
+          "edges_added": 39813,
+          "edges_removed": 21696,
+          "edit_cap_abstentions": 7247,
+          "forks_after": 23522,
+          "forks_before": 3613,
+          "oversized_stream_components": 191,
+          "resource_keys": 3198166,
+          "solved_components": 11299,
+          "streamed_actions": 794773,
+          "workspace_abstentions": 0
+        }
+      },
+      "D_tabular_p040": {
+        "changed_clips": 199,
+        "clips": 199,
+        "largest_edge_changes": [
+          {
+            "added": 949,
+            "dataset": "6bba_57b7cc1e",
+            "removed": 486
+          },
+          {
+            "added": 956,
+            "dataset": "44b6_18ced818",
+            "removed": 440
+          },
+          {
+            "added": 914,
+            "dataset": "6bba_05db0fb1",
+            "removed": 428
+          },
+          {
+            "added": 882,
+            "dataset": "44b6_e31261b4",
+            "removed": 400
+          },
+          {
+            "added": 856,
+            "dataset": "6bba_b329af44",
+            "removed": 388
+          }
+        ],
+        "preserved_original_receipts": 44,
+        "rejected": {
+          "adjacent_incumbent_fork_boundary": 56966,
+          "daughter_fork_boundary": 43973,
+          "owner_cost_or_margin": 10574484,
+          "owner_fork_boundary": 47610,
+          "protected_individual_owner": 1341465
+        },
+        "selective_io_receipts": 155,
+        "totals": {
+          "accepted_actions": 26751,
+          "actions": 245797,
+          "actions_in_abstained_components": 112078,
+          "buffered_actions": 245797,
+          "components": 51495,
+          "edges_added": 52384,
+          "edges_removed": 25717,
+          "edit_cap_abstentions": 34663,
+          "forks_after": 30364,
+          "forks_before": 3613,
+          "oversized_stream_components": 93,
+          "resource_keys": 1883869,
+          "solved_components": 16832,
+          "streamed_actions": 357875,
+          "workspace_abstentions": 0
+        }
+      }
+    }
+  },
+  "density_profile": {
+    "alternatives": 5597088,
+    "dataset": "6bba_57b7cc1e",
+    "model_lock_sha256": "6ecb4bdf58e46bfd66a1414866d6d4c0f079c06dcd3faafd00b52e5ba1b57984",
+    "outer_scores_exposed": false,
+    "profiled_clip_probability_sha256": "ab9b110c544b9acf06fcef9617f4f5b812f514cfa319ba693ebcf41b72d25a0e",
+    "rows": [
+      {
+        "decode": {
+          "accepted_actions": 1434,
+          "actions": 4626,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 4626,
+          "components": 2052,
+          "edges_added": 1434,
+          "edges_removed": 1,
+          "edit_cap_abstentions": 984,
+          "forks_after": 1487,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 98,
+            "owner_cost_or_margin": 34253,
+            "owner_fork_boundary": 47,
+            "protected_individual_owner": 2032
+          },
+          "resource_keys": 37184,
+          "solved_components": 1068,
+          "streamed_actions": 4626,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "b94dd174c912baa8a9f6d856a87a4b7d48085d0132532c2b35dc06fd4c0bab94",
+        "process_peak_rss_bytes": 1868189696,
+        "seconds": 13.834845189005136,
+        "variant": "D_existing_p020"
+      },
+      {
+        "decode": {
+          "accepted_actions": 1050,
+          "actions": 9514,
+          "actions_in_abstained_components": 1366,
+          "buffered_actions": 9514,
+          "components": 1735,
+          "edges_added": 1053,
+          "edges_removed": 382,
+          "edit_cap_abstentions": 1286,
+          "forks_after": 1103,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 3,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 98,
+            "owner_cost_or_margin": 30476,
+            "owner_fork_boundary": 60,
+            "protected_individual_owner": 2255
+          },
+          "resource_keys": 73692,
+          "solved_components": 449,
+          "streamed_actions": 10880,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "7d30b1d1ce567da156081e99edf887a93af23464f37982845413398fdb5db2c9",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 16.793876801151782,
+        "variant": "D_existing_p005_control"
+      },
+      {
+        "decode": {
+          "accepted_actions": 36,
+          "actions": 149,
+          "actions_in_abstained_components": 30865,
+          "buffered_actions": 149,
+          "components": 30,
+          "edges_added": 86,
+          "edges_removed": 67,
+          "forks_after": 89,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 1,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 3241,
+            "daughter_fork_boundary": 2474,
+            "owner_cost_or_margin": 1244868,
+            "owner_fork_boundary": 3573,
+            "protected_individual_owner": 128038
+          },
+          "resource_keys": 106758,
+          "solved_components": 30,
+          "streamed_actions": 31014,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "6a367106457de6d04b80d7ecee79cb2baf4436df63d2aa016c6ae59effea8576",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 29.99797253217548,
+        "variant": "D_tabular_p010"
+      },
+      {
+        "decode": {
+          "accepted_actions": 183,
+          "actions": 594,
+          "actions_in_abstained_components": 20139,
+          "buffered_actions": 594,
+          "components": 137,
+          "edges_added": 399,
+          "edges_removed": 219,
+          "forks_after": 236,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 1,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 2107,
+            "daughter_fork_boundary": 1789,
+            "owner_cost_or_margin": 870272,
+            "owner_fork_boundary": 2393,
+            "protected_individual_owner": 81548
+          },
+          "resource_keys": 84512,
+          "solved_components": 137,
+          "streamed_actions": 20733,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "e243a839cc5937e607816814ebf107c4fcd94bff287a410b88b204e2e2f0d572",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 23.26176375290379,
+        "variant": "D_tabular_p020"
+      },
+      {
+        "decode": {
+          "accepted_actions": 458,
+          "actions": 6044,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 6044,
+          "components": 1780,
+          "edges_added": 949,
+          "edges_removed": 486,
+          "edit_cap_abstentions": 1456,
+          "forks_after": 511,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 337,
+            "daughter_fork_boundary": 292,
+            "owner_cost_or_margin": 149078,
+            "owner_fork_boundary": 295,
+            "protected_individual_owner": 11662
+          },
+          "resource_keys": 37761,
+          "solved_components": 324,
+          "streamed_actions": 6044,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "418975296c65efee3b2fa9ee61b3a1a74c52996da88afa36cc1223c63c36fec2",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 11.347303862683475,
+        "variant": "D_tabular_p040"
+      },
+      {
+        "decode": {
+          "accepted_actions": 505,
+          "actions": 4236,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 4236,
+          "components": 922,
+          "edges_added": 832,
+          "edges_removed": 603,
+          "edit_cap_abstentions": 540,
+          "forks_after": 558,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 90,
+            "daughter_fork_boundary": 26,
+            "owner_cost_or_margin": 19040,
+            "owner_fork_boundary": 22,
+            "protected_individual_owner": 1730
+          },
+          "resource_keys": 22206,
+          "solved_components": 382,
+          "streamed_actions": 4236,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "16958ff76dce9d0ee679eb11ba724f0302ad7fd3f6f2d09d985b6391bf59822d",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 7.685404987074435,
+        "variant": "D_image_p010"
+      },
+      {
+        "decode": {
+          "accepted_actions": 506,
+          "actions": 3187,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 3187,
+          "components": 817,
+          "edges_added": 837,
+          "edges_removed": 598,
+          "edit_cap_abstentions": 405,
+          "forks_after": 559,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 75,
+            "daughter_fork_boundary": 18,
+            "owner_cost_or_margin": 14078,
+            "owner_fork_boundary": 12,
+            "protected_individual_owner": 1287
+          },
+          "resource_keys": 17644,
+          "solved_components": 412,
+          "streamed_actions": 3187,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "1d83eb802073ac556309582cbaf82956a3fcd10813faefc3f6abd7acd1d0fc97",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 7.147067548241466,
+        "variant": "D_image_p020"
+      },
+      {
+        "decode": {
+          "accepted_actions": 503,
+          "actions": 2184,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 2184,
+          "components": 688,
+          "edges_added": 846,
+          "edges_removed": 589,
+          "edit_cap_abstentions": 240,
+          "forks_after": 556,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "adjacent_incumbent_fork_boundary": 55,
+            "daughter_fork_boundary": 15,
+            "owner_cost_or_margin": 9738,
+            "owner_fork_boundary": 7,
+            "protected_individual_owner": 870
+          },
+          "resource_keys": 12908,
+          "solved_components": 448,
+          "streamed_actions": 2184,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "80defa8323c9af9eaeba88cd030e8636f6b1deec421bb5b87c4cfc2dc4664f0c",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 6.706817714963108,
+        "variant": "D_image_p040"
+      },
+      {
+        "decode": {
+          "accepted_actions": 506,
+          "actions": 3222,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 3222,
+          "components": 830,
+          "edges_added": 835,
+          "edges_removed": 600,
+          "edit_cap_abstentions": 419,
+          "forks_after": 555,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "no_op": 32,
+            "owner_cost_or_margin": 14248,
+            "protected_individual_owner": 1297
+          },
+          "resource_keys": 17773,
+          "solved_components": 411,
+          "streamed_actions": 3222,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "983941d2d21c176f9fcff2726c2f49e3c99e8bb651ab0aeebee373c03d5696c2",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 7.829048044979572,
+        "variant": "D_replace_p020"
+      },
+      {
+        "decode": {
+          "accepted_actions": 504,
+          "actions": 2221,
+          "actions_in_abstained_components": 0,
+          "buffered_actions": 2221,
+          "components": 703,
+          "edges_added": 846,
+          "edges_removed": 589,
+          "edit_cap_abstentions": 254,
+          "forks_after": 555,
+          "forks_before": 53,
+          "max_buffered_actions": 50000,
+          "max_component_alternatives": 256,
+          "oversized_stream_components": 0,
+          "rejected": {
+            "no_op": 31,
+            "owner_cost_or_margin": 9863,
+            "protected_individual_owner": 879
+          },
+          "resource_keys": 13045,
+          "solved_components": 449,
+          "streamed_actions": 2221,
+          "workspace_abstentions": 0
+        },
+        "graph_sha256": "e89d4ff3250dd29c721388c03173162ffd775c5d96c2536f8feaf724e5ff4ff0",
+        "process_peak_rss_bytes": 1872232448,
+        "seconds": 7.227979391347617,
+        "variant": "D_replace_p040"
+      }
+    ],
+    "selection": "largest label-free fixed candidate pool; no threshold adjustments"
+  },
+  "diagnostic_document": "results/strong-tracker-v3/event_diagnostic.md",
+  "diagnostic_sha256": "269b5f16c39be9b387be433df6dfb63ba5652196af401a853cdcb6106857c88a",
+  "image_fits": {
+    "44b6_image_20260909": {
+      "actual_steps": 10000,
+      "all_positive_alternatives_seen": true,
+      "model_sha256": "ff8a1b864651b34de7e1a31b7f30bff5e56218da54d99128ddc6693532b2ca1e",
+      "peak_cuda_bytes": 122161664,
+      "positive_rows": 244,
+      "positive_rows_seen": 244,
+      "seconds": 32.545603937935084,
+      "unique_negative_groups": 16155,
+      "unique_positive_groups": 20
+    },
+    "44b6_image_314159": {
+      "actual_steps": 10000,
+      "all_positive_alternatives_seen": true,
+      "model_sha256": "183fc82723c168d62f46d55996a066c055e9509b2f9eb934e6085cf3424bccb0",
+      "peak_cuda_bytes": 122161664,
+      "positive_rows": 244,
+      "positive_rows_seen": 244,
+      "seconds": 33.21445094328374,
+      "unique_negative_groups": 16155,
+      "unique_positive_groups": 20
+    },
+    "6bba_image_20260909": {
+      "actual_steps": 10000,
+      "all_positive_alternatives_seen": true,
+      "model_sha256": "8dcbbcdc4ca27d4a59181524fe139c3da087d6dc288e47ca4001f116b1610673",
+      "peak_cuda_bytes": 437169152,
+      "positive_rows": 938,
+      "positive_rows_seen": 938,
+      "seconds": 42.67726349690929,
+      "unique_negative_groups": 69689,
+      "unique_positive_groups": 92
+    },
+    "6bba_image_314159": {
+      "actual_steps": 10000,
+      "all_positive_alternatives_seen": true,
+      "model_sha256": "f6b667350955343315737e23b585cb57d71073399afd34c482fd122896d1d52c",
+      "peak_cuda_bytes": 437169152,
+      "positive_rows": 938,
+      "positive_rows_seen": 938,
+      "seconds": 32.297502116300166,
+      "unique_negative_groups": 69689,
+      "unique_positive_groups": 92
+    }
+  },
+  "io_handoff": {
+    "created": "2026-09-09T19:27:23.310696+00:00",
+    "idle_worker_checks": [
+      {
+        "cpu_ticks": 77228,
+        "pid": 87185,
+        "wait": "futex_wait_queue"
+      },
+      {
+        "cpu_ticks": 74889,
+        "pid": 87188,
+        "wait": "pipe_read"
+      }
+    ],
+    "loader_parity_verified": true,
+    "loader_sha256": "a797c4ba977de009dc80eb4290c5e6f31f62a0aa6d7079a1b067677114b63a87",
+    "manager_pid": 86351,
+    "new_workers": 4,
+    "note": "Old management process paused; workers drained queued jobs and had unchanged CPU ticks/blocking pipe/futex waits for60seconds. Linux reports pipe_read alias; no active work discarded.",
+    "policy_change": false,
+    "preserved_graph_receipts": {
+      "D_existing_p005_control": 44,
+      "D_existing_p020": 44,
+      "D_image_p010": 44,
+      "D_image_p020": 44,
+      "D_image_p040": 44,
+      "D_replace_p020": 44,
+      "D_replace_p040": 44,
+      "D_tabular_p010": 44,
+      "D_tabular_p020": 44,
+      "D_tabular_p040": 44
+    },
+    "stage": "idle_pool_retired_selective_loader_ready",
+    "worker_pids": [
+      87185,
+      87188
+    ]
+  },
+  "io_loader_parity": {
+    "algorithm_sha256": "0b4f3a2fefe78d92f9afcd3e7362511f40613e5a6352832b34c37f100a35da84",
+    "created": "2026-09-09T19:23:18.767142+00:00",
+    "dataset": "6bba_57b7cc1e",
+    "loader_sha256": "a797c4ba977de009dc80eb4290c5e6f31f62a0aa6d7079a1b067677114b63a87",
+    "method": "Largest fixed candidate pool, all TEN frozen variants; graph bytes, action ledgers and solver counts exactly equal",
+    "model_lock_sha256": "6ecb4bdf58e46bfd66a1414866d6d4c0f079c06dcd3faafd00b52e5ba1b57984",
+    "parity": [
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "b94dd174c912baa8a9f6d856a87a4b7d48085d0132532c2b35dc06fd4c0bab94",
+        "ledger_equal": true,
+        "variant": "D_existing_p020"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "7d30b1d1ce567da156081e99edf887a93af23464f37982845413398fdb5db2c9",
+        "ledger_equal": true,
+        "variant": "D_existing_p005_control"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "6a367106457de6d04b80d7ecee79cb2baf4436df63d2aa016c6ae59effea8576",
+        "ledger_equal": true,
+        "variant": "D_tabular_p010"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "e243a839cc5937e607816814ebf107c4fcd94bff287a410b88b204e2e2f0d572",
+        "ledger_equal": true,
+        "variant": "D_tabular_p020"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "418975296c65efee3b2fa9ee61b3a1a74c52996da88afa36cc1223c63c36fec2",
+        "ledger_equal": true,
+        "variant": "D_tabular_p040"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "16958ff76dce9d0ee679eb11ba724f0302ad7fd3f6f2d09d985b6391bf59822d",
+        "ledger_equal": true,
+        "variant": "D_image_p010"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "1d83eb802073ac556309582cbaf82956a3fcd10813faefc3f6abd7acd1d0fc97",
+        "ledger_equal": true,
+        "variant": "D_image_p020"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "80defa8323c9af9eaeba88cd030e8636f6b1deec421bb5b87c4cfc2dc4664f0c",
+        "ledger_equal": true,
+        "variant": "D_image_p040"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "983941d2d21c176f9fcff2726c2f49e3c99e8bb651ab0aeebee373c03d5696c2",
+        "ledger_equal": true,
+        "variant": "D_replace_p020"
+      },
+      {
+        "decode_counts_equal": true,
+        "graph_bytes_equal": true,
+        "graph_sha256": "e89d4ff3250dd29c721388c03173162ffd775c5d96c2536f8feaf724e5ff4ff0",
+        "ledger_equal": true,
+        "variant": "D_replace_p040"
+      }
+    ],
+    "probability_lock_sha256": "800d5ec74eb01d5685d3169cdb1fcc20235312c8c23f016a7a4664f456187bde",
+    "process_peak_rss_bytes": 642936832,
+    "seconds": 93.12250384688377,
+    "variants": 10
+  },
+  "learning_diagnostics": {
+    "44b6": {
+      "method": "25/50/100% source positive event groups; all supported source negatives; no held-out probability calibration",
+      "rows": [
+        {
+          "fraction": 0.25,
+          "model_sha256": "68fe8004c2f41ed86cd6bb160a3f15a0b0b63ff80305ef3bce57a53359481631",
+          "positive_groups": 5,
+          "source_weighted_bce": 0.44335044911752786,
+          "training_rows": 65543
+        },
+        {
+          "fraction": 0.5,
+          "model_sha256": "edabcd36422a2b469296bff76e7aea87cb845ae8ae0f6980852bb3935a24bdb9",
+          "positive_groups": 10,
+          "source_weighted_bce": 0.38960002349107026,
+          "training_rows": 65608
+        },
+        {
+          "fraction": 1.0,
+          "model_sha256": "00e4b1d611baf8527aea1e51d8f651178622246646f21e141548f320869cf859",
+          "positive_groups": 20,
+          "source_weighted_bce": 0.36534794062613396,
+          "training_rows": 65726
+        }
+      ],
+      "source": "44b6"
+    },
+    "6bba": {
+      "method": "25/50/100% source positive event groups; all supported source negatives; no held-out probability calibration",
+      "rows": [
+        {
+          "fraction": 0.25,
+          "model_sha256": "35fb212697720cf0e90c12555fafc267e95eeff93f56aa930904e8bec1740aad",
+          "positive_groups": 23,
+          "source_weighted_bce": 0.40525388283417885,
+          "training_rows": 272586
+        },
+        {
+          "fraction": 0.5,
+          "model_sha256": "7c716c2b82910b37427c82a5b60f55f4864a9f4073e62226d092b3f435355e74",
+          "positive_groups": 46,
+          "source_weighted_bce": 0.3548976844605202,
+          "training_rows": 272849
+        },
+        {
+          "fraction": 1.0,
+          "model_sha256": "1a4b7b55b05f72aaa6533e86dfc64672bf8d3fc83dd9a25396f897919e99313a",
+          "positive_groups": 92,
+          "source_weighted_bce": 0.3455879704996204,
+          "training_rows": 273297
+        }
+      ],
+      "source": "6bba"
+    }
+  },
+  "limitations": [
+    "Operational exploratory opposite-embryo fitting; biological event independence is not certified across overlapping clips or reused public checkpoints.",
+    "Scores optimize equal event/nondivision group class risk and are not posterior calibrated. Fixed limited thresholds are frozen before any event comparative scoring.",
+    "Fallback proposal growth adds six observed event bags; source44 coverage does not improve. Both sources remain below the diagnostic85% target.",
+    "Unknown/incomplete contexts are ignored, not negatives. Positive alternatives share total event weight one; image batches sample supported groups uniformly.",
+    "Frozen label NPZ inclusion values are parent-group sampled fractions, not exact mixed-stratum row propensities. Export calls the field parent_group_sampling_fraction; fits never use inverse propensity weighting.",
+    "Existing forks whose exact selected daughter continuation cannot be represented are assigned conservative incumbent probability.99 in the replacement decoder.",
+    "Whole conflicting components over256 feasible alternatives abstain; resource closure is preserved after payload discard. A fixed2% edge-change cap can cause complete component abstention.",
+    "The initial unscored reverse-union preparation defect was corrected before fitting; old fingerprints and negative diagnostic receipts remain archived separately.",
+    "The compact temporal encoder sees9 parent-centered triplanar12x12 crops at2um/pixel (24um field). Some daughters admitted by16\u201320um proposal gates fall outside this image context; their discrimination relies on geometry/native and scalar daughter image features. No separate daughter-centered image encoder was fitted."
+  ],
+  "logistic_models": {
+    "44b6_logistic": {
+      "actual_iterations": [
+        15
+      ],
+      "model_sha256": "00e4b1d611baf8527aea1e51d8f651178622246646f21e141548f320869cf859",
+      "positive_rows": 244,
+      "source_weighted_bce": 0.36534794062613396,
+      "training_rows": 65726
+    },
+    "6bba_logistic": {
+      "actual_iterations": [
+        16
+      ],
+      "model_sha256": "1a4b7b55b05f72aaa6533e86dfc64672bf8d3fc83dd9a25396f897919e99313a",
+      "positive_rows": 938,
+      "source_weighted_bce": 0.3455879704996204,
+      "training_rows": 273297
+    }
+  },
+  "measured_summary": {
+    "baseline": {
+      "44b6": {
+        "adj_edge_jaccard": 0.9170290534439977,
+        "counts": {
+          "division_fn": 19,
+          "division_fp": 22,
+          "division_tp": 7,
+          "edge_fn": 962,
+          "edge_fp": 1084,
+          "edge_tp": 18864,
+          "num_pred_nodes": 1972750
+        },
+        "division_fn": 19,
+        "division_fp": 22,
+        "division_jaccard": 0.14583333333333334,
+        "division_tp": 7,
+        "edge_jaccard": 0.9021520803443328,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9877569341470968,
+        "score": 0.9316123867773309
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9232431985874817,
+        "counts": {
+          "division_fn": 103,
+          "division_fp": 70,
+          "division_tp": 22,
+          "edge_fn": 4898,
+          "edge_fp": 3846,
+          "edge_tp": 104159,
+          "num_pred_nodes": 2136193
+        },
+        "division_fn": 103,
+        "division_fp": 70,
+        "division_jaccard": 0.11282051282051282,
+        "division_tp": 22,
+        "edge_jaccard": 0.9225529879631188,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9795753914358454,
+        "score": 0.934525249869533
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9222721585917395,
+        "counts": {
+          "division_fn": 122,
+          "division_fp": 92,
+          "division_tp": 29,
+          "edge_fn": 5860,
+          "edge_fp": 4930,
+          "edge_tp": 123023,
+          "num_pred_nodes": 4108943
+        },
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_jaccard": 0.11934156378600823,
+        "division_tp": 29,
+        "edge_jaccard": 0.9193650841099146,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.982494434312724,
+        "score": 0.9342063149703403
+      }
+    },
+    "complete_score_rows": 1990,
+    "created": "2026-09-09T19:49:38.647459+00:00",
+    "event_round_lock_sha256": "b98782f24db58cd73410801b4ce96d2861458158c6fa2ffff0e4203968649a23",
+    "independent_validation": false,
+    "interpretation": "All199 fresh official graph scores per variant; both reused embryo directions frozen before V340 comparative scoring; every gain/loss measured against actual v2 incumbent",
+    "rows": [
+      {
+        "count_changes_v2": {
+          "division_fn": -4,
+          "division_fp": 389,
+          "division_tp": 4,
+          "edge_fn": -27,
+          "edge_fp": 401,
+          "edge_tp": 27,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 15,
+          "division_fp": 411,
+          "division_tp": 11,
+          "edge_fn": 935,
+          "edge_fp": 1485,
+          "edge_tp": 18891,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.02799512033786944,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9036172664394615,
+        "variant": "D_existing_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -36,
+          "division_fp": 1257,
+          "division_tp": 36,
+          "edge_fn": -177,
+          "edge_fp": 1371,
+          "edge_tp": 177,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 67,
+          "division_fp": 1327,
+          "division_tp": 58,
+          "edge_fn": 4721,
+          "edge_fp": 5217,
+          "edge_tp": 104336,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.01682026667390568,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9177049831956273,
+        "variant": "D_existing_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -40,
+          "division_fp": 1646,
+          "division_tp": 40,
+          "edge_fn": -204,
+          "edge_fp": 1772,
+          "edge_tp": 204,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 82,
+          "division_fp": 1738,
+          "division_tp": 69,
+          "edge_fn": 5656,
+          "edge_fp": 6702,
+          "edge_tp": 123227,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.018825173465404133,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9153811415049362,
+        "variant": "D_existing_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -1,
+          "division_fp": 306,
+          "division_tp": 1,
+          "edge_fn": 99,
+          "edge_fp": 410,
+          "edge_tp": -99,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 18,
+          "division_fp": 328,
+          "division_tp": 8,
+          "edge_fn": 1061,
+          "edge_fp": 1494,
+          "edge_tp": 18765,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.0346717557825027,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.8969406309948282,
+        "variant": "D_existing_p005_control"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -24,
+          "division_fp": 1044,
+          "division_tp": 24,
+          "edge_fn": 121,
+          "edge_fp": 1285,
+          "edge_tp": -121,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 79,
+          "division_fp": 1114,
+          "division_tp": 46,
+          "edge_fn": 5019,
+          "edge_fp": 5131,
+          "edge_tp": 104038,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.019017765488407723,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9155074843811253,
+        "variant": "D_existing_p005_control"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -25,
+          "division_fp": 1350,
+          "division_tp": 25,
+          "edge_fn": 220,
+          "edge_fp": 1695,
+          "edge_tp": -220,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 97,
+          "division_fp": 1442,
+          "division_tp": 54,
+          "edge_fn": 6080,
+          "edge_fp": 6625,
+          "edge_tp": 122803,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.02171429452430229,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.912492020446038,
+        "variant": "D_existing_p005_control"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": 0,
+          "division_fp": 84,
+          "division_tp": 0,
+          "edge_fn": 102,
+          "edge_fp": 255,
+          "edge_tp": -102,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 19,
+          "division_fp": 106,
+          "division_tp": 7,
+          "edge_fn": 1064,
+          "edge_fp": 1339,
+          "edge_tp": 18762,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.02520601219534957,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9064063745819814,
+        "variant": "D_tabular_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -10,
+          "division_fp": 480,
+          "division_tp": 10,
+          "edge_fn": 317,
+          "edge_fp": 1142,
+          "edge_tp": -317,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 93,
+          "division_fp": 550,
+          "division_tp": 32,
+          "edge_fn": 5215,
+          "edge_fp": 4988,
+          "edge_tp": 103842,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.01856626476245382,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9159589851070792,
+        "variant": "D_tabular_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -10,
+          "division_fp": 564,
+          "division_tp": 10,
+          "edge_fn": 419,
+          "edge_fp": 1397,
+          "edge_tp": -419,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 112,
+          "division_fp": 656,
+          "division_tp": 39,
+          "edge_fn": 6279,
+          "edge_fp": 6327,
+          "edge_tp": 122604,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.019738685451895832,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9144676295184445,
+        "variant": "D_tabular_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -2,
+          "division_fp": 101,
+          "division_tp": 2,
+          "edge_fn": 69,
+          "edge_fp": 246,
+          "edge_tp": -69,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 17,
+          "division_fp": 123,
+          "division_tp": 9,
+          "edge_fn": 1031,
+          "edge_fp": 1330,
+          "edge_tp": 18795,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.0225191017260975,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9090932850512334,
+        "variant": "D_tabular_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -13,
+          "division_fp": 504,
+          "division_tp": 13,
+          "edge_fn": 273,
+          "edge_fp": 1181,
+          "edge_tp": -273,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 90,
+          "division_fp": 574,
+          "division_tp": 35,
+          "edge_fn": 5171,
+          "edge_fp": 5027,
+          "edge_tp": 103886,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.018225180580343725,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9163000692891893,
+        "variant": "D_tabular_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -15,
+          "division_fp": 605,
+          "division_tp": 15,
+          "edge_fn": 342,
+          "edge_fp": 1427,
+          "edge_tp": -342,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 107,
+          "division_fp": 697,
+          "division_tp": 44,
+          "edge_fn": 6202,
+          "edge_fp": 6357,
+          "edge_tp": 122681,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.019013711794515054,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9151926031758253,
+        "variant": "D_tabular_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -1,
+          "division_fp": 136,
+          "division_tp": 1,
+          "edge_fn": 61,
+          "edge_fp": 287,
+          "edge_tp": -61,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 18,
+          "division_fp": 158,
+          "division_tp": 8,
+          "edge_fn": 1023,
+          "edge_fp": 1371,
+          "edge_tp": 18803,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.025578017956185084,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9060343688211459,
+        "variant": "D_tabular_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -15,
+          "division_fp": 476,
+          "division_tp": 15,
+          "edge_fn": 294,
+          "edge_fp": 1201,
+          "edge_tp": -294,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 88,
+          "division_fp": 546,
+          "division_tp": 37,
+          "edge_fn": 5192,
+          "edge_fp": 5047,
+          "edge_tp": 103865,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.01806278681835105,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.916462463051182,
+        "variant": "D_tabular_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -16,
+          "division_fp": 612,
+          "division_tp": 16,
+          "edge_fn": 355,
+          "edge_fp": 1488,
+          "edge_tp": -355,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 106,
+          "division_fp": 704,
+          "division_tp": 45,
+          "edge_fn": 6215,
+          "edge_fp": 6418,
+          "edge_tp": 122668,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.019445850707153878,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9147604642631865,
+        "variant": "D_tabular_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -2,
+          "division_fp": 248,
+          "division_tp": 2,
+          "edge_fn": 55,
+          "edge_fp": 343,
+          "edge_tp": -55,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 17,
+          "division_fp": 270,
+          "division_tp": 9,
+          "edge_fn": 1017,
+          "edge_fp": 1427,
+          "edge_tp": 18809,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.028975999127543228,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9026363876497877,
+        "variant": "D_image_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -11,
+          "division_fp": 323,
+          "division_tp": 11,
+          "edge_fn": 475,
+          "edge_fp": 1033,
+          "edge_tp": -475,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 92,
+          "division_fp": 393,
+          "division_tp": 33,
+          "edge_fn": 5373,
+          "edge_fp": 4879,
+          "edge_tp": 103684,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.017455609921245285,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9170696399482877,
+        "variant": "D_image_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -13,
+          "division_fp": 571,
+          "division_tp": 13,
+          "edge_fn": 530,
+          "edge_fp": 1376,
+          "edge_tp": -530,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 109,
+          "division_fp": 663,
+          "division_tp": 42,
+          "edge_fn": 6390,
+          "edge_fp": 6306,
+          "edge_tp": 122493,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.020093145168439186,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9141131698019012,
+        "variant": "D_image_p010"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -3,
+          "division_fp": 306,
+          "division_tp": 3,
+          "edge_fn": 33,
+          "edge_fp": 391,
+          "edge_tp": -33,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 16,
+          "division_fp": 328,
+          "division_tp": 10,
+          "edge_fn": 995,
+          "edge_fp": 1475,
+          "edge_tp": 18831,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.030150826484662052,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9014615602926689,
+        "variant": "D_image_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -8,
+          "division_fp": 311,
+          "division_tp": 8,
+          "edge_fn": 466,
+          "edge_fp": 1005,
+          "edge_tp": -466,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 95,
+          "division_fp": 381,
+          "division_tp": 30,
+          "edge_fn": 5364,
+          "edge_fp": 4851,
+          "edge_tp": 103693,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.017593626846082122,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9169316230234509,
+        "variant": "D_image_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -11,
+          "division_fp": 617,
+          "division_tp": 11,
+          "edge_fn": 499,
+          "edge_fp": 1396,
+          "edge_tp": -499,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 111,
+          "division_fp": 709,
+          "division_tp": 40,
+          "edge_fn": 6359,
+          "edge_fp": 6326,
+          "edge_tp": 122524,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.020500549148428804,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9137057658219115,
+        "variant": "D_image_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -3,
+          "division_fp": 334,
+          "division_tp": 3,
+          "edge_fn": -6,
+          "edge_fp": 382,
+          "edge_tp": 6,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 16,
+          "division_fp": 356,
+          "division_tp": 10,
+          "edge_fn": 956,
+          "edge_fp": 1466,
+          "edge_tp": 18870,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.02809695296067405,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9035154338166569,
+        "variant": "D_image_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -9,
+          "division_fp": 292,
+          "division_tp": 9,
+          "edge_fn": 441,
+          "edge_fp": 948,
+          "edge_tp": -441,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 94,
+          "division_fp": 362,
+          "division_tp": 31,
+          "edge_fn": 5339,
+          "edge_fp": 4794,
+          "edge_tp": 103718,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.016480898131234545,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9180443517382985,
+        "variant": "D_image_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -12,
+          "division_fp": 626,
+          "division_tp": 12,
+          "edge_fn": 435,
+          "edge_fp": 1330,
+          "edge_tp": -435,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 110,
+          "division_fp": 718,
+          "division_tp": 41,
+          "edge_fn": 6295,
+          "edge_fp": 6260,
+          "edge_tp": 122588,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.01950799771072198,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9146983172596184,
+        "variant": "D_image_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -3,
+          "division_fp": 305,
+          "division_tp": 3,
+          "edge_fn": 33,
+          "edge_fp": 390,
+          "edge_tp": -33,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 16,
+          "division_fp": 327,
+          "division_tp": 10,
+          "edge_fn": 995,
+          "edge_fp": 1474,
+          "edge_tp": 18831,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.030101066002598653,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9015113207747323,
+        "variant": "D_replace_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -7,
+          "division_fp": 308,
+          "division_tp": 7,
+          "edge_fn": 467,
+          "edge_fp": 999,
+          "edge_tp": -467,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 96,
+          "division_fp": 378,
+          "division_tp": 29,
+          "edge_fn": 5365,
+          "edge_fp": 4845,
+          "edge_tp": 103692,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.017718656002876365,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9168065938666566,
+        "variant": "D_replace_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -10,
+          "division_fp": 613,
+          "division_tp": 10,
+          "edge_fn": 500,
+          "edge_fp": 1389,
+          "edge_tp": -500,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 112,
+          "division_fp": 705,
+          "division_tp": 39,
+          "edge_fn": 6360,
+          "edge_fp": 6319,
+          "edge_tp": 122523,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.02055670318185021,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9136496117884901,
+        "variant": "D_replace_p020"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -3,
+          "division_fp": 335,
+          "division_tp": 3,
+          "edge_fn": -6,
+          "edge_fp": 383,
+          "edge_tp": 6,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 16,
+          "division_fp": 357,
+          "division_tp": 10,
+          "edge_fn": 956,
+          "edge_fp": 1467,
+          "edge_tp": 18870,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": -0.028146097518416346,
+        "embryo": "44b6",
+        "samples": 71,
+        "score": 0.9034662892589146,
+        "variant": "D_replace_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -8,
+          "division_fp": 282,
+          "division_tp": 8,
+          "edge_fn": 439,
+          "edge_fp": 933,
+          "edge_tp": -439,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 95,
+          "division_fp": 352,
+          "division_tp": 30,
+          "edge_fn": 5337,
+          "edge_fp": 4779,
+          "edge_tp": 103720,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": -0.016419240828674853,
+        "embryo": "6bba",
+        "samples": 128,
+        "score": 0.9181060090408582,
+        "variant": "D_replace_p040"
+      },
+      {
+        "count_changes_v2": {
+          "division_fn": -11,
+          "division_fp": 617,
+          "division_tp": 11,
+          "edge_fn": 433,
+          "edge_fp": 1316,
+          "edge_tp": -433,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 111,
+          "division_fp": 709,
+          "division_tp": 40,
+          "edge_fn": 6293,
+          "edge_fp": 6246,
+          "edge_tp": 122590,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": -0.019465694279639734,
+        "embryo": "pooled",
+        "samples": 199,
+        "score": 0.9147406206907006,
+        "variant": "D_replace_p040"
+      }
+    ],
+    "scoring_round_sha256": "66f7f41b78077b7b764cd02fc718ebe40bc86212df659d4625c47a95f636f41f"
+  },
+  "model_lock_sha256": "6ecb4bdf58e46bfd66a1414866d6d4c0f079c06dcd3faafd00b52e5ba1b57984",
+  "probability_lock_sha256": "800d5ec74eb01d5685d3169cdb1fcc20235312c8c23f016a7a4664f456187bde",
+  "score_disagreement": {
+    "candidate_weighted_mean_absolute_seed_difference": 0.03504950301726938,
+    "candidates": 190139632,
+    "clips": 199,
+    "interpretation": "Sigmoid-score probability variability across two fixed training seeds, weighted over candidate rows. This is not calibration, a confidence interval, independent biological event counting, or a generalization estimate.",
+    "probability_lock_sha256": "800d5ec74eb01d5685d3169cdb1fcc20235312c8c23f016a7a4664f456187bde",
+    "seed_threshold_disagreement": {
+      "0.1": 10408540,
+      "0.2": 9083867,
+      "0.4": 7342912
+    },
+    "source_directions": {
+      "44b6": {
+        "candidate_weighted_mean_absolute_seed_difference": 0.021096268180063063,
+        "candidates": 92267674,
+        "clips": 128,
+        "image_primary_above_p020": 1954597,
+        "image_secondary_above_p020": 2954958,
+        "target": "6bba"
+      },
+      "6bba": {
+        "candidate_weighted_mean_absolute_seed_difference": 0.04820375628361147,
+        "candidates": 97871958,
+        "clips": 71,
+        "image_primary_above_p020": 11262223,
+        "image_secondary_above_p020": 15196993,
+        "target": "44b6"
+      }
+    },
+    "table": {
+      "path": "/kaggle/working/cell-tracking/strong-tracker-v3/event_seed_disagreement.parquet",
+      "rows": 597,
+      "seeds": [
+        20260909,
+        314159
+      ],
+      "sha256": "81b03084426512d0f2500bde4250a5e87270ac50adb11274e813d02ff3432597"
+    },
+    "threshold_counts": {
+      "image_20260909": {
+        "0.05": 21439628,
+        "0.1": 17265767,
+        "0.2": 13216820,
+        "0.4": 9081345
+      },
+      "image_314159": {
+        "0.05": 27287881,
+        "0.1": 22767133,
+        "0.2": 18151951,
+        "0.4": 13103059
+      },
+      "logistic": {
+        "0.05": 168176650,
+        "0.1": 132589416,
+        "0.2": 81574100,
+        "0.4": 48134284
+      }
+    }
+  },
+  "source_oracle_manifest_sha256": "3667c2e7e10cead8496994b09c9e56a3d1f6979e234aaff5e43774bc45a97093",
+  "source_oracles": {
+    "created": "2026-09-09T19:48:12.688862+00:00",
+    "heuristic_not_global_bound": true,
+    "manifest_sha256": "3667c2e7e10cead8496994b09c9e56a3d1f6979e234aaff5e43774bc45a97093",
+    "promotion_eligible": false,
+    "rows": [
+      {
+        "arm": "source_existing_pool",
+        "count_changes_v2": {
+          "division_fn": -8,
+          "division_fp": 1,
+          "division_tp": 8,
+          "edge_fn": -5,
+          "edge_fp": 1,
+          "edge_tp": 5,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 11,
+          "division_fp": 23,
+          "division_tp": 15,
+          "edge_fn": 957,
+          "edge_fp": 1085,
+          "edge_tp": 18869,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": 0.01622984519456394,
+        "embryo": "44b6",
+        "score": 0.9478422319718949
+      },
+      {
+        "arm": "source_existing_pool",
+        "count_changes_v2": {
+          "division_fn": -49,
+          "division_fp": 0,
+          "division_tp": 49,
+          "edge_fn": -36,
+          "edge_fp": 12,
+          "edge_tp": 36,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 54,
+          "division_fp": 70,
+          "division_tp": 71,
+          "edge_fn": 4862,
+          "edge_fp": 3858,
+          "edge_tp": 104195,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": 0.02534838653358895,
+        "embryo": "6bba",
+        "score": 0.959873636403122
+      },
+      {
+        "arm": "source_existing_pool",
+        "count_changes_v2": {
+          "division_fn": -57,
+          "division_fp": 1,
+          "division_tp": 57,
+          "edge_fn": -41,
+          "edge_fp": 13,
+          "edge_tp": 41,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 65,
+          "division_fp": 93,
+          "division_tp": 86,
+          "edge_fn": 5819,
+          "edge_fp": 4943,
+          "edge_tp": 123064,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": 0.023528966995677858,
+        "embryo": "pooled",
+        "score": 0.9577352819660182
+      },
+      {
+        "arm": "source_expanded_pool",
+        "count_changes_v2": {
+          "division_fn": -12,
+          "division_fp": 1,
+          "division_tp": 12,
+          "edge_fn": -2,
+          "edge_fp": 7,
+          "edge_tp": 2,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 7,
+          "division_fp": 23,
+          "division_tp": 19,
+          "edge_fn": 960,
+          "edge_fp": 1091,
+          "edge_tp": 18866,
+          "num_pred_nodes": 1972750
+        },
+        "delta_v2": 0.023984222281942413,
+        "embryo": "44b6",
+        "score": 0.9555966090592733
+      },
+      {
+        "arm": "source_expanded_pool",
+        "count_changes_v2": {
+          "division_fn": -69,
+          "division_fp": 1,
+          "division_tp": 69,
+          "edge_fn": -34,
+          "edge_fp": 27,
+          "edge_tp": 34,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 34,
+          "division_fp": 71,
+          "division_tp": 91,
+          "edge_fn": 4864,
+          "edge_fp": 3873,
+          "edge_tp": 104193,
+          "num_pred_nodes": 2136193
+        },
+        "delta_v2": 0.03522669600246775,
+        "embryo": "6bba",
+        "score": 0.9697519458720008
+      },
+      {
+        "arm": "source_expanded_pool",
+        "count_changes_v2": {
+          "division_fn": -81,
+          "division_fp": 2,
+          "division_tp": 81,
+          "edge_fn": -36,
+          "edge_fp": 34,
+          "edge_tp": 36,
+          "num_pred_nodes": 0
+        },
+        "counts": {
+          "division_fn": 41,
+          "division_fp": 94,
+          "division_tp": 110,
+          "edge_fn": 5824,
+          "edge_fp": 4964,
+          "edge_tp": 123059,
+          "num_pred_nodes": 4108943
+        },
+        "delta_v2": 0.03299887262077239,
+        "embryo": "pooled",
+        "score": 0.9672051875911127
+      }
+    ],
+    "source_only": true
+  },
+  "table": {
+    "feature_bytes": 3932996995,
+    "feature_rows": 190139632,
+    "feature_sha256": "3af60a6f9cf98b72649b7e199fe355292f35f4cf135123c1ccebb9bf444a6b9f",
+    "label_bytes": 2185914,
+    "label_sha256": "43bae9b662f67839dc0f61bb7044e6e930b5975bf066285620c277335a6334d3",
+    "proposal_sampling": "Every enumerated pair/path within a selected trigger has conditional inclusion1; trigger selection and ID-modulus anchors are deterministic, so no unconditional random-sampling propensity is claimed. Dataset plus parent_id is the prediction event grouping key; source event bags are separate label fields.",
+    "sampling_metadata_limitation": "Frozen label NPZ inclusion is the parent-group sampled fraction, not exact row propensity when hard/ordinary strata mix. Export names it parent_group_sampling_fraction. Fits use event/group-balanced weights, never inverse propensity weighting; labels and fitted inputs remain unchanged.",
+    "supported_training_rows": 339023
+  },
+  "table_schema_audit": {
+    "all_training_rows_supported": true,
+    "created": "2026-09-09T19:15:28.793053+00:00",
+    "feature_columns": 53,
+    "feature_names": [
+      "p_low",
+      "p_high",
+      "p_sum",
+      "p_difference",
+      "native_missing_count",
+      "existing_count",
+      "distance_low_um",
+      "distance_high_um",
+      "sister_distance_um",
+      "barycenter_distance_um",
+      "motion_barycenter_residual_um",
+      "distance_asymmetry",
+      "angle_cosine",
+      "path_distance_low_um",
+      "path_distance_high_um",
+      "future_separation_change",
+      "future_missing_count",
+      "parent_history_missing",
+      "parent_response",
+      "daughter_response_low",
+      "daughter_response_high",
+      "intensity_ratio",
+      "daughter_intensity_ratio",
+      "parent_density",
+      "daughter_birth_count",
+      "owner_distance_low",
+      "owner_distance_high",
+      "owner_probability_low",
+      "owner_probability_high",
+      "owner_missing_count",
+      "original_fork",
+      "boundary_left",
+      "boundary_right",
+      "path_probability_low",
+      "path_probability_high",
+      "candidate_path_count_low",
+      "candidate_path_count_high",
+      "parent_terminates",
+      "native_parent_missing",
+      "nearby_birth_trigger"
+    ],
+    "feature_rows": 190139632,
+    "feature_sha256": "3af60a6f9cf98b72649b7e199fe355292f35f4cf135123c1ccebb9bf444a6b9f",
+    "features_and_labels_separated": true,
+    "inclusion_field_correctly_named": true,
+    "label_sha256": "43bae9b662f67839dc0f61bb7044e6e930b5975bf066285620c277335a6334d3",
+    "positive_bag_total_weight": 112.0,
+    "positive_bags": 112,
+    "positive_rows": 1182,
+    "training_rows": 339023
+  },
+  "tests": {
+    "direct_audit_accepted_actions": 253,
+    "direct_audit_calls": 120,
+    "direct_audit_changed_edges": 899,
+    "event_tests_passed": 21
+  },
+  "total_actual_optimizer_steps": 40000,
+  "total_cuda_optimizer_seconds": 140.73482049442828
+}

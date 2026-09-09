@@ -1,0 +1,32 @@
+{
+  "audited_pool": "base",
+  "audited_source_clips": 1,
+  "created": "2026-09-09T18:49:32.949168+00:00",
+  "example": {
+    "actual_hard_row_probability": 0.6666666666666666,
+    "actual_ordinary_row_probability": 0.5,
+    "recorded_group_sampling_fraction": 0.5714285714285714
+  },
+  "frozen_arrays_reproduced": [
+    "index",
+    "y",
+    "bag",
+    "weight",
+    "inclusion",
+    "all_y",
+    "all_bag"
+  ],
+  "frozen_outputs_unchanged": true,
+  "incorrect_row_inclusion_values": 32,
+  "interpretation": "The recorded values are group sampling fractions, not exact stratified per-row inclusion probabilities. They must not be used as row propensities for inverse-probability weighting or calibration.",
+  "mechanism": "Hard and ordinary negative strata are sampled separately, each with min(4,stratum size) rows. The stored inclusion field uses total selected/group size for both strata.",
+  "method": "In-memory instrumentation of the frozen source label function; all seven cached label arrays exactly reproduced before comparing recorded and actual inclusion.",
+  "mixed_negative_parent_groups": 5,
+  "model_impact": "None: source_corpus consumes index,y,weight,bag and never inclusion. Equal event-group training weights remain unchanged.",
+  "no_gt_ids_or_coordinates_in_audit": true,
+  "positive_rows": 4,
+  "sampled_negative_rows": 172,
+  "scope": "Bounded post-hoc metadata audit; no fitting, thresholds, predictions or frozen source artifacts changed",
+  "source_labels_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+  "total_supported_rows": 176
+}

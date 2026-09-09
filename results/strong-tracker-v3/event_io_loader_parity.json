@@ -1,0 +1,84 @@
+{
+  "algorithm_sha256": "0b4f3a2fefe78d92f9afcd3e7362511f40613e5a6352832b34c37f100a35da84",
+  "created": "2026-09-09T19:23:18.767142+00:00",
+  "dataset": "6bba_57b7cc1e",
+  "loader_sha256": "a797c4ba977de009dc80eb4290c5e6f31f62a0aa6d7079a1b067677114b63a87",
+  "method": "Largest fixed candidate pool, all TEN frozen variants; graph bytes, action ledgers and solver counts exactly equal",
+  "model_lock_sha256": "6ecb4bdf58e46bfd66a1414866d6d4c0f079c06dcd3faafd00b52e5ba1b57984",
+  "parity": [
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "b94dd174c912baa8a9f6d856a87a4b7d48085d0132532c2b35dc06fd4c0bab94",
+      "ledger_equal": true,
+      "variant": "D_existing_p020"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "7d30b1d1ce567da156081e99edf887a93af23464f37982845413398fdb5db2c9",
+      "ledger_equal": true,
+      "variant": "D_existing_p005_control"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "6a367106457de6d04b80d7ecee79cb2baf4436df63d2aa016c6ae59effea8576",
+      "ledger_equal": true,
+      "variant": "D_tabular_p010"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "e243a839cc5937e607816814ebf107c4fcd94bff287a410b88b204e2e2f0d572",
+      "ledger_equal": true,
+      "variant": "D_tabular_p020"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "418975296c65efee3b2fa9ee61b3a1a74c52996da88afa36cc1223c63c36fec2",
+      "ledger_equal": true,
+      "variant": "D_tabular_p040"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "16958ff76dce9d0ee679eb11ba724f0302ad7fd3f6f2d09d985b6391bf59822d",
+      "ledger_equal": true,
+      "variant": "D_image_p010"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "1d83eb802073ac556309582cbaf82956a3fcd10813faefc3f6abd7acd1d0fc97",
+      "ledger_equal": true,
+      "variant": "D_image_p020"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "80defa8323c9af9eaeba88cd030e8636f6b1deec421bb5b87c4cfc2dc4664f0c",
+      "ledger_equal": true,
+      "variant": "D_image_p040"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "983941d2d21c176f9fcff2726c2f49e3c99e8bb651ab0aeebee373c03d5696c2",
+      "ledger_equal": true,
+      "variant": "D_replace_p020"
+    },
+    {
+      "decode_counts_equal": true,
+      "graph_bytes_equal": true,
+      "graph_sha256": "e89d4ff3250dd29c721388c03173162ffd775c5d96c2536f8feaf724e5ff4ff0",
+      "ledger_equal": true,
+      "variant": "D_replace_p040"
+    }
+  ],
+  "probability_lock_sha256": "800d5ec74eb01d5685d3169cdb1fcc20235312c8c23f016a7a4664f456187bde",
+  "process_peak_rss_bytes": 642936832,
+  "seconds": 93.12250384688377,
+  "variants": 10
+}

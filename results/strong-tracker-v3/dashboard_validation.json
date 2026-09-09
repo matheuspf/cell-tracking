@@ -1,0 +1,37 @@
+{
+  "chromium_version": "151.0.7922.34",
+  "created": "2026-09-09T20:20:10.573895+00:00",
+  "dashboard_sha256": "bea9021a6b31cccbc4e3ac299cb28a6cc56571e6e38b44bc56bbfd19292b829e",
+  "horizontal_overflow": false,
+  "network_requests": [],
+  "page_errors": [],
+  "passed": true,
+  "screenshots": [
+    {
+      "file": "dashboard_desktop.png",
+      "height": 900,
+      "sha256": "74c855edfff34492b6dfb8349c15eb4bb602dc12f4113050c96a57f86d43cb8a",
+      "width": 1280
+    },
+    {
+      "file": "dashboard_mobile.png",
+      "height": 844,
+      "sha256": "cc335e51932a435dbb921c63205caf96c060a0cb75e86a1bb25569d492eca1de",
+      "width": 390
+    }
+  ],
+  "states": [
+    {
+      "embryo": "pooled",
+      "rows": 32
+    },
+    {
+      "embryo": "44b6",
+      "rows": 32
+    },
+    {
+      "embryo": "6bba",
+      "rows": 32
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "continuous_proposal_cap_um": 0.75,
+  "integer_export_over_continuous_cap": 7726,
+  "note": "The physical cap is applied to continuous image-centroid proposals before required integer voxel serialization. Nearest-integer projection can exceed it; report realized displacements explicitly.",
+  "observed_integer_export_max_shift_um": 0.9084026158592896,
+  "relocated_nodes": 26486
+}

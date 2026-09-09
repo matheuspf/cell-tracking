@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "count_deltas": {
+        "division_fn": 1,
+        "division_fp": 1,
+        "division_tp": -1,
+        "edge_fp": -1,
+        "edge_tp": 0
+      },
+      "dataset": "6bba_2312ac41",
+      "frozen_fork_outgoing_edges_preserved": true,
+      "interpretation": "Fixed immediate fork edges do not protect all timing-tolerant daughter paths; an edge globally counted FP can support a valid early division"
+    }
+  ],
+  "created": "2026-09-09T18:31:18.243889+00:00",
+  "fork_freeze_scope": "Only each incumbent fork parent and its two immediate outgoing edges are fixed; downstream daughter trajectories can change",
+  "no_new_variants_or_refitting": true
+}

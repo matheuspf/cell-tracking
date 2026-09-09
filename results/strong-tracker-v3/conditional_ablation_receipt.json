@@ -1,0 +1,47 @@
+{
+  "annotation_access_blocked": true,
+  "call_order": [
+    "edge validity",
+    "motion disabled",
+    "single-parent guard",
+    "close_single_frame_gaps",
+    "recover_strict_gap2",
+    "add_safe_divisions_postlink",
+    "isolated-node pruning",
+    "filter_short_track_components",
+    "linefit_smooth_output_graph",
+    "integer serialization and bounds clipping"
+  ],
+  "notebook_sha256": "444c24a274ee752fae332b63fae2e8e328131d046daa27972843592889966e3b",
+  "output_count": 995,
+  "raw_algorithm_bodies_unchanged": true,
+  "samples": 199,
+  "seconds": 5370.581860033795,
+  "settings": {
+    "no_motion_no_gaps": {
+      "OUTPUT_GAP2_RECOVERY": false,
+      "OUTPUT_GAP_CLOSE": false
+    },
+    "no_motion_no_pruning": {
+      "OUTPUT_FILTER_SHORT_TRACKS": false,
+      "OUTPUT_PRUNE_ISOLATED": false
+    },
+    "no_motion_no_safe_divisions": {
+      "OUTPUT_SAFE_DIVISIONS": false
+    },
+    "no_motion_no_safe_divisions_no_smoothing": {
+      "OUTPUT_LINEFIT_SMOOTH": false,
+      "OUTPUT_SAFE_DIVISIONS": false
+    },
+    "no_motion_no_smoothing": {
+      "OUTPUT_LINEFIT_SMOOTH": false
+    }
+  },
+  "variants": [
+    "no_motion_no_safe_divisions",
+    "no_motion_no_smoothing",
+    "no_motion_no_safe_divisions_no_smoothing",
+    "no_motion_no_pruning",
+    "no_motion_no_gaps"
+  ]
+}

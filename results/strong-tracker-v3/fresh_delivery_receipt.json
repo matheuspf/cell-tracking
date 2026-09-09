@@ -1,0 +1,49 @@
+{
+  "annotations_unavailable_from_start": true,
+  "artifacts": {
+    "fresh_association_m3_pilots_receipt.json": "0a03e49bf65175092013b98d7b09ddc107ab6c663b53201fbf2ddc465b1701de",
+    "fresh_evidence_receipt.json": "06263cdbc130a607cab36f0af67fd7d2f540c0029a1ee52702d0ca1fb08501c6",
+    "fresh_full_precision_audit.json": "163c75d01506784dfb1f8dbda10c8b77d7b43aaad8540e5a5f76b4c900815613",
+    "fresh_full_receipt.json": "b8401124b5e18d600b9c81d127df27ee040c0a2f62d750e72b0b79cbc7ebf683",
+    "fresh_heatmap_optimization_parity.json": "60b48a345133f9033069ac00705417cabd395acd1fdbc42bec7b523c364a65d5",
+    "fresh_heatmap_storage_dedup.json": "19fdbb04df937b1a5f00858214ecc237e0a74389e9316b256fe731fe22e07954",
+    "fresh_input_resume_validation.json": "9eb15fbe0b7ebf1d7896cff7d005197804c1ffd22b5a11b8dd8b0ed119242d92",
+    "fresh_numeric_validation_receipt.json": "c5a23206c66d87cda4d40f36ba72a39fe96d54c399dd2cb52d54717cf1677e54",
+    "fresh_startup_benchmark.json": "52e9762e78bd0508ef025583509f7214a926ba940b42b3880572fec64ee62b81",
+    "fresh_teacher_native_parity_summary.json": "7e360dcb500c90edbb77c71df36a4411ce7bd52a47b01c3a2c6d382f83d1e4ad",
+    "fresh_teacher_pilots_receipt.json": "2bf7ae03a56134b43668387706a5c96b4b6ef9584a4d2fb8333c2ecd684cdce7",
+    "package_smoke_receipt.json": "e9371d5f93363df6ad3eb9f7b37410de0f3b4417ff3e2509c122ea6c363635ae"
+  },
+  "cached_graph_reads_for_prediction": 0,
+  "cuda_peak_allocated_bytes": 817932288,
+  "exact_pre_ilp_array_parity": true,
+  "exact_raw_array_parity": true,
+  "fresh_evidence_optimization_byte_parity_samples": 16,
+  "fresh_incumbent_graphs_equal": 199,
+  "fresh_selected_graphs_equal_to_scored": 199,
+  "full_neural_wall_seconds": 6113.913557909429,
+  "graph_ilp_export_seconds": {
+    "max": 62.63363726390526,
+    "median": 11.121132608037442,
+    "p90": 29.30001939367503,
+    "sum": 2821.390071807895
+  },
+  "kaggle_runtime_proven": false,
+  "neural_io_seconds": {
+    "max": 66.81657798308879,
+    "median": 47.07562952302396,
+    "p90": 52.018320322409274,
+    "sum": 8990.901385724545
+  },
+  "official_fresh_selected_scoring": "Separate independent root evaluator",
+  "samples": 199,
+  "status": "full_fresh_selected_complete",
+  "teacher_native_feature_decode_seconds": {
+    "max": 238.0317504182458,
+    "median": 60.2495806007646,
+    "p90": 104.84229603856802,
+    "sum": 13955.569789785892
+  },
+  "timing_note": "Stage sums overlap across processes; compare wall time separately. Dependency startup measured on a warm filesystem.",
+  "variant": "A_residual_m3.0"
+}

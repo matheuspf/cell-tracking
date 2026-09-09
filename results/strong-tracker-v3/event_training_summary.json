@@ -1,0 +1,839 @@
+{
+  "models": {
+    "44b6_image_20260909": {
+      "actual_steps": 10000,
+      "actual_training_arrays_sha256": "8f030e0ca23bf86224b5c3848c9ef467a7f999ae519242f22d111db1f81b0a3a",
+      "all_positive_alternatives_seen": true,
+      "created": "2026-09-09T18:50:39.059595+00:00",
+      "cuda_device": "NVIDIA GeForce RTX 4090",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "ff8a1b864651b34de7e1a31b7f30bff5e56218da54d99128ddc6693532b2ca1e",
+      "objective": "uniform event bags and supported nondivision groups; equal class risk, not calibrated prevalence",
+      "outer_scores_exposed": false,
+      "peak_cuda_bytes": 122161664,
+      "pool": "fallback",
+      "positive_rows": 244,
+      "positive_rows_seen": 244,
+      "seconds": 32.545603937935084,
+      "seed": 20260909,
+      "source_embryo": "44b6",
+      "source_inputs_sha256": "4e434594c4d92b922ac3a09b3b97285667e5648607c0c00dec0f90c9a615d234",
+      "source_learning_curve": [
+        {
+          "loss": 0.691699743270874,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 32,
+          "seconds": 0.5633458010852337,
+          "step": 1
+        },
+        {
+          "loss": 0.26961663365364075,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 1.8179697366431355,
+          "step": 500
+        },
+        {
+          "loss": 0.17318618297576904,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 3.052506284788251,
+          "step": 1000
+        },
+        {
+          "loss": 0.18624264001846313,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 4.307784474920481,
+          "step": 1500
+        },
+        {
+          "loss": 0.07331147789955139,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 6.013070732820779,
+          "step": 2000
+        },
+        {
+          "loss": 0.24277302622795105,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 7.973500470630825,
+          "step": 2500
+        },
+        {
+          "loss": 0.12826287746429443,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 9.962312712799758,
+          "step": 3000
+        },
+        {
+          "loss": 0.02767307311296463,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 11.98103749891743,
+          "step": 3500
+        },
+        {
+          "loss": 0.03692886233329773,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 14.024275463074446,
+          "step": 4000
+        },
+        {
+          "loss": 0.04057510942220688,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 16.05232624290511,
+          "step": 4500
+        },
+        {
+          "loss": 0.007376485504209995,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 17.982487187720835,
+          "step": 5000
+        },
+        {
+          "loss": 0.01663696952164173,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 20.014345082920045,
+          "step": 5500
+        },
+        {
+          "loss": 0.015741050243377686,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 21.9915330898948,
+          "step": 6000
+        },
+        {
+          "loss": 0.005594977643340826,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 23.63172955904156,
+          "step": 6500
+        },
+        {
+          "loss": 0.004869778174906969,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 24.81618840387091,
+          "step": 7000
+        },
+        {
+          "loss": 0.010780577547848225,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 26.28015265194699,
+          "step": 7500
+        },
+        {
+          "loss": 0.013595293276011944,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 27.57154606608674,
+          "step": 8000
+        },
+        {
+          "loss": 0.003311092033982277,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 28.950883763842285,
+          "step": 8500
+        },
+        {
+          "loss": 0.011145517230033875,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 30.162775876000524,
+          "step": 9000
+        },
+        {
+          "loss": 0.0035195178352296352,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 31.360214304644614,
+          "step": 9500
+        },
+        {
+          "loss": 0.02287355065345764,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 32.545407531782985,
+          "step": 10000
+        }
+      ],
+      "target_embryo": "6bba",
+      "unique_negative_groups": 16155,
+      "unique_positive_groups": 20,
+      "upstream": "compact 9-frame encoder trained from scratch on source-only division event labels"
+    },
+    "44b6_image_314159": {
+      "actual_steps": 10000,
+      "actual_training_arrays_sha256": "8f030e0ca23bf86224b5c3848c9ef467a7f999ae519242f22d111db1f81b0a3a",
+      "all_positive_alternatives_seen": true,
+      "created": "2026-09-09T18:51:12.425338+00:00",
+      "cuda_device": "NVIDIA GeForce RTX 4090",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "183fc82723c168d62f46d55996a066c055e9509b2f9eb934e6085cf3424bccb0",
+      "objective": "uniform event bags and supported nondivision groups; equal class risk, not calibrated prevalence",
+      "outer_scores_exposed": false,
+      "peak_cuda_bytes": 122161664,
+      "pool": "fallback",
+      "positive_rows": 244,
+      "positive_rows_seen": 244,
+      "seconds": 33.21445094328374,
+      "seed": 314159,
+      "source_embryo": "44b6",
+      "source_inputs_sha256": "4e434594c4d92b922ac3a09b3b97285667e5648607c0c00dec0f90c9a615d234",
+      "source_learning_curve": [
+        {
+          "loss": 0.6913357973098755,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 32,
+          "seconds": 0.005130417179316282,
+          "step": 1
+        },
+        {
+          "loss": 0.2822871804237366,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 1.2617991622537374,
+          "step": 500
+        },
+        {
+          "loss": 0.16945846378803253,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 2.8745071329176426,
+          "step": 1000
+        },
+        {
+          "loss": 0.17926642298698425,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 4.564990394283086,
+          "step": 1500
+        },
+        {
+          "loss": 0.1379006803035736,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 6.360649683978409,
+          "step": 2000
+        },
+        {
+          "loss": 0.1595458984375,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 8.146763468161225,
+          "step": 2500
+        },
+        {
+          "loss": 0.0730307474732399,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 9.905917407944798,
+          "step": 3000
+        },
+        {
+          "loss": 0.06757064163684845,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 11.613511316943914,
+          "step": 3500
+        },
+        {
+          "loss": 0.06441351026296616,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 13.443686940241605,
+          "step": 4000
+        },
+        {
+          "loss": 0.09503856301307678,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 15.362316776067019,
+          "step": 4500
+        },
+        {
+          "loss": 0.04069368168711662,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 17.124466685112566,
+          "step": 5000
+        },
+        {
+          "loss": 0.08273777365684509,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 18.374096483923495,
+          "step": 5500
+        },
+        {
+          "loss": 0.07573853433132172,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 19.598565542139113,
+          "step": 6000
+        },
+        {
+          "loss": 0.040254849940538406,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 20.79825130291283,
+          "step": 6500
+        },
+        {
+          "loss": 0.04466765373945236,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 22.511382630094886,
+          "step": 7000
+        },
+        {
+          "loss": 0.11114726215600967,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 24.363258112221956,
+          "step": 7500
+        },
+        {
+          "loss": 0.026882395148277283,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 26.094196632970124,
+          "step": 8000
+        },
+        {
+          "loss": 0.02839498780667782,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 27.963775434996933,
+          "step": 8500
+        },
+        {
+          "loss": 0.020704008638858795,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 29.709971607197076,
+          "step": 9000
+        },
+        {
+          "loss": 0.03868550807237625,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 31.50469608604908,
+          "step": 9500
+        },
+        {
+          "loss": 0.047070469707250595,
+          "negative_groups": 16155,
+          "positive_groups": 20,
+          "positive_rows_seen": 244,
+          "seconds": 33.21426633698866,
+          "step": 10000
+        }
+      ],
+      "target_embryo": "6bba",
+      "unique_negative_groups": 16155,
+      "unique_positive_groups": 20,
+      "upstream": "compact 9-frame encoder trained from scratch on source-only division event labels"
+    },
+    "44b6_logistic": {
+      "actual_iterations": [
+        15
+      ],
+      "actual_training_arrays_sha256": "8f030e0ca23bf86224b5c3848c9ef467a7f999ae519242f22d111db1f81b0a3a",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "00e4b1d611baf8527aea1e51d8f651178622246646f21e141548f320869cf859",
+      "objective": "equal event-class loss; positive bag total weight one; scores not posterior calibrated",
+      "outer_scores_exposed": false,
+      "pool": "fallback",
+      "positive_rows": 244,
+      "source_embryo": "44b6",
+      "source_inputs_sha256": "4e434594c4d92b922ac3a09b3b97285667e5648607c0c00dec0f90c9a615d234",
+      "source_weighted_bce": 0.36534794062613396,
+      "target_embryo": "6bba",
+      "training_rows": 65726
+    },
+    "6bba_image_20260909": {
+      "actual_steps": 10000,
+      "actual_training_arrays_sha256": "7da6ce4371ce59c04d08ec8a280e6341a268dd67b5d7000d036b0912082ac6b5",
+      "all_positive_alternatives_seen": true,
+      "created": "2026-09-09T19:00:01.453407+00:00",
+      "cuda_device": "NVIDIA GeForce RTX 4090",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "8dcbbcdc4ca27d4a59181524fe139c3da087d6dc288e47ca4001f116b1610673",
+      "objective": "uniform event bags and supported nondivision groups; equal class risk, not calibrated prevalence",
+      "outer_scores_exposed": false,
+      "peak_cuda_bytes": 437169152,
+      "pool": "fallback",
+      "positive_rows": 938,
+      "positive_rows_seen": 938,
+      "seconds": 42.67726349690929,
+      "seed": 20260909,
+      "source_embryo": "6bba",
+      "source_inputs_sha256": "5448cd4fdb126c736c50bf18489405e913464ba34ecfe286daa75f5aaa6b75f0",
+      "source_learning_curve": [
+        {
+          "loss": 0.6886938810348511,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 32,
+          "seconds": 0.48800868913531303,
+          "step": 1
+        },
+        {
+          "loss": 0.3711850047111511,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 2.8909706361591816,
+          "step": 500
+        },
+        {
+          "loss": 0.23504385352134705,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 5.196534457150847,
+          "step": 1000
+        },
+        {
+          "loss": 0.2096385359764099,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 7.568544832058251,
+          "step": 1500
+        },
+        {
+          "loss": 0.17353679239749908,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 9.87872263090685,
+          "step": 2000
+        },
+        {
+          "loss": 0.17962339520454407,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 12.254752015229315,
+          "step": 2500
+        },
+        {
+          "loss": 0.16475525498390198,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 14.587413777131587,
+          "step": 3000
+        },
+        {
+          "loss": 0.13802966475486755,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 16.93050316721201,
+          "step": 3500
+        },
+        {
+          "loss": 0.09093749523162842,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 19.126441373024136,
+          "step": 4000
+        },
+        {
+          "loss": 0.14445948600769043,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 21.44571995921433,
+          "step": 4500
+        },
+        {
+          "loss": 0.18012221157550812,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 23.807723064906895,
+          "step": 5000
+        },
+        {
+          "loss": 0.07321310043334961,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 26.153672717977315,
+          "step": 5500
+        },
+        {
+          "loss": 0.1380075067281723,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 28.449294399935752,
+          "step": 6000
+        },
+        {
+          "loss": 0.16572582721710205,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 30.817461288999766,
+          "step": 6500
+        },
+        {
+          "loss": 0.10863736271858215,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 33.07289921818301,
+          "step": 7000
+        },
+        {
+          "loss": 0.1582380086183548,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 35.47608449915424,
+          "step": 7500
+        },
+        {
+          "loss": 0.12341587245464325,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 37.43145803408697,
+          "step": 8000
+        },
+        {
+          "loss": 0.04739595204591751,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 38.587387558072805,
+          "step": 8500
+        },
+        {
+          "loss": 0.06854282319545746,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 39.91375029506162,
+          "step": 9000
+        },
+        {
+          "loss": 0.18279102444648743,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 41.45373002300039,
+          "step": 9500
+        },
+        {
+          "loss": 0.08610183000564575,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 42.6769302659668,
+          "step": 10000
+        }
+      ],
+      "target_embryo": "44b6",
+      "unique_negative_groups": 69689,
+      "unique_positive_groups": 92,
+      "upstream": "compact 9-frame encoder trained from scratch on source-only division event labels"
+    },
+    "6bba_image_314159": {
+      "actual_steps": 10000,
+      "actual_training_arrays_sha256": "7da6ce4371ce59c04d08ec8a280e6341a268dd67b5d7000d036b0912082ac6b5",
+      "all_positive_alternatives_seen": true,
+      "created": "2026-09-09T19:00:34.409157+00:00",
+      "cuda_device": "NVIDIA GeForce RTX 4090",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "f6b667350955343315737e23b585cb57d71073399afd34c482fd122896d1d52c",
+      "objective": "uniform event bags and supported nondivision groups; equal class risk, not calibrated prevalence",
+      "outer_scores_exposed": false,
+      "peak_cuda_bytes": 437169152,
+      "pool": "fallback",
+      "positive_rows": 938,
+      "positive_rows_seen": 938,
+      "seconds": 32.297502116300166,
+      "seed": 314159,
+      "source_embryo": "6bba",
+      "source_inputs_sha256": "5448cd4fdb126c736c50bf18489405e913464ba34ecfe286daa75f5aaa6b75f0",
+      "source_learning_curve": [
+        {
+          "loss": 0.7002595663070679,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 32,
+          "seconds": 0.0065045771189033985,
+          "step": 1
+        },
+        {
+          "loss": 0.3124220371246338,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 1.2000345569103956,
+          "step": 500
+        },
+        {
+          "loss": 0.1800537407398224,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 2.5365042979829013,
+          "step": 1000
+        },
+        {
+          "loss": 0.14898651838302612,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 3.7676969110034406,
+          "step": 1500
+        },
+        {
+          "loss": 0.25761017203330994,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 4.994657577946782,
+          "step": 2000
+        },
+        {
+          "loss": 0.20396088063716888,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 6.224198675248772,
+          "step": 2500
+        },
+        {
+          "loss": 0.18039199709892273,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 7.684300819877535,
+          "step": 3000
+        },
+        {
+          "loss": 0.31530821323394775,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 9.26103211985901,
+          "step": 3500
+        },
+        {
+          "loss": 0.13674113154411316,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 10.544117860961705,
+          "step": 4000
+        },
+        {
+          "loss": 0.08060154318809509,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 12.588312944862992,
+          "step": 4500
+        },
+        {
+          "loss": 0.20068079233169556,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 14.75032255006954,
+          "step": 5000
+        },
+        {
+          "loss": 0.14789199829101562,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 16.985704636201262,
+          "step": 5500
+        },
+        {
+          "loss": 0.08101215958595276,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 19.14191729016602,
+          "step": 6000
+        },
+        {
+          "loss": 0.1389957070350647,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 20.641798900905997,
+          "step": 6500
+        },
+        {
+          "loss": 0.14809998869895935,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 22.362580561079085,
+          "step": 7000
+        },
+        {
+          "loss": 0.15673008561134338,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 24.607281169854105,
+          "step": 7500
+        },
+        {
+          "loss": 0.1101316511631012,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 26.71939184423536,
+          "step": 8000
+        },
+        {
+          "loss": 0.047038886696100235,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 28.19273113599047,
+          "step": 8500
+        },
+        {
+          "loss": 0.15914668142795563,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 29.39800661429763,
+          "step": 9000
+        },
+        {
+          "loss": 0.05475771427154541,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 30.585102473851293,
+          "step": 9500
+        },
+        {
+          "loss": 0.05063182860612869,
+          "negative_groups": 69689,
+          "positive_groups": 92,
+          "positive_rows_seen": 938,
+          "seconds": 32.29698252910748,
+          "step": 10000
+        }
+      ],
+      "target_embryo": "44b6",
+      "unique_negative_groups": 69689,
+      "unique_positive_groups": 92,
+      "upstream": "compact 9-frame encoder trained from scratch on source-only division event labels"
+    },
+    "6bba_logistic": {
+      "actual_iterations": [
+        16
+      ],
+      "actual_training_arrays_sha256": "7da6ce4371ce59c04d08ec8a280e6341a268dd67b5d7000d036b0912082ac6b5",
+      "exploratory_reused_embryos": true,
+      "feature_schema_sha256": "b2d904902499761132b2106c9be2564953ae7d6b4ae08dac39a0141d0ab0380f",
+      "label_code_sha256": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f",
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "model_code_sha256": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+      "model_sha256": "1a4b7b55b05f72aaa6533e86dfc64672bf8d3fc83dd9a25396f897919e99313a",
+      "objective": "equal event-class loss; positive bag total weight one; scores not posterior calibrated",
+      "outer_scores_exposed": false,
+      "pool": "fallback",
+      "positive_rows": 938,
+      "source_embryo": "6bba",
+      "source_inputs_sha256": "5448cd4fdb126c736c50bf18489405e913464ba34ecfe286daa75f5aaa6b75f0",
+      "source_weighted_bce": 0.3455879704996204,
+      "target_embryo": "44b6",
+      "training_rows": 273297
+    }
+  },
+  "source_pools": {
+    "44b6": "fallback",
+    "6bba": "fallback"
+  },
+  "total_elapsed_seconds": 201.09440470999107
+}

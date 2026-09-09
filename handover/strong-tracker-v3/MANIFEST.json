@@ -1,7 +1,4 @@
 {
-  "schema_version": 1,
-  "study_id": "strong-tracker-v3",
-  "scope": "payload hashes; manifest excludes itself",
   "files": {
     "CODEX_PROMPT.md": {
       "bytes": 4089,
@@ -15,9 +12,13 @@
       "bytes": 8261,
       "sha256": "e21b52b6074cfeeae0aa57b06a434849d23174cb90b98f5b34aec5fa6385fef0"
     },
+    "NEXT_AGENT.md": {
+      "bytes": 6933,
+      "sha256": "5920d57499a873f10c4b966d5dddf61c3553724ed70409473f2a6c512b24f7d5"
+    },
     "README.md": {
-      "bytes": 3008,
-      "sha256": "044e633f94cacfaf2fdedebfdc1be2fe577869d2179b6ec6eb37199fcebdfca4"
+      "bytes": 1217,
+      "sha256": "3c4515893abb9a47d7e22becd6c1ba0782e75bf6e61e8eab36b36a945ff94e0b"
     },
     "REVIEW.md": {
       "bytes": 6178,
@@ -28,8 +29,8 @@
       "sha256": "f11d83bc5b9f59dc8eb7a805e343109544803b89a23e18a8c8f95cd7f6d82b8c"
     },
     "STATUS.json": {
-      "bytes": 774,
-      "sha256": "ae2aa48402becdf3a772be3aa20d7196bf63b25eb348052005e6b54c7116067a"
+      "bytes": 18761,
+      "sha256": "2f727923f9af279c660f75475e98c94046ed737acaea20b39b955a4fa033b9f6"
     },
     "calculated_scenarios.json": {
       "bytes": 1281,
@@ -59,5 +60,8 @@
       "bytes": 8421,
       "sha256": "7e7c08cfea5eac15423b5d80b80870565994dae42a6fb545e2fb96b3c4477a1d"
     }
-  }
+  },
+  "schema_version": 2,
+  "scope": "Completed execution handover payload hashes; manifest excludes itself",
+  "study_id": "strong-tracker-v3"
 }

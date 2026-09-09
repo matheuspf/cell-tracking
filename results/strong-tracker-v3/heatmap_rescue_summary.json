@@ -1,0 +1,29 @@
+{
+  "config": {
+    "centroid_peak_neighborhood": [
+      1,
+      1,
+      1
+    ],
+    "point_confidence": 0.5,
+    "policy_frozen_before_this_arm_scores": true,
+    "source": "Existing DeepCenter checkpoint; cached heatmaps read-only; missing frames queried locally",
+    "temporal_confidence": 0.25,
+    "temporal_offsets": [
+      -1,
+      0,
+      1
+    ],
+    "variant": "R_heatmap_local",
+    "xy_pool_factor": 4
+  },
+  "samples": 199,
+  "seconds": 152.96368314418942,
+  "totals": {
+    "accepted_actions": 195,
+    "cache_queries": 25779,
+    "inserted_nodes": 0,
+    "model_queries": 1775,
+    "proposed_actions": 26855
+  }
+}

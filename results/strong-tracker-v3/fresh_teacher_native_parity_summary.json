@@ -1,0 +1,23 @@
+{
+  "all_E_hgb_edges_exact": true,
+  "all_E_native_edges_exact": true,
+  "all_current_native_feature_fields_exact": true,
+  "all_current_native_numeric_arrays_finite": true,
+  "all_old_teacher_edges_exact": true,
+  "bounded_nodes": 6,
+  "cause": "Fresh canonical teacher enforces image bounds and uses native rounding. Original V1 retained six pre-existing out-of-bounds points and two documented ULP half-integer serializer values.",
+  "changed_old_teacher_nodes": 8,
+  "comparison_only": true,
+  "detailed_artifact": "/kaggle/working/cell-tracking/strong-tracker-v3/fresh_teacher_native_full_parity_audit.json",
+  "detailed_sha256": "6943b6b37f7d5719bc298fc48959df33b367fed7fe87c3af96430ccafab9be9b",
+  "documented_half_integer_serialization_nodes": 2,
+  "expected_samples": 199,
+  "max_old_teacher_physical_shift_um": 1.625,
+  "old_teacher_coordinate_difference_clips": 7,
+  "old_teacher_node_arrays_exact_clips": 192,
+  "old_teacher_node_identity_exact": true,
+  "original_report_sha256": "f759252f8fb4a088bbf42816daa8d80f66ec97d9839d08a94ab28adca2034903",
+  "samples": 199,
+  "unexplained_coordinate_changes": 0,
+  "used_for_prediction": false
+}

@@ -1,0 +1,276 @@
+{
+  "created": "2026-09-09T18:22:10.255814+00:00",
+  "disagreements_rows": 241181,
+  "disagreements_sha256": "20d4508c0c068c725ac6e02187918998c0eb1d17285ae73240c3bd02ce802006",
+  "edit_ledger_rows": 10373,
+  "feature_totals": {
+    "image_neighbor_added": 3011437,
+    "inserted_nodes": 44368,
+    "nodes": 4108943,
+    "relocated_native_nodes": 3758919,
+    "teacher_native_union": 4038813,
+    "total_candidates": 7050250
+  },
+  "features_recomputed_at_incumbent_centers_and_adjacency": true,
+  "model_lock": {
+    "both_directions_frozen_before_scoring": true,
+    "code_sha256": "c850e19b3cd0c7e8867399cfa11502c040dcf7c90d51d1b20ea294cfca84fbe4",
+    "config_sha256": "42c09f48530e4bd39ca3ffd6dca446b47fadabe7c0c57e3f9b63982625392839",
+    "created": "2026-09-09T18:18:51.776927+00:00",
+    "feature_schema_sha256": "0881ba788e2dc9eeba6f0ea767c1e3751abdd22dd83b223536cfe277625d8360",
+    "models": {
+      "association_models/44b6/hgb7.joblib": "7f1150a7e05fff33b9cb0cce000596e3c1a32e350cc10856996b45be50bb79e1",
+      "association_models/44b6/residual.joblib": "e6f4222fd0c64d0a9c64d342a3c47c8d2f7b9079a8cb9f5efe537e7b7cc71ace",
+      "association_models/6bba/hgb7.joblib": "45ab69804283fd6b8b6ec6483519db23c3b7745733db6dddfbb9c0287867c309",
+      "association_models/6bba/residual.joblib": "12852fdc8a825838912cc40b79c2c7be5156dde12fe8c75262d69b6f705fb763"
+    },
+    "source_counts": {
+      "44b6": {
+        "negative": 33982,
+        "positive": 19316,
+        "rows": 53298,
+        "samples": 71
+      },
+      "6bba": {
+        "negative": 84590,
+        "positive": 105451,
+        "rows": 190041,
+        "samples": 128
+      }
+    },
+    "source_fit_metrics": [
+      {
+        "model": "residual",
+        "negative": 33982,
+        "optimizer": {
+          "iterations": 187,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+          "success": true
+        },
+        "positive": 19316,
+        "rows": 53298,
+        "samples": 71,
+        "seconds": 0.6708237673155963,
+        "source": "44b6",
+        "source_fit_ap": 0.9811181651550168,
+        "source_fit_log_loss": 0.09911729878550642
+      },
+      {
+        "model": "hgb7",
+        "negative": 33982,
+        "optimizer": null,
+        "positive": 19316,
+        "rows": 53298,
+        "samples": 71,
+        "seconds": 1.160816835705191,
+        "source": "44b6",
+        "source_fit_ap": 0.9852140167153448,
+        "source_fit_log_loss": 0.09209115795953103
+      },
+      {
+        "model": "residual",
+        "negative": 84590,
+        "optimizer": {
+          "iterations": 250,
+          "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+          "success": false
+        },
+        "positive": 105451,
+        "rows": 190041,
+        "samples": 128,
+        "seconds": 2.4728903332725167,
+        "source": "6bba",
+        "source_fit_ap": 0.9930547311832996,
+        "source_fit_log_loss": 0.09155058615117054
+      },
+      {
+        "model": "hgb7",
+        "negative": 84590,
+        "optimizer": null,
+        "positive": 105451,
+        "rows": 190041,
+        "samples": 128,
+        "seconds": 3.761946198064834,
+        "source": "6bba",
+        "source_fit_ap": 0.9943479688057392,
+        "source_fit_log_loss": 0.0863445814639193
+      }
+    ],
+    "transfer_control_model_lock_sha256": "33a625799b278b3afc6c8415c8737381463657494934d106832aa9ef938a4ec6",
+    "transfer_control_models": {
+      "44b6": "031a85764d514148a2283b5bc529f7bc4623dd0d9189ff7a02d3fc20bad8911f",
+      "6bba": "7eb9cf059b31d7d932254ba985a6e3c0c58a3743a3991fa8130a71dbc7d60afe"
+    }
+  },
+  "no_target_gt_in_disagreement_or_edit_tables": true,
+  "samples": 199,
+  "scope": "Inference and source-fit counts only. Root official scorer supplies every gain relative to v2.",
+  "teacher_mapping": "Only proven native IDs transfer. Different centers measured, inserted teacher nodes excluded.",
+  "variants": [
+    {
+      "abstained": 0,
+      "accepted_actions": 1551,
+      "changed_edges": 1567,
+      "components": 1550,
+      "embryo": "44b6",
+      "proposals": 1590,
+      "samples": 71,
+      "seconds": 50.91006649797782,
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 5850,
+      "changed_edges": 6098,
+      "components": 5844,
+      "embryo": "6bba",
+      "proposals": 5986,
+      "samples": 128,
+      "seconds": 79.03215647488832,
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 7401,
+      "changed_edges": 7665,
+      "components": 7394,
+      "embryo": "pooled",
+      "proposals": 7576,
+      "samples": 199,
+      "seconds": 129.94222297286615,
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 273,
+      "changed_edges": 281,
+      "components": 273,
+      "embryo": "44b6",
+      "proposals": 274,
+      "samples": 71,
+      "seconds": 43.78671566117555,
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 2631,
+      "changed_edges": 2689,
+      "components": 2630,
+      "embryo": "6bba",
+      "proposals": 2647,
+      "samples": 128,
+      "seconds": 59.14835464954376,
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 2904,
+      "changed_edges": 2970,
+      "components": 2903,
+      "embryo": "pooled",
+      "proposals": 2921,
+      "samples": 199,
+      "seconds": 102.93507031071931,
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 21,
+      "changed_edges": 21,
+      "components": 21,
+      "embryo": "44b6",
+      "proposals": 21,
+      "samples": 71,
+      "seconds": 39.5447199116461,
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "components": 0,
+      "embryo": "6bba",
+      "proposals": 0,
+      "samples": 128,
+      "seconds": 43.07366476813331,
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 21,
+      "changed_edges": 21,
+      "components": 21,
+      "embryo": "pooled",
+      "proposals": 21,
+      "samples": 199,
+      "seconds": 82.61838467977941,
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 15,
+      "changed_edges": 15,
+      "components": 15,
+      "embryo": "44b6",
+      "proposals": 15,
+      "samples": 71,
+      "seconds": 39.83850852586329,
+      "variant": "A_hgb7_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "components": 0,
+      "embryo": "6bba",
+      "proposals": 0,
+      "samples": 128,
+      "seconds": 42.982160763349384,
+      "variant": "A_hgb7_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 15,
+      "changed_edges": 15,
+      "components": 15,
+      "embryo": "pooled",
+      "proposals": 15,
+      "samples": 199,
+      "seconds": 82.82066928921267,
+      "variant": "A_hgb7_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 18,
+      "changed_edges": 18,
+      "components": 18,
+      "embryo": "44b6",
+      "proposals": 18,
+      "samples": 71,
+      "seconds": 40.022197789978236,
+      "variant": "A_v2_transfer_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 14,
+      "changed_edges": 15,
+      "components": 14,
+      "embryo": "6bba",
+      "proposals": 14,
+      "samples": 128,
+      "seconds": 43.47448353189975,
+      "variant": "A_v2_transfer_m3.0"
+    },
+    {
+      "abstained": 0,
+      "accepted_actions": 32,
+      "changed_edges": 33,
+      "components": 32,
+      "embryo": "pooled",
+      "proposals": 32,
+      "samples": 199,
+      "seconds": 83.49668132187799,
+      "variant": "A_v2_transfer_m3.0"
+    }
+  ]
+}

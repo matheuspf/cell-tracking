@@ -1,0 +1,38 @@
+{
+  "created": "2026-09-09T19:27:23.310696+00:00",
+  "idle_worker_checks": [
+    {
+      "cpu_ticks": 77228,
+      "pid": 87185,
+      "wait": "futex_wait_queue"
+    },
+    {
+      "cpu_ticks": 74889,
+      "pid": 87188,
+      "wait": "pipe_read"
+    }
+  ],
+  "loader_parity_verified": true,
+  "loader_sha256": "a797c4ba977de009dc80eb4290c5e6f31f62a0aa6d7079a1b067677114b63a87",
+  "manager_pid": 86351,
+  "new_workers": 4,
+  "note": "Old management process paused; workers drained queued jobs and had unchanged CPU ticks/blocking pipe/futex waits for60seconds. Linux reports pipe_read alias; no active work discarded.",
+  "policy_change": false,
+  "preserved_graph_receipts": {
+    "D_existing_p005_control": 44,
+    "D_existing_p020": 44,
+    "D_image_p010": 44,
+    "D_image_p020": 44,
+    "D_image_p040": 44,
+    "D_replace_p020": 44,
+    "D_replace_p040": 44,
+    "D_tabular_p010": 44,
+    "D_tabular_p020": 44,
+    "D_tabular_p040": 44
+  },
+  "stage": "idle_pool_retired_selective_loader_ready",
+  "worker_pids": [
+    87185,
+    87188
+  ]
+}

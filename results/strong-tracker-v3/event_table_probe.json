@@ -1,0 +1,33 @@
+{
+  "bytes": 41961944,
+  "bytes_per_row": 20.980972,
+  "details": [
+    {
+      "dataset": "44b6_18ced818",
+      "rows_sampled": 1000000,
+      "sample_starts": [
+        0,
+        1242234,
+        2484469,
+        3726703,
+        4968938
+      ]
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "rows_sampled": 1000000,
+      "sample_starts": [
+        0,
+        26311,
+        52622,
+        78933,
+        105244
+      ]
+    }
+  ],
+  "projected_GiB_at_191million_rows": 3.732150096446276,
+  "rows": 2000000,
+  "sampling": "5 spaced blocks from densest complete clip plus median complete6bba clip",
+  "seconds": 4.340832948684692,
+  "sha256": "112d6c3c035966463c8723a9fee436dae7d8e66176feec908fa463f45d3ee8fc"
+}

@@ -1,0 +1,40 @@
+{
+  "cached_heatmaps": "Native confidence and raw volumes used; no full-volume masks generated",
+  "config": {
+    "min_native_persistence_frames": 3,
+    "native_probability": 0.8,
+    "point_cap_fraction": 0.002,
+    "refine_cap_fraction": 0.01,
+    "refine_max_shift_um": 0.75,
+    "secondary_maxima_per_gap": 1,
+    "secondary_maxima_quantile": 0.999,
+    "secondary_min_distance_um": 3.0,
+    "secondary_persistence_radius_um": 2.0,
+    "trigger_radius_um": 10.0,
+    "version": "rescue_v3_1"
+  },
+  "focus": "Optional local FOCUS checkpoint not needed; no new model dependency",
+  "samples": 199,
+  "variants": {
+    "R_image_local": {
+      "image_triggered_nodes": 67155,
+      "missing_native_above_confidence": 140044,
+      "persistent_groups": 157,
+      "point_cap": 8113,
+      "refinement_cap": 40999,
+      "relocated": 26486,
+      "restored_nodes": 497,
+      "secondary_inserted_nodes": 636,
+      "tested": 8973,
+      "triggered_endpoints": 8983,
+      "triggered_missing": 16661
+    },
+    "R_native_restore": {
+      "missing_native_above_confidence": 140044,
+      "persistent_groups": 157,
+      "point_cap": 8111,
+      "restored_nodes": 497,
+      "triggered_missing": 16661
+    }
+  }
+}
