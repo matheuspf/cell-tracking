@@ -100,3 +100,13 @@ biohub-942tta-repro-20260907 (0.945). Their Python 3.12/CUDA runtime is
 `/kaggle/envs/cell-tracking-notebooks`; use the `Python (cell-tracking notebooks)`
 kernel. See [notebook setup](docs/notebooks.md) for clickable files, exact
 versions, input datasets, and the Code page's stale-score caveat.
+
+## External data and forum handoff
+
+The [external-data guide](docs/external-data-guide/README.md) covers the datasets
+from discussion 732103: synthetic images and graphs, six Zoo tracking exports,
+and seven RIKEN archives. It includes a complete inventory, label schemas,
+provenance, access instructions and the current tracker interfaces/results so
+the next agent can decide how to use them. The information and preparation code
+are committed; raw data, generated arrays and the local HTML stay under ignored
+work/. No external-data training or transfer evaluation has been performed.

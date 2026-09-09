@@ -1,0 +1,1784 @@
+{
+  "schema_version": 1,
+  "documented_on": "2026-09-09",
+  "data_snapshot": "2026-09-08",
+  "purpose": "factual information for a downstream decision; no dataset or training strategy selected",
+  "discussion": {
+    "url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/732103",
+    "retrieved_messages": 11,
+    "reported_replies": 10,
+    "unavailable_messages_detected": 0,
+    "scope": "original post and ten replies in this topic; not the entire competition forum",
+    "original_message_id": 3507381,
+    "reply_message_ids": [
+      3521851,
+      3521291,
+      3521235,
+      3521140,
+      3521070,
+      3521156,
+      3510364,
+      3510754,
+      3509286,
+      3509458
+    ]
+  },
+  "availability": {
+    "included_in_git": "this information and authored code; not original datasets or prepared arrays",
+    "historical_local_roots": [
+      "work/biohub-forum-archive",
+      "work/biohub-data-guide"
+    ],
+    "canonical_competition_input": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "fresh_clone": "source files and generated arrays require separate acquisition/preparation",
+    "source_paths": "repository-relative unless canonical input explicitly stated"
+  },
+  "fingerprint_definition": "SHA256 of UTF-8 JSON sorted [relative_path_within_tree,bytes,sha256] rows, separators=(',',':'), ensure_ascii=True; uses recorded file hashes, not a fresh raw rehash",
+  "download_totals": {
+    "expected_files": 37743,
+    "verified_files": 37743,
+    "verified_bytes": 30877642679,
+    "incomplete": [],
+    "errors": []
+  },
+  "download_total_scope": "storage includes overlapping base/enriched Zoo exports and rebuilt Tribolium ZIP; not unique training volume",
+  "synthetic": {
+    "id": "biohub_synthetic",
+    "kind": "simulated microscopy and dense centre/graph labels",
+    "source_url": "https://www.kaggle.com/code/josefreitasalvesneto/biohub-synthetic-dataset",
+    "release_identity": "2026-09-08 captured output; no immutable Kaggle version number recorded",
+    "license": {
+      "declaration": "CC0",
+      "source_url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/732103",
+      "scope": "author's dataset declaration"
+    },
+    "native_spacing_um_zyx": [
+      1.625,
+      0.40625,
+      0.40625
+    ],
+    "sampled_spacing_um_zyx": [
+      1.625,
+      1.625,
+      1.625
+    ],
+    "collections": [
+      {
+        "id": "static",
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/static",
+        "files": 1539,
+        "bytes": 12916348212,
+        "recorded_content_tree_sha256": "855c6b9a990695096bb5c7d83077a80480c806811a0f2d125b41a93508c3e07d",
+        "samples": 1539,
+        "centre_labels": 423853,
+        "image": {
+          "key": "volume",
+          "dtype": "uint16",
+          "axes": "ZYX",
+          "shape": [
+            64,
+            256,
+            256
+          ]
+        },
+        "source_labels": {
+          "centroids": {
+            "shape": [
+              "N",
+              3
+            ],
+            "dtype": "float32",
+            "axes": "ZYX",
+            "units": "native voxels"
+          }
+        },
+        "temporal_labels": false,
+        "prepared_path_pattern": "work/biohub-data-guide/prepared/synthetic/vol_XXXXX_labels.npz"
+      },
+      {
+        "id": "sequences",
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/sequences",
+        "files": 2174,
+        "bytes": 6951054644,
+        "recorded_content_tree_sha256": "20055ce6f8d1d51df55d19b2857c08a75eae08dda0de718a198febb61ec81414",
+        "samples": 2174,
+        "node_observations": 4056226,
+        "edges": 3460295,
+        "division_parents": 165267,
+        "image": {
+          "key": "volumes",
+          "dtype": "uint16",
+          "axes": "TZYX",
+          "shape": [
+            6,
+            64,
+            64,
+            64
+          ]
+        },
+        "source_labels": {
+          "nodes": {
+            "dtype": "float32",
+            "columns": [
+              "t",
+              "z",
+              "y",
+              "x",
+              "track_id"
+            ],
+            "coordinate_units": "native voxels despite already-sampled images",
+            "track_id_semantics": "clone/lineage ID inherited by daughters"
+          },
+          "edges": {
+            "dtype": "int32",
+            "shape": [
+              "E",
+              2
+            ],
+            "semantics": "source/target node-row indices"
+          },
+          "divisions": {
+            "dtype": "int32",
+            "semantics": "parent node-row indices"
+          }
+        },
+        "coordinate_conversion_to_images": "z unchanged; y/4; x/4",
+        "native_sequence_images_available": false,
+        "prepared_path_pattern": "work/biohub-data-guide/prepared/synthetic/seq_XXXX_labels.npz"
+      }
+    ],
+    "dense_segmentation_masks": false,
+    "prepared_manifest_path": "work/biohub-data-guide/prepared/synthetic_manifest.json",
+    "prepared_common_fields": {
+      "zyx_native": "float32 N×3, native voxels",
+      "zyx_pooled": "float32 N×3, Z unchanged and Y/X divided by four",
+      "zyx_um": "float32 N×3, physical micrometres"
+    },
+    "prepared_sequence_fields": {
+      "node_id": "int64, dense file-local row ID",
+      "t": "int64 frame index",
+      "edges": "int64 E×2 node-row indices",
+      "division_parent_ids": "int64 parent node IDs",
+      "tracklet_id": "int64 continuous-path segment; splits after a fork",
+      "source_clone_id": "int64 preserved source lineage ID"
+    },
+    "source_clone_time_repeated_rows": 480640,
+    "prepared_split_counts": {
+      "synthetic_train": 3359,
+      "synthetic_holdout": 354
+    },
+    "split_scope": "deterministic whole-example generator sanity split; not biological validation",
+    "censoring": "last-frame future unavailable; loader division_target_observed masks those rows",
+    "calibration": {
+      "density_and_tissue_shape": "first ten videos of first sorted embryo, 44b6 in the captured dataset",
+      "other_motion_and_render_parameters": "fixed/real-informed; complete fold provenance not established"
+    },
+    "captured_generator_metadata": {
+      "real_detected_count_range": [
+        140.0,
+        417.0
+      ],
+      "shell_kind": "plane",
+      "claimed_motion_calibration": {
+        "median_step_um_per_frame": 1.86,
+        "lag1_persistence": 0.3,
+        "sister_separation_um": 7.24
+      },
+      "configuration": {
+        "SYNTH_GRIDSEARCH": "1",
+        "SYNTH_NATIVE_COMPARE": "0",
+        "SYNTH_NATIVE_LAYOUT": "0",
+        "SYNTH_NATIVE_SIM": "0",
+        "SYNTH_TEMPORAL": "0",
+        "SYNTH_SWEEP": "0",
+        "SYNTH_BLURSWEEP": "0",
+        "SYNTH_PLACE_MODE": "shell",
+        "SYNTH_EDGE_FRAC": "0.35"
+      },
+      "scope": "author metadata; not a local revalidation of physical motion or real division prevalence"
+    },
+    "generator_source_observations": {
+      "source_function": "run_dataset_build in captured builder notebook Python export",
+      "seed_schedule": {
+        "static": "100000+i",
+        "sequence_motion": "500000+j",
+        "sequence_frame_render": "900000+j*97+t"
+      },
+      "initial_count": "max(20, choice(real_detected_counts)*1.25), before placement exclusions",
+      "default_division_probability_per_transition": 0.05,
+      "continuation_motion": "velocity is added directly to native voxel ZYX, although calibration constants are described as micrometres/frame",
+      "sister_offset": "half-separation converted from micrometres by division by native spacing",
+      "post_transition_clipping_native_zyx": {
+        "lower": [
+          4,
+          12,
+          12
+        ],
+        "upper": [
+          59,
+          243,
+          243
+        ]
+      },
+      "births_deaths": "existing cells continue or split; no explicit death, independent entry or exit process",
+      "rendering": "each frame uses a different renderer seed and resamples radii for supplied centers; original persistent appearance labels are absent"
+    },
+    "division_frequency": "deliberately oversampled; 165267/4056226 is descriptive, not real prevalence",
+    "metadata_receipts": [
+      {
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/manifest.json",
+        "bytes": 595193,
+        "sha256": "e8b5376b2ac6fdd55bd6e45d1b07b401339d375b211b6f67be93fb0de4d8ce14"
+      },
+      {
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/metadata.json",
+        "bytes": 1003,
+        "sha256": "328b9bb2545309e545cf68663ef985034ec68c36c0b709408a0f91801fedf89e"
+      },
+      {
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/progress.log",
+        "bytes": 9540,
+        "sha256": "7bd3935eb0e63d7da12a2be6617ab63b7fec89b6d9f19661f2af7f7726855316"
+      }
+    ],
+    "inspection_examples": [
+      {
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/static/vol_00000.npz",
+        "bytes": 8391796,
+        "sha256": "348dcd594c0aecdac5c6025300b7c52479f900e2a5677670b1ac26df1f18e3b2",
+        "archive_members": 3,
+        "zip_crc": "passed"
+      },
+      {
+        "path": "work/biohub-forum-archive/downloads/kaggle/biohub_synthetic/sequences/seq_0000.npz",
+        "bytes": 3183440,
+        "sha256": "34226e20d6659ef36c041a84424632328907a5ee114b0abb69589f27a06217f9",
+        "archive_members": 5,
+        "zip_crc": "passed"
+      }
+    ],
+    "validation": "all 3713 prepared label sets passed recorded coordinate and graph checks"
+  },
+  "zoo": [
+    {
+      "id": "zoo_ascidian",
+      "species_key": "ascidian",
+      "species": "Phallusia mammillata",
+      "source_study_as_archived": "Guignard, Science 2020; original-author Astec tracking",
+      "study_links": [
+        "https://www.science.org/doi/10.1126/science.aar5663"
+      ],
+      "optional_original_image_links_not_downloaded": [
+        "https://figshare.com/s/765d4361d1b073beedd5#/articles/8223890"
+      ],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/phalussiam",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Ascidian/tracks_ascidian_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_ascidian_bundle.zarr.zip",
+        "bytes": 303864,
+        "sha256": "91ccce3013d3df51895093a2d8178c5a7001a56fed942a41360e21106856449a",
+        "archive_members": 134,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Ascidian/tracks_ascidian_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_ascidian_attributes_bundle.zarr",
+        "files": 1091,
+        "bytes": 986473,
+        "recorded_content_tree_sha256": "446a05970eb5588defb6e620a96b33646f4d3dbd6f08402bd47ab4ff52ef8863"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/ascidian_graph.npz",
+        "bytes": 186085,
+        "sha256": "188e705664072e1d4c67b4464b202ec64c4d01aa8a4200824228c2a70ee6446a"
+      },
+      "counts": {
+        "frames": 88,
+        "nodes": 17052,
+        "tracklets": 732,
+        "edges": 16988,
+        "division_parents": 334,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x",
+        "radius"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            88,
+            1588
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            1588
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            17052,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            17052
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            17052
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            733
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            733
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            3760
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            3760
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            3760
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            3760
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            733
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            733
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license"
+    },
+    {
+      "id": "zoo_drosophila",
+      "species_key": "drosophila",
+      "species": "Drosophila melanogaster",
+      "source_study_as_archived": "Amat, Nature Methods 2014; original-author GMM tracking",
+      "study_links": [
+        "https://doi.org/10.1038/nmeth.3036"
+      ],
+      "optional_original_image_links_not_downloaded": [],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/drosophilam",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Drosophila/tracks_drosophila_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_drosophila_bundle.zarr.zip",
+        "bytes": 44727951,
+        "sha256": "d0ae1ebfd130f1ab3cadb9472ed84cfe5204e95e5113e9eae0fab3e5824d19ed",
+        "archive_members": 1364,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Drosophila/tracks_drosophila_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_drosophila_attributes_bundle.zarr",
+        "files": 4664,
+        "bytes": 117407346,
+        "recorded_content_tree_sha256": "535024731d7aa2219f0b143e6bc18b84d454a232047a4696d306599bb4130d6c"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/drosophila_graph.npz",
+        "bytes": 24966421,
+        "sha256": "15450e1e637a8d3894bb697f4f7340d845176a137e01a6a9c22aa0eb1245a90a"
+      },
+      "counts": {
+        "frames": 301,
+        "nodes": 1877876,
+        "tracklets": 154508,
+        "edges": 1872888,
+        "division_parents": 74760,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            301,
+            23061
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            23061
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            1877876,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            1877876
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            117368
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            154509
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            77255
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            4919924
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            153748
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            4919924
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            153748
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            154509
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            77255
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license"
+    },
+    {
+      "id": "zoo_elegans",
+      "species_key": "elegans",
+      "species": "Caenorhabditis elegans",
+      "source_study_as_archived": "Moyle, Nature 2021; original-author Linajea tracking",
+      "study_links": [
+        "https://doi.org/10.1038/s41586-020-03169-5"
+      ],
+      "optional_original_image_links_not_downloaded": [
+        "https://zenodo.org/records/6460375"
+      ],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/celegans",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/C_elegans/tracks_elegans_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_elegans_bundle.zarr.zip",
+        "bytes": 1083339,
+        "sha256": "26f6f2e2996dab7db71bfea81bb3d8180e6ec9aec58bb52ad35e223561c65e50",
+        "archive_members": 476,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/C_elegans/tracks_elegans_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_elegans_attributes_bundle.zarr",
+        "files": 4634,
+        "bytes": 4852746,
+        "recorded_content_tree_sha256": "c760dfd30cef9809e3cc15ab3cccb9135dc4016b966e5240b6b660b9952680cb"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/elegans_graph.npz",
+        "bytes": 1028629,
+        "sha256": "0821dd0e501db785b6f80478caa7ed61e4aad0de729de4ae98628e463a3acc73"
+      },
+      "counts": {
+        "frames": 379,
+        "nodes": 110899,
+        "tracklets": 1332,
+        "edges": 110897,
+        "division_parents": 665,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            379,
+            1785
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            1785
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            110899,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            110899
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            55450
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            1333
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            1333
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            21992
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            21992
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            21992
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            21992
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            1333
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            1333
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license"
+    },
+    {
+      "id": "zoo_mouse",
+      "species_key": "mouse",
+      "species": "Mus musculus",
+      "source_study_as_archived": "McDole, Cell 2018; original-author tracking",
+      "study_links": [
+        "https://www.cell.com/cell/fulltext/S0092-8674(18)31243-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867418312431%3Fshowall%3Dtrue"
+      ],
+      "optional_original_image_links_not_downloaded": [
+        "https://idr.openmicroscopy.org/webclient/?show=project-502"
+      ],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/musm",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Mouse/tracks_mouse_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_mouse_bundle.zarr.zip",
+        "bytes": 64900493,
+        "sha256": "63fef4c38ae78803e0bd4f4f56e860ec33b76767154f083da6d0d3f3b2a15ed7",
+        "archive_members": 4295,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Mouse/tracks_mouse_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_mouse_attributes_bundle.zarr",
+        "files": 10136,
+        "bytes": 305531002,
+        "recorded_content_tree_sha256": "270292267f3f34f43ee5c6d9d5dc5ceef4aa536e61580371078923527eac8717"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/mouse_graph.npz",
+        "bytes": 68346363,
+        "sha256": "ec7411036792b582037f6b8a12c9715ffdcc8569683e5da0745041f8dcd52572"
+      },
+      "counts": {
+        "frames": 532,
+        "nodes": 7349203,
+        "tracklets": 360530,
+        "edges": 6988673,
+        "division_parents": 0,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            532,
+            63948
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            63948
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            7349203,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            7349203
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            229663
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            360531
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            90133
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            360530
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            90133
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            360530
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            90133
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            360531
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            90133
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license",
+      "division_limit": "no recorded forks; absence is not biological nondivision ground truth"
+    },
+    {
+      "id": "zoo_tribolium",
+      "species_key": "tribolium",
+      "species": "Tribolium castaneum",
+      "source_study_as_archived": "Akanksha Jain; Ultrack tracking",
+      "study_links": [],
+      "optional_original_image_links_not_downloaded": [
+        "https://celltrackingchallenge.net/3d-datasets/"
+      ],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/triboliumc",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Tribolium/tracks_tribolium_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_tribolium_bundle.zarr.zip",
+        "bytes": 3375424,
+        "sha256": "dac098766d8de142d191a9599d3b462ba8040e3a35f0ad0167ad3783b0d76424",
+        "archive_members": 282,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Tribolium/tracks_tribolium_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_tribolium_attributes_bundle.zarr",
+        "files": 1151,
+        "bytes": 14493363,
+        "recorded_content_tree_sha256": "73a4de48410a6629d6f8a8ce5527938b216cea5a079a4ed5c6eed7cf4859e201"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/tribolium_graph.npz",
+        "bytes": 2894362,
+        "sha256": "c8dd603ae18cf7d2b848d5493f4ec7124e6a36e283dbe800986567d7ae13799a"
+      },
+      "counts": {
+        "frames": 80,
+        "nodes": 305622,
+        "tracklets": 25100,
+        "edges": 302460,
+        "division_parents": 10969,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            80,
+            13137
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            13137
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            305622,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            305622
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            76406
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            25101
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            25101
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            203528
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            50882
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            203528
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            50882
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            25101
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            25101
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license",
+      "enriched_zip": {
+        "advertised_url": "https://public.czbiohub.org/royerlab/zoo/Tribolium/tracks_tribolium_attributes_bundle.zarr.zip",
+        "upstream_result_on_download_date": "HTTP 404",
+        "local_replacement": {
+          "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_tribolium_attributes_bundle.zarr.zip",
+          "bytes": 11951037,
+          "sha256": "5a69166bf6a1e4a3ab9fa152dce85d738cf0e3e378ad0f7defc9169be5eac156",
+          "archive_members": 1151,
+          "zip_crc": "passed"
+        },
+        "provenance": "rebuilt from all 1151 publicly served folder files; not upstream ZIP bytes"
+      }
+    },
+    {
+      "id": "zoo_zebrafish",
+      "species_key": "zebrafish",
+      "species": "Danio rerio",
+      "source_study_as_archived": "Lange/Zebrahub; original-author Ultrack tracking",
+      "study_links": [
+        "https://www.biorxiv.org/content/10.1101/2023.03.06.531398v2"
+      ],
+      "optional_original_image_links_not_downloaded": [],
+      "optional_image_link_scope": "recorded page links, not downloaded or audited for correspondence",
+      "kind": "experimental tracking output; no downloaded microscopy",
+      "source_page": "https://virtual-embryo-zoo.sf.czbiohub.org/dataset/danior",
+      "base_bundle": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Zebrafish/tracks_zebrafish_bundle.zarr.zip",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_zebrafish_bundle.zarr.zip",
+        "bytes": 128421283,
+        "sha256": "5660b35e36dc1fd123bd13bbff0d4bb8dd316bf7b8abfbfbc47bc31208647f06",
+        "archive_members": 6603,
+        "zip_crc": "passed"
+      },
+      "enriched_store": {
+        "url": "https://public.czbiohub.org/royerlab/zoo/Zebrafish/tracks_zebrafish_attributes_bundle.zarr/",
+        "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/tracks_zebrafish_attributes_bundle.zarr",
+        "files": 12334,
+        "bytes": 527742500,
+        "recorded_content_tree_sha256": "b42a21a59ec951fe3a6d998c615e8dc34c2a1472b3a13774fbebf8ca163b8e4d"
+      },
+      "prepared_graph": {
+        "path": "work/biohub-data-guide/prepared/zoo/zebrafish_graph.npz",
+        "bytes": 124463493,
+        "sha256": "5af2dd66cdf787ea8012a68578641a900634e54a3eaab9de3f1f40e52731865a"
+      },
+      "counts": {
+        "frames": 522,
+        "nodes": 11851323,
+        "tracklets": 398662,
+        "edges": 11770767,
+        "division_parents": 159053,
+        "within_track_gaps": 0,
+        "nonadjacent_parent_links": 0
+      },
+      "count_semantics": "nodes are frame-specific observations, not unique biological cells",
+      "physical_scale_known": false,
+      "physical_frame_duration_known": false,
+      "coordinates": "raw source ZYX; no guessed inverse display normalization applied",
+      "point_fields": [
+        "z",
+        "y",
+        "x"
+      ],
+      "source_arrays": {
+        "points": {
+          "shape": [
+            522,
+            77439
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            1,
+            77439
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/data": {
+          "shape": [
+            11851323,
+            3
+          ],
+          "dtype": "<f4",
+          "chunks": [
+            2048,
+            3
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indices": {
+          "shape": [
+            11851323
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            185177
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_points/indptr": {
+          "shape": [
+            398663
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            99666
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/data": {
+          "shape": [
+            4139822
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            129370
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indices": {
+          "shape": [
+            4139822
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            129370
+          ],
+          "zarr_format": 2
+        },
+        "tracks_to_tracks/indptr": {
+          "shape": [
+            398663
+          ],
+          "dtype": "<i4",
+          "chunks": [
+            99666
+          ],
+          "zarr_format": 2
+        }
+      },
+      "viewer_attributes": {
+        "attribute_names": [
+          "lineage (t=0)",
+          "divisions",
+          "start_end",
+          "displacement",
+          "displ_orientation",
+          "displ_orientation_scaled",
+          "density",
+          "structure_strength",
+          "structure_anisotropy",
+          "structure_orientation",
+          "structure_orientation_scaled"
+        ],
+        "attribute_types": [
+          "hex",
+          "hex",
+          "hex",
+          "continuous",
+          "hex",
+          "hex",
+          "continuous",
+          "continuous",
+          "continuous",
+          "hex",
+          "hex"
+        ],
+        "pre_normalized": true
+      },
+      "prepared_fields": {
+        "node_id": "int64 file-local node row",
+        "source_point_id": "int64 t*max_points_per_frame+slot",
+        "t": "int64 source frame index",
+        "zyx_source": "float32 N×3 raw source coordinates",
+        "tracklet_id": "int64 per-node segment ID",
+        "parent_tracklet": "int64 per-track parent ID, root -1",
+        "edges": "int64 E×2 adjacent-frame node-row indices",
+        "division_parent_ids": "int64 parent node rows derived from reconstructed graph"
+      },
+      "label_quality": "graph integrity checked; not assumed manually verified biological truth",
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "duplicate_representations": "base bundle and enriched store overlap",
+      "license_scope": "originating study terms; viewer software MIT is not a blanket data license",
+      "organizer_statement": {
+        "date": "2026-08-13",
+        "author_role": "HOST",
+        "author": "Thibgolds",
+        "source_url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/734330",
+        "paraphrase": "Public Zebrahub resources are allowed; host reports no hidden-test overlap",
+        "scope_limit": "does not establish physical scale or tracking accuracy of this export"
+      }
+    }
+  ],
+  "riken": [
+    {
+      "id": "riken_animal_a",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_animal_a_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_a_bdml3.0.zip",
+      "bytes": 1545317368,
+      "sha256": "19278d58a0c5d6f441e7b536904e117565902ff0619e679404fc1d977192bd02",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_animal_a_bd5.h5",
+          "bytes": 8106428864
+        },
+        {
+          "name": "zebrafish_animal_a_bdml3.0.xml",
+          "bytes": 2124
+        }
+      ],
+      "published_sha256": "19278d58a0c5d6f441e7b536904e117565902ff0619e679404fc1d977192bd02",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    },
+    {
+      "id": "riken_animal_b",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_animal_b_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_b_bdml3.0.zip",
+      "bytes": 1848355379,
+      "sha256": "fa98190e72fabea0c3b945f223e58103707c767d5e6ce0570ac10ee806c514de",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_animal_b_bd5.h5",
+          "bytes": 9847573672
+        },
+        {
+          "name": "zebrafish_animal_b_bdml3.0.xml",
+          "bytes": 2124
+        }
+      ],
+      "published_sha256": "fa98190e72fabea0c3b945f223e58103707c767d5e6ce0570ac10ee806c514de",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    },
+    {
+      "id": "riken_animal_c",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_animal_c_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_animal_c_bdml3.0.zip",
+      "bytes": 621616807,
+      "sha256": "74e77babe53137a887116c830f7afbcb77af73a979cb2ca1d27d8febb0cba35e",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_animal_c_bd5.h5",
+          "bytes": 3199666392
+        },
+        {
+          "name": "zebrafish_animal_c_bdml3.0.xml",
+          "bytes": 2124
+        }
+      ],
+      "published_sha256": "74e77babe53137a887116c830f7afbcb77af73a979cb2ca1d27d8febb0cba35e",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "full HDF5 structure/count audit; first ten frames exported",
+      "label_schema_verified": true,
+      "frames": 821,
+      "point_measurements": 3447269,
+      "physical_coordinate_unit": "micrometre",
+      "time_step_seconds": 90,
+      "explicit_temporal_edges_found": false,
+      "id_semantics": "frame-specific measurement ID; persistent identity not established",
+      "object_schema": {
+        "path": "data/<numeric-frame>/object/0",
+        "fields": [
+          "ID",
+          "t",
+          "entity",
+          "x",
+          "y",
+          "z"
+        ],
+        "encoding": "structured fields, numerical values may be byte strings"
+      },
+      "feature_schema": {
+        "path": "data/<numeric-frame>/feature/0",
+        "fields": [
+          "ID",
+          "fID",
+          "value"
+        ]
+      },
+      "feature_definitions": [
+        {
+          "id": 0,
+          "name": "average fluorescence intensity of the nucleus",
+          "unit": "a.u."
+        },
+        {
+          "id": 1,
+          "name": "centre-of-mass fluorescence intensity of the nucleus",
+          "unit": "a.u."
+        },
+        {
+          "id": 2,
+          "name": "x-start coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 3,
+          "name": "y-start coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 4,
+          "name": "z-start coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 5,
+          "name": "x-end coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 6,
+          "name": "y-end coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 7,
+          "name": "z-end coordinates of the bounding box of the segmented nucleus core",
+          "unit": "micrometer"
+        },
+        {
+          "id": 8,
+          "name": "x-start FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        },
+        {
+          "id": 9,
+          "name": "y-start FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        },
+        {
+          "id": 10,
+          "name": "z-start FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        },
+        {
+          "id": 11,
+          "name": "x-end FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        },
+        {
+          "id": 12,
+          "name": "y-end FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        },
+        {
+          "id": 13,
+          "name": "z-end FWHM coordinates of the three-dimensional intensity distribution around the centre-of-mass of the nucleus",
+          "unit": "micrometer"
+        }
+      ],
+      "feature_limits": "missing and unusually broad FWHM extents; no recovered pixel masks",
+      "prepared_preview": {
+        "path": "work/biohub-data-guide/prepared/riken_animal_c_first10_frames.npz",
+        "bytes": 18468,
+        "sha256": "cf78137d82a98507b8987be04e77cfa17fc82514ffba5ec372274ce1454fae7c"
+      },
+      "preview_points": 1312,
+      "preview_frames": 10,
+      "prepared_fields": {
+        "t": "int64 0–9",
+        "zyx_um": "float32 N×3 micrometres",
+        "measurement_id": "Unicode source measurement ID"
+      },
+      "time_index_mapping": "display t=0 maps to HDF5 object time index 1; elapsed time relative to excerpt start"
+    },
+    {
+      "id": "riken_dorsal",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_dorsal_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_dorsal_bdml3.0.zip",
+      "bytes": 974122136,
+      "sha256": "398b1ad3bf1fd3dcc66cd2fd9a85949f20a4cd18dfdb10243b81321ba99de1a5",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_dorsal_bd5.h5",
+          "bytes": 5225690892
+        },
+        {
+          "name": "zebrafish_dorsal_bdml3.0.xml",
+          "bytes": 2112
+        }
+      ],
+      "published_sha256": "398b1ad3bf1fd3dcc66cd2fd9a85949f20a4cd18dfdb10243b81321ba99de1a5",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    },
+    {
+      "id": "riken_in_toto_mzoep",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_in_toto_mzoep_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_in_toto_mzoep_bdml3.0.zip",
+      "bytes": 1922708812,
+      "sha256": "eefa565d03604fd278f5b76ed707442e6f962d819cb3c684542d1cb97142e9e8",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_in_toto_mzoep_bd5.h5",
+          "bytes": 9954178520
+        },
+        {
+          "name": "zebrafish_in_toto_mzoep_bdml3.0.xml",
+          "bytes": 2148
+        }
+      ],
+      "published_sha256": "eefa565d03604fd278f5b76ed707442e6f962d819cb3c684542d1cb97142e9e8",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    },
+    {
+      "id": "riken_in_toto_wt",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_in_toto_wt_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_in_toto_wt_bdml3.0.zip",
+      "bytes": 1651857532,
+      "sha256": "36a8accd99e5ed5f939949b2200c100c635ce5a5dd2cb4cb3794ffd6cb3636df",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_in_toto_wt_bd5.h5",
+          "bytes": 8963339856
+        },
+        {
+          "name": "zebrafish_in_toto_wt_bdml3.0.xml",
+          "bytes": 2136
+        }
+      ],
+      "published_sha256": "36a8accd99e5ed5f939949b2200c100c635ce5a5dd2cb4cb3794ffd6cb3636df",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    },
+    {
+      "id": "riken_ventral",
+      "source_page": "https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/",
+      "download_url": "https://ssbd.riken.jp/data/ssbd-000005/bdml/zebrafish_ventral_bdml3.0.zip",
+      "path": "work/biohub-forum-archive/downloads/ssbd/bdml/zebrafish_ventral_bdml3.0.zip",
+      "bytes": 1216068598,
+      "sha256": "427f4818430ff6aad99442048541e1c103b43bc6ab654f143a3803b8eb965d36",
+      "archive_members": 2,
+      "zip_crc": "passed",
+      "contents": [
+        {
+          "name": "zebrafish_ventral_bd5.h5",
+          "bytes": 6478939932
+        },
+        {
+          "name": "zebrafish_ventral_bdml3.0.xml",
+          "bytes": 2116
+        }
+      ],
+      "published_sha256": "427f4818430ff6aad99442048541e1c103b43bc6ab654f143a3803b8eb965d36",
+      "published_hash_matched": true,
+      "images_downloaded": false,
+      "masks_downloaded": false,
+      "license": "CC BY-NC-SA as stated on captured project page",
+      "independence_of_views_or_specimens": "not established from archive names",
+      "inspection_scope": "file inventory, ZIP integrity and published checksum only",
+      "label_schema_verified": false
+    }
+  ],
+  "additional_csvs": [
+    {
+      "url": "https://public.czbiohub.org/royerlab/zoo/Ascidian/tracks_withSize.csv",
+      "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/ascidian_tracks_withSize.csv",
+      "bytes": 693785,
+      "sha256": "b0132bf0f80fa82ab567bfb3da456910f6c99276aa1796009d323d2e9a2fd386",
+      "header": [
+        "track_id",
+        "t",
+        "z",
+        "y",
+        "x",
+        "parent_track_id",
+        "radius"
+      ],
+      "duplicate_of": "ascidian enriched tracking store",
+      "validation": "exact time, coordinate and parent relationship match after ID remapping"
+    },
+    {
+      "url": "https://public.czbiohub.org/royerlab/zoo/C_elegans/tracks.csv",
+      "path": "work/biohub-forum-archive/downloads/virtual-embryo-zoo/elegans_tracks.csv",
+      "bytes": 2605247,
+      "sha256": "ad0343ace4a08b31c6c316aac785cf0233877a3c7d69c02108c845dde50420c6",
+      "header": [
+        "track_id",
+        "t",
+        "z",
+        "y",
+        "x",
+        "parent_track_id"
+      ],
+      "duplicate_of": "elegans enriched tracking store",
+      "validation": "exact time, coordinate and parent relationship match after ID remapping"
+    }
+  ],
+  "forum_illustration": {
+    "path": "work/biohub-forum-archive/attachments/Selection_4780.png",
+    "bytes": 511602,
+    "sha256": "e7fa799c136c749e1bb4736adc1ffea55cd3ee4f7656a428adb32f90f8b194f0",
+    "training_dataset": false,
+    "source_message_id": 3521291
+  },
+  "notebooks": [
+    {
+      "id": "josefreitasalvesneto/biohub-synthetic-dataset",
+      "id_no": 129280459,
+      "title": "biohub synthetic dataset",
+      "language": "python",
+      "competition_sources": [
+        "biohub-cell-tracking-during-development"
+      ],
+      "kernel_sources": [],
+      "dataset_sources": [],
+      "model_sources": [],
+      "docker_image": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+      "url": "https://www.kaggle.com/code/josefreitasalvesneto/biohub-synthetic-dataset",
+      "immutable_version_recorded": null,
+      "executed_during_download": false,
+      "artifacts": [
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/biohub-synthetic-dataset/biohub-synthetic-dataset.ipynb",
+          "bytes": 177661,
+          "sha256": "04ed49b48c896dea94b2d47d5f59c00479d53a1cba109925642be0dccb9a97e5"
+        },
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/biohub-synthetic-dataset/biohub-synthetic-dataset.py",
+          "bytes": 164129,
+          "sha256": "a193fecb05c1590bc46259b295d23d90874c6699d654649e1541747942a304d2"
+        },
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/biohub-synthetic-dataset/kernel-metadata.json",
+          "bytes": 634,
+          "sha256": "f6d043f1656be40339c527b84f4c046583d535b0a9325ad6df0b310097ad925e"
+        }
+      ]
+    },
+    {
+      "id": "josefreitasalvesneto/synthetic-3d-microscopy-data-for-cell-tracking",
+      "id_no": 129280032,
+      "title": "Synthetic 3D Microscopy Data for Cell Tracking",
+      "language": "python",
+      "competition_sources": [
+        "biohub-cell-tracking-during-development"
+      ],
+      "kernel_sources": [
+        "josefreitasalvesneto/biohub-synthetic-dataset"
+      ],
+      "dataset_sources": [],
+      "model_sources": [],
+      "docker_image": "gcr.io/kaggle-images/python@sha256:dafd4ce5668bbf1ad422e4c109e0f18c9623c3a7c7f48b0235f13142755c40b9",
+      "url": "https://www.kaggle.com/code/josefreitasalvesneto/synthetic-3d-microscopy-data-for-cell-tracking",
+      "immutable_version_recorded": null,
+      "executed_during_download": false,
+      "artifacts": [
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/synthetic-3d-microscopy-data-for-cell-tracking/kernel-metadata.json",
+          "bytes": 755,
+          "sha256": "5894b64c519d18825a80b8b0515c72d9bb2e6f5aa349731915533d7a55ed1a42"
+        },
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/synthetic-3d-microscopy-data-for-cell-tracking/synthetic-3d-microscopy-data-for-cell-tracking.ipynb",
+          "bytes": 21441,
+          "sha256": "f038937e995f7d007a4d1d6723e2e7595744be41b7ad3a569c8205a13f0748bd"
+        },
+        {
+          "path": "work/biohub-forum-archive/notebooks/josefreitasalvesneto/synthetic-3d-microscopy-data-for-cell-tracking/synthetic-3d-microscopy-data-for-cell-tracking.py",
+          "bytes": 10429,
+          "sha256": "cae1b92a67a8b43f5f1503de918890fcee36cb42793d1ac4037c0dd44ef07419"
+        }
+      ]
+    }
+  ],
+  "uninspected_or_unavailable": [
+    "No paired image volumes downloaded for Zoo or RIKEN.",
+    "Six RIKEN archives have only inventory and integrity checks, not the animal C label audit.",
+    "Zoo physical scales, physical frame cadence, biological label quality and cross-export deduplication beyond named representations remain unverified.",
+    "Exact upstream enriched Tribolium ZIP was unavailable; public file contents were recovered.",
+    "No immutable Kaggle notebook output version was captured; source and payload fingerprints describe the local snapshot."
+  ],
+  "cross_source_biological_overlap": "not audited beyond base/enriched/CSV representation overlap; acquisition identity must not be inferred solely from filename or species",
+  "reference_pins": {
+    "metric": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+    "intracktive_converter": "8afc30b5c0a42632ad971e76dbdb559286bec0bf"
+  },
+  "evidence_files": [
+    {
+      "path": "work/biohub-forum-archive/verification.json",
+      "bytes": 9442029,
+      "sha256": "cf825607f0a3cfffb958a2590666c5203e7ca166649f65d1a7926670e15130b7"
+    },
+    {
+      "path": "work/biohub-data-guide/verification.json",
+      "bytes": 2534,
+      "sha256": "f9c11c835eebe0beb4bb4edbc86de085e0a1102e8ab2424279f97ca9e2fe8e43"
+    },
+    {
+      "path": "work/biohub-data-guide/prepared_checksums.json",
+      "bytes": 611835,
+      "sha256": "6de33c0f222483598086ea30bcce5b634f10b85c87f33f5bdc7e0fc0ea5b3b5d"
+    },
+    {
+      "path": "work/biohub-data-guide/prepared/synthetic_audit.json",
+      "bytes": 138,
+      "sha256": "797850e5cbd6023c9252bd4b79c4788d4a11e16650e70eae50b01fbc1219ca5f"
+    },
+    {
+      "path": "work/biohub-data-guide/prepared/zoo_manifest.json",
+      "bytes": 3760,
+      "sha256": "704b9db6eb00044847ff9379a77dcfa87829f1b7ca04109917f0e493d51d41e7"
+    },
+    {
+      "path": "work/biohub-data-guide/prepared/riken_audit.json",
+      "bytes": 2622,
+      "sha256": "f50be085bb736c0d08be396fc32aa6bf8a9e4378b11f29f72c88c1c87035f644"
+    }
+  ]
+}
