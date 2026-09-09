@@ -1,0 +1,49 @@
+{
+  "complete_variants": 104,
+  "decision": "significant_local_gain",
+  "historical_failures_preserved": true,
+  "optional_focus": "Not run; conditional arm not selected",
+  "provenance": "Contaminated public upstream checkpoints; learned repairs and selectors use source-only labels in both directions",
+  "samples": 199,
+  "score_rows": 20696,
+  "selected_variant": "bypass_motion_bounds",
+  "stages": {
+    "V200": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970197+00:00"
+    },
+    "V210": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970201+00:00"
+    },
+    "V220": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970204+00:00"
+    },
+    "V230": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970206+00:00"
+    },
+    "V240": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970209+00:00"
+    },
+    "V250": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970211+00:00"
+    },
+    "V260": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970214+00:00"
+    },
+    "V270": {
+      "status": "complete",
+      "updated": "2026-09-09T15:42:53.970216+00:00"
+    }
+  },
+  "status": "complete",
+  "study_id": "strong-tracker-v2",
+  "updated": "2026-09-09T15:42:53.970188+00:00",
+  "v1_preserved": true,
+  "validation": "Two reused embryos; partial image registration; no independent inner folds or bootstrap confidence intervals"
+}

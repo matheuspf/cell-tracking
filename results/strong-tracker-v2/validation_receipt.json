@@ -1,0 +1,63 @@
+{
+  "created": "2026-09-09T15:42:53.969646+00:00",
+  "current_source_files_snapshotted": 34,
+  "dashboard": {
+    "dashboard_sha256": "646b625f7f9a321bb2ec6a26e11d351c9b831dfdd3fcec5ce7543c38a334ce63",
+    "desktop_mobile_checked": true,
+    "no_network_requests": true,
+    "passed": true,
+    "population_family_states": 27
+  },
+  "frozen_models_sha256_verified": 24,
+  "measurements": {
+    "annotation_inference_receipts": {
+      "combo_inference_receipt.json": {
+        "annotation_reads": 0,
+        "hashes_verified": true,
+        "samples": 199
+      },
+      "image_inference_receipt.json": {
+        "annotation_reads": 0,
+        "hashes_verified": true,
+        "samples": 199
+      },
+      "inference_receipt.json": {
+        "annotation_reads": 0,
+        "hashes_verified": true,
+        "samples": 199
+      },
+      "risk_inference_receipt.json": {
+        "annotation_reads": 0,
+        "hashes_verified": true,
+        "samples": 199
+      }
+    },
+    "complete_variants": 104,
+    "independently_checked_graph_hash_rows": 597,
+    "input_hashes_verified": true,
+    "oracle_samples": 199,
+    "oracle_variants": 4,
+    "samples": 199,
+    "score_rows": 20696,
+    "selected_graphs_verified": 199,
+    "source_label_directions_checked": true,
+    "stage_rows": 1990
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "numerical_replay_qualification": "Two documented half-integer ULP export ties restored to sealed baseline; native rounding separately rescored with unchanged score.",
+  "package_stack_unchanged": true,
+  "passed": true,
+  "resource_caps_satisfied": true,
+  "scientific_qualification": "Exploratory reused embryos and contaminated public upstream checkpoints; no clean OOF or hidden-test claim.",
+  "selected_strict_annotation_unavailable_graphs": 199,
+  "tests": {
+    "log_sha256": "3e718a647287b7eec8bee8622b5863bfac30cc759e8676811c2062f315e1e2e1",
+    "passed": 129,
+    "scope": "Project, study contract and pinned official metric/division tests",
+    "warnings": 8
+  },
+  "v1_preservation": {
+    "unchanged": true,
+    "v1_files": 11015
+  }
+}

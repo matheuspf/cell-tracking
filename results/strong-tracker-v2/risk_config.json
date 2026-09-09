@@ -1,0 +1,27 @@
+{
+  "correction": "Actual official group-deletion run-level score loss per node, including rematching",
+  "keep_fractions": [
+    0.995,
+    0.99,
+    0.98,
+    0.95,
+    0.9,
+    0.8,
+    0.7,
+    0.5
+  ],
+  "negative_groups_per_clip_rescored": 5,
+  "positive_groups_per_clip_rescored": 3,
+  "primary_action": "whole tracklets, predicted fork context protected",
+  "primary_max_removed_fraction": 0.1,
+  "primary_threshold": -0.005,
+  "seed": 20260909,
+  "surrogate": "All source groups; unique incident matched TP edges and FP edges per removed node",
+  "tree": {
+    "l2_regularization": 10.0,
+    "learning_rate": 0.05,
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 20
+  }
+}

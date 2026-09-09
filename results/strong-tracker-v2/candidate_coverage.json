@@ -1,0 +1,25 @@
+{
+  "division_fp_reasons": {
+    "cross_component_branches": 4,
+    "evaluable_spurious_or_local_topology_reject": 93
+  },
+  "division_reasons": {
+    "daughter_assignment_competition": 4,
+    "daughter_lineage_candidate_absent": 21,
+    "fork_wrong_local_timing_or_topology": 1,
+    "parent_side_evidence_absent": 3,
+    "recovered": 23,
+    "two_daughters_present_single_branch_survives": 99
+  },
+  "edge_reasons": {
+    "edge_fn:available_alternative_not_selected": 2067,
+    "edge_fn:candidate_pruned_or_relinked": 1260,
+    "edge_fn:endpoint_missing": 2908,
+    "edge_fn:outside_candidate_pool": 447,
+    "edge_fp:one_endpoint_unmatched": 6781,
+    "edge_fp:wrong_matched_association": 104
+  },
+  "fn_candidate_available": 3327,
+  "fn_pre_ilp_available": 1437,
+  "samples": 199
+}

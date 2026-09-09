@@ -1,0 +1,271 @@
+{
+  "completeness": "Heuristic feasible interventions, not exhaustive or globally optimized; GT outputs isolated from deployment features and models",
+  "evaluation_only": true,
+  "fixed_nodes_search": "Known GT transitions under global assignment; one pass local division-window transitions; existing native/physical candidate edges only; legal degrees",
+  "global_upper_bound": false,
+  "injection_search": "One missing center per globally unmatched GT node; fresh assignment and known-transition rewiring",
+  "pruning_search": "Delete globally unmatched candidate nodes; leave surviving baseline links",
+  "samples": 199,
+  "summaries": {
+    "identity": {
+      "44b6": {
+        "adj_edge_jaccard": 0.9027172215448382,
+        "counts": {
+          "division_fn": 21,
+          "division_fp": 25,
+          "division_tp": 5,
+          "edge_fn": 1043,
+          "edge_fp": 1322,
+          "edge_tp": 18783,
+          "num_pred_nodes": 1980130
+        },
+        "division_fn": 21,
+        "division_fp": 25,
+        "division_jaccard": 0.09803921568627451,
+        "division_tp": 5,
+        "edge_jaccard": 0.8881690940041611,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9885509592005769,
+        "score": 0.9125211431134657
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9024597090519018,
+        "counts": {
+          "division_fn": 107,
+          "division_fp": 72,
+          "division_tp": 18,
+          "edge_fn": 5639,
+          "edge_fp": 5563,
+          "edge_tp": 103418,
+          "num_pred_nodes": 2153557
+        },
+        "division_fn": 107,
+        "division_fp": 72,
+        "division_jaccard": 0.09137055837563451,
+        "division_tp": 18,
+        "edge_jaccard": 0.9022683650322806,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9802489030388399,
+        "score": 0.9115967648894652
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9024998206702552,
+        "counts": {
+          "division_fn": 128,
+          "division_fp": 97,
+          "division_tp": 23,
+          "edge_fn": 6682,
+          "edge_fp": 6885,
+          "edge_tp": 122201,
+          "num_pred_nodes": 4133687
+        },
+        "division_fn": 128,
+        "division_fp": 97,
+        "division_jaccard": 0.09274193548387097,
+        "division_tp": 23,
+        "edge_jaccard": 0.9000721819574569,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.9832109431769471,
+        "score": 0.9117740142186423
+      }
+    },
+    "oracle_fixed_nodes_links": {
+      "44b6": {
+        "adj_edge_jaccard": 0.9988420660950559,
+        "counts": {
+          "division_fn": 8,
+          "division_fp": 0,
+          "division_tp": 18,
+          "edge_fn": 343,
+          "edge_fp": 0,
+          "edge_tp": 19483,
+          "num_pred_nodes": 1980130
+        },
+        "division_fn": 8,
+        "division_fp": 0,
+        "division_jaccard": 0.6923076923076923,
+        "division_tp": 18,
+        "edge_jaccard": 0.9826994855240593,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9885509592005769,
+        "score": 1.068072835325825
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9724874803558059,
+        "counts": {
+          "division_fn": 46,
+          "division_fp": 0,
+          "division_tp": 79,
+          "edge_fn": 3013,
+          "edge_fp": 1,
+          "edge_tp": 106044,
+          "num_pred_nodes": 2153557
+        },
+        "division_fn": 46,
+        "division_fp": 0,
+        "division_jaccard": 0.632,
+        "division_tp": 79,
+        "edge_jaccard": 0.9723633296044306,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9802489030388399,
+        "score": 1.0356874803558058
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9765415601241741,
+        "counts": {
+          "division_fn": 54,
+          "division_fp": 0,
+          "division_tp": 97,
+          "edge_fn": 3356,
+          "edge_fp": 1,
+          "edge_tp": 125527,
+          "num_pred_nodes": 4133687
+        },
+        "division_fn": 54,
+        "division_fp": 0,
+        "division_jaccard": 0.6423841059602649,
+        "division_tp": 97,
+        "edge_jaccard": 0.9739533223674002,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.9832109431769471,
+        "score": 1.0407799707202006
+      }
+    },
+    "oracle_gt_center_injection": {
+      "44b6": {
+        "adj_edge_jaccard": 1.0163457617905378,
+        "counts": {
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_tp": 26,
+          "edge_fn": 0,
+          "edge_fp": 0,
+          "edge_tp": 19826,
+          "num_pred_nodes": 1980347
+        },
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_jaccard": 1.0,
+        "division_tp": 26,
+        "edge_jaccard": 1.0,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 1.0,
+        "score": 1.116345761790538
+      },
+      "6bba": {
+        "adj_edge_jaccard": 0.9997202547763587,
+        "counts": {
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_tp": 125,
+          "edge_fn": 0,
+          "edge_fp": 0,
+          "edge_tp": 109057,
+          "num_pred_nodes": 2155699
+        },
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_jaccard": 1.0,
+        "division_tp": 125,
+        "edge_jaccard": 1.0,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 1.0,
+        "score": 1.0997202547763587
+      },
+      "pooled": {
+        "adj_edge_jaccard": 1.002277747246763,
+        "counts": {
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_tp": 151,
+          "edge_fn": 0,
+          "edge_fp": 0,
+          "edge_tp": 128883,
+          "num_pred_nodes": 4136046
+        },
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_jaccard": 1.0,
+        "division_tp": 151,
+        "edge_jaccard": 1.0,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 1.0,
+        "score": 1.102277747246763
+      }
+    },
+    "oracle_gt_pruning": {
+      "44b6": {
+        "adj_edge_jaccard": 1.039813531363991,
+        "counts": {
+          "division_fn": 23,
+          "division_fp": 0,
+          "division_tp": 3,
+          "edge_fn": 1043,
+          "edge_fp": 19,
+          "edge_tp": 18783,
+          "num_pred_nodes": 19980
+        },
+        "division_fn": 23,
+        "division_fp": 0,
+        "division_jaccard": 0.11538461538461539,
+        "division_tp": 3,
+        "edge_jaccard": 0.9464852607709751,
+        "n": 71,
+        "n_adj": 71,
+        "node_recall": 0.9885509592005769,
+        "score": 1.0513519929024524
+      },
+      "6bba": {
+        "adj_edge_jaccard": 1.0332939169164503,
+        "counts": {
+          "division_fn": 110,
+          "division_fp": 0,
+          "division_tp": 15,
+          "edge_fn": 5639,
+          "edge_fp": 85,
+          "edge_tp": 103418,
+          "num_pred_nodes": 110979
+        },
+        "division_fn": 110,
+        "division_fp": 0,
+        "division_jaccard": 0.12,
+        "division_tp": 15,
+        "edge_jaccard": 0.9475545619468215,
+        "n": 128,
+        "n_adj": 128,
+        "node_recall": 0.9802489030388399,
+        "score": 1.0452939169164503
+      },
+      "pooled": {
+        "adj_edge_jaccard": 1.034296977292391,
+        "counts": {
+          "division_fn": 133,
+          "division_fp": 0,
+          "division_tp": 18,
+          "edge_fn": 6682,
+          "edge_fp": 104,
+          "edge_tp": 122201,
+          "num_pred_nodes": 130959
+        },
+        "division_fn": 133,
+        "division_fp": 0,
+        "division_jaccard": 0.11920529801324503,
+        "division_tp": 18,
+        "edge_jaccard": 0.947390047059006,
+        "n": 199,
+        "n_adj": 199,
+        "node_recall": 0.9832109431769471,
+        "score": 1.0462175070937154
+      }
+    }
+  }
+}

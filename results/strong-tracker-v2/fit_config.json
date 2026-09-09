@@ -1,0 +1,55 @@
+{
+  "created": "2026-09-09T14:32:09.694731+00:00",
+  "division_probability_thresholds": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "edge_replacement_logodds_margins": [
+    0.5,
+    1.5
+  ],
+  "edge_tree": {
+    "l2_regularization": 10.0,
+    "learning_rate": 0.06,
+    "max_iter": 120,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 80
+  },
+  "fork_tree": {
+    "l2_regularization": 20.0,
+    "learning_rate": 0.05,
+    "max_iter": 100,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 16
+  },
+  "keep_fractions": [
+    1.0,
+    0.995,
+    0.99,
+    0.98,
+    0.95,
+    0.9,
+    0.8,
+    0.7,
+    0.5
+  ],
+  "logistic_C": 0.1,
+  "logistic_iterations": 400,
+  "node_negative_per_tracklet_stratum": 12,
+  "node_tree": {
+    "l2_regularization": 10.0,
+    "learning_rate": 0.06,
+    "max_iter": 160,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 100
+  },
+  "primary": {
+    "D": "D_temporal_p0.05",
+    "E": "E_hgb_m1.5",
+    "F": "F_risk_threshold"
+  },
+  "provenance": "Public upstream checkpoints contaminated; selectors/repairs use only the opposite embryo labels; exploratory",
+  "seed": 20260909,
+  "selection": "Fixed limited settings; no valid independent source inner folds; no outer tuning"
+}

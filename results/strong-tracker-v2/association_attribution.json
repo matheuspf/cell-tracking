@@ -1,0 +1,93 @@
+{
+  "pairing": "Maximum-cardinality matching of actually deleted FP links to newly added TP links sharing a source or target; each link used at most once",
+  "rows": [
+    {
+      "added_unknown_or_evaluated_edges": 10523,
+      "deleted_fp_without_paired_restoration": 75,
+      "deleted_unknown_or_evaluated_edges": 5803,
+      "embryo": "44b6",
+      "lost_baseline_tp": 2,
+      "new_evaluated_fp": 56,
+      "paired_fp_to_tp_link_substitutions": 74,
+      "restored_tp_without_paired_fp_deletion": 28,
+      "variant": "DE_primary"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 8601,
+      "deleted_fp_without_paired_restoration": 230,
+      "deleted_unknown_or_evaluated_edges": 7281,
+      "embryo": "6bba",
+      "lost_baseline_tp": 11,
+      "new_evaluated_fp": 81,
+      "paired_fp_to_tp_link_substitutions": 290,
+      "restored_tp_without_paired_fp_deletion": 16,
+      "variant": "DE_primary"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 5157,
+      "deleted_fp_without_paired_restoration": 0,
+      "deleted_unknown_or_evaluated_edges": 83,
+      "embryo": "44b6",
+      "lost_baseline_tp": 0,
+      "new_evaluated_fp": 54,
+      "paired_fp_to_tp_link_substitutions": 0,
+      "restored_tp_without_paired_fp_deletion": 27,
+      "variant": "D_temporal_p0.05"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 1766,
+      "deleted_fp_without_paired_restoration": 1,
+      "deleted_unknown_or_evaluated_edges": 33,
+      "embryo": "6bba",
+      "lost_baseline_tp": 0,
+      "new_evaluated_fp": 58,
+      "paired_fp_to_tp_link_substitutions": 0,
+      "restored_tp_without_paired_fp_deletion": 14,
+      "variant": "D_temporal_p0.05"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 8363,
+      "deleted_fp_without_paired_restoration": 93,
+      "deleted_unknown_or_evaluated_edges": 8621,
+      "embryo": "44b6",
+      "lost_baseline_tp": 4,
+      "new_evaluated_fp": 8,
+      "paired_fp_to_tp_link_substitutions": 98,
+      "restored_tp_without_paired_fp_deletion": 1,
+      "variant": "E_hgb_m0.5"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 13161,
+      "deleted_fp_without_paired_restoration": 375,
+      "deleted_unknown_or_evaluated_edges": 13770,
+      "embryo": "6bba",
+      "lost_baseline_tp": 27,
+      "new_evaluated_fp": 59,
+      "paired_fp_to_tp_link_substitutions": 445,
+      "restored_tp_without_paired_fp_deletion": 61,
+      "variant": "E_hgb_m0.5"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 5566,
+      "deleted_fp_without_paired_restoration": 75,
+      "deleted_unknown_or_evaluated_edges": 5811,
+      "embryo": "44b6",
+      "lost_baseline_tp": 2,
+      "new_evaluated_fp": 4,
+      "paired_fp_to_tp_link_substitutions": 75,
+      "restored_tp_without_paired_fp_deletion": 1,
+      "variant": "E_hgb_m1.5"
+    },
+    {
+      "added_unknown_or_evaluated_edges": 6942,
+      "deleted_fp_without_paired_restoration": 229,
+      "deleted_unknown_or_evaluated_edges": 7317,
+      "embryo": "6bba",
+      "lost_baseline_tp": 13,
+      "new_evaluated_fp": 28,
+      "paired_fp_to_tp_link_substitutions": 291,
+      "restored_tp_without_paired_fp_deletion": 3,
+      "variant": "E_hgb_m1.5"
+    }
+  ]
+}
