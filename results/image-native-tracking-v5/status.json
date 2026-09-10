@@ -1,6 +1,6 @@
 {
   "study_id": "image-native-tracking-v5",
-  "updated": "2026-09-10T19:08:29.653161+00:00",
+  "updated": "2026-09-10T19:56:58.564166+00:00",
   "status": "executing",
   "target_score": 0.95,
   "incumbent_score": 0.934802374260586,
@@ -14,7 +14,7 @@
   "HOCT_feature_shards": 199,
   "DeepCenter_clips": 199,
   "expected_clips": 199,
-  "complete_native_fits": 3,
+  "complete_native_fits": 5,
   "planned_native_fits": 8,
   "source_only": true,
   "prior_studies_preserved": true,

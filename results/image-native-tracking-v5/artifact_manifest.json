@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-10T19:20:55.366123+00:00",
+  "at": "2026-09-10T19:58:14.415443+00:00",
   "status": "executing",
   "files": {
     "status.json": {
-      "sha256": "95fc0b2fd7a0ed5cb6233d765ec7e42bf998c7799637db5773fc082ad88d5a6a",
+      "sha256": "45f836886c5dac4b544148cf49ef6e5e02dfa7323f7877f7da0647fe7b2b316f",
       "bytes": 625
     },
     "ablation_scores.csv": {
@@ -23,12 +23,12 @@
       "bytes": 755
     },
     "training_summary.csv": {
-      "sha256": "02d7cedaaa6646f50b9f2a69e492c4c2c49d27dfcd581c5da25929f478d3c339",
-      "bytes": 2216
+      "sha256": "eb5a2f6fea2eed897d604fef32aed6e5aece02882dea5a6f2c26b1aaf6adaf85",
+      "bytes": 2633
     },
     "learning_curves.csv": {
-      "sha256": "4bfb46c0932b47b9b4b4d8dc59e2f1cce8183b64cdbf75661d5ca6b195fab02c",
-      "bytes": 312608
+      "sha256": "5186d89eb022e61177673d98ef1cb045f4889a5fdc4665e2033af7095c9c6a4c",
+      "bytes": 432150
     },
     "exposure.json": {
       "sha256": "67ce02c721605ffb27d618b7d1e16b1f356710baa40afd7bd1c1167517705923",
@@ -71,27 +71,27 @@
       "bytes": 249
     },
     "dashboard.html": {
-      "sha256": "f896b3115b0c4a62d8bb50ed1eab26c0e3b97aea51a671d6c3ecc4bf8e2483da",
-      "bytes": 693795
+      "sha256": "bb6bb7eed779bc8bdc43cafa5ae7a3efa27ba0cdaa75f0ece0e6837a02470c15",
+      "bytes": 937018
     },
     "dashboard_validation.json": {
-      "sha256": "1b8e6ae8feea5a098f8bfc048a539098a659d9bb2a535ffbac92618ecc4da21c",
+      "sha256": "8267c97dcf5f8632eea1ca9a2625e37c08cd665ce5ec5b8e35246e238f61917b",
       "bytes": 912
     },
     "progress_report.md": {
-      "sha256": "773ac37251651a42ab34d2ae9a9532d6d4f748c349f90a9b95782b57c2a4fa59",
-      "bytes": 6137
+      "sha256": "bb9830f96e5cc80e700eca9c92ff086e25c74362c6350555f70d079750f84e38",
+      "bytes": 7723
     },
     "recovery.json": {
       "sha256": "5a614a6454e3059f00498a3ccae668c498623d2c58b416b6a6d45f27a2160ac5",
       "bytes": 683
     },
     "test_receipt.json": {
-      "sha256": "02582025d6355623aed16de55adfc3c7fc089c4f828ed502912981bd00486ebd",
+      "sha256": "53d12878e5d3e2790f8a5adb715873389b65e1ff750c2fe9cda00b0ca746ba47",
       "bytes": 549
     },
     "README.md": {
-      "sha256": "ce96935ea403aff97f2f8bc04b82ac8522dc90296631cfacc4ec22dafd674d03",
+      "sha256": "bbbfbdaca28e75633eb6dac056bc940b1f742efa85129acb72ff5b1f2729bc62",
       "bytes": 933
     },
     "P2_decision.json": {
@@ -209,6 +209,22 @@
     "CPU_worker_recovery_schedule.json": {
       "sha256": "870de64176f8d59986b2eb1ce9cdaca8198dcd5ca4c9c9982017b557035e1a44",
       "bytes": 1070
+    },
+    "GPU_head_overlap_schedule.json": {
+      "sha256": "9507b26a9f4face1681bef03f897a968810428d7c8d73d4b8e878c11d2e01879",
+      "bytes": 1486
+    },
+    "GPU_head_overlap_benchmark.json": {
+      "sha256": "8a31b810c4262dbf56d0eb250de2d478a7e360e4c66a26bf143b62f55b454693",
+      "bytes": 1547
+    },
+    "GPU_head_overlap_followthrough.json": {
+      "sha256": "44476058f59bcbcb392ff4630f400b1134db25128028a33df441475df97724ff",
+      "bytes": 511
+    },
+    "scorer_skip_schedule.json": {
+      "sha256": "a223d03af5903b17d2a0763182ade8a2dbfb0076c5eb1a973d9691356426046d",
+      "bytes": 696
     }
   },
   "allowlist_only": true,

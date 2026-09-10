@@ -14,6 +14,25 @@ reproducibility. Both snapshots, logs and two empty progress files were preserve
 See `recovery_second_20260910.json` and `resume_determinism_second.json`.
 Training, decoding, scoring and all artifact waiters are running in the restored
 `cell-tracking-v5` tmux session. Source44 primary N2 calibration also completed.
+At 19:26 UTC, a measured scheduling overlap started the registered source6 N1
+replica on the idle auxiliary lane before its primary N2 finished. This transient
+third optimizer holds `gpu_aux`, excluding auxiliary inference/calibration. It
+achieved 2.83 head updates/s while backbone throughput changed from 1.48 to 1.40
+across different source windows, with 6.35 GiB GPU and 17.29 GiB RSS peaks. The
+source helper and original queue will reuse/lock this same fit. See the separate
+`GPU_head_overlap_schedule.json` and `GPU_head_overlap_benchmark.json` receipts;
+they supersede the earlier two-optimizer scheduling ceiling for this one overlap.
+
+At 19:54 UTC, primary source6 N2 completed 12,000 actual image-network updates.
+All 12,374 eligible windows and 106,313 supported edges were seen. Its first encoder
+tensor changed by 0.02013603 in L2 norm, with a nonzero first-step convolution
+gradient. The checkpoint hash verified. Both primary N2 models and the source44
+N1 replica are now complete, giving five of eight completed native fits. Source44
+N2 replication and source6 N1 replication remain active; source6 N2 calibration
+waits for the auxiliary head fit. All 199 confidence-ablation graphs are complete,
+and N1 graph decoding is running. Its full scores are still pending.
+The complete transient three-optimizer phase peaked at 10.22 GiB GPU and
+17.29 GiB summed RSS, within both caps.
 
 ## Current measured evidence
 
@@ -226,6 +245,10 @@ writing the same receipts; the official evaluator and aggregator are AST-identic
 See `evaluation_overlap_schedule.json`. Restore this helper once after a reboot,
 after checking no existing copy is running. Its output is the canonical registered
 evaluation, not an extra scored configuration.
+If a regular evaluator already owns a ready variant while waiting for its CPU
+slot, the background scorer now skips that busy variant and tries other ready
+families. Per-variant exclusion is preserved. The added partial-lock release test
+passes; there are now 20 implementation tests. See `scorer_skip_schedule.json`.
 
 J had 882 windows stop with a feasible time-limited solution; expanded P1 also has
 many feasible timeouts. Fresh tests retain the original exact graph/integer-count

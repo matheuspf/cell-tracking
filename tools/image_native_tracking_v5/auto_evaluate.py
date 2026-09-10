@@ -13,11 +13,15 @@ def run():
         ready=[v for v in pending if v!='C0' and not v.startswith('Oracle_') and
             all((OUT/'prediction_receipts'/v/f"{r['dataset']}.json").exists() for r in rows)]
         if not ready:time.sleep(30);continue
-        variant=ready[0]
-        print('Scoring complete registered variant',variant,now(),flush=True)
-        evaluate([variant],serial=True);completed.append(variant)
-        write(OUT/'auto_evaluation_progress.json',dict(at=now(),completed=completed,
-            per_variant_exclusion=True,extra_serial_workers=1))
+        for variant in ready:
+            try:evaluate([variant],serial=True,nonblocking=True)
+            except BlockingIOError:continue
+            completed.append(variant)
+            print('Scored complete registered variant',variant,now(),flush=True)
+            write(OUT/'auto_evaluation_progress.json',dict(at=now(),completed=completed,
+                per_variant_exclusion=True,extra_serial_workers=1))
+            break
+        else:time.sleep(30)
     aggregate_complete()
     write(OUT/'auto_evaluation_complete.json',dict(at=now(),complete=True,registered_variants=expected,
         extra_serial_workers=1,completed_in_this_process=completed,

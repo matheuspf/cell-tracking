@@ -41,7 +41,7 @@ def aggregate_complete():
 
 
 @contextmanager
-def variant_locks(variants):
+def variant_locks(variants,blocking=True):
     """Coordinate overlapping registered batches without racing atomic receipts."""
     import fcntl
     directory=OUT/'evaluation_variant_locks';directory.mkdir(parents=True,exist_ok=True)
@@ -49,7 +49,7 @@ def variant_locks(variants):
         for variant in sorted(set(variants)):
             assert variant.replace('_','').isalnum(),variant
             handle=stack.enter_context((directory/f'{variant}.lock').open('a'))
-            fcntl.flock(handle,fcntl.LOCK_EX)
+            fcntl.flock(handle,fcntl.LOCK_EX|(0 if blocking else fcntl.LOCK_NB))
         yield
 
 
@@ -89,11 +89,11 @@ def _run(variants,workers=6,serial=False):
     aggregate_complete()
 
 
-def run(variants,workers=6,serial=False):
+def run(variants,workers=6,serial=False,nonblocking=False):
     import fcntl
-    # Acquire variant locks before requesting a pool, so a waiting regular batch
-    # does not prevent the overlapping serial scorer from finishing its variant.
-    with variant_locks(variants):
+    # Variant locks precede pool admission. An opportunistic serial caller can
+    # skip a variant owned by a queued regular batch and score another ready one.
+    with variant_locks(variants,blocking=not nonblocking):
         if serial:
             with (OUT/'serial_scorer.lock').open('a') as handle:
                 fcntl.flock(handle,fcntl.LOCK_EX)

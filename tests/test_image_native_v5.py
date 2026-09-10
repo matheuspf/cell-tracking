@@ -8,6 +8,18 @@ from image_native_tracking_v5.observations import peaks,regions
 from image_native_tracking_v5.event_paths import equivalence_classes
 
 class ScoreSchedulingTests(unittest.TestCase):
+    def test_busy_variant_can_be_skipped_without_retaining_partial_locks(self):
+        import tempfile
+        from unittest.mock import patch
+        from image_native_tracking_v5 import evaluate
+        with tempfile.TemporaryDirectory() as directory,patch.object(evaluate,'OUT',Path(directory)):
+            with evaluate.variant_locks(['B']):
+                with self.assertRaises(BlockingIOError):
+                    with evaluate.variant_locks(['A','B'],blocking=False):
+                        self.fail('Busy variant acquired')
+                with evaluate.variant_locks(['A'],blocking=False):pass
+            with evaluate.variant_locks(['A','B'],blocking=False):pass
+
     def test_overlapping_batches_cannot_write_the_same_variant_concurrently(self):
         import tempfile,threading
         from concurrent.futures import ThreadPoolExecutor

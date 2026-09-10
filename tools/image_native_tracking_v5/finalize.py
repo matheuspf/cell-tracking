@@ -191,6 +191,15 @@ aggregation functions. Completed original batches reused those same receipts.
 Later batches used ten CPU decoder workers after an eight-worker memory/CPU
 benchmark; existing loaded batches retained eight. The numerical transformation,
 optimizer and official scorer/aggregator functions passed exact AST checks.
+A later measured overlap started the registered source6 replica N1 on the idle
+auxiliary lane before its primary N2 finished. This temporarily allowed three
+optimizers, at most two of them image backbones. Holding the auxiliary lock excluded
+simultaneous auxiliary inference/calibration. The extra head achieved 2.83 updates/s
+while backbone throughput changed from 1.48 to 1.40 across different source windows;
+the initial observation peaked at 6.35 GiB GPU and 17.29 GiB summed RSS. The full
+transient phase later reached 10.22 GiB GPU while two backbones overlapped the
+auxiliary head. No numerical recipe
+or registered fit budget changed.
 The causes of the reboots are unknown. Early package trials exposed missing declared
 model-config/hash-lock dependencies and a guard rejecting newly generated GEFF
 outputs; precise pinned exceptions were tested. An extra pixel fixture's incorrect

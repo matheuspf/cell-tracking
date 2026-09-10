@@ -215,6 +215,12 @@ Detailed GT identities, optical-review images, raw data, checkpoints and submiss
     if (OUT/'CPU_ten_worker_validation.json').exists():
         observed=read(OUT/'CPU_ten_worker_validation.json')
         body+=f"\nSubsequent ten-worker production observation recorded {observed['samples']} samples, peaking at {observed['max_observed_summed_RSS_gib']:.3f} GiB summed RSS and {observed['max_observed_GPU_gib']:.3f} GiB GPU. The full study resource summary also includes phases outside these ten-worker batches.\n"
+    if (OUT/'GPU_head_overlap_benchmark.json').exists():
+        overlap=read(OUT/'GPU_head_overlap_benchmark.json')
+        body+=f"\nA later scheduling observation used the idle auxiliary lane for the already registered source6 second-seed N1 fit before its primary N2 finished. This temporarily allowed three optimizers, including at most two image backbones; the extra N1 fit held the auxiliary lock, excluding simultaneous auxiliary image/calibration work. The observed peak was {overlap['sampled_GPU_peak_gib']:.3f} GiB GPU and {overlap['sampled_summed_RSS_peak_gib']:.3f} GiB summed RSS. The extra head ran at 2.83 updates/s while primary backbone throughput changed from 1.48 to 1.40 updates/s across different source windows. Per-fit locks retained the original checkpoints, dependencies, seeds and budgets. This is an operational timing observation, not a controlled same-window benchmark.\n"
+    if (OUT/'GPU_head_overlap_followthrough.json').exists():
+        followthrough=read(OUT/'GPU_head_overlap_followthrough.json')
+        body+=f"\nThe complete transient three-optimizer phase later reached {followthrough['sampled_GPU_peak_gib']:.3f} GiB GPU and {followthrough['sampled_summed_RSS_peak_gib']:.3f} GiB summed RSS, including the brief overlap of two image-backbone fits with the auxiliary head. Both resource ceilings held.\n"
     if feature_audit:
         h=next(r for r in feature_audit['coverage'] if r['embryo']=='pooled')
         z=next(r for r in feature_distribution if r['embryo']=='pooled' and r['feature']=='z_um')

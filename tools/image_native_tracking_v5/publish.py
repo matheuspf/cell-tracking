@@ -21,7 +21,8 @@ ALLOW=['status.json','ablation_scores.csv','score_rows.csv','family_outcomes.csv
     'evaluation_overlap_schedule.json','auto_evaluation_complete.json',
     'HOCT_feature_audit.json','HOCT_feature_distribution.csv','HOCT_feature_coverage_rows.csv',
     'recovery_second_20260910.json','resume_determinism_second.json','durable_output_receipt.json',
-    'CPU_worker_recovery_benchmark.json','CPU_worker_recovery_schedule.json','CPU_ten_worker_validation.json']
+    'CPU_worker_recovery_benchmark.json','CPU_worker_recovery_schedule.json','CPU_ten_worker_validation.json',
+    'GPU_head_overlap_schedule.json','GPU_head_overlap_benchmark.json','GPU_head_overlap_followthrough.json','scorer_skip_schedule.json']
 
 
 def run():
