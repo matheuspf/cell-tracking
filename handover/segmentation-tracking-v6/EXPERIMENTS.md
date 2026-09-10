@@ -1,245 +1,187 @@
-# S600-S680: region tracking experiments
+# V6: integrate segmentation tools into tracking
 
-## Objective and scope
+This is the **only execution plan** for `handover/segmentation-tracking-v6`.
+It replaces the earlier broad v6 proposal and the separate downloadable plan.
+Codex implements and executes it locally; this commit contains no new experiments.
 
-Target >=0.95 on all 199 local clips, against the retained C0 score
-0.934802374260586. This remains operational exploratory, not clean new-embryo
-validation or a hidden-LB forecast. The exact current baseline and any validated
-later-v5 incumbent are locked at S600 before any v6 score is revealed.
+## Goal and evidence
 
-The main intervention is information from IMAGE-DERIVED REGIONS. Run the following
-stages even when a preliminary method loses, except when its integrity or capacity
-fails. A gate failure blocks the affected arm, not all independent arms. Do not
-replace this with another large dataset pretraining campaign or point-only model.
+Use real 3D instance masks and bounding boxes to improve cell associations and
+lineages. Retain C0 = **0.934802374260586**, targeting **>=0.95** on the complete
+local evaluation. An attractive segmentation or improved point recall alone is
+not success.
 
-## S600 — Snapshot, resources and baseline
+The inherited [v5 continuation](../image-native-tracking-v5/CONTINUATION.md) and
+[v5 results](../../results/image-native-tracking-v5/ablation_scores.csv) describe
+an in-progress snapshot at `0b6ce2d7a77baed54385d4c9b08acbefb6aa7c03`, not a final
+negative study. Read actual current local receipts before work. The existing
+[region extractor](../../tools/image_native_tracking_v5/observations.py) returns
+watershed properties rather than persistent masks. This iteration adds the missing
+region representation and tool integration; it does not rerun native training.
 
-Read the reviewed parent continuation and local status. Record pending/complete
-v5 variants truthfully. Do not restart old queues, reuse expired deadlines or kill
-active jobs. Use an isolated checkout/output root and avoid competing for GPU/RAM.
-Resolve all dataset/checkpoint/cache roots; missing data on a new host is a named
-restoration problem, not permission to silently switch sample population.
+## Scope
 
-Read competition data/rules skills and current local official snapshots. Record
-source/weight licenses and current scorer hash. Preserve the established metric
-pin 075fc5f5a52d11077f9dc2b074644618f26939e2 if still applicable; explain any drift
-and rescore comparisons consistently rather than mixing metric versions.
+Use **one learned segmenter plus Ultrack**. Prefer locally available, authorized
+FOCUS-3D weights; use an available Cellpose volumetric model as the one fallback.
+Choose the observed compartment correctly: nuclear fluorescence supports nucleus
+masks, not invisible cell membranes. Do not run a StarDist/HOCT/Trackastra survey,
+new external-data training, segmenter fine-tuning, or an optical-flow research arm.
 
-Freeze all expected sample IDs, per-clip count estimates, original C0 graphs,
-models, and per-embryo scores. Verify original full ensemble/repair identity on
-cached graphs and one fresh image from each embryo. Baseline-only smoke must not
-rerun the entire previous study. Introduce a real read-only input namespace for
-prediction and ensure old evaluation attributes never enter region tables.
+All delivery stays in this branch and its existing directory layout. Reuse local
+source checkouts, installed environments, cached dependencies and authorized
+weights. **No automatic external downloads, new datasets, hosted inference,
+license acceptance, contact sharing, ZIPs, patches or user setup instructions.**
+If a required asset is absent, record its exact path/package/checkpoint blocker;
+continue independent runnable work. If neither learned segmenter is runnable,
+report the segmentation experiment blocked, not completed using substitute masks.
+If Ultrack is absent, complete the native-mask comparison and report Ultrack blocked.
+Do not let optional tooling failures trigger another open-ended setup campaign.
 
-Measure available GPU, RAM and disk. Defaults: one GPU worker; at most four CPU
-workers initially; max 20 GiB GPU allocation, 24 GiB total study RSS and 8 GiB disk
-reserve. Adjust downward to actual availability. Initial new study budget is 36
-GPU-hours INCLUDING segmentation inference/training plus a separate measured CPU
-ledger, not 36 free hours per provider. No paid hardware/API use. Prefer one model
-resident across frames and clip-at-a-time masks. The old host had low free disk;
-never assume dense all-dataset masks fit.
+## S600 — Reuse and establish the baseline
 
-## S610 — Independent segmentation screen
+Read AGENTS.md and the existing competition skills. Keep the current data,
+evaluation, model-loading and CSV routines. Verify the cached C0 graph scores,
+all 199 expected clips, and the complete primary/secondary/augmentation evidence;
+a weakened single-model control is not C0. If a newer fully validated incumbent
+exists locally, lock it before v6 scores and report both comparisons.
 
-1. Build a label-blind screen manifest: six clips per embryo selected by image
-   density/depth/SNR strata, eight consecutive frames per clip, fixed before
-   segmentation outcomes. Each direction selects provider settings using its
-   SOURCE only; the same other's images cannot tune it. These 96 frames are a
-   computational screen, not an independent validation set. Evaluate successful
-   finalists on full videos later.
-2. Run FOCUS nuclei with authorized access, Cellpose-SAM volumetric masks, and a
-   bounded StarDist3D/source-compatible backup. Classical watershed is a control.
-   At most two sensible physical-scale recipes per provider. Do not transform
-   every frame into another unvalidated grid merely to fit defaults.
-3. Store original provider labels and transforms, bbox crops, voxel counts,
-   physical volume/covariance, mean/quantile intensity, detector score (nullable),
-   border/seam flags, representative positions, and image/model provenance.
-   Never reuse frame-local instance labels as track IDs.
-4. Audit stitch seams, duplicate masks, splits/merges, foreground leakage, lost
-   faint regions and temporal fragmentation. Create local orthogonal overlays and
-   animated short volumes. No human judgments may be invented.
-5. Sparse GT diagnostics: one-to-one center match recall; containment separately;
-   number of known different centers inside one mask; duplicate masks near one
-   known center; localization differences. Unmatched masks are UNKNOWN, not FPs.
-   A giant foreground mask can have high containment but is a bad instance model.
-   Without independent dense masks, Dice/mask AP cannot be measured as ground truth.
-6. Select <=2 segmenters per direction by a predeclared source evidence/runtime
-   rule; use mask-based tracking on source screen as part of selection, not visual
-   attractiveness alone. Ties prefer simpler/faster. Report screen selection as
-   exploratory/source-resubstitution where no independent groups are certified.
+Use `tools/segmentation_tracking_v6/` for the implementation and
+`scripts/run_segmentation_tracking_v6.sh` for one entry point, following the old
+wrappers. Neither exists yet: implement them, do not present planned commands as
+already working. Store outputs in
+`/kaggle/working/cell-tracking/segmentation-tracking-v6/`.
+Keep prior outputs read-only. Do not stop old jobs, change their source checkout,
+or reuse expired deadlines. An isolated worktree is appropriate when needed.
 
-A blocked FOCUS checkpoint must not stop the screen. At least one genuinely
-learned instance-segmentation route must reach graph evaluation; otherwise report
-the central task incomplete rather than relabeling watershed as FOCUS.
+## S610 — Integrate the segmenter and retain objects
 
-## S620 — Fixed-observation information test
+Start on two image-selected clips per embryo, eight consecutive frames each.
+Select settings using only the source embryo for each direction; target images
+or labels must not choose that direction's settings. Use at most two sensible
+physical-size recipes for the available backend, then select one per direction.
 
-Preserve every C0 node, coordinate and native candidate edge. Attach masks using
-an image-only same-frame correspondence (containment + physical proximity and
-one-to-one ownership, with ambiguity flags). Do not use GT for association. One
-large mask containing multiple detections is an ambiguous region, not multiple
-copies of the same confident object; use an explicit source-selected split or
-mark shared support unavailable. Missing masks retain C0 evidence with missingness,
-not zero confidence or deletion.
+For FOCUS, reuse its headless `infer_volume` backend. For Cellpose, use its actual
+installed volumetric API. Run individual ZYX frames, preserving T separately.
+Check the model output against actual image spacing, axis order and resampling
+origin. Keep model/checkpoint/config hashes and real output shape in the receipt.
+The input scale recorded by the repository is Z/Y/X = 1.625/0.40625/0.40625 um;
+verify it locally rather than treating isotropic provider coordinates as native.
 
-On the same node universe, link pool, solver and source-trained recipe compare:
-A: native C0 evidence + centroid/motion geometry only;
-B: A + bounding-box overlap/extents;
-C: B + true mask overlap, shape and inside-mask appearance;
-D: C + image-derived motion alignment and forward/backward reliability.
-All feature-dependent models are fitted on the source embryo only. Native scores
-must preserve the full ensemble or clearly label a separate weakened control.
-Use the same small regularized ranker family and fit budget across A-D so extra
-optimizer work is not attributed to masks. Residual score changes are controlled;
-no forced deletion of a fraction of cells and no learned label-membership target.
+Retain frame-local label maps or compressed bbox-local masks, not just centroids.
+Each object needs `(clip, frame, provider, instance_id)`, mask reference, half-open
+ZYX bbox, native center, physical volume, shape, inside-mask intensity and border
+flags. Model confidence is nullable; missing confidence does not mean background.
+Frame-local labels are not tracking identities. Inspect real orthogonal overlays
+for merged cells, duplicate instances and tile seams. Sparse point containment
+and one-to-one node recall are useful checks, but not dense segmentation accuracy.
 
-The primary mask features include intersection over union, directional overlap,
-physical volume ratio, covariance eigenvalues and orientation ambiguity, masked
-appearance similarity and neighboring-region consistency. Boxes are candidate
-pruning/cheap evidence; they cannot substitute for 3D occupancy in crowded tissue.
-Report outcomes on pairs with indistinguishable point distances but different
-region evidence. Add a diagnostic shape-erased/equal-volume control AFTER the
-prediction recipe is frozen, never as a new best-threshold search.
+Pilot time and storage before all-frame inference. Keep the model resident where
+possible and cache each selected mask once for all later comparisons.
 
-Use an image-derived field shared by every candidate pair. Do not optimize a new
-translation for each pair until all masks overlap and call that tracking evidence.
-Start with global drift registration plus trusted local image motion; test no-flow
-and motion-aligned overlap. Cellpose segmentation flows are NOT temporal motion.
-Require forward/backward consistency, valid support and border masks. In unreliable
-areas reduce motion weight and retain native evidence rather than inventing flow.
+## S620 — Test mask information without replacing the strong tracker
 
-C/D can use the existing validated local edit framework, but it is only the
-information-isolation arm. The main full-region tracker below must also run.
+Attach masks to C0 detections through image-only same-frame correspondence.
+Use one-to-one ownership and flag shared/merged masks. Missing or ambiguous masks
+leave the original native evidence intact; do not delete detections or fabricate
+sphere masks. Preserve the C0 centers, candidate edge pool and full native scores.
 
-## S630 — Full segmentation-first Ultrack
+Compare the same source-trained regularized link scorer and the same existing
+decoder in three arms: point features, then bbox features, then actual masks.
+Use a single simple scorer family and matched fit budgets, not another search.
+Mask features include overlap, directional coverage, physical volume ratio,
+shape change and masked appearance. Boxes prune comparisons but do not substitute
+for occupancy. If existing image-registration code is already available and tested,
+its fixed displacement can align masks in every matched arm; do not build a new
+flow model. Cellpose segmentation flows are not inter-frame motion.
 
-For each selected provider, and an eligible two-provider ensemble:
-- Produce TZYX instance labels and use pinned labels_to_contours or an explicitly
-  equivalent tested implementation. Keep per-provider outputs, foreground union
-  and boundary disagreement separate. These are predictions, not training truth.
-- Build the Ultrack hierarchy. Record how each original mask maps to candidate
-  regions; count lost candidate evidence through filtering/min-max-size thresholds.
-  A contour ensemble produces a hierarchy, not necessarily every raw input mask.
-- Select consistent regions over time, enforcing same-frame hierarchy exclusions,
-  no merges, at most two children, and valid one-step links. Solve complete clips
-  if practical; otherwise use overlapping temporal windows with fixed boundaries
-  and explicit fork reconciliation. No post-hoc gap edge may skip a frame.
-- Run pure Ultrack IoU, Ultrack with its verified image-flow shift, and a region
-  tracker with native neural link evidence on the SAME hierarchy. Map native
-  detection IDs only when proven; new region centers require new feature/score
-  evaluation, not copying a nearest old node's score without disclosure.
-- Do not automatically rerun the old motion relinker or smooth across forks.
-  Both were behavior-changing transformations. Preserve the newly selected masks
-  and use a documented final representative-coordinate rule.
+Include parent-to-daughter-union overlap and persistent daughter separation as
+soft division evidence within the same graph decision. Compare against continuation
+plus independent birth and competing parents. Do not require exact volume or
+intensity conservation, and do not create a separate event-model campaign.
 
-Do not union every segmenter mask into independent simultaneous cells. Hierarchy
-ancestor/descendant nodes cannot coexist. Cross-provider crossing hypotheses need
-explicit conflict handling; a single hierarchy cannot be assumed to preserve all
-arbitrary overlapping alternatives. Use a fixed-label standalone comparison and
-hierarchy selection to isolate this loss. Record one-region/two-regions alternatives
-until temporal evidence chooses; duplicate model votes are not independent proof.
+Fit only on source-embryo supported transitions. Unknown cells/links stay unknown;
+one recorded daughter does not make every other daughter negative. No GT IDs,
+count estimates or target filenames enter model features or routing.
 
-Source-select sensible birth/death/division penalties with the actual maximization
-signs and the same objective across provider comparisons. Run fixtures showing a
-supported split can beat independent birth, while an unrelated nearby cell does
-not trigger a fork. CBC is a supported no-new-license option. A missing Gurobi
-license must not stop the experiment. Exact large-scale optimality is not assumed:
-record solver status, gap, timeouts, feasible outputs and deterministic tie policy.
+## S630 — Integrate actual Ultrack on the same masks
 
-## S640 — Region-based division evidence
+Run the available Ultrack labels/foreground/contour interface and actual lineage
+solver on the selected segmenter's outputs. Validate installed signatures and
+coordinate/ID mapping on the pilot first. Use its locally available noncommercial
+solver or an already licensed solver; do not acquire a new license.
 
-Use a warped parent region versus the UNION of two disjoint daughter regions.
-Measure union overlap, parent/combined-daughter volume and intensity change,
-separation growth, appearance, neck/boundary changes and multi-frame persistence.
-These are soft cues: nuclear condensation, bleaching and partially visible objects
-can break apparent volume/intensity conservation. Border-censored measurements
-must not be treated as full-size observations.
+Keep competing single-region/split hypotheses mutually exclusive. Measure which
+original masks survive contour/hierarchy construction; do not assume every input
+mask remains a selectable object. Do not union duplicates into additional cells.
+Use instance overlap, appearance and temporal consistency for links. Run a second
+Ultrack arm adding the full native association evidence. Recompute native evidence
+at changed region centers as necessary; do not attach unrelated old-node scores
+by an undocumented nearest-neighbor copy.
 
-Compare continuation + independent birth versus one-to-two lineage explanations
-jointly with competing owners and later paths. Protect/score the full evidence
-window, not only immediate fork edges. Use source-supported positive events and
-contradictory links; a single annotated child does not certify no second daughter.
-Missing annotation cannot supply generic negative masks or divisions.
+Use the same hierarchy and solver settings for the two Ultrack arms. Validate
+birth, continuation, division, competing ownership and boundary cases. Export
+one observation per selected region/frame and valid consecutive-frame links.
+The competition still receives center/edge CSV rows, but only after mask-based
+tracking. Never send t-to-t+2 gap links or allow two parents for one observation.
 
-First use fixed pretrained masks and source-fitted lightweight compatibility, so
-segmentation and fitting effects remain distinguishable. An optional final small
-mask-crop temporal encoder is warranted only after representation tests establish
-useful region signal; include a same-compute center/box control. It must operate on
-inside/outside mask appearance and per-frame validity, not repeat v4's unrelated
-synthetic fork-mixture study. Repeat a learned finalist with seed 314159.
+## S680 — Compare, retain improvements and deliver
 
-## S650 — Conditional segmentation refinement
+Keep the initial comparison to **six complete configurations**, not twenty:
 
-Do not spend the study fine-tuning a segmenter before running its pretrained
-outputs through tracking. If source evidence shows a specific failure such as
-merged mitotic nuclei or systematic axial fragmentation, run one targeted repair:
-image-boundary multi-scale hypotheses, high-agreement source pseudo-mask adaptation,
-or fine-tuning on ALREADY available independently curated dense mask patches.
+| ID | Comparison |
+|---|---|
+| C0 | Unchanged full incumbent. |
+| P0 | Matched source scorer/decoder with native and point information. |
+| B0 | P0 plus real bounding-box descriptors. |
+| M0 | B0 plus actual mask, appearance and region-division evidence. |
+| U0 | Standalone Ultrack on the selected instance masks. |
+| U1 | Same Ultrack setup plus correctly mapped full native evidence. |
 
-Sparse points are positive localization evidence, not full masks. Pseudo masks
-remain weak targets with confidence/ignore regions; disagreement is not background.
-The prepared external static/sequence data supplies centers/graphs, not true cell
-boundaries; Zoo/RIKEN trajectories likewise do not provide real masks. Do not
-fabricate dense ground truth by drawing spheres. Human review packs are optional
-and nonblocking; any new annotations require documented source-only provenance.
+These separate tool benefits from a new decoder or scorer. Freeze both source
+recipes before revealing new target results. Every complete comparison covers
+all 199 clips with fresh official node matching, division scoring and the exact
+run-level aggregation. Reuse the pinned local evaluator; do not substitute mask
+IoU for the competition score. Report each embryo, pooled score, TP/FP/FN for
+edges/divisions, node counts and actual runtime. Mark incomplete arms explicitly;
+never silently fill failed clips with C0 and call that a pure tool result.
 
-Separate original pretrained, refined segmenter, and tracker changes. Do not change
-all three simultaneously then credit the gain to FOCUS or the external datasets.
+Keep C0 unless a candidate improves pooled score without embryo regression beyond
+1e-8. Repeat the same recipe with a second seed for a learned finalist; reserve
+at most two extra complete runs for replication. Fixed pretrained/deterministic
+routes need repeatability checks rather than pretend retraining. Smaller valid
+gains are retained, but >=0.95 alone is target attainment. Reused embryos and
+inherited checkpoint exposure remain exploratory validation, not a hidden-LB claim.
 
-## S660 — Bounded comparisons and promotion
+Use one 4090 worker, bounded CPU workers and clip-at-a-time masks/databases.
+Inspect current resources; respect the previous 20 GiB GPU / 24 GiB process-RSS
+ceilings or lower available limits and keep 8 GiB disk free. Start with a shared
+24 GPU-hour cap including segmentation and training, not one budget per arm.
+No all-dataset uncompressed mask copies. Preserve all prior data and artifacts;
+only disposable v6 scratch may be reclaimed. Report uncompleted runs at the cap.
 
-Freeze both direction recipes before new target-score reveal. Initial budget:
-<=20 complete graph configurations including C0, representation controls, two
-provider-specific Ultrack routes, flow/native hybrid, and limited combinations;
-reserve up to four additional slots for same-recipe replication. Predeclare
-variant IDs and graph hashes; do not hide failed configurations or missing clips.
-At least one complete mask-only full-region tracker and one mask/native hybrid
-must be measured. Do not stop after fixed-C0 augmentation alone.
+Before selecting a package, run the actual image-to-mask-to-graph entry point on
+two complete fresh clips, one per embryo, including an unfamiliar filename.
+Old predicted masks/graphs, GT and network access must be unavailable. Check
+semantic graph/CSV parity, runtime and the unchanged C0 fallback.
 
-Every complete variant is evaluated on all 199 clips using fresh official matching,
-division timing/path logic, fixed GT/count estimates and correct denominator-
-weighted aggregation. Report edge TP/FP/FN, division TP/FP/FN, node count ratio,
-matched GT nodes, old/new GT-edge identities and count/graph/division attribution.
-Point recall is not segmentation accuracy. Provider-mask IoU without dense truth
-is a consistency measurement, not a label-based score.
+Deliver `results/segmentation-tracking-v6/` with one `final_report.md`, aggregate
+`ablation_scores.csv`, `status.json` and a small offline `dashboard.html` reusing
+existing reporting tools. Keep real image overlays and detailed masks locally.
+The report answers whether bbox/mask evidence helped and whether Ultrack helped;
+it is not another proposal. Write `CONTINUATION.md` in this handover with exact
+commands, selected artifacts and blockers. Keep weights, raw images, masks,
+detailed labels and credentials outside Git. Commit/push sanitized code, configs
+and results to the same branch; no PR merge or Kaggle submission.
 
-Retain C0 unless a valid pipeline improves pooled score and neither embryo falls
-by more than 1e-8. For learned additions require the same result direction in a
-same-recipe second seed; export the primary seed. Fixed pretrained/deterministic
-Ultrack comparisons require repeated solver/package stability rather than inventing
-a second training seed. >=0.95 is target success; a smaller repeatable gain is
-below-target progress. Preserve valid negative results and explicit incomplete
-lanes. Never mix arbitrary per-clip best variants using held-out labels.
+## Supporting checks and references
 
-## S670 — Fresh inference and compute
+Retain the existing NumPy mask contracts. Locally run their tests plus real adapter
+checks for anisotropy, half-open boxes, empty frames, label permutation, tile seams,
+mask ownership, hierarchy conflicts and legal fork export. Helper tests are not
+evidence that a segmenter ran or that scores improved.
 
-Run a single entrypoint from RAW Zarr images on six complete clips spanning both
-embryos and low/median/high image density. It must actually run selected segmenter,
-mask construction, motion and tracker paths; saved masks/graphs from training are
-unavailable. Include an unfamiliar filename and explicit source-model selection.
-Disable network, evaluation labels and old prediction caches before imports.
-Prediction may read only licensed packaged weights and raw image inputs. Test
-C0 fallback and selected default. Hash pre-solver tensors as well as final graphs
-so nondeterministic solver differences are diagnosed rather than hidden.
-
-Keep exact semantic graph/CSV parity as the default requirement. Bitwise model-
-training resume is not assumed. For solver timeout nondeterminism fix the
-implementation or package a stable policy and rerun; do not quietly loosen score
-parity after seeing outcomes. Report image-to-graph runtime and actual mask/cache
-space, plus an explicitly approximate full-hidden-size projection. Local 4090
-pilots do not prove Kaggle runtime compliance. Do not submit anything.
-
-## S680 — Deliver even if unsuccessful
-
-Produce final_report.md, CONTINUATION.md, an offline dashboard, comparison CSVs,
-source/model/adapter manifests, semantic graph hashes, resources, package and status.
-The dashboard must show native XY/XZ/YZ image overlays, 3D bbox/mask identity,
-parent/daughter unions over time, split/merge disagreements, TP/FP/FN tradeoffs,
-per-embryo results and actual runtime. The figures come from real local outputs;
-do not invent a measured segmentation visualization. Publish only sanitized
-aggregate evidence unless data-sharing permission explicitly permits examples.
-
-Answer: Which masks ran? What compartment? Did boxes help? Did full occupancy help
-beyond boxes? Did motion help? Did Ultrack hierarchy improve on fixed masks? Did
-masks add benefit over the unchanged native evidence? What prevented >=0.95?
-A different checkpoint is not an answer without those measured comparisons.
+Tool sources from the preceding review: [FOCUS-3D](https://github.com/yu-lab-vt/FOCUS-3D)
+(`5c4b53f743a0fbbae056e2c1a139895ae819f069`) and
+[Ultrack](https://github.com/royerlab/ultrack)
+(`5c94d845eb0a7b78c8dc24492ef00f218a467995`). Consult local copies and record actual
+installed versions; these references are not instructions to download assets.
