@@ -1,0 +1,16 @@
+{
+  "study_id": "segmentation-tracking-v6",
+  "status": "planned_not_executed",
+  "initial_reviewed_parent_commit": "0a3105a8f9d1b0954707675b42b9868832df4ac1",
+  "delivery_parent_commit": "0b6ce2d7a77baed54385d4c9b08acbefb6aa7c03",
+  "reviewed_parent_status": "in_progress_v5_checkpoint",
+  "publication_update": "PUBLISH_NOTE.md",
+  "competition_images_accessed_here": false,
+  "model_weights_downloaded_here": false,
+  "segmentation_or_tracking_inference_run_here": false,
+  "official_graph_scoring_run_here": false,
+  "synthetic_mask_contract_tests": {"passed": 38, "failed": 0},
+  "next_stage": "S600",
+  "selected_v6_score": null,
+  "note": "Source inspection and local reference tests only. Codex must implement and execute actual integrations."
+}
