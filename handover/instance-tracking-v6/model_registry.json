@@ -1,0 +1,45 @@
+{
+  "focus3d": {
+    "repo": "yu-lab-vt/FOCUS-3D",
+    "commit": "5c4b53f743a0fbbae056e2c1a139895ae819f069",
+    "weights_source": "https://huggingface.co/Qinghua-thu/FOCUS-3D",
+    "checkpoint_candidates": [
+      "model_final_nuclei.pth",
+      "model_final.pth",
+      "model_final_membrane.pth"
+    ],
+    "access": "gated_contact_sharing; require_existing_authorization",
+    "weights_sha256": null,
+    "api": "focus3d.segmentation.FOCUS3D.inference_win.infer_volume",
+    "output": "instance_map_path; verify_native_grid",
+    "weight_license_source_statement": "Apache-2.0",
+    "code_license_source_statement": "BSD-3-Clause"
+  },
+  "cellpose_sam": {
+    "repo": "MouseLand/cellpose",
+    "docs": "https://cellpose.readthedocs.io/en/latest/do3d.html",
+    "version": "resolve_and_pin_locally",
+    "weights_sha256": null,
+    "api": "CellposeModel.eval; inspect_actual_signature",
+    "dimensionality": "orthogonal_2D_flows_with_3D_dynamics",
+    "do_3D": true,
+    "anisotropy": "actual_z_spacing/actual_xy_spacing"
+  },
+  "stardist": {
+    "repo": "stardist/stardist",
+    "registry_blob": "d1699e8287da4236aed0509974fe2fa0b3a5a723",
+    "model": "3D_demo",
+    "api": "StarDist3D.from_pretrained",
+    "archive_url": "https://github.com/stardist/stardist-models/releases/download/v0.1/python_3D_demo.zip",
+    "registry_checksum": "ea05831eb5acc8a2fd31eaa23f4460a196a9af53b14f40affb9d80885f699f90",
+    "role": "bounded_optional_comparator_not_universal_checkpoint"
+  },
+  "ultrack": {
+    "repo": "royerlab/ultrack",
+    "commit": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "role": "hierarchical_segmentation_and_temporal_optimization_not_pretrained_detector",
+    "input": "registered_TZYX_foreground_and_contours_or_label_arrays",
+    "solver": "verify_available_supported_backend",
+    "ground_truth_constraints_in_inference": false
+  }
+}
