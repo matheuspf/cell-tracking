@@ -1,0 +1,41 @@
+{
+  "automatic_external_downloads": false,
+  "blocked_arms": [
+    "B0",
+    "M0",
+    "U0",
+    "U1"
+  ],
+  "blockers": [
+    "FOCUS: /root/FOCUS-3D has checkpoints but no Python source or headless infer_volume backend",
+    "FOCUS runtime: detectron2 package absent in the annotation runtime",
+    "Cellpose fallback: cellpose package and local volumetric checkpoint absent",
+    "Ultrack: ultrack package/source absent; installed pyscipopt alone is not Ultrack",
+    "Persistent disk has 6.838 GiB free, below 8 GiB floor; no persistent mask/database allocation"
+  ],
+  "complete_configurations": 2,
+  "delivered_cli_verified": true,
+  "deterministic_repeat_passed": true,
+  "exact_c0_fresh_clips": 2,
+  "exact_p0_fresh_clips": 2,
+  "exploratory_validation": true,
+  "incumbent": "C0",
+  "incumbent_score": 0.934802374260586,
+  "learned_segmenter_frames": 0,
+  "learned_tool_integration_complete": false,
+  "mask_benefit": "unmeasured",
+  "mask_division_graph_integration": "not executed; contracts implemented, inherited P0 decoder freezes forks",
+  "new_package_selected": false,
+  "prior_studies_preserved": true,
+  "registered_configurations": 6,
+  "retained_point_control": true,
+  "selected": "P0",
+  "selected_score": 0.9348649864131336,
+  "status": "independent_stages_executed_segmentation_and_ultrack_blocked",
+  "study_id": "segmentation-tracking-v6",
+  "target_met": false,
+  "target_score": 0.95,
+  "ultrack_benefit": "unmeasured",
+  "ultrack_frames": 0,
+  "updated": "2026-09-10T22:33:23.630053+00:00"
+}
