@@ -6,7 +6,7 @@ resuming work. The [offline dashboard](dashboard.html) identifies completed and
 pending work explicitly. C0 is reproduced at 0.934802374260586; the target is 0.95.
 
 This snapshot has 1 of 18
-registered complete configurations and 0 of eight
+registered complete configurations and 1 of eight
 production native fits. Its status is **executing**. Do not infer complete
 learned-model results from partial source losses.
 

@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "at": "2026-09-10T14:02:42.667305+00:00",
+  "at": "2026-09-10T15:10:59.930871+00:00",
   "states": [
     {
       "embryo": "pooled",
@@ -20,19 +20,19 @@
   "screenshots": [
     {
       "file": "dashboard_desktop.png",
-      "sha256": "a77b83f690d9ca15cfad99e9ddb2ce25d1dc1941514565ba58135b7870d24aee",
+      "sha256": "6e135feaf91db42c75b55e4d53b477e77c3a0591068d67d02e867345aaad37a4",
       "width": 1360,
       "height": 960
     },
     {
       "file": "dashboard_mobile.png",
-      "sha256": "5b1a8fe766569ddd952a9532cb9f8ce225bd093f435063a5597235022862821b",
+      "sha256": "2fa56c7e34a586074504dfa4cb5a75a48494488a6dcf3943864206408ab25f21",
       "width": 390,
       "height": 844
     }
   ],
   "browser_version": "151.0.7922.34",
   "python": "/root/.conda/envs/cell-tracking/bin/python",
-  "dashboard_sha256": "74f2246a66e0953ee4802fb4486fdd9b51e65286fb90cb9a87d536f818c09b8d",
+  "dashboard_sha256": "197377fb02702576dc500b487d0ac3df8abf7902c100231ef07a09ab1ab6802f",
   "downloaded_rows": 3
 }

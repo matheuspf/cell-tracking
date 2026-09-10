@@ -1,6 +1,6 @@
 {
   "study_id": "image-native-tracking-v5",
-  "updated": "2026-09-10T14:02:40.818865+00:00",
+  "updated": "2026-09-10T15:10:58.308233+00:00",
   "status": "executing",
   "target_score": 0.95,
   "incumbent_score": 0.934802374260586,
@@ -10,11 +10,11 @@
   "complete_configurations": 1,
   "registered_configurations": 18,
   "complete_new_operational_variants": 0,
-  "observations": 180,
-  "HOCT_feature_shards": 120,
-  "DeepCenter_clips": 122,
+  "observations": 199,
+  "HOCT_feature_shards": 199,
+  "DeepCenter_clips": 199,
   "expected_clips": 199,
-  "complete_native_fits": 0,
+  "complete_native_fits": 1,
   "planned_native_fits": 8,
   "source_only": true,
   "prior_studies_preserved": true

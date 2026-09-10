@@ -1,0 +1,54 @@
+{
+  "created": "2026-09-10T14:40:58.002936+00:00",
+  "native_encode_input_shape": [
+    1,
+    2,
+    64,
+    64,
+    64
+  ],
+  "unet_internal_shape": [
+    1,
+    2,
+    1,
+    64,
+    64,
+    64
+  ],
+  "input_field_width_um": [
+    104,
+    104,
+    104
+  ],
+  "local_feature_support": {
+    "30": {
+      "first_input": 6,
+      "last_input": 53,
+      "voxels": 48,
+      "voxel_support_width_um": 78.0
+    },
+    "31": {
+      "first_input": 6,
+      "last_input": 57,
+      "voxels": 52,
+      "voxel_support_width_um": 84.5
+    },
+    "32": {
+      "first_input": 6,
+      "last_input": 57,
+      "voxels": 52,
+      "voxel_support_width_um": 84.5
+    },
+    "33": {
+      "first_input": 10,
+      "last_input": 57,
+      "voxels": 48,
+      "voxel_support_width_um": 78.0
+    }
+  },
+  "derivation": "exact 1D index union through two 3x3 convs per stage, two 2x pools, trilinear x2 upsamples and decoder convs; applies independently in ZYX",
+  "temporal_attention": "two real frames, per-voxel attention at lower resolutions",
+  "global_association": "cross-attention over all predicted nodes in both full frames; association can therefore depend on the full observed field",
+  "interpretation": "theoretical convolutional support, not empirical nonzero-gradient area; padding truncates support near borders",
+  "native_source_sha256": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+}

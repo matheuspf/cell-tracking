@@ -17,6 +17,13 @@ def main():
     assert sitecustomize.INSTALLED_BEFORE_NUMERICAL
     selected='C0' if a.disable_new_heads else (a.variant or json.loads((package/'winning_config.json').read_text())['variant'])
     variants=list(dict.fromkeys([selected,*a.also_variant]));start=time.monotonic()
+    import hashlib
+    manifest=json.loads((package/'manifest.json').read_text())
+    for original,expected in manifest.get('external_model_configs',{}).items():
+        parts=Path(original).parts;config_path=Path(original)
+        for component,root in [('annotation-selection-v1',a.v1),('strong-tracker-v2',a.v2)]:
+            if component in parts:config_path=root/Path(*parts[parts.index(component)+1:]);break
+        with config_path.open('rb') as handle:assert hashlib.file_digest(handle,'sha256').hexdigest()==expected
     with (out/'base.log').open('w') as log:
         subprocess.run([str(package/'base/run.sh'),'--python',sys.executable,'--images',str(images),'--output',str(out/'base'),
             '--v1',str(a.v1),'--v2',str(a.v2),'--source-model',a.source_model],check=True,stdout=log,stderr=subprocess.STDOUT)

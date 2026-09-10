@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-10T14:46:44.976219+00:00",
+  "passed": true,
+  "actual_pretrained_3D_network_executed": true,
+  "synthetic_fixture": "zero image versus moving Gaussian optical source, two full 64-cubed frames",
+  "feature_max_abs_difference": 7.547230243682861,
+  "heatmap_max_abs_difference": 0.9999985694885254,
+  "checkpoint_sha256": "12f6881ee3620a831697ca098ff8f48e687a24225f4e048b538deec3562fe771",
+  "labels_read": false,
+  "changed_model_parameters": false
+}

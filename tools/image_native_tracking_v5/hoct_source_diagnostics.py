@@ -8,7 +8,7 @@ from .calibrate import apply
 from .temporal_decode import decode
 
 
-def original_decoder(name):
+def original_decoder(name,dense_roi=False):
     imports()
     import polars as pl
     import tracksdata as td
@@ -19,7 +19,12 @@ def original_decoder(name):
     from hoct.tracking import ILPSolverConfig,solve_tracking
     c=arrays(OUT/'observations'/f'{name}.npz');source=name.split('_')[0]
     m=c['oldmask'];n=c['nodes'][m];physical=n[:,2:]*[1.625,.40625,.40625]
-    keep=(n[:,1]>=30)&(n[:,1]<=34)&np.all((physical>=36)&(physical<68),axis=1)&c['valid_region'][m]
+    eligible=(n[:,1]>=30)&(n[:,1]<=34)&c['valid_region'][m]
+    lower=np.array([36.,36.,36.]);upper=np.array([68.,68.,68.])
+    if dense_roi:
+        tiles,counts=np.unique((physical[eligible]//32).astype(int),axis=0,return_counts=True)
+        lower=tiles[np.argmax(counts)]*32.;upper=np.minimum(lower+32.,104.)
+    keep=eligible&np.all((physical>=lower)&(physical<upper),axis=1)
     n=n[keep];ids=set(n[:,0].astype(int));bank=arrays(OUT/'banks'/source/'P0'/f'{name}.npz')
     pairs=np.asarray([e for e in bank['pairs'] if int(e[0]) in ids and int(e[1]) in ids],np.int64).reshape(-1,2)
     assert len(n)>2 and len(pairs)>1
@@ -44,12 +49,14 @@ def original_decoder(name):
     result=solve_tracking(graph,cfg,return_solution=True)
     selected_edges=result.edge_attrs(attr_keys=[keys.SOLUTION])
     selected_nodes=result.node_attrs(attr_keys=[keys.SOLUTION])
-    write(OUT/'source_pilots'/f'{name}_HOCT_original_decoder.json',dict(dataset=name,source=source,source_only=True,
-        optical_bounds_um=[36,68],frames=[30,34],input_nodes=len(n),input_edges=len(pairs),
+    suffix='_dense_roi' if dense_roi else ''
+    write(OUT/'source_pilots'/f'{name}_HOCT_original_decoder{suffix}.json',dict(dataset=name,source=source,source_only=True,
+        optical_bounds_um=[lower.tolist(),upper.tolist()],frames=[30,34],input_nodes=len(n),input_edges=len(pairs),
         solution_nodes=int(selected_nodes[keys.SOLUTION].sum()),solution_edges=int(selected_edges[keys.SOLUTION].sum()),
         seconds=time.monotonic()-start,solver_config=cfg.model_dump(),actual_pretrained_backbone=True,actual_original_HOCT_solver=True,
         orphan_head_executed=True,incoming_parental_normalization=True,embedding_width=int(features.shape[-1]),
-        restriction='five-frame central spatial source tile; consecutive common candidates, not upstream gap<=3/distance300; no complete competition score claimed'))
+        ROI_selection='densest image-derived 32um grid tile, frames30..34; no GT' if dense_roi else 'central source tile',
+        restriction='five-frame source spatial tile; consecutive common candidates, not upstream gap<=3/distance300; no complete competition score claimed'))
 
 
 def checkpoint_pilot(name):
@@ -79,4 +86,10 @@ def run():
                     print('Original decoder diagnostic blocked',name,repr(exc),flush=True)
             if not (OUT/'source_pilots'/f'{name}_HOCT_ctc_J.json').exists():checkpoint_pilot(name)
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    import argparse
+    p=argparse.ArgumentParser();p.add_argument('--retry-sparse-roi',action='store_true');a=p.parse_args()
+    if a.retry_sparse_roi:
+        torch.set_num_threads(2)
+        with gpu_aux():original_decoder('6bba_61dd1e0d',True)
+    else:run()

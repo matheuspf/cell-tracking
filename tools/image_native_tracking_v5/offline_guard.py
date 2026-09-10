@@ -7,6 +7,8 @@ EVENTS=[];READS=0;CATEGORIES={};DEPENDENCIES=set()
 PACKAGE=Path(os.environ['V5_PACKAGE_ROOT']).resolve() if os.environ.get('V5_PACKAGE_ROOT') else None
 MANIFEST=json.loads((PACKAGE/'base/manifest.json').read_text()) if PACKAGE else {}
 ALLOW_FILES=set(MANIFEST.get('external_checkpoint_paths',{}).values())|set(MANIFEST.get('external_teacher_paths',{}).values())
+if PACKAGE and (PACKAGE/'manifest.json').exists():
+    ALLOW_FILES.update(json.loads((PACKAGE/'manifest.json').read_text()).get('external_model_configs',{}))
 if MANIFEST.get('notebook_source_path'):ALLOW_FILES.add(MANIFEST['notebook_source_path'])
 if MANIFEST.get('upstream_tracking_source_root'):
     ALLOW_FILES.update(str(Path(MANIFEST['upstream_tracking_source_root'])/p) for p in MANIFEST['tracking_source_files'])
@@ -27,10 +29,13 @@ def audit(event,args):
     global READS
     if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
         p=Path(os.fsdecode(args[0])).absolute().resolve();text=str(p).lower();parts=set(p.parts)
-        banned=('.geff' in text or bool(parts&{'evaluation','evaluation_matches','training_labels','hoct_training_features','source_calibration','oracles','oracle_events','headroom','census'})
-            or p.name=='inventory.json' or any(k in text for k in ['biohub-forum-archive','biohub-data-guide','/selected_predictions/','/candidate_graphs/','/image-native-tracking-v5/deltas/','/image-native-tracking-v5/observations/','/image-native-tracking-v5/banks/','/image-native-tracking-v5/model_scores/']))
         fresh=Path(os.environ['V5_FRESH_OUTPUT']).resolve() if os.environ.get('V5_FRESH_OUTPUT') else None
         inside_fresh=fresh is not None and p.is_relative_to(fresh)
+        # The inherited predictor serializes its own fresh predictions as GEFF.
+        # Only GEFF produced inside this new output directory is readable; source
+        # annotations and symlinks resolving outside it remain denied.
+        banned=(('.geff' in text and not inside_fresh) or bool(parts&{'evaluation','evaluation_matches','training_labels','hoct_training_features','source_calibration','oracles','oracle_events','headroom','census'})
+            or p.name=='inventory.json' or any(k in text for k in ['biohub-forum-archive','biohub-data-guide','/selected_predictions/','/candidate_graphs/','/image-native-tracking-v5/deltas/','/image-native-tracking-v5/observations/','/image-native-tracking-v5/banks/','/image-native-tracking-v5/model_scores/']))
         inside_package=PACKAGE is not None and p.is_relative_to(PACKAGE)
         old_study=bool(parts&{'annotation-selection-v1','strong-tracker-v2','strong-tracker-v3','multidata-training-v4','image-native-tracking-v5'})
         if old_study and not (inside_fresh or inside_package or permitted_dependency(p)):banned=True

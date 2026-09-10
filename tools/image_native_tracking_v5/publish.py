@@ -9,7 +9,11 @@ ALLOW=['status.json','ablation_scores.csv','score_rows.csv','family_outcomes.csv
     'dashboard.html','dashboard_validation.json','progress_report.md','final_report.md',
     'regret_rows.csv','score_decomposition.csv','model_manifest.json','inference_dependency_manifest.json',
     'fresh_validation.json','validation_receipt.json','family_analysis.json','P2_decision.json',
-    'inference_package_receipt.json']
+    'inference_package_receipt.json','fresh_validation_plan.json','fresh_node_only_rows.csv','fresh_node_only_scores.csv',
+    'architecture_details.json','actual_native_pixel_test.json','regret_summary.json','division_regret.csv',
+    'score_attrition.csv','score_attrition_rows.csv','matched_controls.csv','decoder_runtime.csv','coverage_rows.csv',
+    'dataset_use.csv','runtime_versions.json','source_manifest.json','optical_review_receipt.json','preservation_check.json',
+    'resource_summary.json','execution_repairs.json','source_event_coverage.json','early_package_validation.json']
 
 
 def run():

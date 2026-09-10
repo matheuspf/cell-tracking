@@ -36,8 +36,11 @@ def decision(scores):
     score=by.get((selected,'pooled'),{'score':BASE['pooled']})['score']
     exploratory=[r for r in scores if r['embryo']=='pooled' and not r['variant'].startswith('Oracle_')]
     best=max(exploratory,key=lambda r:r['score']) if exploratory else None
-    return dict(selected=selected,score=score,delta_C0=score-BASE['pooled'],target_met=score>=.95,
-        gates=gates,best_exploratory=best,selection_pending=not (OUT/'execution_complete.json').exists(),
+    completion=read(OUT/'execution_complete.json') if (OUT/'execution_complete.json').exists() else {}
+    finished=completion.get('complete',False) and fresh.get('passed',False)
+    return dict(selected=selected,score=score,delta_C0=score-BASE['pooled'],target_met=finished and score>=.95,
+        numeric_target_reached=score>=.95,
+        gates=gates,best_exploratory=best,selection_pending=not finished,
         interpretation='Repeated operational data and inherited checkpoint exposure; no independent biological generalization claim.')
 
 
@@ -51,7 +54,7 @@ def training():
         summaries.append(dict(key=key,source=r['source'],family=stage,seed=r['seed'],steps=r['steps'],complete=True,
             tiny=r.get('tiny',False),seconds=r['seconds'],sha256=r['sha256'],
             trainable_parameters=r.get('trainable_parameters',289),
-            native_image_updates=r.get('native_image_optimizer_updates',0),
+            native_image_updates=r.get('native_image_optimizer_updates',r['steps'] if stage=='N2' else 0),
             encoder_changed=r.get('encoder_before')!=r.get('encoder_after') if 'encoder_before' in r else False,
             encoder_tensor_delta=r.get('first_encoder_tensor_l2_change',0),
             source_positive_edges=r.get('source_positive_edges',r.get('supported_positives')),
@@ -85,10 +88,42 @@ def coverage():
     return summary
 
 
+def outcome_text(selection):
+    evidence=read(OUT/'family_analysis.json');scores=csv_rows('ablation_scores.csv')
+    index={(r['variant'],r['embryo']):r for r in scores};fresh=read(OUT/'fresh_validation.json')
+    result=[f"The completed export decision is **{selection['selected']}**, score **{selection['score']:.15f}** (delta C0 {selection['delta_C0']:+.15f}). "
+        +('Final artifact validation is still running.' if selection['selection_pending'] else 'The registered local target and replication/fresh-inference gates passed.' if selection['target_met'] else 'The registered >=0.95 target was not achieved.'),
+        'The highest operational point seen in the frozen grid is '+selection['best_exploratory']['variant']+
+        f" at {selection['best_exploratory']['score']:.15f}. This hindsight point is distinct from the gated export."]
+    for family in evidence['families']:
+        r=index[family['best_primary_exploratory'],'pooled'];regret=next(q for q in family['regret'] if q['embryo']=='pooled')
+        result.append(f"{family['family']} family: the highest primary point is {r['variant']} at {r['score']:.15f}, "
+            f"delta C0 {r['delta_C0']:+.15f}; 44b6 {family['scores']['44b6']:.15f}, 6bba {family['scores']['6bba']:.15f}. "
+            f"Its supported GT-edge identities gain {regret['GT_edges_gained']} and lose {regret['GT_edges_lost']}; "
+            f"official edge TP/FP/FN are {r['edge_tp']}/{r['edge_fp']}/{r['edge_fn']} and division TP/FP/FN are {r['division_tp']}/{r['division_fp']}/{r['division_fn']}. "
+            f"It adds {regret['added_nodes']} and removes {regret['removed_nodes']} scored nodes, with {regret['GT_nodes_gained']} gained and {regret['GT_nodes_lost']} lost GT node matches. "
+            f"{regret['selected_new_nodes_isolated']} selected new nodes have no selected incident edge; sparse unmatched nodes are not certified false cells.")
+    gate_text=[]
+    for gate in selection['gates']:
+        gate_text.append(f"{gate['primary']}: {'passes' if gate['eligible'] else 'fails'} (primary {'passes' if gate['primary_pass'] else 'fails'}, replication {'passes' if gate['replica_pass'] else 'fails'})")
+    result.append('The registered gates are: '+ '; '.join(gate_text)+'. Positive pooled gain and no embryo regression beyond 1e-8 are both required; the primary seed remains the export.')
+    for variant in ['Oracle_fixed','Oracle_augmented']:
+        r=index[variant,'pooled'];result.append(f"{variant} scores {r['score']:.15f}, delta C0 {r['delta_C0']:+.15f}, "
+            f"with division TP/FP/FN {r['division_tp']}/{r['division_fp']}/{r['division_fn']}. This graph-legal, bank-constrained heuristic uses target truth and relaxes incumbent protection. It is neither deployable nor a global upper bound.")
+    result.append('The matched controls in matched_controls.csv compare complete graph scores on each population. score_decomposition.csv separates the exact additive division term and two explicitly arithmetic node-count counterfactuals. The node-only fixed-C0-edge experiment was run on the six full fresh-validation clips, and is labeled a subset diagnostic in fresh_node_only_scores.csv; it is not a nineteenth complete configuration.')
+    result.append(f"Fresh inference completed {fresh['clip_variant_runs']} full clip/variant executions over six clips, using both source directions and density ranks 10%, 50%, and 90%. "
+        f"All {len(fresh['verified_variants'])} primary/control variants passed exact graph or documented official-count parity and CSV roundtrip. "
+        'The final package also executed its explicit disable switch in a separate image-to-C0 run. Unfamiliar names did not select models: the source model was an explicit argument. Each child installed file/socket audit hooks before numerical imports, denied study caches and annotations, and recomputed the models/proposals from images. These hooks are not Linux namespace or syscall isolation.')
+    result.append('The inference package and ZIP remain in the ignored v5 output root, with hashes in inference_package_receipt.json and inference_dependency_manifest.json. New model weights and HOCT source are bundled; inherited native/DeepCenter/E teacher weights and patched native source are explicit pinned dependencies. runtime_versions.json records the actual tested environment. This does not certify the Kaggle runtime and no submission was made.')
+    result.append('P2 dense-detector training was conditional and was not scheduled. Source-only full-field P1/DeepCenter pilots are recorded in P2_decision.json and family_analysis.json; they do not supply audited dense background labels, and fixed-node headroom was not exhausted. No additional synthetic replay, Zoo rendering, FOCUS access, nine-frame decoder, or target-label threshold sweep was run.')
+    result.append('The local optical_review/index.html contains post-freeze raw microscopy projections and sparse-GT/C0/v5 overlays for official division gains, losses, and remaining misses. Selection is documented; no human judgments or new labels are invented. Complete division-identity regret, model score attrition, decoder fallback/runtime counts, and proposal-node regret are available in the accompanying CSVs.')
+    return '\n\n'.join(result)+'\n'
+
+
 def build(final=False):
     scores=csv_rows('ablation_scores.csv');train,curves=training();cov=coverage();selection=decision(scores)
     protocol=read(OUT/'execution_protocol.json');complete_variants={r['variant'] for r in scores if r['embryo']=='pooled'}
-    status=dict(study_id='image-native-tracking-v5',updated=now(),status='complete' if final else 'executing',
+    status=dict(study_id='image-native-tracking-v5',updated=now(),status=('validating' if selection['selection_pending'] else 'complete') if final else 'executing',
         target_score=.95,incumbent_score=BASE['pooled'],selected=selection['selected'],selected_score=selection['score'],target_met=selection['target_met'],
         complete_configurations=len(complete_variants),registered_configurations=len(protocol['variants']),
         complete_new_operational_variants=len([v for v in complete_variants if v!='C0' and not v.startswith('Oracle_')]),
@@ -146,6 +181,7 @@ The server reboot interrupted execution after the native log reached update 2,94
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.
 '''
+    if final:body+='\n'+outcome_text(selection)
     (OUT/('final_report.md' if final else 'progress_report.md')).write_text(body)
     print(json.dumps(status),flush=True)
 

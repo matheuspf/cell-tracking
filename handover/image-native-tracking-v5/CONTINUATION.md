@@ -13,8 +13,9 @@ Continue the current study; do not restart v4.
 - Two full image-to-C0 pilots, chosen by image-derived median detection density,
   reproduce both complete graphs and the original pre-ILP arrays exactly.
 - The official HOCT general_v1 JIT runs with genuine 19-dimensional region/position
-  inputs and 288-dimensional edge embeddings. The first source probe completed
-  2,000 optimizer updates. Other source/seed fits are queued.
+  inputs and 288-dimensional edge embeddings. All four source/seed probes completed
+  2,000 optimizer updates. Original decoder source tiles completed for both embryos
+  using the upstream SCIP fallback; the empty source6 central-tile attempt is retained.
 - Real-source tiny N1/N2 overfits passed. N1 kept the actual U-Net byte-identical;
   N2 changed its first encoder tensor with a nonzero gradient. These are tiny
   integrity checks, not complete learned-model comparisons.
@@ -29,6 +30,19 @@ Continue the current study; do not restart v4.
 No new operational 199-clip comparison had completed at this checkpoint. No target
 success or promotion has been established. Production N2 fits, replication, final
 fresh inference, optical review, and final reporting remain required.
+
+At the 15:10 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
+shards and target candidate banks were complete. Production 44b6 N1 completed
+8,000 updates and source calibration; 6bba N1 was still running. Full control
+decoding and opposite-source HOCT inference were running. The additional actual
+3D-network pixel-response test passed. No training recipe was reduced.
+
+The guarded `inference_package_early4` C0 run completed from an unfamiliar filename
+with exact full-graph parity and CSV roundtrip. Actual annotation/cache/DNS denial
+tests passed before numerical imports. Prior guard failures exposed the secondary
+checkpoint config, v2 hash-only teacher lock, and newly generated output GEFF;
+precise pinned exceptions were added, and every failed attempt was preserved.
+The early bundle is an integration artifact, not the final export.
 
 ## Server recovery on 2026-09-10
 
@@ -95,6 +109,15 @@ module. The tmux `dashboard` window refreshes it every minute. This early packag
 at `OUTPUT/inference_package_early` is an integration artifact and is **not yet
 validated for export**. Preserve the crash-interrupted fresh test directory.
 
+Additional detached waiters in the same tmux session run `regret --wait`,
+`division_review --wait`, `fresh_validate --wait`, `final_analysis --wait`, and
+`finalize --wait`. They wait for complete frozen results, then run actual diagnostics,
+six full image-to-CSV checks, manifests, preservation checks, final reports and
+browser validation. The final-stage waiters exec the current maintained module when
+their prerequisites become ready. After a reboot, restart each waiter once only
+after checking process state. The supervisor covers the compute queue; these
+artifact waiters are separate. They never stage, commit, push or submit anything.
+
 ## Frozen experimental scope
 
 `OUTPUT/execution_protocol.json` registers **18 total complete configurations**:
@@ -111,8 +134,9 @@ ILP consistency. H2 adds one source-fitted residual calibration with frozen nati
 evidence. N2 was selected for the P1 factorial from source interface/overfit evidence
 before any outer operational scores.
 
-Source calibration uses the first ten lexicographic source clips. Sparse unknowns
-stay unknown. Reused embryos, C0 teachers and public checkpoint exposure remain
+J/native/ctc calibration uses the first ten lexicographic source clips; HOCT H0/H1/H2
+calibration uses the supported source feature rows from the full training source.
+Sparse unknowns stay unknown. Reused embryos, C0 teachers and public checkpoint exposure remain
 explicit. Node universes and candidate banks are separate for fixed and expanded
 populations. Complete native comparisons intentionally use the primary model
 without the incumbent's secondary/eight-view harmonic ensemble; N0 isolates this
@@ -123,14 +147,15 @@ change. No labels or cached selected graphs may enter fresh inference.
 1. Finish the supervisor jobs, inspect every failure, and require exactly 199
    officially scored clips for every registered configuration. Preserve all failed
    attempts and input/model/config fingerprints.
-2. Complete the original HOCT decoder and ctc_v0 source diagnostics. Their tmux
-   window is `HOCT-diagnostics`; inspect its log. They are not complete scores.
+2. Preserve completed original-HOCT/ctc_v0 source diagnostics, including the bounded
+   source6 ROI retry. They are source diagnostics, not complete scores.
 3. Complete candidate coverage and both graph-legal oracles. Keep official local
    division evidence distinct from exact-ID daughter pairs. Record candidate,
    missing-region, score, protection and conflict attrition.
 4. Compute GT-edge and predicted-edge regret, node/matching effects, and exact
-   additive score decomposition. Decide whether conditional P2 is justified from
-   source evidence; do not substitute center refinement for dense proposals.
+   additive score decomposition. The final-objective source P1/PDC pilots are done;
+   `P2_decision.json` records why the conditional extension is not scheduled. Do not
+   substitute center refinement for dense proposals or label unmatched peaks false.
 5. Build the final inference package after all required weights/calibrations exist.
    Execute at least six full density-spanning clips from both embryos, including
    actual H/N/P/DeepCenter/J paths, C0 disablement, unfamiliar filenames, early

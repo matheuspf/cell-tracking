@@ -52,8 +52,16 @@ The bundle contains new weights, pinned HOCT/pooch source and the copied C0 code
 No annotations, training datasets, count estimates or cached study graphs/features are needed. Python file/socket audit hooks deny those reads and nonlocal network access; they do not provide Linux namespace isolation. The additional v5 observer validates 100x64x256x256 images; use C0 for another shape. Local RTX4090 tests do not certify Kaggle runtime. No submission is performed.
 ''')
     files={str(p.relative_to(package)):sha(p) for p in package.rglob('*') if p.is_file()}
+    base_manifest=read(package/'base/manifest.json')
+    external_configs={}
+    for key in ['primary','secondary']:
+        config_path=Path(base_manifest['external_checkpoint_paths'][key]).parent/'config.json'
+        if config_path.exists():external_configs[str(config_path)]=sha(config_path)
+    # The inherited inference reader verifies E_hgb against this hash-only model
+    # lock. It contains checkpoint hashes/configuration provenance, no GT arrays.
+    external_configs[str(V2/'model_lock.json')]=sha(V2/'model_lock.json')
     write(package/'manifest.json',dict(created=now(),files=files,selected=selected,
-        base_dependencies=read(package/'base/manifest.json'),annotation_inputs=False,cached_graphs=False,new_models_bundled=True))
+        base_dependencies=base_manifest,external_model_configs=external_configs,annotation_inputs=False,cached_graphs=False,new_models_bundled=True))
     archive=OUT/(name+'.zip')
     with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=1) as z:
         for p in sorted(package.rglob('*')):

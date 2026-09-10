@@ -1,6 +1,6 @@
 # Image-native tracking v5 — execution progress
 
-Updated 2026-09-10T14:02:40.818865+00:00. 1 of 18 registered complete configurations are scored.
+Updated 2026-09-10T15:10:58.308233+00:00. 1 of 18 registered complete configurations are scored.
 C0 is freshly reproduced at 0.934802374260586; the target is 0.95 (+0.015197625739414).
 Current eligible export: C0 at 0.934802374260586. Selection remains provisional while execution continues.
 
