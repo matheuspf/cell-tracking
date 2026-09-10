@@ -1,0 +1,75 @@
+{
+  "at": "2026-09-10T21:33:35.462391+00:00",
+  "observed": true,
+  "samples": 8,
+  "max_observed_summed_RSS_gib": 15.362052917480469,
+  "max_observed_GPU_gib": 10.845703125,
+  "minimum_observed_free_gib": 19.676773071289062,
+  "records": [
+    {
+      "at": "2026-09-10T21:27:34.618438+00:00",
+      "summed_RSS_gib": 14.066162109375,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.686355590820312,
+      "pool_workers": 10,
+      "pool_RSS_gib": 4.343578338623047
+    },
+    {
+      "at": "2026-09-10T21:28:34.875580+00:00",
+      "summed_RSS_gib": 14.80789566040039,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.686031341552734,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.047672271728516
+    },
+    {
+      "at": "2026-09-10T21:29:05.006146+00:00",
+      "summed_RSS_gib": 14.780708312988281,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.685745239257812,
+      "pool_workers": 10,
+      "pool_RSS_gib": 4.973724365234375
+    },
+    {
+      "at": "2026-09-10T21:30:05.255567+00:00",
+      "summed_RSS_gib": 15.04046630859375,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.684024810791016,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.2610321044921875
+    },
+    {
+      "at": "2026-09-10T21:30:35.398919+00:00",
+      "summed_RSS_gib": 15.206268310546875,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.682971954345703,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.4975433349609375
+    },
+    {
+      "at": "2026-09-10T21:31:35.648481+00:00",
+      "summed_RSS_gib": 15.362052917480469,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.68265151977539,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.6459808349609375
+    },
+    {
+      "at": "2026-09-10T21:32:35.903578+00:00",
+      "summed_RSS_gib": 15.231430053710938,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.677886962890625,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.4437713623046875
+    },
+    {
+      "at": "2026-09-10T21:33:06.032093+00:00",
+      "summed_RSS_gib": 15.238956451416016,
+      "GPU_gib": 10.845703125,
+      "free_gib": 19.676773071289062,
+      "pool_workers": 10,
+      "pool_RSS_gib": 5.417812347412109
+    }
+  ],
+  "scope": "Sampled ten-worker production batches; all model and solver settings unchanged."
+}

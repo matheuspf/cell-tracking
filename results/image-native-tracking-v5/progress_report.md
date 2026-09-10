@@ -1,6 +1,6 @@
 # Image-native tracking v5 — execution progress
 
-Updated 2026-09-10T21:12:35.475779+00:00. 9 of 18 registered complete configurations are scored.
+Updated 2026-09-10T21:33:40.276426+00:00. 11 of 18 registered complete configurations are scored.
 C0 is freshly reproduced at 0.934802374260586; the target is 0.95 (+0.015197625739414).
 Current eligible export: C0 at 0.934802374260586. Selection remains provisional while execution continues.
 
@@ -26,6 +26,8 @@ A second reboot interrupted the source44 second-seed N1 fit and source6 primary 
 Second-recovery N2 replay: 4 of 5 overlapping logged losses match at five decimals; the maximum logged absolute difference is 0.00001. This does not establish bitwise training reproducibility. The restored optimizer/RNG/data-order state and original numerical recipe were retained.
 
 After recovery, 22 resource samples across 670 seconds of eight-worker decoding measured 16.37 GiB peak summed RSS. Adding two workers at the largest observed worker footprint plus the prior fresh-inference subtree peak projected 22.90 GiB. Newly launched decoder batches therefore use ten workers; already loaded batches retain eight. CPU pools remain serialized, and one additional official scorer requires a fresh RSS sample below 24 GiB. Numerical optimizer, decoder transformation, official matching and aggregation functions passed exact AST checks; model settings and solver limits were unchanged. The projection is a scheduling estimate, not a measured ten-worker peak.
+
+Subsequent ten-worker production observation recorded 8 samples, peaking at 15.362 GiB summed RSS and 10.846 GiB GPU. The full study resource summary also includes phases outside these ten-worker batches.
 
 A later scheduling observation used the idle auxiliary lane for the already registered source6 second-seed N1 fit before its primary N2 finished. This temporarily allowed three optimizers, including at most two image backbones; the extra N1 fit held the auxiliary lock, excluding simultaneous auxiliary image/calibration work. The observed peak was 6.348 GiB GPU and 17.294 GiB summed RSS. The extra head ran at 2.83 updates/s while primary backbone throughput changed from 1.48 to 1.40 updates/s across different source windows. Per-fit locks retained the original checkpoints, dependencies, seeds and budgets. This is an operational timing observation, not a controlled same-window benchmark.
 
