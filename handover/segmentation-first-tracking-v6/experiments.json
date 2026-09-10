@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "kind": "execution_plan_not_results",
+  "repository": "matheuspf/cell-tracking",
+  "branch": "handover/segmentation-first-tracking-v6",
+  "parent_branch": "handover/image-native-tracking-v5",
+  "parent_commit": "03ab55727c5248b292b248113eaa54123791ef03",
+  "parent_status": "in_progress_at_inspected_snapshot",
+  "incumbent": {
+    "name": "C0 / v3 A_residual_m3.0",
+    "pooled": 0.934802374260586,
+    "44b6": 0.931664468721842,
+    "6bba": 0.935221784097327
+  },
+  "goal": {
+    "complete_local_score": 0.95,
+    "no_embryo_drop_over": 0.002,
+    "new_score": null,
+    "leaderboard_claim": false
+  },
+  "labels": {
+    "unannotated": "unknown",
+    "dense_masks_downloaded": false,
+    "format": "sparse GEFF point/lineage graph"
+  },
+  "budget": {
+    "primary_complete_configs": 12,
+    "replica_complete_configs": 4,
+    "clips_per_complete_config": 199,
+    "summed_gpu_hours_all_v6_work": 48,
+    "pilot_presets_per_backend_source": 6,
+    "full_learned_detector_families": 2,
+    "fresh_inference_clips": 6,
+    "disk_reserve_gib": 8,
+    "initial_gpu_workers": 1,
+    "initial_cpu_workers_max": 8
+  },
+  "backends": {
+    "focus": {
+      "commit": "5c4b53f743a0fbbae056e2c1a139895ae819f069",
+      "role": "instance segmentation",
+      "weight_access": "gated; not checked locally",
+      "mandatory_if_authorized": true
+    },
+    "ultrack": {
+      "commit": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+      "role": "segmentation-hypothesis tracking",
+      "runtime_tested": false
+    },
+    "independent": "Cellpose or audited compatible StarDist3D checkpoint",
+    "baseline": "native watershed with real masks retained"
+  },
+  "source_git_blobs": {
+    "AGENTS.md": "d8a4abb775eca74640a7e322b678ff0efef03d96",
+    "handover/image-native-tracking-v5/CONTINUATION.md": "ecd18bb1b48d6bafc7800af6f91e212b92e33586",
+    "docs/competition.md": "b5a8f299c17ec93c464cab5c2338578b01b3bf7f",
+    "docs/external-data-guide/README.md": "d840527aa6032989ee5b137ff783d3a43e193ef7",
+    "tools/image_native_tracking_v5/observations.py": "9d428a3a37db3ea613cc8021089851f0d52cfcd8",
+    "tools/image_native_tracking_v5/cache.py": "6d7f16cb2acab8c2bf2da3b5c8e49bd4ba89ac39",
+    "tools/image_native_tracking_v5/common.py": "9bfdd4a0a8aba501da83142625f5e1c6a2439d26",
+    "tools/image_native_tracking_v5/evaluate.py": "43cc5baaf237f19a7918cf4a7b88bf3fe6a6ec2e"
+  },
+  "forbidden": [
+    "alter live v5 checkout/jobs",
+    "use sparse unmatched as dense background",
+    "accept gated terms for user",
+    "upload images to hosted demo",
+    "use target labels/counts in inference",
+    "naive union of all detections",
+    "hide coordinate edits in old delta format",
+    "promote oracle-assisted score",
+    "merge or submit"
+  ],
+  "stages": [
+    {
+      "id": "X600",
+      "title": "Intake, preserve active v5 and freeze C0",
+      "required_evidence": "Current-source/result/asset intake and exact all199 C0",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X610",
+      "title": "Persistent mask and graph contracts",
+      "required_evidence": "Actual owned masks/boxes, coordinate and topology tests",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X620",
+      "title": "FOCUS and independent segmentation pilots",
+      "required_evidence": "Real trained detector inference or exact backend access blocker",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X630",
+      "title": "Fixed-C0 point/box/mask factorial",
+      "required_evidence": "Same nodes, original evidence, candidate bank and decoder",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X640",
+      "title": "Full detector-driven tracking and Ultrack",
+      "required_evidence": "Independent segmentation movie, selected masks and lineage graph",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X650",
+      "title": "Segmentation uncertainty and multiple hypotheses",
+      "required_evidence": "Nonduplicate compatible masks, temporal fork versus split evidence",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X660",
+      "title": "Conditional image-based adaptation",
+      "required_evidence": "Sparse-safe or dense-coverage training; changed-image-layer receipts",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X670",
+      "title": "Complete official evaluation",
+      "required_evidence": "Fresh all199 matching, count adjustment, both embryos and replicas",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X680",
+      "title": "Fresh offline inference and visual review",
+      "required_evidence": "Six full raw-image paths, graph roundtrip, guards, actual resource receipts",
+      "status": "planned",
+      "result": null
+    },
+    {
+      "id": "X690",
+      "title": "Retain code and hand back",
+      "required_evidence": "Working commands, full status/results, C0 fallback when not promoted",
+      "status": "planned",
+      "result": null
+    }
+  ]
+}
