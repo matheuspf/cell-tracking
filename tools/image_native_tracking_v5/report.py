@@ -166,6 +166,7 @@ def build(final=False):
     payload=dict(status=status,scores=scores,selection=selection,training=train,curves=curves,coverage=cov,exposure=exposures,budget=budget,
         resources=resource,protocol=protocol,supervisor=read(OUT/'supervisor_state.json') if (OUT/'supervisor_state.json').exists() else None,
         fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else None,
+        fresh_progress=read(OUT/'fresh_validation_progress.json') if (OUT/'fresh_validation_progress.json').exists() else None,
         feature_coverage=feature_audit['coverage'] if feature_audit else [],feature_distribution=feature_distribution,
         HOCT_unit_audit=unit_audit)
     write(OUT/'status.json',status);write(OUT/'selection.json',selection);write(OUT/'exposure.json',exposures);write(OUT/'score_budget.json',budget)

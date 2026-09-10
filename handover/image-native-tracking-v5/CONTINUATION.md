@@ -47,6 +47,12 @@ At 20:51 UTC, **H_probe_J** completed all 199 official scores at
 regresses both embryos against C0. Eight of 18 configurations are now measured.
 The H/native combination and same-recipe replication remain in progress.
 
+At 21:11 UTC, **H_probe_native_J** completed all 199 official scores at
+**0.9125505234745164**, delta C0 **-0.02225185078606962**. It scores
+0.8367204338897453 on 44b6 and 0.9279280377744168 on 6bba. Edge TP/FP/FN are
+121,664/6,207/7,219 and division TP/FP/FN 30/175/121. It is below H1 and C0;
+the H2 second-seed graph batch remains active. Nine of 18 configurations are measured.
+
 A source-only audit at 20:36 UTC confirmed a material HOCT interpretation limit.
 The registered adapter supplies micrometer coordinates/diameters and squared-
 micrometer inertia, while the pinned upstream extractor returns voxel-unit
@@ -69,6 +75,14 @@ first fresh-image child began at 20:53:28 using unfamiliar name `volume_01` and
 source model 6bba. It will execute all 12 primary/control paths. The primary N2
 graph decoder is queued behind the active HOCT batch. Both N2 replicas continue
 their full 12,000-update fits. No full six-clip parity result exists yet.
+The first fresh clip completed all 12 paths in 674.73 seconds. Its C0 graph and
+CSV roundtrip matched exactly. All 11 new/control paths had exact predecoder input
+fingerprints, including adapted native and HOCT scores, regions, proposals,
+candidate banks and DeepCenter confidence. Three process audits reported early
+guards and zero blocked reads. `first_fresh_input_parity.json` is a one-clip
+input-only diagnostic; it does not replace the six-clip graph/count comparisons.
+The second clip is running. Both native replicas have now seen every supported
+source window and positive transition and continue their full update budgets.
 Do not edit this bundle's runtime, primary weights or calibrations without a new
 complete six-clip validation attempt. Reporting-only changes are separate.
 

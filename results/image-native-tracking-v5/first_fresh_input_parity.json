@@ -1,0 +1,229 @@
+{
+  "at": "2026-09-10T21:10:04.171327+00:00",
+  "dataset": "44b6_e29f0176",
+  "source": "6bba",
+  "variants": [
+    {
+      "variant": "J_native_frozen",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "H_general_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "H_probe_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "H_probe_native_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "N_head_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "N_backbone_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "P_union_native_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "P_union_N_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "P_DC_native_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "DeepCenter_confidence": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "P_DC_N_J",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "model_scores": true,
+        "DeepCenter_confidence": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    },
+    {
+      "variant": "P_image_ablation",
+      "field_parity": {
+        "observation_nodes": true,
+        "observation_oldmask": true,
+        "observation_features_source": true,
+        "observation_features_target": true,
+        "observation_properties": true,
+        "observation_valid_region": true,
+        "observation_collisions": true,
+        "observation_optical_centroids": true,
+        "observation_confidence": true,
+        "observation_split_owner": true,
+        "pairs": true,
+        "native_logits": true,
+        "configuration": true
+      },
+      "exact_inputs": true
+    }
+  ],
+  "all_exact": true,
+  "annotation_reads": false,
+  "scope": "First of six clips, exact predecoder fingerprints only. Full official graph/count comparisons remain pending.",
+  "inference_receipt_sha256": "10e4f09173aa6d5655d7ee4d1aecbfabc278a2e2fb49fcf85e2290dede1fb4c6"
+}

@@ -18,6 +18,9 @@ def run():
         page.route('**/*',route);page.goto(path.as_uri())
         assert not errors,errors
         page.wait_for_selector('#scoreTable tbody tr')
+        if not data.get('fresh') and data.get('fresh_progress'):
+            count=data['fresh_progress'].get('image_clips_executed',0)
+            assert page.locator('#freshCaption').inner_text().startswith(f'{count} of 6 complete image executions')
         for em in ['pooled','44b6','6bba']:
             page.select_option('#embryo',em)
             expected=sum(r['embryo']==em and not r['variant'].startswith('Oracle_') for r in data['scores'])
