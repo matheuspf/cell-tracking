@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "created": "2026-09-10T02:11:49.786009+00:00",
+  "records": 3918,
+  "synthetic_checks": {
+    "provenance_group": {
+      "unique_keys": 3713,
+      "cross_partition_aliases": 0
+    },
+    "representation_group": {
+      "unique_keys": 3713,
+      "cross_partition_aliases": 0
+    },
+    "source_sha256": {
+      "unique_keys": 3713,
+      "cross_partition_aliases": 0
+    },
+    "label_sha256": {
+      "unique_keys": 3713,
+      "cross_partition_aliases": 0
+    }
+  },
+  "zoo_scope": "same acquisition explicitly shared across six-frame-purged time blocks; not independent embryos",
+  "zoo_normalization": "acquisition-wide unlabeled coordinate IQR; held-out block coordinates contribute to this scale, not to training labels",
+  "biohub_scope": "separate source-only fits; repeated/correlated crops remain exploratory",
+  "source_and_partition_fields_unchanged": true,
+  "index_sha256": "6e0a577b4357a3333a8492d8f333479baf9573fda9f17625621ee6c6e3de4d4c"
+}

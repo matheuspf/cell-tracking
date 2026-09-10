@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "variants": 21,
+  "samples_per_variant": 199,
+  "official_score_rows": 4179,
+  "both_source_directions": true,
+  "current_baseline": {
+    "pooled": 0.934802374260586,
+    "44b6": 0.931664468721842,
+    "6bba": 0.935221784097327
+  },
+  "round_locks": {
+    "18_9046af6f973e4047.json": "aead4d1e5ef5f10e6080d1b505e788728550b4f1ec5561741fca42c28f96cde3",
+    "20_eca50abb51f3b0e2.json": "52cd11b8c41cfe92e11d73c8cadc00a81df36c1f4ab810f5e30393087d84c027",
+    "21_38c82b2ecc127dfe.json": "7d08726d1cab55b3253f57336ed1ab35fc683e0d88e46462ebeddd7d48082a59"
+  }
+}

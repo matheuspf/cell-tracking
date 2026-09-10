@@ -1,0 +1,15 @@
+{
+  "created": "2026-09-10T00:03:55.492759+00:00",
+  "failed_model": "D_real_adapt_44b6",
+  "last_persisted_update": 5000,
+  "last_loss": 2288506751.104,
+  "checkpoint_sha256": "184b61bd170bcf09dc32b1fa775b1b1f389bbff628b4373aed9ce019f2afc3ca",
+  "original_log_sha256": "8f1496b9b99865a4239fcf5de6c1237c54b88190ad1b0b9f0505da17fab19097",
+  "reason": "Unbounded raw logits made augmentation consistency numerically unstable",
+  "correction": "Sigmoid/softmax probability MSE for all real-only adaptation consistency",
+  "completed_pretraining_checkpoints_preserved": true,
+  "failed_checkpoint_excluded": true,
+  "before_comparative_predictions": true,
+  "bounded_consistency_contract_passed": true,
+  "train_code_sha256": "3b4e8e77470e8aede00f01ecdf1d6ab73e4abe9632e60a49875ea0de0deff278"
+}

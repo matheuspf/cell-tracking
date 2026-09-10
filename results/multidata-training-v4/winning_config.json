@@ -1,0 +1,40 @@
+{
+  "variant": "C0",
+  "score": 0.934802374260586,
+  "delta_v3": 0.0,
+  "embryo_scores": {
+    "44b6": {
+      "score": 0.9316644687218418,
+      "delta_v3": -2.220446049250313e-16,
+      "delta_vs_C1": 0.0
+    },
+    "6bba": {
+      "score": 0.9352217840973274,
+      "delta_v3": 3.3306690738754696e-16,
+      "delta_vs_C1": 0.0
+    },
+    "pooled": {
+      "score": 0.934802374260586,
+      "delta_v3": 0.0,
+      "delta_vs_C1": 0.0
+    }
+  },
+  "baseline": "v3 A_residual_m3.0",
+  "baseline_score": 0.934802374260586,
+  "external_advantage_over_matched_control": false,
+  "primary_external_advantage": false,
+  "matched_control_is_same_seed": true,
+  "preselected_external": "C4",
+  "selection_is_operational_exploratory": true,
+  "no_target_independence_claim": true,
+  "new_heads_disabled": true,
+  "replication_required_for_adoption": true,
+  "model_manifest_sha256": "5f3ef87717ee74ac5b5dc7e02121e0eef03b10a94ee67ffa429c5fcfe9985260",
+  "prediction_lock_sha256": "7d08726d1cab55b3253f57336ed1ab35fc683e0d88e46462ebeddd7d48082a59",
+  "model_manifests_sha256": {
+    "checkpoint_manifest.json": "5f3ef87717ee74ac5b5dc7e02121e0eef03b10a94ee67ffa429c5fcfe9985260",
+    "checkpoint_manifest_rendering.json": "47fbc569a32b56ff0c446d06d106f6bbda004337b71bbbd82ef41e9359904534",
+    "checkpoint_manifest_rendering_C7.json": "47fbc569a32b56ff0c446d06d106f6bbda004337b71bbbd82ef41e9359904534",
+    "checkpoint_manifest_secondary.json": "3ea59f8003b3694ad87d502d7f9bb6d6e7e90c1f54b6f2e76b7bd2456ed77147"
+  }
+}

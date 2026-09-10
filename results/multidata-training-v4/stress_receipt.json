@@ -1,0 +1,29 @@
+{
+  "completed": true,
+  "models": [
+    "G_synthetic",
+    "G_fish",
+    "G_combined",
+    "G_multispecies",
+    "G_real_44b6",
+    "G_real_6bba",
+    "I_synthetic",
+    "I_real_44b6",
+    "I_real_6bba",
+    "I_randomized_44b6",
+    "I_randomized_6bba"
+  ],
+  "cases": [
+    "clean",
+    "localization",
+    "dropout",
+    "duplicates",
+    "clipped_daughter",
+    "short_history"
+  ],
+  "comparisons": 66,
+  "training_updates": 0,
+  "threshold_changes": 0,
+  "selection_input": false,
+  "scope": "generator engineering diagnostic, no biological independence claim"
+}

@@ -1,0 +1,182 @@
+{
+  "root": "/kaggle/working/cell-tracking/multidata-training-v4/inference_package",
+  "manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7",
+  "checkpoints": {
+    "D_real_adapt_44b6": {
+      "training_checkpoint_sha256": "690074d8325114e11b87ae32681b855bb5e51e83901c80cdc4ec1ab067f2ac4e",
+      "inference_checkpoint_sha256": "07281c91a2a0241621ed21fa30b0a7d613c23b754b3cd59e097a8d0ad43d1981"
+    },
+    "D_real_adapt_6bba": {
+      "training_checkpoint_sha256": "4a90e7a02e915cff60500d7cfbf626fd4e75ad385c12c0c875593af51301e606",
+      "inference_checkpoint_sha256": "579988c02c4fb30718cbd82edc390a2c1880567738c60b057f7a96ebd1ab8bac"
+    },
+    "D_synthetic_adapt_44b6": {
+      "training_checkpoint_sha256": "ce240a66fa9c30668ece0473b265dbccdc73e6a125e7fa2d90f5d37400767138",
+      "inference_checkpoint_sha256": "095fa71ee6078cd9a66ae68a336f336c3829da3005dc7dc9587f12ef6d5ac82b"
+    },
+    "D_synthetic_adapt_6bba": {
+      "training_checkpoint_sha256": "4b9bb9d10d08b6374eb6d99f2649f6f41647baad6dbf1be66b76d74b7918140f",
+      "inference_checkpoint_sha256": "b089845d0c48bb7246e8e0a5cb1c3dcedb173657ba09c5642371ab3acba34a6d"
+    },
+    "G_C1_44b6": {
+      "training_checkpoint_sha256": "631b5038bd7179149ed157a1e3e9831255b414eccf86d5e544127276af2caee6",
+      "inference_checkpoint_sha256": "78b3b86c14893e9bd2f783a729add36ee4141ee9fd733899f4a78f4e99d67d98"
+    },
+    "G_C1_6bba": {
+      "training_checkpoint_sha256": "f97ca9de9f9940e715d798239ef1b5446ed468bf1713a79bb397f320ef9de735",
+      "inference_checkpoint_sha256": "a70cceb1c7b3244a5ea7235f66bcf317ecf40456d46e3ae216068549a1f896ae"
+    },
+    "G_C1_seed2_44b6": {
+      "training_checkpoint_sha256": "f78d17485f59f422d254aa494bc02e5501c735ad6ed757f5d6429f1aafe59d9a",
+      "inference_checkpoint_sha256": "3469be61e1a67fd0ca2d5c4a9856d806ea9ec3027d30db9e2954ecdee5bb3dc9"
+    },
+    "G_C1_seed2_6bba": {
+      "training_checkpoint_sha256": "02e530ae9fe1f4f4ac65c8f636ee11c1377ee47f01e6c429417ea6c0bf683335",
+      "inference_checkpoint_sha256": "f0b836b051bccbde780e606ce92bc7752c79433c95f55f8390812a2b8e027e78"
+    },
+    "G_C1short_44b6": {
+      "training_checkpoint_sha256": "7de8bff587a7269b01e0d8eceadea48d1ff46168d7d120215fad8e5ae7cc664b",
+      "inference_checkpoint_sha256": "906bb98f0163a21e8866bb8896cc7872066a658eaee2bf178a6e73301c606022"
+    },
+    "G_C1short_6bba": {
+      "training_checkpoint_sha256": "2e75a55616810291f8f791d9526361bb21f5e844999c080fb4f4e3d460b0ad90",
+      "inference_checkpoint_sha256": "53f4720096a125e01ca2090bb963ada139d2877d27495f834122aa156b9ede88"
+    },
+    "G_C2_44b6": {
+      "training_checkpoint_sha256": "6672d5c1c84baff2bcda380164274b5392449fef563e794060317306e2ad78ce",
+      "inference_checkpoint_sha256": "13f12b984a784f1068767b86d9c2d592d46d76499937b1a94916f5c156550cc7"
+    },
+    "G_C2_6bba": {
+      "training_checkpoint_sha256": "0ac5d85b5bc809c9fcfe01a857194690397f6289162cc86bfd4c29dee12f1299",
+      "inference_checkpoint_sha256": "37055b2aa5a586dba4a12531d5baaca4c2dfd7f9498ad0e1c93f75e75762f6c4"
+    },
+    "G_C3_44b6": {
+      "training_checkpoint_sha256": "c0e18ba91a40672bd92d94b4bf2d3492bdfcc8f5d2e1129d2d18c1eeea5c7b59",
+      "inference_checkpoint_sha256": "9af8f0c2dd3201f2345b9677f4fe6994c3d130d8bdd6289dba352553d443fcc4"
+    },
+    "G_C3_6bba": {
+      "training_checkpoint_sha256": "1bb81e60a63f4ecd7e164512c4a3c3243b88ea44d0a8408f80db42fef9bc2e86",
+      "inference_checkpoint_sha256": "02eaefec43fd647cb2a5df91e5942ce089c4864e70e6d80bd9c149b6f525a020"
+    },
+    "G_C4_44b6": {
+      "training_checkpoint_sha256": "04806c9ac8aa22806826c61208ff9b130c04b5dec9fe5da962d8900f0ae19d64",
+      "inference_checkpoint_sha256": "0cc35935196ef2a35b454e2c30b8faf6f8baf528b884096c0861c0d0dd0fab4e"
+    },
+    "G_C4_6bba": {
+      "training_checkpoint_sha256": "c7bb92bf3c900e70581a144a2609a179c0a82228f12c227c5aa94d34ae4297f6",
+      "inference_checkpoint_sha256": "f36db44a2d3fb311f3b813b0f7bf4da72352edb26ebc66598da9a9f6c826ac82"
+    },
+    "G_C4_seed2_44b6": {
+      "training_checkpoint_sha256": "f3209a45b5fa6052b2e90a54a51abf82a1d1e4b7fa8e9fc6a641ff41d607ec46",
+      "inference_checkpoint_sha256": "07c099e0cf1438b0a7c0dbe0701d1aa46406a5a56d0a2436b4b6b89d390dbb68"
+    },
+    "G_C4_seed2_6bba": {
+      "training_checkpoint_sha256": "044ad2279ed1e4761c1dd7989d5ab42efccff9c5e7ee97dbc9ec05cdcc4b025b",
+      "inference_checkpoint_sha256": "46251194079c77670efc23dc3fd05e541c53c421015824428f65a67b61d3eb9c"
+    },
+    "G_C5_44b6": {
+      "training_checkpoint_sha256": "d5e599b397a7fe0a0d03835cf825fc70fd564eeb27136b5598c6ad4d8977e5b7",
+      "inference_checkpoint_sha256": "16132bb6788c6af166b867d4afaec49e74c6f78f8e9f5cffd8a292877851f740"
+    },
+    "G_C5_6bba": {
+      "training_checkpoint_sha256": "3b75ba38753d711a935dd331c1e2e9b38cb8d778b014094fb4a567fb8ab02a7d",
+      "inference_checkpoint_sha256": "7234b5726f5a627b0df812656b1103ce34749e8d60d5dcc5fb8004ad52426967"
+    },
+    "G_C6_44b6": {
+      "training_checkpoint_sha256": "322b49ff65ba8555e105cbc3981888205747dc7a3c59ff64b1b04e716bdeb8dd",
+      "inference_checkpoint_sha256": "6d781381fdbf50da0341ad536f9792cb71daeef7c1f45ef2835d0fdf307e5b65"
+    },
+    "G_C6_6bba": {
+      "training_checkpoint_sha256": "c7050ce551e594bd84e535bdd956f2ffe3212c51153f43f10f86062e141aaba6",
+      "inference_checkpoint_sha256": "7c40ae0d894414452e5b78c176176437aead232fc4ac43bd2b963abb249b4a3e"
+    },
+    "G_C7_44b6": {
+      "training_checkpoint_sha256": "de4b871360c2d43f1bd7b851d1599e5e2715b44561a4fb8f83e7f61dfe2f2376",
+      "inference_checkpoint_sha256": "bb580e9a9c6591b38e84db015e377822af7d368da7c96fcf13db3933dfec332a"
+    },
+    "G_C7_6bba": {
+      "training_checkpoint_sha256": "5cfc02f8f42890a1bfce82c50c9a0f332c364caece1d4a30f76e5fdfded02658",
+      "inference_checkpoint_sha256": "717f96b4d7e541949b93fab2f870a5a724dceaaed17a6f02a868011e745afc53"
+    },
+    "I_C1_44b6": {
+      "training_checkpoint_sha256": "c4a06ea9692462790f3f4769c20527d5774891a014e4e04d58172ce138266d18",
+      "inference_checkpoint_sha256": "cfc1da4d6afe02bfe28c4c6fef3ac8915972824028d953facce6814d548a26d0"
+    },
+    "I_C1_6bba": {
+      "training_checkpoint_sha256": "2987e1828c612d630844a882ac752aadf95aa5f5f49a0e3f3a24e8bf3f318b3c",
+      "inference_checkpoint_sha256": "ad13ebef0064cd56dbaea29b8af6e39e9623a2290b891cf1a8a90680552b9a7d"
+    },
+    "I_C1_seed2_44b6": {
+      "training_checkpoint_sha256": "4c4a50cce72956bf01c3582599b26d2d2bc72129e9b1d6ce569c173fbdbd7dcd",
+      "inference_checkpoint_sha256": "cb38d5e79ca997e8ac8d82ba214ef5fa0af238a3003abf61371e2d03ca47848c"
+    },
+    "I_C1_seed2_6bba": {
+      "training_checkpoint_sha256": "650c7dd29392fd9555482c7962ba14eb1cabcb856c0e9b927930f60f1a5f7038",
+      "inference_checkpoint_sha256": "42ecd5a66fbb94e835c381a2bc694f29c888eeb8ac0006ef2b45cfb8fcd6f3a1"
+    },
+    "I_C1short_44b6": {
+      "training_checkpoint_sha256": "5dce0b1163d7d54affb48adc5fe789dcde39c8e81f1d9c9b8a060a2bc3ea4ac7",
+      "inference_checkpoint_sha256": "165eaec713ac606ba48e85ba674818256d079ef14fc52c0e1b89ced2acf864eb"
+    },
+    "I_C1short_6bba": {
+      "training_checkpoint_sha256": "38f849107c5d860546bd82bdf0efd4305835a78ff4c816a097e1c456fd5fdcc1",
+      "inference_checkpoint_sha256": "fe1034de1d28ebdc69814c694e6206f2f68c316d8c30c8bc373bdd67d42f529d"
+    },
+    "I_C2_44b6": {
+      "training_checkpoint_sha256": "1704ee883a49d6580cee27f16cba02070d77e9c959df10e0a8cb2a42351b9f48",
+      "inference_checkpoint_sha256": "176c735d25eecda4bdba4a3180cd12579e27f390e2535c755d46cef93cba052a"
+    },
+    "I_C2_6bba": {
+      "training_checkpoint_sha256": "5254593731353059e7e12c016359e40451fb452ee3fbae75547a35846b0f974b",
+      "inference_checkpoint_sha256": "697bb57ae6222562590a48ea97a481a251cc40908fcb72f822c2ede1a4f3626e"
+    },
+    "I_C3_44b6": {
+      "training_checkpoint_sha256": "7d053a81d8a001c624fbde72d6ae2931c5002599c0e5d79295ced8ba6e330370",
+      "inference_checkpoint_sha256": "c9ea9a8f9b0e024b0f8f977a1bcda780ec52a75dfa38fc6f9f0e89a422b27c3a"
+    },
+    "I_C3_6bba": {
+      "training_checkpoint_sha256": "1960197b40fbf37680584ad5075ae7ab5bfd2b09485d5ba2d3c3211ba8f2c825",
+      "inference_checkpoint_sha256": "36055d3d974f6c3c47968cf32d6585b9c3e3d0a2dfd7dacbcac2de714611af5f"
+    },
+    "I_C4_44b6": {
+      "training_checkpoint_sha256": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f",
+      "inference_checkpoint_sha256": "a983131899926f311fe8707de984d43aeb2e76abca9946f30142bdc0acc81eda"
+    },
+    "I_C4_6bba": {
+      "training_checkpoint_sha256": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb",
+      "inference_checkpoint_sha256": "f4cab5c375f7e62120aacc6657d2c412e95d6f3ba7ee7a89a4c9623ce1c9fd0e"
+    },
+    "I_C4_seed2_44b6": {
+      "training_checkpoint_sha256": "8ebf1a4bd3f88279b9a57f4d3936be050a7c0a252b889606ca51cd82d805acca",
+      "inference_checkpoint_sha256": "6e4508045b7358f39c0f26de15f4adb56db21747f956ec4f40ba0e655347f3a4"
+    },
+    "I_C4_seed2_6bba": {
+      "training_checkpoint_sha256": "a8db2af81dfef377105fca2236b8bd6ca35c67bdc45c4b54d8452aeedda585d1",
+      "inference_checkpoint_sha256": "ed1e1974e41f908c460c44188b1d1c9e41be83c9a891c12253c75622c867d47f"
+    },
+    "I_C5_44b6": {
+      "training_checkpoint_sha256": "3b4ae76353e2c856f8ec0f676e1dfc949c173b59c2fc66c51ddf42690a98e6a4",
+      "inference_checkpoint_sha256": "e551e81e86151badde62c14ce2ee5278cc0895e0ce268dcdae2b06cc299181c4"
+    },
+    "I_C5_6bba": {
+      "training_checkpoint_sha256": "48fe718a3b9a6c03893e8bba46ddb0f2847b1a0efc2f0b968c2302945325b6d8",
+      "inference_checkpoint_sha256": "016692876cc854769bf65e23eb8787aea0fb0d25aff53c8e1d67a946fcabf0ef"
+    },
+    "I_C6_44b6": {
+      "training_checkpoint_sha256": "7634c473e9596e570a7efeb80caed41631700b6731587fae8b64fd5cba83fdc0",
+      "inference_checkpoint_sha256": "c81bd4a6be7f6633cc958270b724c5da306b6741bfe07430891de9a5abbe6b44"
+    },
+    "I_C6_6bba": {
+      "training_checkpoint_sha256": "923e4f5cdc7acdd0dd578d9a89ab2bd3b504b6d3d34949edf0557c3c72af01c7",
+      "inference_checkpoint_sha256": "56e04b8de33a80365c1a2248ca9d1b3f789374edd92bfc3772a6f0bcd9a0948d"
+    },
+    "I_C7_44b6": {
+      "training_checkpoint_sha256": "57ae4767b53bc7a2cb98a4349e34578a001e49bd5ecd1396b05c9bb18b752d45",
+      "inference_checkpoint_sha256": "4ec579d32dc7dff7d450acf631963b349e7bf4bbf3f09818c51320fcb9c5ca5c"
+    },
+    "I_C7_6bba": {
+      "training_checkpoint_sha256": "a956a5ca0abd01994c9b445cae95023774f09da825a1715097d350afc3a514b8",
+      "inference_checkpoint_sha256": "ed0c72a6c08fbe29d78f847162dcf1313dc3fc2261e8b133df27684a2eda117e"
+    }
+  }
+}

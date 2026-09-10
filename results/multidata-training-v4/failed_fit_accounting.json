@@ -1,0 +1,313 @@
+{
+  "created": "2026-09-10T04:10:27.466769+00:00",
+  "fits": [
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C1_44b6.pt",
+      "sha256": "7327c76e7b281c297792b5f7735ae3276cc39cbcc3e2bffcd01dc18cb9d8296b",
+      "model": "G_C1_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 218.36596108600497,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C1_6bba.pt",
+      "sha256": "e8fd89d4c37383e34a7de9021f3141d3e91e9a7c83b5836e0320d356a6097ee3",
+      "model": "G_C1_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 215.48380173789337,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C1short_44b6.pt",
+      "sha256": "11fb995cf6c6b10d995eaf851c2042fe0eb098c069ec814d589844bb255cbab4",
+      "model": "G_C1short_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 220.38800777914003,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C2_44b6.pt",
+      "sha256": "0ec82dcab53094ccdb94eb410db17053ca82d84a449be13223c979e2ac38fd02",
+      "model": "G_C2_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 215.10189746692777,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C2_6bba.pt",
+      "sha256": "9073642627ee2f0d1f67bf008cd83cfcc547a90627db08e6fce0a25ddfbd1ad3",
+      "model": "G_C2_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 220.73266367334872,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C3_44b6.pt",
+      "sha256": "70753edef21709c61ade5c7b42a6e241d919934795da777debf12a4b8260fa24",
+      "model": "G_C3_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 220.32584333140403,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C3_6bba.pt",
+      "sha256": "91bce1cb2a9435e66ed72e2ce1b678cadfb3cc256fbfaf82573ac9f772707e2a",
+      "model": "G_C3_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 225.80897525092587,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C4_44b6.pt",
+      "sha256": "61994ffb8d983ece5a4eb4c795bf2e77502831015d813cb1926cecc518f68781",
+      "model": "G_C4_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 215.07458984525874,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C4_6bba.pt",
+      "sha256": "5c139d2823e0f0eb5475db16f120b430a55031f754dd9fec0852b04359626ff1",
+      "model": "G_C4_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 222.76706033898517,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C5_44b6.pt",
+      "sha256": "c7849c9cd79b5bfc825f618a25f1e35b91d2a0b6a300a65c8e5975e966cf2d96",
+      "model": "G_C5_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 214.92985465796664,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C5_6bba.pt",
+      "sha256": "3d450a6b4838336dac5dbd30f24497cb509e72c6bbbd91f57f866336b1afd529",
+      "model": "G_C5_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 212.34234513994306,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C6_44b6.pt",
+      "sha256": "53c79ceb52cc8a0a405172690ca02d1a6363f9cbc44f37a4d3a995501764bb3e",
+      "model": "G_C6_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 223.02147457376122,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_C6_6bba.pt",
+      "sha256": "c5fe55a9d50611b8685c335de42b3ce3600d8516968c9d15a63668451bb1a47b",
+      "model": "G_C6_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 220.93141590896994,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_combined.pt",
+      "sha256": "03f57951b2ddc69f7beb5086d609480d51685c6f9c2a159daac6c38064458ade",
+      "model": "G_combined",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 301.24024266237393,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_fish.pt",
+      "sha256": "dcecd73bd6eb1846a48a883c8d4f9a5903da22fec6359caf61ef3e4d67050406",
+      "model": "G_fish",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 300.92142476607114,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_multispecies.pt",
+      "sha256": "338acfc541545332c89da079ab856d070c86466d9ea0a56730c077363c6d17e0",
+      "model": "G_multispecies",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 305.1269333814271,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_real_44b6.pt",
+      "sha256": "d90a82f98c67b56a4a90a7d452e91473aad0ef3783c082f7d329129a7c98c9f7",
+      "model": "G_real_44b6",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 302.81689197197556,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_real_44b6_seed2.pt",
+      "sha256": "de9a3bff36f56a3aa570de70cdbdc704a7d2579a670252e963bcb12438a5cdc9",
+      "model": "G_real_44b6_seed2",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 297.51415914017707,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_real_6bba.pt",
+      "sha256": "72c50c4b7b9deff187fc66c3719520046204a93aea60109e26b7fa30c6e66976",
+      "model": "G_real_6bba",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 303.3073744229041,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/G_real_6bba_seed2.pt",
+      "sha256": "320795a4675d1f0095f8308b719ae5ea9dd1a4edc4e4206d78abd594d7f60b95",
+      "model": "G_real_6bba_seed2",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 293.4887197948992,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C1_44b6.pt",
+      "sha256": "4e166e8d7fb0721bc8a5f3f1c3b5d5801cb82888c7cbfdcaec5374f2c945b639",
+      "model": "I_C1_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 228.29988687485456,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C1_6bba.pt",
+      "sha256": "b222e39464306e29652a21934ef7645eec810557640fd9a606f5827b73c932bb",
+      "model": "I_C1_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 232.85646319109946,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C1short_44b6.pt",
+      "sha256": "cdda90031095eda8e442a28dd7c2d6b5d500462a461dd0432da24447764af0e3",
+      "model": "I_C1short_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 233.0580787109211,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C2_44b6.pt",
+      "sha256": "9cb5b43abd10e96042bce6df1069545a1353ee1a5b8e63331e159523fd7fc8e7",
+      "model": "I_C2_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 221.5474241329357,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C2_6bba.pt",
+      "sha256": "11167801bae35e2cfd9197d5ef26f5f647f86d9c45f72e0e83799e47fa7bca3b",
+      "model": "I_C2_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 219.6110750520602,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C3_44b6.pt",
+      "sha256": "d870aff564829f06d850be0f8004b36641a8feb13c4d5243b7ec560996635ba0",
+      "model": "I_C3_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 226.4207692653872,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C3_6bba.pt",
+      "sha256": "0bc3717d762ad442f8de8144c83acbc613f5cc6f7be41a54b1e578d013451b7a",
+      "model": "I_C3_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 232.1391319432296,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C4_44b6.pt",
+      "sha256": "df61f9d0ec30f130762cf2d2900ecd5396188d7bce34d4c4a8383116f044d37f",
+      "model": "I_C4_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 221.82621261803433,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C4_6bba.pt",
+      "sha256": "8153194356c2969c76826be0b12623280ef804b76fa9edd5857911f68759a1e1",
+      "model": "I_C4_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 226.9050938100554,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C5_44b6.pt",
+      "sha256": "328985677a1fdaa202204582acd10d33b6a20cccbaca4d48ffa1f666b0ea9944",
+      "model": "I_C5_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 221.10685235913843,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C5_6bba.pt",
+      "sha256": "b6b08b695ae237baf91ccc8778bc5a85741fcbe05c7276183094bd95e867e770",
+      "model": "I_C5_6bba",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 219.64626891491935,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C6_44b6.pt",
+      "sha256": "5f59156b7bafc7f0f010bcb28500d41ccd62d9d98b670ed7ee7308fb387b0be6",
+      "model": "I_C6_44b6",
+      "checkpointed_updates": 8000,
+      "timed_seconds": 230.85119512863457,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_C6_6bba.pt",
+      "sha256": "f6c410b248adbc258a688ddaf8c193dd150fcc0dee69d8b9ce6cef626629c1d8",
+      "model": "I_C6_6bba",
+      "checkpointed_updates": 6000,
+      "timed_seconds": 172.1494402848184,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_real_44b6.pt",
+      "sha256": "0c60bc5fab1f066660648472e74f9382ec1eeee0e5e63a01534156fe7ea8b183",
+      "model": "I_real_44b6",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 287.1450118711218,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_real_44b6_seed2.pt",
+      "sha256": "63823410f6ca06fa5d0f68e8b8bce021cc008418531ad95075a786438800b87b",
+      "model": "I_real_44b6_seed2",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 300.3574652369134,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_real_6bba.pt",
+      "sha256": "2d06bd6857380fe21bf79ee73f080b3beaa1adc61f7091b816182d8b921e5923",
+      "model": "I_real_6bba",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 301.01306548388675,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/sparse_edge_mask/models/I_real_6bba_seed2.pt",
+      "sha256": "2775a82dd2531d9e5ca5b63abeaf81e2086c832e87c0d6abfed9db6151f0f734",
+      "model": "I_real_6bba_seed2",
+      "checkpointed_updates": 20000,
+      "timed_seconds": 297.6387860160321,
+      "excluded_from_comparative_models": true
+    },
+    {
+      "path": "failed_fits/unnormalized_consistency/D_real_adapt_44b6.pt",
+      "sha256": "184b61bd170bcf09dc32b1fa775b1b1f389bbff628b4373aed9ce019f2afc3ca",
+      "model": "D_real_adapt_44b6",
+      "checkpointed_updates": 5000,
+      "timed_seconds": 53.774397652130574,
+      "excluded_from_comparative_models": true
+    }
+  ],
+  "checkpointed_updates": 431000,
+  "timed_seconds": 9076.03625547653,
+  "additional_unsaved_steps_may_have_run": true,
+  "sanity_updates_separate": true
+}

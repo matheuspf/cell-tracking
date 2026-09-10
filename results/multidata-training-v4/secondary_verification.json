@@ -1,0 +1,29 @@
+{
+  "completed": true,
+  "arm": "C4",
+  "seed": 314159,
+  "jobs": [
+    {
+      "phase": "train",
+      "returncode": 0,
+      "seconds": 793.1499183969572
+    },
+    {
+      "phase": "calibrate",
+      "returncode": 0,
+      "seconds": 8.727826733142138
+    },
+    {
+      "phase": "infer",
+      "returncode": 0,
+      "seconds": 549.6075567798689
+    },
+    {
+      "phase": "evaluate",
+      "returncode": 0,
+      "seconds": 61.13988004112616
+    }
+  ],
+  "no_lucky_seed_promotion": true,
+  "both_directions_frozen_before_second_round": true
+}

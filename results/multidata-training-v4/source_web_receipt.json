@@ -1,0 +1,22 @@
+{
+  "https://api.figshare.com/v2/articles/8223890": {
+    "status": 200,
+    "title": "Phmamm-1 (previously published as Astec-Pm1; Wild type <i>Phallusia mammillata</i> embryo, live SPIM imaging, stages 8-17)",
+    "license": {
+      "value": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "url": "https://api.figshare.com/v2/articles/8223890",
+    "doi": "10.6084/m9.figshare.8223890.v6",
+    "references": [
+      "https://science.sciencemag.org/content/369/6500/eaar5663",
+      "https://morphonet.org/vRUmNqjT",
+      "https://morphonet.org/sMObBR5f",
+      "https://doi.org/10.1101/2025.10.13.681089"
+    ]
+  },
+  "https://zebrahub.sf.czbiohub.org/imaging": {
+    "status": 200
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "jobs": [
+    {
+      "stage": "read_audit",
+      "returncode": 0,
+      "seconds": 13.556598952040076
+    },
+    {
+      "stage": "stress",
+      "returncode": 0,
+      "seconds": 20.68561025802046
+    },
+    {
+      "stage": "profile",
+      "returncode": 0,
+      "seconds": 10.126682994887233
+    },
+    {
+      "stage": "provenance",
+      "returncode": 0,
+      "seconds": 0.50292525626719
+    }
+  ]
+}

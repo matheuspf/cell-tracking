@@ -1,0 +1,50 @@
+{
+  "completed": true,
+  "annotation_guard": {
+    "blocked_reads": 0,
+    "guard_installed_before_dependency_loads": true
+  },
+  "external_guard": {
+    "blocked_reads": 0,
+    "installed_before_dependencies": true
+  },
+  "both_directions": true,
+  "workers": [
+    {
+      "completed": true,
+      "source": "44b6",
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      },
+      "offline_guard": {
+        "installed_before_dependencies": true,
+        "blocked_network_attempts": 0,
+        "blocked_dataset_reads": 0,
+        "includes_rendered_datasets": true
+      }
+    },
+    {
+      "completed": true,
+      "source": "6bba",
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      },
+      "offline_guard": {
+        "installed_before_dependencies": true,
+        "blocked_network_attempts": 0,
+        "blocked_dataset_reads": 0,
+        "includes_rendered_datasets": true
+      }
+    }
+  ]
+}

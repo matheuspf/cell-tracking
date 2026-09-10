@@ -109,4 +109,14 @@ and seven RIKEN archives. It includes a complete inventory, label schemas,
 provenance, access instructions and the current tracker interfaces/results so
 the next agent can decide how to use them. The information and preparation code
 are committed; raw data, generated arrays and the local HTML stay under ignored
-work/. No external-data training or transfer evaluation has been performed.
+work/. This preparation snapshot was followed by the completed
+[multi-dataset v4 experiments](results/multidata-training-v4/final_report.md):
+actual external pretraining, matched real-only controls and sparse Biohub
+adaptation across 21 full variants. No candidate passed the adoption rule;
+v3 `A_residual_m3.0` remains selected at **0.934802374260586**.
+
+Start with the [v4 continuation handover](handover/multidata-training-v4/CONTINUATION.md)
+to review current results and propose the next study. It links the measured
+report, [offline dashboard](results/multidata-training-v4/dashboard.html),
+source/compute evidence and inference dependencies. Code and sanitized results
+are committed; microscopy, checkpoints and the inference ZIP remain local.

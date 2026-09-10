@@ -1,0 +1,15 @@
+source,partition,samples,bags,positive_groups,negative_groups
+biohub_44b6,source_only_adaptation,71,8311.0,20.0,7668.0
+biohub_6bba,source_only_adaptation,128,16507.0,84.0,14123.0
+synthetic_sequence,test,91,11648.0,506.0,11075.0
+synthetic_sequence,train,1973,94704.0,41485.0,47352.0
+synthetic_sequence,validation,110,14080.0,607.0,13397.0
+synthetic_static,test,72,0.0,0.0,0.0
+synthetic_static,train,1386,0.0,0.0,0.0
+synthetic_static,validation,81,0.0,0.0,0.0
+zoo_ascidian,test,1,604.0,20.0,428.0
+zoo_ascidian,train,1,3568.0,132.0,2890.0
+zoo_ascidian,validation,1,90.0,23.0,43.0
+zoo_zebrafish,test,1,9344.0,4086.0,4008.0
+zoo_zebrafish,train,1,45824.0,20083.0,20457.0
+zoo_zebrafish,validation,1,8448.0,3702.0,3702.0

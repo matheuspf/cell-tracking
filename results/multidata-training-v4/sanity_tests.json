@@ -1,0 +1,58 @@
+{
+  "G": {
+    "initial_loss": 3.216646194458008,
+    "final_loss": 5.628859526041197e-06,
+    "steps": 600,
+    "encoder_gradient_norm": 0.12914660573005676,
+    "actual_source": true,
+    "positive_bags": 4,
+    "hard_continuation_bags": 4,
+    "daughter_permutation": true,
+    "padding_invariance": true
+  },
+  "I": {
+    "initial_loss": 3.272693395614624,
+    "final_loss": 0.0012189444387331605,
+    "steps": 600,
+    "encoder_gradient_norm": 0.00784252304583788,
+    "actual_source": true,
+    "positive_bags": 4,
+    "hard_continuation_bags": 4,
+    "daughter_permutation": true,
+    "padding_invariance": true
+  },
+  "D": {
+    "initial_loss": 0.7003108859062195,
+    "final_loss": 0.3219048082828522,
+    "steps": 600,
+    "native_static_pixels": true
+  },
+  "decoder": {
+    "raw_actual_solver": [
+      {
+        "learned_gain": 0.0,
+        "forks": 0,
+        "edges": 16
+      },
+      {
+        "learned_gain": 2.0,
+        "forks": 1,
+        "edges": 17
+      },
+      {
+        "learned_gain": -2.0,
+        "forks": 0,
+        "edges": 16
+      }
+    ],
+    "event_solver_positive": true,
+    "event_solver_negative": true,
+    "zero_head_identity": true
+  },
+  "source_coordinates": "All 3713 raw/prepared NPZ coordinate/edge/grid comparisons performed by cache adapter",
+  "no_gt_features": "proposals.build accepts time, points, anchors only; targets computed afterward",
+  "zoo_direct_parents": {
+    "zebrafish": 318106,
+    "ascidian": 668
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "created": "2026-09-10T02:55:17.364148+00:00",
+  "arm": "C4",
+  "seed": 314159,
+  "reason": "prespecified C4 replication despite no qualifying external arm",
+  "controls": [
+    "C1"
+  ],
+  "repeat_short_control": false,
+  "target_threshold_changes": false,
+  "primary_scores_sha256": "682c59d362ba849fcf3251fbb869ef14b88cc01d78c6718e17aeb3ad0a2b9a0b"
+}

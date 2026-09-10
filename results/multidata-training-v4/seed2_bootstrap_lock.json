@@ -1,0 +1,17 @@
+{
+  "created": "2026-09-10T01:04:51.728660+00:00",
+  "primary_comparative_outcomes_opened": false,
+  "seed": 314159,
+  "settings_predeclared": true,
+  "reason": "Use free GPU capacity after source44 primary adaptation",
+  "sources": [
+    "44b6",
+    "6bba"
+  ],
+  "pretrain_updates": {
+    "D": 12000,
+    "G": 20000,
+    "I": 20000
+  },
+  "synthetic_D_note": "Shared static seed2 checkpoint; unused if the later eligible external arm is geometry-only C3"
+}

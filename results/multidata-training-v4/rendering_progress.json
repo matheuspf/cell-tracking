@@ -1,0 +1,27 @@
+[
+  {
+    "stage": "prepare",
+    "returncode": 0,
+    "seconds": 209.97305027395487
+  },
+  {
+    "stage": "train_primary",
+    "returncode": 0,
+    "seconds": 556.7942033582367
+  },
+  {
+    "stage": "calibrate_primary",
+    "returncode": 0,
+    "seconds": 7.479125504381955
+  },
+  {
+    "stage": "infer_primary",
+    "returncode": 0,
+    "seconds": 394.39511037571356
+  },
+  {
+    "stage": "evaluate_primary",
+    "returncode": 0,
+    "seconds": 34.08980081882328
+  }
+]
