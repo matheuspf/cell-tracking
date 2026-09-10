@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "study_id": "lineage-reconstruction-v5",
+  "status": "planned_not_executed",
+  "prepared_on": "2026-09-10",
+  "base_branch": "handover/multidata-training-v4",
+  "reviewed_commit": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+  "branch": "handover/lineage-reconstruction-v5",
+  "incumbent_score": 0.934802374260586,
+  "target_score": 0.95,
+  "target_scope": "official local aggregation on the same 199 clips; not a leaderboard prediction",
+  "next_stage": "P500",
+  "authoring_validation": {
+    "python_version": "3.13.5",
+    "synthetic_reference_tests_passed": 55,
+    "synthetic_reference_tests_failed": 0,
+    "python_files_compiled": 4,
+    "json_configs_parsed": 3,
+    "cli_help_passed_from_foreign_working_directory": true,
+    "target_budget_executed": true,
+    "tested_code_and_config_git_blobs_equal_remote": true,
+    "tested_code_and_config_files": 7,
+    "microscopy_data_accessed": false,
+    "pretrained_models_downloaded_or_run": false,
+    "v5_gpu_training_run": false,
+    "v5_official_graph_scoring_run": false,
+    "note": "Reference tests validate helper contracts, not model integration or scientific gains. Local Codex must rerun tests in its actual runtime and implement the remaining pipeline."
+  },
+  "measured_v5_score": null,
+  "measured_v5_gain": null,
+  "expired_v4_deadline_reused": false,
+  "delivery": "new GitHub branch and pull request against completed v4; no ZIP or activation overlay"
+}

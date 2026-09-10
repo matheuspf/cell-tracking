@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "repository": "matheuspf/cell-tracking",
+  "reviewed_commit": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+  "incumbent": "v3 A_residual_m3.0 / v4 C0",
+  "score": 0.934802374260586,
+  "target_score": 0.95,
+  "samples": 199,
+  "embryos": {
+    "44b6": {"samples": 71, "score": 0.931664468721842},
+    "6bba": {"samples": 128, "score": 0.935221784097327}
+  },
+  "counts": {"edge_tp": 123135, "edge_fp": 4965, "edge_fn": 5748, "division_tp": 29, "division_fp": 92, "division_fn": 122, "predicted_nodes": 4108943},
+  "adjusted_edge_contribution": 0.9228682178819851,
+  "v4_selected_improvement": 0.0,
+  "v4_primary_C4_delta": 0.000146776125,
+  "v4_repeated_C4_delta": -0.000260245840,
+  "scope": "reported official local operational exploratory; not clean OOF or hidden test",
+  "scorer_snapshot": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "verify_fresh_counts_locally": true
+}
