@@ -78,7 +78,7 @@ def _run(variants,workers=6,serial=False):
                     except (psutil.NoSuchProcess,psutil.AccessDenied):pass
                 current=read(OUT/'resource_current.json')
                 age=(datetime.now(timezone.utc)-datetime.fromisoformat(current['at'])).total_seconds()
-                if len(worker_ids)<=8 and current['summed_process_rss_gib']<24 and 0<=age<90:break
+                if len(worker_ids)<=10 and current['summed_process_rss_gib']<24 and 0<=age<90:break
                 time.sleep(15)
             r=one(task)
             if i%25==0:print('official',i+1,len(tasks),r['variant'],flush=True)

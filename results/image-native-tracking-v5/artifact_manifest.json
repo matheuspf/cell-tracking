@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-10T19:10:02.680415+00:00",
+  "at": "2026-09-10T19:20:55.366123+00:00",
   "status": "executing",
   "files": {
     "status.json": {
@@ -201,6 +201,14 @@
     "durable_output_receipt.json": {
       "sha256": "8146a81b6e5844d800b667eab9c31f3a1ecd86d100c9e74a9a6893d6a6cfc0f9",
       "bytes": 641
+    },
+    "CPU_worker_recovery_benchmark.json": {
+      "sha256": "1ac1bb6bad40db0c5812c81851ca91d23f1cce8e61c52cfef6b70dfe3ab52453",
+      "bytes": 531
+    },
+    "CPU_worker_recovery_schedule.json": {
+      "sha256": "870de64176f8d59986b2eb1ce9cdaca8198dcd5ca4c9c9982017b557035e1a44",
+      "bytes": 1070
     }
   },
   "allowlist_only": true,

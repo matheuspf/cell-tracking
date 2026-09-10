@@ -188,6 +188,9 @@ the frozen optimizer recipe was retained.
 One bounded serial official scorer overlapped decoder pools, using per-variant
 locks, current memory admission checks and the unchanged official matching and
 aggregation functions. Completed original batches reused those same receipts.
+Later batches used ten CPU decoder workers after an eight-worker memory/CPU
+benchmark; existing loaded batches retained eight. The numerical transformation,
+optimizer and official scorer/aggregator functions passed exact AST checks.
 The causes of the reboots are unknown. Early package trials exposed missing declared
 model-config/hash-lock dependencies and a guard rejecting newly generated GEFF
 outputs; precise pinned exceptions were tested. An extra pixel fixture's incorrect

@@ -210,6 +210,11 @@ Detailed GT identities, optical-review images, raw data, checkpoints and submiss
     if (OUT/'resume_determinism_second.json').exists():
         replay=read(OUT/'resume_determinism_second.json')
         body+=f"\nSecond-recovery N2 replay: {replay['matching_logged_losses']} of {len(replay['comparisons'])} overlapping logged losses match at five decimals; the maximum logged absolute difference is {replay['max_logged_absolute_difference']:.5f}. This does not establish bitwise training reproducibility. The restored optimizer/RNG/data-order state and original numerical recipe were retained.\n"
+    if (OUT/'CPU_worker_recovery_schedule.json').exists():
+        body+='\nAfter recovery, 22 resource samples across 670 seconds of eight-worker decoding measured 16.37 GiB peak summed RSS. Adding two workers at the largest observed worker footprint plus the prior fresh-inference subtree peak projected 22.90 GiB. Newly launched decoder batches therefore use ten workers; already loaded batches retain eight. CPU pools remain serialized, and one additional official scorer requires a fresh RSS sample below 24 GiB. Numerical optimizer, decoder transformation, official matching and aggregation functions passed exact AST checks; model settings and solver limits were unchanged. The projection is a scheduling estimate, not a measured ten-worker peak.\n'
+    if (OUT/'CPU_ten_worker_validation.json').exists():
+        observed=read(OUT/'CPU_ten_worker_validation.json')
+        body+=f"\nSubsequent ten-worker production observation recorded {observed['samples']} samples, peaking at {observed['max_observed_summed_RSS_gib']:.3f} GiB summed RSS and {observed['max_observed_GPU_gib']:.3f} GiB GPU. The full study resource summary also includes phases outside these ten-worker batches.\n"
     if feature_audit:
         h=next(r for r in feature_audit['coverage'] if r['embryo']=='pooled')
         z=next(r for r in feature_distribution if r['embryo']=='pooled' and r['feature']=='z_um')

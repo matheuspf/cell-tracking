@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-10T19:15:45.601817+00:00",
+  "benchmark_sha256": "1ac1bb6bad40db0c5812c81851ca91d23f1cce8e61c52cfef6b70dfe3ab52453",
+  "future_decoder_workers": 10,
+  "existing_loaded_batches_workers": 8,
+  "existing_batches_preserved": true,
+  "scorer_extra_workers": 1,
+  "scorer_RSS_admission_gib": 24,
+  "unchanged_numerical_functions": {
+    "train_native.py:_fit": "31b8be3931511f8a196ff9635fa338b29a9234f7d273e248bde1a9c7f5fbba50",
+    "predict_batch.py:decode_one": "853582c54408dc5b70c09086937ba4ee467755c48012ca6af21be343c3d62a95",
+    "predict_batch.py:transform": "76e7561226543e54d44edc26440ea266c991de924fe5af9d56a50262bb455d32",
+    "evaluate.py:one": "b96bf18b4ae064843da3d35b39c455e14d44caf3577926d40766cdd2a910b7f5",
+    "evaluate.py:aggregate_complete": "c86fb58f810a74957250d987f19851e0ed304191b7b74f2f70aec5ec0deeaa47"
+  },
+  "solver_objective_and_time_limit_unchanged": true,
+  "GT_scores_used_for_decision": false,
+  "validation": "Measured 8-worker resource profile; 10-worker observation remains pending until a new native batch launches."
+}

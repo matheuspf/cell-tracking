@@ -136,8 +136,12 @@ benchmark reached 2.50 combined updates/second, versus the earlier single-source
 `source_lane_schedule.json` and `GPU_concurrency_benchmark.json`; the running
 supervisor's original `gpu_policy` string describes its startup queue only.
 CPU process pools share a lock. Completed control graphs are reused. Remaining
-control graphs and subsequent decoder pools use eight workers after measured
-CPU/RSS profiling, with other pools at six or fewer.
+control graphs and already loaded N1/HOCT pools use eight workers. A further
+22-sample, 670-second benchmark measured 16.37 GiB peak summed RSS; two more peak
+workers plus the prior inference subtree peak project 22.90 GiB. Newly launched
+decoder batches use ten workers, with other pools at six or fewer. The projection
+is not a measured ten-worker peak. Numerical functions passed exact AST checks.
+See `CPU_worker_recovery_benchmark.json` and `CPU_worker_recovery_schedule.json`.
 An event index avoids repeated scans; every MILP array remained exact on 16 source
 fixtures. HiGHS's configured two-second limit can be exceeded by presolve/runtime;
 the report records actual elapsed solver time. Check actual state rather
@@ -215,7 +219,7 @@ artifact waiters are separate. They never stage, commit, push or submit anything
 
 The separate `auto_evaluate` helper in tmux `official-scorer` scores each registered
 variant once all 199 prediction receipts exist, while the decoder pool continues.
-One serial scorer is allowed beside at most eight pool workers, with fresh resource
+One serial scorer is allowed beside at most ten pool workers, with fresh resource
 samples and a 24 GiB RSS admission threshold. A measured six-worker/one-scorer overlap
 peaked at 14.90 GiB RSS. Per-variant locks prevent overlapping original batches from
 writing the same receipts; the official evaluator and aggregator are AST-identical.
