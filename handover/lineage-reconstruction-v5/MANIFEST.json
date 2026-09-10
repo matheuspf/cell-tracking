@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "study_id": "lineage-reconstruction-v5",
+  "base_commit": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+  "payload_directory_git_tree_sha1": "cac457449aab64c72039cad9ba30567f742b054d",
+  "scope": "14 authored payload files before adding STATUS.json and this manifest; excludes those two metadata files",
+  "git_blob_algorithm": "SHA1 of ASCII('blob ' + decimal byte size) + NUL + exact UTF-8 file bytes",
+  "local_validation": "The four Python files and three JSON configs were executed/parsed locally and their Git blob identities compared with the remote tree. Documentation blob identities are from the authored remote tree; no claim of local documentation execution is made.",
+  "files": [
+    {"path":"CODEX_PROMPT.md","bytes":3543,"git_blob_sha1":"f3d71b42c5b97ea50401382d04beb4fe76a37853"},
+    {"path":"EXPERIMENTS.md","bytes":16111,"git_blob_sha1":"256959923e9efa33fc6636bf073af89c1b1ffcd7"},
+    {"path":"IMPLEMENTATION.md","bytes":10768,"git_blob_sha1":"4ab4519d081081f0566c65857c3be60e5c2f07df"},
+    {"path":"README.md","bytes":2580,"git_blob_sha1":"acb6d576aac9a7879b894d02ae67c19a4d313798"},
+    {"path":"REVIEW.md","bytes":4770,"git_blob_sha1":"ae5e1e4d150a86b4027a6bf52199e13163042f5c"},
+    {"path":"SOURCES.md","bytes":3745,"git_blob_sha1":"e37d0c05861062892575ebcf580114af0a3f666a"},
+    {"path":"VALIDATION.md","bytes":4863,"git_blob_sha1":"d0d0969e1f70191544c9a8ec004f2310f41bfa00"},
+    {"path":"baseline.json","bytes":904,"git_blob_sha1":"4275e98c30e66e6d9b3d3ce6e75135abb8997ad8","sha256":"3bb0e6251182a8fb59f5858cc4267d7a44bc06c78943e1c78f8c6879e9bb08bf"},
+    {"path":"experiments.json","bytes":2016,"git_blob_sha1":"f109870ce0b9631762ec11b71676f70eab3fc1c8","sha256":"632b6d5f37cc92e39101eba04ded46111a81e1014e406f004d78ebbc00f3dd0f"},
+    {"path":"model_registry.json","bytes":2166,"git_blob_sha1":"6846e9b65159564c9e9e9721078f6e0f19d069f8","sha256":"fb8b7023d4a74e284c7d04fea26d761a8d4c29e4b39b3c5aa5a466354371f744"},
+    {"path":"preflight.py","bytes":2746,"git_blob_sha1":"0fefe70e0229f398c75f27ff96671cc431fe817e","sha256":"d09f330003230c3e6331a1868f8a1831988f8c7eb8cb629aba5117b1e40f3b1b"},
+    {"path":"reference_contracts.py","bytes":8520,"git_blob_sha1":"53c288f9d58b97c71487a0b02e2f2d0c3421eabd","sha256":"52a6748ff44b1f0a05958ecf2b5caca4509f1a38611d991d4f74e04961890e6b"},
+    {"path":"target_budget.py","bytes":2485,"git_blob_sha1":"1e0e0fe519521cbdc5270a5e8701b4d904c1a2a8","sha256":"b533e6fd8d8586dd65516c9dbef366ce0631ab315da3194e4515cfc54ed6048a"},
+    {"path":"test_contracts.py","bytes":9314,"git_blob_sha1":"1b584d73d4c2d2e5ec03f199740c23764edd1107","sha256":"9858f2c3cdae6eb057c2bd9e05568e436c927e7347d7622d2e42fbfd58c9c88b"}
+  ]
+}
