@@ -4,6 +4,7 @@ import numpy as np
 from scipy.optimize import milp,Bounds,LinearConstraint
 from scipy.sparse import coo_matrix
 from .event_paths import unique_edges,equivalence_classes
+from .event_index import WindowEvents
 
 DEFAULT=dict(birth_cost=2.,termination_cost=1.,split_cost=4.,incumbent_edge_bonus=.75,
              new_node_cost=2.,context_frames=5,time_limit=2.,mip_rel_gap=.001,
@@ -118,6 +119,7 @@ def decode(nodes,pairs,scores,base_nodes,base_edges,confidence=None,split_owner=
     enabled |= np.array([tuple(p) in incumbent for p in pairs])
     pairs=pairs[enabled];scores=scores[enabled];tpair=tpair[enabled]
     event_classes=equivalence_classes(nodes,pairs,scores,base_edges,old_ids)
+    window_events=WindowEvents(event_classes,{int(n[0]):int(n[1]) for n in nodes})
     event_lookup={alternative:identity for identity,alternatives in event_classes.items() for alternative in alternatives}
     committed_events=set()
     chosen_all=set();selected_all=set();first_selected=None;first_incoming={};receipts=[]
@@ -125,7 +127,7 @@ def decode(nodes,pairs,scores,base_nodes,base_edges,confidence=None,split_owner=
         end=min(last,t+cfg['context_frames']-1);ni=np.flatnonzero((alltimes>=t)&(alltimes<=end));pi=np.flatnonzero((tpair>=t)&(tpair<end))
         wn=nodes[ni];wp=pairs[pi];ws=scores[pi]
         sel,edges,receipt=solve_window(wn,wp,ws,old_ids,incumbent,confidence[ni],groups,
-            first_selected,first_incoming,last,protected,cfg,event_classes,committed_events)
+            first_selected,first_incoming,last,protected,cfg,window_events.window(t,end),committed_events)
         if sel is None:
             # Shared boundary may differ from C0. Keep committed IDs, then choose a legal C0 continuation.
             sel=(old_ids&set(wn[:,0].astype(int)))|(first_selected or set());edges=set()

@@ -13,7 +13,9 @@ ALLOW=['status.json','ablation_scores.csv','score_rows.csv','family_outcomes.csv
     'architecture_details.json','actual_native_pixel_test.json','regret_summary.json','division_regret.csv',
     'score_attrition.csv','score_attrition_rows.csv','matched_controls.csv','decoder_runtime.csv','coverage_rows.csv',
     'dataset_use.csv','runtime_versions.json','source_manifest.json','optical_review_receipt.json','preservation_check.json',
-    'resource_summary.json','execution_repairs.json','source_event_coverage.json','early_package_validation.json']
+    'resource_summary.json','execution_repairs.json','source_event_coverage.json','early_package_validation.json',
+    'event_index_equivalence.json','event_index_deployment.json','CPU_worker_profile.json','serialization_receipt.json',
+    'fresh_payload_compatibility.json','fresh_validation_schedule.json','fresh_primary_comparison.json','evaluation_schedule.json']
 
 
 def run():
@@ -27,8 +29,9 @@ def run():
     write(destination/'recovery.json',{k:recovery[k] for k in ['at','cache_hash_checks','critical_old_hashes_preserved',
         'native_resume_step','native_checkpoint_sha256','last_logged_step','repeated_updates_required','reason','restart_policy']})
     verification={}
-    for name in ['implementation_tests.log','handover_contract_tests.log']:
-        path=OUT/'logs'/name;text=path.read_text()
+    for name in ['implementation_tests','handover_contract_tests']:
+        path=max((OUT/'logs').glob(f'{name}*.log'),key=lambda p:p.stat().st_mtime)
+        text=path.read_text()
         assert text.rstrip().endswith('OK'),name
         verification[name]=dict(sha256=sha(path),summary='\n'.join(text.splitlines()[-4:]))
     write(destination/'test_receipt.json',dict(at=now(),tests=verification))

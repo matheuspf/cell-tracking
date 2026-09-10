@@ -75,7 +75,10 @@ def validate_complete():
             counts.append(r)
         result=aggregate(counts,[r['dataset'] for r in rows]);all_counts.append(dict(variant=variant,samples=len(counts),score=result['score']))
         if variant=='C0':assert abs(result['score']-BASE['pooled'])<1e-12
-    fresh=read(OUT/'fresh_validation.json');assert fresh['passed'] and fresh['clips']==6 and fresh['clip_variant_runs']==72
+    fresh=read(OUT/'fresh_validation.json');assert fresh['completed'] and fresh['export_passed'] and fresh['clips']==6 and fresh['clip_variant_runs']==72
+    assert fresh['payload_compatibility']['passed'] and fresh['final_guard_selftest']['passed']
+    assert len(fresh['final_default'])==1 and fresh['final_default'][0]['passed']
+    assert len(fresh['C0_disablement'])==1 and fresh['C0_disablement'][0]['exact_graph_parity']
     assert read(OUT/'actual_native_pixel_test.json')['passed']
     assert read(OUT/'final_analysis_complete.json')['complete']
     assert read(OUT/'optical_review_receipt.json')['complete']
@@ -92,7 +95,7 @@ def continuation(selection):
     previous=REPO/'handover/image-native-tracking-v5/CONTINUATION.md'
     backup=OUT/'continuation_execution_checkpoint.md'
     if not backup.exists():backup.write_text(previous.read_text())
-    r=read(OUT/'resource_summary.json');text=f'''# V5 completed execution continuation
+    r=read(OUT/'resource_summary.json');fresh=read(OUT/'fresh_validation.json');text=f'''# V5 completed execution continuation
 
 X500–X580 were implemented and executed on the existing RTX 4090. All 18 registered
 configurations have fresh official results on all 199 clips: 16 operational
@@ -118,9 +121,17 @@ The ignored root is `/kaggle/working/cell-tracking/image-native-tracking-v5`.
 Its `inference_package/` and `inference_package.zip` contain the tested package;
 `inference_package_receipt.json` pins the archive. Six full density-spanning clips
 from both embryos exercised all 12 primary/control pipelines from images, under
-unfamiliar names and early Python read/network auditing. A separate invocation
-tested `--disable-new-heads`. CSV roundtrip and exact graph or documented numeric
-parity passed. The hooks are not OS namespace isolation; Kaggle runtime is untested.
+unfamiliar names and early Python read/network auditing. These executions used a
+validation bundle during replica training. Its complete runtime, primary weights,
+calibrations and external dependency pins are byte-identical to the final package;
+the final configuration and extra replica files are recorded separately. Two actual
+final-package invocations tested the selected default and `--disable-new-heads` on
+opposite embryos. CSV roundtrip passed. {len(fresh['verified_variants'])} of 12 pipelines
+passed the unchanged graph/count parity criterion on all six clips. Failed parity
+pipelines: {', '.join(fresh['failed_parity_variants']) or 'none'}. Their executed tests
+and integer-count differences remain in the report; they are excluded from promotion.
+The selected export and explicit C0 fallback passed their fresh tests.
+The hooks are not OS namespace isolation; Kaggle runtime is untested.
 
 Use the preserved runtime `/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python`.
 The package requires the pinned v1 native source/primary/secondary/DeepCenter models
@@ -200,7 +211,10 @@ def run(wait=False):
         exact_C0_score=True,all_199_GT_estimates_preserved=True,final_package_bytes_verified=True,
         fresh_validation_sha256=sha(OUT/'fresh_validation.json'),preservation_sha256=sha(OUT/'preservation_check.json')))
     write(OUT/'execution_complete.json',dict(at=now(),complete=False,numerical_experiments_complete=True,optional_P2_run=False,
-        selected=selection['selected'],fresh_inference_passed=True,final_validation_sha256=sha(OUT/'validation_receipt.json')))
+        selected=selection['selected'],selected_export_fresh_inference_passed=True,
+        all_primary_fresh_parity_passed=read(OUT/'fresh_validation.json')['passed'],
+        failed_fresh_parity_variants=read(OUT/'fresh_validation.json')['failed_parity_variants'],
+        final_validation_sha256=sha(OUT/'validation_receipt.json')))
     browser_python=Path('/root/.conda/envs/cell-tracking/bin/python')
     def browser_check():
         with (OUT/'logs/dashboard_final_check.log').open('a') as log:

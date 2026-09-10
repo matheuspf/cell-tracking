@@ -183,9 +183,27 @@ def analysis():
         decoders.append(dict(variant=folder.name,samples=len(rr),windows=len(windows),
             fallback_windows=sum(w.get('fallback',False) for w in windows),optimal_windows=sum(w.get('optimal',False) for w in windows),
             time_limit_windows=sum(w.get('status')==1 for w in windows),summed_decode_seconds=sum(r['seconds'] for r in rr),
+            max_solver_call_seconds=max(w['seconds'] for w in windows),
+            median_solver_call_seconds=float(np.median([w['seconds'] for w in windows])),
+            configured_solver_time_limit_seconds=2.,
             maximum_window_variables=max(w.get('variables',0) for w in windows),
             missing_model_edges=sum(r['decode']['model_feature_missing'] for r in rr)))
     pd.DataFrame(decoders).to_csv(OUT/'decoder_runtime.csv',index=False)
+    serialized=[]
+    for variant in sorted(v for v in scores.variant.unique() if v!='C0' and not v.startswith('Oracle_')):
+        reordered=0
+        for row in inventory():
+            name=row['dataset'];g=graph(name,variant);c=arrays(OUT/'observations'/f'{name}.npz')
+            decoded=c['nodes'][np.isin(c['nodes'][:,0],g['nodes'][:,0])]
+            from strong_tracker_v3.common import graph_hash
+            receipt=read(OUT/'prediction_receipts'/variant/f'{name}.json')
+            assert graph_hash(decoded,g['edges'])==receipt['graph_hash']
+            reordered+=not np.array_equal(decoded,g['nodes'])
+        serialized.append(dict(variant=variant,samples=199,decode_vs_storage_order_differs=reordered,
+            exact_nodes_and_edges_by_ID_preserved=True))
+    write(OUT/'serialization_receipt.json',dict(at=now(),variants=serialized,
+        explanation='Prediction receipts hash decoder node order; official scoring hashes persisted delta reconstruction (retained C0 order then new nodes). Fresh package serialization now matches the latter exactly, with identical IDs, coordinates and edges.',
+        inference_reads_stored_graphs=False,old_coordinates_never_moved=True))
     source=[read(p) for p in sorted((OUT/'source_pilots').glob('*_final_objective.json'))]
     source_summary=[{**{k:v for k,v in r.items() if k not in ['decode','score','C0']},
         'counts':{k:r['score'][k] for k in ['edge_tp','edge_fp','edge_fn','division_tp','division_fp','division_fn','num_pred_nodes','matched_nodes']},

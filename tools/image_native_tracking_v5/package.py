@@ -3,7 +3,7 @@ import shutil,zipfile
 from .common import *
 
 MODULES=['__init__','common','native_adapter','observations','candidates','cache','banks','fresh_observations',
-    'score_models','hoct_adapter','calibrate','event_paths','temporal_decode','predict_batch','deepcenter','package_predict']
+    'score_models','hoct_adapter','calibrate','event_paths','event_index','serialization','inference_fingerprints','temporal_decode','predict_batch','deepcenter','package_predict']
 
 def build(selected='C0',name='inference_package'):
     package=OUT/name

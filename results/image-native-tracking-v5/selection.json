@@ -11,6 +11,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -19,6 +20,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -27,6 +29,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -35,14 +38,16 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
       "primary": "J_native_frozen",
       "replica": "independent fresh execution",
-      "complete": false,
+      "complete": true,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -51,6 +56,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -59,6 +65,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     },
     {
@@ -67,6 +74,7 @@
       "complete": false,
       "primary_pass": false,
       "replica_pass": false,
+      "fresh_pass": false,
       "eligible": false
     }
   ],
@@ -91,5 +99,6 @@
     "delta_C0": 0.0
   },
   "selection_pending": true,
+  "fresh_parity_failures": [],
   "interpretation": "Repeated operational data and inherited checkpoint exposure; no independent biological generalization claim."
 }

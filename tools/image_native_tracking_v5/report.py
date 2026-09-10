@@ -18,29 +18,32 @@ def csv_rows(name):
 
 def decision(scores):
     by={(r['variant'],r['embryo']):r for r in scores}
+    fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else {}
+    verified=fresh.get('verified_variants',[])
     def passes(v):
         return all((v,em) in by for em in BASE) and by[v,'pooled']['score']>BASE['pooled'] and all(by[v,em]['score']>=BASE[em]-1e-8 for em in ['44b6','6bba'])
     gates=[]
     for primary,replica in REPLICAS.items():
         complete=all((v,em) in by for v in [primary,replica] for em in BASE)
         gates.append(dict(primary=primary,replica=replica,complete=complete,primary_pass=passes(primary),
-            replica_pass=passes(replica),eligible=complete and passes(primary) and passes(replica)))
-    fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else {}
-    verified=fresh.get('verified_variants',[])
+            replica_pass=passes(replica),fresh_pass=primary in verified,
+            eligible=complete and passes(primary) and passes(replica) and primary in verified))
     for primary in DETERMINISTIC:
         complete=all((primary,em) in by for em in BASE)
         gates.append(dict(primary=primary,replica='independent fresh execution',complete=complete,
-            primary_pass=passes(primary),replica_pass=primary in verified,eligible=complete and passes(primary) and primary in verified))
+            primary_pass=passes(primary),replica_pass=primary in verified,fresh_pass=primary in verified,
+            eligible=complete and passes(primary) and primary in verified))
     eligible=[r['primary'] for r in gates if r['eligible']]
     selected=max(eligible,key=lambda v:by[v,'pooled']['score']) if eligible else 'C0'
     score=by.get((selected,'pooled'),{'score':BASE['pooled']})['score']
     exploratory=[r for r in scores if r['embryo']=='pooled' and not r['variant'].startswith('Oracle_')]
     best=max(exploratory,key=lambda r:r['score']) if exploratory else None
     completion=read(OUT/'execution_complete.json') if (OUT/'execution_complete.json').exists() else {}
-    finished=completion.get('complete',False) and fresh.get('passed',False)
+    finished=completion.get('complete',False) and fresh.get('export_passed',False)
     return dict(selected=selected,score=score,delta_C0=score-BASE['pooled'],target_met=finished and score>=.95,
         numeric_target_reached=score>=.95,
         gates=gates,best_exploratory=best,selection_pending=not finished,
+        fresh_parity_failures=fresh.get('failed_parity_variants',[]),
         interpretation='Repeated operational data and inherited checkpoint exposure; no independent biological generalization claim.')
 
 
@@ -95,6 +98,9 @@ def outcome_text(selection):
         +('Final artifact validation is still running.' if selection['selection_pending'] else 'The registered local target and replication/fresh-inference gates passed.' if selection['target_met'] else 'The registered >=0.95 target was not achieved.'),
         'The highest operational point seen in the frozen grid is '+selection['best_exploratory']['variant']+
         f" at {selection['best_exploratory']['score']:.15f}. This hindsight point is distinct from the gated export."]
+    control=index['J_native_frozen','pooled']
+    result.append(f"The frozen-native J control scores {control['score']:.15f}, delta C0 {control['delta_C0']:+.15f}. "
+        'It changes both the primary-only native evidence and temporal decoder relative to the full inherited C0 pipeline, so this difference does not isolate the decoder alone. H/N results are compared with this matched control as well as C0; learning gains over a weaker control are not incumbent gains.')
     for family in evidence['families']:
         r=index[family['best_primary_exploratory'],'pooled'];regret=next(q for q in family['regret'] if q['embryo']=='pooled')
         result.append(f"{family['family']} family: the highest primary point is {r['variant']} at {r['score']:.15f}, "
@@ -105,15 +111,17 @@ def outcome_text(selection):
             f"{regret['selected_new_nodes_isolated']} selected new nodes have no selected incident edge; sparse unmatched nodes are not certified false cells.")
     gate_text=[]
     for gate in selection['gates']:
-        gate_text.append(f"{gate['primary']}: {'passes' if gate['eligible'] else 'fails'} (primary {'passes' if gate['primary_pass'] else 'fails'}, replication {'passes' if gate['replica_pass'] else 'fails'})")
+        gate_text.append(f"{gate['primary']}: {'passes' if gate['eligible'] else 'fails'} (primary {'passes' if gate['primary_pass'] else 'fails'}, replication {'passes' if gate['replica_pass'] else 'fails'}, fresh parity {'passes' if gate['fresh_pass'] else 'fails'})")
     result.append('The registered gates are: '+ '; '.join(gate_text)+'. Positive pooled gain and no embryo regression beyond 1e-8 are both required; the primary seed remains the export.')
     for variant in ['Oracle_fixed','Oracle_augmented']:
         r=index[variant,'pooled'];result.append(f"{variant} scores {r['score']:.15f}, delta C0 {r['delta_C0']:+.15f}, "
             f"with division TP/FP/FN {r['division_tp']}/{r['division_fp']}/{r['division_fn']}. This graph-legal, bank-constrained heuristic uses target truth and relaxes incumbent protection. It is neither deployable nor a global upper bound.")
     result.append('The matched controls in matched_controls.csv compare complete graph scores on each population. score_decomposition.csv separates the exact additive division term and two explicitly arithmetic node-count counterfactuals. The node-only fixed-C0-edge experiment was run on the six full fresh-validation clips, and is labeled a subset diagnostic in fresh_node_only_scores.csv; it is not a nineteenth complete configuration.')
     result.append(f"Fresh inference completed {fresh['clip_variant_runs']} full clip/variant executions over six clips, using both source directions and density ranks 10%, 50%, and 90%. "
-        f"All {len(fresh['verified_variants'])} primary/control variants passed exact graph or documented official-count parity and CSV roundtrip. "
-        'The final package also executed its explicit disable switch in a separate image-to-C0 run. Unfamiliar names did not select models: the source model was an explicit argument. Each child installed file/socket audit hooks before numerical imports, denied study caches and annotations, and recomputed the models/proposals from images. These hooks are not Linux namespace or syscall isolation.')
+        f"{len(fresh['verified_variants'])} of 12 primary/control variants passed exact graph or documented official-count parity on all six clips, with CSV roundtrip. "
+        'Those six executions used a validation bundle during replica training. Every tested runtime, primary weight, calibration and external dependency pin was verified byte-identical in the final bundle; only the selected configuration and additional replica files differ. The final package separately executed its selected default without a variant override and its explicit disable switch on the other embryo. Unfamiliar names did not select models: the source model was an explicit argument. Each child installed file/socket audit hooks before numerical imports, denied study caches and annotations, and recomputed the models/proposals from images. These hooks are not Linux namespace or syscall isolation.')
+    if fresh['failed_parity_variants']:
+        result.append('Fresh parity failed for '+', '.join(fresh['failed_parity_variants'])+'. These tests were executed and their graph hashes and integer-count differences are preserved in fresh_validation.json. They are failed reproducibility measurements, not verified inference pipelines, and none can be promoted. Acceptance tolerances were not relaxed. Solver timeout/feasibility receipts document the machine-scheduling sensitivity separately; identical code and primary weights do not guarantee identical time-limited MILP decisions.')
     result.append('The inference package and ZIP remain in the ignored v5 output root, with hashes in inference_package_receipt.json and inference_dependency_manifest.json. New model weights and HOCT source are bundled; inherited native/DeepCenter/E teacher weights and patched native source are explicit pinned dependencies. runtime_versions.json records the actual tested environment. This does not certify the Kaggle runtime and no submission was made.')
     result.append('P2 dense-detector training was conditional and was not scheduled. Source-only full-field P1/DeepCenter pilots are recorded in P2_decision.json and family_analysis.json; they do not supply audited dense background labels, and fixed-node headroom was not exhausted. No additional synthetic replay, Zoo rendering, FOCUS access, nine-frame decoder, or target-label threshold sweep was run.')
     result.append('The local optical_review/index.html contains post-freeze raw microscopy projections and sparse-GT/C0/v5 overlays for official division gains, losses, and remaining misses. Selection is documented; no human judgments or new labels are invented. Complete division-identity regret, model score attrition, decoder fallback/runtime counts, and proposal-node regret are available in the accompanying CSVs.')
@@ -123,18 +131,18 @@ def outcome_text(selection):
 def build(final=False):
     scores=csv_rows('ablation_scores.csv');train,curves=training();cov=coverage();selection=decision(scores)
     protocol=read(OUT/'execution_protocol.json');complete_variants={r['variant'] for r in scores if r['embryo']=='pooled'}
-    status=dict(study_id='image-native-tracking-v5',updated=now(),status=('validating' if selection['selection_pending'] else 'complete') if final else 'executing',
+    status=dict(study_id='image-native-tracking-v5',updated=now(),status=('validating' if selection['selection_pending'] else 'complete_with_failed_fresh_parity' if selection['fresh_parity_failures'] else 'complete') if final else 'executing',
         target_score=.95,incumbent_score=BASE['pooled'],selected=selection['selected'],selected_score=selection['score'],target_met=selection['target_met'],
         complete_configurations=len(complete_variants),registered_configurations=len(protocol['variants']),
         complete_new_operational_variants=len([v for v in complete_variants if v!='C0' and not v.startswith('Oracle_')]),
         observations=len(list((OUT/'observations').glob('*.json'))),HOCT_feature_shards=len(list((OUT/'hoct_training_features').glob('*.json'))),
         DeepCenter_clips=len(list((OUT/'deepcenter').glob('*.json'))),expected_clips=199,
         complete_native_fits=sum(r['complete'] and not r['tiny'] and r['family'] in ['N1','N2'] for r in train),
-        planned_native_fits=8,source_only=True,prior_studies_preserved=True)
+        planned_native_fits=8,source_only=True,prior_studies_preserved=True,fresh_parity_failures=selection['fresh_parity_failures'])
     if final:
         assert complete_variants==set(protocol['variants']),sorted(set(protocol['variants'])-complete_variants)
         assert status['complete_native_fits']==8
-        assert (OUT/'fresh_validation.json').exists() and read(OUT/'fresh_validation.json')['passed']
+        assert (OUT/'fresh_validation.json').exists() and read(OUT/'fresh_validation.json')['export_passed']
     exposures=[
         dict(family='C0',direct_fit='legacy source/opposite-embryo repair pipeline',inherited='public primary/secondary native, DeepCenter and v2 E_hgb; embryos repeatedly reused',independent=False),
         dict(family='H0',direct_fit='source-only logit scale/offset and C0 structural prior',inherited='public HOCT general_v1 training biology not independently certified; C0 centers/regions inherit native exposure',independent=False),
@@ -149,7 +157,8 @@ def build(final=False):
         note='Exact additive arithmetic; counts and matching must be re-evaluated for each changed graph.')
     resource=read(OUT/'resource_current.json') if (OUT/'resource_current.json').exists() else None
     payload=dict(status=status,scores=scores,selection=selection,training=train,curves=curves,coverage=cov,exposure=exposures,budget=budget,
-        resources=resource,protocol=protocol,supervisor=read(OUT/'supervisor_state.json') if (OUT/'supervisor_state.json').exists() else None)
+        resources=resource,protocol=protocol,supervisor=read(OUT/'supervisor_state.json') if (OUT/'supervisor_state.json').exists() else None,
+        fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else None)
     write(OUT/'status.json',status);write(OUT/'selection.json',selection);write(OUT/'exposure.json',exposures);write(OUT/'score_budget.json',budget)
     pd.DataFrame(train).to_csv(OUT/'training_summary.csv',index=False);pd.DataFrame(curves).to_csv(OUT/'learning_curves.csv',index=False)
     pd.DataFrame([{k:v for k,v in r.items() if not isinstance(v,dict)} for r in cov]).to_csv(OUT/'coverage.csv',index=False)

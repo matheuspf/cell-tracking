@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-10T15:48:55.307968+00:00",
+  "plan_sha256": "c302e355d7604a6afecac10103456f3c6e64d5bd4258b26003da01ef067749ce",
+  "change": "Execute the frozen six clips and 12 primary/control pipelines as soon as primary N2 models and source calibrations complete, during replica training.",
+  "unchanged": "Clips, density ranks, variants, model and decoder recipes, and parity acceptance criteria.",
+  "final_requirement": "Every tested runtime/primary-weight/calibration byte and external dependency pin must match the final package. Execute the selected final default and C0 disable switch separately on opposite embryos.",
+  "target_scores_used_for_schedule": false,
+  "first_new_complete_operational_score_available": false,
+  "behavioral_tests": "17 passed, including mutated-payload and undeclared-code rejection"
+}

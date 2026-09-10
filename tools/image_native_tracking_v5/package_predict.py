@@ -34,6 +34,8 @@ def main():
     from image_native_tracking_v5.score_models import encode_at_nodes,native_scores,hoct_scores
     from image_native_tracking_v5.hoct_adapter import load as hoct_load
     from image_native_tracking_v5.predict_batch import VARIANTS,transform
+    from image_native_tracking_v5.serialization import delta_order
+    from image_native_tracking_v5.inference_fingerprints import inputs as input_fingerprints
     from image_native_tracking_v5.deepcenter import load as dc_load,score_nodes
     from strong_tracker_v3.common import validate,graph_hash
     import torch,zarr,resource,numpy as np
@@ -87,7 +89,9 @@ def main():
                     dc,_=score_nodes(*dc_bundle,c['nodes'],image_path)
                 n,e,receipt=transform(c,base,common,ms,cfg,joint,cal,dc)
                 receipt.update(model_executed=True,native_image_encoder_executed=family=='N2',full_frame_proposals_executed=True,
-                    hoct_backbone_executed=family.startswith('H'),deepcenter_full_frames_executed=cfg['pop']=='PDC')
+                    hoct_backbone_executed=family.startswith('H'),deepcenter_full_frames_executed=cfg['pop']=='PDC',
+                    input_fingerprints=input_fingerprints(c,common,ms,cfg,joint,cal,dc))
+            n=delta_order(n,base['nodes'])
             validate(n,e,shape);save(out/'predictions'/variant/f'{name}.npz',nodes=n,edges=e)
             records.append(dict(dataset=name,variant=variant,source=source,graph_hash=graph_hash(n,e),nodes=len(n),edges=len(e),
                 clip_elapsed_seconds=time.monotonic()-clip_start,**receipt))
@@ -102,6 +106,7 @@ def main():
                 for aa,bb in g['edges']:writer.writerow([index,name,'edge',-1,-1,-1,-1,-1,int(aa),int(bb)]);index+=1
     write(out/'inference_receipt.json',dict(selected=selected,variants=variants,records=records,seconds=time.monotonic()-start,
         cached_final_graph_reads=0,study_feature_cache_reads=0,source_labels_read=0,raw_images_read=True,
+        node_serialization='retained C0 order followed by novel discovery order; exact match to stored graph-delta reconstruction',
         peak_gpu_gib=torch.cuda.max_memory_allocated()/2**30,rss_gib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/2**20,
         guard_installed_before_numerical=sitecustomize.INSTALLED_BEFORE_NUMERICAL,guard_scope='Python audit file/socket hooks, not OS isolation'))
     sitecustomize.record()

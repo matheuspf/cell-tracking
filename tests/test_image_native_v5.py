@@ -7,6 +7,61 @@ from image_native_tracking_v5.temporal_decode import solve_window,decode,protect
 from image_native_tracking_v5.observations import peaks,regions
 from image_native_tracking_v5.event_paths import equivalence_classes
 
+class ExportTests(unittest.TestCase):
+    def test_failed_fresh_parity_blocks_an_otherwise_passing_primary(self):
+        import tempfile
+        from unittest.mock import patch
+        from image_native_tracking_v5 import common,report
+        scores=[dict(variant=v,embryo=e,score=common.BASE[e] if v=='C0' else .96) for v in ['C0','N_backbone_J','N_final_seed2'] for e in common.BASE]
+        with tempfile.TemporaryDirectory() as directory,patch.object(report,'OUT',Path(directory)):
+            fresh=Path(directory)/'fresh_validation.json'
+            common.write(fresh,dict(verified_variants=['C0'],export_passed=True,failed_parity_variants=['N_backbone_J']))
+            self.assertEqual(report.decision(scores)['selected'],'C0')
+            common.write(fresh,dict(verified_variants=['C0','N_backbone_J'],export_passed=True,failed_parity_variants=[]))
+            decision=report.decision(scores)
+            self.assertEqual(decision['selected'],'N_backbone_J');self.assertFalse(decision['target_met'])
+            common.write(Path(directory)/'execution_complete.json',dict(complete=True))
+            self.assertTrue(report.decision(scores)['target_met'])
+            scores[-2]['score']=.8
+            self.assertEqual(report.decision(scores)['selected'],'C0')
+
+    def test_final_package_reuses_only_identical_tested_payload(self):
+        import tempfile
+        from unittest.mock import patch
+        from image_native_tracking_v5 import common,fresh_validate
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);tested=root/'tested';final=root/'final'
+            def bundle(path,code='same',extra=None):
+                path.mkdir(exist_ok=True);files={'tools/run.py':code,'winning_config.json':path.name}
+                if extra:files[extra]='replica'
+                for name,value in files.items():
+                    dest=path/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(value)
+                common.write(path/'manifest.json',dict(files={name:common.sha(path/name) for name in files},
+                    base_dependencies={'weight':'frozen hash'},external_model_configs={'config':'frozen hash'}))
+            with patch.object(fresh_validate,'OUT',root/'receipts'):
+                bundle(tested);bundle(final,extra='models/native/44b6_N2_314159.pt')
+                self.assertTrue(fresh_validate.payload_compatibility(tested,final)['passed'])
+                bundle(final,code='changed')
+                with self.assertRaises(AssertionError):fresh_validate.payload_compatibility(tested,final)
+                bundle(final,extra='tools/unverified.py')
+                with self.assertRaises(AssertionError):fresh_validate.payload_compatibility(tested,final)
+
+    def test_real_delta_roundtrip_keeps_original_node_order(self):
+        import tempfile
+        from unittest.mock import patch
+        from image_native_tracking_v5 import common
+        from image_native_tracking_v5.serialization import delta_order
+        base=np.array([[10,2,1,2,2],[9,0,1,2,2],[20,1,1,2,2]],np.int64)
+        decoded=np.array([[9,0,1,2,2],[31,0,1,3,3],[10,2,1,2,2],[32,2,1,3,3]],np.int64)
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            with patch.object(common,'V3',root/'legacy'),patch.object(common,'OUT',root/'new'):
+                common.save(root/'legacy/selected_predictions/example.npz',nodes=base,edges=np.empty((0,2),np.int64))
+                common.save_delta('example','P1',decoded,np.empty((0,2),np.int64))
+                restored=common.graph('example','P1')
+                np.testing.assert_array_equal(delta_order(decoded,base),restored['nodes'])
+                np.testing.assert_array_equal(delta_order(base[[1,2,0]],base),base)
+
 class SolverTests(unittest.TestCase):
     def fixture(self,scores):
         n=np.array([[0,0,1,2,2],[1,1,1,1,2],[2,1,1,3,2]])

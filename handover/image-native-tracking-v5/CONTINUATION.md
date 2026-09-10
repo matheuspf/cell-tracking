@@ -27,14 +27,19 @@ Continue the current study; do not restart v4.
 - The offline dashboard passes desktop/mobile browser and CSV-download checks.
   It displays progress and only complete official score rows.
 
-No new operational 199-clip comparison had completed at this checkpoint. No target
-success or promotion has been established. Production N2 fits, replication, final
+The first new complete comparison, J with frozen primary native evidence, scores
+**0.8773353943845731**, delta C0 **-0.0574669798760129**. Its 44b6 score is
+0.7473208427350831 and 6bba score is 0.9021821466767624. All 199 clips were freshly
+scored with one CPU scorer alongside the six-worker control decoder. This changes
+both the primary-only evidence and decoder relative to full C0, so it does not
+isolate the decoder alone. No target success or promotion has been established.
+Production N2 fits, replication, final
 fresh inference, optical review, and final reporting remain required.
 
-At the 15:10 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
-shards and target candidate banks were complete. Production 44b6 N1 completed
-8,000 updates and source calibration; 6bba N1 was still running. Full control
-decoding and opposite-source HOCT inference were running. The additional actual
+At the 16:00 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
+shards and target candidate banks were complete. Both primary N1 fits completed
+8,000 updates and source calibration; primary 44b6 N2 was running beyond 2,400
+updates. Full control decoding and opposite-source HOCT inference were running. The additional actual
 3D-network pixel-response test passed. No training recipe was reduced.
 
 The guarded `inference_package_early4` C0 run completed from an unfamiliar filename
@@ -61,7 +66,11 @@ updates, with the model recipe unchanged.
 
 The detached tmux session is **`cell-tracking-v5`**. The supervisor runs one
 sequential native training lane and one serialized auxiliary GPU lane. CPU process
-pools share a lock and never exceed six pool workers. Check actual state rather
+pools share a lock. The existing control pool retains six workers; future decoder
+pools use eight after measured CPU/RSS profiling, with other pools at six or fewer.
+An event index avoids repeated scans; every MILP array remained exact on 16 source
+fixtures. HiGHS's configured two-second limit can be exceeded by presolve/runtime;
+the report records actual elapsed solver time. Check actual state rather
 than starting duplicate jobs:
 
 ```bash
@@ -111,12 +120,24 @@ validated for export**. Preserve the crash-interrupted fresh test directory.
 
 Additional detached waiters in the same tmux session run `regret --wait`,
 `division_review --wait`, `fresh_validate --wait`, `final_analysis --wait`, and
-`finalize --wait`. They wait for complete frozen results, then run actual diagnostics,
-six full image-to-CSV checks, manifests, preservation checks, final reports and
+`finalize --wait`. The fresh validator starts once primary models/calibrations exist,
+running the frozen six image clips during replica training. It waits for complete
+scores before comparing results. The final package must preserve every tested
+runtime/primary-weight byte and then execute its selected default and disable switch.
+Other waiters require complete frozen results, then run diagnostics,
+manifests, preservation checks, final reports and
 browser validation. The final-stage waiters exec the current maintained module when
 their prerequisites become ready. After a reboot, restart each waiter once only
 after checking process state. The supervisor covers the compute queue; these
 artifact waiters are separate. They never stage, commit, push or submit anything.
+
+J had 882 windows stop with a feasible time-limited solution; expanded P1 also has
+many feasible timeouts. Fresh tests retain the original exact graph/integer-count
+parity requirement. They record predecoder observation, candidate, model-score and
+configuration fingerprints to distinguish input mismatches from solver decisions.
+Any failed parity variant stays in the measured report and is excluded from
+promotion. A completed failed test must not be described as a verified pipeline;
+the final export must pass its own fresh tests, with C0 retained as fallback.
 
 ## Frozen experimental scope
 
@@ -156,16 +177,20 @@ change. No labels or cached selected graphs may enter fresh inference.
    additive score decomposition. The final-objective source P1/PDC pilots are done;
    `P2_decision.json` records why the conditional extension is not scheduled. Do not
    substitute center refinement for dense proposals or label unmatched peaks false.
-5. Build the final inference package after all required weights/calibrations exist.
-   Execute at least six full density-spanning clips from both embryos, including
+5. Execute the frozen six full density-spanning clips from both embryos while
+   replica training continues, including
    actual H/N/P/DeepCenter/J paths, C0 disablement, unfamiliar filenames, early
    offline guards, cache denial, CSV roundtrip and exact graph/numeric parity.
-   An early C0 retry is queued in tmux `package-check` behind the auxiliary GPU lock.
+   Build the final package after complete comparisons; verify the tested validation
+   payload is byte-identical and execute the final default and disable switch.
+   The early C0 trial passed; the early new-model path trial remains behind the
+   auxiliary GPU lock in tmux `package-paths4`.
 6. Generate the local optical-review pack after prediction freeze. Do not invent
    human judgments or turn review images into new labels.
 7. Finish `final_report.md`, all required CSVs/manifests, dashboard validation,
    dependency manifest, final package, truthful STATUS and this continuation.
-   The current report generator still needs detailed final outcome/failure prose.
+   The report generator includes measured family, headroom, regret and gate prose;
+   inspect the completed results and browser output before final publication.
 8. Run final preservation/sanitization checks; commit and push additive v5 code and
    sanitized results to `handover/image-native-tracking-v5`. No merge, Kaggle upload,
    notebook/forum publication, new hardware or paid API calls are authorized.

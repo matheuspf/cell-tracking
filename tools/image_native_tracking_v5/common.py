@@ -6,7 +6,7 @@ from contextlib import contextmanager
 
 @contextmanager
 def cpu_batch():
-    """Serialize process pools across families; at most six pool workers overall."""
+    """Serialize process pools across families; at most eight pool workers overall."""
     import fcntl
     OUT.mkdir(parents=True,exist_ok=True)
     with (OUT/'cpu_batch.lock').open('a') as handle:

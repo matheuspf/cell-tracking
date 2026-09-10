@@ -109,7 +109,7 @@ def decode_one(task):
     write(receipt,dict(dataset=name,source=source,variant=variant,config=config,created=now(),seconds=time.monotonic()-start,
         graph_hash=graph_hash(n,e),delta_sha256=sha(dest),decode=r,code_sha256=sha(Path(__file__))))
 
-def run_decode(variants,workers=6):
+def run_decode(variants,workers=8):
     # Both directional source configurations are frozen before their complete batch is decoded/scored.
     wait_for([p for v in variants for p in prerequisites(v)])
     paths={str(p.relative_to(OUT)):sha(p) for v in variants for p in prerequisites(v)}
@@ -124,7 +124,7 @@ def run_decode(variants,workers=6):
             elif f.startswith('H'):required.append(OUT/'model_scores/H'/f'{name}.npz')
             if cfg['pop']=='PDC':required.append(OUT/'deepcenter'/f'{name}.npz')
             wait_for(required);tasks.append((v,r))
-    with cpu_batch(),ProcessPoolExecutor(max_workers=min(workers,6)) as pool:
+    with cpu_batch(),ProcessPoolExecutor(max_workers=min(workers,8)) as pool:
         for i,_ in enumerate(pool.map(decode_one,tasks,chunksize=1)):
             if i%20==0:print('joint decode',i+1,len(tasks),flush=True)
 
