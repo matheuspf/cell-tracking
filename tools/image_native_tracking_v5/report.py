@@ -205,6 +205,11 @@ The server reboot interrupted execution after the native log reached update 2,94
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.
 '''
+    if (OUT/'recovery_second_20260910.json').exists():
+        body+='\nA second reboot interrupted the source44 second-seed N1 fit and source6 primary N2 fit. Preserved optimizer/RNG checkpoints resumed at updates 750 and 7,750; the latter repeats 91 known logged updates. Recovery reverified all 199 observation, HOCT and DeepCenter shards, completed model hashes, all six complete official evaluation sets, and prior critical files. Two empty progress JSON files were preserved and reconstructed. File and directory flushing was added to JSON/graph writes without changing numerical recipes. The original native queue now handles source6 primary training while the existing source helpers fill the two bounded source lanes. Both reboot causes remain unknown; recovery_second_20260910.json records the last resource sample and checkpoint hashes.\n'
+    if (OUT/'resume_determinism_second.json').exists():
+        replay=read(OUT/'resume_determinism_second.json')
+        body+=f"\nSecond-recovery N2 replay: {replay['matching_logged_losses']} of {len(replay['comparisons'])} overlapping logged losses match at five decimals; the maximum logged absolute difference is {replay['max_logged_absolute_difference']:.5f}. This does not establish bitwise training reproducibility. The restored optimizer/RNG/data-order state and original numerical recipe were retained.\n"
     if feature_audit:
         h=next(r for r in feature_audit['coverage'] if r['embryo']=='pooled')
         z=next(r for r in feature_distribution if r['embryo']=='pooled' and r['feature']=='z_um')

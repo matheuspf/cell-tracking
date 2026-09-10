@@ -45,12 +45,19 @@ def resources():
             try:before_restart.append(float(parts[-1]))
             except ValueError:pass
     allowance=max(before_restart,default=0)
+    recoveries=[read(p) for p in sorted(OUT.glob('recovery_second_*.json'))]
+    additional_allowance=sum(run['last_logged_seconds'] for recovery in recoveries for run in recovery['resume_runs'])
+    allowance+=additional_allowance
+    repeated_logged=941+sum(run['repeated_logged_updates'] for recovery in recoveries for run in recovery['resume_runs'])
     r=dict(at=now(),max_observed_GPU_gib=max(x['gpu_mib'] for x in records)/1024,
         max_observed_summed_RSS_gib=max(x['summed_process_rss_gib'] for x in records),
         minimum_observed_free_gib=min(x['free_gib'] for x in records),current_free_gib=shutil.disk_usage(ROOT).free/2**30,
         new_output_and_work_gib=output_size/2**30,registered_output_cap_gib=read(OUT/'preflight.json')['new_output_cap_gib'],
         completed_fit_seconds_including_tiny_tests=training_seconds,conservative_training_hours=(training_seconds+allowance)/3600,
-        precrash_all_logged_training_seconds_allowance=allowance,repeated_optimizer_updates=941,
+        precrash_all_logged_training_seconds_allowance=allowance,repeated_optimizer_updates=repeated_logged,
+        repeated_updates_scope='Known repeated logged updates; further unlogged updates may have been lost at reboot.',
+        additional_reboot_training_seconds_allowance=additional_allowance,
+        recovery_receipts={p.name:sha(p) for p in sorted(OUT.glob('recovery*.json'))},
         RSS_scope='later observations include recursive inference subprocesses; earliest samples included named v5 roots only',
         samples=len(records),resource_sampling_seconds=30,
         caveat='sampled process/GPU peaks; per-fit CUDA/RSS high-water marks are also in model receipts')
@@ -168,10 +175,20 @@ with per-fit locks coordinating source replica helpers and the original queue.
 Calibration and inference shared one auxiliary GPU lane. The complete optimizer
 function body, data, precision, batches and update counts remained unchanged;
 the scheduling and benchmark receipts document the transition.
+A second reboot left two empty progress files, which were preserved before
+reconstruction. All 199 observation/HOCT/DeepCenter shards, saved scores and completed
+model hashes passed recovery checks. The source44 replica N1 resumed from update
+750 and the source6 primary N2 from update 7,750, repeating 91 known logged updates
+in the latter. Both checkpoint copies and precrash logs remain saved. JSON and
+graph writes now flush file bytes and directory entries before acknowledgment;
+this changes persistence only. See the second recovery and determinism receipts.
+Four of five overlapping N2 logged losses matched to five decimals; the remaining
+loss differed by 0.00001. Bitwise training reproducibility is not established, and
+the frozen optimizer recipe was retained.
 One bounded serial official scorer overlapped decoder pools, using per-variant
 locks, current memory admission checks and the unchanged official matching and
 aggregation functions. Completed original batches reused those same receipts.
-The cause of the reboot is unknown. Early package trials exposed missing declared
+The causes of the reboots are unknown. Early package trials exposed missing declared
 model-config/hash-lock dependencies and a guard rejecting newly generated GEFF
 outputs; precise pinned exceptions were tested. An extra pixel fixture's incorrect
 channel rank was repaired. These did not change the frozen model/decoder recipe.

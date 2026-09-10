@@ -41,6 +41,14 @@ def sha(p):
 def digest(x): return hashlib.sha256(json.dumps(x,sort_keys=True).encode()).hexdigest()
 def reserve():
     if shutil.disk_usage(ROOT).free < 8*2**30: raise RuntimeError('V5 8 GiB reserve reached')
+def durable_replace(temporary,destination):
+    """Flush output bytes and their renamed directory entry before acknowledging."""
+    temporary=Path(temporary);destination=Path(destination)
+    with temporary.open('rb') as handle:os.fsync(handle.fileno())
+    temporary.replace(destination)
+    directory=os.open(destination.parent,os.O_RDONLY|os.O_DIRECTORY)
+    try:os.fsync(directory)
+    finally:os.close(directory)
 def write(p,x):
     reserve(); p=Path(p); p.parent.mkdir(parents=True,exist_ok=True)
     def default(v):
@@ -48,12 +56,12 @@ def write(p,x):
         if isinstance(v,np.generic):return v.item()
         if isinstance(v,Path):return str(v)
         raise TypeError(type(v))
-    q=p.with_suffix(p.suffix+'.tmp');q.write_text(json.dumps(x,indent=2,default=default,allow_nan=False)+'\n');q.replace(p)
+    q=p.with_suffix(p.suffix+'.tmp');q.write_text(json.dumps(x,indent=2,default=default,allow_nan=False)+'\n');durable_replace(q,p)
 def arrays(p):
     with np.load(p,allow_pickle=False) as z:return {k:z[k] for k in z.files}
 def save(p,**kw):
     reserve();p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);q=p.with_suffix('.tmp.npz')
-    np.savez_compressed(q,**kw);q.replace(p)
+    np.savez_compressed(q,**kw);durable_replace(q,p)
 def inventory():return read(V1/'inventory.json')
 def graph(name,variant='C0'):
     b=arrays(V3/'selected_predictions'/f'{name}.npz')

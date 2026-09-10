@@ -103,7 +103,11 @@ def provenance():
         dict(component='original HOCT source6 decoder diagnostic',failure='fixed central source tile contained insufficient valid objects',
             correction='one bounded repeat on the densest image-derived grid tile; original failed receipt retained',model_recipe_changed=False),
         dict(component='evaluation-only heuristic oracle runtime',failure='one edge at a time triggered avoidable repeated full-graph work',
-            correction='apply the same legal supported-edge set in one batch; truth remains evaluation-only',model_recipe_changed=False)]
+            correction='apply the same legal supported-edge set in one batch; truth remains evaluation-only',model_recipe_changed=False),
+        dict(component='second machine reboot',failure='two zero-length progress/status JSON files; both active fits interrupted',
+            correction='preserve damaged files and resume snapshots, reverify cache/model/evaluation hashes, reconstruct progress from optimizer state and add durable file/directory flushing',model_recipe_changed=False),
+        dict(component='N2 checkpoint replay audit',failure='one of five overlapping logged losses differed by 0.00001',
+            correction='retain and report the measured discrepancy; no bitwise training reproducibility claim or numerical recipe change',model_recipe_changed=False)]
     names=['package_early_fallback_retry1.log','package_early_fallback_retry2.log','package_early_fallback_retry3.log',
         'package_early_paths.log','native_integrity.log','source_proposals_final.log','HOCT_sparse_ROI_retry.log']
     write(OUT/'execution_repairs.json',dict(at=now(),repairs=repairs,

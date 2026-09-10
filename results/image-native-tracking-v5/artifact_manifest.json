@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-10T18:11:25.523082+00:00",
+  "at": "2026-09-10T19:10:02.680415+00:00",
   "status": "executing",
   "files": {
     "status.json": {
-      "sha256": "3793da5acaedf4c4c184b63459952eaf80b29f9a9837baffa20a4492cff8b5a9",
+      "sha256": "95fc0b2fd7a0ed5cb6233d765ec7e42bf998c7799637db5773fc082ad88d5a6a",
       "bytes": 625
     },
     "ablation_scores.csv": {
@@ -23,12 +23,12 @@
       "bytes": 755
     },
     "training_summary.csv": {
-      "sha256": "95b010a31a34554754f42bd54f9f24a6b43c6a10037137886c17db4fa8b6d898",
-      "bytes": 2212
+      "sha256": "02d7cedaaa6646f50b9f2a69e492c4c2c49d27dfcd581c5da25929f478d3c339",
+      "bytes": 2216
     },
     "learning_curves.csv": {
-      "sha256": "18503c95d4491d58d3c17e955a0ae1e4a54d4b080eab8346c97b7dc82ca68d73",
-      "bytes": 301241
+      "sha256": "4bfb46c0932b47b9b4b4d8dc59e2f1cce8183b64cdbf75661d5ca6b195fab02c",
+      "bytes": 312608
     },
     "exposure.json": {
       "sha256": "67ce02c721605ffb27d618b7d1e16b1f356710baa40afd7bd1c1167517705923",
@@ -71,23 +71,23 @@
       "bytes": 249
     },
     "dashboard.html": {
-      "sha256": "9727ced36ef0e73abfaa761f24766f6d7a372dc1a30fb70b8373cd69b565c234",
-      "bytes": 670806
+      "sha256": "f896b3115b0c4a62d8bb50ed1eab26c0e3b97aea51a671d6c3ecc4bf8e2483da",
+      "bytes": 693795
     },
     "dashboard_validation.json": {
-      "sha256": "f730630ebec8d525d2e1f2df05ffb0b8530b9fb41a4f252af992a432e84eec6e",
+      "sha256": "1b8e6ae8feea5a098f8bfc048a539098a659d9bb2a535ffbac92618ecc4da21c",
       "bytes": 912
     },
     "progress_report.md": {
-      "sha256": "87bab65f0db3185dd249472d50bcb8ba62d0f6f6d3fa41bf00d704a701265ac7",
-      "bytes": 4872
+      "sha256": "773ac37251651a42ab34d2ae9a9532d6d4f748c349f90a9b95782b57c2a4fa59",
+      "bytes": 6137
     },
     "recovery.json": {
       "sha256": "5a614a6454e3059f00498a3ccae668c498623d2c58b416b6a6d45f27a2160ac5",
       "bytes": 683
     },
     "test_receipt.json": {
-      "sha256": "83bdfdf72f18618c2c5f29a4aedd2fe925f158314dc6d9ddfa4f1b6da2a5410d",
+      "sha256": "02582025d6355623aed16de55adfc3c7fc089c4f828ed502912981bd00486ebd",
       "bytes": 549
     },
     "README.md": {
@@ -189,6 +189,18 @@
     "HOCT_feature_coverage_rows.csv": {
       "sha256": "0fd0f115cb4b2c3e784075cdab832b61a80a5ee87b8f83a574b046899ed380d3",
       "bytes": 15772
+    },
+    "recovery_second_20260910.json": {
+      "sha256": "d915375548a7af31993255464d06e5d47b0447a7d56f450c4f73b32108e800df",
+      "bytes": 4278
+    },
+    "resume_determinism_second.json": {
+      "sha256": "996ebdbb28bcdab7f01cd31a1300379f1054b2115229097e810c868519d1b779",
+      "bytes": 1605
+    },
+    "durable_output_receipt.json": {
+      "sha256": "8146a81b6e5844d800b667eab9c31f3a1ecd86d100c9e74a9a6893d6a6cfc0f9",
+      "bytes": 641
     }
   },
   "allowlist_only": true,

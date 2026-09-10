@@ -1,8 +1,23 @@
-import subprocess,time,psutil
+import subprocess,time,psutil,fcntl
 from .common import *
 
 def run():
+    handle=(OUT/'monitor.lock').open('a')
+    fcntl.flock(handle,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    flushed={}
     while True:
+        # Torch checkpoints are renamed only after serialization closes. Flush
+        # each newly published snapshot without changing the optimizer routine.
+        changed=False
+        for checkpoint in (OUT/'models/native').glob('*.resume.pt'):
+            with checkpoint.open('rb') as saved:
+                stat=os.fstat(saved.fileno());identity=(stat.st_ino,stat.st_mtime_ns,stat.st_size)
+                if flushed.get(checkpoint.name)!=identity:
+                    os.fsync(saved.fileno());flushed[checkpoint.name]=identity;changed=True
+        if changed:
+            directory=os.open(OUT/'models/native',os.O_RDONLY|os.O_DIRECTORY)
+            try:os.fsync(directory)
+            finally:os.close(directory)
         processes=[];tracked={}
         for p in psutil.process_iter(['pid','cmdline','memory_info','num_threads','cpu_times']):
             try:
@@ -20,7 +35,8 @@ def run():
             summed_process_rss_gib=sum(p['rss_gib'] for p in processes),free_gib=shutil.disk_usage(ROOT).free/2**30,processes=processes,
             RSS_scope='all v5 Python roots and recursive children, deduplicated; early samples tracked named v5 roots only')
         p=OUT/'resources.jsonl'
-        with p.open('a') as f:f.write(json.dumps(record)+'\n')
+        with p.open('a') as f:
+            f.write(json.dumps(record)+'\n');f.flush();os.fsync(f.fileno())
         write(OUT/'resource_current.json',record)
         if (OUT/'execution_complete.json').exists():return
         time.sleep(30)

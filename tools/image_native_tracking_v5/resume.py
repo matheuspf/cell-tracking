@@ -30,11 +30,13 @@ def supervise():
     while True:
         state={name:dict(pid=p.pid,returncode=p.poll(),state='running' if p.poll() is None else 'complete' if p.returncode==0 else 'failed') for name,p in children.items()}
         write(OUT/'supervisor_state.json',dict(at=now(),started=started,pid=os.getpid(),jobs=state,
-            gpu_policy='one native training lane plus one auxiliary lane; process pools serialized'))
+            gpu_policy='at most two registered native fits, one per source, plus one serialized auxiliary lane; process pools serialized'))
         if all(p.poll() is not None for p in children.values()):break
         time.sleep(15)
     write(OUT/'compute_queue_finished.json',dict(at=now(),jobs=state,all_success=all(p.returncode==0 for p in children.values())))
-    monitor.terminate();monitor.wait()
+    # Fresh package tests and final analyses can outlive the numerical queues.
+    # Their memory must remain in the study resource record until finalization.
+    monitor.wait()
     for h in handles:h.close()
     if any(p.returncode for p in children.values()):raise RuntimeError('One or more v5 jobs failed; inspect supervisor_state.json')
 

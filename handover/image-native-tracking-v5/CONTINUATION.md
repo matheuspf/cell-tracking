@@ -5,6 +5,16 @@ The user requested implementation and execution of X500–X580, complete measure
 results, fresh inference, a dashboard, and sanitized commits on this branch.
 Continue the current study; do not restart v4.
 
+The **second reboot recovery** completed at 19:01 UTC on 2026-09-10. All study
+processes had stopped. Saved model, cache and six complete evaluation sets passed
+hash checks. The source44 replica N1 resumed at update 750 and source6 primary N2
+at 7,750; the latter repeated 91 known logged updates. Four of five overlapping
+printed losses match; the fifth differs by 0.00001. This is not bitwise training
+reproducibility. Both snapshots, logs and two empty progress files were preserved.
+See `recovery_second_20260910.json` and `resume_determinism_second.json`.
+Training, decoding, scoring and all artifact waiters are running in the restored
+`cell-tracking-v5` tmux session. Source44 primary N2 calibration also completed.
+
 ## Current measured evidence
 
 - Fresh official C0 scoring on all 199 clips exactly reproduces
@@ -112,10 +122,11 @@ optimizer/RNG checkpoint was update 2,000. It was copied separately into
 their recorded five-decimal precision. Resume snapshots now occur every 250
 updates, with the model recipe unchanged.
 
-The detached tmux session is **`cell-tracking-v5`**. Its original supervisor is
-preserved. Scheduling now allows one native fit per source, with at most two
+The detached tmux session is **`cell-tracking-v5`**. The supervisor was restarted
+after each reboot, preserving its earlier logs. Scheduling allows one native fit per source, with at most two
 simultaneous native optimizers and one serialized auxiliary inference/calibration
-lane. The initial source6 N2 helper occupies that auxiliary lane until it finishes.
+lane. After the second reboot the original queue resumed source6 primary N2;
+the auxiliary training helper is no longer needed.
 Each source's replica helper waits for its own primary N2 model, then runs the
 registered N1 and N2 replica fits. Per-fit locks coordinate these helpers with the
 original queue, which completes every source calibration. The complete optimizer
@@ -124,9 +135,9 @@ benchmark reached 2.50 combined updates/second, versus the earlier single-source
 1.40, with 9.34 GiB GPU and 13.54 GiB sampled summed RSS peaks. See
 `source_lane_schedule.json` and `GPU_concurrency_benchmark.json`; the running
 supervisor's original `gpu_policy` string describes its startup queue only.
-CPU process
-pools share a lock. The existing control pool retains six workers; future decoder
-pools use eight after measured CPU/RSS profiling, with other pools at six or fewer.
+CPU process pools share a lock. Completed control graphs are reused. Remaining
+control graphs and subsequent decoder pools use eight workers after measured
+CPU/RSS profiling, with other pools at six or fewer.
 An event index avoids repeated scans; every MILP array remained exact on 16 source
 fixtures. HiGHS's configured two-second limit can be exceeded by presolve/runtime;
 the report records actual elapsed solver time. Check actual state rather
@@ -140,7 +151,7 @@ tail /kaggle/working/cell-tracking/image-native-tracking-v5/logs/supervisor.log
 ```
 
 After another reboot, verify cache/checkpoint hashes against their sidecars and
-`recovery_20260910.json`, inspect any partial outputs, then restart the supervisor
+the recovery receipts, inspect any partial outputs, then restart the supervisor
 only if no existing supervisor is running:
 
 ```bash
@@ -157,9 +168,15 @@ calibration did not.
 
 The concurrency helpers are separate from the original supervisor. After checking
 that none is already running, restore `source_lane 44b6` and `source_lane 6bba` in
-their own detached windows. If source6 primary N2 is still incomplete, restore its
-`aux_native 6bba N2` helper as well. These wrappers reuse complete, hash-verified
+their own detached windows. Let the main queue resume unfinished primary fits;
+do not also start the old auxiliary training helper. These wrappers reuse complete, hash-verified
 fits and lock unfinished fits; do not invoke bare optimizer jobs in parallel.
+
+JSON and graph writes now fsync file bytes before rename and the parent directory
+afterward. The resource monitor also flushes newly published native resume
+snapshots every 30 seconds. It runs in its own `resources` window through fresh
+inference and final analysis. An exited monitor child may remain as a zombie
+until the original supervisor reaps it; it is not an active duplicate monitor.
 
 ## Paths and environment
 
@@ -236,9 +253,10 @@ Sparse unknowns stay unknown. Reused embryos, C0 teachers and public checkpoint 
 explicit. Node universes and candidate banks are separate for fixed and expanded
 populations. Morphology comes from one marker watershed containing both C0 centers
 and newly discovered peaks; P0 keeps C0 graph nodes and coordinates with their
-features from this shared partition. Complete native comparisons intentionally use the primary model
-without the incumbent's secondary/eight-view harmonic ensemble; N0 isolates this
-change. No labels or cached selected graphs may enter fresh inference.
+features from this shared partition. Complete native comparisons intentionally use
+the primary model without the incumbent's secondary/eight-view harmonic ensemble;
+N0 provides the matched control for N1/N2. No labels or cached selected graphs may
+enter fresh inference.
 
 ## Remaining work
 
