@@ -1,0 +1,20 @@
+{
+  "study_id": "instance-tracking-v6",
+  "status": "planned_not_executed",
+  "reviewed_parent_branch": "handover/image-native-tracking-v5",
+  "reviewed_parent_commit": "fe00326ea6ca79a5b5c54910de03925d353e0629",
+  "parent_snapshot_status": "in_progress_eleven_complete_score_sets_including_two_oracles",
+  "retained_reference_score": 0.934802374260586,
+  "target_local_score": 0.95,
+  "next_stage": "M600",
+  "v6_raw_images_read": false,
+  "v6_detector_inference_run": false,
+  "v6_training_run": false,
+  "v6_ultrack_run": false,
+  "v6_official_graph_scoring_run": false,
+  "focus_weight_authorization_checked": false,
+  "branch": "handover/instance-tracking-v6",
+  "note": "Local Codex must verify current jobs/results and implement M600-M690. Do not describe unmeasured v5/v6 arms as completed failures.",
+  "initial_reviewed_commit": "0a3105a8f9d1b0954707675b42b9868832df4ac1",
+  "parent_refresh": "PARENT_REFRESH.md"
+}

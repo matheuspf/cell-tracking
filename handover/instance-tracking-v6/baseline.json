@@ -1,0 +1,36 @@
+{
+  "study_id": "instance-tracking-v6",
+  "source_branch": "handover/image-native-tracking-v5",
+  "source_commit": "0a3105a8f9d1b0954707675b42b9868832df4ac1",
+  "source_status": "in_progress_pushed_checkpoint_not_final_v5",
+  "reference_variant": "C0",
+  "reference_score": 0.934802374260586,
+  "target_local_score": 0.95,
+  "reference_samples": 199,
+  "score_by_embryo": {
+    "44b6": 0.9316644687218418,
+    "6bba": 0.9352217840973274
+  },
+  "counts": {
+    "num_pred_nodes": 4108943,
+    "edge_tp": 123135,
+    "edge_fp": 4965,
+    "edge_fn": 5748,
+    "division_tp": 29,
+    "division_fp": 92,
+    "division_fn": 122
+  },
+  "adjusted_edge_jaccard": 0.9228682178819851,
+  "completed_v5_scores": {
+    "H_general_J": 0.906022657469521,
+    "H_probe_J": 0.9135868579084195,
+    "J_native_frozen": 0.8773353943845731,
+    "P_DC_native_J": 0.8686524362605309,
+    "P_union_native_J": 0.6751326227250869
+  },
+  "truth_assisted_oracles_not_deployable": {
+    "Oracle_fixed": 0.9576193465416518,
+    "Oracle_augmented": 0.9721455963275534
+  },
+  "local_newer_incumbent_policy": "record valid newer lock before comparisons; do not silently mix references"
+}

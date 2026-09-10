@@ -1,0 +1,15 @@
+{
+  "scope": "authoring_reference_helpers_only",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "unit_tests_passed": 47,
+  "unit_tests_failed": 0,
+  "test_command": "PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s handover/instance-tracking-v6 -p test_mask_contracts.py -v",
+  "python_compilation_passed": true,
+  "json_parsing_passed": true,
+  "handover_markdown_links_passed": true,
+  "microscopy_or_learned_model_tests_run": false,
+  "official_metric_integration_run": false,
+  "ultrack_integration_run": false,
+  "note": "Reference tests do not establish segmentation quality, pipeline parity, or a score gain."
+}
