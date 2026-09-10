@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-10T13:34:12.582413+00:00",
+  "cache_hash_checks": {
+    "observations": 122,
+    "hoct_training_features": 120,
+    "deepcenter": 122,
+    "banks/44b6/P0": 122,
+    "banks/44b6/P1": 52,
+    "banks/6bba/P0": 121,
+    "banks/6bba/P1": 71
+  },
+  "critical_old_hashes_preserved": true,
+  "native_resume_step": 2000,
+  "native_checkpoint_sha256": "34be4389bd214ff4a2fda6fd4ace351d48f14be902e91465380f84febafc7ff5",
+  "last_logged_step": 2941,
+  "repeated_updates_required": 941,
+  "reason": "server reboot reported by user; no jobs survived; kernel log access unavailable",
+  "restart_policy": "detached tmux; one training lane and one serialized auxiliary GPU lane"
+}

@@ -1,0 +1,214 @@
+{
+  "at": "2026-09-10T16:28:57.595929+00:00",
+  "source": "6bba",
+  "stage": "N2",
+  "seed": 20260910,
+  "reason": "Auxiliary GPU lane idle after all HOCT/N1 score extraction; benchmark the already registered second-source fit concurrently.",
+  "original_code_sha256": "a3f8f4df23257bc5e88310a76b231753461dfacc330b09a9723424572c9b60ac",
+  "current_code_sha256": "d0a4a6cb1d576528e750e2e3925cc2db71bb37fa2967a596a2668c161da4cf7c",
+  "optimizer_function_body_ast_sha256": "8f1957e18448585cbb01c700386faaf0ee76c0a88fe4fd41f5d48009ea266934",
+  "complete_optimizer_body_exact_AST_parity": true,
+  "source_data_objective_precision_batches_updates_unchanged": true,
+  "per_fit_exclusion": true,
+  "existing_primary_process_preserved": true,
+  "maximum_concurrent_native_fits": 2,
+  "before_primary_updates_per_second": 1.3996099987693658,
+  "before_primary_step": 4881,
+  "resource_before": {
+    "at": "2026-09-10T16:28:41.048453+00:00",
+    "gpu_mib": 4796,
+    "gpu_util_percent": 54,
+    "temperature_c": 51,
+    "summed_process_rss_gib": 11.242328643798828,
+    "free_gib": 20.43210220336914,
+    "processes": [
+      {
+        "pid": 2448,
+        "rss_gib": 0.031284332275390625,
+        "threads": 2,
+        "cpu_seconds": 0.79,
+        "module": "resume"
+      },
+      {
+        "pid": 2457,
+        "rss_gib": 0.0302734375,
+        "threads": 2,
+        "cpu_seconds": 0.27,
+        "module": "queue_native"
+      },
+      {
+        "pid": 2459,
+        "rss_gib": 0.03127288818359375,
+        "threads": 2,
+        "cpu_seconds": 0.24,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2460,
+        "rss_gib": 0.03131103515625,
+        "threads": 2,
+        "cpu_seconds": 0.30000000000000004,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2461,
+        "rss_gib": 0.03128814697265625,
+        "threads": 2,
+        "cpu_seconds": 0.33999999999999997,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2462,
+        "rss_gib": 0.03128814697265625,
+        "threads": 2,
+        "cpu_seconds": 0.35,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2463,
+        "rss_gib": 0.03127288818359375,
+        "threads": 2,
+        "cpu_seconds": 0.36,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2464,
+        "rss_gib": 0.3434715270996094,
+        "threads": 63,
+        "cpu_seconds": 4.94,
+        "module": "headroom"
+      },
+      {
+        "pid": 2465,
+        "rss_gib": 0.0,
+        "threads": 1,
+        "cpu_seconds": 2.08,
+        "module": "inference_or_worker_child"
+      },
+      {
+        "pid": 39599,
+        "rss_gib": 0.5323410034179688,
+        "threads": 3,
+        "cpu_seconds": 2.38,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 36723,
+        "rss_gib": 0.534149169921875,
+        "threads": 3,
+        "cpu_seconds": 2.4,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 2496,
+        "rss_gib": 0.533172607421875,
+        "threads": 3,
+        "cpu_seconds": 2.36,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19750,
+        "rss_gib": 1.5634078979492188,
+        "threads": 64,
+        "cpu_seconds": 5959.66,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19751,
+        "rss_gib": 0.775543212890625,
+        "threads": 64,
+        "cpu_seconds": 5975.95,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19752,
+        "rss_gib": 0.6942787170410156,
+        "threads": 64,
+        "cpu_seconds": 5923.820000000001,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19753,
+        "rss_gib": 0.9272003173828125,
+        "threads": 64,
+        "cpu_seconds": 5863.7300000000005,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19754,
+        "rss_gib": 0.7331352233886719,
+        "threads": 64,
+        "cpu_seconds": 6019.47,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19755,
+        "rss_gib": 0.7718009948730469,
+        "threads": 64,
+        "cpu_seconds": 5966.32,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 27885,
+        "rss_gib": 2.2242202758789062,
+        "threads": 102,
+        "cpu_seconds": 3803.91,
+        "module": "train_native"
+      },
+      {
+        "pid": 12045,
+        "rss_gib": 0.1056060791015625,
+        "threads": 5,
+        "cpu_seconds": 0.82,
+        "module": "regret"
+      },
+      {
+        "pid": 22766,
+        "rss_gib": 0.10457229614257812,
+        "threads": 5,
+        "cpu_seconds": 0.58,
+        "module": "final_analysis"
+      },
+      {
+        "pid": 22771,
+        "rss_gib": 0.10464859008789062,
+        "threads": 5,
+        "cpu_seconds": 0.58,
+        "module": "finalize"
+      },
+      {
+        "pid": 22775,
+        "rss_gib": 0.10752105712890625,
+        "threads": 5,
+        "cpu_seconds": 1.26,
+        "module": "division_review"
+      },
+      {
+        "pid": 31800,
+        "rss_gib": 0.1046142578125,
+        "threads": 5,
+        "cpu_seconds": 0.6,
+        "module": "fresh_validate"
+      },
+      {
+        "pid": 36788,
+        "rss_gib": 0.7551841735839844,
+        "threads": 70,
+        "cpu_seconds": 1367.72,
+        "module": "early_headroom"
+      },
+      {
+        "pid": 40133,
+        "rss_gib": 0.10947036743164062,
+        "threads": 5,
+        "cpu_seconds": 1.19,
+        "module": "live"
+      }
+    ],
+    "RSS_scope": "all v5 Python roots and recursive children, deduplicated; early samples tracked named v5 roots only"
+  },
+  "target_scores_used_for_schedule": false,
+  "GPU_allocation_cap_gib": 20,
+  "summed_RSS_cap_gib": 28,
+  "training_cap": "sum all fit wall time, conservatively, <=48 hours"
+}

@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-10T15:00:57.966953+00:00",
+  "passed": true,
+  "full_C0_graph_exact": true,
+  "CSV_roundtrip": true,
+  "unfamiliar_filename": true,
+  "guard_before_numerical": true,
+  "audit_processes": 3,
+  "actual_guard_selftest": {
+    "passed": true,
+    "checks": 4,
+    "guard_before_numerical": true,
+    "fresh_output_GEFF_roundtrip": true,
+    "package_manifest_sha256": "a2b89a82b64a7e4b800c2fe7e779bfcc4a935f48b2d602285ea687e9806a87b9",
+    "scope": "actual annotation, observation cache and DNS denial before numerical imports; Python audit hooks, not syscall sandbox"
+  },
+  "inference_seconds": 162.22981861100016,
+  "package_manifest_sha256": "a2b89a82b64a7e4b800c2fe7e779bfcc4a935f48b2d602285ea687e9806a87b9"
+}

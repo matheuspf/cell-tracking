@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-10T16:43:29.229104+00:00",
+  "windows": {
+    "44b6": {
+      "start": 5361,
+      "end": 5961,
+      "seconds": 488.66112935599995,
+      "last_loss": 0.00031187002605292946
+    },
+    "6bba": {
+      "start": 481,
+      "end": 1081,
+      "seconds": 473.04318650299865,
+      "last_loss": 0.0004005013433925342
+    }
+  },
+  "updates_per_second": {
+    "44b6": 1.2278447454798218,
+    "6bba": 1.2683831352387454
+  },
+  "combined_updates_per_second": 2.496227880718567,
+  "observed_single_source_baseline_updates_per_second": 1.3996099987693658,
+  "combined_vs_observed_single_source_ratio": 1.7835167531765448,
+  "comparison_scope": "Two concurrent source workloads versus the measured 44b6-only baseline; a paired serial 6bba timing was not measured.",
+  "max_GPU_gib": 9.3408203125,
+  "max_summed_RSS_gib": 13.542797088623047,
+  "minimum_free_gib": 20.392578125,
+  "per_fit_exclusion_verified": true,
+  "optimizer_function_body_exact_AST_parity": true,
+  "learning_recipe_changed": false,
+  "target_scores_used": false,
+  "decision": "Continue the two already registered fits concurrently; retain <=2 native fits and the 20/28 GiB GPU/RSS ceilings."
+}

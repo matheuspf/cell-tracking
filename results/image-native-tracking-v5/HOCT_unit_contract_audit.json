@@ -1,0 +1,213 @@
+{
+  "at": "2026-09-10T20:36:04.926614+00:00",
+  "complete": true,
+  "seconds": 4.559283615999448,
+  "source_only": true,
+  "annotations_read": false,
+  "official_scores_computed": false,
+  "discovered_after_outer_scores": true,
+  "registered_features_or_models_changed": false,
+  "runtime": "CPU FP32 for both diagnostic passes; production uses GPU BF16",
+  "checkpoint_sha256": "5bd836dfcb15ad796ea79a9595841a3e73b650a71c4acba3fc66aac65d745b33",
+  "upstream_source_sha256": "34f651dcb247a185d8b70ed32d96fb5916565b470bd628ec256a3c0651693bf3",
+  "RegionPropsNodes_source_sha256": "9aacbd706459a8cd7ca23512ab9df073dbaec8ba6c28839162b73f3954335b86",
+  "validation_bundle_manifest_sha256": "c0b6dae1a34defcd8d896bfc83eae42c961fe3c21effba04b054f7dd6efa217c",
+  "region_contract": {
+    "dataset": "44b6_24264f12",
+    "frames": [
+      30,
+      31
+    ],
+    "actual_image_masks": true,
+    "regions": 655,
+    "upstream_scale_argument": [
+      1.0,
+      1.625,
+      1.625,
+      1.625
+    ],
+    "upstream_features_equal_unscaled_regionprops": true,
+    "maximum_multiset_feature_error": 0.0,
+    "physical_over_voxel_centroid_and_diameter": 1.625,
+    "physical_over_voxel_inertia": 2.640625,
+    "intensity_unchanged": true,
+    "registered_observation_sha256": "f88ec4a2759ea0daa95816bf3477c428e7940ea69bed005e203e491588c22d3b",
+    "note": "Two CPU FP32 image frames for unit-contract verification; not a GPU cache-parity test. Upstream region centroids differ from the retained scored C0 centers by design."
+  },
+  "model_comparisons": [
+    {
+      "dataset": "44b6_24264f12",
+      "source": "44b6",
+      "frames": [
+        30,
+        34
+      ],
+      "nodes": 120,
+      "edges": 284,
+      "ROI_selection": "densest image-derived 32 micrometer tile, same objects and edges in both passes",
+      "optical_bounds_um": [
+        [
+          0.0,
+          32.0,
+          0.0
+        ],
+        [
+          32.0,
+          64.0,
+          32.0
+        ]
+      ],
+      "source_bank_sha256": "d7cefd911d75681269b6fb8c26a301aa842e71a9c951f58c722dd871eddc99c1",
+      "maximum_absolute_logit_difference": 3.575396776199341,
+      "mean_absolute_logit_difference": 0.8121784329414368,
+      "mean_edge_embedding_l2_difference": 484.158447265625,
+      "candidate_parent_argmax_changes": 9,
+      "targets_with_candidates": 92,
+      "comparisons": [
+        {
+          "mode": "registered_physical",
+          "feature_mean": [
+            -0.7762393951416016,
+            1.329292893409729,
+            -1.5752981901168823,
+            -1.4635467529296875,
+            -0.6303092241287231,
+            0.4338589906692505,
+            -0.6922162771224976,
+            -0.08321013301610947,
+            -0.7877247333526611,
+            -0.24162623286247253,
+            0.04008820280432701,
+            -0.083561010658741,
+            0.04008820280432701,
+            -0.15330392122268677,
+            0.006988418288528919,
+            -0.083561010658741,
+            0.006988418288528919,
+            -0.24638941884040833,
+            4.200854301452637
+          ],
+          "logit_mean": 0.19908103346824646,
+          "logit_std": 1.9574124813079834,
+          "embedding_width": 288
+        },
+        {
+          "mode": "native_voxel_reference",
+          "feature_mean": [
+            -0.7762393951416016,
+            0.6693421602249146,
+            -1.669391393661499,
+            -1.487365484237671,
+            -0.9283331632614136,
+            0.4338589906692505,
+            -0.6922162771224976,
+            -0.08321013301610947,
+            -0.7877247333526611,
+            -0.2451782077550888,
+            0.02047819085419178,
+            -0.042449649423360825,
+            0.02047819085419178,
+            -0.1634538620710373,
+            0.007409791927784681,
+            -0.042449649423360825,
+            0.007409791927784681,
+            -0.2631969749927521,
+            4.200854301452637
+          ],
+          "logit_mean": 0.8288450837135315,
+          "logit_std": 1.7793328762054443,
+          "embedding_width": 288
+        }
+      ]
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "source": "6bba",
+      "frames": [
+        30,
+        34
+      ],
+      "nodes": 34,
+      "edges": 56,
+      "ROI_selection": "densest image-derived 32 micrometer tile, same objects and edges in both passes",
+      "optical_bounds_um": [
+        [
+          32.0,
+          0.0,
+          96.0
+        ],
+        [
+          64.0,
+          32.0,
+          104.0
+        ]
+      ],
+      "source_bank_sha256": "185d022f3d7524b69d8a690891c3c051c91cfa6980f5e85fc321ff0abc972a50",
+      "maximum_absolute_logit_difference": 1.1209051609039307,
+      "mean_absolute_logit_difference": 0.3006446063518524,
+      "mean_edge_embedding_l2_difference": 255.85853576660156,
+      "candidate_parent_argmax_changes": 0,
+      "targets_with_candidates": 26,
+      "comparisons": [
+        {
+          "mode": "registered_physical",
+          "feature_mean": [
+            -0.7759015560150146,
+            5.788924694061279,
+            -1.722402811050415,
+            -1.0842623710632324,
+            -0.3962847888469696,
+            0.5571780204772949,
+            -0.06072767451405525,
+            0.34800270199775696,
+            -0.3512939512729645,
+            -0.23817777633666992,
+            0.04091019928455353,
+            -0.12850692868232727,
+            0.04091019928455353,
+            -0.11490841209888458,
+            0.006170456763356924,
+            -0.12850692868232727,
+            0.006170456763356924,
+            -0.17709693312644958,
+            5.389894962310791
+          ],
+          "logit_mean": 0.026214029639959335,
+          "logit_std": 1.7678560018539429,
+          "embedding_width": 288
+        },
+        {
+          "mode": "native_voxel_reference",
+          "feature_mean": [
+            -0.7759015560150146,
+            3.4137308597564697,
+            -1.7599172592163086,
+            -1.2539596557617188,
+            -0.7843180894851685,
+            0.5571780204772949,
+            -0.06072767451405525,
+            0.34800270199775696,
+            -0.3512939512729645,
+            -0.2438722848892212,
+            0.020789459347724915,
+            -0.05947059765458107,
+            0.020789459347724915,
+            -0.14891354739665985,
+            0.007100032176822424,
+            -0.05947059765458107,
+            0.007100032176822424,
+            -0.23695603013038635,
+            5.389894962310791
+          ],
+          "logit_mean": 0.23751775920391083,
+          "logit_std": 1.8437974452972412,
+          "embedding_width": 288
+        }
+      ]
+    }
+  ],
+  "finding": "Pinned create_graph accepts scale metadata but extracts default voxel-unit region features and unscaled z/y/x. V5 explicitly supplies micrometer coordinates/diameters and micrometer-squared inertia to the same published Standardize constants.",
+  "scope": "Real pretrained HOCT and real object morphology were tested, using registered physical-unit features. This is not an exact reproduction of the upstream default voxel-feature pipeline. The late unit audit is a protocol deviation from the requested pre-score scaling audit.",
+  "limitations": "The native-voxel reference holds C0 centers, regions, candidate edges, border features and local context fixed. It is a source-only unit sensitivity diagnostic, not a full upstream default pipeline, 199-clip counterfactual score, calibration repair or independent generalization test. No source or target score selected a replacement transform.",
+  "missing_comparison": "No full 199-clip upstream-default-voxel HOCT arm was registered or run; retain this as an explicit limitation, not a checkpoint-quality verdict."
+}

@@ -1,0 +1,104 @@
+{
+  "selected": "C0",
+  "score": 0.934802374260586,
+  "delta_C0": 0.0,
+  "target_met": false,
+  "numeric_target_reached": false,
+  "gates": [
+    {
+      "primary": "N_backbone_J",
+      "replica": "N_final_seed2",
+      "complete": false,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "H_probe_native_J",
+      "replica": "H_final_seed2",
+      "complete": false,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "P_union_N_J",
+      "replica": "P_final_seed2",
+      "complete": false,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "P_DC_N_J",
+      "replica": "P_DC_final_seed2",
+      "complete": false,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "J_native_frozen",
+      "replica": "independent fresh execution",
+      "complete": true,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "H_general_J",
+      "replica": "independent fresh execution",
+      "complete": true,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "P_union_native_J",
+      "replica": "independent fresh execution",
+      "complete": true,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    },
+    {
+      "primary": "P_DC_native_J",
+      "replica": "independent fresh execution",
+      "complete": true,
+      "primary_pass": false,
+      "replica_pass": false,
+      "fresh_pass": false,
+      "eligible": false
+    }
+  ],
+  "best_exploratory": {
+    "variant": "C0",
+    "embryo": "pooled",
+    "samples": 199,
+    "n": 199,
+    "edge_jaccard": 0.9199614488076028,
+    "division_jaccard": 0.1193415637860082,
+    "division_tp": 29,
+    "division_fp": 92,
+    "division_fn": 122,
+    "node_recall": 0.982494434312724,
+    "adj_edge_jaccard": 0.9228682178819853,
+    "n_adj": 199,
+    "score": 0.934802374260586,
+    "edge_tp": 123135,
+    "edge_fp": 4965,
+    "edge_fn": 5748,
+    "num_pred_nodes": 4108943,
+    "delta_C0": 0.0
+  },
+  "selection_pending": true,
+  "fresh_parity_failures": [],
+  "interpretation": "Repeated operational data and inherited checkpoint exposure; no independent biological generalization claim."
+}

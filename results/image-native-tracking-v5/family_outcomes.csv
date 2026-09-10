@@ -1,0 +1,9 @@
+primary,replica,complete,primary_pass,replica_pass,fresh_pass,eligible
+N_backbone_J,N_final_seed2,False,False,False,False,False
+H_probe_native_J,H_final_seed2,False,False,False,False,False
+P_union_N_J,P_final_seed2,False,False,False,False,False
+P_DC_N_J,P_DC_final_seed2,False,False,False,False,False
+J_native_frozen,independent fresh execution,True,False,False,False,False
+H_general_J,independent fresh execution,True,False,False,False,False
+P_union_native_J,independent fresh execution,True,False,False,False,False
+P_DC_native_J,independent fresh execution,True,False,False,False,False

@@ -1,0 +1,28 @@
+{
+  "study_id": "image-native-tracking-v5",
+  "updated": "2026-09-10T20:39:11.295661+00:00",
+  "status": "executing",
+  "target_score": 0.95,
+  "incumbent_score": 0.934802374260586,
+  "selected": "C0",
+  "selected_score": 0.934802374260586,
+  "target_met": false,
+  "complete_configurations": 7,
+  "registered_configurations": 18,
+  "complete_new_operational_variants": 4,
+  "observations": 199,
+  "HOCT_feature_shards": 199,
+  "DeepCenter_clips": 199,
+  "expected_clips": 199,
+  "complete_native_fits": 6,
+  "planned_native_fits": 8,
+  "source_only": true,
+  "prior_studies_preserved": true,
+  "fresh_parity_failures": [],
+  "protocol_deviations": [
+    "HOCT upstream-default unit distinction audited after outer scoring"
+  ],
+  "unrun_comparisons": [
+    "199-clip HOCT with upstream-default voxel-unit features"
+  ]
+}

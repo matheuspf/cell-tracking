@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-10T19:45:48.379617+00:00",
+  "trigger": "The regular control evaluator acquired the last control variant before CPU-pool admission. The opportunistic scorer waited on that variant and could not try other ready families.",
+  "change": "Nonblocking per-variant admission for the opportunistic scorer; skip busy variants and retain the regular evaluator as sole owner.",
+  "original_evaluator_preserved": true,
+  "extra_scorers": 1,
+  "matched_scorer_functions": {
+    "one": "b96bf18b4ae064843da3d35b39c455e14d44caf3577926d40766cdd2a910b7f5",
+    "aggregate_complete": "c86fb58f810a74957250d987f19851e0ed304191b7b74f2f70aec5ec0deeaa47"
+  },
+  "model_or_decoder_changed": false
+}

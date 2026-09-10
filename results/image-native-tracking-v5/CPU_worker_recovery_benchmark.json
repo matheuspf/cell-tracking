@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-10T19:14:45.804002+00:00",
+  "observed_pool_workers": 8,
+  "samples": 22,
+  "duration_seconds": 670.237377,
+  "observed_summed_RSS_gib": 16.369380950927734,
+  "largest_observed_worker_RSS_gib": 1.7600021362304688,
+  "prior_image_inference_subtree_peak_RSS_gib": 3.007030487060547,
+  "projected_RSS_gib_with_two_more_peak_workers_and_prior_inference_peak": 22.89641571044922,
+  "CPU_cores_used_by_pool": 8.230054290153381,
+  "current_registered_RSS_cap_gib": 28,
+  "model_scores_or_hyperparameters_used": false
+}

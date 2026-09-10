@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-10T19:03:46.509089+00:00",
+  "trigger": "Two zero-length status/progress JSON files after second reboot",
+  "json_roundtrip": true,
+  "graph_array_roundtrip": true,
+  "optimizer_code_unchanged": true,
+  "common_sha256": "f13af9cc314ddb49f4f678937382e70160ffb7faf4c895ddef913568c4addf19",
+  "monitor_sha256": "c9c53f9f83f7297288e5250c22e14c9e502cfd0d0790f86a9bcab4dcc797d812",
+  "scope": "fsync temporary JSON/NPZ bytes before rename and fsync parent directory afterward; resource monitor flushes each newly observed native resume snapshot during its nominal 30-second sampling loop",
+  "numerical_recipe_changed": false
+}
