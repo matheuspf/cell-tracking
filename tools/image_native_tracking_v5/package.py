@@ -33,7 +33,9 @@ def build(selected='C0',name='inference_package'):
         source='complete both-embryo replicated and fresh-parity gate; C0 until a measured candidate passes',
         validation_state='primary comparisons complete' if parity else 'validation pending',
         fresh_verified_variants=parity.get('verified_variants',[]),
-        fresh_parity_failed_variants=parity.get('failed_parity_variants',[])))
+        fresh_parity_failed_variants=parity.get('failed_parity_variants',[]),
+        experimental_HOCT_scope='Registered physical-unit morphology and coordinates; upstream default voxel-unit full-clip pipeline was not reproduced. See the study unit-contract audit before interpreting experimental H exports.',
+        HOCT_unit_audit_sha256=sha(OUT/'HOCT_unit_contract_audit.json') if (OUT/'HOCT_unit_contract_audit.json').exists() else None))
     runner='''#!/usr/bin/env bash
 set -euo pipefail
 v5_package=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)

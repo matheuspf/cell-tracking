@@ -40,6 +40,13 @@ At 20:31 UTC, **H_general_J** completed official scoring on all 199 clips:
 121,667/7,559/7,216 and division TP/FP/FN 29/99/122. Seven of 18 registered complete
 configurations are now measured. The adapted H graph variants remain in progress.
 
+At 20:51 UTC, **H_probe_J** completed all 199 official scores at
+**0.9135868579084195**, delta C0 **-0.02121551635216645**. Per embryo it scores
+0.8440421993352256 on 44b6 and 0.92770934806879 on 6bba. Edge TP/FP/FN are
+121,603/6,053/7,280; division TP/FP/FN are 29/149/122. This improves on H0 but
+regresses both embryos against C0. Eight of 18 configurations are now measured.
+The H/native combination and same-recipe replication remain in progress.
+
 A source-only audit at 20:36 UTC confirmed a material HOCT interpretation limit.
 The registered adapter supplies micrometer coordinates/diameters and squared-
 micrometer inertia, while the pinned upstream extractor returns voxel-unit
@@ -57,7 +64,11 @@ failure. See `HOCT_unit_contract_audit.json` and the dashboard's feature section
 The six-clip validation bundle is frozen at manifest SHA256
 `c0b6dae1a34defcd8d896bfc83eae42c961fe3c21effba04b054f7dd6efa217c`.
 All 155 listed files and the early annotation/cache/network guard self-test passed.
-Full image children wait for the current N2 scoring pass's auxiliary GPU lock.
+Primary N2 score extraction finished all 199 clips at about 20:53 UTC, and the
+first fresh-image child began at 20:53:28 using unfamiliar name `volume_01` and
+source model 6bba. It will execute all 12 primary/control paths. The primary N2
+graph decoder is queued behind the active HOCT batch. Both N2 replicas continue
+their full 12,000-update fits. No full six-clip parity result exists yet.
 Do not edit this bundle's runtime, primary weights or calibrations without a new
 complete six-clip validation attempt. Reporting-only changes are separate.
 

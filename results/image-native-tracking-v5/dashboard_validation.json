@@ -1,18 +1,18 @@
 {
   "passed": true,
-  "at": "2026-09-10T20:39:31.771618+00:00",
+  "at": "2026-09-10T20:55:28.233631+00:00",
   "states": [
     {
       "embryo": "pooled",
-      "rows": 5
+      "rows": 6
     },
     {
       "embryo": "44b6",
-      "rows": 5
+      "rows": 6
     },
     {
       "embryo": "6bba",
-      "rows": 5
+      "rows": 6
     }
   ],
   "errors": [],
@@ -20,21 +20,21 @@
   "screenshots": [
     {
       "file": "dashboard_desktop.png",
-      "sha256": "0d22f68a5a5275b1f72bce7733b20215a184c0db0976ee2d5ba2068fa4b6c626",
+      "sha256": "480ce86fcaf4f0cd2d077e716ef7913747b9956cf037fd315f5b0bb85fbbafe0",
       "width": 1360,
       "height": 960
     },
     {
       "file": "dashboard_mobile.png",
-      "sha256": "7e518b75d094a1e82b174b42e384c971d8483e237a83d4cdac7f3b4327704b84",
+      "sha256": "0770c7365d26122e0ac2006222826775395248fc4fda960ab0f6baec32e2255b",
       "width": 390,
       "height": 844
     }
   ],
   "browser_version": "151.0.7922.34",
   "python": "/root/.conda/envs/cell-tracking/bin/python",
-  "dashboard_sha256": "36096e3aa1b9543604fed778d271577a6fafe834edfe2ff85506a64eae8f35d6",
-  "downloaded_rows": 21,
+  "dashboard_sha256": "0e759afea245486f284a5d32e510df575d04f2bf48fa51f58eacae9b25a77760",
+  "downloaded_rows": 24,
   "HOCT_feature_filter_populations": 3,
   "HOCT_unit_limitation_visible": true
 }

@@ -1,18 +1,18 @@
 {
-  "at": "2026-09-10T20:39:46.441260+00:00",
+  "at": "2026-09-10T20:56:14.558861+00:00",
   "status": "executing",
   "files": {
     "status.json": {
-      "sha256": "9ddaa6c20dbaae89d54285311d50a14762c4d56613e21260c98eb0b63daf5d2b",
+      "sha256": "bb7449d37dd597f23a96e52a9f8c2e72db0c3e12b98e8be81369877087862d01",
       "bytes": 822
     },
     "ablation_scores.csv": {
-      "sha256": "0db35cef34920a70fbac5b8221e30815395fb91b6879e4875d97aec3f9be0998",
-      "bytes": 3950
+      "sha256": "80b8dd02f9a8efcadb25cf71f3f8d472967bcdd78838ef57fbe2b6eb0b36079b",
+      "bytes": 4482
     },
     "score_rows.csv": {
-      "sha256": "bf1761eb894b5f7a2b29ad9b06c9d26b10f902145f0e1dd1c707e293d7fc5895",
-      "bytes": 473348
+      "sha256": "46e07a12a94b99817456185a474717d77179d48b111ce6f39327054947729cc0",
+      "bytes": 540597
     },
     "family_outcomes.csv": {
       "sha256": "fb628ca80ddda20439d5b62c16e2f8ea18fd6364c60f4943662d02216e2b7855",
@@ -23,12 +23,12 @@
       "bytes": 755
     },
     "training_summary.csv": {
-      "sha256": "20939c6cbb076d479d619a42c18fcf32f5d1bda6d3e954f3673938fb717c4223",
-      "bytes": 2841
+      "sha256": "78fc72fefefb18173a5847cb1613e3d7567af4934ab432f1a2640555c5659266",
+      "bytes": 2840
     },
     "learning_curves.csv": {
-      "sha256": "3f620ab19f7a975b902b9588cb6573577de769766887f233db1dc50b103784bf",
-      "bytes": 492284
+      "sha256": "6629d419ec3670430d1245667ebdf79699ff304a60c61be7c1253752a9fa238d",
+      "bytes": 509423
     },
     "exposure.json": {
       "sha256": "67ce02c721605ffb27d618b7d1e16b1f356710baa40afd7bd1c1167517705923",
@@ -71,15 +71,15 @@
       "bytes": 249
     },
     "dashboard.html": {
-      "sha256": "36096e3aa1b9543604fed778d271577a6fafe834edfe2ff85506a64eae8f35d6",
-      "bytes": 1068059
+      "sha256": "0e759afea245486f284a5d32e510df575d04f2bf48fa51f58eacae9b25a77760",
+      "bytes": 1104450
     },
     "dashboard_validation.json": {
-      "sha256": "a268bf4c76edeb35e9a2a0e74ba3792d73426e9fa31bb0cb69a9070a250259fc",
+      "sha256": "c7910b1157361b967640965c56134699df4f4e1a333103573278253080d14d92",
       "bytes": 952
     },
     "progress_report.md": {
-      "sha256": "9b6d9b1f3711e1a38c34ffdb24b07167c674c7694146f25c2cf3c31b0dcd1e18",
+      "sha256": "a28a43f81001540cc292df66e81d9f7eee71f852d11dc5f4683280a3489305e5",
       "bytes": 9278
     },
     "recovery.json": {
@@ -87,11 +87,11 @@
       "bytes": 683
     },
     "test_receipt.json": {
-      "sha256": "840a983564e6f9e0f63cf8dbf73000261008f7c749424faa444b801476601be1",
+      "sha256": "ff79a8f3fd3307f063ef54ec8377c735a24ba2571e9a33c79e93b20bdfffd90a",
       "bytes": 549
     },
     "README.md": {
-      "sha256": "e6dd29f1d66bd322724d768719ccfcf7c51d47de888aa4f2b9217dc61dbcdf72",
+      "sha256": "a1883219fedb92e28f2b4d7bbbdc65f3ef6d266005e95142514d560ac73bb76e",
       "bytes": 933
     },
     "P2_decision.json": {

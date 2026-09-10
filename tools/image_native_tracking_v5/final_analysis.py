@@ -197,6 +197,8 @@ def analysis():
             fresh_verified_primary_variants=[v for v in variants if v in fresh['verified_variants']],
             fresh_failed_primary_variants=[v for v in variants if v in fresh['failed_parity_variants']],
             best_primary_fresh_verified=best in fresh['verified_variants']))
+        if family=='H':
+            result[-1]['unit_scope']='Registered physical-unit graph; upstream default voxel-unit full-199 comparison not run. Late unit-contract audit is a protocol deviation; no production repair or target tuning.'
     decoders=[]
     for folder in sorted((OUT/'prediction_receipts').iterdir()):
         rr=[read(p) for p in folder.glob('*.json')]
