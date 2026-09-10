@@ -28,7 +28,12 @@ def build(selected='C0',name='inference_package'):
     shutil.copyfile(REPO/'handover/image-native-tracking-v5/config.json',dest)
     shutil.copytree(WORK/'python',package/'python',ignore=shutil.ignore_patterns('__pycache__','*.pyc','bin'))
     shutil.copyfile(WORK/'hoct/LICENSE',package/'HOCT_LICENSE.txt')
-    write(package/'winning_config.json',dict(variant=selected,baseline=BASE['pooled'],target=.95,source='complete both-embryo replicated gate; C0 until a measured candidate passes'))
+    parity=read(OUT/'fresh_primary_comparison.json') if (OUT/'fresh_primary_comparison.json').exists() else {}
+    write(package/'winning_config.json',dict(variant=selected,baseline=BASE['pooled'],target=.95,
+        source='complete both-embryo replicated and fresh-parity gate; C0 until a measured candidate passes',
+        validation_state='primary comparisons complete' if parity else 'validation pending',
+        fresh_verified_variants=parity.get('verified_variants',[]),
+        fresh_parity_failed_variants=parity.get('failed_parity_variants',[])))
     runner='''#!/usr/bin/env bash
 set -euo pipefail
 v5_package=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
@@ -46,6 +51,8 @@ exec "$v5_python" -m image_native_tracking_v5.package_predict "$@"
 Run `./run.sh --python /path/to/CUDA/python --images IMAGE_DIRECTORY --output NEW_DIRECTORY --v1 V1_ROOT --v2 V2_ROOT --source-model 44b6`.
 Source-model identifies the training source; scored transfer uses the opposite source from the input embryo.
 Use `--disable-new-heads` for C0. `--variant P_DC_N_J --also-variant H_probe_native_J` executes the learned native encoder, full-frame proposals, DeepCenter optical evidence, HOCT backbone/probe and the joint solver on fresh images. The primary requested variant writes submission.csv; additional variants have separate CSVs.
+
+The selected default is the gated export. Explicit `--variant` options expose research comparisons, including any pipeline that failed fresh graph/count parity. `winning_config.json` records verified and failed-parity variant names, without annotation arrays or scoring counts. Check that metadata before interpreting an experimental export as a reproduced result.
 
 The bundle contains new weights, pinned HOCT/pooch source and the copied C0 code/repair models. External base dependencies are listed with hashes in base/manifest.json: the patched tracking source, primary/secondary native checkpoints and DeepCenter checkpoint remain required. This is not a self-contained CUDA environment. Use the preserved tested Python runtime; runtime versions accompany the study report.
 

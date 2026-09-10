@@ -84,7 +84,9 @@ def coverage():
     for em in ['44b6','6bba','pooled']:
         sub=[r for r in rows if em=='pooled' or r['embryo']==em]
         if not sub:continue
-        buckets={b:sum(r['division_buckets'].get(b,0) for r in sub) for b in sorted({b for r in sub for b in r['division_buckets']})}
+        expected_buckets={'C0_official_recovered','missing_parent','missing_daughter','wrong_timing','missing_downstream_path',
+            'insufficient_candidates','unsupported_HOCT_score','conflict_or_protection_loss','available_unselected_evidence'}
+        buckets={b:sum(r['division_buckets'].get(b,0) for r in sub) for b in sorted(expected_buckets|{b for r in sub for b in r['division_buckets']})}
         summary.append(dict(embryo=em,samples=len(sub),complete=len(sub)==(199 if em=='pooled' else 71 if em=='44b6' else 128),
             **{k:sum(r[k] for r in sub) for k in numeric},division_buckets=buckets,
             cap_coverage={k:{q:sum(r['cap_coverage'][k][q] for r in sub) for q in ['edges','gt_transitions_covered','gt_transitions_lost_given_endpoints']} for k in ['4','8','16']}))
@@ -162,6 +164,16 @@ def build(final=False):
     write(OUT/'status.json',status);write(OUT/'selection.json',selection);write(OUT/'exposure.json',exposures);write(OUT/'score_budget.json',budget)
     pd.DataFrame(train).to_csv(OUT/'training_summary.csv',index=False);pd.DataFrame(curves).to_csv(OUT/'learning_curves.csv',index=False)
     pd.DataFrame([{k:v for k,v in r.items() if not isinstance(v,dict)} for r in cov]).to_csv(OUT/'coverage.csv',index=False)
+    pd.DataFrame([dict(embryo=r['embryo'],samples=r['samples'],cap=int(cap),**values)
+        for r in cov for cap,values in r['cap_coverage'].items()]).to_csv(OUT/'candidate_cap_coverage.csv',index=False)
+    pd.DataFrame([dict(embryo=r['embryo'],samples=r['samples'],bucket=bucket,events=count)
+        for r in cov for bucket,count in r['division_buckets'].items()]).to_csv(OUT/'division_evidence.csv',index=False)
+    headroom=[read(p) for p in sorted((OUT/'headroom').glob('*.json'))]
+    pd.DataFrame([dict(dataset=r['dataset'],embryo=r['embryo'],cap=int(cap),**values)
+        for r in headroom for cap,values in r['cap_coverage'].items()]).to_csv(OUT/'candidate_cap_coverage_rows.csv',index=False)
+    buckets=sorted({k for r in cov for k in r['division_buckets']})
+    pd.DataFrame([dict(dataset=r['dataset'],embryo=r['embryo'],bucket=bucket,events=r['division_buckets'].get(bucket,0))
+        for r in headroom for bucket in buckets]).to_csv(OUT/'division_evidence_rows.csv',index=False)
     pd.DataFrame(selection['gates']).to_csv(OUT/'family_outcomes.csv',index=False)
     template=(Path(__file__).parent/'dashboard_template.html').read_text()
     encoded=json.dumps(payload,default=lambda v:v.item() if isinstance(v,np.generic) else v,allow_nan=False).replace('<','\\u003c')
@@ -182,11 +194,11 @@ HOCT runs the pinned official 6,252,593-parameter general_v1 JIT with 19 genuine
 
 P1 discovers full-field native peaks with real image contrast, assigns new IDs, derives image-supported watershed morphology, and rebuilds candidate features at the new coordinates. PDC uses continuous frozen DeepCenter confirmation. The image ablation removes proposal confidence. The rolling five-frame MILP compares births, continuation, bifurcation and incumbent explanations under ownership and one-cell/two-cell exclusion constraints. Timing aliases on predicted paths share a maximum complete-explanation choice. C0 fork predecessor/daughter/grandchild edges are protected in operational inference. Oracles relax protection explicitly.
 
-Native comparison tensors use the primary checkpoint without the incumbent's secondary model/eight-view harmonic ensemble. Their full-frame two-frame inputs use the exact installed downsampling, quantiles and positional/indexing conventions. This intentional change is isolated by N0. The complete inherited C0 path and pre-ILP arrays were independently reproduced on two full density-selected clips.
+Native comparison tensors use the primary checkpoint without the incumbent's secondary model/eight-view harmonic ensemble. Their full-frame two-frame inputs use the exact installed downsampling, quantiles and positional/indexing conventions. N0 is the matched frozen control for N1/N2; its contrast with full C0 changes both native evidence and decoder. The complete inherited C0 path and pre-ILP arrays were independently reproduced on two full density-selected clips.
 
 Both direct adaptation directions use only their own source labels and source calibration. All source transitions with represented endpoints are eligible; missing parents and possible unannotated second daughters remain censored. Public checkpoints, C0 teachers and repeated embryo use prevent an independent biological-generalization claim. Seed replication measures training sensitivity, not embryo independence.
 
-The server reboot interrupted execution after the native log reached update 2,941. Hash checks recovered 122 image shards, 120 HOCT shards, all C0 results and optimizer/RNG state at update 2,000. The last 941 updates were repeated. Prior critical hashes remained unchanged. The crash cause is unavailable from container kernel logs. Resumption uses tmux, two bounded GPU lanes and shared CPU-pool locking; native resume snapshots are now every 250 updates.
+The server reboot interrupted execution after the native log reached update 2,941. Hash checks recovered 122 image shards, 120 HOCT shards, all C0 results and optimizer/RNG state at update 2,000. The last 941 updates were repeated. Prior critical hashes remained unchanged. The crash cause is unavailable from container kernel logs. Resumption initially used one native training lane and one auxiliary lane. After a measured throughput/memory benchmark, each source received one training lane while calibration and inference share a serialized auxiliary lane on the same RTX 4090. Per-fit locks prevent duplicate optimizer updates; the complete optimizer body was verified AST-identical. CPU pools remain bounded and serialized; native resume snapshots occur every 250 updates.
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.
 '''

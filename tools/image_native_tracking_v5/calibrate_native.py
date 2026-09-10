@@ -29,4 +29,7 @@ def fit(source,stage,seed):
 
 if __name__=='__main__':
     import sys
-    fit(sys.argv[1],sys.argv[2],int(sys.argv[3]))
+    source,stage,seed=sys.argv[1],sys.argv[2],int(sys.argv[3])
+    if (OUT/'calibration'/f'{source}_{stage}_{seed}.json').exists():fit(source,stage,seed)
+    else:
+        with gpu_aux():fit(source,stage,seed)

@@ -168,13 +168,16 @@ def analysis():
     families={'H':['H_general_J','H_probe_J','H_probe_native_J'],'N':['N_head_J','N_backbone_J'],
         'P':['P_union_native_J','P_union_N_J','P_DC_native_J','P_DC_N_J','P_image_ablation']}
     result=[]
-    regrets=read(OUT/'regret_summary.json')
+    regrets=read(OUT/'regret_summary.json');fresh=read(OUT/'fresh_validation.json')
     for family,variants in families.items():
         best=max(variants,key=lambda v:index[v,'pooled']['score'])
         result.append(dict(family=family,best_primary_exploratory=best,
             scores={e:index[best,e]['score'] for e in BASE},delta_C0={e:index[best,e]['delta_C0'] for e in BASE},
             regret=[r for r in regrets if r['variant']==best],
-            status='valid measured representation/observation experiment',hindsight_selection=True))
+            status='complete graph measurements; fresh reproducibility recorded separately',hindsight_selection=True,
+            fresh_verified_primary_variants=[v for v in variants if v in fresh['verified_variants']],
+            fresh_failed_primary_variants=[v for v in variants if v in fresh['failed_parity_variants']],
+            best_primary_fresh_verified=best in fresh['verified_variants']))
     decoders=[]
     for folder in sorted((OUT/'prediction_receipts').iterdir()):
         rr=[read(p) for p in folder.glob('*.json')]

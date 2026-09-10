@@ -47,7 +47,7 @@ def objective(log,positive,teacher=None):
         if mask.any():loss=loss+.02*F.kl_div(log[:,mask].log_softmax(0),q[:,mask],reduction='batchmean')
     return loss
 
-def fit(source,stage,seed=20260910,steps=None,tiny=False):
+def _fit(source,stage,seed=20260910,steps=None,tiny=False):
     torch.set_num_threads(2);torch.manual_seed(seed);np.random.seed(seed);random.seed(seed)
     assert stage in ['N1','N2'];steps=steps or (8000 if stage=='N1' else 12000)
     key=f'{source}_{stage}_{seed}'+('_tiny' if tiny else '')
@@ -142,6 +142,16 @@ def fit(source,stage,seed=20260910,steps=None,tiny=False):
         precision='float32; BN statistics and dropout fixed to inference mode',source_dev='source resubstitution only; fixed budget, no target tuning',
         teacher_stability_weight=.02,teacher_confidence_min=.98,teacher_targets='soft incoming distributions, unsupported targets only; no hard nondivision or birth labels',
         code_sha256=sha(Path(__file__))))
+
+def fit(source,stage,seed=20260910,steps=None,tiny=False):
+    # Per-fit exclusion lets an already registered source run use the auxiliary
+    # GPU lane without racing the main queue's checkpoint or optimizer state.
+    import fcntl
+    key=f'{source}_{stage}_{seed}'+('_tiny' if tiny else '')
+    lock=OUT/'training_locks'/f'{key}.lock';lock.parent.mkdir(parents=True,exist_ok=True)
+    with lock.open('a') as handle:
+        fcntl.flock(handle,fcntl.LOCK_EX)
+        return _fit(source,stage,seed,steps,tiny)
 
 if __name__=='__main__':
     import argparse

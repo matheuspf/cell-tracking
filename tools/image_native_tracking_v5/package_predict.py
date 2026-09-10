@@ -9,6 +9,7 @@ def main():
     p.add_argument('--disable-new-heads',action='store_true');a=p.parse_args()
     package=Path(__file__).resolve().parents[2];images=a.images.resolve();out=a.output.resolve()
     if out.exists():raise ValueError('Output must be a new directory')
+    if not any(images.glob('*.zarr')):raise ValueError('Image directory contains no .zarr clips')
     for protected in [package,images,a.v1.resolve(),a.v2.resolve(),*[q.resolve() for q in images.glob('*.zarr')]]:
         if out==protected or out.is_relative_to(protected) or protected.is_relative_to(out):raise ValueError('Output overlaps protected inputs')
     os.environ.update(V5_V1=str(a.v1.resolve()),V5_V2=str(a.v2.resolve()),V5_OUTPUT=str(package),V5_STUDIES=str(out.parent),V5_FRESH_OUTPUT=str(out),V5_AUDIT_DIR=str(out/'read_audit'))

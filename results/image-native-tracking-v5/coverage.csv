@@ -1,3 +1,4 @@
 embryo,samples,complete,gt_nodes,C0_nodes,C0_matched,gt_edges,endpoints_present,candidate_edges,candidate_gt_edges,crowded_endpoint_edges,missed_candidate_edges_crowded,mitotic_endpoint_edges,missed_candidate_edges_mitotic,valid_HOCT_regions,novel_peaks,union_matched,new_peak_matched_nodes,new_peak_new_GT_recovery,union_C0_GT_matches_lost,official_local_candidate_feasible,exact_id_candidate_divisions
-44b6,1,False,788,44829,778,773,761,222162,761,43,0,2,0,40864,20834,788,60,10,0,1,1
-pooled,1,False,788,44829,778,773,761,222162,761,43,0,2,0,40864,20834,788,60,10,0,1,1
+44b6,71,True,20197,1972750,19968,19826,19530,9471430,19508,392,0,48,1,1670799,1248694,20182,2041,214,0,24,21
+6bba,128,True,113121,2136193,110868,109057,106313,5708321,105918,346,2,213,14,1785959,795184,112272,9836,1400,0,94,78
+pooled,199,True,133318,4108943,130836,128883,125843,15179751,125426,738,2,261,15,3456758,2043878,132454,11877,1614,0,118,99

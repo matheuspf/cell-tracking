@@ -15,7 +15,9 @@ ALLOW=['status.json','ablation_scores.csv','score_rows.csv','family_outcomes.csv
     'dataset_use.csv','runtime_versions.json','source_manifest.json','optical_review_receipt.json','preservation_check.json',
     'resource_summary.json','execution_repairs.json','source_event_coverage.json','early_package_validation.json',
     'event_index_equivalence.json','event_index_deployment.json','CPU_worker_profile.json','serialization_receipt.json',
-    'fresh_payload_compatibility.json','fresh_validation_schedule.json','fresh_primary_comparison.json','evaluation_schedule.json']
+    'fresh_payload_compatibility.json','fresh_validation_schedule.json','fresh_primary_comparison.json','evaluation_schedule.json',
+    'early_paths_validation.json','early_headroom_receipt.json','training_concurrency_schedule.json','GPU_concurrency_benchmark.json',
+    'source_lane_schedule.json','candidate_cap_coverage.csv','candidate_cap_coverage_rows.csv','division_evidence.csv','division_evidence_rows.csv']
 
 
 def run():

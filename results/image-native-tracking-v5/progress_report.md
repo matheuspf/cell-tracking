@@ -1,6 +1,6 @@
 # Image-native tracking v5 — execution progress
 
-Updated 2026-09-10T16:01:06.453924+00:00. 2 of 18 registered complete configurations are scored.
+Updated 2026-09-10T17:12:16.140557+00:00. 5 of 18 registered complete configurations are scored.
 C0 is freshly reproduced at 0.934802374260586; the target is 0.95 (+0.015197625739414).
 Current eligible export: C0 at 0.934802374260586. Selection remains provisional while execution continues.
 
@@ -13,10 +13,10 @@ HOCT runs the pinned official 6,252,593-parameter general_v1 JIT with 19 genuine
 
 P1 discovers full-field native peaks with real image contrast, assigns new IDs, derives image-supported watershed morphology, and rebuilds candidate features at the new coordinates. PDC uses continuous frozen DeepCenter confirmation. The image ablation removes proposal confidence. The rolling five-frame MILP compares births, continuation, bifurcation and incumbent explanations under ownership and one-cell/two-cell exclusion constraints. Timing aliases on predicted paths share a maximum complete-explanation choice. C0 fork predecessor/daughter/grandchild edges are protected in operational inference. Oracles relax protection explicitly.
 
-Native comparison tensors use the primary checkpoint without the incumbent's secondary model/eight-view harmonic ensemble. Their full-frame two-frame inputs use the exact installed downsampling, quantiles and positional/indexing conventions. This intentional change is isolated by N0. The complete inherited C0 path and pre-ILP arrays were independently reproduced on two full density-selected clips.
+Native comparison tensors use the primary checkpoint without the incumbent's secondary model/eight-view harmonic ensemble. Their full-frame two-frame inputs use the exact installed downsampling, quantiles and positional/indexing conventions. N0 is the matched frozen control for N1/N2; its contrast with full C0 changes both native evidence and decoder. The complete inherited C0 path and pre-ILP arrays were independently reproduced on two full density-selected clips.
 
 Both direct adaptation directions use only their own source labels and source calibration. All source transitions with represented endpoints are eligible; missing parents and possible unannotated second daughters remain censored. Public checkpoints, C0 teachers and repeated embryo use prevent an independent biological-generalization claim. Seed replication measures training sensitivity, not embryo independence.
 
-The server reboot interrupted execution after the native log reached update 2,941. Hash checks recovered 122 image shards, 120 HOCT shards, all C0 results and optimizer/RNG state at update 2,000. The last 941 updates were repeated. Prior critical hashes remained unchanged. The crash cause is unavailable from container kernel logs. Resumption uses tmux, two bounded GPU lanes and shared CPU-pool locking; native resume snapshots are now every 250 updates.
+The server reboot interrupted execution after the native log reached update 2,941. Hash checks recovered 122 image shards, 120 HOCT shards, all C0 results and optimizer/RNG state at update 2,000. The last 941 updates were repeated. Prior critical hashes remained unchanged. The crash cause is unavailable from container kernel logs. Resumption initially used one native training lane and one auxiliary lane. After a measured throughput/memory benchmark, each source received one training lane while calibration and inference share a serialized auxiliary lane on the same RTX 4090. Per-fit locks prevent duplicate optimizer updates; the complete optimizer body was verified AST-identical. CPU pools remain bounded and serialized; native resume snapshots occur every 250 updates.
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.

@@ -16,7 +16,7 @@ def cpu_batch():
 
 @contextmanager
 def gpu_aux():
-    """One auxiliary GPU workload alongside the sequential native training lane."""
+    """Serialize auxiliary inference/calibration alongside bounded native fits."""
     import fcntl
     OUT.mkdir(parents=True,exist_ok=True)
     with (OUT/'gpu_aux.lock').open('a') as handle:
@@ -64,9 +64,10 @@ def graph(name,variant='C0'):
     if 'added_nodes' in d:n=np.concatenate([n,d['added_nodes']])
     e.difference_update(map(tuple,d['removed_edges']));e.update(map(tuple,d['added_edges']))
     return dict(nodes=n,edges=np.asarray(sorted(e),np.int64).reshape(-1,2))
-def save_delta(name,variant,nodes,edges):
+def save_delta(name,variant,nodes,edges,output_root=None):
     b=graph(name);old=set(map(tuple,b['edges']));new=set(map(tuple,edges))
     oldids=set(b['nodes'][:,0]);newids=set(nodes[:,0])
-    save(OUT/'deltas'/variant/f'{name}.npz',added_edges=np.array(sorted(new-old),np.int64).reshape(-1,2),
+    destination=OUT if output_root is None else Path(output_root)
+    save(destination/'deltas'/variant/f'{name}.npz',added_edges=np.array(sorted(new-old),np.int64).reshape(-1,2),
          removed_edges=np.array(sorted(old-new),np.int64).reshape(-1,2),
          added_nodes=nodes[np.array([n[0] not in oldids for n in nodes])],removed_nodes=np.array(sorted(oldids-newids),np.int64))

@@ -147,8 +147,9 @@ def augmented_selection(c,base,union_matches,base_matches):
     return nodes,edges,dict(added_nodes=len(selected-old_ids),removed_nodes=len(old_ids-selected),selected_split_groups=group_count)
 
 
-def one(row):
-    name=row['dataset'];dest=OUT/'headroom'/f'{name}.json'
+def one(row,output_root=None):
+    destination=OUT if output_root is None else Path(output_root)
+    name=row['dataset'];dest=destination/'headroom'/f'{name}.json'
     if dest.exists():return read(dest)
     source='6bba' if row['embryo']=='44b6' else '44b6';start=time.monotonic()
     base=graph(name);c=arrays(OUT/'observations'/f'{name}.npz');gt=arrays(V1/'evaluation/gt'/f'{name}.npz')
@@ -173,14 +174,14 @@ def one(row):
     c0score=read(OUT/'evaluation/C0'/f'{name}.json')
     assert official==dict(tp=c0score['division_tp'],fp=c0score['division_fp'],fn=c0score['division_fn'])
     oe,oreceipt=association_oracle(base['nodes'],base['edges'],gt,fixed['pairs'],matches,requests)
-    save_delta(name,'Oracle_fixed',base['nodes'],oe)
+    save_delta(name,'Oracle_fixed',base['nodes'],oe,output_root=destination)
     union_matches=match_nodes(c['nodes'],base['edges'],gt['nodes'],gt['edges'],row['physical_scale'])
     an,ae,selection=augmented_selection(c,base,union_matches,matches);valid_ids=set(an[:,0].astype(int))
     pmask=np.array([int(a) in valid_ids and int(b) in valid_ids for a,b in expanded['pairs']]);ap=expanded['pairs'][pmask];al=expanded['native_logits'][pmask]
     am=match_nodes(an,ae,gt['nodes'],gt['edges'],row['physical_scale'])
     lookup={int(i):j for j,i in enumerate(c['nodes'][:,0])};av=np.array([c['valid_region'][lookup[int(i)]] for i in an[:,0]])
     aevents,arequests,_=division_diagnostics(an,ae,gt,ap,al,row['physical_scale'],av,am)
-    aedges,ar=association_oracle(an,ae,gt,ap,am,arequests);save_delta(name,'Oracle_augmented',an,aedges)
+    aedges,ar=association_oracle(an,ae,gt,ap,am,arequests);save_delta(name,'Oracle_augmented',an,aedges,output_root=destination)
     from strong_tracker_v3.common import validate
     validate(base['nodes'],oe,row['image_shape']);validate(an,aedges,row['image_shape'])
     new_ids=set(c['nodes'][~c['oldmask'],0].astype(int));new_matches={p:g for p,g in union_matches.items() if p in new_ids}
@@ -200,7 +201,7 @@ def one(row):
         fixed_oracle=oreceipt,augmented_selection=selection,augmented_oracle=ar,
         oracle_scope='truth-assisted greedy supported links and local timing paths; graph-legal and bank-constrained; not a global upper bound; C0 protection relaxed for headroom',
         evaluation_only=True)
-    write(OUT/'oracle_events'/f'{name}.json',dict(fixed=events,augmented=aevents,local_only_GT_IDs=True))
+    write(destination/'oracle_events'/f'{name}.json',dict(fixed=events,augmented=aevents,local_only_GT_IDs=True))
     write(dest,r);return r
 
 

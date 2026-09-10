@@ -163,6 +163,11 @@ The server reboot interrupted the first production N1 fit at logged update 2,941
 Recovery verified saved hashes and resumed optimizer/RNG state at update 2,000;
 48 repeated logged losses matched to five decimals. Failure logs and the original
 resume copy remain preserved. Later resume snapshots were saved every 250 updates.
+After a throughput benchmark, scheduling allowed one native optimizer per source,
+with per-fit locks coordinating source replica helpers and the original queue.
+Calibration and inference shared one auxiliary GPU lane. The complete optimizer
+function body, data, precision, batches and update counts remained unchanged;
+the scheduling and benchmark receipts document the transition.
 The cause of the reboot is unknown. Early package trials exposed missing declared
 model-config/hash-lock dependencies and a guard rejecting newly generated GEFF
 outputs; precise pinned exceptions were tested. An extra pixel fixture's incorrect

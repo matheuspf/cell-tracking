@@ -33,21 +33,44 @@ The first new complete comparison, J with frozen primary native evidence, scores
 scored with one CPU scorer alongside the six-worker control decoder. This changes
 both the primary-only evidence and decoder relative to full C0, so it does not
 isolate the decoder alone. No target success or promotion has been established.
-Production N2 fits, replication, final
-fresh inference, optical review, and final reporting remain required.
+The fixed-node truth-assisted legal graph scores **0.9576193465416518** and the
+augmented-node counterpart scores **0.9721455963275534**, both on all 199 clips.
+These are heuristic feasibility diagnostics, not deployable models, global upper
+bounds, or target success. Production N2 fits, replication, final fresh inference,
+optical review, and final reporting remain required.
 
-At the 16:00 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
+The first full new-observation control, **P_union_native_J**, scores
+**0.6751326227250869** (delta C0 **-0.2596697515354991**) on all 199 clips. It exports
+4,521,204 nodes, with edge TP/FP/FN 109,131/30,185/19,752 and division TP/FP/FN
+41/4,774/110. Improved sparse node recall does not compensate for these association
+errors. This is a negative result for this frozen-representation proposal arm;
+HOCT, adapted native representations and confirmation controls remain pending.
+
+At the 17:07 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
 shards and target candidate banks were complete. Both primary N1 fits completed
-8,000 updates and source calibration; primary 44b6 N2 was running beyond 2,400
-updates. Full control decoding and opposite-source HOCT inference were running. The additional actual
+8,000 updates and source calibration; primary N2 fits were running beyond 7,600
+updates for 44b6 and 2,800 for 6bba. All opposite-source HOCT and N1 score arrays
+were complete and waiting for the serialized CPU decoder. All 199 P_union_native_J
+graphs were complete; their official scoring finished at 17:11 UTC alongside the
+six control workers. The additional actual
 3D-network pixel-response test passed. No training recipe was reduced.
+
+Full candidate coverage is complete: 130,836 of 133,318 annotated nodes matched
+C0, 125,426 of 128,883 annotated edges occurred in its bank, and the expanded bank
+recovered 1,614 additional annotated nodes without losing a C0 match. The 2,043,878
+new peaks are predominantly unlabeled; this is not an estimate of dense detection
+precision. Official locally feasible division evidence covered 118 of 151 events;
+the separate exact-ID candidate-pair count was 99. Detailed identities stay local.
 
 The guarded `inference_package_early4` C0 run completed from an unfamiliar filename
 with exact full-graph parity and CSV roundtrip. Actual annotation/cache/DNS denial
 tests passed before numerical imports. Prior guard failures exposed the secondary
 checkpoint config, v2 hash-only teacher lock, and newly generated output GEFF;
 precise pinned exceptions were added, and every failed attempt was preserved.
-The early bundle is an integration artifact, not the final export.
+Eight early full-image C0/H/N1/P/DeepCenter paths also completed on the other
+embryo in 235.27 seconds, with CSV and read-audit checks passing. Only C0 had graph
+parity checked in that early trial. All six-clip comparisons, including actual N2,
+remain required. The early bundle is an integration artifact, not the final export.
 
 ## Server recovery on 2026-09-10
 
@@ -64,8 +87,19 @@ optimizer/RNG checkpoint was update 2,000. It was copied separately into
 their recorded five-decimal precision. Resume snapshots now occur every 250
 updates, with the model recipe unchanged.
 
-The detached tmux session is **`cell-tracking-v5`**. The supervisor runs one
-sequential native training lane and one serialized auxiliary GPU lane. CPU process
+The detached tmux session is **`cell-tracking-v5`**. Its original supervisor is
+preserved. Scheduling now allows one native fit per source, with at most two
+simultaneous native optimizers and one serialized auxiliary inference/calibration
+lane. The initial source6 N2 helper occupies that auxiliary lane until it finishes.
+Each source's replica helper waits for its own primary N2 model, then runs the
+registered N1 and N2 replica fits. Per-fit locks coordinate these helpers with the
+original queue, which completes every source calibration. The complete optimizer
+function body is structurally identical to the pre-scheduling version. A 600-update
+benchmark reached 2.50 combined updates/second, versus the earlier single-source
+1.40, with 9.34 GiB GPU and 13.54 GiB sampled summed RSS peaks. See
+`source_lane_schedule.json` and `GPU_concurrency_benchmark.json`; the running
+supervisor's original `gpu_policy` string describes its startup queue only.
+CPU process
 pools share a lock. The existing control pool retains six workers; future decoder
 pools use eight after measured CPU/RSS profiling, with other pools at six or fewer.
 An event index avoids repeated scans; every MILP array remained exact on 16 source
@@ -95,6 +129,12 @@ Inspect `supervisor_state.json` and the named job log. Completed source checkpoi
 calibrations, cache shards and officially scored graphs are reused after checks.
 The native queue also completes calibration if a checkpoint survived but its
 calibration did not.
+
+The concurrency helpers are separate from the original supervisor. After checking
+that none is already running, restore `source_lane 44b6` and `source_lane 6bba` in
+their own detached windows. If source6 primary N2 is still incomplete, restore its
+`aux_native 6bba N2` helper as well. These wrappers reuse complete, hash-verified
+fits and lock unfinished fits; do not invoke bare optimizer jobs in parallel.
 
 ## Paths and environment
 
@@ -170,7 +210,7 @@ change. No labels or cached selected graphs may enter fresh inference.
    attempts and input/model/config fingerprints.
 2. Preserve completed original-HOCT/ctc_v0 source diagnostics, including the bounded
    source6 ROI retry. They are source diagnostics, not complete scores.
-3. Complete candidate coverage and both graph-legal oracles. Keep official local
+3. Preserve completed candidate coverage and both graph-legal oracles. Keep official local
    division evidence distinct from exact-ID daughter pairs. Record candidate,
    missing-region, score, protection and conflict attrition.
 4. Compute GT-edge and predicted-edge regret, node/matching effects, and exact
@@ -183,8 +223,8 @@ change. No labels or cached selected graphs may enter fresh inference.
    offline guards, cache denial, CSV roundtrip and exact graph/numeric parity.
    Build the final package after complete comparisons; verify the tested validation
    payload is byte-identical and execute the final default and disable switch.
-   The early C0 trial passed; the early new-model path trial remains behind the
-   auxiliary GPU lock in tmux `package-paths4`.
+   The early C0 and eight-path integration trials passed their documented checks;
+   they do not replace six-clip N2 and graph/count validation.
 6. Generate the local optical-review pack after prediction freeze. Do not invent
    human judgments or turn review images into new labels.
 7. Finish `final_report.md`, all required CSVs/manifests, dashboard validation,

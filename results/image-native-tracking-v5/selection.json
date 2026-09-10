@@ -62,7 +62,7 @@
     {
       "primary": "P_union_native_J",
       "replica": "independent fresh execution",
-      "complete": false,
+      "complete": true,
       "primary_pass": false,
       "replica_pass": false,
       "fresh_pass": false,
