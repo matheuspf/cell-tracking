@@ -36,6 +36,10 @@ def run():
                 assert page.locator('#featureDistribution tbody tr').count()==19
             page.select_option('#featurePopulation','pooled')
             page.locator('#featureSection summary').click()
+        if data.get('HOCT_unit_audit'):
+            assert page.locator('#featureUnits').is_visible()
+            assert 'upstream-default-voxel comparison was not run' in page.locator('#featureUnits').inner_text()
+            assert page.locator('#unitSensitivity tbody tr').count()==2
         with page.expect_download() as info:page.locator('#download').click()
         dest=OUT/'dashboard_download.csv';info.value.save_as(dest)
         with dest.open() as f:downloaded=list(csv.DictReader(f))
@@ -50,7 +54,8 @@ def run():
     assert not errors and not network,(errors,network)
     write(OUT/'dashboard_validation.json',dict(passed=True,at=now(),states=states,errors=errors,network_requests=network,
         screenshots=screenshots,browser_version=version,python=sys.executable,dashboard_sha256=sha(path),downloaded_rows=len(downloaded),
-        HOCT_feature_filter_populations=3 if data.get('feature_coverage') else 0))
+        HOCT_feature_filter_populations=3 if data.get('feature_coverage') else 0,
+        HOCT_unit_limitation_visible=bool(data.get('HOCT_unit_audit'))))
     print('Offline dashboard browser checks passed',flush=True)
 
 if __name__=='__main__':run()

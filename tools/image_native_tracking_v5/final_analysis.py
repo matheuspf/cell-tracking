@@ -7,6 +7,8 @@ from .common import *
 def provenance():
     models=[];uses=[];event_coverage=[]
     feature_audit=read(OUT/'HOCT_feature_audit.json');assert feature_audit['complete'] and feature_audit['clips']==199
+    unit_audit=read(OUT/'HOCT_unit_contract_audit.json');assert unit_audit['complete']
+    assert not unit_audit['registered_features_or_models_changed']
     for name,hashes in feature_audit['input_hashes'].items():
         assert sha(OUT/'observations'/f'{name}.npz')==hashes['observation']
         assert sha(OUT/'model_scores/H'/f'{name}.npz')==hashes['HOCT_scores']
@@ -84,12 +86,18 @@ def provenance():
         interface='supported feature-bearing IndexedRXGraph; 19 actual morphology/position inputs, 288-dimensional true edge embeddings',
         region_partition='one marker watershed using C0 centers and newly discovered peaks; fixed-node HOCT keeps only C0 graph nodes, with morphology from this shared partition',
         biological_exposure='not independently certified',feature_audit_sha256=sha(OUT/'HOCT_feature_audit.json'),
-        feature_audit_inputs_reverified=True),native=dict(source='preserved installed patched U-Net/transformer',
+        feature_audit_inputs_reverified=True,unit_contract_audit_sha256=sha(OUT/'HOCT_unit_contract_audit.json'),
+        upstream_default_feature_units_reproduced=False,registered_feature_units='micrometers and squared micrometers',
+        scaling_audit_timing='Protocol deviation: upstream default voxel-unit distinction discovered after outer scores; source-only diagnostic, no transform or calibration change',
+        interpretation_limit=unit_audit['missing_comparison']),native=dict(source='preserved installed patched U-Net/transformer',
         architecture_sha256=sha(OUT/'native_architecture.json'),C0_base_manifest_sha256=sha(V4/'inference_package/base/manifest.json')),
         metric=dict(repository='https://github.com/royerlab/kaggle-cell-tracking-competition',commit=config['metric_commit']),
         competition_inputs='199 supplied clips; 71 from 44b6 and 128 from 6bba',synthetic_training_used=False,
         FOCUS_used=False,external_microscopy_uploads=False,new_terms_accepted=False))
     repairs=[
+        dict(component='HOCT feature-unit audit timing',failure='Registered physical-unit features were not checked against the upstream default voxel-unit extractor before outer scoring',
+            correction='Measure the pinned extractor on real source masks and true JIT unit sensitivity on source tiles; retain frozen inputs and explicitly report the unrun full voxel-default comparison',
+            protocol_deviation=True,model_recipe_changed=False),
         dict(component='official HOCT graph adapter',failure='bulk_add_edges returns no edge-ID list in the installed tracksdata API',
             correction='read actual edge IDs through the supported edge_attrs table and retain explicit ID mapping',model_recipe_changed=False),
         dict(component='source proposal pilot',failure='source6 expanded candidate bank had not yet been materialized',

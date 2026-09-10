@@ -27,12 +27,39 @@ At 19:54 UTC, primary source6 N2 completed 12,000 actual image-network updates.
 All 12,374 eligible windows and 106,313 supported edges were seen. Its first encoder
 tensor changed by 0.02013603 in L2 norm, with a nonzero first-step convolution
 gradient. The checkpoint hash verified. Both primary N2 models and the source44
-N1 replica are now complete, giving five of eight completed native fits. Source44
-N2 replication and source6 N1 replication remain active; source6 N2 calibration
-waits for the auxiliary head fit. All 199 confidence-ablation graphs are complete,
-and N1 graph decoding is running. Its full scores are still pending.
+N1 replica completed first. Source6 replica N1 subsequently finished at 20:17 UTC,
+giving six of eight completed native fits. Both N2 replications remain active.
+Both primary N2 calibrations are complete and their opposite-source full-image
+score extraction is running. All 199 confidence-ablation and N1 graphs are complete;
+their official scorers are queued behind the active HOCT decoder batch.
 The complete transient three-optimizer phase peaked at 10.22 GiB GPU and
 17.29 GiB summed RSS, within both caps.
+
+At 20:31 UTC, **H_general_J** completed official scoring on all 199 clips:
+**0.906022657469521**, delta C0 **-0.028779716791064947**, with edge TP/FP/FN
+121,667/7,559/7,216 and division TP/FP/FN 29/99/122. Seven of 18 registered complete
+configurations are now measured. The adapted H graph variants remain in progress.
+
+A source-only audit at 20:36 UTC confirmed a material HOCT interpretation limit.
+The registered adapter supplies micrometer coordinates/diameters and squared-
+micrometer inertia, while the pinned upstream extractor returns voxel-unit
+features even when scale metadata is supplied. This was found after outer scores,
+a protocol deviation from the requested pre-score scaling audit. All 655 actual
+source-image regions matched unscaled upstream regionprops exactly. On the same
+two source tiles, a native-voxel reference changed mean absolute JIT logits by
+0.812178 and 0.300645, and candidate-parent argmax for 9/92 and 0/26 targets.
+These CPU FP32 unit-sensitivity diagnostics used no GT scores and changed no
+production features, fit, calibration, candidate bank or decoder. The full
+199-clip upstream-default-voxel HOCT comparison was not registered or run. Retain
+that explicit limitation rather than interpreting the H score as checkpoint
+failure. See `HOCT_unit_contract_audit.json` and the dashboard's feature section.
+
+The six-clip validation bundle is frozen at manifest SHA256
+`c0b6dae1a34defcd8d896bfc83eae42c961fe3c21effba04b054f7dd6efa217c`.
+All 155 listed files and the early annotation/cache/network guard self-test passed.
+Full image children wait for the current N2 scoring pass's auxiliary GPU lock.
+Do not edit this bundle's runtime, primary weights or calibrations without a new
+complete six-clip validation attempt. Reporting-only changes are separate.
 
 ## Current measured evidence
 

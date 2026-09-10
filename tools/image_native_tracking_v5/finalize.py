@@ -87,6 +87,7 @@ def validate_complete():
     assert len(fresh['final_default'])==1 and fresh['final_default'][0]['passed']
     assert len(fresh['C0_disablement'])==1 and fresh['C0_disablement'][0]['exact_graph_parity']
     assert read(OUT/'actual_native_pixel_test.json')['passed']
+    assert read(OUT/'HOCT_unit_contract_audit.json')['complete']
     assert read(OUT/'final_analysis_complete.json')['complete']
     assert read(OUT/'optical_review_receipt.json')['complete']
     assert len(read(OUT/'P2_decision.json')['source_pilots'])==6
@@ -117,6 +118,16 @@ C0 remains available at **0.934802374260586**. The report distinguishes the sele
 primary seed from exploratory best points and requires both-seed pooled improvement
 and no embryo regression beyond 1e-8. Repeated embryos and inherited checkpoints
 prevent an independent biological-generalization claim.
+
+HOCT has a material interpretation limit: the registered graph supplied physical
+coordinates, diameters and inertia, while the pinned upstream extractor defaults
+to voxel units even when scale metadata is supplied. This distinction was confirmed
+after outer scoring, a deviation from the requested pre-score scaling audit.
+`HOCT_unit_contract_audit.json` records exact extraction on 655 real source regions
+and true-JIT source-tile sensitivity, without GT scoring or production changes.
+The full 199-clip upstream-default-voxel comparison was not registered or run.
+The H measurements test real pretrained HOCT under the recorded physical-unit
+interface; they do not establish failure of the upstream default pipeline.
 
 Read `results/image-native-tracking-v5/final_report.md` and its offline
 `dashboard.html` for measured outcomes, source losses, complete per-sample counts,

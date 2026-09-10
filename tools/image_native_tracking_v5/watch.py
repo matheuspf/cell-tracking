@@ -6,7 +6,9 @@ from .common import *
 
 def run():
     last_scores=None
-    cpu_samples=[]
+    cpu_receipt=OUT/'CPU_ten_worker_validation.json'
+    cpu_samples=read(cpu_receipt)['records'] if cpu_receipt.exists() else []
+    previous_missing=set()
     while True:
         current=read(OUT/'resource_current.json')
         processes=list(psutil.process_iter(['pid','ppid','cmdline','status']))
@@ -35,9 +37,23 @@ def run():
         prediction_counts={p.name:len(list(p.glob('*.json'))) for p in (OUT/'prediction_receipts').iterdir()}
         evaluated={p.name:len(list(p.glob('*.json'))) for p in (OUT/'evaluation').iterdir()}
         failed={name:r for name,r in read(OUT/'supervisor_state.json').get('jobs',{}).items() if r['state']=='failed'}
+        artifact_jobs={'fresh_validate':('fresh_validation.json','completed'),
+            'division_review':('optical_review_receipt.json','complete'),
+            'final_analysis':('final_analysis_complete.json','complete'),
+            'finalize':('execution_complete.json','complete'),
+            'auto_evaluate':('auto_evaluation_complete.json','complete'),
+            'regret':('regret_summary.json',None)}
+        running={arg.split('.')[-1] for p in processes for arg in (p.info['cmdline'] or [])
+            if arg.startswith('image_native_tracking_v5.') and p.info['status']!=psutil.STATUS_ZOMBIE}
+        missing=set()
+        for module,(filename,flag) in artifact_jobs.items():
+            receipt=OUT/filename
+            done=receipt.exists() and (bool(read(receipt).get(flag)) if flag else len(read(receipt))==51)
+            if not done and module not in running:missing.add(module)
         state=dict(at=now(),native_fits=len(native),training=progress,decoded=prediction_counts,
             scored={k:v for k,v in evaluated.items() if v==199},GPU_gib=round(current['gpu_mib']/1024,2),
-            RSS_gib=round(current['summed_process_rss_gib'],2),free_gib=round(current['free_gib'],2),failed=failed)
+            RSS_gib=round(current['summed_process_rss_gib'],2),free_gib=round(current['free_gib'],2),failed=failed,
+            missing_artifact_jobs=sorted(missing))
         from .report import csv_rows
         scores={r['variant']:r['score'] for r in csv_rows('ablation_scores.csv') if r['embryo']=='pooled'}
         if scores!=last_scores:state['scores']=scores;last_scores=scores
@@ -45,13 +61,15 @@ def run():
             r=read(OUT/'fresh_validation_progress.json')
             state['fresh']={k:v for k,v in r.items() if k in ['image_clips_executed','compared_clips','status']}
         print(json.dumps(state),flush=True)
+        assert not missing&previous_missing,('Artifact jobs exited without completion receipts',sorted(missing&previous_missing))
+        previous_missing=missing
+        complete=read(OUT/'execution_complete.json') if (OUT/'execution_complete.json').exists() else {}
+        finalizing='finalize' in running
+        if complete.get('complete') and not finalizing:return
         age=(datetime.now(timezone.utc)-datetime.fromisoformat(current['at'])).total_seconds()
         assert 0<=age<120,('Resource monitor stale',age)
         assert current['gpu_mib']<=20*1024 and current['summed_process_rss_gib']<=28 and current['free_gib']>=8,state
         assert not failed,failed
-        complete=read(OUT/'execution_complete.json') if (OUT/'execution_complete.json').exists() else {}
-        finalizing=any('image_native_tracking_v5.finalize' in (p.info['cmdline'] or []) for p in processes)
-        if complete.get('complete') and not finalizing:return
         time.sleep(50)
 
 
