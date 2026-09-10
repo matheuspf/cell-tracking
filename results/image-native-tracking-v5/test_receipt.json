@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-10T14:06:05.094542+00:00",
+  "tests": {
+    "implementation_tests.log": {
+      "sha256": "4f0f0c0e638fb00c190bed96138ab24848055b4ed76d8f6de28580c99fa96c8a",
+      "summary": "----------------------------------------------------------------------\nRan 15 tests in 1.603s\n\nOK"
+    },
+    "handover_contract_tests.log": {
+      "sha256": "44e790ba46d22fce84dc3ff5f8978e9981ce5392db7a5a3f3fdc3e04a214e30d",
+      "summary": "----------------------------------------------------------------------\nRan 41 tests in 0.059s\n\nOK"
+    }
+  }
+}

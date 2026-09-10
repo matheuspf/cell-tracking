@@ -1,0 +1,10 @@
+{
+  "C0": 0.934802374260586,
+  "target": 0.95,
+  "required_gain": 0.015197625739413967,
+  "C0_adjusted_edge": 0.9228682178819851,
+  "C0_division_jaccard": 0.11934156378600823,
+  "required_division_jaccard_with_edges_fixed": 0.27131782118014813,
+  "required_adjusted_edge_with_divisions_fixed": 0.9380658436213991,
+  "note": "Exact additive arithmetic; counts and matching must be re-evaluated for each changed graph."
+}
