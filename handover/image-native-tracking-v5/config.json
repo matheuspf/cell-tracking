@@ -1,0 +1,140 @@
+{
+  "study_id": "image-native-tracking-v5",
+  "schema_version": 1,
+  "base_commit": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+  "base_branch": "handover/multidata-training-v4",
+  "branch": "handover/image-native-tracking-v5",
+  "target_score": 0.95,
+  "incumbent_score": 0.934802374260586,
+  "incumbent": "v3 A_residual_m3.0 / v4 C0",
+  "metric_commit": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "source_directions": [
+    {
+      "train": "44b6",
+      "evaluate": "6bba"
+    },
+    {
+      "train": "6bba",
+      "evaluate": "44b6"
+    }
+  ],
+  "seeds": [
+    20260910,
+    314159
+  ],
+  "freeze_both_directions_before_full_batch_scoring": true,
+  "provenance": "operational exploratory; reused embryos and inherited checkpoint/teacher exposure",
+  "stages": [
+    "X500",
+    "X510",
+    "X520",
+    "X530",
+    "X540",
+    "X550",
+    "X560",
+    "X570",
+    "X580"
+  ],
+  "paths": {
+    "new_output": "/kaggle/working/cell-tracking/image-native-tracking-v5",
+    "work": "work/image-native-tracking-v5",
+    "data": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "existing_study_root": "/kaggle/working/cell-tracking",
+    "baseline_python": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python"
+  },
+  "hoct": {
+    "commit": "2ccc5040823bc944ab67790abd1f56eea7cd4f05",
+    "primary_model": "general_v1",
+    "alternative_model": "ctc_v0",
+    "general_v1_sha256": "5bd836dfcb15ad796ea79a9595841a3e73b650a71c4acba3fc66aac65d745b33",
+    "ctc_v0_sha256": "b9be3d976e2d51ae946128ded99142a81b5ba99fb87a0da67c38de2934944000",
+    "point_convenience_function_implemented_at_pin": false,
+    "adaptation": "frozen true edge embeddings + supported-source linear probe"
+  },
+  "native": {
+    "head_updates": 8000,
+    "backbone_updates": 12000,
+    "effective_windows_per_batch": 4,
+    "head_lr": 0.0001,
+    "backbone_lr": 1e-05,
+    "weight_decay": 0.01,
+    "max_gradient_norm": 1.0,
+    "freeze_detection_population_initially": true,
+    "all_source_transitions_sampling_eligible": true,
+    "source_diagnosed_optimizer_repairs_per_family": 1
+  },
+  "temporal": {
+    "context_frames": 5,
+    "optional_context_frames": 9,
+    "output_max_dt": 1,
+    "neighbor_start_count": 8,
+    "retain_all_incumbent_edges_in_bank": true,
+    "distance_units": "micrometers; source-derived, not scorer tolerance",
+    "equivalent_timing_reduction": "deduplicated_logmeanexp",
+    "v4_geometry_gate": false,
+    "joint_birth_continuation_fork_noop": true
+  },
+  "new_observations": {
+    "required_full_frame_pilot": true,
+    "primary_sources": [
+      "native_heatmap",
+      "DeepCenter_heatmap",
+      "image_supported_watershed"
+    ],
+    "fixed_node_morphology_control": true,
+    "dense_detector_stage": "conditional_on_real_new_observation_evidence",
+    "FOCUS": "optional_authorized_local_checkpoint_only",
+    "max_synthetic_replay_fraction": 0.2
+  },
+  "variant_slots": [
+    "C0",
+    "J_native_frozen",
+    "H_general_J",
+    "H_ctc_J",
+    "H_probe_J",
+    "H_probe_native_J",
+    "N_head_J",
+    "N_backbone_J",
+    "P_union_native_J",
+    "P_union_N_J",
+    "P_union_H_J",
+    "P_dense_J_optional",
+    "HN_residual_J_optional",
+    "context9_optional",
+    "image_ablation_optional",
+    "N_final_seed2",
+    "H_final_seed2",
+    "P_final_seed2"
+  ],
+  "compute": {
+    "gpu_count": 1,
+    "gpu_model": "RTX4090",
+    "summed_gpu_training_hours_cap": 48,
+    "max_complete_variants": 18,
+    "gpu_soft_gib": 20,
+    "host_rss_soft_gib": 28,
+    "initial_cpu_workers": 8,
+    "minimum_free_disk_gib": 8,
+    "new_output_upper_gib": 24,
+    "max_fraction_current_free_disk": 0.6,
+    "cache_mode": "streamed_windows_and_graph_deltas"
+  },
+  "promotion": {
+    "positive_pooled_delta_required": true,
+    "max_embryo_regression": 1e-08,
+    "learned_same_recipe_second_seed_required": true,
+    "export_primary_seed": true,
+    "fresh_image_finalist_clips_minimum": 6,
+    "target_success_score": 0.95,
+    "retain_qualifying_subtarget_gains": true
+  },
+  "excluded": [
+    "global_annotation_filter_sweep",
+    "new_Zoo_gaussian_renderer",
+    "repeat_v4_small_head_pretraining_grid"
+  ],
+  "automatic_submission": false,
+  "paid_api_calls": false,
+  "new_hardware_rental": false,
+  "accept_new_gated_terms": false
+}

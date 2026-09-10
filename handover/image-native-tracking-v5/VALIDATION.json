@@ -1,0 +1,14 @@
+{
+  "scope": "authoring synthetic/reference checks only; no v5 data/GPU/official graph tests",
+  "unit_tests": {
+    "passed": 41,
+    "failed": 0
+  },
+  "python_compiles": true,
+  "json_parses": true,
+  "foreign_cwd_help_passed": true,
+  "local_new_document_links_checked": 6,
+  "microscopy_data_accessed": false,
+  "v5_training_run": false,
+  "official_v5_scores_run": false
+}

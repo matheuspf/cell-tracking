@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "reviewed_commit": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+  "origin": "committed v3 incumbent retained by completed v4",
+  "score": 0.934802374260586,
+  "adjusted_edge_contribution": 0.9228682178819851,
+  "edge_counts": {
+    "tp": 123135,
+    "fp": 4965,
+    "fn": 5748
+  },
+  "division_counts": {
+    "tp": 29,
+    "fp": 92,
+    "fn": 122
+  },
+  "predicted_nodes": 4108943,
+  "clips": 199,
+  "embryos": {
+    "44b6": {
+      "clips": 71,
+      "score": 0.931664468721842
+    },
+    "6bba": {
+      "clips": 128,
+      "score": 0.935221784097327
+    }
+  },
+  "v4_adopted_gain": 0.0,
+  "real_data_rescored_in_authoring_session": false,
+  "sources": [
+    "results/multidata-training-v4/final_report.md",
+    "results/strong-tracker-v3/final_report.md",
+    "handover/multidata-training-v4/CONTINUATION.md"
+  ]
+}
