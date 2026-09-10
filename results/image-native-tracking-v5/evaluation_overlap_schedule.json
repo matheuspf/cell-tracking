@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-10T17:20:32.888385+00:00",
+  "numerical_evaluator_and_aggregator_exact_AST_parity": {
+    "one": "b96bf18b4ae064843da3d35b39c455e14d44caf3577926d40766cdd2a910b7f5",
+    "aggregate_complete": "c86fb58f810a74957250d987f19851e0ed304191b7b74f2f70aec5ec0deeaa47"
+  },
+  "measured_overlap": "one official scorer alongside six decoder workers and two native fits",
+  "measured_samples": 8,
+  "measured_summed_RSS_peak_gib": 14.902931213378906,
+  "measured_GPU_peak_gib": 9.3427734375,
+  "maximum_pool_workers": 8,
+  "maximum_extra_serial_scorers": 1,
+  "admission": "start each clip only with a monitor sample younger than 90 seconds, summed RSS below 24 GiB and no more than eight active pool workers",
+  "preservation": "sorted per-variant locks precede pool admission; overlapping original batches verify and reuse the same official per-clip receipts",
+  "criterion": "only already frozen registered variants with all 199 complete prediction receipts",
+  "target_values_used_for_scheduling": false,
+  "model_or_decoder_recipe_changed": false
+}

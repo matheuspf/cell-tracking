@@ -6,6 +6,10 @@ from .common import *
 
 def provenance():
     models=[];uses=[];event_coverage=[]
+    feature_audit=read(OUT/'HOCT_feature_audit.json');assert feature_audit['complete'] and feature_audit['clips']==199
+    for name,hashes in feature_audit['input_hashes'].items():
+        assert sha(OUT/'observations'/f'{name}.npz')==hashes['observation']
+        assert sha(OUT/'model_scores/H'/f'{name}.npz')==hashes['HOCT_scores']
     for source in ['44b6','6bba']:
         catalog=read(OUT/'training_labels'/f'{source}_native_catalog.json')
         native_forks=0;H_forks=0;H_positive=0;H_missing=0
@@ -78,7 +82,8 @@ def provenance():
     write(OUT/'source_manifest.json',dict(at=now(),HOCT=dict(repository='https://github.com/royerlab/hoct',commit=hoct_pin,
         license='MIT',license_sha256=sha(WORK/'hoct/LICENSE'),weights=config['hoct'],
         interface='supported feature-bearing IndexedRXGraph; 19 actual morphology/position inputs, 288-dimensional true edge embeddings',
-        biological_exposure='not independently certified'),native=dict(source='preserved installed patched U-Net/transformer',
+        biological_exposure='not independently certified',feature_audit_sha256=sha(OUT/'HOCT_feature_audit.json'),
+        feature_audit_inputs_reverified=True),native=dict(source='preserved installed patched U-Net/transformer',
         architecture_sha256=sha(OUT/'native_architecture.json'),C0_base_manifest_sha256=sha(V4/'inference_package/base/manifest.json')),
         metric=dict(repository='https://github.com/royerlab/kaggle-cell-tracking-competition',commit=config['metric_commit']),
         competition_inputs='199 supplied clips; 71 from 44b6 and 128 from 6bba',synthetic_training_used=False,

@@ -62,6 +62,16 @@ new peaks are predominantly unlabeled; this is not an estimate of dense detectio
 precision. Official locally feasible division evidence covered 118 of 151 events;
 the separate exact-ID candidate-pair count was 99. Detailed identities stay local.
 
+The post-freeze HOCT feature audit found 3,456,758 valid image-supported regions at
+4,108,943 C0 nodes and 10,298,109 finite scores among 15,179,751 candidate edges.
+Missing endpoint regions explain 4,848,861 edges; another 32,781 valid-endpoint
+edges lack scored model support. Inertia tensors are anisotropic at 99.90% of valid
+regions, and every valid region has intensity variation; no sphere features were
+substituted. Physical z also differs from the published normalization distribution:
+75.42% of regions lie beyond three published standard deviations. This is a
+descriptive model-domain diagnostic, not a causal explanation or new calibration.
+All 199 observation/HOCT-score hashes are retained in `HOCT_feature_audit.json`.
+
 The guarded `inference_package_early4` C0 run completed from an unfamiliar filename
 with exact full-graph parity and CSV roundtrip. Actual annotation/cache/DNS denial
 tests passed before numerical imports. Prior guard failures exposed the secondary
@@ -170,6 +180,16 @@ browser validation. The final-stage waiters exec the current maintained module w
 their prerequisites become ready. After a reboot, restart each waiter once only
 after checking process state. The supervisor covers the compute queue; these
 artifact waiters are separate. They never stage, commit, push or submit anything.
+
+The separate `auto_evaluate` helper in tmux `official-scorer` scores each registered
+variant once all 199 prediction receipts exist, while the decoder pool continues.
+One serial scorer is allowed beside at most eight pool workers, with fresh resource
+samples and a 24 GiB RSS admission threshold. A measured six-worker/one-scorer overlap
+peaked at 14.90 GiB RSS. Per-variant locks prevent overlapping original batches from
+writing the same receipts; the official evaluator and aggregator are AST-identical.
+See `evaluation_overlap_schedule.json`. Restore this helper once after a reboot,
+after checking no existing copy is running. Its output is the canonical registered
+evaluation, not an extra scored configuration.
 
 J had 882 windows stop with a feasible time-limited solution; expanded P1 also has
 many feasible timeouts. Fresh tests retain the original exact graph/integer-count

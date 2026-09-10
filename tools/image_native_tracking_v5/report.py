@@ -158,9 +158,12 @@ def build(final=False):
         required_adjusted_edge_with_divisions_fixed=.95-.1*29/243,
         note='Exact additive arithmetic; counts and matching must be re-evaluated for each changed graph.')
     resource=read(OUT/'resource_current.json') if (OUT/'resource_current.json').exists() else None
+    feature_audit=read(OUT/'HOCT_feature_audit.json') if (OUT/'HOCT_feature_audit.json').exists() else None
+    feature_distribution=csv_rows('HOCT_feature_distribution.csv')
     payload=dict(status=status,scores=scores,selection=selection,training=train,curves=curves,coverage=cov,exposure=exposures,budget=budget,
         resources=resource,protocol=protocol,supervisor=read(OUT/'supervisor_state.json') if (OUT/'supervisor_state.json').exists() else None,
-        fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else None)
+        fresh=read(OUT/'fresh_validation.json') if (OUT/'fresh_validation.json').exists() else None,
+        feature_coverage=feature_audit['coverage'] if feature_audit else [],feature_distribution=feature_distribution)
     write(OUT/'status.json',status);write(OUT/'selection.json',selection);write(OUT/'exposure.json',exposures);write(OUT/'score_budget.json',budget)
     pd.DataFrame(train).to_csv(OUT/'training_summary.csv',index=False);pd.DataFrame(curves).to_csv(OUT/'learning_curves.csv',index=False)
     pd.DataFrame([{k:v for k,v in r.items() if not isinstance(v,dict)} for r in cov]).to_csv(OUT/'coverage.csv',index=False)
@@ -202,6 +205,10 @@ The server reboot interrupted execution after the native log reached update 2,94
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.
 '''
+    if feature_audit:
+        h=next(r for r in feature_audit['coverage'] if r['embryo']=='pooled')
+        z=next(r for r in feature_distribution if r['embryo']=='pooled' and r['feature']=='z_um')
+        body+=f"\nThe post-freeze label-free HOCT audit found valid morphology at {h['valid_regions']:,}/{h['nodes']:,} C0 nodes and finite scores for {h['finite_HOCT_edges']:,}/{h['candidate_edges']:,} candidate edges. Missing endpoint regions account for {h['missing_region_edges']:,} edges; {h['valid_endpoint_edges_without_HOCT_score']:,} additional valid-endpoint edges fall outside the frozen model interface's scored support. {h['anisotropic_inertia_regions']:,} valid regions have unequal inertia eigenvalues, and all {h['regions_with_nonzero_intensity_std']:,} have intensity variation. No sphere substitutes were supplied. Mean physical z is {z['mean']:.3f} µm versus the official standardization mean {z['official_mean']:.3f} and standard deviation {z['official_std']:.3f}; {100*z['fraction_outside_official_3std']:.2f}% lie beyond three published standard deviations. These distribution differences describe checkpoint-domain exposure and do not establish a causal failure mechanism. No feature or calibration was changed after this audit. See HOCT_feature_distribution.csv and HOCT_feature_coverage_rows.csv.\n"
     if final:body+='\n'+outcome_text(selection)
     (OUT/('final_report.md' if final else 'progress_report.md')).write_text(body)
     print(json.dumps(status),flush=True)

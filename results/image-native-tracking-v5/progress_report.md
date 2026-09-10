@@ -1,6 +1,6 @@
 # Image-native tracking v5 — execution progress
 
-Updated 2026-09-10T17:12:16.140557+00:00. 5 of 18 registered complete configurations are scored.
+Updated 2026-09-10T17:32:28.860174+00:00. 5 of 18 registered complete configurations are scored.
 C0 is freshly reproduced at 0.934802374260586; the target is 0.95 (+0.015197625739414).
 Current eligible export: C0 at 0.934802374260586. Selection remains provisional while execution continues.
 
@@ -20,3 +20,5 @@ Both direct adaptation directions use only their own source labels and source ca
 The server reboot interrupted execution after the native log reached update 2,941. Hash checks recovered 122 image shards, 120 HOCT shards, all C0 results and optimizer/RNG state at update 2,000. The last 941 updates were repeated. Prior critical hashes remained unchanged. The crash cause is unavailable from container kernel logs. Resumption initially used one native training lane and one auxiliary lane. After a measured throughput/memory benchmark, each source received one training lane while calibration and inference share a serialized auxiliary lane on the same RTX 4090. Per-fit locks prevent duplicate optimizer updates; the complete optimizer body was verified AST-identical. CPU pools remain bounded and serialized; native resume snapshots occur every 250 updates.
 
 Detailed GT identities, optical-review images, raw data, checkpoints and submissions remain local. No Kaggle submission or notebook publication is performed.
+
+The post-freeze label-free HOCT audit found valid morphology at 3,456,758/4,108,943 C0 nodes and finite scores for 10,298,109/15,179,751 candidate edges. Missing endpoint regions account for 4,848,861 edges; 32,781 additional valid-endpoint edges fall outside the frozen model interface's scored support. 3,453,427 valid regions have unequal inertia eigenvalues, and all 3,456,758 have intensity variation. No sphere substitutes were supplied. Mean physical z is 49.986 µm versus the official standardization mean 2.938 and standard deviation 7.600; 75.42% lie beyond three published standard deviations. These distribution differences describe checkpoint-domain exposure and do not establish a causal failure mechanism. No feature or calibration was changed after this audit. See HOCT_feature_distribution.csv and HOCT_feature_coverage_rows.csv.

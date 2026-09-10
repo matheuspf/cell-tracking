@@ -5,6 +5,9 @@ from .common import *
 
 def run():
     path=OUT/'dashboard.html';data=read(OUT/'dashboard_data.json');errors=[];network=[];states=[]
+    if (OUT/'HOCT_feature_audit.json').exists():
+        assert len(data.get('feature_coverage',[]))==3,'Completed feature audit missing from dashboard payload'
+        assert len(data.get('feature_distribution',[]))==57
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
         page=browser.new_page(viewport=dict(width=1360,height=960))
@@ -25,6 +28,14 @@ def run():
             page.select_option('#trainingRun',row['key'])
             assert row['key'] in page.locator('#trainingCaption').inner_text()
             assert len(page.locator('#lossChart polyline').get_attribute('points'))>5
+        if data.get('feature_coverage'):
+            assert page.locator('#featureCoverage tbody tr').count()==3
+            page.locator('#featureSection summary').click()
+            for em in ['pooled','44b6','6bba']:
+                page.select_option('#featurePopulation',em)
+                assert page.locator('#featureDistribution tbody tr').count()==19
+            page.select_option('#featurePopulation','pooled')
+            page.locator('#featureSection summary').click()
         with page.expect_download() as info:page.locator('#download').click()
         dest=OUT/'dashboard_download.csv';info.value.save_as(dest)
         with dest.open() as f:downloaded=list(csv.DictReader(f))
@@ -38,7 +49,8 @@ def run():
         version=browser.version;browser.close()
     assert not errors and not network,(errors,network)
     write(OUT/'dashboard_validation.json',dict(passed=True,at=now(),states=states,errors=errors,network_requests=network,
-        screenshots=screenshots,browser_version=version,python=sys.executable,dashboard_sha256=sha(path),downloaded_rows=len(downloaded)))
+        screenshots=screenshots,browser_version=version,python=sys.executable,dashboard_sha256=sha(path),downloaded_rows=len(downloaded),
+        HOCT_feature_filter_populations=3 if data.get('feature_coverage') else 0))
     print('Offline dashboard browser checks passed',flush=True)
 
 if __name__=='__main__':run()

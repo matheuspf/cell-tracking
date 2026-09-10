@@ -1,5 +1,6 @@
 """Evaluation-only imports and fresh pinned official matching."""
 from concurrent.futures import ProcessPoolExecutor
+from contextlib import contextmanager,ExitStack
 import time
 import pandas as pd
 from .common import *
@@ -39,7 +40,20 @@ def aggregate_complete():
     fcntl.flock(handle,fcntl.LOCK_UN);handle.close()
 
 
-def run(variants,workers=6,serial=False):
+@contextmanager
+def variant_locks(variants):
+    """Coordinate overlapping registered batches without racing atomic receipts."""
+    import fcntl
+    directory=OUT/'evaluation_variant_locks';directory.mkdir(parents=True,exist_ok=True)
+    with ExitStack() as stack:
+        for variant in sorted(set(variants)):
+            assert variant.replace('_','').isalnum(),variant
+            handle=stack.enter_context((directory/f'{variant}.lock').open('a'))
+            fcntl.flock(handle,fcntl.LOCK_EX)
+        yield
+
+
+def _run(variants,workers=6,serial=False):
     from strong_tracker_v3.common import graph_hash
     from annotation_selection.metric_adapter import aggregate
     rows=inventory();assert len(rows)==199
@@ -48,8 +62,8 @@ def run(variants,workers=6,serial=False):
     if not lock.exists():write(lock,dict(frozen=now(),graphs=locks,both_directions_frozen=True,models={str(p.relative_to(OUT)):sha(p) for p in (OUT/'models').rglob('*.pt') if '.resume' not in p.name and '_tiny' not in p.name}))
     tasks=[(v,r,locks[v][r['dataset']]) for v in variants for r in rows]
     if serial:
-        # A single early scorer can share the currently measured six-worker
-        # decoder. Pause between clips if a larger process pool starts meanwhile.
+        # One serialized scorer can overlap a bounded decoder pool. Admission
+        # reserves at least 4 GiB below the summed RSS cap for the next clip.
         assert len(variants)==1
         import psutil
         for i,task in enumerate(tasks):
@@ -62,7 +76,9 @@ def run(variants,workers=6,serial=False):
                                 'image_native_tracking_v5.headroom','image_native_tracking_v5.regret','image_native_tracking_v5.division_review']):
                             worker_ids.update(c.pid for c in p.children() if c.status()!=psutil.STATUS_ZOMBIE)
                     except (psutil.NoSuchProcess,psutil.AccessDenied):pass
-                if len(worker_ids)<=6:break
+                current=read(OUT/'resource_current.json')
+                age=(datetime.now(timezone.utc)-datetime.fromisoformat(current['at'])).total_seconds()
+                if len(worker_ids)<=8 and current['summed_process_rss_gib']<24 and 0<=age<90:break
                 time.sleep(15)
             r=one(task)
             if i%25==0:print('official',i+1,len(tasks),r['variant'],flush=True)
@@ -71,6 +87,18 @@ def run(variants,workers=6,serial=False):
             for i,r in enumerate(pool.map(one,tasks)):
                 if i%25==0:print('official',i+1,len(tasks),r['variant'],flush=True)
     aggregate_complete()
+
+
+def run(variants,workers=6,serial=False):
+    import fcntl
+    # Acquire variant locks before requesting a pool, so a waiting regular batch
+    # does not prevent the overlapping serial scorer from finishing its variant.
+    with variant_locks(variants):
+        if serial:
+            with (OUT/'serial_scorer.lock').open('a') as handle:
+                fcntl.flock(handle,fcntl.LOCK_EX)
+                return _run(variants,workers,serial=True)
+        return _run(variants,workers)
 
 if __name__=='__main__':
     import argparse

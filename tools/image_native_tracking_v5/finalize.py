@@ -168,6 +168,9 @@ with per-fit locks coordinating source replica helpers and the original queue.
 Calibration and inference shared one auxiliary GPU lane. The complete optimizer
 function body, data, precision, batches and update counts remained unchanged;
 the scheduling and benchmark receipts document the transition.
+One bounded serial official scorer overlapped decoder pools, using per-variant
+locks, current memory admission checks and the unchanged official matching and
+aggregation functions. Completed original batches reused those same receipts.
 The cause of the reboot is unknown. Early package trials exposed missing declared
 model-config/hash-lock dependencies and a guard rejecting newly generated GEFF
 outputs; precise pinned exceptions were tested. An extra pixel fixture's incorrect

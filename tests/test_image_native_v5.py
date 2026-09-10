@@ -7,6 +7,25 @@ from image_native_tracking_v5.temporal_decode import solve_window,decode,protect
 from image_native_tracking_v5.observations import peaks,regions
 from image_native_tracking_v5.event_paths import equivalence_classes
 
+class ScoreSchedulingTests(unittest.TestCase):
+    def test_overlapping_batches_cannot_write_the_same_variant_concurrently(self):
+        import tempfile,threading
+        from concurrent.futures import ThreadPoolExecutor
+        from unittest.mock import patch
+        from image_native_tracking_v5 import evaluate
+        entered=threading.Event();attempted=threading.Event()
+        def competing_batch():
+            attempted.set()
+            with evaluate.variant_locks(['C','B']):entered.set()
+        with tempfile.TemporaryDirectory() as directory,patch.object(evaluate,'OUT',Path(directory)):
+            with ThreadPoolExecutor(max_workers=1) as pool:
+                with evaluate.variant_locks(['B','A']):
+                    future=pool.submit(competing_batch)
+                    self.assertTrue(attempted.wait(2))
+                    self.assertFalse(entered.wait(.05))
+                future.result(timeout=2)
+                self.assertTrue(entered.is_set())
+
 class ExportTests(unittest.TestCase):
     def test_failed_fresh_parity_blocks_an_otherwise_passing_primary(self):
         import tempfile
