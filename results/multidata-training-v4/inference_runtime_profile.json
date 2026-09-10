@@ -1,0 +1,30 @@
+{
+  "created": "2026-09-10T02:11:48.818016+00:00",
+  "dataset": "44b6_87bba6c4",
+  "nodes": 29253,
+  "gated_parents": 4338,
+  "image_centers": 12860,
+  "seconds": {
+    "image_read": 0.5059345089830458,
+    "geometry_proposals": 0.19330270867794752,
+    "one_G_model": 0.6118923858739436,
+    "image_patches": 2.684463809709996,
+    "one_I_model": 0.2684215409681201,
+    "one_D_refinement": 2.780783482827246
+  },
+  "detector": {
+    "mean_center_score": 0.26932576298713684,
+    "changed_centers": 9927,
+    "mean_realized_shift_um": 0.15194842963250801,
+    "max_realized_shift_um": 0.5745242597140698,
+    "node_count_unchanged": true
+  },
+  "labels_read": false,
+  "target_scores_computed": false,
+  "concurrent_training": true,
+  "model_hashes": {
+    "G_synthetic": "bd00c9743056ffd0539f6231013518830e0e17c343bf1bd6b94d959531941817",
+    "I_synthetic": "283e04d14b79c5f9f2d8fd3377d57447e70c8e88e4b8eff117409cded45c1b3a",
+    "D_synthetic": "508b302dd32079fe41f95631e41d590ff6010a9442dbcfa424fd1328f715281c"
+  }
+}

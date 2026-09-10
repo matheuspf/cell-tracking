@@ -1,0 +1,9 @@
+{
+  "created": "2026-09-10T00:28:45.420477+00:00",
+  "passed": true,
+  "intentional_network_probes": 1,
+  "intentional_external_file_probes": 1,
+  "source_sha256": "a71d6420e606db160c71d34b354b6b5a6d1bd0263a12927176b86be80665b25b",
+  "external_connection_attempted": false,
+  "scope": "Python audit hooks, including symlink resolution; loopback/Unix IPC allowed"
+}

@@ -1,0 +1,33 @@
+{
+  "created": "2026-09-09T23:46:05.071057+00:00",
+  "samples": [
+    "seq_0006",
+    "seq_0229",
+    "seq_0311",
+    "seq_0415",
+    "seq_0519",
+    "seq_0722",
+    "seq_0936",
+    "seq_1060",
+    "seq_1184",
+    "seq_1297",
+    "seq_1465",
+    "seq_1610",
+    "seq_1674",
+    "seq_1814",
+    "seq_2000",
+    "seq_2170"
+  ],
+  "seed": 271828,
+  "cases": [
+    "clean",
+    "localization",
+    "dropout",
+    "duplicates",
+    "clipped_daughter",
+    "short_history"
+  ],
+  "procedure": "Six fixed observation corruptions; uniform held-out parents; no training or threshold selection",
+  "temporal_grid": "original pooled sequence, never repooled",
+  "target_results_used": false
+}

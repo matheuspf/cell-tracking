@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "study_id": "multidata-training-v4",
+  "status": "planned_not_executed",
+  "base_branch": "handover/strong-tracker-v3",
+  "base_commit": "292ecc2569f3a16676de92d80e382be02024d904",
+  "branch": "handover/multidata-training-v4",
+  "incumbent": "A_residual_m3.0",
+  "incumbent_score": 0.934802374260586,
+  "metric_snapshot": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "paths": {
+    "archive": "work/biohub-forum-archive",
+    "prepared": "work/biohub-data-guide/prepared",
+    "v3": "/kaggle/working/cell-tracking/strong-tracker-v3",
+    "outputs": "/kaggle/working/cell-tracking/multidata-training-v4"
+  },
+  "source_directions": [
+    {
+      "source": "44b6",
+      "target": "6bba"
+    },
+    {
+      "source": "6bba",
+      "target": "44b6"
+    }
+  ],
+  "seeds": [
+    20260909,
+    314159
+  ],
+  "primary_seed": 20260909,
+  "freeze_before_target_scores": true,
+  "validation_label": "operational_exploratory_not_clean_OOF",
+  "arms": [
+    "C0_incumbent",
+    "C1_real_only_matched_compute",
+    "C2_synthetic",
+    "C3_zoo_fish_geometry",
+    "C4_synthetic_plus_zoo_fish",
+    "C5_add_eligible_species",
+    "C6_source_domain_randomization"
+  ],
+  "training": {
+    "pretrain_updates": {
+      "D": 12000,
+      "G": 20000,
+      "I": 20000
+    },
+    "adapt_updates": 8000,
+    "real_fraction": 0.75,
+    "external_replay_fraction": 0.25,
+    "other_species_geometry_fraction_cap": 0.25,
+    "full_event_pretrain_unique_synthetic_parent_goal": 20000,
+    "all_eligible_sequence_examples_required": true,
+    "matched_compute_per_arm": true,
+    "max_pre_target_budget_extensions": 1,
+    "extension_multiplier": 2,
+    "secondary_seed": "Repeat selected qualifying external arm and matched real-only control"
+  },
+  "proposal": {
+    "max_daughters": 6,
+    "max_pair_path_options_per_parent_anchor": 32,
+    "no_fork_option": true,
+    "independent_sigmoid_thresholds": false,
+    "max_full_real_configurations": 24
+  },
+  "decoder": {
+    "primary": "learned_event_gain_with_noop_and_conflict_constraints",
+    "original_fork_suppressing_objective": "negative_control_only",
+    "actual_solver_fixtures_required": true
+  },
+  "calibration": {
+    "fit_sources": "external_validation_and_source_only_supported_contexts",
+    "fallback_primary_margin": 4.0,
+    "fallback_descriptive_margins": [
+      2.0,
+      6.0
+    ],
+    "real_biological_prior_known": false,
+    "forum_prior_multiplier_allowed": false
+  },
+  "promotion": {
+    "baseline": "selected_v3",
+    "pooled_delta_positive": true,
+    "per_embryo_tolerance": 1e-10,
+    "meaningful_delta": 0.01,
+    "stretch_delta": 0.02,
+    "smaller_gains_retained": true,
+    "external_advantage_requires_real_only_control": true
+  },
+  "resources": {
+    "single_gpu": "RTX4090",
+    "soft_gpu_gib": 20,
+    "soft_host_ram_gib": 32,
+    "new_outputs_gib": 100,
+    "total_initial_gpu_hours": 36
+  },
+  "stages": [
+    "W400",
+    "W410",
+    "W420",
+    "W430",
+    "W440",
+    "W450",
+    "W460",
+    "W470",
+    "W480",
+    "W490"
+  ],
+  "automatic_submission": false,
+  "accept_new_gated_terms": false,
+  "paid_services": false,
+  "executed_design": {
+    "geometry": "relative per-axis IQR and local-neighbor scale; label-blind nearest-history; six daughters; symmetric pair head",
+    "images": "shared triplanar 12x12 encoder, explicit three-frame validity per center; actual parent and daughter crops",
+    "detection": "same shared compact convolutional encoder, center and subvoxel-offset heads, native static patches",
+    "eligible_zoo": [
+      "zebrafish",
+      "ascidian"
+    ],
+    "additional_species_weights": {
+      "ascidian": 0.25
+    },
+    "zoo_split": "contiguous first 70% train; 6-frame purge; next 15% validation; 6-frame purge; last 15% diagnostic test; one acquisition per species",
+    "synthetic_split": "preserve prepared train; split prepared holdout into validation/test by sample hash",
+    "gate_probability": 0.5,
+    "primary_margin": 4.0,
+    "descriptive_margins": [
+      2.0,
+      6.0
+    ],
+    "decoder": "local binary event-gain maximization with no-op, parent/daughter/displaced-owner conflicts and protected 2-frame incumbent fork windows",
+    "detector_integration": "bounded center refinement then rebuild all graph-dependent evidence using incumbent native and v3 inference; isolated population change test",
+    "source_calibration": "external validation temperature; real folds reused, no independent inner fold claim",
+    "selection": "C4 is prespecified primary external arm; all primary arms frozen before target scoring; seed2 if an external arm qualifies",
+    "resource_adjustment": "29 GiB available disk; compact uint8 patch caches; default full update budgets retained",
+    "second_seed": 314159
+  }
+}

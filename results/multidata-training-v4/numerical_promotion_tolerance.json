@@ -1,0 +1,8 @@
+{
+  "created": "2026-09-10T02:53:18.121625+00:00",
+  "pooled_positive_epsilon": 1e-12,
+  "per_embryo_tolerance": 1e-10,
+  "reason": "Use the same numerical-zero guard as the existing report selection rule; avoid promoting floating-point ties",
+  "full_primary_comparative_results_opened": false,
+  "graph_predictions_or_calibration_changed": false
+}

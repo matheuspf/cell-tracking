@@ -1,0 +1,41 @@
+{
+  "samples": 199,
+  "annotation_reads": 0,
+  "blocked_reads": 0,
+  "external_guard": {
+    "blocked_reads": 0,
+    "installed_before_dependencies": true
+  },
+  "annotation_guard": {
+    "blocked_reads": 0,
+    "guard_installed_before_dependency_loads": true
+  },
+  "source_workers": [
+    {
+      "source": "44b6",
+      "completed": true,
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      }
+    },
+    {
+      "source": "6bba",
+      "completed": true,
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      }
+    }
+  ],
+  "total_clip_seconds": 3992.7657433529384,
+  "calibration_sha256": "d840d0703f756936486249d4bcabd14a6feac3b651d066fb2e720ff42e217be0"
+}

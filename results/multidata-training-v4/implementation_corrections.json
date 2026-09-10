@@ -1,0 +1,56 @@
+{
+  "created": "2026-09-09T23:47:20.728034+00:00",
+  "before_comparative_predictions": true,
+  "changes": [
+    {
+      "component": "D inference",
+      "correction": "Invert offset label normalization by multiplying by 3, not .75; retain fixed .5 um pre-rounding cap",
+      "reason": "Training offset target is native displacement / 3; dimensional conversion bug, no target scores used"
+    },
+    {
+      "component": "prediction receipts",
+      "correction": "Record all daughter/pair budgets plus local gate evidence for post-freeze coverage diagnosis",
+      "prediction_policy_changed": false
+    },
+    {
+      "component": "official evaluation diagnostics",
+      "correction": "Add matched-point physical localization summaries; official scoring unmodified",
+      "prediction_policy_changed": false
+    },
+    {
+      "component": "event conflicts",
+      "correction": "Include the displaced original child among touched endpoints",
+      "reason": "An old edge deletion changes both endpoints; conflict fixture passed before comparative predictions"
+    }
+  ],
+  "code_sha256": {
+    "tools/multidata_training_v4/__init__.py": "7317a4c356a194ed8d19c8fb47b2a5c9ccffae840fb3c41b81577943a9391c80",
+    "tools/multidata_training_v4/common.py": "12eb97a212fe49fdd3469dc07e2e389d60e06687bc1f533aa4efc4e5bab9a9a3",
+    "tools/multidata_training_v4/evaluate.py": "f3d4b46ac52d9fdd6dc45e1b6157137937c207fe95ddf6d747345937e3025902",
+    "tools/multidata_training_v4/__main__.py": "bdca8534531d168866f41f8ba127f473323d707322cefd8c04d90ebfa7dc228e",
+    "tools/multidata_training_v4/sources.py": "5d68c32a11041e7ddc18cb1ec7c6c867559a558e90901bb23f1f6f74a82935c9",
+    "tools/multidata_training_v4/proposals.py": "8b72d8bd0fe3380ba8e402d7505c4424d5690dca73746296bef90c3239bcd812",
+    "tools/multidata_training_v4/adapters.py": "56437f8626314a3e474222b47350c1faa891e4ffa66e185e81097ff55ee15a3e",
+    "tools/multidata_training_v4/corruptions.py": "a7b64afd888cdabf1381dda4cc091c0d7611d74ca60715336b743964bc3a636f",
+    "tools/multidata_training_v4/losses.py": "a1b82bedcdab497971078023e5cf709ce679cdfcd594e3cffb596465bbb868c6",
+    "tools/multidata_training_v4/index.py": "3347a7ac127b5f4727ff46d217744e5b05d3d539d610584485553dead0e46eac",
+    "tools/multidata_training_v4/models.py": "28786632e99b653fc993364329cb6c0897784f073c3d20d08047eb780fb468b1",
+    "tools/multidata_training_v4/decode.py": "9816053a97e5dcc28de8aa20852f548ca404ae8b20aa57f02e9494d4280e02b7",
+    "tools/multidata_training_v4/sampling.py": "bf2f16c8195e4555aef1705b8aeb35d3ae7953f070a91fea47fcf203ec034711",
+    "tools/multidata_training_v4/train.py": "3d0e4dee9af52566fe67e7bbcdca8ae1b1ab037b17b48aaf8aa52c6955df4b4b",
+    "tools/multidata_training_v4/sanity.py": "253d8bdbdbb159cb03fb55237daba99fb19c1b46bd6eb3897787487ab694e755",
+    "tools/multidata_training_v4/calibrate.py": "53d448aab020e4f27e21ee5c36f0fe4a28e487c1c2c2876981b91ce9bdf26989",
+    "tools/multidata_training_v4/infer.py": "c1891f5a65fcb98fcf07f92f8e5886fa5e0aa380e6211dd171b3ce1bf763ddc7",
+    "tools/multidata_training_v4/queue.py": "0d44d9968da5d4d028ac3407de52c567c62f2aac6d3bb8065c8e093de806b0c3",
+    "tools/multidata_training_v4/report.py": "1c3a4b7fb66e35b73ec88a08b853cad7b7702b5b7a8202422212917cfe2a506f",
+    "tools/multidata_training_v4/package_predict.py": "ba8aabf2ed2e8785a2dca2499e15ab7bc132b5ff3cc290798cedf590481c28a2",
+    "tools/multidata_training_v4/delivery.py": "26a793fd134c78c0af1b217aeaf02d729a362fed19f19dbc0ecaaecb401d8a75",
+    "tools/multidata_training_v4/secondary.py": "8627c079f7feaee5f5c5c1da1df2ad22eadfc8441e2986384615c6b7c17b8f0e",
+    "tools/multidata_training_v4/panels.py": "7823eda6943a577193b20a969d59ce3aaabbfc4b310a83352bdcc390a9c78525",
+    "tools/multidata_training_v4/stress.py": "7c2db4cb368496c78701c8c212ebbc721477e7dbbfc4386e0d26a245e3df6c94",
+    "tools/multidata_training_v4/coverage.py": "af7c47dd287328e670a300ef5cf9651a5658f07aad6842c59296a531643f4c42",
+    "tools/multidata_training_v4/dashboard_check.py": "97566bd1c602c133bc34dcb349ebb6322f1a379d6a817ed35e93cac0c05a2149",
+    "tools/multidata_training_v4/resource_monitor.py": "f66448468d0951c792d08dbe1ea27435ac665b95061881fb6edcc9d62fa3d083"
+  },
+  "latest_before_prediction_update": "2026-09-10T00:10:45.109655+00:00"
+}

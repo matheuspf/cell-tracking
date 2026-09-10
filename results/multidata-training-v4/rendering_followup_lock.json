@@ -1,0 +1,13 @@
+{
+  "created": "2026-09-10T01:33:41.233728+00:00",
+  "before_primary_outcomes": true,
+  "arm": "C7",
+  "trigger": "After required second-seed controls, at least 95 minutes remain and C4/C6 have generator-test pair recall above 0.5 but neither qualifies for promotion against v3 in the primary round",
+  "treatment": "Replace half of I pretraining and external replay with explicitly rendered eligible Zoo-fish trajectories, using only source-embryo imaging statistics. D/G histories and budgets match C4.",
+  "primary_seed": 20260909,
+  "repeat_if_primary_qualifies": true,
+  "primary_margin": 4.0,
+  "temperature_procedure": "unchanged common unbalanced generator validation",
+  "maximum_complete_configurations": 23,
+  "no_target_calibration_or_threshold_changes": true
+}

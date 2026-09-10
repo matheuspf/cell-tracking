@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "created": "2026-09-10T04:10:40.164577+00:00",
+  "states": [
+    {
+      "embryo": "pooled",
+      "order": "score",
+      "rows": 21
+    },
+    {
+      "embryo": "pooled",
+      "order": "variant",
+      "rows": 21
+    },
+    {
+      "embryo": "44b6",
+      "order": "score",
+      "rows": 21
+    },
+    {
+      "embryo": "44b6",
+      "order": "variant",
+      "rows": 21
+    },
+    {
+      "embryo": "6bba",
+      "order": "score",
+      "rows": 21
+    },
+    {
+      "embryo": "6bba",
+      "order": "variant",
+      "rows": 21
+    }
+  ],
+  "page_errors": [],
+  "network_requests": [],
+  "screenshots": [
+    {
+      "file": "dashboard_desktop.png",
+      "sha256": "767151806fbd296ef687efe1d42efc7c5e48b6fe7564f746703a5b7430015f81",
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "file": "dashboard_mobile.png",
+      "sha256": "d967386d3f3b56bf9f7589db402c5dd9b8542c0d852295b27dd814750b95c47d",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "chromium_version": "151.0.7922.34",
+  "browser_python": "/root/.conda/envs/cell-tracking/bin/python",
+  "dashboard_sha256": "12b8e1854ee08ba10d65db1151ddb4c6648b599c21e1b7a0c2d02af0b7715e35",
+  "download_rows": 63,
+  "horizontal_overflow": false
+}

@@ -1,0 +1,33 @@
+{
+  "created": "2026-09-09T23:55:27.868451+00:00",
+  "selected": [
+    {
+      "dataset": "44b6_abf82518",
+      "embryo": "44b6",
+      "quantile": 0.5,
+      "incumbent_nodes": 26447
+    },
+    {
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "quantile": 0.9,
+      "incumbent_nodes": 41645
+    },
+    {
+      "dataset": "6bba_312f0dc3",
+      "embryo": "6bba",
+      "quantile": 0.5,
+      "incumbent_nodes": 9545
+    },
+    {
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "quantile": 0.9,
+      "incumbent_nodes": 35110
+    }
+  ],
+  "rule": "Median and 90th percentile frozen incumbent node count per embryo, excluding required pilots",
+  "target_scores_read": false,
+  "labels_read": false,
+  "prediction_policy_changes": false
+}

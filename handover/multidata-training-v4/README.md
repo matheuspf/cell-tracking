@@ -1,6 +1,6 @@
 # Multi-dataset training v4
 
-**Status: execution handover, not measured v4 results.**
+**Status: executed and measured.** See the [measured report](../../results/multidata-training-v4/final_report.md), [interactive dashboard](../../results/multidata-training-v4/dashboard.html), and [NEXT_AGENT](../../results/multidata-training-v4/NEXT_AGENT.md). The remaining text preserves the original execution handover. MANIFEST.json remains the original authoring snapshot; measured artifacts have their own manifest.
 
 Parent: `handover/strong-tracker-v3@292ecc2569f3a16676de92d80e382be02024d904`.
 Incumbent: v3 `A_residual_m3.0`, full local score **0.934802374260586**.

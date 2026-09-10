@@ -1,0 +1,18 @@
+{
+  "variant": "C7",
+  "calibration_sha256": "849ecc87dfbd85087f64fe6984be37737d3a02e9a5976694e1279d30ed61d367",
+  "checkpoint_manifest_sha256": "47fbc569a32b56ff0c446d06d106f6bbda004337b71bbbd82ef41e9359904534",
+  "before_this_round_outcomes": true,
+  "driver_code_sha256": "4d152920666bd3b7c432d98217fa264cac1300441a97bd1c09726e45b4bf589e",
+  "source_workers": [
+    "44b6",
+    "6bba"
+  ],
+  "inference_code_sha256": {
+    "infer.py": "bcd3b756a6701d8ff6f18cb8c44099cd8af927b7b7d0f193aef7badf6e61decf",
+    "models.py": "28786632e99b653fc993364329cb6c0897784f073c3d20d08047eb780fb468b1",
+    "proposals.py": "255ee882b538b511bfdea06dc57f92bf3b88fa15c73f5b48532084e2cbaeea52",
+    "adapters.py": "5831a75112ec744c59a994dbedc36ec2e3569c46e00ab12cc7469ab966cef5e3",
+    "decode.py": "8fbcebf6f18c965ea83443f79ec77a22f4df1076b31b384627a8febdeb78934b"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "completed": true,
+  "source_examples": 16,
+  "cases": [
+    "clean",
+    "localization",
+    "dropout",
+    "duplicates",
+    "clipped_daughter",
+    "short_history"
+  ],
+  "fixtures": 96,
+  "lock_sha256": "f10571e8afa1bc30147f956f1cf6c833822e09df4206eaf8b0f70aea5e19c32b",
+  "no_training_partition_access": true
+}

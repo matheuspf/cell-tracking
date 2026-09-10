@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "passed": true,
+  "original_clip": "44b6_87bba6c4",
+  "alias": "unseen_v4_pilot",
+  "source_model": "6bba",
+  "variant": "C4",
+  "seconds": 163.25102174188942,
+  "fields_equal": {
+    "nodes": true,
+    "edges": true
+  },
+  "csv_uses_alias": true,
+  "weights_loaded": [
+    "G_C4_6bba",
+    "I_C4_6bba"
+  ],
+  "annotation_reads": 0,
+  "external_dataset_reads": 0,
+  "offline_network_guard": {
+    "processes_recorded": 3,
+    "blocked_attempts": 0,
+    "scope": "Python socket audit hooks; loopback and Unix IPC allowed"
+  },
+  "package_manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7",
+  "scope": "Same fixed image under an unfamiliar filename; deployment routing check, not an independent biological example"
+}

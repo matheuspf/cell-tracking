@@ -1,0 +1,17 @@
+{
+  "created": "2026-09-09T23:49:14.425157+00:00",
+  "passed": true,
+  "annotation_guard": {
+    "blocked_reads": 1,
+    "guard_installed_before_dependency_loads": true
+  },
+  "external_guard": {
+    "blocked_reads": 1,
+    "installed_before_dependencies": true
+  },
+  "intentional_denial_probes": 2,
+  "symlink_external_input_denied": true,
+  "geometry_cached_encoding_exact": true,
+  "image_cached_encoding_exact": true,
+  "no_model_training": true
+}

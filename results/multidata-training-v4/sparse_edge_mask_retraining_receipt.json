@@ -1,0 +1,202 @@
+{
+  "completed": true,
+  "seconds": 2656.215612106025,
+  "jobs": [
+    {
+      "model": "G_fish",
+      "returncode": 0,
+      "seconds": 297.8714260724373
+    },
+    {
+      "model": "G_combined",
+      "returncode": 0,
+      "seconds": 306.6024756380357
+    },
+    {
+      "model": "G_multispecies",
+      "returncode": 0,
+      "seconds": 312.6197045012377
+    },
+    {
+      "model": "G_real_44b6",
+      "returncode": 0,
+      "seconds": 300.1907718270086
+    },
+    {
+      "model": "I_real_44b6",
+      "returncode": 0,
+      "seconds": 305.86421818006784
+    },
+    {
+      "model": "G_real_44b6_seed2",
+      "returncode": 0,
+      "seconds": 304.9941634987481
+    },
+    {
+      "model": "I_real_44b6_seed2",
+      "returncode": 0,
+      "seconds": 305.0365133108571
+    },
+    {
+      "model": "G_real_6bba",
+      "returncode": 0,
+      "seconds": 304.74799150507897
+    },
+    {
+      "model": "I_real_6bba",
+      "returncode": 0,
+      "seconds": 308.9587268382311
+    },
+    {
+      "model": "G_real_6bba_seed2",
+      "returncode": 0,
+      "seconds": 305.21127553423867
+    },
+    {
+      "model": "I_real_6bba_seed2",
+      "returncode": 0,
+      "seconds": 306.78239581314847
+    },
+    {
+      "model": "G_C1_44b6",
+      "returncode": 0,
+      "seconds": 231.8747747517191
+    },
+    {
+      "model": "I_C1_44b6",
+      "returncode": 0,
+      "seconds": 233.50782202603295
+    },
+    {
+      "model": "G_C2_44b6",
+      "returncode": 0,
+      "seconds": 224.13892484782264
+    },
+    {
+      "model": "I_C2_44b6",
+      "returncode": 0,
+      "seconds": 241.12412836402655
+    },
+    {
+      "model": "G_C3_44b6",
+      "returncode": 0,
+      "seconds": 228.9965889151208
+    },
+    {
+      "model": "I_C3_44b6",
+      "returncode": 0,
+      "seconds": 233.2922801161185
+    },
+    {
+      "model": "G_C4_44b6",
+      "returncode": 0,
+      "seconds": 223.36764417774975
+    },
+    {
+      "model": "I_C4_44b6",
+      "returncode": 0,
+      "seconds": 235.4601702587679
+    },
+    {
+      "model": "G_C5_44b6",
+      "returncode": 0,
+      "seconds": 226.38889846904203
+    },
+    {
+      "model": "I_C5_44b6",
+      "returncode": 0,
+      "seconds": 242.75258189300075
+    },
+    {
+      "model": "G_C6_44b6",
+      "returncode": 0,
+      "seconds": 224.74529156973585
+    },
+    {
+      "model": "I_C6_44b6",
+      "returncode": 0,
+      "seconds": 243.24415584187955
+    },
+    {
+      "model": "G_C1short_44b6",
+      "returncode": 0,
+      "seconds": 222.1304829758592
+    },
+    {
+      "model": "I_C1short_44b6",
+      "returncode": 0,
+      "seconds": 227.85956526733935
+    },
+    {
+      "model": "G_C1_6bba",
+      "returncode": 0,
+      "seconds": 218.49888835195452
+    },
+    {
+      "model": "I_C1_6bba",
+      "returncode": 0,
+      "seconds": 233.21485385484993
+    },
+    {
+      "model": "G_C2_6bba",
+      "returncode": 0,
+      "seconds": 224.09601659188047
+    },
+    {
+      "model": "I_C2_6bba",
+      "returncode": 0,
+      "seconds": 233.04740187712014
+    },
+    {
+      "model": "G_C3_6bba",
+      "returncode": 0,
+      "seconds": 229.75904033193365
+    },
+    {
+      "model": "I_C3_6bba",
+      "returncode": 0,
+      "seconds": 232.40920900925994
+    },
+    {
+      "model": "G_C4_6bba",
+      "returncode": 0,
+      "seconds": 222.826514814049
+    },
+    {
+      "model": "I_C4_6bba",
+      "returncode": 0,
+      "seconds": 231.17768822517246
+    },
+    {
+      "model": "G_C5_6bba",
+      "returncode": 0,
+      "seconds": 230.6557060740888
+    },
+    {
+      "model": "I_C5_6bba",
+      "returncode": 0,
+      "seconds": 232.90906297881156
+    },
+    {
+      "model": "G_C6_6bba",
+      "returncode": 0,
+      "seconds": 222.13897177623585
+    },
+    {
+      "model": "I_C6_6bba",
+      "returncode": 0,
+      "seconds": 244.53840076504275
+    },
+    {
+      "model": "G_C1short_6bba",
+      "returncode": 0,
+      "seconds": 224.8095519542694
+    },
+    {
+      "model": "I_C1short_6bba",
+      "returncode": 0,
+      "seconds": 239.70519887888804
+    }
+  ],
+  "primary_models_and_seed2_controls_retrained": true
+}

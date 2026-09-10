@@ -1,0 +1,95 @@
+{
+  "completed": true,
+  "fresh_image_pilots": [
+    {
+      "dataset": "44b6_87bba6c4",
+      "variant": "C0",
+      "seconds": 154.83059824397787,
+      "graph_hash": "514cecd84f0614c8ead31e8c0806c0d0c0f24cf8ddb5349938de82ff7746f7e5",
+      "complete_graph_parity": true,
+      "csv_roundtrip": true,
+      "annotation_reads": 0,
+      "external_dataset_reads": 0,
+      "weights_loaded": [],
+      "offline_network_guard": {
+        "processes_recorded": 3,
+        "blocked_attempts": 0,
+        "scope": "Python socket audit hooks; loopback and Unix IPC allowed"
+      },
+      "new_head_peak_gpu_gib": 0.0,
+      "parent_peak_rss_gib": 0.5453529357910156,
+      "child_peak_rss_gib": 3.532745361328125,
+      "package_manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7"
+    },
+    {
+      "dataset": "44b6_87bba6c4",
+      "variant": "C4",
+      "seconds": 165.13589742826298,
+      "graph_hash": "d85b29f3ce70094a25977c4e8a3dc9b47435f4cde30814a38d55e937c2408106",
+      "complete_graph_parity": true,
+      "csv_roundtrip": true,
+      "annotation_reads": 0,
+      "external_dataset_reads": 0,
+      "weights_loaded": [
+        "G_C4_6bba",
+        "I_C4_6bba"
+      ],
+      "offline_network_guard": {
+        "processes_recorded": 3,
+        "blocked_attempts": 0,
+        "scope": "Python socket audit hooks; loopback and Unix IPC allowed"
+      },
+      "new_head_peak_gpu_gib": 0.08789443969726562,
+      "parent_peak_rss_gib": 1.3667144775390625,
+      "child_peak_rss_gib": 3.5419692993164062,
+      "package_manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7"
+    },
+    {
+      "dataset": "6bba_789f8168",
+      "variant": "C0",
+      "seconds": 93.76326164696366,
+      "graph_hash": "dce32e747409ca963b1f13ad3c6d466e451eedf1e724d735b3b023f64987715a",
+      "complete_graph_parity": true,
+      "csv_roundtrip": true,
+      "annotation_reads": 0,
+      "external_dataset_reads": 0,
+      "weights_loaded": [],
+      "offline_network_guard": {
+        "processes_recorded": 3,
+        "blocked_attempts": 0,
+        "scope": "Python socket audit hooks; loopback and Unix IPC allowed"
+      },
+      "new_head_peak_gpu_gib": 0.0,
+      "parent_peak_rss_gib": 0.5841941833496094,
+      "child_peak_rss_gib": 2.1267318725585938,
+      "package_manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7"
+    },
+    {
+      "dataset": "6bba_789f8168",
+      "variant": "C4",
+      "seconds": 101.8512986828573,
+      "graph_hash": "2768736837474be01c65b92f9d01c385a5a39714a37dc3e9b7246536e42f071c",
+      "complete_graph_parity": true,
+      "csv_roundtrip": true,
+      "annotation_reads": 0,
+      "external_dataset_reads": 0,
+      "weights_loaded": [
+        "G_C4_44b6",
+        "I_C4_44b6"
+      ],
+      "offline_network_guard": {
+        "processes_recorded": 3,
+        "blocked_attempts": 0,
+        "scope": "Python socket audit hooks; loopback and Unix IPC allowed"
+      },
+      "new_head_peak_gpu_gib": 0.07328319549560547,
+      "parent_peak_rss_gib": 1.3166389465332031,
+      "child_peak_rss_gib": 2.0974502563476562,
+      "package_manifest_sha256": "6bf40237f5e45df2d62830139f56fd58d1d2693c2302380ab92eafc45e31fcc7"
+    }
+  ],
+  "offline_local_dependencies": true,
+  "no_external_training_datasets_required": true,
+  "identity_fallback": true,
+  "kaggle_runtime_verified": false
+}

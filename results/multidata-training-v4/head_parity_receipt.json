@@ -1,0 +1,49 @@
+{
+  "completed": true,
+  "passed": true,
+  "variant": "C4",
+  "samples": 199,
+  "process_returncodes": [
+    0,
+    0
+  ],
+  "all_graphs_exact": true,
+  "labels_read": false,
+  "thresholds_or_weights_changed": false,
+  "summed_clip_seconds": 696.521357787773,
+  "mismatches": [],
+  "workers": [
+    {
+      "completed": true,
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      },
+      "offline_guard": {
+        "installed_before_dependencies": true,
+        "blocked_network_attempts": 0,
+        "blocked_dataset_reads": 0
+      }
+    },
+    {
+      "completed": true,
+      "annotation_guard": {
+        "blocked_reads": 0,
+        "guard_installed_before_dependency_loads": true
+      },
+      "external_guard": {
+        "blocked_reads": 0,
+        "installed_before_dependencies": true
+      },
+      "offline_guard": {
+        "installed_before_dependencies": true,
+        "blocked_network_attempts": 0,
+        "blocked_dataset_reads": 0
+      }
+    }
+  ]
+}

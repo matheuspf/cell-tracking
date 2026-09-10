@@ -1,0 +1,16 @@
+{
+  "created": "2026-09-10T00:33:58.722258+00:00",
+  "single_gpu": 0,
+  "concurrent_source_processes": 2,
+  "reason": "Measured single-fit GPU utilization near 5%; ample GPU/RAM headroom",
+  "stopped_after_completed_fit": "G_C4_44b6",
+  "next_fit_had_no_checkpoint": true,
+  "completed_weights_preserved": true,
+  "scientific_configs_unchanged": true,
+  "optimizer_budgets_unchanged": true,
+  "per_source_log_files": [
+    "logs/train_adapt_44b6.log",
+    "logs/train_adapt_6bba.log"
+  ],
+  "code_sha256": "bb02651da9c041a08baa397fb0c10f78a40a11d1c3df3417b9872ce514330900"
+}

@@ -1,7 +1,7 @@
 {
   "study_id": "multidata-training-v4",
-  "status": "planned_not_executed",
-  "next_stage": "W400",
+  "status": "executed_measured",
+  "next_stage": null,
   "reviewed_parent": "292ecc2569f3a16676de92d80e382be02024d904",
   "incumbent_score": 0.934802374260586,
   "authoring_validation": {
@@ -11,6 +11,19 @@
     "training_run": false,
     "official_graph_evaluation_run": false
   },
-  "new_score": null,
-  "external_data_gain": null
+  "new_score": 0.934802374260586,
+  "external_data_gain": false,
+  "completed_at": "2026-09-10T04:10:40.349374+00:00",
+  "delta_v3": 0.0,
+  "results": "results/multidata-training-v4/final_report.md",
+  "selected_variant": "C0",
+  "execution_validation": {
+    "competition_data_read": true,
+    "external_raw_data_read": true,
+    "training_run": true,
+    "official_graph_evaluation_run": true,
+    "complete_variants": 21,
+    "actual_optimizer_updates": 804000,
+    "local_inference_package_verified": true
+  }
 }

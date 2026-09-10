@@ -1,0 +1,14 @@
+{
+  "bad_future_supervision": 0,
+  "bags_checked": 213128,
+  "canonical_partition_groups": 3918,
+  "source_counts": {
+    "synthetic_static": 1539,
+    "synthetic_sequence": 2174,
+    "zoo_zebrafish": 3,
+    "zoo_ascidian": 3,
+    "biohub_44b6": 71,
+    "biohub_6bba": 128
+  },
+  "all_actual_cache_grids_and_masks_valid": true
+}

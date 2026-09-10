@@ -1,0 +1,68 @@
+{
+  "completed": true,
+  "source_statistics": {
+    "source": "6bba",
+    "patches": 2048,
+    "background": 0.2,
+    "amplitude": 0.6352941176470588,
+    "sigma_pixels": 2.468845528671141,
+    "noise_std": 0.08,
+    "nearest_cell_um": 8.909758081031157,
+    "pixel_step_um": 1.625,
+    "source_only": true,
+    "label_values_used_for_statistics": false,
+    "caveat": "Source incumbent-centered patch statistics; phenomenological Gaussian rendering, not measured Zoo optics"
+  },
+  "partitions": [
+    {
+      "source": "rendered_zoo_6bba",
+      "partition": "train",
+      "cache": "/kaggle/working/cell-tracking/multidata-training-v4/cache/rendered_zoo_6bba/train.npz",
+      "cache_sha256": "801f7eb557cbac1ddd3dae40572be97666a3fae346d30877318878cd5a6f5a69",
+      "source_graph_sha256": "5af2dd66cdf787ea8012a68578641a900634e54a3eaab9de3f1f40e52731865a",
+      "bags": 45824,
+      "positive_groups": 20083,
+      "label_kind": "weak_Zoo_tracks",
+      "image_representation": "explicit_synthetic_Gaussian_triplanes",
+      "source_use_status": "derived_from_eligible_zebrafish",
+      "provenance_group": "zebrafish_time_train",
+      "independent_acquisition": false,
+      "rendered_not_experimental": true
+    },
+    {
+      "source": "rendered_zoo_6bba",
+      "partition": "validation",
+      "cache": "/kaggle/working/cell-tracking/multidata-training-v4/cache/rendered_zoo_6bba/validation.npz",
+      "cache_sha256": "2f3904551076c59c1d63530e154fb90c6e137bc1ca4218fb3b49bde3772162ac",
+      "source_graph_sha256": "5af2dd66cdf787ea8012a68578641a900634e54a3eaab9de3f1f40e52731865a",
+      "bags": 8448,
+      "positive_groups": 3702,
+      "label_kind": "weak_Zoo_tracks",
+      "image_representation": "explicit_synthetic_Gaussian_triplanes",
+      "source_use_status": "derived_from_eligible_zebrafish",
+      "provenance_group": "zebrafish_time_validation",
+      "independent_acquisition": false,
+      "rendered_not_experimental": true
+    },
+    {
+      "source": "rendered_zoo_6bba",
+      "partition": "test",
+      "cache": "/kaggle/working/cell-tracking/multidata-training-v4/cache/rendered_zoo_6bba/test.npz",
+      "cache_sha256": "2a6707562a2e6333ef28483721fcc4142a2516b2ab2613f61452629e85c766d5",
+      "source_graph_sha256": "5af2dd66cdf787ea8012a68578641a900634e54a3eaab9de3f1f40e52731865a",
+      "bags": 9344,
+      "positive_groups": 4086,
+      "label_kind": "weak_Zoo_tracks",
+      "image_representation": "explicit_synthetic_Gaussian_triplanes",
+      "source_use_status": "derived_from_eligible_zebrafish",
+      "provenance_group": "zebrafish_time_test",
+      "independent_acquisition": false,
+      "rendered_not_experimental": true
+    }
+  ],
+  "renderer_code_sha256": "a1ea849b3cd8df5e5d664cec338a4b438357bf819ef6a12a4da9bcb717f0bfb1",
+  "trajectory_normalization": "whole unlabeled acquisition per-axis IQR; spacing remapped from source-only incumbent detections",
+  "intensity_labels_independent": true,
+  "renderer_neighbors_per_query": 16,
+  "clean_points_rendered_with_corrupted_query_centers": true
+}

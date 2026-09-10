@@ -1,0 +1,18 @@
+{
+  "created": "2026-09-10T03:12:01.468423+00:00",
+  "namespace_probe": [
+    "unshare",
+    "--user",
+    "--map-root-user",
+    "--mount",
+    "--net",
+    "/bin/true"
+  ],
+  "returncode": 1,
+  "stderr": "unshare: unshare failed: Operation not permitted",
+  "kernel_namespace_isolation_available": false,
+  "validation_fallback": "Python audit hooks installed before dependencies deny annotations, external training data and nonlocal sockets",
+  "training_data_physically_unmounted": false,
+  "dataset_reads_denied_by_process_hooks": true,
+  "scope_limitation": "Not an OS security sandbox; no claim that training datasets were unmounted"
+}

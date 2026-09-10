@@ -1,0 +1,1219 @@
+{
+  "G_C6_6bba": {
+    "sha256": "c7050ce551e594bd84e535bdd956f2ffe3212c51153f43f10f86062e141aaba6",
+    "bytes": 10912335,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic",
+      "zebrafish"
+    ],
+    "initialization": "G_combined",
+    "ancestry": [
+      "G_combined",
+      "G_C6_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_synthetic": {
+    "sha256": "508b302dd32079fe41f95631e41d590ff6010a9442dbcfa424fd1328f715281c",
+    "bytes": 457589,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 12000,
+    "direct_sources": [
+      "synthetic"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "D_synthetic"
+    ],
+    "all_ancestral_sources": [
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C1short_6bba": {
+    "sha256": "2e75a55616810291f8f791d9526361bb21f5e844999c080fb4f4e3d460b0ad90",
+    "bytes": 10771604,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_C1short_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C6_6bba": {
+    "sha256": "923e4f5cdc7acdd0dd578d9a89ab2bd3b504b6d3d34949edf0557c3c72af01c7",
+    "bytes": 3213743,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "I_randomized_6bba",
+    "ancestry": [
+      "D_synthetic",
+      "I_randomized_6bba",
+      "I_C6_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": "6bba",
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_real_44b6": {
+    "sha256": "b0e87dede331d7b243f20dd1d3d1165b157c4cdd3583ae11c8f2843f792ce4c5",
+    "bytes": 423093,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 12000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "D_real_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_real_6bba": {
+    "sha256": "1b9979649affa9f15276e5d79a4cd34ab1943829fa1d793333fd49e7436eb54a",
+    "bytes": 439605,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 12000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "D_real_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C1short_6bba": {
+    "sha256": "38f849107c5d860546bd82bdf0efd4305835a78ff4c816a097e1c456fd5fdcc1",
+    "bytes": 3118924,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "I_C1short_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_synthetic": {
+    "sha256": "bd00c9743056ffd0539f6231013518830e0e17c343bf1bd6b94d959531941817",
+    "bytes": 10852753,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_synthetic"
+    ],
+    "all_ancestral_sources": [
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_combined": {
+    "sha256": "44408e1652f7541598c313eab78554af2eceed7533284d11e0d4875e6dc224e7",
+    "bytes": 10898640,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic",
+      "zebrafish"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_combined"
+    ],
+    "all_ancestral_sources": [
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_real_6bba": {
+    "sha256": "16677691ba6c5871311b651a412eb9ef5af8f1dbd89fb76c4432ed03f3b2be94",
+    "bytes": 3120609,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "D_real_6bba",
+    "ancestry": [
+      "D_real_6bba",
+      "I_real_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C2_44b6": {
+    "sha256": "6672d5c1c84baff2bcda380164274b5392449fef563e794060317306e2ad78ce",
+    "bytes": 10858191,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "G_synthetic",
+    "ancestry": [
+      "G_synthetic",
+      "G_C2_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C1_44b6": {
+    "sha256": "c4a06ea9692462790f3f4769c20527d5774891a014e4e04d58172ce138266d18",
+    "bytes": 3110127,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "I_real_44b6",
+    "ancestry": [
+      "D_real_44b6",
+      "I_real_44b6",
+      "I_C1_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C3_44b6": {
+    "sha256": "7d053a81d8a001c624fbde72d6ae2931c5002599c0e5d79295ced8ba6e330370",
+    "bytes": 3110127,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "I_real_44b6",
+    "ancestry": [
+      "D_real_44b6",
+      "I_real_44b6",
+      "I_C3_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C4_44b6": {
+    "sha256": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f",
+    "bytes": 3205551,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C4_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C5_44b6": {
+    "sha256": "d5e599b397a7fe0a0d03835cf825fc70fd564eeb27136b5598c6ad4d8977e5b7",
+    "bytes": 10907791,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic",
+      "zebrafish",
+      "ascidian"
+    ],
+    "initialization": "G_multispecies",
+    "ancestry": [
+      "G_multispecies",
+      "G_C5_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "ascidian",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C1_6bba": {
+    "sha256": "f97ca9de9f9940e715d798239ef1b5446ed468bf1713a79bb397f320ef9de735",
+    "bytes": 10770959,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "G_real_6bba",
+    "ancestry": [
+      "G_real_6bba",
+      "G_C1_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_synthetic": {
+    "sha256": "283e04d14b79c5f9f2d8fd3377d57447e70c8e88e4b8eff117409cded45c1b3a",
+    "bytes": 3200097,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic"
+    ],
+    "initialization": "D_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic"
+    ],
+    "all_ancestral_sources": [
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C6_44b6": {
+    "sha256": "7634c473e9596e570a7efeb80caed41631700b6731587fae8b64fd5cba83fdc0",
+    "bytes": 3205551,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "I_randomized_44b6",
+    "ancestry": [
+      "D_synthetic",
+      "I_randomized_44b6",
+      "I_C6_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": "44b6",
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C1short_44b6": {
+    "sha256": "7de8bff587a7269b01e0d8eceadea48d1ff46168d7d120215fad8e5ae7cc664b",
+    "bytes": 10763412,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_C1short_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C1_6bba": {
+    "sha256": "2987e1828c612d630844a882ac752aadf95aa5f5f49a0e3f3a24e8bf3f318b3c",
+    "bytes": 3118319,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "I_real_6bba",
+    "ancestry": [
+      "D_real_6bba",
+      "I_real_6bba",
+      "I_C1_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C4_6bba": {
+    "sha256": "c7bb92bf3c900e70581a144a2609a179c0a82228f12c227c5aa94d34ae4297f6",
+    "bytes": 10912335,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic",
+      "zebrafish"
+    ],
+    "initialization": "G_combined",
+    "ancestry": [
+      "G_combined",
+      "G_C4_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_randomized_44b6": {
+    "sha256": "3c05d08048d4657a086c4233be3b3638a9a0f2839fb4cf0e69abf1bc53fa7819",
+    "bytes": 3200887,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic"
+    ],
+    "initialization": "D_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_randomized_44b6"
+    ],
+    "all_ancestral_sources": [
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": "44b6",
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C5_44b6": {
+    "sha256": "3b4ae76353e2c856f8ec0f676e1dfc949c173b59c2fc66c51ddf42690a98e6a4",
+    "bytes": 3205551,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C5_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C2_6bba": {
+    "sha256": "5254593731353059e7e12c016359e40451fb452ee3fbae75547a35846b0f974b",
+    "bytes": 3213743,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C2_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C4_6bba": {
+    "sha256": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb",
+    "bytes": 3213743,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C4_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_randomized_6bba": {
+    "sha256": "2b62c3be927c99f73404deff9e43f567ba2a3ab00af42bb27927d466f7331ed7",
+    "bytes": 3200887,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic"
+    ],
+    "initialization": "D_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_randomized_6bba"
+    ],
+    "all_ancestral_sources": [
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": "6bba",
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C5_6bba": {
+    "sha256": "3b75ba38753d711a935dd331c1e2e9b38cb8d778b014094fb4a567fb8ab02a7d",
+    "bytes": 10916047,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic",
+      "zebrafish",
+      "ascidian"
+    ],
+    "initialization": "G_multispecies",
+    "ancestry": [
+      "G_multispecies",
+      "G_C5_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "ascidian",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_real_adapt_44b6": {
+    "sha256": "690074d8325114e11b87ae32681b855bb5e51e83901c80cdc4ec1ab067f2ac4e",
+    "bytes": 422901,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "D_real_44b6",
+    "ancestry": [
+      "D_real_44b6",
+      "D_real_adapt_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_synthetic_adapt_44b6": {
+    "sha256": "ce240a66fa9c30668ece0473b265dbccdc73e6a125e7fa2d90f5d37400767138",
+    "bytes": 468341,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "D_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "D_synthetic_adapt_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_fish": {
+    "sha256": "762f051cb7f3388dc2b39db63a612ab424ce3a1adc76449ca93ae99945f86cdf",
+    "bytes": 10803340,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "zebrafish"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_fish"
+    ],
+    "all_ancestral_sources": [
+      "zebrafish"
+    ],
+    "inherited_exposure": [],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_real_44b6": {
+    "sha256": "d75c36c694a2d4795fbfccb1d77b155bfae194196e7e8548b664406d20727746",
+    "bytes": 10765073,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_real_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_multispecies": {
+    "sha256": "4388f4b948c722187a6f81287b45aaf0b071ce3392956a7e8244cc9a5bcd5bb1",
+    "bytes": 10902868,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "synthetic",
+      "zebrafish",
+      "ascidian"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_multispecies"
+    ],
+    "all_ancestral_sources": [
+      "ascidian",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_real_6bba": {
+    "sha256": "c52e48740701b9fb842bd20e14662401e707c48c792c2a0331ee72136205f490",
+    "bytes": 10773265,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "G_real_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C2_44b6": {
+    "sha256": "1704ee883a49d6580cee27f16cba02070d77e9c959df10e0a8cb2a42351b9f48",
+    "bytes": 3205551,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C2_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C4_44b6": {
+    "sha256": "04806c9ac8aa22806826c61208ff9b130c04b5dec9fe5da962d8900f0ae19d64",
+    "bytes": 10904143,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic",
+      "zebrafish"
+    ],
+    "initialization": "G_combined",
+    "ancestry": [
+      "G_combined",
+      "G_C4_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C5_6bba": {
+    "sha256": "48fe718a3b9a6c03893e8bba46ddb0f2847b1a0efc2f0b968c2302945325b6d8",
+    "bytes": 3213743,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "I_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "I_synthetic",
+      "I_C5_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C1short_44b6": {
+    "sha256": "5dce0b1163d7d54affb48adc5fe789dcde39c8e81f1d9c9b8a060a2bc3ea4ac7",
+    "bytes": 3110732,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": null,
+    "ancestry": [
+      "I_C1short_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C2_6bba": {
+    "sha256": "0ac5d85b5bc809c9fcfe01a857194690397f6289162cc86bfd4c29dee12f1299",
+    "bytes": 10866383,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "G_synthetic",
+    "ancestry": [
+      "G_synthetic",
+      "G_C2_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_real_adapt_6bba": {
+    "sha256": "4a90e7a02e915cff60500d7cfbf626fd4e75ad385c12c0c875593af51301e606",
+    "bytes": 439477,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "D_real_6bba",
+    "ancestry": [
+      "D_real_6bba",
+      "D_real_adapt_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_C3_6bba": {
+    "sha256": "1960197b40fbf37680584ad5075ae7ab5bfd2b09485d5ba2d3c3211ba8f2c825",
+    "bytes": 3118319,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "I_real_6bba",
+    "ancestry": [
+      "D_real_6bba",
+      "I_real_6bba",
+      "I_C3_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "D_synthetic_adapt_6bba": {
+    "sha256": "4b9bb9d10d08b6374eb6d99f2649f6f41647baad6dbf1be66b76d74b7918140f",
+    "bytes": 484917,
+    "component": "D",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "initialization": "D_synthetic",
+    "ancestry": [
+      "D_synthetic",
+      "D_synthetic_adapt_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "synthetic"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "I_real_44b6": {
+    "sha256": "485263f64ea8cb338244bfa27a313558eb4e38348194809f64282db27ba822b4",
+    "bytes": 3112417,
+    "component": "I",
+    "seed": 20260909,
+    "actual_optimizer_updates": 20000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "D_real_44b6",
+    "ancestry": [
+      "D_real_44b6",
+      "I_real_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C1_44b6": {
+    "sha256": "631b5038bd7179149ed157a1e3e9831255b414eccf86d5e544127276af2caee6",
+    "bytes": 10762767,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "G_real_44b6",
+    "ancestry": [
+      "G_real_44b6",
+      "G_C1_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C3_44b6": {
+    "sha256": "c0e18ba91a40672bd92d94b4bf2d3492bdfcc8f5d2e1129d2d18c1eeea5c7b59",
+    "bytes": 10762767,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6"
+    ],
+    "initialization": "G_fish",
+    "ancestry": [
+      "G_fish",
+      "G_C3_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C6_44b6": {
+    "sha256": "322b49ff65ba8555e105cbc3981888205747dc7a3c59ff64b1b04e716bdeb8dd",
+    "bytes": 10904143,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "44b6",
+      "synthetic",
+      "zebrafish"
+    ],
+    "initialization": "G_combined",
+    "ancestry": [
+      "G_combined",
+      "G_C6_44b6"
+    ],
+    "all_ancestral_sources": [
+      "44b6",
+      "synthetic",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "released simulator calibrated on Biohub 44b6",
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  },
+  "G_C3_6bba": {
+    "sha256": "1bb81e60a63f4ecd7e164512c4a3c3243b88ea44d0a8408f80db42fef9bc2e86",
+    "bytes": 10770959,
+    "component": "G",
+    "seed": 20260909,
+    "actual_optimizer_updates": 8000,
+    "direct_sources": [
+      "6bba"
+    ],
+    "initialization": "G_fish",
+    "ancestry": [
+      "G_fish",
+      "G_C3_6bba"
+    ],
+    "all_ancestral_sources": [
+      "6bba",
+      "zebrafish"
+    ],
+    "inherited_exposure": [
+      "incumbent detections from public neural checkpoints",
+      "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+    ],
+    "appearance_calibration_source": null,
+    "calibration": "final G/I weights share generator-validation temperature scaling across controls",
+    "operational_exploratory": true
+  }
+}

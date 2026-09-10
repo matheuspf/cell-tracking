@@ -1,0 +1,18 @@
+{
+  "created": "2026-09-10T04:10:27.476959+00:00",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "executable": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+  "platform": "Linux-6.8.0-79-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "2.3.3",
+    "torch": "2.8.0+cu128",
+    "zarr": "3.2.1",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "polars": "1.42.0",
+    "scikit-learn": "1.9.0"
+  },
+  "CUDA_VISIBLE_DEVICES": "0",
+  "gpu": "NVIDIA GeForce RTX 4090, 575.64.03, 24564 MiB"
+}

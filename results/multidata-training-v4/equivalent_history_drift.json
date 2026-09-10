@@ -1,0 +1,71 @@
+{
+  "created": "2026-09-10T02:11:20.071445+00:00",
+  "comparisons": [
+    {
+      "first": "I_C1_44b6",
+      "second": "I_C3_44b6",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.14834459618228354,
+      "maximum_parameter_difference": 0.12319870665669441
+    },
+    {
+      "first": "I_C2_44b6",
+      "second": "I_C4_44b6",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.025736269846304748,
+      "maximum_parameter_difference": 0.04618950933218002
+    },
+    {
+      "first": "I_C4_44b6",
+      "second": "I_C5_44b6",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.020663435565777315,
+      "maximum_parameter_difference": 0.025728978216648102
+    },
+    {
+      "first": "G_C4_44b6",
+      "second": "G_C6_44b6",
+      "config_equal_except_name": true,
+      "bitwise_equal": true,
+      "relative_parameter_l2": 0.0,
+      "maximum_parameter_difference": 0.0
+    },
+    {
+      "first": "I_C1_6bba",
+      "second": "I_C3_6bba",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.1141358757497018,
+      "maximum_parameter_difference": 0.09242706559598446
+    },
+    {
+      "first": "I_C2_6bba",
+      "second": "I_C4_6bba",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.04044886963050392,
+      "maximum_parameter_difference": 0.04679473862051964
+    },
+    {
+      "first": "I_C4_6bba",
+      "second": "I_C5_6bba",
+      "config_equal_except_name": true,
+      "bitwise_equal": false,
+      "relative_parameter_l2": 0.04332136010870857,
+      "maximum_parameter_difference": 0.06532268598675728
+    },
+    {
+      "first": "G_C4_6bba",
+      "second": "G_C6_6bba",
+      "config_equal_except_name": true,
+      "bitwise_equal": true,
+      "relative_parameter_l2": 0.0,
+      "maximum_parameter_difference": 0.0
+    }
+  ],
+  "purpose": "Quantify repeated same-history numerical training variation, without target labels",
+  "bitwise_training_reproducibility_claimed": false
+}

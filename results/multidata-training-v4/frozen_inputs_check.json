@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "created": "2026-09-10T04:10:15.740407+00:00",
+  "checkpoint_files": 69,
+  "graph_files": 4179,
+  "calibration_locks": 3,
+  "core_code_files": [
+    "adapters.py",
+    "decode.py",
+    "infer.py",
+    "models.py",
+    "proposals.py",
+    "secondary.py"
+  ],
+  "all_frozen_predictions_weights_calibration_and_inference_code_unchanged": true
+}

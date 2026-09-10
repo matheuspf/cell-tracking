@@ -1,0 +1,66 @@
+{
+  "created": "2026-09-10T03:49:31.437965+00:00",
+  "selected": [
+    {
+      "dataset": "44b6_abf82518",
+      "embryo": "44b6",
+      "quantile": 0.5,
+      "incumbent_nodes": 26447,
+      "estimated_seconds": 393.95979480668905
+    },
+    {
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "quantile": 0.9,
+      "incumbent_nodes": 41645,
+      "estimated_seconds": 556.610797344702
+    },
+    {
+      "dataset": "6bba_312f0dc3",
+      "embryo": "6bba",
+      "quantile": 0.5,
+      "incumbent_nodes": 9545,
+      "estimated_seconds": 244.73747239578515
+    },
+    {
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "quantile": 0.9,
+      "incumbent_nodes": 35110,
+      "estimated_seconds": 781.7607131581624
+    }
+  ],
+  "all_candidates": [
+    {
+      "dataset": "44b6_abf82518",
+      "embryo": "44b6",
+      "quantile": 0.5,
+      "incumbent_nodes": 26447,
+      "estimated_seconds": 393.95979480668905
+    },
+    {
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "quantile": 0.9,
+      "incumbent_nodes": 41645,
+      "estimated_seconds": 556.610797344702
+    },
+    {
+      "dataset": "6bba_312f0dc3",
+      "embryo": "6bba",
+      "quantile": 0.5,
+      "incumbent_nodes": 9545,
+      "estimated_seconds": 244.73747239578515
+    },
+    {
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "quantile": 0.9,
+      "incumbent_nodes": 35110,
+      "estimated_seconds": 781.7607131581624
+    }
+  ],
+  "available_seconds": 7477.562041044235,
+  "decision_uses_runtime_and_frozen_density_only": true,
+  "final_validation_reserve_seconds": 900
+}

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "source": "44b6",
+      "positive_queries": 1893,
+      "validated_background_queries": 8781,
+      "clips_without_background": 0
+    },
+    {
+      "source": "6bba",
+      "positive_queries": 9783,
+      "validated_background_queries": 17446,
+      "clips_without_background": 0
+    }
+  ],
+  "background_definition": "source-image 95th percentile of all triplane patch pixels below 0.08 after local quantile normalization and more than 5 native voxels from known centers",
+  "unmatched_detections_used_as_negative_labels": false,
+  "caveat": "Dark source-image background is heuristic supervision, not exhaustive GEFF truth; very dim unannotated cells cannot be ruled out."
+}

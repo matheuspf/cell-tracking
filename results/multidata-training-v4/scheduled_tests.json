@@ -1,0 +1,29 @@
+{
+  "jobs": [
+    {
+      "stage": "calibrate",
+      "state": "complete",
+      "started": "2026-09-10T02:11:18.018220+00:00",
+      "returncode": 0,
+      "ended": "2026-09-10T02:11:35.571707+00:00",
+      "log": "/kaggle/working/cell-tracking/multidata-training-v4/logs/queued_calibrate.log"
+    },
+    {
+      "stage": "infer",
+      "state": "complete",
+      "started": "2026-09-10T02:11:35.572376+00:00",
+      "returncode": 0,
+      "ended": "2026-09-10T02:46:39.741180+00:00",
+      "log": "/kaggle/working/cell-tracking/multidata-training-v4/logs/queued_infer.log"
+    },
+    {
+      "stage": "evaluate",
+      "state": "complete",
+      "started": "2026-09-10T02:46:39.741727+00:00",
+      "returncode": 0,
+      "ended": "2026-09-10T02:54:56.025821+00:00",
+      "log": "/kaggle/working/cell-tracking/multidata-training-v4/logs/queued_evaluate.log"
+    }
+  ],
+  "deadline": 1789020549.0
+}

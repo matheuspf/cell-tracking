@@ -1,0 +1,16 @@
+{
+  "completed": true,
+  "created": "2026-09-10T04:01:00.096747+00:00",
+  "comparisons": 8,
+  "model_sha256": {
+    "I_C4_44b6": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f",
+    "I_C7_44b6": "57ae4767b53bc7a2cb98a4349e34578a001e49bd5ecd1396b05c9bb18b752d45",
+    "I_C4_6bba": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb",
+    "I_C7_6bba": "a956a5ca0abd01994c9b445cae95023774f09da825a1715097d350afc3a514b8"
+  },
+  "post_outcome_diagnostic": true,
+  "used_to_tune": false,
+  "optimizer_updates": 0,
+  "calibration_or_threshold_changes": false,
+  "scope": "Weak graph labels from purged time blocks of the same Zoo-fish acquisition; explicitly rendered images; conditional sampling, not biological prevalence"
+}

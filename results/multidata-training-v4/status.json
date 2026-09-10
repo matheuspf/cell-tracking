@@ -1,0 +1,82 @@
+{
+  "stage": "W400-W490",
+  "updated": "2026-09-10T04:10:40.235444+00:00",
+  "state": "completed",
+  "study": "multidata-training-v4",
+  "stages": {
+    "W400": {
+      "state": "complete"
+    },
+    "W410": {
+      "state": "complete"
+    },
+    "W420": {
+      "state": "complete"
+    },
+    "W430": {
+      "state": "complete"
+    },
+    "W440": {
+      "state": "complete"
+    },
+    "W450": {
+      "state": "complete"
+    },
+    "W460": {
+      "state": "complete"
+    },
+    "W480": {
+      "state": "complete"
+    },
+    "W490": {
+      "state": "complete"
+    },
+    "W470": {
+      "state": "complete",
+      "receipt": {
+        "completed": true,
+        "optional_skipped": false,
+        "jobs": [
+          {
+            "stage": "prepare",
+            "returncode": 0,
+            "seconds": 209.97305027395487
+          },
+          {
+            "stage": "train_primary",
+            "returncode": 0,
+            "seconds": 556.7942033582367
+          },
+          {
+            "stage": "calibrate_primary",
+            "returncode": 0,
+            "seconds": 7.479125504381955
+          },
+          {
+            "stage": "infer_primary",
+            "returncode": 0,
+            "seconds": 394.39511037571356
+          },
+          {
+            "stage": "evaluate_primary",
+            "returncode": 0,
+            "seconds": 34.08980081882328
+          }
+        ],
+        "primary_measured": true,
+        "second_seed_measured": false,
+        "calibration_and_thresholds_unchanged": true,
+        "operational_exploratory": true
+      }
+    }
+  },
+  "selected": "C0",
+  "score": 0.934802374260586,
+  "delta_v3": 0.0,
+  "external_data_advantage": false,
+  "measured": true,
+  "operational_exploratory": true,
+  "submission_made": false,
+  "publication_made": false,
+  "local_inference_package_verified": true
+}

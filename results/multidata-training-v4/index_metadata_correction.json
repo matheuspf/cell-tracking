@@ -1,0 +1,9 @@
+{
+  "created": "2026-09-10T00:05:19.837690+00:00",
+  "previous_index_sha256": "26f269b3a0bc0aed1dcf96611ba5c21f4c695a6bf6902264ff889e6a43678543",
+  "new_index_sha256": "880dbf4d49d114de3722e6ebaa7561ac891495786ef277a2235155311bf88868",
+  "data_arrays_unchanged": true,
+  "partitions_unchanged": true,
+  "training_inputs_unchanged": true,
+  "correction": "Static records now explicitly declare one frame and no event future; canonical source_id and eligibility fields added"
+}

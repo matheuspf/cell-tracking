@@ -1,0 +1,34 @@
+{
+  "created": "2026-09-10T04:10:29.107330+00:00",
+  "passed": true,
+  "jobs": [
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_multidata_v4.py"
+      ],
+      "returncode": 0,
+      "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.017s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "handover/multidata-training-v4",
+        "-p",
+        "test_contracts.py"
+      ],
+      "returncode": 0,
+      "output": "........................................\n----------------------------------------------------------------------\nRan 40 tests in 0.043s\n\nOK\n"
+    }
+  ]
+}

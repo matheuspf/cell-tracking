@@ -1,0 +1,56 @@
+{
+  "completed": true,
+  "jobs": [
+    {
+      "model": "G_external_seed2",
+      "returncode": 0,
+      "seconds": 306.8477562372573
+    },
+    {
+      "model": "I_external_seed2",
+      "returncode": 0,
+      "seconds": 317.09097050875425
+    },
+    {
+      "model": "G_C1_seed2_44b6",
+      "returncode": 0,
+      "seconds": 219.36760577512905
+    },
+    {
+      "model": "I_C1_seed2_44b6",
+      "returncode": 0,
+      "seconds": 230.11497300909832
+    },
+    {
+      "model": "G_C4_seed2_44b6",
+      "returncode": 0,
+      "seconds": 222.5740722650662
+    },
+    {
+      "model": "I_C4_seed2_44b6",
+      "returncode": 0,
+      "seconds": 237.63880706531927
+    },
+    {
+      "model": "G_C1_seed2_6bba",
+      "returncode": 0,
+      "seconds": 228.97570883808658
+    },
+    {
+      "model": "I_C1_seed2_6bba",
+      "returncode": 0,
+      "seconds": 230.82794456928968
+    },
+    {
+      "model": "G_C4_seed2_6bba",
+      "returncode": 0,
+      "seconds": 219.85206566285342
+    },
+    {
+      "model": "I_C4_seed2_6bba",
+      "returncode": 0,
+      "seconds": 236.46407552203164
+    }
+  ],
+  "same_prescribed_configs_and_budgets": true
+}

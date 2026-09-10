@@ -1,0 +1,47 @@
+{
+  "created": "2026-09-10T04:10:28.104352+00:00",
+  "resource_observations": 528,
+  "sampling_interval_seconds": 30,
+  "monitoring_began_after_initial_pretraining": true,
+  "peak_sampled_gpu_gib": 5.53515625,
+  "peak_sampled_process_rss_sum_gib": 13.693096160888672,
+  "peak_training_allocated_gpu_gib": 1.593977928161621,
+  "peak_training_process_rss_gib": 5.6514129638671875,
+  "training_wall_seconds": 15324.998179264367,
+  "optimizer_updates": 804000,
+  "local_output_bytes": 5809081307,
+  "free_disk_gib": 23.27489471435547,
+  "total_budget_gpu_hours": 36,
+  "user_wall_window": {
+    "authorized_at": "2026-09-09T23:09:09Z",
+    "deadline_utc": "2026-09-10T06:09:09Z",
+    "wall_clock_hours": 7,
+    "primary_work": "Complete W400-W490, full frozen comparisons, measured reports, package, sanitized commit/push",
+    "queued_followups": [
+      {
+        "priority": 1,
+        "test": "second_seed_C1_and_qualifying_external_or_prespecified_C4",
+        "condition": "after primary fits; within deadline; reserve time for complete graph evaluation and delivery"
+      },
+      {
+        "priority": 2,
+        "test": "fresh_image_package_on_fixed_both_embryo_clips",
+        "condition": "required delivery verification"
+      },
+      {
+        "priority": 3,
+        "test": "additional_density_stratified_fresh_image_pilots",
+        "condition": "primary delivery complete and sufficient remaining time"
+      },
+      {
+        "priority": 4,
+        "test": "full_external_holdout_and_corruption_diagnostics",
+        "condition": "fixed frozen models only; no new target threshold selection"
+      }
+    ],
+    "new_target_configuration_cap": 24,
+    "no_unattended_paid_or_remote_actions": true
+  },
+  "measured_4090_only": true,
+  "kaggle_12_hour_guarantee": false
+}
