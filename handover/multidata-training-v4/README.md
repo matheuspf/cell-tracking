@@ -1,6 +1,21 @@
 # Multi-dataset training v4
 
-**Status: executed and measured.** See the [measured report](../../results/multidata-training-v4/final_report.md), [interactive dashboard](../../results/multidata-training-v4/dashboard.html), and [NEXT_AGENT](../../results/multidata-training-v4/NEXT_AGENT.md). The remaining text preserves the original execution handover. MANIFEST.json remains the original authoring snapshot; measured artifacts have their own manifest.
+**Status: executed and measured.** Start with [CONTINUATION.md](CONTINUATION.md)
+to review current results and propose the next study. See the
+[measured report](../../results/multidata-training-v4/final_report.md),
+[interactive dashboard](../../results/multidata-training-v4/dashboard.html), and
+[execution handover](../../results/multidata-training-v4/NEXT_AGENT.md).
+MANIFEST.json remains the original authoring snapshot; measured artifacts have
+their own manifest.
+
+## Start from current results
+
+Give the next agent [CONTINUATION.md](CONTINUATION.md). It identifies the completed
+comparisons, unresolved questions, evidence to read, and local dependencies.
+The selected result remains v3 at **0.934802374260586**. W400–W490 and the scheduled
+follow-up tests have completed; do not restart the old execution prompt.
+
+The remaining sections preserve the original pre-execution handover.
 
 Parent: `handover/strong-tracker-v3@292ecc2569f3a16676de92d80e382be02024d904`.
 Incumbent: v3 `A_residual_m3.0`, full local score **0.934802374260586**.
@@ -12,7 +27,7 @@ Train on paired synthetic microscopy and on compatible real trajectory exports,
 then adapt to Biohub's sparse supervision. Separate their contributions with
 same-architecture, matched-compute controls. Preserve the incumbent on failure.
 
-## Start
+## Original execution instructions (completed)
 
 Check out `handover/multidata-training-v4` and give local Codex / GPT 6 Pro
 [CODEX_PROMPT.md](CODEX_PROMPT.md). No activation script or overlay is required.

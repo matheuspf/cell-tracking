@@ -1,5 +1,12 @@
 # External datasets: branch handover
 
+**Subsequent execution:** v4 completed external pretraining and transfer
+comparisons after this preparation snapshot. Read the
+[current continuation handover](../../handover/multidata-training-v4/CONTINUATION.md)
+and [measured v4 report](../../results/multidata-training-v4/final_report.md)
+for training decisions and outcomes. The inventory below preserves its dated
+preparation scope.
+
 This directory is the self-contained information package for an agent deciding
 whether and how to use the external resources downloaded from Kaggle
 [discussion 732103](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/732103).

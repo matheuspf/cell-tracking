@@ -3,8 +3,12 @@
 The maintained implementation lives in `tools/multidata_training_v4/`. It uses the
 existing CUDA study interpreter and additive outputs under
 `/kaggle/working/cell-tracking/multidata-training-v4/`. Raw inputs and v1–v3 remain
-read-only. See `results/multidata-training-v4/final_report.md` for measured outcomes
-once delivery is complete; the handover's old planned status is not a measurement.
+read-only. W400–W490 are complete; the selected result remains v3
+`A_residual_m3.0` at **0.934802374260586**. Read the
+[measured report](../results/multidata-training-v4/final_report.md) and
+[continuation handover](../handover/multidata-training-v4/CONTINUATION.md) before
+proposing another study. The commands below document the completed implementation;
+scientific reruns must use a new output namespace.
 
 Run from any directory with the absolute wrapper path, or from the repo root:
 

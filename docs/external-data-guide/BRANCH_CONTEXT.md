@@ -1,5 +1,10 @@
 # Current branch: models, measured results and data interfaces
 
+This is the preserved v3 preparation context. The subsequent v4 training study
+is complete; use the [continuation handover](../../handover/multidata-training-v4/CONTINUATION.md)
+and [measured report](../../results/multidata-training-v4/final_report.md) for
+current experiment outcomes and implemented interfaces.
+
 Prepared on 2026-09-09 against `handover/strong-tracker-v3`, starting at
 `f67ba60`. This is a factual handover, not a measured external-data experiment.
 **No external-data training or transfer evaluation was performed in this
