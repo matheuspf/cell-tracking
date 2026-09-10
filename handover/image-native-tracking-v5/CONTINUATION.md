@@ -44,7 +44,14 @@ The first full new-observation control, **P_union_native_J**, scores
 4,521,204 nodes, with edge TP/FP/FN 109,131/30,185/19,752 and division TP/FP/FN
 41/4,774/110. Improved sparse node recall does not compensate for these association
 errors. This is a negative result for this frozen-representation proposal arm;
-HOCT, adapted native representations and confirmation controls remain pending.
+HOCT and the adapted native representation/proposal factorial remain pending.
+
+The complete frozen-representation DeepCenter confirmation arm, **P_DC_native_J**,
+scores **0.8686524362605309** (delta C0 **-0.06614993800005509**): 44b6
+**0.6773841767024975**, 6bba **0.9092325763689433**. It adds 15,179 nodes and removes
+12,005, with edge TP/FP/FN 118,674/9,532/10,209 and division TP/FP/FN 29/165/122.
+Confirmation improves the raw P1 result but remains below the fixed-node N0/J
+control and C0. Its 199-clip scoring finished at 17:56 UTC without altering recipes.
 
 At the 17:07 UTC recovery update, all 199 observation, HOCT-feature and DeepCenter
 shards and target candidate banks were complete. Both primary N1 fits completed
@@ -55,9 +62,17 @@ graphs were complete; their official scoring finished at 17:11 UTC alongside the
 six control workers. The additional actual
 3D-network pixel-response test passed. No training recipe was reduced.
 
+At 18:06 UTC, primary 44b6 N2 completed all 12,000 real image-network updates in
+9,435.73 seconds. Its 6,294 eligible windows and 19,530 supported positive edges
+were all seen, with zero missed windows. The first encoder tensor changed by
+0.02243369 in L2 norm; its first-step gradient norm was 0.05363821. The checkpoint
+hash verified. Source44 replica N1 started automatically; primary source6 N2 was
+past 7,300 updates. Source44 N2 calibration waits on the shared auxiliary GPU lock.
+There are now three complete native fits and six complete scored configurations.
+
 Full candidate coverage is complete: 130,836 of 133,318 annotated nodes matched
-C0, 125,426 of 128,883 annotated edges occurred in its bank, and the expanded bank
-recovered 1,614 additional annotated nodes without losing a C0 match. The 2,043,878
+C0, 125,426 of 128,883 annotated edges occurred in its bank, and new peaks matched
+1,614 annotated nodes absent from C0 matching without losing a C0 match. The 2,043,878
 new peaks are predominantly unlabeled; this is not an estimate of dense detection
 precision. Official locally feasible division evidence covered 118 of 151 events;
 the separate exact-ID candidate-pair count was 99. Detailed identities stay local.
@@ -219,7 +234,9 @@ J/native/ctc calibration uses the first ten lexicographic source clips; HOCT H0/
 calibration uses the supported source feature rows from the full training source.
 Sparse unknowns stay unknown. Reused embryos, C0 teachers and public checkpoint exposure remain
 explicit. Node universes and candidate banks are separate for fixed and expanded
-populations. Complete native comparisons intentionally use the primary model
+populations. Morphology comes from one marker watershed containing both C0 centers
+and newly discovered peaks; P0 keeps C0 graph nodes and coordinates with their
+features from this shared partition. Complete native comparisons intentionally use the primary model
 without the incumbent's secondary/eight-view harmonic ensemble; N0 isolates this
 change. No labels or cached selected graphs may enter fresh inference.
 

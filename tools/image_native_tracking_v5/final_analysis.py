@@ -82,6 +82,7 @@ def provenance():
     write(OUT/'source_manifest.json',dict(at=now(),HOCT=dict(repository='https://github.com/royerlab/hoct',commit=hoct_pin,
         license='MIT',license_sha256=sha(WORK/'hoct/LICENSE'),weights=config['hoct'],
         interface='supported feature-bearing IndexedRXGraph; 19 actual morphology/position inputs, 288-dimensional true edge embeddings',
+        region_partition='one marker watershed using C0 centers and newly discovered peaks; fixed-node HOCT keeps only C0 graph nodes, with morphology from this shared partition',
         biological_exposure='not independently certified',feature_audit_sha256=sha(OUT/'HOCT_feature_audit.json'),
         feature_audit_inputs_reverified=True),native=dict(source='preserved installed patched U-Net/transformer',
         architecture_sha256=sha(OUT/'native_architecture.json'),C0_base_manifest_sha256=sha(V4/'inference_package/base/manifest.json')),
@@ -158,7 +159,8 @@ def attrition():
 def analysis():
     scores=pd.read_csv(OUT/'ablation_scores.csv');index={(r['variant'],r['embryo']):r for r in scores.to_dict('records')}
     comparisons=[]
-    pairs=[('H_probe_J','H_general_J'),('H_probe_native_J','H_general_J'),('N_head_J','J_native_frozen'),
+    pairs=[('H_general_J','J_native_frozen'),('H_probe_J','H_general_J'),('H_probe_native_J','H_general_J'),
+        ('H_probe_native_J','H_probe_J'),('H_probe_native_J','J_native_frozen'),('N_head_J','J_native_frozen'),
         ('N_backbone_J','N_head_J'),('N_backbone_J','J_native_frozen'),('P_union_native_J','J_native_frozen'),
         ('P_union_N_J','N_backbone_J'),('P_DC_native_J','J_native_frozen'),('P_DC_N_J','N_backbone_J'),
         ('P_union_N_J','P_union_native_J'),('P_DC_N_J','P_DC_native_J'),('P_image_ablation','P_union_native_J')]

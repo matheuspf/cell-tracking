@@ -5,8 +5,8 @@ This snapshot contains measured results and execution progress. Read
 resuming work. The [offline dashboard](dashboard.html) identifies completed and
 pending work explicitly. C0 is reproduced at 0.934802374260586; the target is 0.95.
 
-This snapshot has 5 of 18
-registered complete configurations and 2 of eight
+This snapshot has 6 of 18
+registered complete configurations and 3 of eight
 production native fits. Its status is **executing**. Do not infer complete
 learned-model results from partial source losses.
 
