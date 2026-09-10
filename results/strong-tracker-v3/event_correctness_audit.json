@@ -1,0 +1,57 @@
+{
+  "additional_direct_gt_feature_or_direction_leak_found": false,
+  "code_sha256": {
+    "decode.py": "df77bd90c7542d8f02e2259cde29cb3d8f04208c913e045236c04c9e84ac6ed4",
+    "event_model.py": "ca5425b11f7858e7ebd95c16376afcf2653780863e99b275680cd9e3bbc0fa39",
+    "event_pipeline.py": "17dd41e04145ba15c1fa27b60748235496059c215a8fdca0eac8d4b66dfbb09e",
+    "event_proposals.py": "856ad622f0becad6724eb1152a049595f55f883426ec3ef09b4a127af3f02848",
+    "source_labels.py": "202cd2943fd62bda4da0f6dcf7fa285933ad6194123d7b3d661f367cbc14766f"
+  },
+  "created": "2026-09-09T18:51:31.610157+00:00",
+  "existing_cpu_tests": {
+    "passed": 20,
+    "seconds": 6.485,
+    "skipped": 1,
+    "skipped_reason": "CUDA embedding parity deliberately skipped to avoid current GPU work",
+    "total": 21
+  },
+  "findings": [
+    {
+      "artifact": "source_sampling_metadata_audit.json",
+      "severity": "metadata_only",
+      "summary": "Stored negative inclusion is a group sampling fraction, not exact stratified row propensity; training does not consume it."
+    }
+  ],
+  "limitations": [
+    "Upstream incumbent, teachers and public checkpoints retain documented repeated-embryo/label exposure.",
+    "Source event labels are candidate-level local plausibility bags. Complete graph matching and one-to-one event assignment remain necessary after decoding.",
+    "Branch/permutation tests and randomized graph checks are bounded evidence, not an exhaustive proof of all event semantics.",
+    "The limited candidate pool, source bag overlap, and uncalibrated equal-class event scores remain statistical limitations."
+  ],
+  "material_graph_contract_failure_found": false,
+  "outputs_or_configs_mutated": false,
+  "reviewed": [
+    "Prediction-only proposal and image crop construction before source labeling",
+    "Explicit source-only corpus filtering and opposite-source model application",
+    "Daughter permutation invariance in feature construction and model outputs",
+    "Actual per-daughter owner probability and distance, including future path owners",
+    "Complete donor continuation or termination edits",
+    "Adjacent incumbent fork handling in add-only and replacement arms",
+    "Transitive oversized component closure and exact no-op"
+  ],
+  "scope": "Independent bounded static, existing-test and synthetic-graph correctness audit; no frozen code, models, configs or candidate graphs changed",
+  "synthetic_graphs": {
+    "accepted_actions": 253,
+    "arms": [
+      "add_only",
+      "replacement"
+    ],
+    "changed_edges": 899,
+    "decoder_calls": 120,
+    "edit_caps_respected": true,
+    "fixed_external_edges_preserved": true,
+    "graph_contract_valid": true,
+    "graphs": 60,
+    "seed": 20260909
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "adj_edge_jaccard": 0.9222721585917395,
+  "delta_v2": 0.0,
+  "division_fn": 122,
+  "division_fp": 92,
+  "division_jaccard": 0.11934156378600823,
+  "division_tp": 29,
+  "edge_fn": 5860,
+  "edge_fp": 4930,
+  "edge_jaccard": 0.9193650841099146,
+  "edge_tp": 123023,
+  "embryo": "pooled",
+  "fresh_official_scoring": true,
+  "n": 199,
+  "n_adj": 199,
+  "node_recall": 0.982494434312724,
+  "num_pred_nodes": 4108943,
+  "parity": true,
+  "samples": 199,
+  "score": 0.9342063149703403,
+  "seconds": 215.54438745137304,
+  "variant": "incumbent"
+}

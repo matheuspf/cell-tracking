@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-09-09T19:42:12Z",
+  "parent_pid": 85742,
+  "worker_pids": [
+    85747,
+    85750
+  ],
+  "previous_workers": 2,
+  "next_workers": 3,
+  "status": "completed",
+  "reason": "Full fresh neural workers exited; exact graph receipts allow more decoding workers within unchanged resource cap",
+  "complete_receipts_before": 68,
+  "idle_observation_note": "Allow up to 3 CPU ticks per 10-second sample for idle CUDA support threads; require blocked worker wait state throughout 60 seconds and all fresh evidence complete.",
+  "idle_worker_states": [
+    [
+      223724,
+      "futex_wait_queue"
+    ],
+    [
+      211204,
+      "pipe_read"
+    ]
+  ],
+  "idle_seconds": 60.00951563194394,
+  "complete_receipts_at_handoff": 73,
+  "restart_utc": "2026-09-09T19:50:54Z",
+  "new_manager_pid": 98845,
+  "exit_code": 0
+}

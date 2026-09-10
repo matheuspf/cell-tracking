@@ -1,0 +1,8 @@
+{
+  "algorithm_sha256": "0b4f3a2fefe78d92f9afcd3e7362511f40613e5a6352832b34c37f100a35da84",
+  "created": "2026-09-09T19:27:23.687210+00:00",
+  "loader_sha256": "a797c4ba977de009dc80eb4290c5e6f31f62a0aa6d7079a1b067677114b63a87",
+  "parity_sha256": "f5bbae5af6e2414b6dabc5013f4de889fda2a862e9b9551b4b8824add0d78c89",
+  "policy_unchanged": true,
+  "reason": "Selective immutable NPZ materialization only; old exact graphs/receipts resume unchanged"
+}

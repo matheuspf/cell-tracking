@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "documented_on": "2026-09-09",
+  "source_receipt_scope": "saved September 8 data snapshot; aggregate facts copied without raw per-file payloads",
+  "download": {
+    "expected_files": 37743,
+    "verified_files": 37743,
+    "verified_bytes": 30877642679,
+    "incomplete": [],
+    "errors": []
+  },
+  "preparation": {
+    "date": "2026-09-08",
+    "status": "passed",
+    "checks": {
+      "all_synthetic_labels": {
+        "files": 3713,
+        "coordinate_roundtrip": true,
+        "graph_integrity_and_unique_tracklets": true,
+        "nodes": 4056226,
+        "edges": 3460295,
+        "division_parents": 165267,
+        "static_centroids": 423853
+      },
+      "image_loader": {
+        "static_stride_equivalence": true,
+        "sequence_no_double_sampling": true,
+        "physical_point_alignment": true,
+        "last_frame_division_mask": true,
+        "anisotropic_heatmap": true
+      },
+      "csv_writer": {
+        "node_and_edge_fields": true,
+        "native_roundtrip": true,
+        "invalid_temporal_edge_rejected": true,
+        "demo_rows": 2503
+      },
+      "zoo_graphs": [
+        {
+          "file": "prepared/zoo/ascidian_graph.npz",
+          "nodes": 17052,
+          "edges": 16988,
+          "division_parents": 334,
+          "graph_integrity": true
+        },
+        {
+          "file": "prepared/zoo/drosophila_graph.npz",
+          "nodes": 1877876,
+          "edges": 1872888,
+          "division_parents": 74760,
+          "graph_integrity": true
+        },
+        {
+          "file": "prepared/zoo/elegans_graph.npz",
+          "nodes": 110899,
+          "edges": 110897,
+          "division_parents": 665,
+          "graph_integrity": true
+        },
+        {
+          "file": "prepared/zoo/mouse_graph.npz",
+          "nodes": 7349203,
+          "edges": 6988673,
+          "division_parents": 0,
+          "graph_integrity": true
+        },
+        {
+          "file": "prepared/zoo/tribolium_graph.npz",
+          "nodes": 305622,
+          "edges": 302460,
+          "division_parents": 10969,
+          "graph_integrity": true
+        },
+        {
+          "file": "prepared/zoo/zebrafish_graph.npz",
+          "nodes": 11851323,
+          "edges": 11770767,
+          "division_parents": 159053,
+          "graph_integrity": true
+        }
+      ],
+      "independent_source_csv_comparison": [
+        {
+          "source": "ascidian_tracks_withSize.csv",
+          "nodes": 17052,
+          "tracklets": 732,
+          "exact_time_coordinates_and_parent_relationships": true
+        },
+        {
+          "source": "elegans_tracks.csv",
+          "nodes": 110899,
+          "tracklets": 1332,
+          "exact_time_coordinates_and_parent_relationships": true
+        }
+      ],
+      "riken_preview": {
+        "frames": 10,
+        "points": 1312,
+        "finite_coordinates": true,
+        "temporal_edges_included": false
+      },
+      "prepared_files": {
+        "count": 3725,
+        "bytes": 394701884,
+        "checksum_manifest": "prepared_checksums.json"
+      }
+    }
+  },
+  "visual_examples": {
+    "passed": true,
+    "gallery_examples": 6,
+    "gallery_counts": {
+      "vol_00032_t0": 175,
+      "vol_00876_t0": 245,
+      "vol_00994_t0": 521,
+      "44b6_0113de3b_t0": 1,
+      "6bba_05b6850b_t71": 11,
+      "6bba_05db0fb1_t53": 17
+    },
+    "depth_examples": 2,
+    "pngs_checked": 140,
+    "output_bytes": 6664420,
+    "division_parent": 564,
+    "division_edge_count": 5,
+    "heatmap_sigma_um": 2.0,
+    "checks": [
+      "finite in-bounds centroids",
+      "source counts",
+      "native ZYX voxel scales",
+      "fixed contrast within slices and division frames",
+      "all PNG dimensions",
+      "heatmap range",
+      "real source fork endpoints",
+      "shared clone and distinct daughter tracklets"
+    ]
+  },
+  "trajectories": {
+    "passed": true,
+    "checks": [
+      "All Zoo edges retained from prepared graph; endpoints within displayed window",
+      "Every Zoo edge connects adjacent frames",
+      "Displayed forks agree with prepared graph; both daughters retained at fork anchor",
+      "Every Zoo example has 300–1,200 observations and finite coordinates",
+      "RIKEN feature IDs join uniquely to first-frame measurement positions",
+      "All 1,312 exported RIKEN observations preserved; no temporal edges generated",
+      "JSON contains no NaN or Infinity",
+      "Independent presentation round-trip matched prepared node IDs, source point IDs, time, tracklet IDs and coordinates for all six species",
+      "Independent edge comparison matched every edge induced by the selected node set against the source NPZ"
+    ],
+    "zoo": {
+      "ascidian": {
+        "nodes": 653,
+        "edges": 618,
+        "tracklets": 51,
+        "families": 35,
+        "division_parents": 8
+      },
+      "drosophila": {
+        "nodes": 666,
+        "edges": 647,
+        "tracklets": 281,
+        "families": 19,
+        "division_parents": 131
+      },
+      "elegans": {
+        "nodes": 644,
+        "edges": 611,
+        "tracklets": 57,
+        "families": 33,
+        "division_parents": 12
+      },
+      "mouse": {
+        "nodes": 644,
+        "edges": 561,
+        "tracklets": 83,
+        "families": 83,
+        "division_parents": 0
+      },
+      "tribolium": {
+        "nodes": 645,
+        "edges": 616,
+        "tracklets": 127,
+        "families": 29,
+        "division_parents": 49
+      },
+      "zebrafish": {
+        "nodes": 640,
+        "edges": 602,
+        "tracklets": 60,
+        "families": 38,
+        "division_parents": 11
+      }
+    },
+    "riken_frame_counts": [
+      117,
+      129,
+      129,
+      129,
+      132,
+      132,
+      128,
+      134,
+      136,
+      146
+    ],
+    "riken_feature_examples": 10,
+    "output_bytes": 605149
+  },
+  "browser": {
+    "status": "passed",
+    "browser": "Chromium 151.0.7922.34",
+    "offline_file_url": true,
+    "remote_requests": [],
+    "javascript_errors": [],
+    "valid_local_links_and_anchors": 46,
+    "viewports": [
+      {
+        "width": 320,
+        "no_document_overflow": true
+      },
+      {
+        "width": 390,
+        "no_document_overflow": true
+      },
+      {
+        "width": 768,
+        "no_document_overflow": true
+      },
+      {
+        "width": 1440,
+        "no_document_overflow": true
+      }
+    ],
+    "interactions": [
+      "six-frame slider",
+      "sample selector",
+      "point toggle",
+      "coordinate units",
+      "invalid/empty coordinate handling",
+      "collapsible detail sections",
+      "six gallery overlays",
+      "two 64-plane depth volumes",
+      "division crop overlays",
+      "six Zoo species and three projection planes",
+      "ten RIKEN point frames",
+      "ten measurement features including missing FWHM"
+    ],
+    "new_data_validation": [
+      "checks/visual-examples-verification.json",
+      "checks/trajectory-verification.json"
+    ],
+    "print_render": "checks/print-preview.pdf"
+  },
+  "training_or_score_gain_measured_with_external_data": false,
+  "synthetic_motion_audit": {
+    "audited_on": "2026-09-09",
+    "source": "all 2174 prepared synthetic sequence graphs from 2026-09-08 release",
+    "nondivision_edges": {
+      "count": 3129761,
+      "units": "micrometre",
+      "quantiles": {
+        "min": 0.0,
+        "p10": 0.5565516948699951,
+        "median": 1.6510109901428223,
+        "p90": 4.5932183265686035,
+        "max": 56.87528991699219
+      }
+    },
+    "sister_separation_at_first_daughter_frame": {
+      "count": 165267,
+      "units": "micrometre",
+      "quantiles": {
+        "min": 0.3383841812610626,
+        "p10": 4.924435997009278,
+        "median": 7.078921318054199,
+        "p90": 9.17021484375,
+        "max": 14.679841041564941
+      }
+    },
+    "nodes_after_frame_zero_without_parent": 0,
+    "nodes_before_last_frame_without_child": 0,
+    "meaning": "Descriptive label geometry only; not new simulation or model evaluation; no reweighting or training calibration chosen."
+  }
+}

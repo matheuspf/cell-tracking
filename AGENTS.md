@@ -40,3 +40,15 @@ Submissions are notebooks producing `submission.csv` with node and edge rows.
 Read `reference/overview/evaluation.md` and `code-requirements.md` for current
 requirements. The development environment is a data-inspection scaffold; validate
 future training and inference dependencies against the Kaggle runtime.
+
+## External data and prepared labels
+
+- Read docs/external-data-guide/README.md for the committed external-data inventory,
+  schemas, access routes and current-branch model interfaces. The next agent
+  decides whether/how to use the data; this handover makes no training selection.
+- Historical downloads are in work/biohub-forum-archive/; prepared labels and HTML
+  are in work/biohub-data-guide/. These are ignored and absent from a fresh clone.
+  The committed handover is self-contained; no private conversation is required.
+- Maintained preparation code is in tools/biohub_external_data/. Use the existing
+  cell-tracking Conda runtime with the isolated preparation dependencies as
+  documented; preserve original data and other studies' source and outputs.

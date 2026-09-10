@@ -1,0 +1,17 @@
+{
+  "attribution": "Stable predicted IDs trace edge presence; stage coordinate matches are separate and no removal benefit is inferred from this trace.",
+  "gate_coverage": {
+    "matched_endpoints_before_geometry": 2820,
+    "six_and_16um": 2603,
+    "top_six_before_distance": 2646,
+    "within_16um": 2742
+  },
+  "reasons": {
+    "alternative_available_but_rejected": 2643,
+    "alternative_link_absent": 177,
+    "ambiguous_node_assignment": 52,
+    "missing_points": 2988
+  },
+  "samples": 199,
+  "total_edge_fn": 5860
+}

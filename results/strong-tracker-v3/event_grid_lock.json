@@ -1,0 +1,92 @@
+{
+  "config": {
+    "cap_adjustments": [
+      "Secondary-seed graph omitted to count historical v1 inside total32; both fits retained",
+      "Replacement p.10 omitted before event fitting to reserve V350 correctness repair inside total32"
+    ],
+    "common_edit_margin_logodds": 1.5,
+    "max_buffered_actions": 50000,
+    "max_component_alternatives": 256,
+    "maximum_changed_edge_fraction": 0.02,
+    "outer_event_scores_exposed": false,
+    "seeds": [
+      20260909,
+      314159
+    ],
+    "source_coverage_fallback_threshold": 0.85,
+    "steps_per_source_seed": 10000,
+    "variants": [
+      {
+        "existing_only": true,
+        "model": "logistic",
+        "name": "D_existing_p020",
+        "replace": false,
+        "threshold": 0.2
+      },
+      {
+        "existing_only": true,
+        "model": "logistic",
+        "name": "D_existing_p005_control",
+        "replace": false,
+        "threshold": 0.05
+      },
+      {
+        "existing_only": false,
+        "model": "logistic",
+        "name": "D_tabular_p010",
+        "replace": false,
+        "threshold": 0.1
+      },
+      {
+        "existing_only": false,
+        "model": "logistic",
+        "name": "D_tabular_p020",
+        "replace": false,
+        "threshold": 0.2
+      },
+      {
+        "existing_only": false,
+        "model": "logistic",
+        "name": "D_tabular_p040",
+        "replace": false,
+        "threshold": 0.4
+      },
+      {
+        "existing_only": false,
+        "model": "image_20260909",
+        "name": "D_image_p010",
+        "replace": false,
+        "threshold": 0.1
+      },
+      {
+        "existing_only": false,
+        "model": "image_20260909",
+        "name": "D_image_p020",
+        "replace": false,
+        "threshold": 0.2
+      },
+      {
+        "existing_only": false,
+        "model": "image_20260909",
+        "name": "D_image_p040",
+        "replace": false,
+        "threshold": 0.4
+      },
+      {
+        "existing_only": false,
+        "model": "image_20260909",
+        "name": "D_replace_p020",
+        "replace": true,
+        "threshold": 0.2
+      },
+      {
+        "existing_only": false,
+        "model": "image_20260909",
+        "name": "D_replace_p040",
+        "replace": true,
+        "threshold": 0.4
+      }
+    ]
+  },
+  "created": "2026-09-09T18:22:12.570699+00:00"
+}

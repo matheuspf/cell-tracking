@@ -1,0 +1,217 @@
+{
+  "created": "2026-09-09T18:20:16.149040+00:00",
+  "lock_sha256": "e5493257df950e811954fcc439af54a9ad85e1124d9972558a4813ec4d4da264",
+  "scope": "source resubstitution bias only; all variants remain frozen regardless of this diagnostic",
+  "summary": [
+    {
+      "accepted_actions": 170,
+      "changed_edges": 177,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": -3,
+        "edge_fp": 0,
+        "edge_tp": 3
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 3,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 3,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "44b6",
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "accepted_actions": 84,
+      "changed_edges": 86,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": -2,
+        "edge_fp": 0,
+        "edge_tp": 2
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 2,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 2,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "44b6",
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "44b6",
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "44b6",
+      "variant": "A_hgb7_m3.0"
+    },
+    {
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "44b6",
+      "variant": "A_v2_transfer_m3.0"
+    },
+    {
+      "accepted_actions": 147,
+      "changed_edges": 149,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": -3,
+        "edge_fp": 3,
+        "edge_tp": 3
+      },
+      "fp_added": 3,
+      "fp_removed": 0,
+      "gt_edges_gained": 3,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 3,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "6bba",
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "accepted_actions": 29,
+      "changed_edges": 31,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": -1,
+        "edge_fp": 0,
+        "edge_tp": 1
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 1,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 1,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "6bba",
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "accepted_actions": 1,
+      "changed_edges": 1,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "6bba",
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "6bba",
+      "variant": "A_hgb7_m3.0"
+    },
+    {
+      "accepted_actions": 0,
+      "changed_edges": 0,
+      "count_deltas": {
+        "division_fn": 0,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 0,
+        "edge_fp": 0,
+        "edge_tp": 0
+      },
+      "fp_added": 0,
+      "fp_removed": 0,
+      "gt_edges_gained": 0,
+      "gt_edges_lost": 0,
+      "predicted_tp_gained": 0,
+      "predicted_tp_lost": 0,
+      "samples": 5,
+      "source": "6bba",
+      "variant": "A_v2_transfer_m3.0"
+    }
+  ]
+}

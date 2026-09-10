@@ -1,0 +1,26 @@
+{
+  "annotation_guard_and_checkpoint_tamper_tests": true,
+  "code_sha256": {
+    "tests/strong_tracker_v3/test_association_fresh.py": "79d15355bb70b7fccbb60b95d87d531d73b55232c6032b543c974c382f7e5d08",
+    "tests/strong_tracker_v3/test_replay.py": "36936a7dcecacc6b0f70caa53540b163ff8690f56113f498976b2eb2d6ddfda6",
+    "tools/strong_tracker_v3/association_fresh.py": "5a4547ffd5a0efbfbae4b7096aa67337b5c5f11c4ad190226e905bf0355544dd",
+    "tools/strong_tracker_v3/fresh.py": "bb6e04784a961e415c39b82112c38ff08e3e6de6b6d2fe7f3c00ba207b36a18b",
+    "tools/strong_tracker_v3/inference.py": "a80268179606d947cc0a80949afaf1a71902ca0b730aabb3b5dff3a5b4c58b79",
+    "tools/strong_tracker_v3/replay.py": "97dfb0827a761c70282cb1eac14171082acaf467d629c5d411e436b9f3115296"
+  },
+  "command": [
+    "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+    "-m",
+    "pytest",
+    "tests/strong_tracker_v3/test_replay.py",
+    "tests/strong_tracker_v3/test_association_fresh.py",
+    "-q"
+  ],
+  "created": "2026-09-09T20:07:16.675191+00:00",
+  "generated_run_sh_syntax_and_cuda_library_sanitization_passed": true,
+  "passed": true,
+  "passed_tests": 11,
+  "scored_export_hash_tamper_preflight": true,
+  "seconds": 5.579250311013311,
+  "smoke_retries_always_use_new_empty_output": true
+}

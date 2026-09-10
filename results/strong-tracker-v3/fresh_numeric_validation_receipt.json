@@ -1,0 +1,19 @@
+{
+  "active_frozen_expression_changed": false,
+  "all_current_native_numeric_arrays_finite": true,
+  "all_regenerated_E_teacher_edges_exact_to_sealed": true,
+  "all_tested_outputs_finite": true,
+  "explanation": "For large positive float32 exponents, exp saturates to positive infinity and its reciprocal is finite zero. np.where evaluates both branches. The unchanged E decoder clips probabilities to [1e-5,1-1e-5], so overflow-tail saturation gives the same clipped cost as a stable sigmoid.",
+  "expression": "np.where(nf[:,1]==0,nf[:,0],1/(1+np.exp(nf[:,6]-3)))",
+  "samples": 199,
+  "scope": "Full 199 saved native arrays and regenerated teacher graph parity; analytical tail-saturation check. No claim of exact pre-clipping probability equality.",
+  "source": "tools/strong_tracker_v3/inference.py:157",
+  "source_audit_sha256": "7e360dcb500c90edbb77c71df36a4411ce7bd52a47b01c3a2c6d382f83d1e4ad",
+  "stable_sigmoid_clipped_cost_exact": true,
+  "tested_float32_exponents": [
+    90.0,
+    100.0,
+    1000.0
+  ],
+  "warning": "RuntimeWarning: overflow encountered in exp"
+}

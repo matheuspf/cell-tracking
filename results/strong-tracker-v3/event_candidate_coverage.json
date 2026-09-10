@@ -1,0 +1,64 @@
+{
+  "base": {
+    "44b6": {
+      "coverage": 0.7692307692307693,
+      "covered_events": 20,
+      "negative_groups": 10831,
+      "negative_population": 364658,
+      "positive_alternatives": 202,
+      "positive_event_groups": 20,
+      "proposals": 40449946,
+      "rows_with_local_roles": 24,
+      "sampled_negative": 44221,
+      "total_events": 26,
+      "unknown": 40085086
+    },
+    "6bba": {
+      "coverage": 0.688,
+      "covered_events": 86,
+      "negative_groups": 39528,
+      "negative_population": 841168,
+      "positive_alternatives": 778,
+      "positive_event_groups": 86,
+      "proposals": 38399260,
+      "rows_with_local_roles": 103,
+      "sampled_negative": 149411,
+      "total_events": 125,
+      "unknown": 37557314
+    }
+  },
+  "fallback": {
+    "44b6": {
+      "coverage": 0.7692307692307693,
+      "covered_events": 20,
+      "negative_groups": 16155,
+      "negative_population": 857868,
+      "positive_alternatives": 244,
+      "positive_event_groups": 20,
+      "proposals": 97871958,
+      "rows_with_local_roles": 24,
+      "sampled_negative": 65482,
+      "total_events": 26,
+      "unknown": 97013846
+    },
+    "6bba": {
+      "coverage": 0.736,
+      "covered_events": 92,
+      "negative_groups": 69689,
+      "negative_population": 2188832,
+      "positive_alternatives": 938,
+      "positive_event_groups": 92,
+      "proposals": 92267674,
+      "rows_with_local_roles": 103,
+      "sampled_negative": 272359,
+      "total_events": 125,
+      "unknown": 90077904
+    }
+  },
+  "fallback_trigger": "source-only event coverage <85%",
+  "outer_scores_exposed": false,
+  "source_selected_pool": {
+    "44b6": "fallback",
+    "6bba": "fallback"
+  }
+}

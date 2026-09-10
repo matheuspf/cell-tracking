@@ -1,0 +1,572 @@
+{
+  "created": "2026-09-09T19:40:50.354103+00:00",
+  "event_round_lock_sha256": "b98782f24db58cd73410801b4ce96d2861458158c6fa2ffff0e4203968649a23",
+  "interpretation": "Prediction edit counts only; official edge/division TP/FP effects must come from fresh comparative scoring",
+  "threshold_interpretation": "Accepted edit counts need not decrease with threshold. Lower thresholds can connect more feasible alternatives into oversized components that abstain completely, and the fixed edge-change budget is applied to complete components. This is logged conservative abstention, not a monotonic posterior threshold rule.",
+  "variants": {
+    "D_existing_p005_control": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 1053,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 382
+        },
+        {
+          "added": 886,
+          "dataset": "44b6_18ced818",
+          "removed": 510
+        },
+        {
+          "added": 992,
+          "dataset": "6bba_05db0fb1",
+          "removed": 350
+        },
+        {
+          "added": 817,
+          "dataset": "44b6_e31261b4",
+          "removed": 465
+        },
+        {
+          "added": 918,
+          "dataset": "6bba_b329af44",
+          "removed": 326
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 6621,
+        "owner_cost_or_margin": 961650,
+        "owner_fork_boundary": 2598,
+        "protected_individual_owner": 79493
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 55139,
+        "actions": 326253,
+        "actions_in_abstained_components": 113488,
+        "buffered_actions": 326253,
+        "components": 74209,
+        "edges_added": 55383,
+        "edges_removed": 22468,
+        "edit_cap_abstentions": 43531,
+        "forks_after": 58752,
+        "forks_before": 3613,
+        "oversized_stream_components": 102,
+        "resource_keys": 2812511,
+        "solved_components": 30678,
+        "streamed_actions": 439741,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_existing_p020": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 1434,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 1
+        },
+        {
+          "added": 1247,
+          "dataset": "44b6_18ced818",
+          "removed": 149
+        },
+        {
+          "added": 1338,
+          "dataset": "6bba_05db0fb1",
+          "removed": 4
+        },
+        {
+          "added": 1120,
+          "dataset": "44b6_e31261b4",
+          "removed": 162
+        },
+        {
+          "added": 1235,
+          "dataset": "6bba_b329af44",
+          "removed": 9
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 6613,
+        "owner_cost_or_margin": 1178287,
+        "owner_fork_boundary": 2170,
+        "protected_individual_owner": 74292
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 70284,
+        "actions": 164851,
+        "actions_in_abstained_components": 3094,
+        "buffered_actions": 164851,
+        "components": 73876,
+        "edges_added": 70502,
+        "edges_removed": 3607,
+        "edit_cap_abstentions": 20791,
+        "forks_after": 73897,
+        "forks_before": 3613,
+        "oversized_stream_components": 6,
+        "resource_keys": 1337708,
+        "solved_components": 53085,
+        "streamed_actions": 167945,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_image_p010": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 832,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 603
+        },
+        {
+          "added": 777,
+          "dataset": "6bba_05db0fb1",
+          "removed": 565
+        },
+        {
+          "added": 732,
+          "dataset": "6bba_b329af44",
+          "removed": 512
+        },
+        {
+          "added": 660,
+          "dataset": "6bba_ebdf3b34",
+          "removed": 486
+        },
+        {
+          "added": 630,
+          "dataset": "6bba_786893ac",
+          "removed": 477
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 66992,
+        "daughter_fork_boundary": 33297,
+        "owner_cost_or_margin": 7973970,
+        "owner_fork_boundary": 50239,
+        "protected_individual_owner": 1457565
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 34720,
+        "actions": 213770,
+        "actions_in_abstained_components": 364537,
+        "buffered_actions": 213770,
+        "components": 34894,
+        "edges_added": 45778,
+        "edges_removed": 27166,
+        "edit_cap_abstentions": 13337,
+        "forks_after": 38333,
+        "forks_before": 3613,
+        "oversized_stream_components": 180,
+        "resource_keys": 2219318,
+        "solved_components": 21557,
+        "streamed_actions": 578307,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_image_p020": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 837,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 598
+        },
+        {
+          "added": 750,
+          "dataset": "6bba_05db0fb1",
+          "removed": 541
+        },
+        {
+          "added": 653,
+          "dataset": "6bba_ebdf3b34",
+          "removed": 493
+        },
+        {
+          "added": 640,
+          "dataset": "6bba_786893ac",
+          "removed": 467
+        },
+        {
+          "added": 621,
+          "dataset": "6bba_b329af44",
+          "removed": 430
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 51788,
+        "daughter_fork_boundary": 25026,
+        "owner_cost_or_margin": 5664526,
+        "owner_fork_boundary": 36342,
+        "protected_individual_owner": 1023077
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 38240,
+        "actions": 212686,
+        "actions_in_abstained_components": 194766,
+        "buffered_actions": 212686,
+        "components": 36874,
+        "edges_added": 49002,
+        "edges_removed": 25934,
+        "edit_cap_abstentions": 12918,
+        "forks_after": 41853,
+        "forks_before": 3613,
+        "oversized_stream_components": 142,
+        "resource_keys": 1741318,
+        "solved_components": 23956,
+        "streamed_actions": 407452,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_image_p040": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 846,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 589
+        },
+        {
+          "added": 652,
+          "dataset": "6bba_ebdf3b34",
+          "removed": 494
+        },
+        {
+          "added": 653,
+          "dataset": "6bba_b329af44",
+          "removed": 473
+        },
+        {
+          "added": 644,
+          "dataset": "6bba_786893ac",
+          "removed": 463
+        },
+        {
+          "added": 639,
+          "dataset": "6bba_05db0fb1",
+          "removed": 449
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 36318,
+        "daughter_fork_boundary": 16630,
+        "owner_cost_or_margin": 3505960,
+        "owner_fork_boundary": 23226,
+        "protected_individual_owner": 621860
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 40054,
+        "actions": 191469,
+        "actions_in_abstained_components": 78827,
+        "buffered_actions": 191469,
+        "components": 37490,
+        "edges_added": 50424,
+        "edges_removed": 23589,
+        "edit_cap_abstentions": 10946,
+        "forks_after": 43667,
+        "forks_before": 3613,
+        "oversized_stream_components": 75,
+        "resource_keys": 1286633,
+        "solved_components": 26544,
+        "streamed_actions": 270296,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_replace_p020": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 835,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 600
+        },
+        {
+          "added": 751,
+          "dataset": "6bba_05db0fb1",
+          "removed": 550
+        },
+        {
+          "added": 652,
+          "dataset": "6bba_ebdf3b34",
+          "removed": 494
+        },
+        {
+          "added": 640,
+          "dataset": "6bba_786893ac",
+          "removed": 467
+        },
+        {
+          "added": 621,
+          "dataset": "6bba_b329af44",
+          "removed": 439
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "no_op": 2845,
+        "owner_cost_or_margin": 5798674,
+        "protected_individual_owner": 1046869
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 38312,
+        "actions": 213140,
+        "actions_in_abstained_components": 196101,
+        "buffered_actions": 213140,
+        "components": 37265,
+        "edges_added": 48973,
+        "edges_removed": 26046,
+        "edit_cap_abstentions": 13271,
+        "forks_after": 41683,
+        "forks_before": 3613,
+        "oversized_stream_components": 144,
+        "resource_keys": 1747020,
+        "solved_components": 23994,
+        "streamed_actions": 409241,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_replace_p040": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 846,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 589
+        },
+        {
+          "added": 651,
+          "dataset": "6bba_ebdf3b34",
+          "removed": 495
+        },
+        {
+          "added": 653,
+          "dataset": "6bba_b329af44",
+          "removed": 482
+        },
+        {
+          "added": 643,
+          "dataset": "6bba_786893ac",
+          "removed": 464
+        },
+        {
+          "added": 638,
+          "dataset": "6bba_05db0fb1",
+          "removed": 459
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "no_op": 2735,
+        "owner_cost_or_margin": 3599481,
+        "protected_individual_owner": 638780
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 40098,
+        "actions": 192476,
+        "actions_in_abstained_components": 79624,
+        "buffered_actions": 192476,
+        "components": 37962,
+        "edges_added": 50320,
+        "edges_removed": 23731,
+        "edit_cap_abstentions": 11361,
+        "forks_after": 43401,
+        "forks_before": 3613,
+        "oversized_stream_components": 77,
+        "resource_keys": 1292680,
+        "solved_components": 26601,
+        "streamed_actions": 272100,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_tabular_p010": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 509,
+          "dataset": "44b6_7e557709",
+          "removed": 365
+        },
+        {
+          "added": 391,
+          "dataset": "44b6_d29c9ab2",
+          "removed": 323
+        },
+        {
+          "added": 423,
+          "dataset": "44b6_3a861e03",
+          "removed": 290
+        },
+        {
+          "added": 348,
+          "dataset": "44b6_668e0cc7",
+          "removed": 303
+        },
+        {
+          "added": 383,
+          "dataset": "44b6_97725144",
+          "removed": 268
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 220165,
+        "daughter_fork_boundary": 144818,
+        "owner_cost_or_margin": 46586532,
+        "owner_fork_boundary": 216308,
+        "protected_individual_owner": 6419221
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 14614,
+        "actions": 99420,
+        "actions_in_abstained_components": 1148002,
+        "buffered_actions": 99420,
+        "components": 12321,
+        "edges_added": 30151,
+        "edges_removed": 20881,
+        "edit_cap_abstentions": 3339,
+        "forks_after": 18227,
+        "forks_before": 3613,
+        "oversized_stream_components": 184,
+        "resource_keys": 4136921,
+        "solved_components": 8982,
+        "streamed_actions": 1247422,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_tabular_p020": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 631,
+          "dataset": "6bba_ebff6e76",
+          "removed": 347
+        },
+        {
+          "added": 651,
+          "dataset": "6bba_edf14583",
+          "removed": 326
+        },
+        {
+          "added": 553,
+          "dataset": "44b6_7e557709",
+          "removed": 321
+        },
+        {
+          "added": 539,
+          "dataset": "44b6_12dfb391",
+          "removed": 326
+        },
+        {
+          "added": 536,
+          "dataset": "44b6_7a302da0",
+          "removed": 321
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 147851,
+        "daughter_fork_boundary": 109485,
+        "owner_cost_or_margin": 31688008,
+        "owner_fork_boundary": 131751,
+        "protected_individual_owner": 3807479
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 19909,
+        "actions": 146437,
+        "actions_in_abstained_components": 648336,
+        "buffered_actions": 146437,
+        "components": 18546,
+        "edges_added": 39813,
+        "edges_removed": 21696,
+        "edit_cap_abstentions": 7247,
+        "forks_after": 23522,
+        "forks_before": 3613,
+        "oversized_stream_components": 191,
+        "resource_keys": 3198166,
+        "solved_components": 11299,
+        "streamed_actions": 794773,
+        "workspace_abstentions": 0
+      }
+    },
+    "D_tabular_p040": {
+      "changed_clips": 199,
+      "clips": 199,
+      "largest_edge_changes": [
+        {
+          "added": 949,
+          "dataset": "6bba_57b7cc1e",
+          "removed": 486
+        },
+        {
+          "added": 956,
+          "dataset": "44b6_18ced818",
+          "removed": 440
+        },
+        {
+          "added": 914,
+          "dataset": "6bba_05db0fb1",
+          "removed": 428
+        },
+        {
+          "added": 882,
+          "dataset": "44b6_e31261b4",
+          "removed": 400
+        },
+        {
+          "added": 856,
+          "dataset": "6bba_b329af44",
+          "removed": 388
+        }
+      ],
+      "preserved_original_receipts": 44,
+      "rejected": {
+        "adjacent_incumbent_fork_boundary": 56966,
+        "daughter_fork_boundary": 43973,
+        "owner_cost_or_margin": 10574484,
+        "owner_fork_boundary": 47610,
+        "protected_individual_owner": 1341465
+      },
+      "selective_io_receipts": 155,
+      "totals": {
+        "accepted_actions": 26751,
+        "actions": 245797,
+        "actions_in_abstained_components": 112078,
+        "buffered_actions": 245797,
+        "components": 51495,
+        "edges_added": 52384,
+        "edges_removed": 25717,
+        "edit_cap_abstentions": 34663,
+        "forks_after": 30364,
+        "forks_before": 3613,
+        "oversized_stream_components": 93,
+        "resource_keys": 1883869,
+        "solved_components": 16832,
+        "streamed_actions": 357875,
+        "workspace_abstentions": 0
+      }
+    }
+  }
+}

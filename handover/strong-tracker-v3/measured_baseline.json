@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_commit": "a58c80b041db0a05262a58b3d1b5f34045b8d2ff",
+  "evidence": "results/strong-tracker-v2/summary.json",
+  "scope": "reported local operational, reused embryos and contaminated upstream; not new authoring measurements",
+  "original_score": 0.9117740142186423,
+  "incumbent": {
+    "variant": "bypass_motion_bounds",
+    "samples": 199,
+    "score": 0.9342063149703403,
+    "adj_edge_jaccard": 0.9222721585917396,
+    "edge_tp": 123023,
+    "edge_fp": 4930,
+    "edge_fn": 5860,
+    "division_tp": 29,
+    "division_fp": 92,
+    "division_fn": 122,
+    "num_pred_nodes": 4108943
+  },
+  "embryos": {
+    "44b6": {
+      "samples": 71,
+      "score": 0.9316123867773308
+    },
+    "6bba": {
+      "samples": 128,
+      "score": 0.934525249869533
+    }
+  },
+  "old_to_incumbent_predicted_pair_changes": {
+    "lost_tp": 1634,
+    "new_tp": 2456,
+    "removed_fp": 3088,
+    "introduced_fp": 1133
+  },
+  "warning": "pair changes are not guaranteed distinct recovered/missing GT edges; re-account after fresh matching"
+}

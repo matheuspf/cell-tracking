@@ -1,0 +1,28 @@
+{
+  "division_fn": 122,
+  "division_fp": 92,
+  "division_fp_reasons": {
+    "cross_component_branches": 5,
+    "evaluable_spurious_or_local_topology_reject": 87
+  },
+  "division_observations": 151,
+  "division_reasons": {
+    "daughter_assignment_competition": 4,
+    "daughter_lineage_candidate_absent": 18,
+    "parent_side_evidence_absent": 2,
+    "recovered": 29,
+    "two_daughters_present_single_branch_survives": 98
+  },
+  "edge_reasons": {
+    "edge_fn:alternative_available_but_rejected": 2643,
+    "edge_fn:alternative_link_absent": 177,
+    "edge_fn:missing_points_or_assignment": 3040,
+    "edge_fp:one_endpoint_unmatched": 4869,
+    "edge_fp:wrong_matched_association": 61
+  },
+  "exact_counts_reconciled": true,
+  "fn_candidate_available": 2643,
+  "fn_native_available": 299,
+  "samples": 199,
+  "scorer": "Fresh official local division assignments per no-motion phase"
+}

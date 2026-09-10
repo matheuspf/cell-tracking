@@ -1,0 +1,7 @@
+{
+  "blas_threads_per_worker": 2,
+  "created": "2026-09-09T19:12:55.898751+00:00",
+  "prelaunch_all_process_rss_bytes": 26056183808,
+  "reason": "Root resource allowance: four decoder workers when prelaunch RSS<24GiB; dense measured peak1.75GiB/worker; total configured task thread budget<=32",
+  "workers": 2
+}

@@ -1,0 +1,409 @@
+{
+  "association": [
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5748,
+        "edge_fp": 4965,
+        "edge_tp": 123135
+      },
+      "delta_v2": 0.0005960592902456,
+      "embryo_deltas_v2": {
+        "44b6": 5.208194451089554e-05,
+        "6bba": 0.0006965342277943
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": true,
+      "score": 0.934802374260586,
+      "variant": "A_residual_m3.0"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5701,
+        "edge_fp": 5016,
+        "edge_tp": 123182
+      },
+      "delta_v2": 0.0005952223743871,
+      "embryo_deltas_v2": {
+        "44b6": 0.0002686568132919,
+        "6bba": 0.0006551519162349
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": true,
+      "score": 0.9348015373447276,
+      "variant": "A_residual_m1.5"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5854,
+        "edge_fp": 4930,
+        "edge_tp": 123029
+      },
+      "delta_v2": 4.503449261816783e-05,
+      "embryo_deltas_v2": {
+        "44b6": 4.742077293251601e-05,
+        "6bba": 4.459254580213568e-05
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": true,
+      "score": 0.9342513494629584,
+      "variant": "A_v2_transfer_m3.0"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5859,
+        "edge_fp": 4930,
+        "edge_tp": 123024
+      },
+      "delta_v2": 7.410104862826117e-06,
+      "embryo_deltas_v2": {
+        "44b6": 4.742077293251601e-05,
+        "6bba": 0.0
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": true,
+      "score": 0.9342137250752032,
+      "variant": "A_hgb7_m1.5"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5859,
+        "edge_fp": 4930,
+        "edge_tp": 123024
+      },
+      "delta_v2": 7.410104862826117e-06,
+      "embryo_deltas_v2": {
+        "44b6": 4.742077293251601e-05,
+        "6bba": 0.0
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": true,
+      "score": 0.9342137250752032,
+      "variant": "A_hgb7_m3.0"
+    }
+  ],
+  "combinations": [
+    {
+      "counts": {
+        "division_fn": 109,
+        "division_fp": 706,
+        "division_tp": 42,
+        "edge_fn": 6208,
+        "edge_fp": 6402,
+        "edge_tp": 122675
+      },
+      "delta_v2": -0.0196505359656316,
+      "embryo_deltas_v2": {
+        "44b6": -0.0293431452182433,
+        "6bba": -0.0166451338025499
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9145557790047087,
+      "variant": "ADR_primary"
+    },
+    {
+      "counts": {
+        "division_fn": 110,
+        "division_fp": 708,
+        "division_tp": 41,
+        "edge_fn": 6204,
+        "edge_fp": 6400,
+        "edge_tp": 122679
+      },
+      "delta_v2": -0.0197295471843137,
+      "embryo_deltas_v2": {
+        "44b6": -0.0293338892917762,
+        "6bba": -0.0167995849895946
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9144767677860266,
+      "variant": "AD_primary"
+    }
+  ],
+  "division": [
+    {
+      "counts": {
+        "division_fn": 82,
+        "division_fp": 1738,
+        "division_tp": 69,
+        "edge_fn": 5656,
+        "edge_fp": 6702,
+        "edge_tp": 123227
+      },
+      "delta_v2": -0.0188251734654041,
+      "embryo_deltas_v2": {
+        "44b6": -0.0279951203378694,
+        "6bba": -0.0168202666739056
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9153811415049362,
+      "variant": "D_existing_p020"
+    },
+    {
+      "counts": {
+        "division_fn": 107,
+        "division_fp": 697,
+        "division_tp": 44,
+        "edge_fn": 6202,
+        "edge_fp": 6357,
+        "edge_tp": 122681
+      },
+      "delta_v2": -0.019013711794515,
+      "embryo_deltas_v2": {
+        "44b6": -0.0225191017260975,
+        "6bba": -0.0182251805803437
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9151926031758252,
+      "variant": "D_tabular_p020"
+    },
+    {
+      "counts": {
+        "division_fn": 106,
+        "division_fp": 704,
+        "division_tp": 45,
+        "edge_fn": 6215,
+        "edge_fp": 6418,
+        "edge_tp": 122668
+      },
+      "delta_v2": -0.0194458507071538,
+      "embryo_deltas_v2": {
+        "44b6": -0.025578017956185,
+        "6bba": -0.018062786818351
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9147604642631864,
+      "variant": "D_tabular_p040"
+    },
+    {
+      "counts": {
+        "division_fn": 111,
+        "division_fp": 709,
+        "division_tp": 40,
+        "edge_fn": 6293,
+        "edge_fp": 6246,
+        "edge_tp": 122590
+      },
+      "delta_v2": -0.0194656942796397,
+      "embryo_deltas_v2": {
+        "44b6": -0.0281460975184163,
+        "6bba": -0.0164192408286748
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9147406206907006,
+      "variant": "D_replace_p040"
+    },
+    {
+      "counts": {
+        "division_fn": 110,
+        "division_fp": 718,
+        "division_tp": 41,
+        "edge_fn": 6295,
+        "edge_fp": 6260,
+        "edge_tp": 122588
+      },
+      "delta_v2": -0.0195079977107219,
+      "embryo_deltas_v2": {
+        "44b6": -0.028096952960674,
+        "6bba": -0.0164808981312345
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9146983172596184,
+      "variant": "D_image_p040"
+    },
+    {
+      "counts": {
+        "division_fn": 112,
+        "division_fp": 656,
+        "division_tp": 39,
+        "edge_fn": 6279,
+        "edge_fp": 6327,
+        "edge_tp": 122604
+      },
+      "delta_v2": -0.0197386854518958,
+      "embryo_deltas_v2": {
+        "44b6": -0.0252060121953495,
+        "6bba": -0.0185662647624538
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9144676295184444,
+      "variant": "D_tabular_p010"
+    },
+    {
+      "counts": {
+        "division_fn": 109,
+        "division_fp": 663,
+        "division_tp": 42,
+        "edge_fn": 6390,
+        "edge_fp": 6306,
+        "edge_tp": 122493
+      },
+      "delta_v2": -0.0200931451684391,
+      "embryo_deltas_v2": {
+        "44b6": -0.0289759991275432,
+        "6bba": -0.0174556099212452
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9141131698019012,
+      "variant": "D_image_p010"
+    },
+    {
+      "counts": {
+        "division_fn": 111,
+        "division_fp": 709,
+        "division_tp": 40,
+        "edge_fn": 6359,
+        "edge_fp": 6326,
+        "edge_tp": 122524
+      },
+      "delta_v2": -0.0205005491484288,
+      "embryo_deltas_v2": {
+        "44b6": -0.030150826484662,
+        "6bba": -0.0175936268460821
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9137057658219117,
+      "variant": "D_image_p020"
+    },
+    {
+      "counts": {
+        "division_fn": 112,
+        "division_fp": 705,
+        "division_tp": 39,
+        "edge_fn": 6360,
+        "edge_fp": 6319,
+        "edge_tp": 122523
+      },
+      "delta_v2": -0.0205567031818502,
+      "embryo_deltas_v2": {
+        "44b6": -0.0301010660025986,
+        "6bba": -0.0177186560028763
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.91364961178849,
+      "variant": "D_replace_p020"
+    },
+    {
+      "counts": {
+        "division_fn": 97,
+        "division_fp": 1442,
+        "division_tp": 54,
+        "edge_fn": 6080,
+        "edge_fp": 6625,
+        "edge_tp": 122803
+      },
+      "delta_v2": -0.0217142945243022,
+      "embryo_deltas_v2": {
+        "44b6": -0.0346717557825027,
+        "6bba": -0.0190177654884077
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.912492020446038,
+      "variant": "D_existing_p005_control"
+    }
+  ],
+  "rescue": [
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 91,
+        "division_tp": 29,
+        "edge_fn": 5863,
+        "edge_fp": 4929,
+        "edge_tp": 123020
+      },
+      "delta_v2": 2.701953604022922e-05,
+      "embryo_deltas_v2": {
+        "44b6": 0.0002492564184082,
+        "6bba": -1.51686300758902e-05
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9342333345063806,
+      "variant": "R_image_persistent"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 91,
+        "division_tp": 29,
+        "edge_fn": 5863,
+        "edge_fp": 4929,
+        "edge_tp": 123020
+      },
+      "delta_v2": 2.105469939106541e-05,
+      "embryo_deltas_v2": {
+        "44b6": 0.0002363199284913,
+        "6bba": -1.98423557874472e-05
+      },
+      "invalid_control": true,
+      "promotion_gate_passed": false,
+      "score": 0.9342273696697314,
+      "variant": "R_image_local"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5860,
+        "edge_fp": 4930,
+        "edge_tp": 123023
+      },
+      "delta_v2": 0.0,
+      "embryo_deltas_v2": {
+        "44b6": 0.0,
+        "6bba": 0.0
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9342063149703403,
+      "variant": "R_heatmap_local"
+    },
+    {
+      "counts": {
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_tp": 29,
+        "edge_fn": 5861,
+        "edge_fp": 4931,
+        "edge_tp": 123022
+      },
+      "delta_v2": -2.0450126187121494e-05,
+      "embryo_deltas_v2": {
+        "44b6": -5.782610861149173e-06,
+        "6bba": -2.317517388661372e-05
+      },
+      "invalid_control": false,
+      "promotion_gate_passed": false,
+      "score": 0.9341858648441532,
+      "variant": "R_native_restore"
+    }
+  ]
+}

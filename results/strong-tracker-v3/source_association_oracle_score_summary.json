@@ -1,0 +1,73 @@
+{
+  "label": "source_association_oracle",
+  "results": {
+    "44b6": {
+      "adj_edge_jaccard": 0.9245562520762507,
+      "counts": {
+        "division_fn": 19,
+        "division_fp": 22,
+        "division_tp": 7,
+        "edge_fn": 886,
+        "edge_fp": 998,
+        "edge_tp": 18940,
+        "num_pred_nodes": 1972750
+      },
+      "delta_v2": 0.0075271986322531514,
+      "division_fn": 19,
+      "division_fp": 22,
+      "division_jaccard": 0.14583333333333334,
+      "division_tp": 7,
+      "edge_jaccard": 0.909527468305801,
+      "n": 71,
+      "n_adj": 71,
+      "node_recall": 0.9877569341470968,
+      "score": 0.939139585409584
+    },
+    "6bba": {
+      "adj_edge_jaccard": 0.9277020418676034,
+      "counts": {
+        "division_fn": 104,
+        "division_fp": 71,
+        "division_tp": 21,
+        "edge_fn": 4591,
+        "edge_fp": 3633,
+        "edge_tp": 104466,
+        "num_pred_nodes": 2136193
+      },
+      "delta_v2": 0.0038910777123560836,
+      "division_fn": 104,
+      "division_fp": 71,
+      "division_jaccard": 0.10714285714285714,
+      "division_tp": 21,
+      "edge_jaccard": 0.9270210311473955,
+      "n": 128,
+      "n_adj": 128,
+      "node_recall": 0.9795753914358454,
+      "score": 0.9384163275818891
+    },
+    "pooled": {
+      "adj_edge_jaccard": 0.9272113972414583,
+      "counts": {
+        "division_fn": 123,
+        "division_fp": 93,
+        "division_tp": 28,
+        "edge_fn": 5477,
+        "edge_fp": 4631,
+        "edge_tp": 123406,
+        "num_pred_nodes": 4108943
+      },
+      "delta_v2": 0.004480492107183487,
+      "division_fn": 123,
+      "division_fp": 93,
+      "division_jaccard": 0.11475409836065574,
+      "division_tp": 28,
+      "edge_jaccard": 0.9242925835492907,
+      "n": 199,
+      "n_adj": 199,
+      "node_recall": 0.982494434312724,
+      "score": 0.9386868070775238
+    }
+  },
+  "samples": 199,
+  "scope": "Source-only heuristic feasibility; not global bound, not deployable, not promotion eligible"
+}

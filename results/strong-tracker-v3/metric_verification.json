@@ -1,0 +1,22 @@
+{
+  "checked": "2026-09-09T17:50:54.660543+00:00",
+  "files": {
+    "src/tracking_cellmot/metrics.py": {
+      "local_sha256": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+      "upstream_main_sha256": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+      "identical": true
+    },
+    "src/tracking_cellmot/division_metrics.py": {
+      "local_sha256": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+      "upstream_main_sha256": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+      "identical": true
+    },
+    "metrics.md": {
+      "local_sha256": "d8a2d3ff21b507242dd23e9b7c687d725261d7b4c79cff086cccb4093141d696",
+      "upstream_main_sha256": "d8a2d3ff21b507242dd23e9b7c687d725261d7b4c79cff086cccb4093141d696",
+      "identical": true
+    }
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "kaggle_snapshot": "formula agrees; prose division summary less precise than pinned code; local timing matcher authoritative"
+}

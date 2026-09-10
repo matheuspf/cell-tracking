@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "study_id": "strong-tracker-v3",
+  "base_branch": "handover/strong-tracker-v2",
+  "base_commit": "a58c80b041db0a05262a58b3d1b5f34045b8d2ff",
+  "incumbent": "bypass_motion_bounds",
+  "incumbent_score": 0.9342063149703403,
+  "paths": {
+    "data": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "v1": "/kaggle/working/cell-tracking/annotation-selection-v1",
+    "v2": "/kaggle/working/cell-tracking/strong-tracker-v2",
+    "out": "/kaggle/working/cell-tracking/strong-tracker-v3",
+    "work": "work/strong-tracker-v3",
+    "python": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python"
+  },
+  "validation": "both opposite-embryo directions; exploratory reused data, no fabricated inner groups",
+  "primary_seed": 20260909,
+  "secondary_seed": 314159,
+  "total_variant_cap": 32,
+  "initial_conditional_ablations": [
+    "incumbent",
+    "no_motion_no_safe_divisions",
+    "no_motion_no_smoothing",
+    "no_motion_no_safe_divisions_no_smoothing",
+    "no_motion_no_pruning",
+    "no_motion_no_gaps"
+  ],
+  "arbitration": {
+    "window_frames": 5,
+    "families": [
+      "logistic_native_residual",
+      "hgb7"
+    ],
+    "edit_margin_logodds": [
+      1.5,
+      3.0
+    ],
+    "max_changed_edge_fraction_per_clip": 0.02,
+    "abstention": true
+  },
+  "division_proposals": {
+    "forward_neighbors": 6,
+    "reverse_neighbors": 2,
+    "parent_gate_um": 16.0,
+    "sister_gate_um": 20.0,
+    "split_time_offsets": [
+      -1,
+      0,
+      1
+    ],
+    "paths_per_daughter": 2,
+    "context_frames": 9,
+    "require_incumbent_continuation": false,
+    "max_component_alternatives": 256,
+    "source_coverage_diagnostic_target": 0.85,
+    "fallback": {
+      "neighbors": 8,
+      "parent_gate_um": 20.0,
+      "sister_gate_um": 24.0
+    }
+  },
+  "event_training": {
+    "families": [
+      "event_logistic",
+      "temporal_event_image_geometry"
+    ],
+    "steps_per_source_seed": 10000,
+    "probability_thresholds": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "primary_threshold": 0.2,
+    "positive_weight_unit": "one total weight per supported event bag",
+    "unknown_hypotheses": "masked",
+    "max_gpu_hours": 8
+  },
+  "combination_default": "arbitration primary plus division-event primary; optional image rescue; rebuild graph features",
+  "global_annotation_filtering": false,
+  "stretch_score_gain": 0.02,
+  "useful_gain": 0.002,
+  "promotion": "positive pooled delta; each embryo nonnegative within 1e-10; validated complete inference; all results exploratory",
+  "resource_caps": {
+    "gpu_gib": 20,
+    "host_task_ram_gib": 32,
+    "cpu_threads": 32,
+    "new_disk_gib": 60,
+    "total_training_gpu_hours": 12
+  },
+  "stages": [
+    "V300",
+    "V310",
+    "V320",
+    "V330",
+    "V340",
+    "V350",
+    "V360",
+    "V370"
+  ],
+  "automatic_submission": false,
+  "automatic_external_download": false
+}

@@ -1,0 +1,13 @@
+{
+  "created": "2026-09-09T19:42:18.752322+00:00",
+  "image_files": 20298,
+  "joint_resume_fingerprint": "5b75ed87bffc98c08e15b589913235ed07e2c095c6200b339679716673168073",
+  "pipeline_locks": {
+    "fresh_full/shard0/fresh/pipeline_lock.json": "f9dd0802954b79836e8d609020a3a51b3ca55931438b58a4a9178e974d43a035",
+    "fresh_full/shard1/fresh/pipeline_lock.json": "11bbc972ba0d4f48f1f8717e39bd39686a7b6e6b9eab710541f19fa3d818fb13"
+  },
+  "raw_image_stats_and_metadata_unchanged": true,
+  "samples": 199,
+  "scope": "Full image bytes were hashed in the original manifest; this read-only validation rejects changed size/mtime, metadata, added or missing files before reuse",
+  "whole_content_manifest_sha256": "78e77c35c47a111503c80d77b264ea6935be3c33c4fe848ed1c0046ab3cb6848"
+}

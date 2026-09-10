@@ -1,0 +1,249 @@
+{
+  "all_pre_ilp_fields_exact": true,
+  "all_raw_fields_exact": true,
+  "comparison_only": true,
+  "completed_samples": 2,
+  "differing_datasets": [],
+  "expected_samples": 2,
+  "rows": [
+    {
+      "dataset": "44b6_87bba6c4",
+      "pre_ilp": {
+        "fields": {
+          "coords": {
+            "different_elements": 0,
+            "dtype_fresh": "int16",
+            "dtype_old": "int16",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              35685,
+              4
+            ],
+            "shape_old": [
+              35685,
+              4
+            ]
+          },
+          "edge_scores": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              31809,
+              4
+            ],
+            "shape_old": [
+              31809,
+              4
+            ]
+          },
+          "node_probabilities": {
+            "different_elements": 0,
+            "dtype_fresh": "float32",
+            "dtype_old": "float32",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              35685
+            ],
+            "shape_old": [
+              35685
+            ]
+          }
+        },
+        "fresh_sha256": "b098f206f0dd3c404098ab093a5c7c393fb7ca8b4cca8ef44192db8d339992e0",
+        "old_sha256": "b098f206f0dd3c404098ab093a5c7c393fb7ca8b4cca8ef44192db8d339992e0"
+      },
+      "raw": {
+        "fields": {
+          "edge_prob": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              28111
+            ],
+            "shape_old": [
+              28111
+            ]
+          },
+          "edges": {
+            "different_elements": 0,
+            "dtype_fresh": "int64",
+            "dtype_old": "int64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              28111,
+              2
+            ],
+            "shape_old": [
+              28111,
+              2
+            ]
+          },
+          "nodes": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              30205,
+              5
+            ],
+            "shape_old": [
+              30205,
+              5
+            ]
+          }
+        },
+        "fresh_sha256": "e6955cb06a4afa541bb8cc0f81f62b84800917bd40bf56c98ef83bd853ff9b82",
+        "old_sha256": "e6955cb06a4afa541bb8cc0f81f62b84800917bd40bf56c98ef83bd853ff9b82"
+      }
+    },
+    {
+      "dataset": "6bba_789f8168",
+      "pre_ilp": {
+        "fields": {
+          "coords": {
+            "different_elements": 0,
+            "dtype_fresh": "int16",
+            "dtype_old": "int16",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              12040,
+              4
+            ],
+            "shape_old": [
+              12040,
+              4
+            ]
+          },
+          "edge_scores": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              10998,
+              4
+            ],
+            "shape_old": [
+              10998,
+              4
+            ]
+          },
+          "node_probabilities": {
+            "different_elements": 0,
+            "dtype_fresh": "float32",
+            "dtype_old": "float32",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              12040
+            ],
+            "shape_old": [
+              12040
+            ]
+          }
+        },
+        "fresh_sha256": "10d6d61292d14fecef3621facadd5a03eeb1388fbb719988b6379315b48f20f3",
+        "old_sha256": "10d6d61292d14fecef3621facadd5a03eeb1388fbb719988b6379315b48f20f3"
+      },
+      "raw": {
+        "fields": {
+          "edge_prob": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              10366
+            ],
+            "shape_old": [
+              10366
+            ]
+          },
+          "edges": {
+            "different_elements": 0,
+            "dtype_fresh": "int64",
+            "dtype_old": "int64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              10366,
+              2
+            ],
+            "shape_old": [
+              10366,
+              2
+            ]
+          },
+          "nodes": {
+            "different_elements": 0,
+            "dtype_fresh": "float64",
+            "dtype_old": "float64",
+            "exact_array_equal": true,
+            "exact_bytes_equal": true,
+            "max_abs_difference": 0.0,
+            "nonfinite_mask_equal": true,
+            "same_shape": true,
+            "shape_fresh": [
+              10948,
+              5
+            ],
+            "shape_old": [
+              10948,
+              5
+            ]
+          }
+        },
+        "fresh_sha256": "571757b9e5230a7e3a03df6937b09d31fb2aaeb48353aea4fcb218e4b34d6f62",
+        "old_sha256": "571757b9e5230a7e3a03df6937b09d31fb2aaeb48353aea4fcb218e4b34d6f62"
+      }
+    }
+  ],
+  "used_for_prediction": false
+}
