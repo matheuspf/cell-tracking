@@ -1,0 +1,28 @@
+{
+  "automatic_external_downloads": false,
+  "baseline_score": 0.934802374260586,
+  "blocked_comparisons": [
+    "B0",
+    "M0",
+    "U0",
+    "U1"
+  ],
+  "branch": "handover/segmentation-tracking-v6",
+  "complete_comparisons": 2,
+  "complete_comparisons_planned": 6,
+  "continuation": "CONTINUATION.md",
+  "entrypoint": "CODEX_PROMPT.md",
+  "learned_tool_integration_complete": false,
+  "microscopy_experiments_run_in_this_edit": true,
+  "next_stage": "S610 blocked by local dependencies",
+  "plan": "EXPERIMENTS.md",
+  "prior_reference_helpers": "preserved unchanged; integration checks run locally",
+  "pull_request": 8,
+  "replication_slots": 2,
+  "revision": "single_plan_tool_integration",
+  "selected": "P0 point control",
+  "selected_v6_score": 0.9348649864131336,
+  "status": "executed_independent_controls_learned_tools_blocked",
+  "study_id": "segmentation-tracking-v6",
+  "target_local_score": 0.95
+}

@@ -1,0 +1,172 @@
+{
+  "blocked_arm_check": {
+    "exit_code": 2,
+    "no_fallback_execution": true,
+    "passed": true
+  },
+  "cli": [
+    {
+      "checks": {
+        "C0.csv": true,
+        "early_guard": true,
+        "submission.csv": true
+      },
+      "embryo": "44b6",
+      "entrypoint_sha256": "90134c0a64ae4efcdcd36b3b5d7eb8566dfc6adb939564298dbd196ec54c10e2",
+      "passed": true,
+      "peak_process_tree_rss_gib": 2.6134986877441406,
+      "peak_total_gpu_gib": 1.4921875,
+      "seconds": 193.78953166199972
+    },
+    {
+      "checks": {
+        "C0.csv": true,
+        "early_guard": true,
+        "submission.csv": true
+      },
+      "embryo": "6bba",
+      "entrypoint_sha256": "90134c0a64ae4efcdcd36b3b5d7eb8566dfc6adb939564298dbd196ec54c10e2",
+      "passed": true,
+      "peak_process_tree_rss_gib": 1.9549522399902344,
+      "peak_total_gpu_gib": 1.48828125,
+      "seconds": 136.57515647199943
+    }
+  ],
+  "complete_controls": {
+    "clips": 199,
+    "complete": true,
+    "gpu_training_seconds": 0,
+    "official_evaluator": "pinned annotation_selection.metric_adapter.evaluate_graph",
+    "seconds": 196.54849465400002,
+    "solver": "unchanged v3 association decoder; no new division decisions in P0"
+  },
+  "contracts": {
+    "adapter_tests": 13,
+    "inherited_tests": 38,
+    "passed": true
+  },
+  "created": "2026-09-10T22:34:06.252877+00:00",
+  "dashboard": {
+    "blank_blocked_score_rows": 12,
+    "browser_version": "151.0.7922.34",
+    "dashboard_sha256": "13d3ac3dd89c734b1c88780b59cbe04e9f9ed290b70b20ed1fc575f203795001",
+    "desktop_and_mobile": true,
+    "download_rows": 18,
+    "external_requests": [],
+    "page_errors": [],
+    "passed": true
+  },
+  "focus_weights": [
+    {
+      "bytes": 4468804784,
+      "sha256": "e5f107ee0ab9996b93f70f430f4a6efa4b6d977630e08644e9e0c7d8d9cd9938",
+      "verified": true
+    },
+    {
+      "bytes": 4468130940,
+      "sha256": "db9eb9e8fa3cf2d5293e7a5cd90d292fd6de59f020a65a0859c7da2ecbca87b9",
+      "verified": true
+    },
+    {
+      "bytes": 4468804784,
+      "sha256": "b14a7bd272f824adb1a1073bc3f2af17a95919d5a0c3f1d9011a8d82378d8f3a",
+      "verified": true
+    }
+  ],
+  "fresh_c0": [
+    {
+      "audit_passed": true,
+      "csv_roundtrip": true,
+      "embryo": "44b6",
+      "exact_graph_parity": true,
+      "peak_process_tree_rss_gib": 2.620319366455078,
+      "peak_total_gpu_gib": 1.4921875,
+      "seconds": 130.4460180950009
+    },
+    {
+      "audit_passed": true,
+      "csv_roundtrip": true,
+      "embryo": "6bba",
+      "exact_graph_parity": true,
+      "peak_process_tree_rss_gib": 1.9384040832519531,
+      "peak_total_gpu_gib": 1.48828125,
+      "seconds": 89.63998626899956
+    }
+  ],
+  "fresh_p0": [
+    {
+      "csv_roundtrip": true,
+      "embryo": "44b6",
+      "exact_graph_parity": true,
+      "exact_native_inputs": {
+        "edge_features": true,
+        "pairs": true
+      },
+      "guard_passed": true,
+      "seconds": 75.62190742099847
+    },
+    {
+      "csv_roundtrip": true,
+      "embryo": "6bba",
+      "exact_graph_parity": true,
+      "exact_native_inputs": {
+        "edge_features": true,
+        "pairs": true
+      },
+      "guard_passed": true,
+      "seconds": 40.34235990399975
+    }
+  ],
+  "preservation": {
+    "checked_files": 264,
+    "passed": true
+  },
+  "repeatability": {
+    "exact_graphs": 199,
+    "extra_complete_score_runs": 0,
+    "graph_hashes_sha256": "d7ded97a079c7a78960fe837bfa888cb793e171dff1e7f47ad6d00d6ed2b2519",
+    "passed": true,
+    "seconds": 94.2618424809989,
+    "seed_interpretation": "L-BFGS and fixed decoder have no RNG; repeated full fits and graph decisions, no pretend second-seed training",
+    "source_fits": [
+      {
+        "parameters_exact": true,
+        "source": "44b6"
+      },
+      {
+        "parameters_exact": true,
+        "source": "6bba"
+      }
+    ]
+  },
+  "runtime_packages": {
+    "cellpose": null,
+    "detectron2": null,
+    "mip": null,
+    "pyscipopt": "6.2.1",
+    "scikit-learn": "1.9.0",
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "ultrack": null
+  },
+  "source_fits": {
+    "44b6": {
+      "iterations": 180,
+      "model_sha256": "938b9f1d4510cc992fbbc3ded648fd63cce8456da2cfa3dbd3f14fad6a80b18d",
+      "optimizer_converged": true,
+      "positives": 19316,
+      "rows": 36901,
+      "seconds": 8.168348308001441,
+      "unknown": 3458264
+    },
+    "6bba": {
+      "iterations": 250,
+      "model_sha256": "2ab4d37bc184aa8bed8ddaa5d45ae364b59e794a0d9029143460d7e120978199",
+      "optimizer_converged": false,
+      "positives": 105451,
+      "rows": 147274,
+      "seconds": 10.259781759999896,
+      "unknown": 3407811
+    }
+  }
+}
