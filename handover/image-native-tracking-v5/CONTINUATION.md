@@ -53,6 +53,20 @@ At 21:11 UTC, **H_probe_native_J** completed all 199 official scores at
 121,664/6,207/7,219 and division TP/FP/FN 30/175/121. It is below H1 and C0;
 the H2 second-seed graph batch remains active. Nine of 18 configurations are measured.
 
+At 21:27 UTC, two queued comparisons completed official scoring, giving 11 of
+18 measured configurations. **N_head_J** scores **0.8817718421042569**, delta C0
+**-0.05303053215632914**; 44b6 0.7703846327600713 and 6bba 0.9025323076547943.
+Edge TP/FP/FN are 118,887/7,352/9,996; division TP/FP/FN are 56/693/95. Its
+additional recovered divisions do not offset the false positives and edge losses.
+**P_image_ablation** scores **0.8697528094106733**, delta C0
+**-0.06504956484991264**, with edge TP/FP/FN 118,713/9,427/10,170 and division
+TP/FP/FN 29/162/122. It exports 4,111,129 nodes. This replaces only the new-node
+confidence with 0.5 and changes split-pair ranking; it still uses image features.
+All 199 H2 replica graphs are complete, with their official scorer queued behind
+the primary N2 decoder batch. The primary N2 graph batch started with ten workers,
+and `CPU_ten_worker_validation.json` now contains actual production observations
+within the memory caps. No optimizer, model, calibration or decoder recipe changed.
+
 A source-only audit at 20:36 UTC confirmed a material HOCT interpretation limit.
 The registered adapter supplies micrometer coordinates/diameters and squared-
 micrometer inertia, while the pinned upstream extractor returns voxel-unit

@@ -1,0 +1,92 @@
+{
+  "study_id": "instance-tracking-v6",
+  "stages": [
+    "M600",
+    "M610",
+    "M620",
+    "M630",
+    "M640",
+    "M650",
+    "M660",
+    "M670",
+    "M680",
+    "M690"
+  ],
+  "branch": "handover/instance-tracking-v6",
+  "local_target": 0.95,
+  "primary_segmenters": [
+    "focus3d_if_authorized",
+    "cellpose_sam_3d"
+  ],
+  "fallback_comparator": "stardist_3d_demo",
+  "pilot": {
+    "windows_per_embryo": 6,
+    "consecutive_frames_per_window": 8,
+    "minimum_uniform_windows": 4,
+    "selection": "image_only_density_snr_time_strata_before_mask_or_gt_review",
+    "max_initial_settings_per_model": 2
+  },
+  "native_spacing_prior_um_zyx": [
+    1.625,
+    0.40625,
+    0.40625
+  ],
+  "spacing_policy": "read_actual_metadata; every_resample_has_voxel_center_affine",
+  "comparison_groups": {
+    "fixed_nodes": [
+      "point",
+      "bbox",
+      "full_mask",
+      "mask_scramble"
+    ],
+    "mask_native": [
+      "hard_instances_centers",
+      "hard_instances_masks",
+      "ultrack_single",
+      "ultrack_combined_if_available"
+    ],
+    "controls": [
+      "C0",
+      "old_watershed_if_reused",
+      "HOCT_upstream_units_if_reused"
+    ]
+  },
+  "max_complete_new_configurations": 24,
+  "variant_allocation": {
+    "identity_and_adapter_controls": 3,
+    "fixed_node_feature_ablations": 4,
+    "standalone_hard_masks_and_ultrack": 6,
+    "best_hybrid_and_combinations": 4,
+    "conditional_student_or_propagation": 3,
+    "replication_or_reserved": 4
+  },
+  "seeds": [
+    20260910,
+    314159
+  ],
+  "source_roles": {
+    "44b6": "train_on_6bba",
+    "6bba": "train_on_44b6"
+  },
+  "gpu_device": 0,
+  "gpu_device_hours_cap": 48,
+  "gpu_soft_gib": 20,
+  "host_rss_soft_gib": 24,
+  "minimum_free_disk_gib": 8,
+  "initial_gpu_heavy_processes": 1,
+  "cold_full_clip_checks": 4,
+  "auto_download_gated_weights": false,
+  "remote_microscopy_upload": false,
+  "auto_submit_kaggle": false,
+  "auto_merge_pr": false,
+  "learning_optional": true,
+  "dense_segmentation_and_ultrack_attempt_required": true,
+  "adoption": {
+    "positive_pooled_delta": true,
+    "no_embryo_regression_tolerance": 1e-10,
+    "second_seed_for_learned_finalist": true,
+    "target_met_requires_adopted_score_at_least": 0.95
+  },
+  "output_namespace": "/kaggle/working/cell-tracking/instance-tracking-v6",
+  "learning_target": "true_or_explicit_pseudo_instance_masks_not_annotation_membership"
+}
