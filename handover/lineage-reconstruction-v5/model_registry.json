@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-09-10",
+  "models_executed_in_authoring_session": false,
+  "hoct": {
+    "repository": "royerlab/hoct",
+    "source_ref": "2ccc5040823bc944ab67790abd1f56eea7cd4f05",
+    "primary_model": "general_v1",
+    "checkpoint_url": "https://github.com/royerlab/hoct/releases/download/weights-v1/general_v1.pt",
+    "checkpoint_sha256": "5bd836dfcb15ad796ea79a9595841a3e73b650a71c4acba3fc66aac65d745b33",
+    "input": "real image-derived instance regions plus microscopy or a feature-complete candidate graph",
+    "implemented_route": "hoct.predict(labels=..., images=..., scale=..., max_delta_t=1)",
+    "forbidden_stub": "hoct.create_graph_from_points",
+    "training_route": "verified sparse edge probe; actual backbone adaptation only when its gradient/API contract is established",
+    "pretraining_overlap": "requires audit; no clean Biohub claim from name alone"
+  },
+  "trackastra": {
+    "repository": "weigertlab/trackastra",
+    "source_ref": "aa57a95160002e0fc70b915ab74178b39c99fd6a",
+    "primary_model": "ctc",
+    "dimensionality": [2, 3],
+    "checkpoint_url": "https://github.com/weigertlab/trackastra-models/releases/download/v0.3.0/ctc.zip",
+    "checkpoint_sha256": null,
+    "hash_instruction": "resolve release and record local SHA before running; no checksum was invented in authoring",
+    "input": "TZYX microscopy and same-grid instance masks",
+    "training_route": "maintained training support with an explicit sparse-label loss adapter",
+    "forbidden_substitutions": ["general_3d (not a registered model)", "general_2d_w_SAM2_features for 3D"]
+  },
+  "dense_candidates": {
+    "primary": "existing full-frame DeepCenter plus original native U-Net heatmaps; new spatial peaks, not v4 query offsets",
+    "prior_deepcenter_path": "/kaggle/input/biohub-deepcenter-unet3d-center-prior-v1/weights/full_frame_center/best.pt",
+    "mask_builder": "foreground-limited seeded watershed, recorded as proxy instance support",
+    "optional": "FOCUS-3D nuclei only with already authorized accessible weights",
+    "gated_terms_acceptance_authorized": false,
+    "remote_image_upload_authorized": false
+  }
+}
