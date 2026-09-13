@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "study": "public946-minimal-generalization-v1",
+  "created_date": "2026-09-13",
+  "status": "planned_not_executed",
+  "base_commit": "fb5521629eb41c8c485b291a5bcf344944c113ae",
+  "branch": "handover/public946-minimal-generalization-v1",
+  "baseline": {
+    "ref": "flexonafft/biohub-harmonic-fusion",
+    "version": 29,
+    "script_version_id": 347965685,
+    "public_lb_user_reported": 0.946,
+    "repository_score_verification_date": "2026-09-08",
+    "live_lb_independently_verified": false
+  },
+  "hypothesis": "Removing post-ILP motion reassignment may preserve learned associations better on unseen embryos.",
+  "selection_history": "Hypothesis chosen using existing exploratory v2 ablation; this lock does not erase prior selection or checkpoint exposure.",
+  "arms": {
+    "B0": {
+      "scientific_changes": []
+    },
+    "B1": {
+      "scientific_changes": [
+        {
+          "setting": "OUTPUT_MOTION_RELINK",
+          "value": false
+        }
+      ]
+    }
+  },
+  "max_scientific_candidates": 1,
+  "new_training_runs": 0,
+  "new_checkpoints": 0,
+  "new_external_datasets": 0,
+  "parameter_sweeps_allowed": false,
+  "per_embryo_policy_allowed": false,
+  "leaderboard_adaptive_revision_allowed": false,
+  "historical_metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "historical_local_references": {
+    "B0": 0.911774,
+    "B1_bounds_validated": 0.934206,
+    "v3_context_only": 0.934802374260586,
+    "v6_context_only": 0.9348649864131336
+  },
+  "historical_rounding_tolerance": 1e-06,
+  "fresh_pilots": {
+    "per_embryo": 2,
+    "selection": "nearest 25th/75th percentiles of metadata q99-q10 contrast; tie by stem; no labels/scores"
+  },
+  "robustness_checks": [
+    "unfamiliar_stems",
+    "reverse_input_enumeration",
+    "x_reflection_with_inverse_coordinates",
+    "fresh_process_repeat"
+  ],
+  "clean_confirmation": "only if already available, truly unexamined and proven embryo-disjoint; otherwise explicitly unavailable",
+  "readiness_rule": [
+    "baseline_identity_verified",
+    "only_registered_scientific_change",
+    "positive_pooled_delta",
+    "positive_delta_both_embryos",
+    "nondecreasing_pooled_division_jaccard",
+    "valid_output",
+    "annotation_free_fresh_inference",
+    "no_unexplained_portability_or_repeat_failure"
+  ],
+  "bounds_sanitation": "only if required, identical both arms, raw/sanitized paired scoring; zero score/count effect required for one-change evidence claim",
+  "local_score_target": null,
+  "public_lb_target": 0.95,
+  "kaggle_submission_authorized": false,
+  "manual_new_candidate_trials": 1,
+  "candidate_source_sha256": null,
+  "local_execution_complete": false,
+  "leaderboard_score": null,
+  "completed_by_planner": [
+    "repository_source_and_report_review",
+    "synthetic_source_helper_tests"
+  ],
+  "not_done_by_planner": [
+    "local_original_notebook_audit",
+    "microscopy_inference",
+    "official_metric_rerun",
+    "kaggle_notebook_packaging",
+    "kaggle_submission"
+  ]
+}
