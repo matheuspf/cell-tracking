@@ -8,11 +8,17 @@ import json
 import zlib
 from pathlib import Path
 
-from .common import ARMS, REPO, sha, write_json
+from .common import ARMS, REPO, read_json, sha, write_json
 
 
 def build(args, arm, modules, destination):
     destination.mkdir(parents=True, exist_ok=True)
+    # Keep standard license text and evidence beside the notebook. The executable
+    # cells are unchanged, so their independently tested hashes remain valid.
+    import shutil
+    license_source = REPO/'tools/public946_minimal/licenses'
+    if license_source.exists():
+        shutil.copytree(license_source, destination/'licenses', dirs_exist_ok=True)
     original = (args.archive/'biohub-harmonic-fusion.py').read_text()
     source = original[:original.index('TRAIN_DIR = COMP_DIR / "train"')]
     files = {'public946_minimal/__init__.py': ''}
@@ -169,13 +175,24 @@ print('Wrote',SUBMISSION,'with',index,'rows',flush=True)
             dict(cell_type='code', execution_count=None, metadata={}, outputs=[], source=driver.splitlines(True))])
     ipynb = destination/(name+'.ipynb')
     write_json(ipynb, notebook)
+    execution=read_json(args.out/'execution_lock.json')
+    artifact_receipt=read_json(args.out/'artifact_hashes.json')
+    pinned_artifacts={slug:{name:value for name,value in record['files'].items()
+                     if name.endswith(('.pth','.pt','config.json'))}
+                     for slug,record in artifact_receipt.items()}
     return dict(arm=arm, modules=modules, python=str(py), python_sha256=sha(py), notebook=str(ipynb), notebook_sha256=sha(ipynb),
+        pinned_public_artifact_hashes=pinned_artifacts,metric_identity=execution['metric'],
+        execution_lock_sha256=sha(args.out/'execution_lock.json'),
+        public_materialized_source_hashes=execution['source']['source_hashes'],
+        fixed_public_settings=execution['source']['settings'],
+        effective_motion_relink='no_motion' not in modules,
+        local_runtime=read_json(args.out/'preflight.json'),
         original_source_sha256=sha(args.archive/'biohub-harmonic-fusion.py'), sanitized_source_sha256=__import__('hashlib').sha256(source.encode()).hexdigest(),
         software_hashes={p: __import__('hashlib').sha256(s.encode()).hexdigest() for p,s in files.items()},
         public_inputs=['competition:biohub-cell-tracking-during-development', *['pilkwang/'+s for s in (
             'biohub-tracking-support-pack-50ep-v1','biohub-temporal-unet3d-seed314159-v1','biohub-deepcenter-unet3d-center-prior-v1')]],
         attribution='flexonafft public notebook; pilkwang support/model datasets; preserve bundled LICENSE files and Kaggle source attribution',
-        license_status='Public source/artifact licenses retained as bundled; no relicensing claim',
+        license_status='Notebook public page: Apache-2.0; three public dataset metadata records: CC0-1.0. See licenses/provenance.json for exact verification scope.',
         shared_runtime_changes=['Explicit offline paths', 'GT-reading validator workflow excluded', 'Image-only worker and descendant guard',
             'Per-clip streaming/evidence fingerprints', 'Natural integer serialization followed by common bounds clipping'],
         scientific_changes=modules, leaderboard_score=None)

@@ -14,6 +14,12 @@ SCIENTIFIC_FILES = ('common.py', 'source.py', 'neural.py', 'modules.py', 'worker
 ORDER = ['E01', 'E07', 'E02', 'E03', 'E08', 'E05', 'E06', 'E04']
 
 
+def verify_selection_lock(args):
+    for relative, expected in read_json(args.out/'selection_code_lock.json').items():
+        if sha(REPO/relative) != expected:
+            raise ValueError('Frozen selection rule drift: '+relative)
+
+
 def execution_lock(args):
     path = args.out / 'execution_lock.json'
     payload = dict(plan_sha256=sha(args.out / 'plan_freeze.json'),
@@ -41,6 +47,10 @@ def job_for(args, arm, row, scope='full', modules=None, transform=None, reuse=No
         if sha(REPO / 'tools/public946_minimal' / name) != expected:
             raise ValueError(f'Scientific code drift: {name}; retain failure and amend correctness receipt before rerun')
     mods = list(ARMS[arm]['modules'] if modules is None else modules)
+    if reuse is not None and 'E01' in mods:
+        cached=Path(reuse)/'neural.json'
+        if cached.exists() and read_json(cached).get('evidence_format'):
+            raise ValueError('E01 requires full native probability evidence; use the preserved B0 cache')
     source_root = args.out / 'public_source/tracking_repo'
     primary = source_root / 'weights/unet_transformer/split_0/edge_predictor_best.pth'
     secondary = args.out / 'public_source/secondary_seed_weights/unet_transformer/split_0/edge_predictor_best.pth'
@@ -64,7 +74,19 @@ def job_for(args, arm, row, scope='full', modules=None, transform=None, reuse=No
         model_hashes=model_hashes, settings=settings, transform=transform,
         limits=execution['limits'], neural_fingerprint=neural_fingerprint,
         reuse_neural=str(reuse) if reuse is not None else None, execution_lock_sha256=sha(args.out / 'execution_lock.json'))
+    if scope == 'fresh_finalists':
+        # Standalone confirmation must recompute DeepCenter as well as both
+        # tracking models. Its input-hash inventory is linked by delivery.py.
+        job['out'] = str(args.out / 'fresh_finalist_cache' / arm / row['dataset'])
     slots = getattr(args, '_worker_slots', 1)
+    # Resource-only scheduler changes do not invalidate completed scientific work.
+    # Reconstruct its actual recorded allocation; every other job field is still
+    # recomputed and checked by the complete-job fingerprint comparison below.
+    if (directory / 'complete.json').exists() and (directory / 'job.json').exists():
+        previous_job = read_json(directory / 'job.json')
+        slots = previous_job.get('concurrent_worker_slots', 1)
+        if slots not in (1, 2, 3, 4):
+            raise ValueError('Invalid recorded resource allocation')
     if slots > 1:
         job['limits'] = dict(execution['limits'])
         job['limits']['gpu_allocated_gib_max'] /= slots
@@ -77,11 +99,14 @@ def used_seconds(out):
     costs = list((out / 'cost_receipts').rglob('*.json'))
     receipts = list((out / 'predictions').rglob('complete.json')) if not costs else []
     failed = list(out.rglob('failure-*.json'))
-    return sum(read_json(p)['seconds'] for p in receipts+costs) + sum(read_json(p).get('elapsed_seconds', 0) for p in failed)
+    smoke = list((out/'unscored_engineering_smoke').rglob('complete.json'))
+    packaged = list((out/'package_validation').glob('*/package_test_receipt.json'))
+    return (sum(read_json(p)['seconds'] for p in receipts+costs+smoke+packaged)
+            + sum(read_json(p).get('elapsed_seconds', 0) for p in failed))
 
 
 def execute(args, arm, rows, scope='full', modules=None, transform=None, reuse_arm=None):
-    if scope == 'full' and len(rows) > 1 and getattr(args, 'workers', 2) > 1:
+    if scope in ('full', 'fresh_finalists') and len(rows) > 1 and getattr(args, 'workers', 2) > 1:
         from concurrent.futures import ThreadPoolExecutor, as_completed
         concurrency = min(4, args.workers)
         child_args = copy.copy(args)
@@ -119,6 +144,8 @@ def execute(args, arm, rows, scope='full', modules=None, transform=None, reuse_a
             record = read_json(complete)
             if record['fingerprint'] != job['fingerprint'] or record['final_sha256'] != sha(directory / 'final.npz'):
                 raise ValueError(f'Completed prediction drift: {complete}')
+            from .retention import finish
+            finish(job,scope)
             records.append(record)
             continue
         if used_seconds(args.out) / 3600 >= job['limits']['gpu_device_hours_max']:
@@ -146,6 +173,8 @@ def execute(args, arm, rows, scope='full', modules=None, transform=None, reuse_a
         else:
             records.append(read_json(complete))
             record = records[-1]
+            from .retention import finish
+            finish(job,scope)
             write_json(args.out/'cost_receipts'/scope/arm/row['dataset']/'cost.json',
                        dict(seconds=record['seconds'],gpu_peak_bytes=record['gpu_peak_bytes'],rss_peak_bytes=record['rss_peak_bytes']))
             print(f'{scope}/{arm} {i+1}/{len(rows)} {row["dataset"]} {records[-1]["seconds"]:.1f}s', flush=True)
@@ -223,6 +252,7 @@ def controls(args):
 
 def singles(args):
     from .selection import eligible
+    verify_selection_lock(args)
     rows = read_json(args.out / 'image_inventory.json')
     for arm in ([args.arm] if args.arm else ORDER):
         if arm in ('E03', 'E06'):
@@ -238,7 +268,7 @@ def singles(args):
             else:
                 assert all(r['actual_window'] == 2 for r in receipts)
                 proof = dict(window_size=2, transitions=sum(r['image_shape'][0] - 1 for r in rows),
-                             contexts_per_transition=1, additional_contexts=0)
+                             contexts_per_transition=1, additional_contexts=0,actual_baseline_clips_inspected=len(receipts))
             write_json(args.out / 'decisions' / (arm + '.json'), dict(status='not_applicable', eligible=False,
                        reason='Source and full-cohort tensor identity; no substituted mechanism', proof=proof))
             continue
@@ -265,12 +295,14 @@ def singles(args):
 
 def combinations(args):
     from .selection import eligible
+    verify_selection_lock(args)
     rows = read_json(args.out / 'image_inventory.json')
     for arm in ('C01', 'C02', 'C03'):
         constituent = [read_json(args.out / 'decisions' / (m + '.json')) for m in ARMS[arm]['modules']]
         if not all(r['eligible'] for r in constituent):
             write_json(args.out / 'decisions' / (arm + '.json'), dict(status='not_eligible', eligible=False,
-                reason='At least one constituent did not independently pass the registered full-cohort gate'))
+                reason='At least one constituent did not independently pass the registered full-cohort gate',
+                constituent_decisions=dict(zip(ARMS[arm]['modules'],constituent))))
             continue
         _, failed = execute(args, arm, rows)
         if failed:
@@ -283,6 +315,7 @@ def combinations(args):
 
 def transfers(args):
     from .selection import eligible, ranking
+    verify_selection_lock(args)
     rows = read_json(args.out / 'image_inventory.json')
     baseline = read_json(args.out / 'scores/full/B0/summary.json')
     candidate_ids = [a for a in [*ORDER, 'C01', 'C02', 'C03'] if a != 'E01'
@@ -290,6 +323,11 @@ def transfers(args):
     ranked = sorted(candidate_ids, key=lambda a: ranking(a, read_json(args.out / 'scores/full' / a / 'summary.json'),
                     baseline, read_json(args.out / 'execution/full' / (a + '.json'))['seconds']))
     finalists = {x: ranked[i] if i < len(ranked) else None for i, x in enumerate(('X01', 'X02'))}
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('public946_registered_contract',HANDOVER/'study_contract.py')
+    contract=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(contract)
+    contract.validate_resolution(read_json(HANDOVER/'experiment_lock.json'),finalists)
     write_json(args.out / 'finalist_lock.json', dict(resolution=finalists, recipes={x: ARMS[a]['modules'] if a else None for x, a in finalists.items()},
         eligibility_hashes={a: sha(args.out / 'decisions' / (a + '.json')) for a in ranked},
         prediction_hashes={a: digest([read_json(args.out / 'predictions/full' / a / r['dataset'] / 'complete.json')['final_sha256'] for r in rows]) for a in ranked},
@@ -320,7 +358,8 @@ def run(args):
         for step in (pilot, controls, singles, combinations, transfers):
             step(args)
         from .delivery import robustness, package, report
-        for step in (robustness, package, report):
+        from .diagnostics import descriptive_strata
+        for step in (robustness, package, descriptive_strata, report):
             step(args)
         return
     from . import delivery

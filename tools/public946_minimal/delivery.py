@@ -120,6 +120,30 @@ def package(args):
     rows = pilot_rows(args)
     robust = read_json(args.out/'robustness.json') if (args.out/'robustness.json').exists() else {'recommendation':{}}
     selected = [a for a in candidates(args) if robust['recommendation'].get(a,{}).get('recommended',False)]
+    fresh_receipts = {}
+    full_rows = read_json(args.out/'image_inventory.json')
+    for arm in selected:
+        # The primary study permits legal neural replay for graph interventions.
+        # A packaging finalist receives an additional full fresh pass with a new
+        # DeepCenter cache, followed by the actual notebook's four-pilot test.
+        for row in full_rows:
+            cache = args.out/'fresh_finalist_cache'/arm/row['dataset']
+            cache.mkdir(parents=True, exist_ok=True)
+            link = cache/'input_hashes'
+            if not link.exists():
+                link.symlink_to(args.out/'input_hashes', target_is_directory=True)
+        _, failures = execute(args, arm, full_rows, 'fresh_finalists', modules=arm_modules(args,arm))
+        matches = {}
+        for row in full_rows:
+            reference = args.out/'predictions/full'/arm/row['dataset']/'complete.json'
+            path = args.out/'predictions/fresh_finalists'/arm/row['dataset']/'complete.json'
+            if path.exists():
+                before, after = read_json(reference), read_json(path)
+                matches[row['dataset']] = before['graph_hash']==after['graph_hash'] and after['neural_fresh']
+        fresh_receipts[arm] = dict(expected_clips=len(full_rows), graph_identity=matches, failed=failures,
+            passed=not failures and len(matches)==len(full_rows) and all(matches.values()),
+            scope='Both tracking models and DeepCenter recomputed from public models and original images; isolated new heatmap cache')
+    write_json(args.out/'fresh_finalist_receipts.json',fresh_receipts)
     destination = args.out/'packages'
     records = []
     # Public controls are always delivered. Candidate slots with failed gates remain empty.
@@ -171,7 +195,8 @@ nbformat.write(nb,sys.argv[3])
             write_json(prior_test,test_record)
         record.update(notebook_returncode=test_record['returncode'],notebook_test_seconds=test_record['seconds'],
                       tested_pilots=[r['dataset'] for r in rows],full_cohort_notebook_executed=False,
-                      full_cohort_scientific_worker_executed=(args.out/'scores/full'/arm/'summary.json').exists())
+                      full_cohort_scientific_worker_executed=(args.out/'scores/full'/arm/'summary.json').exists(),
+                      full_cohort_fresh_confirmation=fresh_receipts.get(arm))
         if test_record['returncode']==0:
             comparisons=[]
             scoring=[]
@@ -187,7 +212,8 @@ nbformat.write(nb,sys.argv[3])
                 comparisons.append(a['graph_hash']==b['graph_hash'])
                 scoring.append(one(row,artifact,args.out/'scores/package'/arm/(row['dataset']+'.json')))
             record.update(pilot_graph_identity=comparisons,pilot_score=summarize(scoring,[r['dataset'] for r in rows]),
-                          ready_for_manual_test=all(comparisons),submission_sha256=sha(root/'submission.csv'))
+                          ready_for_manual_test=all(comparisons) and (arm in ('B0','B1') or fresh_receipts[arm]['passed']),
+                          submission_sha256=sha(root/'submission.csv'))
         else:
             record.update(ready_for_manual_test=False,blocker='Actual packaged notebook failed; see retained notebook.log')
         records.append(record)
@@ -235,9 +261,11 @@ in the audited local runtime. A fresh output directory produces a fresh pass.
 
 
 def report(args):
+    from .measurements import collect, append_report
     destination=REPO/'results/public946-minimal-generalization-v1'
     destination.mkdir(parents=True,exist_ok=True)
     rows=read_json(args.out/'image_inventory.json')
+    measurements,cost=collect(args,destination)
     matrix=[]
     embryo_rows=[]
     for arm, registration in ARMS.items():
@@ -247,40 +275,73 @@ def report(args):
         summary=read_json(summary_path) if summary_path.exists() else None
         decision=read_json(decision_path) if decision_path.exists() else {}
         execution=read_json(execution_path) if execution_path.exists() else {}
-        rec=dict(arm=arm,parent=registration['parent'],modules='+'.join(registration['modules']),
+        measured=measurements.get(arm,{})
+        totals=measured.get('totals',{})
+        modules=arm_modules(args,arm) if not arm.startswith('X') or (args.out/'finalist_lock.json').exists() and read_json(args.out/'finalist_lock.json')['recipes'][arm] is not None else []
+        rec=dict(arm=arm,parent=registration['parent'],modules='+'.join(modules),
             status=decision.get('status','measured_control' if summary else 'not_yet_executed'),
-            eligible=decision.get('eligible'),expected_clips=199,completed_clips=len(execution.get('completed',[])),
+            eligible=decision.get('eligible'),expected_clips=199,completed_clips=len(execution.get('completed',measured.get('completed',[]))),
             failed_clips=len(execution.get('failed',[])),score=summary['pooled']['score'] if summary else None,
             original_export_score=summary['original_export']['score'] if summary else None,
-            delta_B0=None,delta_B1=None,seconds=execution.get('seconds'),
+            delta_B0=None,delta_B1=None,min_embryo_delta_parent=None,
+            seconds=execution.get('seconds',totals.get('worker_seconds')),
             reason='; '.join(decision.get('reasons',[])) or decision.get('reason'),
-            edge_tp=None,edge_fp=None,edge_fn=None,division_tp=None,division_fp=None,division_fn=None,division_jaccard=None)
+            edge_tp=None,edge_fp=None,edge_fn=None,division_tp=None,division_fp=None,division_fn=None,division_jaccard=None,
+            adj_edge_jaccard=None,num_pred_nodes=None,original_tp_survived=None,original_tp_lost=None,recovered_tp=None,
+            fresh_tracking_model_clips=totals.get('fresh_tracking_model_clips'),replayed_tracking_model_clips=totals.get('replayed_tracking_model_clips'),
+            allocated_gpu_peak_bytes=totals.get('gpu_allocated_peak_bytes'),rss_peak_bytes=totals.get('rss_peak_bytes'),
+            prediction_output_bytes=totals.get('prediction_output_bytes'),
+            nodes_added_exact=totals.get('nodes_added_exact'),nodes_removed_exact=totals.get('nodes_removed_exact'),
+            edges_added_exact=totals.get('edges_added_exact'),edges_removed_exact=totals.get('edges_removed_exact'))
         if summary:
             rec.update(summary['pooled']['counts'])
             rec['division_jaccard']=summary['pooled']['division_jaccard']
+            rec['adj_edge_jaccard']=summary['pooled']['adj_edge_jaccard']
+            for k in ('original_tp_survived','original_tp_lost','recovered_tp'):
+                rec[k]=summary.get(k)
             for parent in ('B0','B1'):
                 p=args.out/'scores/full'/parent/'summary.json'
                 if p.exists():
                     rec['delta_'+parent]=rec['score']-read_json(p)['pooled']['score']
+            deltas=[]
             for embryo,value in summary['per_embryo'].items():
-                embryo_rows.append(dict(arm=arm,embryo=embryo,score=value['score'],division_jaccard=value['division_jaccard'],**value['counts']))
+                er=dict(arm=arm,embryo=embryo,score=value['score'],division_jaccard=value['division_jaccard'],
+                        adj_edge_jaccard=value['adj_edge_jaccard'],original_export_score=summary.get('original_export_per_embryo',{}).get(embryo,{}).get('score'),**value['counts'])
+                for parent in ('B0','B1'):
+                    p=args.out/'scores/full'/parent/'summary.json'
+                    er['delta_'+parent]=value['score']-read_json(p)['per_embryo'][embryo]['score'] if p.exists() else None
+                own_parent='B1' if arm.startswith('X') else 'B0'
+                if er['delta_'+own_parent] is not None:
+                    deltas.append(er['delta_'+own_parent])
+                embryo_rows.append(er)
+            rec['min_embryo_delta_parent']=min(deltas) if deltas else None
         matrix.append(rec)
     def csv_write(path,records,fields):
         with path.open('w',newline='') as handle:
             w=csv.DictWriter(handle,fieldnames=fields,extrasaction='ignore');w.writeheader();w.writerows(records)
     csv_write(destination/'experiment_matrix.csv',matrix,list(matrix[0]))
-    csv_write(destination/'per_embryo_scores.csv',embryo_rows,['arm','embryo','score','division_jaccard','edge_tp','edge_fp','edge_fn','division_tp','division_fp','division_fn','num_pred_nodes'])
+    csv_write(destination/'per_embryo_scores.csv',embryo_rows,['arm','embryo','score','original_export_score','delta_B0','delta_B1','division_jaccard','adj_edge_jaccard','edge_tp','edge_fp','edge_fn','division_tp','division_fp','division_fn','num_pred_nodes'])
     packages=read_json(args.out/'packages/manifest.json') if (args.out/'packages/manifest.json').exists() else []
+    robust=read_json(args.out/'robustness.json') if (args.out/'robustness.json').exists() else {}
+    outcomes=robust.get('outcomes',{})
+    controls_portable=all(outcomes.get(arm+'_renamed_reverse',{}).get('status')=='passed' and
+        all(outcomes.get(arm+'_'+transform,{}).get('status')=='measured' for transform in ('reflect_x','reflect_y'))
+        for arm in ('B0','B1'))
     accounted=all(r['status']!='not_yet_executed' for r in matrix)
     scientifically_resolved=all(r['status'] in ('measured_control','measured','not_applicable','not_eligible','no_eligible_finalist') for r in matrix)
     novel_ready=any(r.get('ready_for_manual_test') and r['arm'] not in ('B0','B1') for r in packages)
-    terminal=('ready_for_manual_lb_test' if novel_ready else 'completed_no_improvement') if scientifically_resolved and len(packages)>=2 and all(r.get('ready_for_manual_test') for r in packages) else 'partially_executed_with_named_blockers'
+    terminal=('ready_for_manual_lb_test' if novel_ready else 'completed_no_improvement') if scientifically_resolved and controls_portable and len(packages)>=2 and all(r.get('ready_for_manual_test') for r in packages) else 'partially_executed_with_named_blockers'
     status=dict(study='public946-minimal-generalization-v1',revision=2,status=terminal,
         all_registered_arms_accounted=accounted,measured_arms=[r['arm'] for r in matrix if r['score'] is not None],
         unrun_arms=[r['arm'] for r in matrix if r['status']=='not_yet_executed'],
-        blockers=[dict(arm=r['arm'],status=r['status'],reason=r['reason']) for r in matrix if r['status'] in ('not_yet_executed','engineering_failures')],
+        blockers=[dict(arm=r['arm'],status=r['status'],reason=r['reason']) for r in matrix if r['status'] in ('not_yet_executed','engineering_failures','measured_with_comparison_blocked')],
+        control_portability_checks_complete=controls_portable,
+        no_improvement_definition='No novel recipe passed every full-population, lineage, robustness and packaging gate; individual local gains remain reported.',
         controls_only_is_complete=False,leaderboard_submission_performed=False,leaderboard_score=None,
         clean_validation_available=False,output_root=str(args.out),updated=now())
+    if not controls_portable:
+        status['blockers'].append(dict(arm='B0/B1',status='portability_checks_pending_or_failed',reason='Both reflected pilot evaluations and exact renamed/reordered graphs must complete.'))
+    status['blockers'] += [dict(arm=p['arm'],status='package_not_ready',reason=p.get('blocker','Notebook graph parity or full fresh finalist confirmation failed.')) for p in packages if not p.get('ready_for_manual_test')]
     write_json(destination/'status.json',status)
     historical={'B0':.911774,'B1':.934206}
     text=['# Expanded public946 study — measured execution\n',
@@ -292,21 +353,27 @@ def report(args):
     text += ['\n## Interpretation and limitations\n',
         'Both supplied embryos and overlapping clips have prior checkpoint/study exposure. These paired local measurements are exploratory and are not clean OOF or unseen-embryo validation. A local score above 0.95 is not a stopping rule or evidence of 0.95+ LB. No local delta is added to the historical public score.\n',
         'E03/E06 source-resolved no-op evidence, E01 proposal counts/possible B1 identity, failed methods, per-embryo regressions and conditional exclusions are retained in the JSON receipts. Missing scores are null, never zero.\n',
-        'All inference uses the original public model/source and fixed settings. B0 explicitly retains motion. Mandatory bounds clipping is identical in every arm, applied after natural ties-to-even rounding. Original serialized outputs are scored separately; no old half-tie lookup corrections are used.\n',
+        'All inference uses the original public model/source and fixed settings. B0 explicitly retains motion. Mandatory bounds clipping is identical in every arm, applied after natural ties-to-even rounding. The original CSV lower clamp is reconstructed and scored separately from complete bounds sanitation; no old half-tie lookup corrections are used.\n',
         'The local CUDA/runtime/source/input/model fingerprints are frozen in execution_lock.json. Pilot score comparisons do not select recipes; full eligibility/ranking and the three combinations are fixed in the handover.\n',
         '\n## Reproduction and artifacts\n',
         'Raw outputs: `'+str(args.out)+'`. Predictions, dense/native evidence, original notebooks, models and submissions remain ignored and outside Git.\n',
-        'Resume: `bash scripts/run_public946_minimal.sh run --resume --out '+str(args.out)+'`. Individual stages: `preflight`, `audit`, `pilot`, `controls`, `singles --arm E04`, `combinations`, `transfers`, `robustness`, `package`, `report`.\n',
+        'Resume: `bash scripts/run_public946_minimal.sh run --resume --workers 4 --out '+str(args.out)+'`. Individual stages: `preflight`, `audit`, `pilot`, `controls`, `singles --arm E04`, `combinations`, `transfers`, `robustness`, `package`, `report`.\n',
         'Synthetic checks: `PYTHONNOUSERSITE=1 /kaggle/envs/cell-tracking-notebooks/bin/python -m unittest discover -s tests -p "test_public946_minimal*.py" -v`.\n',
         'Standalone offline notebooks, readable exports, exact public dependencies and manual Kaggle instructions: `'+str(args.out/'packages')+'`. Each manifest states actual fresh notebook test scope; worker full-cohort tests and actual notebook pilot tests are distinguished.\n']
     (destination/'REPORT.md').write_text('\n'.join(text))
     (destination/'START_HERE.md').write_text('# Public946 expanded revision 2\n\nRead [REPORT.md](REPORT.md), [status.json](status.json), [experiment_matrix.csv](experiment_matrix.csv), and [NEXT_AGENT.md](NEXT_AGENT.md).\n\nExecution status: `'+terminal+'`. No automatic Kaggle submission.\n')
-    (destination/'NEXT_AGENT.md').write_text('# Continue exact registered execution\n\nRun `bash scripts/run_public946_minimal.sh run --resume --out '+str(args.out)+'`. Review the current status and per-arm failures first. Do not edit the handover registry or retune recipes; retain correctness failures and rerun affected stages after any documented engineering fix.\n\nOriginal scope includes all eight singles, conditional C01/C02/C03, and locked X01/X02. B0/B1 alone is incomplete. Earlier studies and preexisting workspace changes must remain untouched. Do not submit automatically.\n\nUnrun arms at report time: '+', '.join(status['unrun_arms'])+'.\n')
+    next_action=('The registered local study is complete. Review the measured report and package manifest; a new manual Kaggle test is the only way to obtain a new LB score. Do not reopen rejected recipes or fill empty finalist slots with unregistered changes.' if scientifically_resolved and terminal!='partially_executed_with_named_blockers' else 'Review named blockers and resume the exact registered matrix.')
+    (destination/'NEXT_AGENT.md').write_text('# Exact study continuation and handoff\n\n'+next_action+'\n\nIdempotent verification/resume: `bash scripts/run_public946_minimal.sh run --resume --workers 4 --out '+str(args.out)+'`. Do not edit the handover registry or retune recipes; retain correctness failures and rerun affected stages after any documented engineering fix.\n\nOriginal scope includes all eight singles, conditional C01/C02/C03, and locked X01/X02. B0/B1 alone is incomplete. Earlier studies and preexisting workspace changes must remain untouched. Do not submit automatically.\n\nUnrun arms at report time: '+(', '.join(status['unrun_arms']) or 'none')+'.\n')
     for name in ('plan_freeze.json','execution_lock.json','applicability.json','source_audit.json','metric_identity.json','preflight.json',
-                 'numerical_noise.json','finalist_lock.json','robustness.json'):
+                 'numerical_noise.json','finalist_lock.json','robustness.json','fresh_finalist_receipts.json',
+                 'selection_code_lock.json','diagnostic_lock.json','scheduler_policy.json','scheduler_amendment_01.json',
+                 'license_receipt.json','pilot_compute_projection.json','evaluation_code_lock.json','retention_policy.json'):
         p=args.out/name
         if p.exists():
             write_json(destination/name,read_json(p))
     write_json(destination/'packaging_receipts.json',packages)
     write_json(destination/'arm_decisions.json',{p.stem:read_json(p) for p in sorted((args.out/'decisions').glob('*.json'))})
+    write_json(destination/'engineering_corrections.json',{
+        str(p.parent.relative_to(args.out)):read_json(p) for p in (args.out/'engineering_failures').rglob('correction.json')})
+    append_report(args,destination,measurements,cost)
     print('Wrote report:',destination,flush=True)

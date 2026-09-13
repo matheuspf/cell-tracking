@@ -7,7 +7,7 @@ the registered scalar-response, association-probability and graph hooks, and
 keeps inference and official evaluation in separate processes.
 
 ```sh
-bash scripts/run_public946_minimal.sh run --resume --workers 2
+bash scripts/run_public946_minimal.sh run --resume --workers 4
 ```
 
 The default interpreter is the existing
@@ -20,15 +20,24 @@ No command installs models, trains networks, publishes notebooks, or submits to 
 Stages are `preflight`, `audit`, `pilot`, `controls`, `singles`, `combinations`,
 `transfers`, `robustness`, `package`, and `report`. `singles --arm E04` resumes a
 particular registered arm. Completed results require matching immutable source,
-input, model, recipe and output fingerprints. Keep the worker count unchanged
-when resuming a started full-cohort pass because its resource allocation is part
-of the execution fingerprint.
+input, model, recipe and output fingerprints. Completed jobs retain their actual
+recorded resource allocation when resuming; new jobs use the requested worker
+count. Record resource-only scheduler amendments before changing concurrency.
 
 The configured limits are 96 summed worker device-hours, 22 GiB total allocated
-GPU memory, 48 GiB new scratch and a 10 GiB filesystem reserve. Two full-cohort
-workers each receive an 11 GiB allocation cap on the same GPU. Pilots run
+GPU memory, 48 GiB new scratch and a 10 GiB filesystem reserve. Four full-cohort
+workers each receive a 5.5 GiB allocation cap on the same GPU. The first nine
+baseline jobs used two workers at 11 GiB each, before a recorded resource-only
+scheduler amendment based on measured memory and utilization. Pilots run
 serially. Summed worker wall time is a conservative accounting quantity, including
 CPU work; `telemetry.py` separately records sampled per-process SM utilization.
+Package wall time, recorded failures and unscored smoke workers also count toward
+the conservative device-time budget. The first full baseline clips showed that
+retaining every arm's dense matrices would threaten the scratch cap. Full B0 and
+all pilot probabilities remain intact; other completed arms retain exact compact
+candidate/offset evidence, full-matrix hashes and source/target universes, without
+quantization. Compaction journals recover interrupted writes. E01 cannot reuse a
+compacted cache. Fresh-finalist DeepCenter maps are clip-local and retain hashes.
 
 ## Source-resolved recipes
 
@@ -75,6 +84,9 @@ PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover \
 All-199 scoring uses fresh per-arm official matching, run-level weighted
 aggregation, division micro-aggregation, and a separate original-export score.
 Every delivered graph uses natural rounding and identical bounds clipping.
+The worker's `original_nodes` array retains rounded coordinates before clamping;
+the separate evaluator reconstructs v29's actual CSV `max(0, round(value))`
+before scoring the original export. Its upper-bound violations remain visible.
 Historical half-tie lookup corrections are never imported into inference.
 
 Standalone notebooks are ignored outputs under `packages/`, accompanied by
