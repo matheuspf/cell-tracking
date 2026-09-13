@@ -1,9 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "study": "public946-minimal-generalization-v1",
+  "plan_revision": 2,
   "created_date": "2026-09-13",
   "status": "planned_not_executed",
   "base_commit": "fb5521629eb41c8c485b291a5bcf344944c113ae",
+  "supersedes_commit": "dd7810dcc7bb4b0779860b572cd487f987a1df19",
   "branch": "handover/public946-minimal-generalization-v1",
   "baseline": {
     "ref": "flexonafft/biohub-harmonic-fusion",
@@ -13,74 +15,191 @@
     "repository_score_verification_date": "2026-09-08",
     "live_lb_independently_verified": false
   },
-  "hypothesis": "Removing post-ILP motion reassignment may preserve learned associations better on unseen embryos.",
-  "selection_history": "Hypothesis chosen using existing exploratory v2 ablation; this lock does not erase prior selection or checkpoint exposure.",
-  "arms": {
-    "B0": {
-      "scientific_changes": []
-    },
-    "B1": {
-      "scientific_changes": [
-        {
-          "setting": "OUTPUT_MOTION_RELINK",
-          "value": false
-        }
-      ]
-    }
-  },
-  "max_scientific_candidates": 1,
+  "max_total_configurations": 15,
+  "max_finalists": 2,
   "new_training_runs": 0,
   "new_checkpoints": 0,
   "new_external_datasets": 0,
   "parameter_sweeps_allowed": false,
   "per_embryo_policy_allowed": false,
   "leaderboard_adaptive_revision_allowed": false,
+  "kaggle_submission_authorized": false,
+  "manual_novel_candidate_test_slots": 2,
   "historical_metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
   "historical_local_references": {
     "B0": 0.911774,
-    "B1_bounds_validated": 0.934206,
+    "B1": 0.934206,
     "v3_context_only": 0.934802374260586,
     "v6_context_only": 0.9348649864131336
   },
   "historical_rounding_tolerance": 1e-06,
+  "public_lb_target": 0.95,
+  "local_score_target": null,
   "fresh_pilots": {
     "per_embryo": 2,
-    "selection": "nearest 25th/75th percentiles of metadata q99-q10 contrast; tie by stem; no labels/scores"
+    "selection": "nearest metadata q99-q10 contrast quartiles 25/75; ties by stem; no labels/scores"
   },
-  "robustness_checks": [
-    "unfamiliar_stems",
-    "reverse_input_enumeration",
-    "x_reflection_with_inverse_coordinates",
-    "fresh_process_repeat"
+  "execution_order": [
+    "E01",
+    "E07",
+    "E02",
+    "E03",
+    "E08",
+    "E05",
+    "E06",
+    "E04"
   ],
-  "clean_confirmation": "only if already available, truly unexamined and proven embryo-disjoint; otherwise explicitly unavailable",
-  "readiness_rule": [
-    "baseline_identity_verified",
-    "only_registered_scientific_change",
-    "positive_pooled_delta",
-    "positive_delta_both_embryos",
-    "nondecreasing_pooled_division_jaccard",
-    "valid_output",
-    "annotation_free_fresh_inference",
-    "no_unexplained_portability_or_repeat_failure"
-  ],
-  "bounds_sanitation": "only if required, identical both arms, raw/sanitized paired scoring; zero score/count effect required for one-change evidence claim",
-  "local_score_target": null,
-  "public_lb_target": 0.95,
-  "kaggle_submission_authorized": false,
-  "manual_new_candidate_trials": 1,
-  "candidate_source_sha256": null,
+  "limits_to_resolve_before_execution": {
+    "gpu_device_hours_max": 96,
+    "gpu_allocated_gib_max": 22,
+    "new_scratch_gib_max": 48,
+    "filesystem_reserve_gib_min": 10,
+    "selection_by_scores_forbidden": true
+  },
+  "selection_policy": "VALIDATION.md; full B0 gate; rank min embryo delta then pooled delta, module count, runtime, ID; X compares B1",
+  "source_audit": "Resolve original interfaces before comparative scores; no-op needs proof; missing cache is not non-applicability",
+  "combination_policy": "Only C01/C02/C03; both constituents must pass; no replacements or arbitrary stacks",
+  "transfer_policy": "Lock top two eligible non-E01 recipes once before X scores; no replacement after failures",
+  "score_exposure": "All supplied embryos previously examined; inherited model exposure; no clean OOF claim",
+  "recipe_document": "EXPERIMENTS.md",
   "local_execution_complete": false,
   "leaderboard_score": null,
-  "completed_by_planner": [
-    "repository_source_and_report_review",
-    "synthetic_source_helper_tests"
-  ],
-  "not_done_by_planner": [
-    "local_original_notebook_audit",
-    "microscopy_inference",
-    "official_metric_rerun",
-    "kaggle_notebook_packaging",
-    "kaggle_submission"
+  "arms": [
+    {
+      "id": "B0",
+      "parent": null,
+      "modules": [],
+      "name": "Original public Harmonic Fusion v29",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "B1",
+      "parent": "B0",
+      "modules": [
+        "no_motion"
+      ],
+      "name": "Known no-motion control",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E01",
+      "parent": "B0",
+      "modules": [
+        "E01"
+      ],
+      "name": "Native-evidence-gated relinking",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E02",
+      "parent": "B0",
+      "modules": [
+        "E02"
+      ],
+      "name": "Analytic sub-voxel localization",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E03",
+      "parent": "B0",
+      "modules": [
+        "E03"
+      ],
+      "name": "Continuous feature sampling",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E04",
+      "parent": "B0",
+      "modules": [
+        "E04"
+      ],
+      "name": "Half-grid detector consensus",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E05",
+      "parent": "B0",
+      "modules": [
+        "E05"
+      ],
+      "name": "Association reflection consensus",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E06",
+      "parent": "B0",
+      "modules": [
+        "E06"
+      ],
+      "name": "Forward-time context consensus",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E07",
+      "parent": "B0",
+      "modules": [
+        "E07"
+      ],
+      "name": "Fork-anchored smoothing",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "E08",
+      "parent": "B0",
+      "modules": [
+        "E08"
+      ],
+      "name": "Median detection-view aggregation",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "C01",
+      "parent": "B0",
+      "modules": [
+        "E02",
+        "E03"
+      ],
+      "name": "Localization plus feature sampling",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "C02",
+      "parent": "B0",
+      "modules": [
+        "E04",
+        "E05"
+      ],
+      "name": "Detector plus association consistency",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "C03",
+      "parent": "B0",
+      "modules": [
+        "E05",
+        "E06"
+      ],
+      "name": "Spatial plus temporal association consensus",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "X01",
+      "parent": "B1",
+      "modules": [
+        "locked_finalist"
+      ],
+      "name": "First locked non-E01 recipe on B1",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "X02",
+      "parent": "B1",
+      "modules": [
+        "locked_finalist"
+      ],
+      "name": "Second locked non-E01 recipe on B1",
+      "status": "planned_not_executed"
+    }
   ]
 }

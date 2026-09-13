@@ -1,145 +1,102 @@
-# Baseline mechanics and evidence boundary
+# Baseline, evidence and novelty boundary — revision 2
 
-## What was actually inspected
+## Immutable starting point
 
-The planner read the committed repository at main
-`fb5521629eb41c8c485b291a5bcf344944c113ae`, including agent instructions, public
-notebook provenance, inference adapters, architecture receipts, measured v2
-results and the v6 continuation. Raw microscopy, public notebook originals and
-weights are deliberately ignored in Git and were not available in this session.
-The local source review in P000 is therefore mandatory; this document does not
-pretend to be a line-by-line audit of an unavailable original notebook.
-
-The user's current public-score report is 0.946. Repository verification is
-dated **2026-09-08**, not today. Web access to the Kaggle leaderboard/evaluation
-pages did not expose usable score/metric contents during planning. Local Codex
-must verify the published notebook version and current official metric through
-the existing throttled reference tools; do not silently choose a newer notebook.
-
-## Public notebook to preserve
-
-`docs/notebooks.md` and `configs/notebooks.json` identify:
-
-- `flexonafft/biohub-harmonic-fusion`, v29, scriptVersionId 347965685, LB 0.946.
-- `redoctopusk/biohub-942tta`, v1, scriptVersionId 347821442, also LB 0.946.
-
-Use the first, because it has the complete existing local replay. Do not claim
-it uniquely leads the competition. Older Code-list scores were stale after a
-metric rescore; compare published versions and one evaluator revision.
+Use `flexonafft/biohub-harmonic-fusion`, v29, script version 347965685. The user's
+reported public score is 0.946; the repository verification is dated 2026-09-08,
+not a live leaderboard verification by this planner. Another public notebook is
+recorded tied at 0.946. Do not silently upgrade the source to a newer version.
 
 Original local archive:
 `/kaggle/notebooks/biohub-cell-tracking-during-development/flexonafft/biohub-harmonic-fusion/`.
-Readable local export: `/kaggle/working/biohub-harmonic-fusion.py`.
-The archived .ipynb, metadata and local-verification.json are provenance sources.
+Readable export: `/kaggle/working/biohub-harmonic-fusion.py`.
+Inputs include the existing pilkwang support pack, DeepCenter center-prior and
+seed314159 temporal U-Net datasets. The downloaded originals and weights are
+ignored by Git and must be audited locally. The planner inspected committed
+adapters and reports, not these unavailable original artifacts.
 
-Its inputs are the competition plus the existing pilkwang datasets:
-`biohub-tracking-support-pack-50ep-v1`,
-`biohub-deepcenter-unet3d-center-prior-v1`, and
-`biohub-temporal-unet3d-seed314159-v1`. Preserve actual dataset versions and
-checkpoint hashes; no extra data/model downloads or training in this study.
+## Pipeline to preserve
 
-## How the existing solution works
+The source adapters describe temporal 3D U-Net detections/features and a node
+transformer, detection TTA and secondary harmonic fusion, candidate associations,
+ILP graph selection, motion repair, one-frame/gap2 completion, safe divisions,
+pruning, line-fit smoothing and integer CSV export. Eight-view detection TTA is
+not proof that the learned association head is also augmentation-averaged.
 
-1. **Image preparation.** Read 3D images over time. The committed native adapter
-   uses `(T,Z,Y,X)` input, spatial downsampling `(1,4,4)` and stored 0.001/0.999
-   intensity quantiles. This maps the typical 64x256x256 volume onto a 64-cubed
-   grid. Native voxel spacing is anisotropic; physical distances must not be
-   confused with original or downsampled voxel distances. P000 must verify the
-   complete public path, including any notebook-specific preprocessing patches.
-2. **Learned detection and association.** The installed model is
-   `UNetNodeTransformer / TemporalUNet3D / SimpleNodeTransformer`. The architecture
-   receipt records 2,076,706 parameters for the inspected native model, not the
-   sum of all models in the notebook. The image encoder consumes two-frame
-   context; downstream decoding has five-frame context. It produces detection
-   evidence and features for scoring possible temporal links. Public inference
-   includes eight-view detection TTA and a secondary harmonic mixture. Keep
-   both checkpoints and these operations; the exact transform set, inverse
-   mapping, fusion formula, location and coefficients must be transcribed from
-   the archived source, not invented from the notebook title.
-3. **Candidate graph and constrained selection.** The committed native trace
-   records parent-column normalization, `softmax(raw, dim=0)`, a probability
-   threshold >0.48, and ILP graph selection with indegree <=1 and outdegree <=2.
-   Its objective uses edge cost `-edge_probability`, appearance 0,
-   disappearance 2 and division 1.2. The trace proves that a raw fork is dominated
-   by detaching a daughter as a free appearance under those settings. This
-   explains why later safe-division repair matters. Do not tune these costs here.
-4. **Heuristic output repair.** The actual public call graph is: raw neural graph
-   -> edge validity / motion reassignment -> one-frame and strict gap2 repair
-   -> safe-division additions -> isolated/short-component pruning -> line-fit
-   smoothing -> integer serialization. DeepCenter evidence is used in repair
-   through the existing detector/heatmap helpers. Preserve its epoch-2 checkpoint
-   and exact use; this is not a request to add cell segmentation.
-5. **Submission.** Export node and edge rows to a CSV generated from whatever
-   test-image stems Kaggle provides, without reading annotation graphs or using
-   local per-embryo fitted models.
+The native adapter records `(T,Z,Y,X)`, downsampling `(1,4,4)`, metadata intensity
+quantiles 0.001/0.999, lower clipping without upper clipping, two-frame image
+context and five-frame decoding context. It explicitly documents truncation in
+the installed feature extractor. These are source-review leads, not permission
+to replace the full public implementation: the v5 native comparison omits public
+TTA and secondary fusion. Verify raw-voxel, downsampled-grid and physical units,
+center offsets, original coordinate precision and every tensor interface locally.
 
-The key distinction is between the **learned association / ILP graph** and the
-**later motion relinker**. Disabling the latter does not turn off tracking, the
-neural model, the ILP, gap completion or division repair.
+The traced parent probability normalization is `softmax(raw, dim=0)`: competing
+parents normalize within a target column, not the reverse. Candidate threshold
+is >0.48; traced ILP costs are edge=-p, appearance=0, disappearance=2, division=1.2.
+A fork in this raw objective is dominated by making one daughter a free birth:
+removing an edge of probability p and a division costs p-1.2 <= -0.2. Thus generic
+ILP division-cost tuning is neither a baby-step inference fix nor part of this
+study. Safe-division postprocessing remains essential to the public pipeline.
 
-## Measured evidence motivating this one change
+## Historical measurements (not fresh results)
 
-The v2 study scored all 199 supplied clips with the same official run-level
-aggregation. Its reported progression is:
+| Configuration | All-199 local score |
+|---|---:|
+| Original public B0 | 0.911774 |
+| Raw neural graph before repairs | 0.914903 |
+| Full public pipeline with motion bypassed, B1 | 0.934206 |
+| v3 selected residual pipeline, context only | 0.934802374260586 |
+| v6 P0 residual pipeline, context only | 0.9348649864131336 |
 
-| Graph | Local score | Interpretation |
-|---|---:|---|
-| Raw neural graph | 0.914903 | Before heuristic output repair |
-| After motion relinking | 0.892978 | Descriptive intermediate phase |
-| Full original public pipeline | 0.911774 | B0 identity reference |
-| Full pipeline, motion relinking bypassed | 0.934206 | Complete ablation, not just a phase comparison |
-| v3 retained residual pipeline | 0.934802374260586 | More complex local-only reference; not this candidate |
-| v6 P0 point residual | 0.9348649864131336 | More complex local-only reference; not this candidate |
+B0 -> B1 per embryo: 44b6 0.912521 -> 0.931612; 6bba 0.911597 -> 0.934525.
+Edge counts: 122201/6885/6682 -> 123023/4930/5860 TP/FP/FN.
+Division counts: 23/97/128 -> 29/92/122. Removing all smoothing or safe divisions
+was worse in the v2 complete ablations. E07 therefore protects branch points
+while retaining ordinary smoothing; it does not simply disable smoothing.
 
-The complete no-motion ablation improved both recorded embryos:
+V2 evaluated 104 complete variants. It already investigated learned native
+association/fork selectors, deletion risk, temporal image classifiers and repair
+combinations. V4's external-data training produced no adopted candidate. Do not
+repeat these studies under new names or present the known B1 gain as new research.
+The eight new arms are registered hypotheses, **not certified historically novel**:
+check older local logs for an identical implementation, and cite/reuse exact
+matching evidence rather than secretly re-searching it. Source-only differences
+are insufficient if the actual tensors/graphs are unchanged.
 
-| Embryo | Original | No-motion | Delta |
-|---|---:|---:|---:|
-| 44b6 | 0.912521 | 0.931612 | +0.019091 |
-| 6bba | 0.911597 | 0.934525 | +0.022928 |
+## Validation limitations
 
-Pooled edge counts changed from **122,201 TP / 6,885 FP / 6,682 FN** to
-**123,023 TP / 4,930 FP / 5,860 FN**. Division counts changed from
-**23 TP / 97 FP / 128 FN** to **29 TP / 92 FP / 122 FN**.
-These are historical measurements, not fresh results from this branch.
+Public checkpoints were trained/selected using supplied embryos, and the two
+embryos and overlapping clips have been repeatedly examined. New splits, renamed
+files or replaying the metric do not make them clean OOF. The 0.946 public score
+uses a different population. Never add a local delta to it. Increasing the number
+of candidates increases selection risk even without fitted parameters. Revision 2
+therefore fixes each recipe, caps combinations, requires paired full-cohort
+measurements and preserves failures. It reduces unbounded tuning, not all bias.
 
-Removing smoothing or safe divisions did not show the same benefit in v2.
-The v4 external-data experiment adopted no candidate. V6's measured point-only
-gain was tiny and its learned-segmentation/Ultrack arms were blocked. None of
-that justifies bundling additional changes into this minimal public-baseline test.
+## Source map (pinned main unless stated otherwise)
 
-## Why this is plausible, and what it does not establish
+- `AGENTS.md`; `.agents/skills/competition-data/SKILL.md`: runtime/data discipline.
+- `docs/notebooks.md`; `configs/notebooks.json`: notebook versions and inputs.
+- `docs/competition.md`: sparse labels, units, aggregation and submission overview.
+- `tools/annotation_selection/public_lane.py`: original-notebook isolation.
+- `tools/image_native_tracking_v5/native_adapter.py`: feature truncation and native interfaces.
+- `tools/strong_tracker_v3/fresh.py`: normalization, ILP trace, fresh inference plumbing.
+- `tools/strong_tracker_v2/replay.py`: actual repair order, flags and stage hooks.
+- `tools/strong_tracker_v3/replay.py`: beware its hard-coded no-motion default.
+- `results/strong-tracker-v2/v2_report.md`: complete ablations, counts and contamination caveats.
+- `README.md`; `handover/segmentation-tracking-v6/CONTINUATION.md`: later retained methods.
 
-Hypothesis: the learned association model already incorporates useful image and
-competition context; an additional motion heuristic can overwrite that evidence
-with assumptions that transfer less reliably. Removing the heuristic reduces
-one source of hand-designed assumptions without fitting anything new.
+## External implementation references, checked 2026-09-13
 
-Counter-hypothesis: the motion prior helps genuinely unseen embryos even though
-it hurts these supplied embryos. A one-line stage removal can be a large
-behavioral change. The existing ablation was selected after 104 variants and
-repeated examination of two embryos; low parameter count does not erase that
-selection bias. Inherited checkpoints were also trained/selected using supplied
-embryos. New splits or renamed clips cannot turn this into clean OOF.
+- PyTorch `grid_sample` documentation: coordinate conventions and volumetric
+  interpolation. https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.grid_sample.html
+- MONAI inference documentation: overlapping-window aggregation and coverage
+  normalization. https://monai-dev.readthedocs.io/en/stable/inferers.html
+- Wang et al., *Aleatoric uncertainty estimation with test-time augmentation for
+  medical image segmentation*, arXiv:1807.07356. https://arxiv.org/abs/1807.07356
 
-Thus the plan freezes the already known hypothesis, adds fresh deployment and
-failure-mode checks, and prepares one manual hidden-LB trial. It does not promise
-that removing the stage improves generalization. In particular:
-`0.946 + (0.934206 - 0.911774)` is NOT a valid LB forecast.
-
-## Repository source map (all at the pinned base)
-
-- `AGENTS.md`; `.agents/skills/competition-data/SKILL.md`: environment and data discipline.
-- `docs/notebooks.md`; `configs/notebooks.json`: public notebook and model provenance.
-- `docs/competition.md`: sparse annotation, physical units, embryo split and submission snapshot.
-- `tools/annotation_selection/public_lane.py`: path-only original adaptation; excludes the GT-reading validator.
-- `tools/image_native_tracking_v5/native_adapter.py`;
-  `results/image-native-tracking-v5/native_architecture.json`: native network interface and public-vs-v5 distinctions.
-- `tools/strong_tracker_v3/fresh.py`: actual raw decoder trace and fresh-inference preparation.
-- `tools/strong_tracker_v2/replay.py`: real repair call graph and OUTPUT_MOTION_RELINK ablation.
-- `tools/strong_tracker_v3/replay.py`: repair namespace; beware its hard-coded no-motion default.
-- `results/strong-tracker-v2/v2_report.md`; `docs/strong-tracker-v2.md`: historical counts, scores, caveats and paths.
-- `README.md`; `handover/segmentation-tracking-v6/CONTINUATION.md`: later retained results and scope boundary.
-
-These sources are sufficient to nominate the minimal experiment, not to replace
-P000's audit of the original, fully patched notebook and prediction script.
+These support implementation concepts and a general test-time-consistency
+rationale, not evidence of a gain on Biohub. E04/E05/E06/E08 are proposed transfers
+of those ideas. No MONAI dependency or new paper model is required. Check the
+installed PyTorch API rather than upgrading to the documentation's current version.
