@@ -262,7 +262,19 @@ def append_report(args, destination, measurements, cost):
         paragraphs.append('Detailed first/last-two-frame and depth-quartile GT edge recovery counts, group scores and raw denominators are in strata.json; worst matched-TP-survival clips are in measurements.json. These are descriptions of failure locations, not causal proof.\n')
     paragraphs+=['\n## Source, runtime and portability evidence\n',
         'The actual checkpoint context is two frames; detector grid stride is (1,4,4) with zero-origin strided sampling. Effective detector pooling is the public CLI default 3.0 µm; checkpoint metadata contains 5.0 µm but that value is not passed to PredictConfig. The primary association features already use eight inverse-aligned D4 views; the secondary stream uses identity features. Public harmonic fusion combines forward/reverse association evidence; the secondary model uses the original calibrated low-margin logit mix. All numeric thresholds, fusion weights, models and repair settings remain fixed.\n',
-        'The pinned metric revision is `075fc5f5a52d11077f9dc2b074644618f26939e2`, verified against the official repository. Fresh throttled competition pages are retained in the ignored current_reference directory. The archive metadata specifies NvidiaTeslaT4; local tests use one RTX4090 and the pinned existing Python environment. Hidden Kaggle population/runtime feasibility is not established by local timing.\n',
-        'The public notebook page declares Apache-2.0; all three public dataset metadata records declare CC0-1.0. Standard license text, original attribution and the precise license-verification scope accompany the packages. No source/artifact relicense is claimed.\n']
+        'The pinned metric revision is [`075fc5f5a52d11077f9dc2b074644618f26939e2`](https://github.com/royerlab/kaggle-cell-tracking-competition/tree/075fc5f5a52d11077f9dc2b074644618f26939e2/src/tracking_cellmot), verified against the official repository. Fresh throttled competition pages are retained in the ignored current_reference directory. The archive metadata specifies NvidiaTeslaT4; local tests use one RTX4090 and the pinned existing Python environment. Hidden Kaggle population/runtime feasibility is not established by local timing.\n',
+        'The [public notebook page](https://www.kaggle.com/code/flexonafft/biohub-harmonic-fusion) declares Apache-2.0; all three public dataset metadata records declare CC0-1.0, as recorded in [license_receipt.json](license_receipt.json). Standard license text, original attribution and the precise license-verification scope accompany the packages. No source/artifact relicense is claimed.\n']
+    manifest=args.out/'packages/manifest.json'
+    if manifest.exists():
+        paragraphs.append('\n## Actual notebook and CSV validation\n')
+        for package in read_json(manifest):
+            check=package.get('actual_csv_validation')
+            full=package.get('full_cohort_fresh_image_to_csv')
+            paragraphs.append(f"- {package['arm']}: actual notebook return code {package.get('notebook_returncode')}; "
+                f"{len(package.get('tested_pilots',[]))} full pilots; "
+                +(f"{check['rows']:,} CSV rows exactly match the validated node/edge graphs. " if check else 'CSV validation receipt is pending. ')
+                +(f"Fresh full-cohort workers plus the actual packaged exporter produced {full['rows']:,} verified CSV rows for {len(full['datasets'])} clips. " if full else '')
+                +f"Ready for manual test: {package.get('ready_for_manual_test')}; notebook SHA256 `{package['notebook_sha256']}`.\n")
+        paragraphs.append('A complete notebook invocation is tested on the four full pilots. A novel packaging finalist also receives a fresh all-model pass over 199 clips followed by its actual packaged CSV exporter. That composed full-cohort execution is explicitly distinguished from invoking the whole notebook over all 199 clips. See packaging_receipts.json for exact scope and artifact paths.\n')
     p=destination/'REPORT.md'
     p.write_text(p.read_text()+'\n'.join(paragraphs))

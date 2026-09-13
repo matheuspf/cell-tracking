@@ -51,6 +51,68 @@ def pilot_rows(args):
     return [r for r in read_json(args.out/'image_inventory.json') if r['dataset'] in names]
 
 
+def validate_csv(path,rows,prediction_root):
+    """Validate the actual exported CSV against complete, validated graph files."""
+    import itertools
+    import numpy as np
+    columns=['id','dataset','row_type','node_id','t','z','y','x','source_id','target_id']
+    expected={r['dataset'] for r in rows}
+    seen=set();index=0
+    with Path(path).open(newline='') as handle:
+        reader=csv.DictReader(handle)
+        if reader.fieldnames!=columns:
+            raise ValueError('Actual submission CSV schema differs from the public contract')
+        for name,group in itertools.groupby(reader,key=lambda r:r['dataset']):
+            if name not in expected or name in seen:
+                raise ValueError('Unexpected or repeated CSV dataset group')
+            seen.add(name);nodes=[];edges=[]
+            for row in group:
+                if None in row or int(row['id'])!=index:
+                    raise ValueError('Malformed CSV row or nonunique global row ID')
+                index+=1
+                if row['row_type']=='node':
+                    if (int(row['source_id']),int(row['target_id']))!=(-1,-1):
+                        raise ValueError('Invalid node-row sentinels')
+                    nodes.append([int(row[k]) for k in ('node_id','t','z','y','x')])
+                elif row['row_type']=='edge':
+                    if any(int(row[k])!=-1 for k in ('node_id','t','z','y','x')):
+                        raise ValueError('Invalid edge-row sentinels')
+                    edges.append([int(row[k]) for k in ('source_id','target_id')])
+                else:
+                    raise ValueError('Unknown CSV row type')
+            graph=load_arrays(Path(prediction_root)/name/'final.npz')
+            if not np.array_equal(np.asarray(nodes,np.int64).reshape(-1,5),graph['nodes']) or not np.array_equal(
+                    np.asarray(edges,np.int64).reshape(-1,2),graph['edges']):
+                raise ValueError('CSV content differs from the validated graph: '+name)
+    if seen!=expected:
+        raise ValueError('Missing expected full clip from actual CSV')
+    return dict(valid=True,rows=index,datasets=sorted(seen),sha256=sha(path),
+        validation='Exact schema, integer fields, sentinels, unique sequential row IDs, complete expected population, and exact node/edge identity to validated graph files')
+
+
+def export_fresh_cohort(args,arm,record,rows):
+    """Use the actual packaged export block after the all-model fresh workers."""
+    root=args.out/'full_fresh_exports'/arm
+    root.mkdir(parents=True,exist_ok=True)
+    link=root/'predictions'
+    prediction_root=args.out/'predictions/fresh_finalists'/arm
+    if not link.exists():
+        link.symlink_to(prediction_root,target_is_directory=True)
+    driver=Path(record['python']).read_text()
+    block=driver[driver.index("import numpy as np\ncolumns="):]
+    first=read_json(prediction_root/rows[0]['dataset']/'job.json')
+    target=root/'submission.csv'
+    namespace=dict(csv=csv,rows=rows,ROOT=root,SUBMISSION=target,write_json=write_json,sha=sha,
+        ARM=arm,MODULES=record['modules'],archive=Path(first['archive_source']),model_hashes=first['model_hashes'])
+    exec(compile(block,'<actual-packaged-CSV-export>','exec'),namespace)
+    result=validate_csv(target,rows,prediction_root)
+    result.update(path=str(target),packaged_export_block_sha256=__import__('hashlib').sha256(block.encode()).hexdigest(),
+        actual_full_notebook_invocation=False,
+        scope='Full fresh image workers plus the actual packaged CSV export block; actual complete notebook invocation is separately tested on all four full pilots')
+    write_json(root/'validation.json',result)
+    return result
+
+
 def robustness(args):
     from .diagnostics import prediction_disagreement
     rows = pilot_rows(args)
@@ -198,6 +260,7 @@ nbformat.write(nb,sys.argv[3])
                       full_cohort_scientific_worker_executed=(args.out/'scores/full'/arm/'summary.json').exists(),
                       full_cohort_fresh_confirmation=fresh_receipts.get(arm))
         if test_record['returncode']==0:
+            record['actual_csv_validation']=validate_csv(root/'submission.csv',rows,root/'predictions')
             comparisons=[]
             scoring=[]
             for row in rows:
@@ -216,6 +279,8 @@ nbformat.write(nb,sys.argv[3])
                           submission_sha256=sha(root/'submission.csv'))
         else:
             record.update(ready_for_manual_test=False,blocker='Actual packaged notebook failed; see retained notebook.log')
+        if arm in selected and fresh_receipts[arm]['passed']:
+            record['full_cohort_fresh_image_to_csv']=export_fresh_cohort(args,arm,record,full_rows)
         records.append(record)
         write_json(destination/'manifest.json',records)
     (destination/'MANUAL_KAGGLE.md').write_text('''# Manual Kaggle execution
