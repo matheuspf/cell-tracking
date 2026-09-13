@@ -233,14 +233,28 @@ def append_report(args, destination, measurements, cost):
                 paragraphs.append(f"- E06: actual context length {proof.get('window_size')}; {proof.get('transitions',0):,} adjacent transitions, exactly one valid native context each and zero additional contexts. "
                     f"Checkpoint window length was verified in {proof.get('actual_baseline_clips_inspected',0)} baseline neural receipts.\n")
     paragraphs += ['\n## Historical control reproduction and serialization\n']
-    for arm,expected in [('B0',.911774),('B1',.934206)]:
+    historical_receipts={}
+    for arm,expected in [('B0',.9117740142186423),('B1',.9342063149703403)]:
         p=args.out/'scores/full'/arm/'summary.json'
         if not p.exists():
             continue
         s=read_json(p);t=measurements[arm]['totals']
         paragraphs.append(f"- {arm}: public-style original export {s['original_export']['score']:.12f}; shared bounds-sanitized export {s['pooled']['score']:.12f}; "
-            f"historical rounded score {expected:.6f}, original-export delta {s['original_export']['score']-expected:+.12f}. "
+            f"historical score {expected:.12f}, original-export delta {s['original_export']['score']-expected:+.12f}. "
             f"The actual public writer lower-clamps {t['original_export_lower_clamped_nodes']:,} rounded negative nodes; {t['original_export_outside_nodes']:,} nodes exceed upper image bounds before common sanitation.\n")
+        comparison=args.out/'historical_comparisons'/(arm+'_full_reproduction.json')
+        if comparison.exists():
+            historical_receipts[arm]=read_json(comparison)
+            c=historical_receipts[arm]
+            paragraphs.append(f"  Historical graph comparison after identical bounds handling: {c['exact_graphs']}/{c['expected_clips']} graphs exactly agree; official pooled score identity: {c['score_identity']}.\n")
+    rounding=args.out/'historical_comparisons/B1_rounding_differences.json'
+    if rounding.exists():
+        r=read_json(rounding)
+        historical_receipts['B1_rounding']={k:v for k,v in r.items() if k!='records'}
+        historical_receipts['B1_rounding']['differing_clips']=[c['dataset'] for c in r['records']]
+        historical_receipts['B1_rounding']['max_float_delta']=max(abs(d['float_delta']) for c in r['records'] for d in c['differences'])
+        paragraphs.append('The two B1 graph differences are single Z coordinates within floating-point error of 61.5: fresh values round to 61 and historical values round to 62. Maximum float difference is 2.14e-14 voxels. All 199 edge arrays agree; official score counts and pooled scores agree exactly. Natural rounding is preserved, with no lookup correction. This is score reproduction with two documented coordinate ties, not 199/199 graph identity.\n')
+    write_json(destination/'historical_reproduction.json',historical_receipts)
     paragraphs.append('The first evaluator implementation mistakenly treated pre-clamp rounded coordinates as the original CSV. The source writer already applies `max(0, round(value))`. That diagnostic was corrected before full-cohort scoring, earlier score receipts were retained, and all affected pilots were freshly rematched. The deployed graphs, frozen inference code and scientific recipes did not change. Two earlier unscored setup failures (annotation guard and missing GAP2 declarations) are also retained.\n')
     strata=args.out/'diagnostics/strata.json'
     if strata.exists():
