@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "study_id": "native-resolution-detector-v9-4090",
+  "branch": "handover/native-resolution-detector-v9-4090",
+  "parent_commit": "e654c50c7543b3486556e2a1cd472f669f07a625",
+  "main_ancestor": "fb5521629eb41c8c485b291a5bcf344944c113ae",
+  "status": "planned_not_executed",
+  "stages": [
+    "D900",
+    "D910",
+    "D920",
+    "D930",
+    "D940",
+    "D950",
+    "D960",
+    "D970",
+    "D980"
+  ],
+  "hardware": {
+    "reported_gpu": "RTX 4090",
+    "reported_ram_gb": 65,
+    "gpu_workers": 1,
+    "measure_actual_capacity": true
+  },
+  "data": {
+    "canonical_root": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "default_alias": "data",
+    "output_root": "work/native-resolution-detector-v9-4090",
+    "expected_clips": 199,
+    "expected_embryo_clips": {
+      "44b6": 71,
+      "6bba": 128
+    },
+    "native_zyx": [
+      64,
+      256,
+      256
+    ],
+    "expected_spacing_um": [
+      1.625,
+      0.40625,
+      0.40625
+    ],
+    "frame_counts_from_metadata": true
+  },
+  "validation": {
+    "directions": [
+      {
+        "id": "A",
+        "source": "44b6",
+        "target": "6bba"
+      },
+      {
+        "id": "B",
+        "source": "6bba",
+        "target": "44b6"
+      }
+    ],
+    "target_image_training": false,
+    "incumbent_teacher": false,
+    "external_teacher": false,
+    "target_threshold_tuning": false,
+    "inner_selection": "disabled_fixed_recipes",
+    "freeze_all_directions_seeds_predictions_before_scores": true,
+    "primary": "N_ema",
+    "anchor": "N_base",
+    "recursive_ancestry_required": true,
+    "unmatched_predictions_are_false_positives": false,
+    "allow_visible_test_validation": false,
+    "automatic_promotion": false
+  },
+  "model": {
+    "native_channels": [
+      16,
+      32,
+      64,
+      96,
+      128
+    ],
+    "plain_channels": [
+      16,
+      32,
+      64,
+      96
+    ],
+    "normalization": "GroupNorm",
+    "localization_head": "heatmap_only",
+    "native_early_kernel": [
+      1,
+      3,
+      3
+    ],
+    "native_early_stride": [
+      1,
+      2,
+      2
+    ],
+    "native_early_stages": 2,
+    "first_full_volume": true,
+    "tile_fallbacks": [
+      {
+        "input_zyx": [
+          64,
+          192,
+          192
+        ],
+        "halo_zyx": [
+          0,
+          32,
+          32
+        ],
+        "core_zyx": [
+          64,
+          128,
+          128
+        ]
+      },
+      {
+        "input_zyx": [
+          64,
+          128,
+          128
+        ],
+        "halo_zyx": [
+          0,
+          32,
+          32
+        ],
+        "core_zyx": [
+          64,
+          64,
+          64
+        ]
+      }
+    ],
+    "primary_input_resizing_allowed": false
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "microbatch": 1,
+    "accumulation": 4,
+    "grad_clip_norm": 1.0,
+    "warmup_updates": 200,
+    "schedule": "cosine",
+    "final_lr": 1e-06
+  },
+  "training": {
+    "seeds": [
+      20260914,
+      314159
+    ],
+    "final_updates_default": 8000,
+    "final_update_fallbacks": [
+      8000,
+      4000,
+      2000
+    ],
+    "schedule_lock_basis": "source_only_timing_before_fits_and_outer_scores",
+    "screen_updates": 1500,
+    "fresh_final_schedule": true,
+    "same_schedule_for_P0_P1": true,
+    "default_positive_tile_probability": 0.5,
+    "max_technical_repairs_per_failure": 3,
+    "final_schedule_prefix_is_not_separate_screen": true
+  },
+  "supervision": {
+    "gaussian_sigma_um": 0.8,
+    "human_weight": 1.0,
+    "background_weight": 0.1,
+    "unknown_weight": 0.0,
+    "pseudo_weight": 0.25,
+    "ema_decay": 0.99,
+    "ema_warmup_updates": 500,
+    "pseudo_ramp_updates": 500,
+    "pseudo_confidence": 0.9,
+    "pseudo_agreement_um": 1.5,
+    "teacher_absence_is_negative": false
+  },
+  "resources": {
+    "total_active_gpu_hours": 48,
+    "initial_allocation_gpu_hours": {
+      "pilot": 2,
+      "P0": 22,
+      "P1": 12,
+      "evaluation_reserved": 8,
+      "P2_P3": 4
+    },
+    "cuda_reserved_limit_gib": 20,
+    "min_device_free_gib": 2,
+    "host_process_tree_rss_limit_gib": 44,
+    "min_system_available_gib": 10,
+    "decoded_cache_total_gib": 4,
+    "min_durable_free_gib": 10,
+    "loader_workers_initial": 2,
+    "loader_workers_max": 4,
+    "loader_prefetch_factor": 2,
+    "max_retained_fits": 32,
+    "max_operational_graph_configurations": 6,
+    "one_gpu_job_at_a_time": true,
+    "protect_core_evaluation_reserve": true
+  },
+  "evaluation": {
+    "tolerances_um": [
+      1,
+      2,
+      3,
+      5,
+      7
+    ],
+    "candidate_budgets_per_frame": [
+      50,
+      100,
+      200,
+      400,
+      800
+    ],
+    "Q": "mean annotated recall@3um at K=100,200,400",
+    "recall7_max_absolute_drop": 0.002,
+    "float_and_integer": true,
+    "require_exact_clip_and_frame_sets": true,
+    "same_recipe_replay": true
+  },
+  "permissions": {
+    "external_downloads": false,
+    "kaggle_submission": false,
+    "paid_compute": false,
+    "modify_prior_studies": false,
+    "commit_weights_or_data": false
+  },
+  "recipes": [
+    {
+      "id": "N_base",
+      "tier": "P0",
+      "architecture": "aniso",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914,
+        314159
+      ],
+      "schedule": "locked_final",
+      "initialization": "random_source_only",
+      "role": "supervised_anchor"
+    },
+    {
+      "id": "N_ema",
+      "tier": "P0",
+      "architecture": "aniso",
+      "regime": "ema",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914,
+        314159
+      ],
+      "schedule": "locked_final",
+      "initialization": "random_source_only",
+      "role": "fixed_primary"
+    },
+    {
+      "id": "B64_stride",
+      "tier": "P1",
+      "architecture": "plain",
+      "regime": "masked",
+      "image_mode": "stride_xy4",
+      "input_zyx": [
+        64,
+        64,
+        64
+      ],
+      "seeds": [
+        20260914,
+        314159
+      ],
+      "schedule": "locked_final",
+      "initialization": "random_source_only",
+      "role": "scratch_coarse_control"
+    },
+    {
+      "id": "N_lowpass",
+      "tier": "P1",
+      "architecture": "aniso",
+      "regime": "masked",
+      "image_mode": "area_xy4_then_native_reconstruction",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914,
+        314159
+      ],
+      "schedule": "locked_final",
+      "initialization": "random_source_only",
+      "role": "matched_information_control"
+    },
+    {
+      "id": "B64_AA",
+      "tier": "P2",
+      "architecture": "plain",
+      "regime": "masked",
+      "image_mode": "area_xy4",
+      "input_zyx": [
+        64,
+        64,
+        64
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_secondary"
+    },
+    {
+      "id": "B128_AA",
+      "tier": "P2",
+      "architecture": "plain",
+      "regime": "masked",
+      "image_mode": "area_xy2",
+      "input_zyx": [
+        64,
+        128,
+        128
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_secondary"
+    },
+    {
+      "id": "N_plain",
+      "tier": "P2",
+      "architecture": "plain",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_secondary"
+    },
+    {
+      "id": "N_dense_diagnostic",
+      "tier": "P2",
+      "architecture": "aniso",
+      "regime": "dense_diagnostic",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_secondary"
+    },
+    {
+      "id": "N_context",
+      "tier": "P2",
+      "architecture": "aniso_context",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_secondary"
+    },
+    {
+      "id": "N_lr1e4",
+      "tier": "P3",
+      "architecture": "aniso",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_probe",
+      "parent": "N_base",
+      "overrides": {
+        "lr": 0.0001
+      }
+    },
+    {
+      "id": "N_sigma1p2",
+      "tier": "P3",
+      "architecture": "aniso",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_probe",
+      "parent": "N_base",
+      "overrides": {
+        "gaussian_sigma_um": 1.2
+      }
+    },
+    {
+      "id": "N_flow",
+      "tier": "P3",
+      "architecture": "aniso",
+      "regime": "masked",
+      "image_mode": "native",
+      "input_zyx": [
+        64,
+        256,
+        256
+      ],
+      "seeds": [
+        20260914
+      ],
+      "schedule": "screen_1500",
+      "initialization": "random_source_only",
+      "role": "descriptive_probe",
+      "parent": "N_base",
+      "overrides": {
+        "localization_head": "heatmap_plus_local_flow"
+      }
+    }
+  ],
+  "decoder": {
+    "localmax_radius_um": 1.7,
+    "nms_radius_um": 1.7,
+    "diagnostic_min_peak_score": 0.01,
+    "operational_threshold": 0.5,
+    "subvoxel": "axiswise_logit_parabola_clamped_half_voxel; zero on flat_or_boundary",
+    "tie_break": "descending_score_then_lexicographic_zyx",
+    "synthetic_peaks_to_fill_K": false,
+    "selection": "fixed_before_outer_scores"
+  }
+}
