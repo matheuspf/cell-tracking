@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "study_id": "native-resolution-detector-v9-4090",
+  "branch": "handover/native-resolution-detector-v9-4090",
+  "parent_commit": "e654c50c7543b3486556e2a1cd472f669f07a625",
+  "status": "planned_not_executed",
+  "active_plan": "PLAN.md",
+  "supersedes_execution_of": "handover/native-resolution-detector-v8",
+  "authoring": {
+    "repository_review": true,
+    "cpu_helper_tests": "see TEST_RESULTS.md",
+    "real_images_read": false,
+    "checkpoints_loaded": false,
+    "training_performed": false,
+    "gpu_pilot_performed": false,
+    "official_scores_computed": false,
+    "full_live_rules_verified": false
+  },
+  "runtime": {
+    "stage": "D900_pending",
+    "device_receipt": null,
+    "data_manifest_sha256": null,
+    "locked_schedule_updates": null,
+    "gpu_hours_consumed": 0,
+    "completed_fits": 0,
+    "primary_detection_result": null,
+    "graph_result": null,
+    "promotion": "not_evaluated"
+  },
+  "required_local_next_action": "Read CODEX_PROMPT.md; run stdlib helper tests and preflight; implement and execute D900-D980."
+}

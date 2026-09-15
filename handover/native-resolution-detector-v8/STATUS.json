@@ -1,0 +1,25 @@
+{
+  "study_id": "native-resolution-detector-v8",
+  "status": "planned_not_executed",
+  "authored_on": "2026-09-14",
+  "base_commit": "fb5521629eb41c8c485b291a5bcf344944c113ae",
+  "next_stage": "D800",
+  "primary_input_zyx": [
+    64,
+    256,
+    256
+  ],
+  "incumbent_provenance": "unverified_until_specific_checkpoint_audit",
+  "primary_dependency_rule": "random/source-only; no uncertain teachers",
+  "authoring_validation": {
+    "synthetic_reference_tests_passed": 38,
+    "failed": 0,
+    "python_compilation_passed": true,
+    "real_images_loaded": false,
+    "weights_loaded": false,
+    "gpu_training_run": false,
+    "official_scoring_run": false
+  },
+  "new_detector_score": null,
+  "note": "Helper tests validate specified contracts, not a trained model, actual checkpoint provenance, or integration accuracy."
+}
