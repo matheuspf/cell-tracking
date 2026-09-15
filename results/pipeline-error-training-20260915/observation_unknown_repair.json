@@ -1,0 +1,11 @@
+{
+  "bank_and_identity_grouping_unchanged": true,
+  "new_target_metrics_read": false,
+  "observation_models_trained_before_repair": 0,
+  "preservation_sha256": "ea795dd5c6d9690731315e15714f0cff69b26f3f4b131dedfeeb8f8f58153325",
+  "reason": "Where neither same-identity observation is closer by the existing 0.25 um margin, mask the preference loss",
+  "required_by": "handover/pipeline-error-training-20260915/IMPLEMENTATION.md:224",
+  "same_localization_margin_um": 0.25,
+  "status": "implementation_repair",
+  "threshold_or_model_selection_from_results": false
+}

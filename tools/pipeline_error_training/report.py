@@ -79,6 +79,33 @@ def source_rows():
     return result
 
 
+def matched_training_controls():
+    """Check observed common prefixes; this does not claim later model equality."""
+    training = read_json(RESULTS/'execution_repair_lock.json')['training']
+    pairs = [('D10_frozen','D10_adapted',max(1,training['updates']//8)),
+             ('D20_temporal','A10',training['pretrain_updates']),
+             ('D20_temporal','O10_swap',training['pretrain_updates'])]
+    records = []
+    for left, right, count in pairs:
+        for source in ['44b6','6bba']:
+            paths = [WORK/'training'/arm/source/'20260915/history.jsonl' for arm in [left,right]]
+            histories = [[json.loads(line) for line in p.read_text().splitlines() if line]
+                         if p.exists() else [] for p in paths]
+            if any(len(h)<count for h in histories):
+                records.append(dict(left=left,right=right,source=source,status='not run',
+                    reason='Both declared common training prefixes have not completed'))
+                continue
+            fields = ['total','identity','decision','metric_risk','contrastive','consistency']
+            delta = {k:max(abs(a[k]-b[k]) for a,b in zip(histories[0][:count],histories[1][:count])) for k in fields}
+            records.append(dict(left=left,right=right,source=source,status='measured',
+                common_updates=count,max_abs_recorded_loss_difference=delta,
+                exact_recorded_losses=all(v==0 for v in delta.values()),
+                history_sha256=[sha(p) for p in paths],
+                scope='Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim'))
+    write_json(RESULTS/'matched_training_controls.json',dict(records=records,new_target_metrics_read=False))
+    return records
+
+
 def matrix(fits):
     frozen = optional(RESULTS/'target_freeze.json') or {}
     nomination = optional(RESULTS/'nomination.json') or {}
@@ -252,7 +279,7 @@ def run(complete=False):
     training=dict(status='measured' if any(r['status']=='measured' for r in fits) else 'not run',
         matched_primary_updates=lock['training']['updates'],effective_batch_groups=32,
         source_checkpoint_selection='Fixed final checkpoint after the common source-only throughput lock',
-        fits=fits,source_scores=source,
+        fits=fits,source_scores=source,matched_common_prefixes=matched_training_controls(),
         source_independence_certified=False,clean_end_to_end_out_of_fold=False,
         target_labels_used_for_new_fitting_or_calibration=False,
         resumption='Exact model, optimizer, RNG and source-group visit state; recipe hash checked before resuming',

@@ -34,7 +34,7 @@ closed-bank observation selection run independently. Complete decisions include 
 The common source-only throughput lock reduced the proposed 16,000-update ceiling to 178 updates,
 with equal budgets across matched fits. Models use the fixed final checkpoint, source-only regularized calibration,
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
-Cumulative charged GPU lease time is 3.454 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 3.608 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 See [CONTINUATION.md](CONTINUATION.md) for exact commands and remaining work.

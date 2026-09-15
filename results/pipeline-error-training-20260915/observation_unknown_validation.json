@@ -1,0 +1,42 @@
+{
+  "localization_margin_um": 0.25,
+  "new_target_metrics_read": false,
+  "observation_models_trained_before_repair": 0,
+  "records": [
+    {
+      "bank_pairs_groups_and_synthetic_provenance_exact": true,
+      "clips": 71,
+      "counts": {
+        "ambiguous_localization_ties": 8052,
+        "keep": 5422,
+        "retain_both": 6,
+        "substitute": 5361,
+        "supported_real_rows": 10789,
+        "synthetic_supported_nodes": 19968,
+        "unknown": 2409565
+      },
+      "new_manifest_sha256": "823ab61989d001b407f730240f6431839b77183785f810c069755786d1672ec3",
+      "old_manifest_sha256": "085d14632bb97588c6cab285b2bd25e9356837cb442ab8e0788d674b4b247e30",
+      "only_keep_to_unknown_changes": 8052,
+      "source": "44b6"
+    },
+    {
+      "bank_pairs_groups_and_synthetic_provenance_exact": true,
+      "clips": 128,
+      "counts": {
+        "ambiguous_localization_ties": 49395,
+        "keep": 25158,
+        "retain_both": 29,
+        "substitute": 28708,
+        "supported_real_rows": 53895,
+        "synthetic_supported_nodes": 110868,
+        "unknown": 2452366
+      },
+      "new_manifest_sha256": "a731975d2410a279c3f81d0f3951310d8172160d3c504147267281c7f06a02b1",
+      "old_manifest_sha256": "13f1cfee313308f63b4ae119788d5682f7c370e2c0f2c8e31d0d8868d60c8ac2",
+      "only_keep_to_unknown_changes": 49395,
+      "source": "6bba"
+    }
+  ],
+  "status": "measured"
+}

@@ -13,6 +13,16 @@ CONFIG = dict(raw_neighbors=3, candidate_distance_um=7., source_localization_tie
               unknown=-1, duplicate_radius=None)
 
 
+def localization_preference(old_distance, raw_distance):
+    """A known identity does not make a near-tied localization preference known."""
+    tolerance = CONFIG['source_localization_tie_um']
+    if raw_distance+tolerance<old_distance:
+        return CONFIG['substitute']
+    if old_distance+tolerance<raw_distance:
+        return CONFIG['keep']
+    return CONFIG['unknown']
+
+
 def raw_graph(row):
     path = Path(row['raw']['path'])
     if sha(path) != row['raw']['sha256']:
@@ -115,6 +125,7 @@ def prepare(source):
             annotated_tracks = {int(n) for edge in ge for n in edge}
             already_matched = set(old_match.values())
             targets, groups = [], []
+            localization_ties = 0
             for old, r in bank.pairs:
                 old_id, raw_id = int(graph['nodes'][old, 0]), int(raw['nodes'][r, 0])
                 a, b = old_match.get(old_id), raw_match.get(raw_id)
@@ -123,7 +134,8 @@ def prepare(source):
                     if a == b:
                         da = np.linalg.norm((graph['nodes'][old, 2:]-gt[a][2:])*row['physical_scale'])
                         db = np.linalg.norm((raw['nodes'][r, 2:]-gt[b][2:])*row['physical_scale'])
-                        target = 1 if db+CONFIG['source_localization_tie_um'] < da else 0
+                        target = localization_preference(da, db)
+                        localization_ties += target == CONFIG['unknown']
                     else:
                         # A different supported real identity is never merged.
                         # Restore is supervised only when that identity is absent
@@ -140,7 +152,8 @@ def prepare(source):
                         synthetic_groups=synthetic_groups)
             counts = dict(keep=int((target == 0).sum()), substitute=int((target == 1).sum()),
                           retain_both=int((target == 2).sum()), unknown=int((target < 0).sum()),
-                          synthetic_supported_nodes=len(synthetic), supported_real_rows=int(known.sum()))
+                          synthetic_supported_nodes=len(synthetic), supported_real_rows=int(known.sum()),
+                          ambiguous_localization_ties=int(localization_ties))
             receipt = dict(dataset=row['dataset'], source=source, inputs=stamp, counts=counts,
                 bank_sha256=bank.hash, sha256=sha(path), raw_graph_sha256=raw['original_graph_sha256'],
                 real_unmatched_negative=False, synthetic_identity='Explicit corruption of a source-supported incumbent trajectory',

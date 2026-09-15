@@ -1,10 +1,10 @@
 {
   "clean_transfer": {
-    "readiness_sha256": "8de88f49c8c3edbc2a4e44ed59c03445e34c3a1830568b579d8f8ce4fd57b66f",
+    "readiness_sha256": "ca9f6c2fcccc8d34a8ab889c452097e69049ee49c665504f3b71ac2498729bda",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "created": "2026-09-15T18:18:38.037885+00:00",
+  "created": "2026-09-15T18:27:53.230716+00:00",
   "experiments": [
     {
       "clips": null,

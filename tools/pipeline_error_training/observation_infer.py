@@ -79,7 +79,8 @@ def construct_actions(bank, gain, restore):
 
 def apply_observations(bank, actions, streaming, restore):
     from strong_tracker_v3.decode import legal_edges, solve_actions
-    chosen, solving = solve_actions(actions)
+    edge_cap = int(.02*len(bank.graph['edges']))
+    chosen, solving = solve_actions(actions, max_changed_edges=edge_cap)
     cap = int(CONFIG['max_changed_node_fraction']*len(bank.nodes))
     remaining = cap
     accepted = []
@@ -113,13 +114,17 @@ def apply_observations(bank, actions, streaming, restore):
         raise RuntimeError('One-for-one observation selection changed the node count')
     if restore and len(nn)-len(bank.nodes) > cap:
         raise RuntimeError('Restoration exceeded its frozen node budget')
+    changed_edges = len(set(map(tuple, bank.graph['edges'])) ^ set(map(tuple, ee)))
+    if changed_edges>edge_cap:
+        raise RuntimeError('Observation selection exceeded the frozen changed-edge budget')
     return dict(nodes=nn, edges=ee), dict(streaming, **solving, edits=ledger, changed_node_cap=cap,
         selected_node_cost=cap-remaining, accepted_observation_actions=len(accepted),
         node_cap_abstentions=len(chosen)-len(accepted), node_count_before=len(bank.nodes), node_count_after=len(nn),
-        exact_one_for_one=not restore, stable_raw_ids=True)
+        exact_one_for_one=not restore, stable_raw_ids=True,
+        changed_edge_cap=edge_cap, observation_changed_edges=changed_edges)
 
 
-def close_associations(graph, old_graph, native, p0_spec, changed_ids):
+def close_associations(graph, old_graph, native, p0_spec, changed_ids, *, remaining_edge_budget):
     from .association import decode
     nodes = graph['nodes']
     ix, pred, succ = adjacency(nodes, graph['edges'])
@@ -140,7 +145,8 @@ def close_associations(graph, old_graph, native, p0_spec, changed_ids):
                 constrained['edge_features'][k, 25:29] = 1.
             else:
                 scores[k] = -1e9
-    edges, receipt = decode(nodes, graph['edges'], constrained, scores)
+    edges, receipt = decode(nodes, graph['edges'], constrained, scores,
+                            max_changed_edges=remaining_edge_budget)
     changed = old ^ {(ix[int(a)], ix[int(b)]) for a, b in edges}
     if any(a not in mutable or b not in mutable for a, b in changed):
         raise RuntimeError('Native observation association escaped its closed affected region')
@@ -185,8 +191,14 @@ def predict(row, graph, native, package, destinations, cache_root, p0_model, *, 
         if ledger['accepted_observation_actions']:
             fresh = refresh(row, selected, graph, native, Path(destination).parent/'fresh_native')
             changed_ids = {int(n[0]) for e in ledger['edits'] for n in e['new_nodes']}
-            selected['edges'], association = close_associations(selected, graph, fresh, p0, changed_ids)
+            remaining = ledger['changed_edge_cap']-ledger['observation_changed_edges']
+            selected['edges'], association = close_associations(selected, graph, fresh, p0, changed_ids,
+                                                                remaining_edge_budget=remaining)
             ledger['fresh_association'] = association
+        final_changed_edges = len(set(map(tuple, graph['edges'])) ^ set(map(tuple, selected['edges'])))
+        if final_changed_edges>ledger['changed_edge_cap']:
+            raise RuntimeError('Observation plus association exceeded the original P0 edge budget')
+        ledger['final_changed_edges'] = final_changed_edges
         save_graph(destination, selected['nodes'], selected['edges'])
         receipt = dict(arm=arm, source=spec['recipe']['source'], model_sha256=spec['weights_sha256'],
             selector_identical_between_swap_and_restore=True, bank_sha256=bank.hash,

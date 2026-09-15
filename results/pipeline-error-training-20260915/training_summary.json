@@ -191,14 +191,14 @@
       "calibrated": false,
       "calibration_sha256": null,
       "claim": "Source-only head; inherited upstream exposure",
-      "completed_updates": 19,
+      "completed_updates": 73,
       "execution_phase": "running",
-      "final_recorded_loss": 0.3312829756796418,
+      "final_recorded_loss": 0.12027646767819533,
       "first_recorded_loss": 0.16339261993834953,
       "frozen_package_sha256": null,
       "full_fit_wall_seconds": null,
       "locked_updates": 178,
-      "measured_update_lease_seconds": 202.62489582199487,
+      "measured_update_lease_seconds": 758.9301297219972,
       "model_sha256": null,
       "reason": "Incomplete directional training; see execution phase and continuation state",
       "recipe_sha256": "cd3144ddaf840b19d6a874a1ecd7a0c95a2360696afa9f59ff4caf5b6687539b",
@@ -207,7 +207,7 @@
       "source_groups_visited": null,
       "status": "not run",
       "target": "6bba",
-      "unique_optimizer_steps": 19
+      "unique_optimizer_steps": 73
     },
     {
       "arm": "D20_compact",
@@ -737,6 +737,78 @@
       "status": "not run",
       "target": "44b6",
       "unique_optimizer_steps": 0
+    }
+  ],
+  "matched_common_prefixes": [
+    {
+      "common_updates": 22,
+      "exact_recorded_losses": true,
+      "history_sha256": [
+        "a394b719cad6702b157b5377927d385e5efab4e957c255a0d5f97df2971a514d",
+        "6e5a2563a7295260d240547a2227c56a22244fbf088061c1ec55693ce9a4ba91"
+      ],
+      "left": "D10_frozen",
+      "max_abs_recorded_loss_difference": {
+        "consistency": 0.0,
+        "contrastive": 0.0,
+        "decision": 0.0,
+        "identity": 0.0,
+        "metric_risk": 0.0,
+        "total": 0.0
+      },
+      "right": "D10_adapted",
+      "scope": "Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim",
+      "source": "44b6",
+      "status": "measured"
+    },
+    {
+      "common_updates": 22,
+      "exact_recorded_losses": true,
+      "history_sha256": [
+        "7e13487a95b4549b026effd9aa43df056c63dec40baf920691afff0b2fcefe07",
+        "94bffa2cc005c95ef89cfc34e0de1b81aac20b93b9a235b05379129935d8da91"
+      ],
+      "left": "D10_frozen",
+      "max_abs_recorded_loss_difference": {
+        "consistency": 0.0,
+        "contrastive": 0.0,
+        "decision": 0.0,
+        "identity": 0.0,
+        "metric_risk": 0.0,
+        "total": 0.0
+      },
+      "right": "D10_adapted",
+      "scope": "Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim",
+      "source": "6bba",
+      "status": "measured"
+    },
+    {
+      "left": "D20_temporal",
+      "reason": "Both declared common training prefixes have not completed",
+      "right": "A10",
+      "source": "44b6",
+      "status": "not run"
+    },
+    {
+      "left": "D20_temporal",
+      "reason": "Both declared common training prefixes have not completed",
+      "right": "A10",
+      "source": "6bba",
+      "status": "not run"
+    },
+    {
+      "left": "D20_temporal",
+      "reason": "Both declared common training prefixes have not completed",
+      "right": "O10_swap",
+      "source": "44b6",
+      "status": "not run"
+    },
+    {
+      "left": "D20_temporal",
+      "reason": "Both declared common training prefixes have not completed",
+      "right": "O10_swap",
+      "source": "6bba",
+      "status": "not run"
     }
   ],
   "matched_primary_updates": 178,

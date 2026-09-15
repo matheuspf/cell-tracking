@@ -1,0 +1,10 @@
+{
+  "bank_and_training_labels_unchanged": true,
+  "new_target_metrics_read": false,
+  "observation_models_trained_before_repair": 0,
+  "preservation_sha256": "4ca2a1e01fcf60032aa7e6269a23386040a1fd18b6c18eae649430c6dd7ba2c1",
+  "reason": "Observation substitutions/restorations and subsequent closed association must share the original P0 two-percent changed-edge budget",
+  "required_by": "handover/pipeline-error-training-20260915/IMPLEMENTATION.md:203",
+  "status": "implementation_repair",
+  "threshold_or_model_selection_from_results": false
+}
