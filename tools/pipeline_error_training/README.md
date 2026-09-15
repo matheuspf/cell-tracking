@@ -37,6 +37,12 @@ $STUDY_PY -m pipeline_error_training.observation_queue
 $STUDY_PY -m pipeline_error_training.finish_queue
 ```
 
+`finish_queue --wait-for-primary` can wait in a separate process while the two
+primary queues execute. An incomplete primary lane must be repaired or have a
+concrete disposition in `results/pipeline-error-training-20260915/lane_blockers.json`
+before source nomination. Resuming after the target freeze verifies its original
+model and selection hashes and preserves the frozen recipes.
+
 The independent primary queues finish both directions, calibrate on source groups
 and run the fixed complete source clips. `finish_queue` runs source qualification,
 conditional controls and replication before freezing the entire target matrix.
