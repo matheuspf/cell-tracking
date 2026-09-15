@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-09-14T17:17:28.849365+00:00",
+  "config_sha256": "5ba8b846668cb2741affc3957909b5c71d51dad7ce67a81fe1be05b17b039571",
+  "source_sha256": {
+    "tools/cellpose_refine/features.py": "56c2797867cbc174b603f9345a1d1d6d429def8570e72c2bd978ccf473ca9db4",
+    "tools/cellpose_refine/diagnostics.py": "b7391344f2275c5627eefe9de68acf053b5e7c6cc1375d9a469fbdd8211e70d3",
+    "tools/cellpose_refine/train.py": "ccdafffa88d56219eb6fa22430add0a026cb5c2c1fc71983b2c434fda215ec1a",
+    "tools/cellpose_refine/evaluate.py": "d82e87489ef7c3d73c986f06d102660deda0d659fd68c1d80c4bcdcca0120bc7",
+    "tools/cellpose_refine/queue.py": "f779961b9f60597888f6d97b2c0bbf067834ed88dba4c9e82f9bf207a37fc75c",
+    "tools/cellpose_refine/audit_inputs.py": "f9fab42533369577e435122ae58fe042273f24ace6435979bf7969ee9fa9d6ec",
+    "tools/cellpose_refine/common.py": "d970fba68507a70f4ab977f97116d6a81d8cefb9d62495cd22ebe8225c3ee607",
+    "tools/cellpose_refine/model.py": "093ae7b0f8d33e675056ec1f814914d68c9efa7946e698870658090e41437099",
+    "tools/cellpose_refine/extract.py": "cbdece882f6b96a5f803644d6f6f1113f16202832171b9ca53e2a59e4c3f3e5b",
+    "tools/cellpose_refine/prepare.py": "d94c005848990ef539a83badc746fcb31660211bdb3b7e69278727a90bd0d308",
+    "tools/cellpose_refine/preflight.py": "a9a50a4c3d73c80673355a08e09f57b870d46f74459fca58ec10266135592c3c",
+    "tools/cellpose_refine/__init__.py": "d7dd741b2487965abf0735dba2c05ae61579ecfd5028e7b2c65ae3d1e50d471b",
+    "tools/cellpose_refine/infer.py": "05785e969a0e4981b8db411651a8bcffc27fa902d9715a89cf8cdf9fe0ee5b4d",
+    "tools/detector_screen/cellpose_adapter.py": "2e2bde26573c201e3c68da05a95b69e5ec1714a52bacd99f05a835e434b47e05",
+    "tools/detector_screen/analyze_headroom.py": "c5693177e3ce8b5620a745a173004c658755bb0a398d6e39c6f19f8e5c72746c",
+    "tools/detector_screen/evaluate.py": "1b413e4c2be1fb8d7423ded1a8ad8dc01be8c615a1d8ba8557a4e4510cb57830",
+    "tools/annotation_selection/metric_adapter.py": "e0a674f76e6d4dbe202e8f524ca7a72e54037391ac73b6ddc97aaad60a97e29a"
+  },
+  "feature_lock_sha256": "4773fd62d8877b879b3043e632e9ecaa31f52eac79bd872352dbad6d5833091b",
+  "target_scores_opened": false,
+  "retained_fits": [
+    {
+      "source": "44b6",
+      "target": "6bba",
+      "seed": 20260914
+    },
+    {
+      "source": "44b6",
+      "target": "6bba",
+      "seed": 314159
+    },
+    {
+      "source": "6bba",
+      "target": "44b6",
+      "seed": 20260914
+    },
+    {
+      "source": "6bba",
+      "target": "44b6",
+      "seed": 314159
+    }
+  ],
+  "checkpoint_selection": "fixed final update; all four fits must finish before scoring"
+}

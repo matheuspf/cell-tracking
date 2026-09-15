@@ -1,0 +1,28 @@
+{
+  "engineering_failures/attempt-01": {
+    "reason": "Guard accidentally denied numba/core/annotations Python source during import. Permit trusted installed package code; actual GEFF and label paths remain denied. No inference or comparative scoring completed.",
+    "time": "2026-09-13T18:11:42.125163+00:00"
+  },
+  "engineering_failures/attempt-02": {
+    "reason": "Semantic config extractor omitted GAP2_ prefix. Include original GAP2 defaults verbatim. No scores produced. Full controls and dependent recipes will run under corrected extraction.",
+    "time": "2026-09-13T18:13:57.478993+00:00"
+  },
+  "engineering_failures/attempt-03-original-export-diagnostic": {
+    "affected_outputs": "Original-export score fields in earlier pilot/package evaluator receipts; archived and freshly rematched.",
+    "at": "2026-09-13T18:59:14.612823+00:00",
+    "code_after": "11be7f88df6bc6a10481dc56f11bc0793347d798fcbc2fc54553b6943a948417",
+    "code_before": "e9003fb5047495ed2b28b809b96af1f37f98f1b96c29590daf8b36a946306774",
+    "full_cohort_scores_at_correction": 0,
+    "raw_worker_original_nodes": "Rounded before any clamp, retained as a raw diagnostic; evaluator reconstructs actual v29 CSV lower clamp.",
+    "reason": "Separate original-export diagnostic omitted v29 CSV max(0, round(value)); source lines 3122-3124.",
+    "scientific_prediction_impact": "None: all deployed graphs already use identical lower and upper bounds clipping.",
+    "unchanged": [
+      "model weights",
+      "inference code hashes",
+      "final prediction graphs",
+      "scientific recipes",
+      "selection rule",
+      "numerical noise screen of deployed graphs"
+    ]
+  }
+}

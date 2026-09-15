@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-09-14T17:09:57.795641+00:00",
+  "status": "passed",
+  "checks": {
+    "baseline_centers_exact": true,
+    "baseline_scores_exact": true,
+    "integer_identity_exact": true,
+    "float_identity_exact": true,
+    "offset_exact_zero": true,
+    "no_integer_projections": true
+  },
+  "count": 125,
+  "replay": {
+    "created_utc": "2026-09-14T17:03:12.839862+00:00",
+    "source": "44b6",
+    "input_sha256": "d71bfa3eb8c5a5a9d6994c80cc5464b85fcf8a1d52e52924019f233cb40b89c7",
+    "checkpoint_sha256": "57e2daacaa77a1383c1f27498f790e24aa493b3b42bc19bc660eefa9c7136a85",
+    "prediction_sha256": "81359a5d431a4c336c8d01fb71d190fc2c875bd55f5323d0656cfe0aba1e5e5a",
+    "seconds": 21.806492233998142,
+    "gpu_queue_seconds": 10.55949022799905,
+    "annotation_access": false,
+    "cached_prediction_or_feature_access": false,
+    "read_guard": "Python audit hook; renamed raw input only, no kernel sandbox"
+  },
+  "baseline_sha256": "a38626cb79ff2cf2923bc292cae5024c9d1416745bc03dc7e05debfbe0491f67",
+  "inference_source_sha256": "12cee0ed2da8ff5cc6d6133d35ddbe856ffa49ce354273d48fa72aa149b9f6f2",
+  "scope": "Disposable untrained zero-output head, one renamed raw 3D volume, exact baseline parity. Not a fitted model, a complete clip or a Kaggle runtime check."
+}

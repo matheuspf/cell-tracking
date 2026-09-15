@@ -1,0 +1,439 @@
+{
+  "created_utc": "2026-09-14T21:56:30.274269+00:00",
+  "plan_sha256": "d460445fd50344d3caa8d2b681b42532c0a6ef08ac99b66dd46a794e39257af5",
+  "banks_lock_sha256": "8d75007ffefdb2c2253164dcda5bbcc9734f1b66d5e7e00a2f208680e363866d",
+  "graphs": [
+    {
+      "method": "incumbent",
+      "dataset": "44b6_81c256f0",
+      "sha256": "5f14e8f332936017f82280eecb7547432627eab060fa506672c2b436b0deca57",
+      "nodes": 11849,
+      "edges": 11076,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "44b6_81c256f0",
+      "sha256": "cb3db73857a69a04446307cbfa6a98d6f22dd44815191b7e07ecfca759d69d9d",
+      "nodes": 12577,
+      "edges": 9405,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "44b6_81c256f0",
+      "sha256": "939717878f5e366776617ecb157e934681f81e088f7b1eadc529bcc18ad7d9e7",
+      "nodes": 12577,
+      "edges": 9334,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "44b6_81c256f0",
+      "sha256": "c7625342aacbc473ecb08e2fbf6ae365450ae0c966dcb9a4e94ac7df492a8d3c",
+      "nodes": 12577,
+      "edges": 9443,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "44b6_81c256f0",
+      "sha256": "e70fc26aab2714fae331b51959e221f7f5af6fe0a32f93757fb3d1bbcd92a383",
+      "nodes": 12577,
+      "edges": 9479,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "44b6_81c256f0",
+      "sha256": "1f161fc30dedcc9abbb9e854545450d1ae9b6047b405c620500db3a8becf0db0",
+      "nodes": 12577,
+      "edges": 9506,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "44b6_81c256f0",
+      "sha256": "cedeeedf3f82b8ea7c60aaab58ea9f7d0523af2c73ff0c40fdcec648b776d5cb",
+      "nodes": 12577,
+      "edges": 9526,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "44b6_81c256f0",
+      "sha256": "459177f91bb9cd20aa23ac2b20769e15b77a161539ea47493edc205a56865302",
+      "nodes": 16724,
+      "edges": 11438,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "44b6_81c256f0",
+      "sha256": "a7f1fd1fdee0641fbf874b773f1215a584f32fec04401cda5b43ef2b620c7aef",
+      "nodes": 17458,
+      "edges": 11902,
+      "frames": 100
+    },
+    {
+      "method": "incumbent",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "82052b110d0371b602950926ea80893afa42060e1338db13efb292828407fa53",
+      "nodes": 31585,
+      "edges": 27099,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "546e954a760237c4731dd1e76fce505ad22b8df13f1ac9fb9afdb9c681fb1192",
+      "nodes": 42835,
+      "edges": 24824,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "46dffd0f4a71f1044a771b1774a415746a7cec3b6c5a2e9f6e24100fc92f60ec",
+      "nodes": 42835,
+      "edges": 25449,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "be0386a919a7e729c5493f702e8d7a41386378d63363edc38a268b4dd9109a60",
+      "nodes": 42835,
+      "edges": 24881,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "15a464a85898ae896345ca4172ccebd8288079e02d4d339c91d7f3acf8045ef5",
+      "nodes": 42835,
+      "edges": 24684,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "658d1f6b7dd23946e442310e2bbca60c9e6ef816f3142e44ac0317240b978937",
+      "nodes": 42835,
+      "edges": 25837,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "f98065d07b679dec38b69671ae803985b2a06dc7a63899158a54ca742540ab21",
+      "nodes": 42835,
+      "edges": 25674,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "aa77b5141faadab38c83c68bdd04409eb97b91faf69f9429cf979db242a2ef58",
+      "nodes": 51892,
+      "edges": 27752,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "44b6_8f5ab931",
+      "sha256": "d63fd158e57a90a527270c8f02fb832fa9032cbb557200bf2e92d7027ec1e4c8",
+      "nodes": 50829,
+      "edges": 27711,
+      "frames": 100
+    },
+    {
+      "method": "incumbent",
+      "dataset": "44b6_a21120c2",
+      "sha256": "ad2e319c715f03a237bf047931c5633a58341777722d2080c5105f4473c31518",
+      "nodes": 22800,
+      "edges": 21521,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "44b6_a21120c2",
+      "sha256": "3f78e39ef8db1242ed27d55183bff00cb5230f333d696f4e94c8b6a393ffa48e",
+      "nodes": 23635,
+      "edges": 21612,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "44b6_a21120c2",
+      "sha256": "0067ed59cd5f167726af98c657324b13f1aebc7576f183916aecf90e49e5dfdc",
+      "nodes": 23635,
+      "edges": 21623,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "44b6_a21120c2",
+      "sha256": "ac906d8075e75bb97d0133df3c3f6a4e54b0fc88134115947919bceceae2c0ff",
+      "nodes": 23635,
+      "edges": 21540,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "44b6_a21120c2",
+      "sha256": "713281795422d6000fbb419fddfd84b6240ff8feaac4a9656ff1aad9188b5ad8",
+      "nodes": 23635,
+      "edges": 21473,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "44b6_a21120c2",
+      "sha256": "f17a07115e77a8f8eed333d9ece802d4a116b97599ec171379e3e607aed55684",
+      "nodes": 23635,
+      "edges": 21734,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "44b6_a21120c2",
+      "sha256": "c8b481394cd8aeb8a4877921970595dd34ca542904b4cafe2a177adbeb0cd1ee",
+      "nodes": 23635,
+      "edges": 21737,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "44b6_a21120c2",
+      "sha256": "2888543d614ad07caa7e6b6cc266cb7eed4e3bc6fe368f9a2368bcb6e0b95c81",
+      "nodes": 25304,
+      "edges": 22610,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "44b6_a21120c2",
+      "sha256": "b4a5c649f4ed7b8e53de5b3ca6ba9c5aed3f6ed482a508ee53ebd698361c633c",
+      "nodes": 27134,
+      "edges": 23693,
+      "frames": 100
+    },
+    {
+      "method": "incumbent",
+      "dataset": "6bba_af149c94",
+      "sha256": "b69f32de3403bb7dd4449748338846ee213fc87ef61d3c16e1f0926099257100",
+      "nodes": 8600,
+      "edges": 7885,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "6bba_af149c94",
+      "sha256": "60710ca7e351f4d590192588c1caedfa6d688a79f9951b0809b00c640520ce7e",
+      "nodes": 11028,
+      "edges": 6838,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "6bba_af149c94",
+      "sha256": "e6bf43ced15d2f984964a69fa9d09fa26c0f97f2155bbb47f8be3f4f00512a60",
+      "nodes": 11028,
+      "edges": 6857,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "6bba_af149c94",
+      "sha256": "17541ac12de30746e843b787f09aadcb44b559e548fa9c0599c50c76198a9a04",
+      "nodes": 11028,
+      "edges": 7295,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "6bba_af149c94",
+      "sha256": "ed128bcf78c28ab66c83f83f90c68dbc2991a5bccde00e7572a22ca036c9b6a9",
+      "nodes": 11028,
+      "edges": 7412,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "6bba_af149c94",
+      "sha256": "f726c2cdebf2c0a5ecaf30a46da8ea1adfbe8f7368e6505cf0d699a42f897774",
+      "nodes": 11028,
+      "edges": 7360,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "6bba_af149c94",
+      "sha256": "046532cf78507c60b291569a71509d14ec5e4fb6e4ccdd70537c93ff379a8235",
+      "nodes": 11028,
+      "edges": 7361,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "6bba_af149c94",
+      "sha256": "229591fe57981de414c3ce1d63a599b4d7864fee1a4ef97a712a65f18dde7097",
+      "nodes": 14864,
+      "edges": 7599,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "6bba_af149c94",
+      "sha256": "506af47081c7fbee692204dd2d95fe0c50c01758fced16323fc55443dff54a8a",
+      "nodes": 14416,
+      "edges": 7578,
+      "frames": 100
+    },
+    {
+      "method": "incumbent",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "1f0e4b6a84ddb9643d9e2171f241aa631dd13580242e6de558ee770a63ff937b",
+      "nodes": 6374,
+      "edges": 5924,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "6aca6a959273254de9ad47d3d7e9b9eae56a3fa029ed9a5f665d61c6ac2542ff",
+      "nodes": 7145,
+      "edges": 5087,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "f2b3eac22423e6bfbd6e1fef93a72003aa72ce09e23f6f0ce365ad8d3750b920",
+      "nodes": 7145,
+      "edges": 5172,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "d6fde8ef4967c9b9517f18d51096263b92d466bac58562d2d07587f32a4b537b",
+      "nodes": 7145,
+      "edges": 5216,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "e7ce4dfa87cb14823896abc9f87af7e7eb3f1437fa359cc3f6aff0c3285d732d",
+      "nodes": 7145,
+      "edges": 5252,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "c749018925da84f87b0aa106d071fe62baccee92105b0e4439dbf8ae73548317",
+      "nodes": 7145,
+      "edges": 5316,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "9da85c4c6ca926c419a987ea7ac19d0f3f5c9bbc86d8eaa833d6e1880a5116aa",
+      "nodes": 7145,
+      "edges": 5298,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "71d2c9908d37973ca3af74ddba20309884b7cbccbc1c8500bcd3f7211b7dfbdf",
+      "nodes": 10020,
+      "edges": 6349,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "6bba_e16ffc58",
+      "sha256": "e90effbc8c8f2acaf1c3f602466b83039170ceabbe1aa4c2d8b923febc920342",
+      "nodes": 9929,
+      "edges": 6302,
+      "frames": 100
+    },
+    {
+      "method": "incumbent",
+      "dataset": "6bba_fe670320",
+      "sha256": "57b984df7fe0a26a3af15c84e1c696c51b798d942eb88a5a917070a9aadfda81",
+      "nodes": 11267,
+      "edges": 9775,
+      "frames": 100
+    },
+    {
+      "method": "cellpose",
+      "dataset": "6bba_fe670320",
+      "sha256": "07e1a2a5e14e05509bc0231cbc0d1752484e2d67c37c76cddfccb07d9c3ddf94",
+      "nodes": 13862,
+      "edges": 9124,
+      "frames": 100
+    },
+    {
+      "method": "constant",
+      "dataset": "6bba_fe670320",
+      "sha256": "638d51210369a5bd06f39c4d4cdeb5be6bcb20ede80e6e072abd176564275e55",
+      "nodes": 13862,
+      "edges": 9231,
+      "frames": 100
+    },
+    {
+      "method": "source-20260914",
+      "dataset": "6bba_fe670320",
+      "sha256": "78299804c9c274b4f903f31c253e4c8646b0bf0a45136aca6c471dbf5042544a",
+      "nodes": 13862,
+      "edges": 9516,
+      "frames": 100
+    },
+    {
+      "method": "source-314159",
+      "dataset": "6bba_fe670320",
+      "sha256": "eeeacfacf9803f440e20b51a7596c2b36408bdb38fb92068eb37a16da85c0d0c",
+      "nodes": 13862,
+      "edges": 9441,
+      "frames": 100
+    },
+    {
+      "method": "both-20260914",
+      "dataset": "6bba_fe670320",
+      "sha256": "9691550ec70c0240fb2fe0d03b2b21c345ddc53c805bb126c063052fc67a972f",
+      "nodes": 13862,
+      "edges": 9591,
+      "frames": 100
+    },
+    {
+      "method": "both-314159",
+      "dataset": "6bba_fe670320",
+      "sha256": "67e6cb7db37f83b5d84d26f1adca9b01feb37aead4d7d4eee6b77da7b185e9f0",
+      "nodes": 13862,
+      "edges": 9596,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+cellpose",
+      "dataset": "6bba_fe670320",
+      "sha256": "ffd02ac812242ff16ea37f1945c5a6b14b78bc2c4f61eb2163527915094191b4",
+      "nodes": 18043,
+      "edges": 9972,
+      "frames": 100
+    },
+    {
+      "method": "incumbent+source-20260914",
+      "dataset": "6bba_fe670320",
+      "sha256": "ade5485df68ccec01fa17001d1094300dc8a31f2768b8e73296527adac5dc8d5",
+      "nodes": 16534,
+      "edges": 10043,
+      "frames": 100
+    }
+  ]
+}

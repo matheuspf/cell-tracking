@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "source": "44b6",
+      "epoch": 1,
+      "window_index": 0
+    },
+    {
+      "source": "44b6",
+      "epoch": 1,
+      "window_index": 49
+    },
+    {
+      "source": "44b6",
+      "epoch": 2,
+      "window_index": 0
+    },
+    {
+      "source": "44b6",
+      "epoch": 2,
+      "window_index": 49
+    },
+    {
+      "source": "6bba",
+      "epoch": 1,
+      "window_index": 0
+    },
+    {
+      "source": "6bba",
+      "epoch": 1,
+      "window_index": 98
+    },
+    {
+      "source": "6bba",
+      "epoch": 2,
+      "window_index": 0
+    },
+    {
+      "source": "6bba",
+      "epoch": 2,
+      "window_index": 98
+    }
+  ],
+  "bit_exact": true,
+  "script_files": {
+    "/home/mpf/code/kaggle/cell-tracking/tools/incumbent_comparison/frames.py": "0657ed96359ff2ae0a0f3212831951c7c057d6cd1294fbb208342ef6fa82ddaa",
+    "/home/mpf/code/kaggle/cell-tracking/tools/incumbent_comparison/data.py": "b3d42c8367e6de5ecffac455299662431b1cbde49555084abbf94d9c87e76303"
+  }
+}

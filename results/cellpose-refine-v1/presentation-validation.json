@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-14T18:58:11.373347+00:00",
+  "status": "passed",
+  "scope": "Final report and figure delivery integrity; does not imply either refinement passed performance gates.",
+  "local_document_links_checked": true,
+  "scientific_figure_visually_checked": true,
+  "canvas_strict_typescript_check": "passed before this receipt; canvas unchanged",
+  "artifacts": {
+    "docs/cellpose-refinement-results-20260914.md": {
+      "sha256": "511b38112de67080079a4787c3bf7fd8ef41fda52c5640e5db2bf9e51ba39ae1",
+      "bytes": 7798
+    },
+    "docs/cellpose-detector-plan-20260914.md": {
+      "sha256": "9591edd3cc76a1b6de03e0d0c1f320bff55e1ca5a4b1457a4db5a495b4d91849",
+      "bytes": 19810
+    },
+    "tools/cellpose_refine/README.md": {
+      "sha256": "28057290ac80b30b2c0432ca1a058e48588faa5b4aff8addc16f9992a1694b1b",
+      "bytes": 8800
+    },
+    "tools/plot_cellpose_refinement.py": {
+      "sha256": "0e83afb754403d8fd08cb72906572617fa824083b777ddb9a9ca513c5274e001",
+      "bytes": 2247
+    },
+    "results/cellpose-refine-v1/recall-curves.svg": {
+      "sha256": "1ce1c85d6583377a0d9346527db0f23065d3dd2d749d9c6fd9b0887965ade2cc",
+      "bytes": 86506
+    },
+    "/home/mpf/.cursor/projects/home-mpf-code-kaggle-cell-tracking/canvases/cellpose-refinement-v1.canvas.tsx": {
+      "sha256": "a010441c231020dc60dc63a3ead9f37c69304612ed68d8cf301b3343e45eda96",
+      "bytes": 61049
+    }
+  }
+}

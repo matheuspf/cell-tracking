@@ -1,0 +1,45 @@
+{
+  "arms": {
+    "division-surcharge": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-event-costs-20260914-division-surcharge.json",
+      "config_sha256": "c6f4778d057e7401cdc126b454d7660b7e37384f7af4e512267fb46de64f7ca2",
+      "purpose": "A 0.01 extra cost for a fork relative to a new track; an interior second link must supply IoU^4 > 0.01 (IoU > 0.3162) in the fixed-node local comparison. This is an objective-scale control, not a fitted biological prior.",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-event-costs-20260914-division-surcharge",
+      "tracking": {
+        "division_weight": -0.011
+      }
+    },
+    "no-division-control": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-event-costs-20260914-no-division-control.json",
+      "config_sha256": "86ee43ea424b88b9ae234949212ffc26e32fd3b961fe29bec58dabb4d48c89b9",
+      "purpose": "Diagnostic boundary: with IoU^4 in [0,1] and birth weight -0.001, replacing a fork's extra edge by a birth strictly improves the objective. Require zero exported forks. This is not a division model or a deployment candidate.",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-event-costs-20260914-no-division-control",
+      "tracking": {
+        "division_weight": -1.01
+      }
+    },
+    "reference-events": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-event-costs-20260914-reference-events.json",
+      "config_sha256": "37549ae2ed3ad3e953e9640ed6a87ddc90badd8d3d0e30944e332720c2108ef9",
+      "purpose": "Copy only the three signed event weights from the pinned sparse_zebrafish supplementary configuration. Equal birth and division weights still give a zero local second-link threshold; this tests the accompanying continuity pressure. It is not a replication of the paper's dataset or pipeline.",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-event-costs-20260914-reference-events",
+      "tracking": {
+        "appear_weight": -0.1,
+        "disappear_weight": -0.1,
+        "division_weight": -0.1
+      }
+    }
+  },
+  "created_utc": "2026-09-14T18:58:37.558377+00:00",
+  "endpoints": "Fresh full official graph metric on all six clips, embryo summaries, edge and division TP/FP/FN, all predicted forks, selected nodes, feasible solver status and unchanged candidate bank.",
+  "forum": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/740573",
+  "panel_sha256": "7345f2b231befedc8db6e07ecc31085ea8312f4e43ccd1c6f6da5f1bede8961a",
+  "schema": 1,
+  "selection": "Report every declared arm; no further threshold sweep or baseline adoption. All masks, hypotheses, links, windows and compute limits remain fixed.",
+  "source_config_sha256": "fec7373cb8e3b18874a4b53287d878b1e14f2804f3843252eaeafd164416b9ca",
+  "source_root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914",
+  "source_summary_sha256": "bb01724623ab045db353036851e5db708d099cce0f352f626eb4ffe15eb2189f",
+  "study": "cellpose-ultrack-event-costs-20260914",
+  "supplementary_config": "https://github.com/royerlab/ultrack_supplementary/blob/14d24aa3cada922d2ff7ac5b8adf39df85658b44/configuration/sparse_zebrafish/config.toml",
+  "supplementary_revision": "14d24aa3cada922d2ff7ac5b8adf39df85658b44"
+}

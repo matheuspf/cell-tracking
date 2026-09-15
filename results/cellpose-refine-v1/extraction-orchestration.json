@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-09-14T17:13:46.927590+00:00",
+  "change": "Resume caches with source-group priority and skip GPU lock for empty query sets",
+  "numerical_producer_unchanged": true,
+  "locked_producer_names": [
+    "common.py",
+    "features.py",
+    "prepare.py"
+  ],
+  "feature_lock_sha256": "4773fd62d8877b879b3043e632e9ecaa31f52eac79bd872352dbad6d5833091b",
+  "extract_source_sha256": "cbdece882f6b96a5f803644d6f6f1113f16202832171b9ca53e2a59e4c3f3e5b",
+  "target_scores_opened": false
+}

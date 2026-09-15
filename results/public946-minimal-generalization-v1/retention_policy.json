@@ -1,0 +1,17 @@
+{
+  "applied_scope": "Completed full-cohort non-B0 neural arms and fresh-finalist confirmation; all B0 and pilot dense matrices preserved.",
+  "cache_reuse_rule": "E01 requires the intact B0 cache. Other registered transfers can use compact evidence. Fresh-finalist caches are per clip and recomputed from all public models.",
+  "code_sha256": "ac257830635122bd10a221dce12f5d8a4b350e0219e03c96bb7aeb2287a27635",
+  "frozen_at": "2026-09-13T19:28:12.608799+00:00",
+  "full_cohort_scores_exist": false,
+  "reason": "Measured first-38 storage: 2.888 GiB heatmaps and 2.296 GiB predictions; largest probability archive 279.5 MiB. Unbounded duplication across neural arms could exceed the registered 48 GiB scratch cap.",
+  "retained": [
+    "Complete B0 native probabilities required by E01",
+    "All pilot tensors",
+    "Exact candidate probabilities, coordinates, offsets and source/target universes",
+    "Original dense-array hashes and summaries",
+    "Raw/repaired/final graphs and stage hashes",
+    "Public model and image fingerprints"
+  ],
+  "scientific_changes": "None; no quantization, candidate-value changes, model/source modifications or altered graph outputs."
+}

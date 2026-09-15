@@ -1,0 +1,32 @@
+{
+  "study": "other-trackers-20260914",
+  "cohort": "The same six complete 100-frame public clips as HOCT and ultrack; reused development data.",
+  "pilot_clips": ["44b6_81c256f0", "44b6_8f5ab931", "44b6_a21120c2", "6bba_af149c94", "6bba_e16ffc58", "6bba_fe670320"],
+  "cellpose_checkpoint": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+  "observations": "Frozen native Cellpose instance centroids, using the verified HOCT input bank. No baseline edges or native-tracker features.",
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "organoid": {
+    "revision": "db28ff26584ac6d1230ea90750a3324a2778fb31",
+    "link_model_sha256": "f1f1e446c13e05a6ffb55eefc7f7140ec7f89330a5ca78e34d9b357ebdf67471",
+    "division_model_sha256": "5240047e413c1e208e99f4701299735bd700145349e7b1e75c1d0137d805c034",
+    "model_spacing_zyx_um": [2.0, 0.32, 0.32],
+    "inputs": "Released patch extraction, 1/99% intensity normalization, nearest-neighbor resize, asymmetric CoordConv and Platt calibration.",
+    "candidates": "Upstream nearest_neighbor(tolerance=2): union of up to five closest forward/backward positions within twice the closest distance; no label-derived gate.",
+    "decoder": "Released dpct graph costs/pruning; exact binary flow optimization with SciPy/HiGHS because dpct is absent. Appearance/disappearance probability floor 0.01, boundary buffer 8 micrometers, only_top=True; seeded upstream jitter. All weights one, ignore penalty 2. No organoid-specific postprocessing or depth cutoff.",
+    "seed": 20260914,
+    "batch_size": 16
+  },
+  "cellect": {
+    "revision": "3586070926f7f1fd5d8df37456861d22bdc63236",
+    "backbone": "U-ext+-x3rd-149.0-4.6540.pth",
+    "matcher": "EX+-x3rd-149.0-4.6540.pth",
+    "inputs": "Released two-frame U-Net with native YXZ order and log1p positive-minimum floor plus 1900; no resampling. Sample learned embedding, size and division channels at rounded Cellpose centers. Use the most interior available original tile, removing duplicate identical tile calls.",
+    "candidates": "Five nearest next-frame cells in XY-pixel-equivalent physical coordinates; upstream repeat padding for fewer candidates.",
+    "decoder": "Released between-frame ranking, distance and division gates, with deterministic unique incoming links on ties. Cellpose instances replace native intraframe grouping. No coordinate-based track reconnection; it is not applicable to fixed external IDs. All input observations retained.",
+    "last_frame": "Duplicate frame 99 as context to preserve all 100 frames; upstream CLI otherwise stops early."
+  },
+  "controls": "Report a separate no-division graph for each family. No parameter search on the evaluation labels.",
+  "runtime": "Named existing environments, CPU preprocessing, short shared GPU leases, float32 with TF32/autocast disabled.",
+  "evaluation": "Freeze complete graphs before official scoring, round-trip CSV check, report both embryos and sparse-label error attribution.",
+  "exposure": "No Biohub fitting in these experiments. External checkpoint training exposure must be described from available provenance; this is not new-embryo validation."
+}

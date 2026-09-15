@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-12",
+  "branch": "handover/ultrack-integration-v7",
+  "branch_commit": "d8af4b48b9948346e9d2bff78eba0dd13b58f850",
+  "ultrack_commit": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+  "ownership_scope": "Same 12 pilot frames; association audit uses predictions and masks only, no GT. Proximity to any foreground is not an accepted mask assignment.",
+  "ownership": [
+    {
+      "embryo": "44b6",
+      "frames": 6,
+      "detections": 1322,
+      "focus_masks": 1783,
+      "inside": 1310,
+      "outside": 12,
+      "unique_inside": 1188,
+      "detectors_in_shared_masks": 122,
+      "shared_masks": 60,
+      "masks_without_detector": 535,
+      "outside_within_1um": 3,
+      "outside_within_2um": 7
+    },
+    {
+      "embryo": "6bba",
+      "frames": 6,
+      "detections": 571,
+      "focus_masks": 646,
+      "inside": 552,
+      "outside": 19,
+      "unique_inside": 422,
+      "detectors_in_shared_masks": 130,
+      "shared_masks": 53,
+      "masks_without_detector": 171,
+      "outside_within_1um": 8,
+      "outside_within_2um": 9
+    },
+    {
+      "embryo": "pooled",
+      "frames": 12,
+      "detections": 1893,
+      "focus_masks": 2429,
+      "inside": 1862,
+      "outside": 31,
+      "unique_inside": 1610,
+      "detectors_in_shared_masks": 252,
+      "shared_masks": 113,
+      "masks_without_detector": 706,
+      "outside_within_1um": 11,
+      "outside_within_2um": 16
+    }
+  ],
+  "interface": {
+    "status": "passed",
+    "synthetic_only": true,
+    "selected_nodes": 8,
+    "selected_edges": 6,
+    "chosen_detector_points_exported": true,
+    "pickled_and_SQL_points_equal": true,
+    "all_candidate_mask_hashes_unchanged": true,
+    "selected_mask_occupancy_exact": true,
+    "solver": "CBC",
+    "learned_native_evidence": false,
+    "competition_score": null,
+    "SQL_only_negative_control": {
+      "edges_with_stale_pickled_centroids": 1,
+      "edges_with_both_points_updated": 0,
+      "passed": true
+    }
+  },
+  "mask_survival": [
+    {
+      "dataset": "44b6_81c256f0",
+      "time": 25,
+      "embryo": "44b6",
+      "focus_masks": 144,
+      "hypotheses": 225,
+      "exact_survivors": 56,
+      "masks_with_IoU_at_least_095": 134,
+      "median_best_IoU": 0.9990654332117155,
+      "minimum_best_IoU": 0.004860267314702308,
+      "original_size_min": 16,
+      "original_size_median": 2168.5,
+      "hypotheses_containing_one_detector": 124,
+      "hypotheses_containing_multiple_detectors": 60,
+      "seconds": 2.022404935999475,
+      "segmentation": {
+        "min_area": 20,
+        "max_area": 100000,
+        "min_frontier": 0.05
+      },
+      "scope": "One real FOCUS frame per embryo, actual conversion/segmentation/DB readback; no real temporal tracking or quality score."
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "time": 25,
+      "embryo": "6bba",
+      "focus_masks": 60,
+      "hypotheses": 88,
+      "exact_survivors": 31,
+      "masks_with_IoU_at_least_095": 48,
+      "median_best_IoU": 1,
+      "minimum_best_IoU": 0.0121012101210121,
+      "original_size_min": 13,
+      "original_size_median": 2436,
+      "hypotheses_containing_one_detector": 50,
+      "hypotheses_containing_multiple_detectors": 22,
+      "seconds": 1.094178839000051,
+      "segmentation": {
+        "min_area": 20,
+        "max_area": 100000,
+        "min_frontier": 0.05
+      },
+      "scope": "One real FOCUS frame per embryo, actual conversion/segmentation/DB readback; no real temporal tracking or quality score."
+    }
+  ],
+  "overlap_insertion": {
+    "status": "confirmed_upstream_limit",
+    "synthetic_only": true,
+    "true_overlapping_nodes": 12,
+    "constraints_inserted_by_include_overlaps": 10,
+    "missing_conflicts": 2,
+    "finding": "add_new_node(include_overlaps=True) only queries the nearest 10 candidates. Supplement with exhaustive bbox/occupancy conflicts before solving.",
+    "solve_executed": false
+  },
+  "scope": "Integration design and bounded checks. No complete FOCUS/native-link competition experiment or new tracking score.",
+  "focus_mean_wall_seconds_per_frame": 15.060398782583283,
+  "focus_mean_logged_inference_seconds_per_frame": 11.99331929286321
+}

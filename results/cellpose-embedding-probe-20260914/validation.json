@@ -1,0 +1,22 @@
+{
+  "source_and_plan_hashes_valid": true,
+  "banks_verified": 216,
+  "native_matrices_verified": 216,
+  "frozen_before_evaluation": true,
+  "canonical_geff_nodes": 180,
+  "canonical_geff_edges": 88,
+  "metric_denominators_valid": true,
+  "metrics_sha256": "63a056aedac8f4711d04ab2400f9538f2703eb9471f7ca294aacaf877a5f5faa",
+  "report_browser_qa": {
+    "http_status": 200,
+    "rows": 9,
+    "cohorts": 3,
+    "native_predictors": 3,
+    "directions": 2,
+    "denominators": 2,
+    "download_verified": true,
+    "offline_file_verified": true,
+    "mobile_no_body_overflow": true,
+    "page_errors": []
+  }
+}

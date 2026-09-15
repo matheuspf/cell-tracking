@@ -1,0 +1,37 @@
+{
+  "verified_at_utc": "2026-09-14T15:56:39.378823+00:00",
+  "status": "passed",
+  "analysis_source_sha256": "c5693177e3ce8b5620a745a173004c658755bb0a398d6e39c6f19f8e5c72746c",
+  "data_fingerprint": "669baac144a2a7925fc4e66724d71a737afdc8d09040b49054a1bca533c01216",
+  "frozen_prediction_hashes_verified": 1200,
+  "per_frame_rows_verified": 2400,
+  "summary_groups_verified": 18,
+  "matching_gate_and_bijection_assertions": "enforced during analysis at every radius and budget",
+  "old_integer_5_6_7_counts": "exact per-frame reproduction asserted during analysis",
+  "prediction_manifests": {
+    "incumbent": {
+      "path": "work/detector-screen-20260914/evaluation/output-hashes/incumbent.json",
+      "sha256": "9ddd7ea5991499516db6eee9ca1aedadd729b3bfc77a21bdbf368f15b2a0ca78"
+    },
+    "cellpose_cpdino_vitb": {
+      "path": "work/detector-screen-20260914/evaluation/output-hashes/cellpose_cpdino_vitb.json",
+      "sha256": "944e3ce7152ce43b0d8d7fb324ad229a727f39016c18426ea4e8ca773d32ff21"
+    },
+    "organoid": {
+      "path": "work/detector-screen-20260914/evaluation/output-hashes/organoid.json",
+      "sha256": "8889ee498893c8daa12f0b2566e5f6e01f70f34c6df6476d778843c4417d0b04"
+    }
+  },
+  "canvas_embedded_data_matches_results": true,
+  "canvas_typescript_check": "passed: tsc --noEmit --strict, TypeScript from existing npm cache",
+  "local_plan_links_verified": 6,
+  "artifact_sha256": {
+    "results/detector-development-20260914/localization-headroom.json": "02ccb6db12668cccc2bda19a57331a660c98e16aa18e520f88424381c6e966af",
+    "docs/cellpose-detector-plan-20260914.md": "d023428c64c16504baf946299f5766b2824b0f00ab22a6f0dee1fdcb690bca27"
+  },
+  "canvas_sha256": "a1e92a2b7c16c840f5167c7735b17c1c0f91aee5bc6df454bbae88db5af9055e",
+  "limitations": "Checks certify these saved artifacts, not model pretraining exclusion, unobserved biological accuracy, or future training feasibility.",
+  "previous_canvas_sha256": "8356dbfc58449fd2420b9bf348e7ed4d754b8239833af4bcf8855f5d4260f5b0",
+  "comparison_view_updated_utc": "2026-09-14T16:24:03.037877+00:00",
+  "comparison_view_validation": "Strict TypeScript check passed; all embedded measurements match the saved headroom results. Added per-radius deltas and both detectors at absolute candidate caps; metrics unchanged."
+}

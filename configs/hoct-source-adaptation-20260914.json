@@ -1,0 +1,14 @@
+{
+  "study": "hoct-reassessment-20260914-source-adaptation",
+  "model": "general_v1",
+  "scope": "Same six exploratory public clips; two directional fits, each trained only on its own three source clips and evaluated on the other embryo.",
+  "selection": "One fixed residual-head recipe after observing the frozen-checkpoint pilot. No target-driven hyperparameter sweep; general_v1 was the primary checkpoint before this experiment.",
+  "features": "288 genuine HOCT edge embedding channels, mean over the same upstream overlapping windows; all candidate edges cached without labels.",
+  "base": "Frozen upstream parent and orphan probabilities. Add a trainable linear residual to log parent probability, retain the orphan log probability, and renormalize.",
+  "standardization": "Mean/std from supported source candidate rows only; std floor 0.001, clip standardized features to [-6,6].",
+  "targets": "One known incoming parent per supported annotated target. Competing incoming parents are negatives. Unlabeled targets and missing-parent cases are excluded; no negative outgoing siblings or synthetic orphan labels.",
+  "optimizer": {"method": "L-BFGS-B", "max_iterations": 300, "l2": 0.1, "initial_residual": 0, "deterministic": true},
+  "decoder": "Same frozen standalone HOCT decoder and separate no-division control. No baseline graphs, native scores or division protection.",
+  "freeze": "Fit both source directions and freeze coefficients before adapted graph generation and target scoring.",
+  "exposure": "Direct head fitting excludes the target embryo; upstream pretraining exposure remains unresolved, and these public clips have been repeatedly inspected."
+}

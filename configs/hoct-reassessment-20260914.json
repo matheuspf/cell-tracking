@@ -1,0 +1,48 @@
+{
+  "study": "hoct-reassessment-20260914",
+  "priority": "HOCT before OrganoidTracker or CELLECT",
+  "hoct_revision": "2ccc5040823bc944ab67790abd1f56eea7cd4f05",
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "models": {
+    "general_v1": "5bd836dfcb15ad796ea79a9595841a3e73b650a71c4acba3fc66aac65d745b33",
+    "ctc_v0": "b9be3d976e2d51ae946128ded99142a81b5ba99fb87a0da67c38de2934944000"
+  },
+  "pilot_clips": ["44b6_81c256f0", "44b6_8f5ab931", "44b6_a21120c2", "6bba_af149c94", "6bba_e16ffc58", "6bba_fe670320"],
+  "pilot_selection": "Existing six complete 100-frame Cellpose/ultrack clips, frozen before this reassessment; reused exploratory data, not new validation.",
+  "legacy_control": {
+    "model": "general_v1",
+    "modes": ["physical", "voxel"],
+    "nodes_candidates_calibration_decoder": "Identical to the corresponding frozen v5 H_general_J inputs; no refitting. Compare both modes in CPU FP32.",
+    "coordinate_conversion": "Model positions and diameter /1.625; inertia /1.625^2. Output coordinates, physical context, border/intensity features unchanged.",
+    "context_frames": 5,
+    "core_um": 52.0,
+    "halo_um": 16.0,
+    "scope": "Isolates unit conversion; inherited C0 detections, structural prior, protected links and decoder remain exposed. Not full upstream pipeline."
+  },
+  "cellpose": {
+    "checkpoint_sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+    "observations": "Every instance in the unchanged raw native Cellpose masks; rounded native centroids for the metric; unrounded voxel centroids for HOCT.",
+    "features": "Actual native voxel regionprops; upstream per-frame 0.999 quantile intensity normalization and five-voxel border feature.",
+    "candidates": "Union of eight nearest incoming and outgoing candidates within 15 micrometers, adjacent frames only, independent of baseline edges and labels.",
+    "n_neighbors": 8,
+    "distance_um": 15.0,
+    "tile_shape_tzyx": [1, 32, 128, 128],
+    "tile_overlap_tzyx": [2, 10, 40, 40],
+    "models": ["general_v1", "ctc_v0"],
+    "probability": "Upstream median exp(logits) over contextual windows, normalized over all candidate parents plus learned orphan exp(logit).",
+    "decoder": {
+      "appearance_weight": 0.5,
+      "disappearance_weight": 0.25,
+      "division_weight": 0.25,
+      "edge_bias": 0.5,
+      "node_weight": -10.0,
+      "delta_t_weight": 0.5
+    },
+    "division_control": "A separately reported no-division control for each model; never a claimed mitosis solution.",
+    "calibration": "No Biohub labels or old probe coefficients in initial standalone inference."
+  },
+  "evaluation": "Freeze graphs before fresh official scoring; report whole-panel and per-embryo edge/division TP/FP/FN, node counts and exact aggregated full metric. Never average clip scores.",
+  "exposure": "Legacy arms inherit known public-training overlap. Cellpose and HOCT use external frozen weights with unverified exact training lists; no clean-generalization claim. Source-only fitting, if added, must be a separate locked stage.",
+  "compute": {"device": "cpu", "threads_per_worker": 2, "initial_workers": 3},
+  "preservation": "Separate output namespace; do not modify or interrupt other experiments. No baseline replacement or submission."
+}

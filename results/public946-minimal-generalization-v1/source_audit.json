@@ -1,0 +1,63 @@
+{
+  "annotation_free": true,
+  "config": {
+    "downsample": [
+      1,
+      4,
+      4
+    ],
+    "pool_kernel_um": 5.0,
+    "unet_layers": [
+      32,
+      64,
+      128
+    ],
+    "unet_out_channels": 32,
+    "window_size": 2
+  },
+  "correction_to_planner": "Public decode context is two frames, not five. Harmonic fusion is forward/reverse primary evidence; secondary mixing remains calibrated low-margin logit fusion. Detection inter-model fusion is aligned 0.80 linear mix with retention guard.",
+  "model_source_sha256": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+  "prior_exact_implementation_search": "No identical implementation found in committed old study code/reports; only different sub-voxel models and training mechanisms.",
+  "source_lines": {
+    "detection_mix": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 495,
+      "text": "secondary_det_aligned = ("
+    },
+    "feature_tta": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 386,
+      "text": "_edge_tta = os.environ.get('BIOHUB_EDGE_FEATURE_TTA', '0') != '0'"
+    },
+    "grid": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 824,
+      "text": "coords[:, 1:] *= ds_arr"
+    },
+    "integer_peaks": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 293,
+      "text": "return np.concatenate([t_col, coords], axis=1).astype(np.int16)"
+    },
+    "normalization": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 375,
+      "text": "imgs = ((imgs - q_low) / (q_high - q_low + 1e-6)).clamp(0.0)"
+    },
+    "parent_softmax": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 783,
+      "text": "probs = torch.softmax(raw, dim=0).cpu().numpy()"
+    },
+    "retention_guard": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 523,
+      "text": "use_primary_detection = bool("
+    },
+    "two_frame_calls": {
+      "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+      "line": 339,
+      "text": "W = window_size"
+    }
+  }
+}

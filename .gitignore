@@ -28,6 +28,9 @@ access_token
 /notebooks/downloaded
 *.zarr/
 *.csv
+# Small published score tables are part of the portable study evidence.
+!/results/public946-minimal-generalization-v1/experiment_matrix.csv
+!/results/public946-minimal-generalization-v1/per_embryo_scores.csv
 *.jsonl
 *.parquet
 *.arrow
@@ -53,3 +56,8 @@ build/
 dist/
 .DS_Store
 Thumbs.db
+
+# Personal conversation/session utilities; retained locally, not project inputs.
+/scripts/resume_biohub_forum_chat.sh
+/tools/migrate_codex_sessions.py
+/tools/biohub_external_data/export_conversation.py

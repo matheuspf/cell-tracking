@@ -1,0 +1,24 @@
+{
+  "H_general_J": {
+    "clips": 199,
+    "baseline_edges": 3935297,
+    "predicted_edges": 3931931,
+    "retained_baseline_edges": 3822676,
+    "added_edges": 109255,
+    "removed_edges": 112621,
+    "fraction_predicted_edges_also_in_baseline": 0.9722133984548559,
+    "explicitly_protected_edges": 1033995,
+    "interpretation": "Shared edges alone do not establish causation. These implementations explicitly use baseline membership bonuses, protected division neighborhoods and baseline fallbacks for missing morphology."
+  },
+  "H_probe_J": {
+    "clips": 199,
+    "baseline_edges": 3935297,
+    "predicted_edges": 3876492,
+    "retained_baseline_edges": 3824697,
+    "added_edges": 51795,
+    "removed_edges": 110600,
+    "fraction_predicted_edges_also_in_baseline": 0.986638692921332,
+    "explicitly_protected_edges": 1033995,
+    "interpretation": "Shared edges alone do not establish causation. These implementations explicitly use baseline membership bonuses, protected division neighborhoods and baseline fallbacks for missing morphology."
+  }
+}

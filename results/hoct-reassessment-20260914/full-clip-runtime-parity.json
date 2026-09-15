@@ -1,0 +1,27 @@
+{
+  "annotation_reads": false,
+  "results": [
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "general_v1",
+      "frames": 100,
+      "maximum_similarity_error": 2.682209014892578e-05,
+      "maximum_orphan_error": 2.5093555450439453e-05,
+      "edge_symmetric_difference": {
+        "True": 0,
+        "False": 0
+      }
+    },
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "ctc_v0",
+      "frames": 100,
+      "maximum_similarity_error": 1.2114644050598145e-05,
+      "maximum_orphan_error": 1.1980533599853516e-05,
+      "edge_symmetric_difference": {
+        "True": 0,
+        "False": 0
+      }
+    }
+  ]
+}

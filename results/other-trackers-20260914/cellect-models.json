@@ -1,0 +1,17 @@
+{
+  "weights": {
+    "backbone": {
+      "path": "/home/mpf/code/kaggle/CELLECT/model/U-ext+-x3rd-149.0-4.6540.pth",
+      "sha256": "f3e8e7303976dc5fb6e52ade12d1ff7953d2a28e30c06274b9f309562cd89ce5"
+    },
+    "matcher": {
+      "path": "/home/mpf/code/kaggle/CELLECT/model/EX+-x3rd-149.0-4.6540.pth",
+      "sha256": "4b0dd794c525e2053a0fe02a7d60253597d6cc669d0d4840b5ffe6481762b07e"
+    }
+  },
+  "revision": "3586070926f7f1fd5d8df37456861d22bdc63236",
+  "feature_source_sha256": "f733b16398034a4ea3eeb043f5000ff18b0bdf0bbbb857cdc573211c3461c2b2",
+  "backbone_parameters": 2541972,
+  "matcher_parameters": 191850,
+  "scope": "No Biohub fitting"
+}

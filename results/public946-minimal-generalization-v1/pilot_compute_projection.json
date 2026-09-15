@@ -1,0 +1,46 @@
+{
+  "estimates": {
+    "B0": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 3.1399136468381266,
+      "worker_seconds": 227.20983173100012
+    },
+    "B1": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 1.2790655201440966,
+      "worker_seconds": 92.55549492499995
+    },
+    "E01": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 1.427847180001064,
+      "worker_seconds": 103.32160498500161
+    },
+    "E02": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 1.428359257746042,
+      "worker_seconds": 103.35865985700002
+    },
+    "E04": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 4.329149908997022,
+      "worker_seconds": 313.2651190430006
+    },
+    "E05": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 3.801401803388852,
+      "worker_seconds": 275.0763114010024
+    },
+    "E07": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 1.4276093820351783,
+      "worker_seconds": 103.30439749400284
+    },
+    "E08": {
+      "full_pilot_clips": 4,
+      "serial_full_199_projection_hours": 3.1498597513854993,
+      "worker_seconds": 227.92954984900098
+    }
+  },
+  "parallel_speedup_assumed": false,
+  "use": "Correctness/resource planning only, not scientific selection"
+}

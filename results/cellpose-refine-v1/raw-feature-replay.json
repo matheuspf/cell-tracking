@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-14T17:13:07.636838+00:00",
+  "status": "passed",
+  "checks": {
+    "centers_zyx": true,
+    "float_centers_zyx": true,
+    "offset_um": true,
+    "integer_bound_projected": true,
+    "baseline_centers_exact": true,
+    "baseline_scores_exact": true,
+    "feature_arrays_exact": true,
+    "nonzero_input_dependent_offsets": true
+  },
+  "key": "44b6_81c256f0-t025",
+  "replay": {
+    "created_utc": "2026-09-14T17:12:14.123214+00:00",
+    "source": "44b6",
+    "input_sha256": "d71bfa3eb8c5a5a9d6994c80cc5464b85fcf8a1d52e52924019f233cb40b89c7",
+    "checkpoint_sha256": "21f9d8d1268b85273d3fe96e4ef3714b54f224e28c56eb9d60dcc5a022e3d8c2",
+    "prediction_sha256": "df4ef4c91b9ffa81b41ab88c316275ae5c7c3978302a47f0deb078b4af00297d",
+    "feature_array_sha256": {
+      "feature": "7aa504ad2898c045fc883c46433448f101eb6a3b7b85abefb6d3a938981a40a3",
+      "patch": "1218608ade68133aa278804f7fc263ad000f665d53e2c52e615e28a78cc3d0cd",
+      "geometry": "5404a26025ed1c3c11d2492d70e8d0f1e2dc2c6ba6da61360a0aecc57e6296e2"
+    },
+    "seconds": 18.533727863999957,
+    "gpu_queue_seconds": 7.295385253997665,
+    "annotation_access": false,
+    "cached_prediction_or_feature_access": false,
+    "read_guard": "Python audit hook; renamed raw input only, no kernel sandbox"
+  },
+  "feature_cache_sha256": "913b20af05bb739fb2920f8e3c847e3c9661215d195c52c222da448746af0eea",
+  "scope": "Disposable untrained random head. Exact feature and input-dependent prediction parity on one raw source volume; no scoring."
+}

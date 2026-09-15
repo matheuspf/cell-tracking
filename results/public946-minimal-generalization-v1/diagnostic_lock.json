@@ -1,0 +1,7 @@
+{
+  "contrast": "metadata q99-q10 pooled quartiles",
+  "crowding": "complete raw volume occupancy above metadata q90, pooled quartiles; intensity occupancy proxy",
+  "depth": "four equal true-Z-depth bins of GT edge source, evaluator only",
+  "selection_use": "none; descriptive only",
+  "time": "edge within two frames of either boundary vs interior, evaluator only"
+}

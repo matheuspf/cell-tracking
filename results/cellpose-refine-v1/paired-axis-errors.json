@@ -1,0 +1,111 @@
+{
+  "created_utc": "2026-09-14T18:46:20.391936+00:00",
+  "scope": "Float errors on identical GT IDs matched within7um by both detectors; conditional matched subsets, not all GT",
+  "groups": [
+    {
+      "seed": 20260914,
+      "embryo": "44b6",
+      "paired_gt": 585,
+      "baseline_signed_mean_zyx_um": [
+        -0.6717914955483543,
+        -0.06695392760965559,
+        0.06956437958611382
+      ],
+      "refined_signed_mean_zyx_um": [
+        0.20758532070132912,
+        0.06260967150262903,
+        0.29531409446563983
+      ],
+      "baseline_mean_absolute_zyx_um": [
+        1.3345578955279456,
+        0.46545715630054474,
+        0.4811880654758877
+      ],
+      "refined_mean_absolute_zyx_um": [
+        1.356509221275138,
+        0.49880834070181584,
+        0.5723683863050408
+      ],
+      "mean_error_delta_um": 0.08108695792852148
+    },
+    {
+      "seed": 20260914,
+      "embryo": "6bba",
+      "paired_gt": 1687,
+      "baseline_signed_mean_zyx_um": [
+        -1.344518483381511,
+        -0.26032350721112635,
+        -0.1854325195980906
+      ],
+      "refined_signed_mean_zyx_um": [
+        -0.8690937789136745,
+        -0.22500273706489443,
+        -0.1563640933161023
+      ],
+      "baseline_mean_absolute_zyx_um": [
+        1.7438050542668802,
+        0.6093111116246988,
+        0.5507174155321005
+      ],
+      "refined_mean_absolute_zyx_um": [
+        1.5437887250537563,
+        0.6725131134253749,
+        0.7040398499904814
+      ],
+      "mean_error_delta_um": -0.06575507077226903
+    },
+    {
+      "seed": 314159,
+      "embryo": "44b6",
+      "paired_gt": 584,
+      "baseline_signed_mean_zyx_um": [
+        -0.6763790722630204,
+        -0.07387487404048443,
+        0.06072891819966982
+      ],
+      "refined_signed_mean_zyx_um": [
+        0.16726601751216635,
+        0.06272287443714791,
+        0.26299320684294597
+      ],
+      "baseline_mean_absolute_zyx_um": [
+        1.3334058485925198,
+        0.4594478726846306,
+        0.4730574391680221
+      ],
+      "refined_mean_absolute_zyx_um": [
+        1.2999563072006735,
+        0.4990538732638688,
+        0.5425446322733977
+      ],
+      "mean_error_delta_um": 0.018877030475228655
+    },
+    {
+      "seed": 314159,
+      "embryo": "6bba",
+      "paired_gt": 1688,
+      "baseline_signed_mean_zyx_um": [
+        -1.3434245222944974,
+        -0.26021190260876836,
+        -0.1842407091030789
+      ],
+      "refined_signed_mean_zyx_um": [
+        -0.8523695578666788,
+        -0.18672248244771658,
+        -0.2499199762015705
+      ],
+      "baseline_mean_absolute_zyx_um": [
+        1.745650051707585,
+        0.6087664722010352,
+        0.5503410885410639
+      ],
+      "refined_mean_absolute_zyx_um": [
+        1.5349340449648432,
+        0.6723713386171857,
+        0.6371526770187228
+      ],
+      "mean_error_delta_um": -0.11306941450068807
+    }
+  ],
+  "metrics_sha256": "6d83088d55b7dd1a2531a7d6dc60e013f8a30a7aa44aa3f234542d1d6ec8b081"
+}

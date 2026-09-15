@@ -1,0 +1,506 @@
+[
+  {
+    "key": "44b6_81c256f0-t025",
+    "dataset": "44b6_81c256f0",
+    "embryo": "44b6",
+    "time": 25,
+    "role": "pilot",
+    "gt": 2,
+    "predicted": 1556,
+    "matches": {
+      "5.0": 2,
+      "6.0": 2,
+      "7.0": 2
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 116,
+    "gt_multiple_candidates_at_7": 2,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 50.91167392100124,
+    "budgets": {
+      "0.5": {
+        "predicted": 58,
+        "matched": 2
+      },
+      "0.75": {
+        "predicted": 87,
+        "matched": 2
+      },
+      "1.0": {
+        "predicted": 116,
+        "matched": 2
+      },
+      "1.25": {
+        "predicted": 145,
+        "matched": 2
+      },
+      "1.5": {
+        "predicted": 174,
+        "matched": 2
+      }
+    }
+  },
+  {
+    "key": "44b6_81c256f0-t075",
+    "dataset": "44b6_81c256f0",
+    "embryo": "44b6",
+    "time": 75,
+    "role": "pilot",
+    "gt": 2,
+    "predicted": 1687,
+    "matches": {
+      "5.0": 2,
+      "6.0": 2,
+      "7.0": 2
+    },
+    "duplicates_after_rounding": 1,
+    "clipped_centers": 0,
+    "baseline_candidates": 118,
+    "gt_multiple_candidates_at_7": 2,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 43.2679009200001,
+    "budgets": {
+      "0.5": {
+        "predicted": 59,
+        "matched": 1
+      },
+      "0.75": {
+        "predicted": 88,
+        "matched": 1
+      },
+      "1.0": {
+        "predicted": 118,
+        "matched": 2
+      },
+      "1.25": {
+        "predicted": 148,
+        "matched": 2
+      },
+      "1.5": {
+        "predicted": 177,
+        "matched": 2
+      }
+    }
+  },
+  {
+    "key": "44b6_8f5ab931-t025",
+    "dataset": "44b6_8f5ab931",
+    "embryo": "44b6",
+    "time": 25,
+    "role": "pilot",
+    "gt": 7,
+    "predicted": 2151,
+    "matches": {
+      "5.0": 7,
+      "6.0": 7,
+      "7.0": 7
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 352,
+    "gt_multiple_candidates_at_7": 7,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 78.7094283690003,
+    "budgets": {
+      "0.5": {
+        "predicted": 176,
+        "matched": 3
+      },
+      "0.75": {
+        "predicted": 264,
+        "matched": 6
+      },
+      "1.0": {
+        "predicted": 352,
+        "matched": 7
+      },
+      "1.25": {
+        "predicted": 440,
+        "matched": 7
+      },
+      "1.5": {
+        "predicted": 528,
+        "matched": 7
+      }
+    }
+  },
+  {
+    "key": "44b6_8f5ab931-t075",
+    "dataset": "44b6_8f5ab931",
+    "embryo": "44b6",
+    "time": 75,
+    "role": "pilot",
+    "gt": 7,
+    "predicted": 1516,
+    "matches": {
+      "5.0": 7,
+      "6.0": 7,
+      "7.0": 7
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 285,
+    "gt_multiple_candidates_at_7": 7,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 54.45451327699993,
+    "budgets": {
+      "0.5": {
+        "predicted": 142,
+        "matched": 4
+      },
+      "0.75": {
+        "predicted": 214,
+        "matched": 4
+      },
+      "1.0": {
+        "predicted": 285,
+        "matched": 5
+      },
+      "1.25": {
+        "predicted": 356,
+        "matched": 6
+      },
+      "1.5": {
+        "predicted": 428,
+        "matched": 6
+      }
+    }
+  },
+  {
+    "key": "44b6_a21120c2-t025",
+    "dataset": "44b6_a21120c2",
+    "embryo": "44b6",
+    "time": 25,
+    "role": "pilot",
+    "gt": 3,
+    "predicted": 1148,
+    "matches": {
+      "5.0": 3,
+      "6.0": 3,
+      "7.0": 3
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 247,
+    "gt_multiple_candidates_at_7": 3,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 61.29516450599931,
+    "budgets": {
+      "0.5": {
+        "predicted": 124,
+        "matched": 0
+      },
+      "0.75": {
+        "predicted": 185,
+        "matched": 2
+      },
+      "1.0": {
+        "predicted": 247,
+        "matched": 2
+      },
+      "1.25": {
+        "predicted": 309,
+        "matched": 3
+      },
+      "1.5": {
+        "predicted": 370,
+        "matched": 3
+      }
+    }
+  },
+  {
+    "key": "44b6_a21120c2-t075",
+    "dataset": "44b6_a21120c2",
+    "embryo": "44b6",
+    "time": 75,
+    "role": "pilot",
+    "gt": 3,
+    "predicted": 953,
+    "matches": {
+      "5.0": 3,
+      "6.0": 3,
+      "7.0": 3
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 204,
+    "gt_multiple_candidates_at_7": 3,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 42.70390086799944,
+    "budgets": {
+      "0.5": {
+        "predicted": 102,
+        "matched": 2
+      },
+      "0.75": {
+        "predicted": 153,
+        "matched": 2
+      },
+      "1.0": {
+        "predicted": 204,
+        "matched": 3
+      },
+      "1.25": {
+        "predicted": 255,
+        "matched": 3
+      },
+      "1.5": {
+        "predicted": 306,
+        "matched": 3
+      }
+    }
+  },
+  {
+    "key": "6bba_af149c94-t025",
+    "dataset": "6bba_af149c94",
+    "embryo": "6bba",
+    "time": 25,
+    "role": "pilot",
+    "gt": 14,
+    "predicted": 1860,
+    "matches": {
+      "5.0": 14,
+      "6.0": 14,
+      "7.0": 14
+    },
+    "duplicates_after_rounding": 1,
+    "clipped_centers": 0,
+    "baseline_candidates": 88,
+    "gt_multiple_candidates_at_7": 14,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 50.57257567800116,
+    "budgets": {
+      "0.5": {
+        "predicted": 44,
+        "matched": 5
+      },
+      "0.75": {
+        "predicted": 66,
+        "matched": 6
+      },
+      "1.0": {
+        "predicted": 88,
+        "matched": 6
+      },
+      "1.25": {
+        "predicted": 110,
+        "matched": 6
+      },
+      "1.5": {
+        "predicted": 132,
+        "matched": 8
+      }
+    }
+  },
+  {
+    "key": "6bba_af149c94-t075",
+    "dataset": "6bba_af149c94",
+    "embryo": "6bba",
+    "time": 75,
+    "role": "pilot",
+    "gt": 14,
+    "predicted": 2008,
+    "matches": {
+      "5.0": 14,
+      "6.0": 14,
+      "7.0": 14
+    },
+    "duplicates_after_rounding": 1,
+    "clipped_centers": 0,
+    "baseline_candidates": 93,
+    "gt_multiple_candidates_at_7": 14,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 54.19467624400113,
+    "budgets": {
+      "0.5": {
+        "predicted": 46,
+        "matched": 4
+      },
+      "0.75": {
+        "predicted": 70,
+        "matched": 6
+      },
+      "1.0": {
+        "predicted": 93,
+        "matched": 7
+      },
+      "1.25": {
+        "predicted": 116,
+        "matched": 9
+      },
+      "1.5": {
+        "predicted": 140,
+        "matched": 9
+      }
+    }
+  },
+  {
+    "key": "6bba_e16ffc58-t025",
+    "dataset": "6bba_e16ffc58",
+    "embryo": "6bba",
+    "time": 25,
+    "role": "pilot",
+    "gt": 13,
+    "predicted": 1664,
+    "matches": {
+      "5.0": 13,
+      "6.0": 13,
+      "7.0": 13
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 71,
+    "gt_multiple_candidates_at_7": 13,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 52.628800509999564,
+    "budgets": {
+      "0.5": {
+        "predicted": 36,
+        "matched": 7
+      },
+      "0.75": {
+        "predicted": 53,
+        "matched": 7
+      },
+      "1.0": {
+        "predicted": 71,
+        "matched": 8
+      },
+      "1.25": {
+        "predicted": 89,
+        "matched": 9
+      },
+      "1.5": {
+        "predicted": 106,
+        "matched": 10
+      }
+    }
+  },
+  {
+    "key": "6bba_e16ffc58-t075",
+    "dataset": "6bba_e16ffc58",
+    "embryo": "6bba",
+    "time": 75,
+    "role": "pilot",
+    "gt": 8,
+    "predicted": 1568,
+    "matches": {
+      "5.0": 8,
+      "6.0": 8,
+      "7.0": 8
+    },
+    "duplicates_after_rounding": 1,
+    "clipped_centers": 0,
+    "baseline_candidates": 57,
+    "gt_multiple_candidates_at_7": 8,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 45.14389423300054,
+    "budgets": {
+      "0.5": {
+        "predicted": 28,
+        "matched": 2
+      },
+      "0.75": {
+        "predicted": 43,
+        "matched": 3
+      },
+      "1.0": {
+        "predicted": 57,
+        "matched": 5
+      },
+      "1.25": {
+        "predicted": 71,
+        "matched": 7
+      },
+      "1.5": {
+        "predicted": 86,
+        "matched": 7
+      }
+    }
+  },
+  {
+    "key": "6bba_fe670320-t025",
+    "dataset": "6bba_fe670320",
+    "embryo": "6bba",
+    "time": 25,
+    "role": "pilot",
+    "gt": 12,
+    "predicted": 1273,
+    "matches": {
+      "5.0": 12,
+      "6.0": 12,
+      "7.0": 12
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 53,
+    "gt_multiple_candidates_at_7": 12,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 38.842977035998956,
+    "budgets": {
+      "0.5": {
+        "predicted": 26,
+        "matched": 3
+      },
+      "0.75": {
+        "predicted": 40,
+        "matched": 4
+      },
+      "1.0": {
+        "predicted": 53,
+        "matched": 5
+      },
+      "1.25": {
+        "predicted": 66,
+        "matched": 8
+      },
+      "1.5": {
+        "predicted": 80,
+        "matched": 9
+      }
+    }
+  },
+  {
+    "key": "6bba_fe670320-t075",
+    "dataset": "6bba_fe670320",
+    "embryo": "6bba",
+    "time": 75,
+    "role": "pilot",
+    "gt": 6,
+    "predicted": 2289,
+    "matches": {
+      "5.0": 6,
+      "6.0": 6,
+      "7.0": 6
+    },
+    "duplicates_after_rounding": 0,
+    "clipped_centers": 0,
+    "baseline_candidates": 209,
+    "gt_multiple_candidates_at_7": 6,
+    "nearest_in_5_to_7_um": 0,
+    "compute_seconds": 66.90349332599999,
+    "budgets": {
+      "0.5": {
+        "predicted": 104,
+        "matched": 3
+      },
+      "0.75": {
+        "predicted": 157,
+        "matched": 4
+      },
+      "1.0": {
+        "predicted": 209,
+        "matched": 5
+      },
+      "1.25": {
+        "predicted": 261,
+        "matched": 5
+      },
+      "1.5": {
+        "predicted": 314,
+        "matched": 5
+      }
+    }
+  }
+]

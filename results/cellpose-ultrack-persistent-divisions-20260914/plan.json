@@ -1,0 +1,74 @@
+{
+  "audit_sha256": "524f1be80efb5ff479d6bb5e16bde5c13dc22bbe25c1d38bf2af20a79e98da89",
+  "audit_summary": {
+    "FP": {
+      "events": 29,
+      "less_than_two_step_persistence": 12,
+      "minimum_depth_histogram": {
+        "0": 9,
+        "1": 3,
+        "2": 1,
+        "3": 1,
+        "4": 2,
+        "5": 13
+      },
+      "no_immediate_persistence": 9
+    },
+    "TP": {
+      "events": 1,
+      "less_than_two_step_persistence": 1,
+      "minimum_depth_histogram": {
+        "1": 1
+      },
+      "no_immediate_persistence": 0
+    }
+  },
+  "comparison": "Both complete six-clip arms with the identical pair bank, one with zero optical bonus and one with the frozen optical bonus. Report both, including failures. No automatic baseline adoption.",
+  "configs": {
+    "pair-control": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-persistent-divisions-20260914-pair-control.json",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-persistent-divisions-20260914-pair-control",
+      "sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269"
+    },
+    "pair-image": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-persistent-divisions-20260914-pair-image.json",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-persistent-divisions-20260914-pair-image",
+      "sha256": "a7ac4f3834935880b424faad9bec82541640ddde3745b6f3096b4dc6ce79766d"
+    }
+  },
+  "created_utc": "2026-09-14T19:47:18.191114+00:00",
+  "evidence_plan_sha256": "e94ed105901e5c39682d9106ad631a635e0a17cb5105e5a49eaac0b0c0914aa0",
+  "evidence_scale": 0.01,
+  "hypothesis": "Nine of 29 optical-arm evaluable false divisions have a daughter with no continuation; the recovered true division has both daughters continue once. This post-prediction observation motivates an exploratory structural follow-up, not an independent validation.",
+  "inherited_exposure": "Synthetic generator calibrated on Biohub 44b6; optical real-image fits use legacy incumbent points with historical upstream exposure. Opposite-embryo direct fitting does not erase that exposure.",
+  "logit_clip": 8.0,
+  "models": {
+    "44b6": {
+      "direct_sources": [
+        "44b6",
+        "synthetic"
+      ],
+      "initialization": "I_synthetic",
+      "name": "I_C4_44b6",
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_44b6.pt",
+      "sha256": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f",
+      "temperature": 0.8556631123250404,
+      "training_receipt_sha256": "efc9ee274a01fa9ee6083e87db83237b02465e822292b62b7c6b5b6ece27c086"
+    },
+    "6bba": {
+      "direct_sources": [
+        "6bba",
+        "synthetic"
+      ],
+      "initialization": "I_synthetic",
+      "name": "I_C4_6bba",
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_6bba.pt",
+      "sha256": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb",
+      "temperature": 0.8640514495008517,
+      "training_receipt_sha256": "877192dd1c266d1b3e2880c4504eb6cf2a0dfbaa860f1596804ca4cd7515b8bf"
+    }
+  },
+  "panel_sha256": "7345f2b231befedc8db6e07ecc31085ea8312f4e43ccd1c6f6da5f1bede8961a",
+  "rule": "Each chosen daughter must have at least one selected outgoing edge in the following frame. Clip-final daughters are exempt. Window seams use committed outgoing edges on the right and enforce persistence for inherited forks on the left. Unknown biological events are never used as negative labels.",
+  "study": "cellpose-ultrack-persistent-divisions-20260914"
+}

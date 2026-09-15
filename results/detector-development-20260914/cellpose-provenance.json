@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "audit_date_utc": "2026-09-14",
+  "completed_at_utc": "2026-09-14T15:45:35.947733+00:00",
+  "report": "cellpose-provenance.md",
+  "report_sha256": "a38906f45575c4849779c228e2fd789f2e27804de4b0114b4966a916f7755fe6",
+  "classification": "not_verified_clean",
+  "actual_overlap_evidence_found": false,
+  "image_level_overlap_comparison_performed": false,
+  "interpretation": "Missing manifests do not prove leakage. Embryo-held-out adaptation does not erase or independently audit inherited pretraining exposure.",
+  "checkpoint": {
+    "repo_id": "mouseland/cellpose-sam",
+    "revision": "7c61431b5fbb078f3296754bd15d9f51b320f837",
+    "filename": "cpdino-vitb",
+    "local_path": "work/detector-screen-20260914/cellpose/weights/cpdino-vitb",
+    "sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+    "bytes": 343599997,
+    "local_sha256_reverified": true,
+    "upload_commit": "b41552929ac21e3af07a60d5a3ad2175344c2888",
+    "upload_recorded_at_utc": "2026-05-17T18:35:37Z",
+    "rename_recorded_at_utc": "2026-05-17T20:55:37Z",
+    "competition_start": "2026-06-29",
+    "calendar_days_before_start": 43,
+    "chronology_supports": "Fixed checkpoint predates the public competition bundle.",
+    "chronology_does_not_exclude": [
+      "prerelease access",
+      "earlier public versions of biological acquisitions"
+    ],
+    "exact_supervised_training_manifest_located": false,
+    "exact_training_job_attestation_located": false,
+    "model_card_bytes": 33,
+    "model_card_license_tag": "bsd-3-clause",
+    "separate_upstream_data_license_statement": "All Cellpose models are trained on CC-BY-NC data."
+  },
+  "code": {
+    "cellpose_commit": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+    "dinov3_commit": "6876159a11b4df116f30f667f8c9888617df0751"
+  },
+  "intended_encoder_lineage": {
+    "status": "code_declared_initializer_not_checkpoint_attested",
+    "filename": "dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth",
+    "repo_id": "facebook/dinov3-vitb16-pretrain-lvd1689m",
+    "dataset": "LVD-1689M",
+    "training_image_count": 1689000000,
+    "source_pool_image_count": 17000000000,
+    "source_pool": "public Instagram posts",
+    "teacher": "DINOv3 ViT-7B trained from scratch on LVD-1689M",
+    "image_level_manifest_located": false,
+    "biohub_or_zebrafish_exclusion_located": false,
+    "head_reset_erases_encoder_exposure": false
+  },
+  "earlier_cpsam_context": {
+    "paper_doi": "10.1101/2025.04.28.651001",
+    "version": 1,
+    "publication_date": "2025-05-01",
+    "describes": "earlier SAM-based Cellpose model, not exact cpDINO checkpoint",
+    "training_images": 22826,
+    "training_rois": 3341254,
+    "dataset_groups": [
+      "Cellpose",
+      "Cellpose Nuclei",
+      "Omnipose",
+      "TissueNet",
+      "LiveCell",
+      "YeaZ",
+      "DeepBacs",
+      "NeurIPS 2022",
+      "MoNuSeg",
+      "MoNuSAC",
+      "CryoNuSeg",
+      "NuInsSeg",
+      "BCCD",
+      "CPM15+17",
+      "TNBC",
+      "LynSec",
+      "IHC TMA",
+      "CoNIC",
+      "PanNuke"
+    ],
+    "separate_finetuning_experiments": [
+      "BlastoSPIM",
+      "PlantSeg lateral root",
+      "PlantSeg ovules"
+    ],
+    "verified_as_exact_cpdino_training_recipe": false
+  },
+  "organizer_exclusions": [
+    {
+      "scope": "Public Zebrahub versus competition test set",
+      "status": "explicit_organizer_statement",
+      "author": "Thibgolds",
+      "author_type": "HOST",
+      "post_date_utc": "2026-08-13T21:58:20.713Z",
+      "comment_id": 3512606,
+      "url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/734330",
+      "does_not_cover": [
+        "Public Zebrahub versus visible training embryos",
+        "all Biohub-derived sources",
+        "exact Cellpose training corpus"
+      ]
+    },
+    {
+      "scope": "Competition training and test embryo IDs",
+      "status": "explicit_organizer_statement",
+      "url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/716793"
+    }
+  ],
+  "stronger_provenance_options": [
+    {
+      "name": "random initialization",
+      "basis": "No inherited data exposure by construction, contingent on audited initialization and later training inputs.",
+      "new_weights_needed": false,
+      "caveats": [
+        "Public CellposeModel rejects pretrained_model=False.",
+        "Unknown model names can fall back to cpsam_v2.",
+        "Full ViT-B training from scratch may be data-inefficient."
+      ]
+    },
+    {
+      "name": "DINOv3 SAT-493M ViT-L with fresh head",
+      "repo_id": "facebook/dinov3-vitl16-pretrain-sat493m",
+      "revision": "f692fa42da72c6797b67cd73494a168d1120d3ee",
+      "filename": "model.safetensors",
+      "metadata_sha256": "4e6356d992c1301b5e7c275f465e47296c5c4ad17052e262b29fc21e82ccc698",
+      "metadata_bytes": 1212559808,
+      "weight_bytes_downloaded_or_verified": false,
+      "gated": "manual",
+      "license": "dinov3-license",
+      "basis": "Author-documented satellite-only teacher trained from scratch; ViT-L distilled from this satellite teacher.",
+      "dataset": "SAT-493M: Maxar RGB ortho-rectified Earth imagery",
+      "independent_image_manifest_audit": false,
+      "drop_in_for_cpdino_vitb": false,
+      "caveats": [
+        "ViT-L instead of ViT-B.",
+        "Requires satellite constructor with untied global/local CLS normalization and new head.",
+        "HF safetensors and native PTH use different loaders.",
+        "Training memory and target accuracy untested."
+      ]
+    },
+    {
+      "name": "DINOv1 ImageNet ViT-B/16 or ViT-S/16 with fresh head",
+      "primary_source": "https://github.com/facebookresearch/dino",
+      "backbone_urls": [
+        "https://dl.fbaipublicfiles.com/dino/dino_vitbase16_pretrain/dino_vitbase16_pretrain.pth",
+        "https://dl.fbaipublicfiles.com/dino/dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
+      ],
+      "basis": "Older bounded named dataset with author-published training arguments and logs; no Cellpose supervised stage.",
+      "new_weight_bytes_downloaded": false,
+      "drop_in_for_cpdino_vitb": false,
+      "caveats": [
+        "Requires DINOv1 wrapper/head.",
+        "No individual ImageNet/Biohub image comparison was performed."
+      ]
+    },
+    {
+      "name": "AnyStar-mix",
+      "primary_source": "https://github.com/neel-dey/AnyStar",
+      "local_weight_sha256_previously_verified": "12d013468d02a3c77f772bbbb8929275fe75a994ad797c42e3d1169cb0b2b073",
+      "basis": "Author-described entirely synthetic training.",
+      "new_weight_bytes_downloaded": false,
+      "caveats": [
+        "Different native-3D StarDist model, not cpDINO backbone.",
+        "No competitive-replacement claim from existing pilot.",
+        "No separate archive weight license located in earlier audit."
+      ]
+    }
+  ],
+  "changes_and_execution": {
+    "new_training": false,
+    "new_inference": false,
+    "benchmark_edited": false,
+    "large_new_data_downloads": false,
+    "external_messages_sent": false
+  },
+  "sources": [
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/hf-commits.json",
+      "bytes": 1301,
+      "sha256": "8de1fc05373b63f4191015aa75130dd8415ac28913956a4d28aa9781b72f24d8",
+      "primary_url": "https://huggingface.co/api/models/mouseland/cellpose-sam/commits/main",
+      "kind": "public_api"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/hf-readme.md",
+      "bytes": 33,
+      "sha256": "f867f249d3c734f8f9386af9ca0ae3bd426852d6d1a003e807e82f8989deff5f",
+      "primary_url": "https://huggingface.co/mouseland/cellpose-sam/raw/7c61431b5fbb078f3296754bd15d9f51b320f837/README.md",
+      "kind": "exact_revision_model_card"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/biorxiv-details.json",
+      "bytes": 1626,
+      "sha256": "dc6fe90ada01da1b66d8e6a2d1adf7cf776c8218ec0f8bb3d489c0a45a2375b5",
+      "primary_url": "https://api.biorxiv.org/details/biorxiv/10.1101/2025.04.28.651001",
+      "kind": "public_api"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/cpsam-v1.html",
+      "bytes": 359728,
+      "sha256": "25db5f0220ffb23cfa2a7af9e9404090f1ca419d6c0af38328a4f692143aa8c6",
+      "primary_url": "https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.full",
+      "kind": "primary_paper_html"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/cpsam-v1.txt",
+      "bytes": 80720,
+      "sha256": "def1757deb231978ee9db8c468880955994be365681f0744598314bc40688172",
+      "primary_url": "https://www.biorxiv.org/content/10.1101/2025.04.28.651001v1.full",
+      "kind": "plain_text_extraction"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/sat493m-model-metadata.json",
+      "bytes": 3162,
+      "sha256": "2544c5f75cc4c500f0578a085bf9b13c3191a55f0038ae609d3a642761cf5af5",
+      "primary_url": "https://huggingface.co/api/models/facebook/dinov3-vitl16-pretrain-sat493m?blobs=true",
+      "kind": "public_metadata_no_weight_download"
+    },
+    {
+      "path": "work/detector-development-20260914/cellpose-provenance-sources/dino-vitb16-args.txt",
+      "bytes": 634,
+      "sha256": "e5e487f7a2549d24bb3bf0681099f54a3b544772bc43daaf1529aa8ed6e67ef3",
+      "primary_url": "https://dl.fbaipublicfiles.com/dino/dino_vitbase16_pretrain/args.txt",
+      "kind": "author_published_training_arguments"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/cellpose/cellpose/vit.py",
+      "bytes": 11421,
+      "sha256": "487f8efc4c8ee4498907b8ab8b3bf211645d8b7657fca7afe73ea3d1408dbf43",
+      "primary_url": "https://github.com/MouseLand/cellpose/blob/a54cb48849b7e225a81e8e43dcb042d42427f543/cellpose/vit.py",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/cellpose/cellpose/models.py",
+      "bytes": 23734,
+      "sha256": "3b007cb67910720a3d7ac16643c348bba93743e6ab81d9468e90986ca9a38511",
+      "primary_url": "https://github.com/MouseLand/cellpose/blob/a54cb48849b7e225a81e8e43dcb042d42427f543/cellpose/models.py",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/cellpose/docs/models.rst",
+      "bytes": 4824,
+      "sha256": "d08805b00d6a7735cfeb5633c2981fd318c30311691278b1fe4a360f4bca6302",
+      "primary_url": "https://github.com/MouseLand/cellpose/blob/a54cb48849b7e225a81e8e43dcb042d42427f543/docs/models.rst",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/cellpose/README.md",
+      "bytes": 20756,
+      "sha256": "bf9b0d2b4fb9d6dae4c4aa05687e920c27e8081fc52da1cf73dd8b1b24c0aa56",
+      "primary_url": "https://github.com/MouseLand/cellpose/blob/a54cb48849b7e225a81e8e43dcb042d42427f543/README.md",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/dinov3/MODEL_CARD.md",
+      "bytes": 12950,
+      "sha256": "5df24b62906d899688882146c5ff4ca066391205c5350a9b85dbcb485b2d07c8",
+      "primary_url": "https://github.com/facebookresearch/dinov3/blob/6876159a11b4df116f30f667f8c9888617df0751/MODEL_CARD.md",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/dinov3/dinov3/hub/backbones.py",
+      "bytes": 17247,
+      "sha256": "6c9a18aca0b5fcb1fce439213a94a528e072376a6023718e03dbd9fcfaa10deb",
+      "primary_url": "https://github.com/facebookresearch/dinov3/blob/6876159a11b4df116f30f667f8c9888617df0751/dinov3/hub/backbones.py",
+      "kind": "pinned_source"
+    },
+    {
+      "path": "reference/overview/timeline.md",
+      "bytes": 624,
+      "sha256": "0c0f4d5c3f26829f728fa7656c621ecaf37f192aa3188e5d56de244a6aabf6aa",
+      "primary_url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/overview/timeline",
+      "kind": "local_official_snapshot"
+    },
+    {
+      "path": "work/biohub-data-guide/reference/topic-734330.json",
+      "bytes": 7347,
+      "sha256": "d7855989c27e7322a62ed2b109e07c0a3a221b820239e2c6caee5593ceb36836",
+      "primary_url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/734330",
+      "kind": "local_structured_organizer_reply"
+    },
+    {
+      "path": "reference/forum/topics/716793-only-2-groups-of-embryo-id.md",
+      "bytes": 2906,
+      "sha256": "14afa1cb19c2d02a352d8e40c2a535b92427b98fbf007b7f816401ee89161fb1",
+      "primary_url": "https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/716793",
+      "kind": "local_organizer_reply"
+    },
+    {
+      "path": "/home/mpf/code/kaggle/AnyStar/README.md",
+      "bytes": 7851,
+      "sha256": "2b794fede4b279c2d215086f2861051bb633f49f84681731d1eb2ce48256f052",
+      "primary_url": "https://github.com/neel-dey/AnyStar/blob/d5d6f7ddb4b5dae80d0a65db7dec9a4a1376d1cd/README.md",
+      "kind": "previously_pinned_source"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "cellpose": {
+    "checkpoint_sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+    "model": "cpdino-vitb",
+    "recipe": "tools.detector_screen.cellpose_adapter; eager BF16 batch 8, native 3D, metadata anisotropy, unchanged benchmark defaults"
+  },
+  "evaluation": "All nodes and edges of each complete 100-frame clip, integer native centroids, official GEFF total-node estimate, fresh official matching and micro aggregation.",
+  "exposure": "Frozen external pretrained checkpoint, no fitting or label-based tuning; reused public embryos and unresolved inherited checkpoint exposure. Exploratory local evaluation. Event-cost controls are development ablations on the already inspected pilot panel.",
+  "geometry": "Audit SQL z/y/x against the serialized mask centroid and recomputed rounded native-mask centroid before linking. Pinned ultrack rounds centroids before insertion, so no coordinate changes are required. CSV uses np.rint.",
+  "linking": {
+    "distance_weight": 0.0,
+    "max_distance": 15.0,
+    "max_neighbors": 5,
+    "n_workers": 4
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "schema": 1,
+  "segmentation": {
+    "max_area": 100000,
+    "min_area": 20,
+    "min_area_factor": 2.5,
+    "min_frontier": 0.05,
+    "n_workers": 4
+  },
+  "selection": "Declared before this bounded cost study was scored; previous six-clip stock results and error audit were already inspected. Copy only the three signed event weights from the pinned sparse_zebrafish supplementary configuration. Equal birth and division weights still give a zero local second-link threshold; this tests the accompanying continuity pressure. It is not a replication of the paper's dataset or pipeline. No further search or best-run replacement is part of this study.",
+  "study": "cellpose-ultrack-event-costs-20260914-reference-events",
+  "tracking": {
+    "appear_weight": -0.1,
+    "bias": 0.0,
+    "disappear_weight": -0.1,
+    "division_weight": -0.1,
+    "link_function": "power",
+    "n_threads": 8,
+    "overlap_size": 5,
+    "power": 4,
+    "solution_gap": 0.001,
+    "solver_name": "CBC",
+    "time_limit": 180,
+    "window_size": 20
+  },
+  "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995"
+}

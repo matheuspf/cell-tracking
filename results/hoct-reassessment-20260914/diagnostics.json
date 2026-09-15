@@ -1,0 +1,441 @@
+{
+  "cellpose_general_v1_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 255,
+      "touches_unmatched_endpoint": 652,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 5
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 3
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 64,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 150
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 8
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 18
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 80,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 220
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 14
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 60,
+          "both_matched_wrong_identity": 3
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "candidate_present_not_selected": 87,
+          "missing_matched_endpoint": 3,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 201,
+          "both_matched_wrong_identity": 2
+        }
+      }
+    ]
+  },
+  "cellpose_general_v1_no_division_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 313,
+      "touches_unmatched_endpoint": 537,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 3
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 3
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 75,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 140
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 10
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 12
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 105,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 172
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 17
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 47,
+          "both_matched_wrong_identity": 1
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "candidate_present_not_selected": 104,
+          "missing_matched_endpoint": 3,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 163,
+          "both_matched_wrong_identity": 2
+        }
+      }
+    ]
+  },
+  "cellpose_ctc_v0_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 291,
+      "touches_unmatched_endpoint": 762,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 7
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 5
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 96,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 204,
+          "both_matched_wrong_identity": 3
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 11
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 25
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 76,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 226
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 15
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 67,
+          "both_matched_wrong_identity": 1
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "candidate_present_not_selected": 91,
+          "missing_matched_endpoint": 3,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 235,
+          "both_matched_wrong_identity": 3
+        }
+      }
+    ]
+  },
+  "cellpose_ctc_v0_no_division_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 345,
+      "touches_unmatched_endpoint": 611,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 6
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 3
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 105,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 203,
+          "both_matched_wrong_identity": 3
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 12
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 16
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 94,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 165
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 18
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 46
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "candidate_present_not_selected": 114,
+          "missing_matched_endpoint": 3,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 178,
+          "both_matched_wrong_identity": 3
+        }
+      }
+    ]
+  },
+  "cellpose_source_residual_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 267,
+      "touches_unmatched_endpoint": 825,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 6
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 10
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 78,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 210
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 11
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 32
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 82,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 280
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 15
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 80,
+          "both_matched_wrong_identity": 5
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "missing_matched_endpoint": 3,
+          "candidate_present_not_selected": 79,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 213,
+          "both_matched_wrong_identity": 1
+        }
+      }
+    ]
+  },
+  "cellpose_source_residual_no_division_cuda": {
+    "counts": {
+      "candidate_present_not_selected": 336,
+      "touches_unmatched_endpoint": 587,
+      "missing_matched_endpoint": 167,
+      "outside_candidate_bank": 2,
+      "both_matched_wrong_identity": 2
+    },
+    "clips": [
+      {
+        "dataset": "44b6_81c256f0",
+        "missing_edges": {
+          "candidate_present_not_selected": 2
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 3
+        }
+      },
+      {
+        "dataset": "44b6_8f5ab931",
+        "missing_edges": {
+          "candidate_present_not_selected": 84,
+          "missing_matched_endpoint": 14,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 156
+        }
+      },
+      {
+        "dataset": "44b6_a21120c2",
+        "missing_edges": {
+          "candidate_present_not_selected": 12
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 18
+        }
+      },
+      {
+        "dataset": "6bba_af149c94",
+        "missing_edges": {
+          "candidate_present_not_selected": 116,
+          "missing_matched_endpoint": 78
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 199
+        }
+      },
+      {
+        "dataset": "6bba_e16ffc58",
+        "missing_edges": {
+          "missing_matched_endpoint": 72,
+          "candidate_present_not_selected": 18
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 50,
+          "both_matched_wrong_identity": 1
+        }
+      },
+      {
+        "dataset": "6bba_fe670320",
+        "missing_edges": {
+          "missing_matched_endpoint": 3,
+          "candidate_present_not_selected": 104,
+          "outside_candidate_bank": 1
+        },
+        "false_edges": {
+          "touches_unmatched_endpoint": 161,
+          "both_matched_wrong_identity": 1
+        }
+      }
+    ]
+  }
+}

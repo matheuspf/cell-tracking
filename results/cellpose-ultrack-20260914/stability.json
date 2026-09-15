@@ -1,0 +1,141 @@
+{
+  "dataset": "44b6_8f5ab931",
+  "checked_utc": "2026-09-14T18:07:11.844236+00:00",
+  "repeat_root": "work/cellpose-ultrack-20260914-stability",
+  "same_masks_and_recipe": true,
+  "independently_rebuilt_hierarchy_and_links": true,
+  "canonical_graph_retained": true,
+  "canonical_score": 0.7372444106754041,
+  "repeat_score": 0.7382739766633404,
+  "score_delta": 0.0010295659879362429,
+  "canonical_counts": {
+    "division_fn": 0,
+    "division_fp": 45,
+    "division_tp": 0,
+    "edge_fn": 57,
+    "edge_fp": 115,
+    "edge_tp": 547,
+    "num_pred_nodes": 36100
+  },
+  "repeat_counts": {
+    "division_fn": 0,
+    "division_fp": 44,
+    "division_tp": 0,
+    "edge_fn": 57,
+    "edge_fp": 114,
+    "edge_tp": 547,
+    "num_pred_nodes": 36099
+  },
+  "canonical_graph_hash": "cf2631296cb507752b0c7184850f393ef7e6bc7fd5d4ed3550ffe96ccdbcddf0",
+  "repeat_graph_hash": "0a2ea1904844fee252483bcd15dd8550232369140eb58dff4fbb9db8dc7244d5",
+  "coordinate_graph_difference": {
+    "nodes_only_canonical": 46,
+    "nodes_only_repeat": 45,
+    "edges_only_canonical": 156,
+    "edges_only_repeat": 161
+  },
+  "repeat_tracking_receipt": {
+    "dataset": "44b6_8f5ab931",
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "full_clip": true,
+    "fingerprint": "9e27e3aa373c590dd9f1ec138e73b946993517b3cff3c30067f9ff27527ea90a",
+    "graph_sha256": "53a554eee799abb46a86a26c527af1fb0cb373e819e3c59c77661ad6bb0ce82d",
+    "csv_sha256": "c052d3b8a453e2c431d3a73c4045f2e206216c9d97373d654f149190d677a30b",
+    "input_instances": 42835,
+    "selected_nodes": 36099,
+    "selected_edges": 35404,
+    "centroid_audit": {
+      "nodes": 75965,
+      "maximum_disagreement_um": 0.0,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "coordinates_changed": false
+    },
+    "predicted_divisions": 1584,
+    "database_counts": {
+      "nodes": 75965,
+      "links": 372188,
+      "overlaps": 504078
+    },
+    "selected_overlap_conflicts": 0,
+    "graph_checks_passed": true,
+    "csv_round_trip_passed": true,
+    "solver": [
+      {
+        "status": "OPTIMAL",
+        "objective": 613.5342227214534,
+        "objective_bound": 613.5342227214534,
+        "gap": 0.0,
+        "seconds": 56.25377285799914,
+        "variables": 212582,
+        "constraints": 249975,
+        "solutions": 1
+      },
+      {
+        "status": "OPTIMAL",
+        "objective": 794.2324110077774,
+        "objective_bound": 794.2324110077774,
+        "gap": 0.0,
+        "seconds": 41.437932803000876,
+        "variables": 193746,
+        "constraints": 210921,
+        "solutions": 1
+      },
+      {
+        "status": "OPTIMAL",
+        "objective": 539.3525038816991,
+        "objective_bound": 539.3525038816991,
+        "gap": 0.0,
+        "seconds": 20.86839873399731,
+        "variables": 124829,
+        "constraints": 125177,
+        "solutions": 1
+      },
+      {
+        "status": "OPTIMAL",
+        "objective": 529.4361159112018,
+        "objective_bound": 529.4361159112018,
+        "gap": 0.0,
+        "seconds": 63.47806339900126,
+        "variables": 156817,
+        "constraints": 177385,
+        "solutions": 1
+      },
+      {
+        "status": "OPTIMAL",
+        "objective": 478.63891376683347,
+        "objective_bound": 478.63891376683364,
+        "gap": 3.5628163878354655e-16,
+        "seconds": 32.30744422600037,
+        "variables": 108850,
+        "constraints": 114149,
+        "solutions": 1
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 19.90806499199971,
+      "segment_seconds": 75.8125391120011,
+      "link_seconds": 11.668268129000353,
+      "solve_seconds": 229.55768260399782
+    },
+    "database_bytes": 274939904,
+    "peak_process_rss_mib": 5900.12109375,
+    "versions": {
+      "numpy": "2.4.6",
+      "zarr": "3.1.6",
+      "mip": "2.0.0",
+      "higra": "0.6.13",
+      "sqlalchemy": "2.0.52"
+    },
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "config_sha256": "fec7373cb8e3b18874a4b53287d878b1e14f2804f3843252eaeafd164416b9ca",
+    "common_stages_reused_from": null,
+    "annotations_used": false
+  },
+  "interpretation": "One fixed-recipe repeat measures solver/hierarchy tie sensitivity. It is not model selection or a confidence interval."
+}

@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-09-14T16:59:12.049629+00:00",
+  "status": "three source cases visually inspected",
+  "source_embryo": "44b6",
+  "figure": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-refine-v1/source-support-audit.png",
+  "receipt_sha256": "7dc1d2feb699ff68caf149fcc067be7b180b03862ca3a0a8c207cffa48f3b32e",
+  "finding": "No obvious axis/origin mismatch; paired points fall in plausible fluorescent nuclei. Broad axial signal remains ambiguous. This does not certify every weak correspondence or dense cell identity."
+}

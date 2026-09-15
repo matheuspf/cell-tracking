@@ -1,0 +1,118 @@
+{
+  "created_utc": "2026-09-14T14:22:26.033959+00:00",
+  "viewer_url": "http://localhost:8767",
+  "previous_28_case_cause": "The root page opened the old single-sequence comparison, with 28 cases in the default movie.",
+  "behavior": "All 199 clips by default. Every flagged center and connection is accessible with global Next/Previous and direct example-number navigation. Full image and zoom are shown together for GT, raw proposals, and final predictions. Main group buttons clear clip/frame filters.",
+  "datasets": 199,
+  "frames": 19900,
+  "annotations": 133318,
+  "counts": {
+    "pooled": {
+      "all": 50546,
+      "detection": 42868,
+      "missing": 920,
+      "selection": 1765,
+      "association": 7678,
+      "ambiguous": 33362,
+      "offset": 23980,
+      "annotations": 133318,
+      "unlabeled": 3978107
+    },
+    "best": {
+      "all": 50535,
+      "detection": 42868,
+      "missing": 920,
+      "selection": 1765,
+      "association": 7667,
+      "ambiguous": 33361,
+      "offset": 23980,
+      "annotations": 133318,
+      "unlabeled": 3978107
+    }
+  },
+  "raw_unmatched": 4698870,
+  "full_dataset_audit_database_sha256": "2a13b4cfe5008273c9fef063f1996084c3c400689d61294626b417fa80a660cf",
+  "data_audit_unchanged": true,
+  "tests": {
+    "passed": 21,
+    "skipped": 0
+  },
+  "browser_validation": {
+    "passed": true,
+    "datasets": 199,
+    "frames": 19900,
+    "annotations": 133318,
+    "default_all_examples": 50546,
+    "legacy_28_case_links_open_all_data": true,
+    "first_and_last_examples_reachable": true,
+    "next_crosses_page_boundary": true,
+    "raw_pool_last_example": true,
+    "model_filter_combinations": 8,
+    "native_frame_bytes_independently_verified": true,
+    "full_and_zoom_pixels_in_all_planes": true,
+    "full_image_not_cropped": true,
+    "synchronized_overlays": true,
+    "automatic_depth_includes_selected_centers": true,
+    "full_image_click_moves_zoom": true,
+    "own_frame_centers": true,
+    "association_endpoints": true,
+    "rapid_frame_navigation": true,
+    "playback_pause": true,
+    "clip_frame_reset": true,
+    "local_assessment_export": true,
+    "case_links_and_tab_state": true,
+    "empty_filter_recovery": true,
+    "zero_annotation_frames": true,
+    "viewport_widths": [
+      390,
+      768,
+      1700
+    ],
+    "errors": [],
+    "failed_requests": [],
+    "external_requests": 0
+  },
+  "focus_comparison_regression": {
+    "passed": true,
+    "method_radius_combinations": 75,
+    "errors": [],
+    "failed_requests": [],
+    "synchronized_pixels": true,
+    "native_axis_and_mask_pixel_checks": true,
+    "playback_and_pause": true,
+    "rapid_seek": true,
+    "snapshot_gap_guard": true,
+    "temporal_links": true,
+    "mask_picking": true,
+    "selection_and_view_link": true,
+    "viewport_widths": [
+      390,
+      768,
+      1600
+    ],
+    "external_requests": 0,
+    "complete_pipeline_models": [
+      "pooled",
+      "best"
+    ],
+    "error_navigation": true,
+    "error_context_frames": true,
+    "error_share_links": true,
+    "whole_population_scores": true,
+    "separate_center_and_link_cases": true,
+    "paired_frame_pixels_verified": true,
+    "correct_daughter_preserved": true,
+    "case_isolation": true,
+    "error_mobile_layout": true
+  },
+  "source_sha256": {
+    "detection_server.py": "ae410b24d8746a20fc2f6b5b776c154a77168518dbaacd182ecb9ca2dac624df",
+    "index.html": "d89d30f7617a3199bd57d0f58822caf34d80579c1c5b40fcc55e9bf395892a37",
+    "viewer.js": "2ca234f85bfda938459e5e8821326b1a85c85ee2616c1d9878f202c42c09ac8e",
+    "error_view.js": "ea7e2857c1e3a350169a470c63822553e81571f35239991df85035ee0c33e704",
+    "style.css": "8270e572a43292d2a5d9780bc55a2d8c95c7fbc86f1f2e369f5daf5f29559fa9",
+    "detection_view.js": "6e370fb07f3f9ab85cd93f96a311b7362d604e8e4623c571a00b8662225401a4",
+    "detection_style.css": "07a289145769dea4f789846a7e1cea3fa0215e3943eea67e2fd9820d02e9fd76"
+  },
+  "interpretation": "Flagged examples include ambiguity. Unlabeled predictions are separately pageable and are not confirmed false positives. No data, predictions, or masks changed."
+}

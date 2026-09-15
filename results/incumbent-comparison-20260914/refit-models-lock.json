@@ -1,0 +1,415 @@
+{
+  "created_utc": "2026-09-14T20:38:38.647031+00:00",
+  "plan_sha256": "b8f87dbfe15e8d214be5d67a9a1befd1034475ce68313e29be2fa646a171e41f",
+  "models": [
+    {
+      "created_utc": "2026-09-14T20:38:29.721144+00:00",
+      "seed": 20260914,
+      "source": "all",
+      "updates": 3000,
+      "sha256": "b77f0b7e315f36481222f4e7a6c076111fc44474bdb6dad5aa25fab83458f972",
+      "plan_sha256": "b8f87dbfe15e8d214be5d67a9a1befd1034475ce68313e29be2fa646a171e41f",
+      "queries": {
+        "natural": 2268,
+        "jitter_and_center": 27088
+      },
+      "peak_reserved_bytes": 673185792,
+      "seconds_excluding_queue": 10.684090972001286,
+      "gpu_queue_seconds": 4.260000423528254e-06,
+      "history": [
+        {
+          "seed": 20260914,
+          "update": 1,
+          "loss": 0.5125609636306763,
+          "gradient_norm": 0.5151206851005554
+        },
+        {
+          "seed": 20260914,
+          "update": 100,
+          "loss": 0.30631041526794434,
+          "gradient_norm": 0.9416408538818359
+        },
+        {
+          "seed": 20260914,
+          "update": 200,
+          "loss": 0.24389570951461792,
+          "gradient_norm": 1.2420871257781982
+        },
+        {
+          "seed": 20260914,
+          "update": 300,
+          "loss": 0.2930885851383209,
+          "gradient_norm": 1.3032660484313965
+        },
+        {
+          "seed": 20260914,
+          "update": 400,
+          "loss": 0.23199908435344696,
+          "gradient_norm": 0.5267757177352905
+        },
+        {
+          "seed": 20260914,
+          "update": 500,
+          "loss": 0.21051092445850372,
+          "gradient_norm": 0.7008791565895081
+        },
+        {
+          "seed": 20260914,
+          "update": 600,
+          "loss": 0.23240536451339722,
+          "gradient_norm": 0.6902055740356445
+        },
+        {
+          "seed": 20260914,
+          "update": 700,
+          "loss": 0.22664256393909454,
+          "gradient_norm": 0.4789062440395355
+        },
+        {
+          "seed": 20260914,
+          "update": 800,
+          "loss": 0.2116038203239441,
+          "gradient_norm": 0.7852694988250732
+        },
+        {
+          "seed": 20260914,
+          "update": 900,
+          "loss": 0.2418879270553589,
+          "gradient_norm": 0.5043070316314697
+        },
+        {
+          "seed": 20260914,
+          "update": 1000,
+          "loss": 0.22380347549915314,
+          "gradient_norm": 0.991532564163208
+        },
+        {
+          "seed": 20260914,
+          "update": 1100,
+          "loss": 0.20606552064418793,
+          "gradient_norm": 0.5118291974067688
+        },
+        {
+          "seed": 20260914,
+          "update": 1200,
+          "loss": 0.18735934793949127,
+          "gradient_norm": 0.8448591828346252
+        },
+        {
+          "seed": 20260914,
+          "update": 1300,
+          "loss": 0.19221918284893036,
+          "gradient_norm": 0.7284113764762878
+        },
+        {
+          "seed": 20260914,
+          "update": 1400,
+          "loss": 0.18916071951389313,
+          "gradient_norm": 0.7218896746635437
+        },
+        {
+          "seed": 20260914,
+          "update": 1500,
+          "loss": 0.18395566940307617,
+          "gradient_norm": 0.6182663440704346
+        },
+        {
+          "seed": 20260914,
+          "update": 1600,
+          "loss": 0.1789938062429428,
+          "gradient_norm": 0.7533310055732727
+        },
+        {
+          "seed": 20260914,
+          "update": 1700,
+          "loss": 0.17817376554012299,
+          "gradient_norm": 0.7430977821350098
+        },
+        {
+          "seed": 20260914,
+          "update": 1800,
+          "loss": 0.1956103891134262,
+          "gradient_norm": 1.030206561088562
+        },
+        {
+          "seed": 20260914,
+          "update": 1900,
+          "loss": 0.19812056422233582,
+          "gradient_norm": 0.7246442437171936
+        },
+        {
+          "seed": 20260914,
+          "update": 2000,
+          "loss": 0.1591370701789856,
+          "gradient_norm": 0.5934817790985107
+        },
+        {
+          "seed": 20260914,
+          "update": 2100,
+          "loss": 0.1533961445093155,
+          "gradient_norm": 0.6574115753173828
+        },
+        {
+          "seed": 20260914,
+          "update": 2200,
+          "loss": 0.1739513874053955,
+          "gradient_norm": 0.6008343696594238
+        },
+        {
+          "seed": 20260914,
+          "update": 2300,
+          "loss": 0.14989446103572845,
+          "gradient_norm": 0.5577338337898254
+        },
+        {
+          "seed": 20260914,
+          "update": 2400,
+          "loss": 0.15091603994369507,
+          "gradient_norm": 0.5625916719436646
+        },
+        {
+          "seed": 20260914,
+          "update": 2500,
+          "loss": 0.15495941042900085,
+          "gradient_norm": 0.554578959941864
+        },
+        {
+          "seed": 20260914,
+          "update": 2600,
+          "loss": 0.17282120883464813,
+          "gradient_norm": 0.5287440419197083
+        },
+        {
+          "seed": 20260914,
+          "update": 2700,
+          "loss": 0.15287302434444427,
+          "gradient_norm": 0.5959681868553162
+        },
+        {
+          "seed": 20260914,
+          "update": 2800,
+          "loss": 0.13369691371917725,
+          "gradient_norm": 0.5528268218040466
+        },
+        {
+          "seed": 20260914,
+          "update": 2900,
+          "loss": 0.21238406002521515,
+          "gradient_norm": 0.6946948766708374
+        },
+        {
+          "seed": 20260914,
+          "update": 3000,
+          "loss": 0.15949775278568268,
+          "gradient_norm": 0.6751272082328796
+        }
+      ],
+      "scope": "Population-matched resubstitution; selected temporal/query support, not all incumbent training observations. CPDINO ancestry remains unresolved."
+    },
+    {
+      "created_utc": "2026-09-14T20:38:38.645941+00:00",
+      "seed": 314159,
+      "source": "all",
+      "updates": 3000,
+      "sha256": "caf437a07fa10493d21494db36994ac1f94de7ef1de9992ae266a19c549a962e",
+      "plan_sha256": "b8f87dbfe15e8d214be5d67a9a1befd1034475ce68313e29be2fa646a171e41f",
+      "queries": {
+        "natural": 2268,
+        "jitter_and_center": 27088
+      },
+      "peak_reserved_bytes": 673185792,
+      "seconds_excluding_queue": 8.923981301999447,
+      "gpu_queue_seconds": 2.14999818126671e-06,
+      "history": [
+        {
+          "seed": 314159,
+          "update": 1,
+          "loss": 0.4503151774406433,
+          "gradient_norm": 0.5260424017906189
+        },
+        {
+          "seed": 314159,
+          "update": 100,
+          "loss": 0.2936858832836151,
+          "gradient_norm": 1.8988659381866455
+        },
+        {
+          "seed": 314159,
+          "update": 200,
+          "loss": 0.26165592670440674,
+          "gradient_norm": 0.6530939936637878
+        },
+        {
+          "seed": 314159,
+          "update": 300,
+          "loss": 0.2957041561603546,
+          "gradient_norm": 0.6176167130470276
+        },
+        {
+          "seed": 314159,
+          "update": 400,
+          "loss": 0.22556279599666595,
+          "gradient_norm": 0.9718808531761169
+        },
+        {
+          "seed": 314159,
+          "update": 500,
+          "loss": 0.22945523262023926,
+          "gradient_norm": 0.976753294467926
+        },
+        {
+          "seed": 314159,
+          "update": 600,
+          "loss": 0.25954321026802063,
+          "gradient_norm": 0.5223067402839661
+        },
+        {
+          "seed": 314159,
+          "update": 700,
+          "loss": 0.24017909169197083,
+          "gradient_norm": 0.5454326868057251
+        },
+        {
+          "seed": 314159,
+          "update": 800,
+          "loss": 0.2634774446487427,
+          "gradient_norm": 0.5531577467918396
+        },
+        {
+          "seed": 314159,
+          "update": 900,
+          "loss": 0.22852957248687744,
+          "gradient_norm": 0.5916182994842529
+        },
+        {
+          "seed": 314159,
+          "update": 1000,
+          "loss": 0.18115080893039703,
+          "gradient_norm": 0.796858012676239
+        },
+        {
+          "seed": 314159,
+          "update": 1100,
+          "loss": 0.197440043091774,
+          "gradient_norm": 0.6220454573631287
+        },
+        {
+          "seed": 314159,
+          "update": 1200,
+          "loss": 0.21305862069129944,
+          "gradient_norm": 0.4724944829940796
+        },
+        {
+          "seed": 314159,
+          "update": 1300,
+          "loss": 0.19193892180919647,
+          "gradient_norm": 1.4634981155395508
+        },
+        {
+          "seed": 314159,
+          "update": 1400,
+          "loss": 0.19202524423599243,
+          "gradient_norm": 0.6575538516044617
+        },
+        {
+          "seed": 314159,
+          "update": 1500,
+          "loss": 0.16723626852035522,
+          "gradient_norm": 0.7404710650444031
+        },
+        {
+          "seed": 314159,
+          "update": 1600,
+          "loss": 0.15037712454795837,
+          "gradient_norm": 0.5316191911697388
+        },
+        {
+          "seed": 314159,
+          "update": 1700,
+          "loss": 0.1739494800567627,
+          "gradient_norm": 0.7180433869361877
+        },
+        {
+          "seed": 314159,
+          "update": 1800,
+          "loss": 0.14821742475032806,
+          "gradient_norm": 0.5587595701217651
+        },
+        {
+          "seed": 314159,
+          "update": 1900,
+          "loss": 0.1543840765953064,
+          "gradient_norm": 0.6260190010070801
+        },
+        {
+          "seed": 314159,
+          "update": 2000,
+          "loss": 0.20078213512897491,
+          "gradient_norm": 0.6077412366867065
+        },
+        {
+          "seed": 314159,
+          "update": 2100,
+          "loss": 0.16431738436222076,
+          "gradient_norm": 0.7938313484191895
+        },
+        {
+          "seed": 314159,
+          "update": 2200,
+          "loss": 0.14644533395767212,
+          "gradient_norm": 0.5758674144744873
+        },
+        {
+          "seed": 314159,
+          "update": 2300,
+          "loss": 0.14646147191524506,
+          "gradient_norm": 0.5012977123260498
+        },
+        {
+          "seed": 314159,
+          "update": 2400,
+          "loss": 0.13929389417171478,
+          "gradient_norm": 0.5526288747787476
+        },
+        {
+          "seed": 314159,
+          "update": 2500,
+          "loss": 0.16338448226451874,
+          "gradient_norm": 0.7030491232872009
+        },
+        {
+          "seed": 314159,
+          "update": 2600,
+          "loss": 0.14135593175888062,
+          "gradient_norm": 0.6463915109634399
+        },
+        {
+          "seed": 314159,
+          "update": 2700,
+          "loss": 0.1414964348077774,
+          "gradient_norm": 0.787714958190918
+        },
+        {
+          "seed": 314159,
+          "update": 2800,
+          "loss": 0.15099015831947327,
+          "gradient_norm": 0.7328588366508484
+        },
+        {
+          "seed": 314159,
+          "update": 2900,
+          "loss": 0.13735045492649078,
+          "gradient_norm": 0.6287771463394165
+        },
+        {
+          "seed": 314159,
+          "update": 3000,
+          "loss": 0.13855938613414764,
+          "gradient_norm": 0.804705798625946
+        }
+      ],
+      "scope": "Population-matched resubstitution; selected temporal/query support, not all incumbent training observations. CPDINO ancestry remains unresolved."
+    }
+  ],
+  "new_scores_opened": false
+}

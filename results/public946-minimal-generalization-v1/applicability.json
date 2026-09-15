@@ -1,0 +1,71 @@
+{
+  "E01": {
+    "required": "complete normalized native parent columns",
+    "seam": "atomic replacement immediately after motion_relink_edges",
+    "status": "applicable"
+  },
+  "E02": {
+    "affine": {
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "stride": [
+        1,
+        4,
+        4
+      ]
+    },
+    "response": "raw logits",
+    "seam": "same final scalar logits as _detect_cells_pooled; surviving unchanged originals before smoother",
+    "status": "applicable"
+  },
+  "E03": {
+    "evidence": [
+      {
+        "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+        "line": 293,
+        "text": "return np.concatenate([t_col, coords], axis=1).astype(np.int16)"
+      },
+      {
+        "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+        "line": 824,
+        "text": "coords[:, 1:] *= ds_arr"
+      }
+    ],
+    "reason": "Public peak finder returns integer int16 grid coordinates; features have same spatial shape",
+    "status": "pending_numerical_identity"
+  },
+  "E04": {
+    "alignment": "shifted[q]=image[ds*q-shift]; response inverse samples q+shift/ds; retain baseline outside support",
+    "seam": "per-model scalar response before public detection calibration and retention guard",
+    "shift": [
+      0,
+      2,
+      2
+    ],
+    "status": "applicable"
+  },
+  "E05": {
+    "already_present": "feature-channel averaging is present; probability consensus is absent",
+    "reflection": "original X -> raw_width-1-X; then divide by XY stride for unchanged public truncation/gather; physical and positional coordinates use reflected values",
+    "seam": "mean of final normalized probabilities, fixed IDs; run full public association and primary feature TTA on X-reflected raw images",
+    "status": "applicable"
+  },
+  "E06": {
+    "reason": "Actual checkpoint config window_size=2; only one fully observed window contains any consecutive pair",
+    "status": "pending_numerical_identity",
+    "window_size": 2
+  },
+  "E07": {
+    "anchors": "fork, immediate predecessor, immediate daughters",
+    "seam": "original linefit neighborhood with anchors and no support crossing a fork",
+    "status": "applicable"
+  },
+  "E08": {
+    "seam": "mean -> even-count median of inverse-aligned raw detection logits independently in both branches; feature average unchanged",
+    "status": "applicable",
+    "views": 8
+  }
+}

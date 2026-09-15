@@ -1,0 +1,220 @@
+{
+  "created_utc": "2026-09-14T17:31:49.251301+00:00",
+  "fit": "source-44b6-seed-20260914",
+  "source": "44b6",
+  "target": "6bba",
+  "seed": 20260914,
+  "config_sha256": "5ba8b846668cb2741affc3957909b5c71d51dad7ce67a81fe1be05b17b039571",
+  "training_lock_sha256": "458366c0290af6a99e1f42a13c75c434465e7f92e54e7c426f13748978045df1",
+  "checkpoint_sha256": "eeeed41ce9b602a56ac3be222c8cfa795dfb3f03043a46c2717c0e35ebf876db",
+  "updates": 3000,
+  "seconds_including_queue": 12.052570570998796,
+  "gpu_queue_seconds": 2.684375036998972,
+  "peak_gpu_reserved_bytes": 322961408,
+  "supervised_queries": {
+    "natural": 595,
+    "jitter_and_center": 4008
+  },
+  "adaptation_exposure": {
+    "labels": [
+      "44b6"
+    ],
+    "unlabeled_images": [
+      "44b6"
+    ],
+    "calibration": [],
+    "teacher_construction": [],
+    "normalization_fit": []
+  },
+  "inherited_exposure": "cpdino supervised/pretraining acquisitions unverified",
+  "source_loss_history": [
+    {
+      "update": 1,
+      "source_loss": 0.3784494996070862,
+      "gradient_norm": 0.29883870482444763,
+      "learning_rate": 2.9999999999999997e-06
+    },
+    {
+      "update": 100,
+      "source_loss": 0.3534032702445984,
+      "gradient_norm": 0.8216113448143005,
+      "learning_rate": 0.0003
+    },
+    {
+      "update": 200,
+      "source_loss": 0.26986411213874817,
+      "gradient_norm": 0.7248079776763916,
+      "learning_rate": 0.00029916465889449624
+    },
+    {
+      "update": 300,
+      "source_loss": 0.1991533637046814,
+      "gradient_norm": 0.6039525270462036,
+      "learning_rate": 0.00029666842918868734
+    },
+    {
+      "update": 400,
+      "source_loss": 0.16890443861484528,
+      "gradient_norm": 0.5965279340744019,
+      "learning_rate": 0.0002925405768935493
+    },
+    {
+      "update": 500,
+      "source_loss": 0.19039718806743622,
+      "gradient_norm": 0.604061484336853,
+      "learning_rate": 0.0002868294973031114
+    },
+    {
+      "update": 600,
+      "source_loss": 0.15483391284942627,
+      "gradient_norm": 0.8661693930625916,
+      "learning_rate": 0.0002796021476038814
+    },
+    {
+      "update": 700,
+      "source_loss": 0.12026309221982956,
+      "gradient_norm": 0.5262497663497925,
+      "learning_rate": 0.0002709432618630542
+    },
+    {
+      "update": 800,
+      "source_loss": 0.10337519645690918,
+      "gradient_norm": 0.6468287110328674,
+      "learning_rate": 0.0002609543575990461
+    },
+    {
+      "update": 900,
+      "source_loss": 0.08910928666591644,
+      "gradient_norm": 0.585505485534668,
+      "learning_rate": 0.0002497525455814104
+    },
+    {
+      "update": 1000,
+      "source_loss": 0.09923098981380463,
+      "gradient_norm": 0.7420691251754761,
+      "learning_rate": 0.00023746915681413947
+    },
+    {
+      "update": 1100,
+      "source_loss": 0.06961846351623535,
+      "gradient_norm": 0.8842899203300476,
+      "learning_rate": 0.00022424820279972008
+    },
+    {
+      "update": 1200,
+      "source_loss": 0.08041632175445557,
+      "gradient_norm": 0.49500301480293274,
+      "learning_rate": 0.0002102446871359378
+    },
+    {
+      "update": 1300,
+      "source_loss": 0.07725346088409424,
+      "gradient_norm": 0.4134807884693146,
+      "learning_rate": 0.000195622788240414
+    },
+    {
+      "update": 1400,
+      "source_loss": 0.06441182643175125,
+      "gradient_norm": 0.4559856653213501,
+      "learning_rate": 0.000180553934508769
+    },
+    {
+      "update": 1500,
+      "source_loss": 0.07457790523767471,
+      "gradient_norm": 0.6045413613319397,
+      "learning_rate": 0.00016521479447342198
+    },
+    {
+      "update": 1600,
+      "source_loss": 0.060469165444374084,
+      "gradient_norm": 0.49409395456314087,
+      "learning_rate": 0.00014978520552657798
+    },
+    {
+      "update": 1700,
+      "source_loss": 0.05909469351172447,
+      "gradient_norm": 0.4948323965072632,
+      "learning_rate": 0.00013444606549123102
+    },
+    {
+      "update": 1800,
+      "source_loss": 0.0712917223572731,
+      "gradient_norm": 0.4362891614437103,
+      "learning_rate": 0.00011937721175958604
+    },
+    {
+      "update": 1900,
+      "source_loss": 0.05657314509153366,
+      "gradient_norm": 0.46948814392089844,
+      "learning_rate": 0.00010475531286406217
+    },
+    {
+      "update": 2000,
+      "source_loss": 0.04231948405504227,
+      "gradient_norm": 0.33516237139701843,
+      "learning_rate": 9.07517972002799e-05
+    },
+    {
+      "update": 2100,
+      "source_loss": 0.048256613314151764,
+      "gradient_norm": 0.3817814886569977,
+      "learning_rate": 7.753084318586051e-05
+    },
+    {
+      "update": 2200,
+      "source_loss": 0.04405761882662773,
+      "gradient_norm": 0.34335020184516907,
+      "learning_rate": 6.524745441858956e-05
+    },
+    {
+      "update": 2300,
+      "source_loss": 0.06122083216905594,
+      "gradient_norm": 0.4121643304824829,
+      "learning_rate": 5.4045642400953886e-05
+    },
+    {
+      "update": 2400,
+      "source_loss": 0.05400548502802849,
+      "gradient_norm": 0.3890804052352905,
+      "learning_rate": 4.4056738136945765e-05
+    },
+    {
+      "update": 2500,
+      "source_loss": 0.03998231887817383,
+      "gradient_norm": 0.290965735912323,
+      "learning_rate": 3.539785239611855e-05
+    },
+    {
+      "update": 2600,
+      "source_loss": 0.058617930859327316,
+      "gradient_norm": 0.45410293340682983,
+      "learning_rate": 2.8170502696888642e-05
+    },
+    {
+      "update": 2700,
+      "source_loss": 0.04656514152884483,
+      "gradient_norm": 0.34574106335639954,
+      "learning_rate": 2.2459423106450666e-05
+    },
+    {
+      "update": 2800,
+      "source_loss": 0.05260532349348068,
+      "gradient_norm": 0.34076419472694397,
+      "learning_rate": 1.833157081131265e-05
+    },
+    {
+      "update": 2900,
+      "source_loss": 0.05203341692686081,
+      "gradient_norm": 0.5064711570739746,
+      "learning_rate": 1.5835341105503757e-05
+    },
+    {
+      "update": 3000,
+      "source_loss": 0.044706910848617554,
+      "gradient_norm": 0.349256306886673,
+      "learning_rate": 1.4999999999999999e-05
+    }
+  ],
+  "target_scores_read": false,
+  "read_guard": "Python audit hook rejects other-embryo raw/cached training data paths; this is not a kernel sandbox"
+}

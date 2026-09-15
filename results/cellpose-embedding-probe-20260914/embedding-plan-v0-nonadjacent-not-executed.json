@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-09-14T19:41:00.905736+00:00",
+  "pilot_plan_sha256": "f45d387dbe7ded72bf949d6624572a2a40f2a483d344255ac56244f507180df2",
+  "weights": {
+    "primary": {
+      "path": "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "12f6881ee3620a831697ca098ff8f48e687a24225f4e048b538deec3562fe771"
+    },
+    "secondary": {
+      "path": "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "9bac2fa0dadc4a6fc1899e0caf187f4b553e0a7cd90ba1261a68b35ffe9e305f"
+    }
+  },
+  "native_source": {
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/augmentations.py": "13db09817bf492f8d0f710a0a4d09776320b262060167055090a303fc6057f4e",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/dataspec.py": "e69bf952fb985477ac50ff8598a35020c95d20a035a09b81ab4056e655dd311f",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/evaluate.py": "614813cc51c3581c6ccda4bb20725a19da8ecac4a27620654bfca58319cffa3c",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/predict_unet_transformer.py": "c44e771ba5980b820f93091e03a303c25dfe8f3232e501f54dc9565731c234b9",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/__init__.py": "26a18d8da84e40da73281a48ebc3017d847a2e57431ab63e8629d2109e6e8571",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/division_metrics.py": "d1cf1e0a43009d02174f1699ce2aa28458a2220ac4b521731d3bcf31cf8c76be",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/metrics.py": "31baf45b54c78f68bab4f65dd8f4b38bca702abb644171c6df7c46cdeef55d83",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/__init__.py": "ab7587ef79856bae50d24b62e5805092d0459ee1c586522b763f9ef70c093e1d",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  },
+  "embeddings": "32-dimensional trained TemporalUNet features at each bank-specific center. Encoder is run once per frame pair and weight; node-transformer is run separately per bank with all its candidates.",
+  "coordinates": "Integer native exported point divided by (1,4,4); original floor-and-clamp feature indexing, sinusoidal positions, original-voxel edge coordinates. Strided native input and original full-movie quantile normalization.",
+  "controls": [
+    "negative physical distance",
+    "primary trained encoder + trained transformer",
+    "primary zero image features + same trained transformer",
+    "secondary trained encoder + trained transformer",
+    "secondary zero image features + same trained transformer"
+  ],
+  "link_gate_um": 15.0,
+  "union_suppression_um": 2.0,
+  "methods": [
+    "incumbent",
+    "cpdino-vitb",
+    "cpdino",
+    "cpsam_v2",
+    "vitb+vitl",
+    "vitb+sam",
+    "all_cellpose"
+  ],
+  "evaluation": "Supported continuation-edge top-1 rank and top-2 true-daughter recovery with actual per-frame 7um assignment; full detector recall separately. Unknown cells remain candidate competitors. No learned calibration or target fitting.",
+  "scope": "Six reused two-frame pilot clips. No complete-clip competition score. Encoders inherit incumbent exposure.",
+  "script_sha256": "94d02249ba6bc9f90be5872c39839638d35209b7b2bea117bc1d5772f6ebe775"
+}

@@ -1,0 +1,22 @@
+{
+  "created": "2026-09-13T17:57:46.860743+00:00",
+  "cuda": "12.8",
+  "executable": "/kaggle/envs/cell-tracking-notebooks/bin/python",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "limits": {
+    "filesystem_reserve_gib_min": 10,
+    "gpu_allocated_gib_max": 22,
+    "gpu_device_hours_max": 96,
+    "new_scratch_gib_max": 48
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "polars": "1.42.0",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "zarr": "3.2.1"
+  },
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "source_sha256": "7a949f3e5ee6136175b1f3806621697e68776e87f304a37c58132166eb02d645"
+}

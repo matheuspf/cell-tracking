@@ -1,0 +1,193 @@
+{
+  "seed": 14092026,
+  "repetitions": 10000,
+  "estimates": [
+    {
+      "embryo": "pooled",
+      "method": "20260914",
+      "radius_um": 3,
+      "delta_pp": 3.2312211498111623,
+      "interval_95_pp": [
+        1.5165003802225765,
+        5.116674401194746
+      ]
+    },
+    {
+      "embryo": "pooled",
+      "method": "20260914",
+      "radius_um": 7,
+      "delta_pp": 0.0,
+      "interval_95_pp": [
+        -0.3595505617977528,
+        0.3333333333333333
+      ]
+    },
+    {
+      "embryo": "pooled",
+      "method": "314159",
+      "radius_um": 3,
+      "delta_pp": 4.364246747796894,
+      "interval_95_pp": [
+        2.4021275996760116,
+        6.561923693933172
+      ]
+    },
+    {
+      "embryo": "pooled",
+      "method": "314159",
+      "radius_um": 7,
+      "delta_pp": -0.1258917331095258,
+      "interval_95_pp": [
+        -0.6113350157374451,
+        0.28665322243773694
+      ]
+    },
+    {
+      "embryo": "pooled",
+      "method": "constant",
+      "radius_um": 3,
+      "delta_pp": 5.749055812001679,
+      "interval_95_pp": [
+        3.9249821111107424,
+        7.688770639788177
+      ]
+    },
+    {
+      "embryo": "pooled",
+      "method": "constant",
+      "radius_um": 7,
+      "delta_pp": 0.1258917331095258,
+      "interval_95_pp": [
+        -0.23653809282838345,
+        0.48170540376818993
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "20260914",
+      "radius_um": 3,
+      "delta_pp": 2.680067001675042,
+      "interval_95_pp": [
+        -0.9412319644839067,
+        6.986076040689704
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "20260914",
+      "radius_um": 7,
+      "delta_pp": -0.16750418760469013,
+      "interval_95_pp": [
+        -0.604869257086999,
+        0.0
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "314159",
+      "radius_um": 3,
+      "delta_pp": 4.857621440536013,
+      "interval_95_pp": [
+        0.5171638152646043,
+        10.323682083407006
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "314159",
+      "radius_um": 7,
+      "delta_pp": -0.16750418760469013,
+      "interval_95_pp": [
+        -0.7905294691549507,
+        0.45116184125472
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "constant",
+      "radius_um": 3,
+      "delta_pp": 4.0201005025125625,
+      "interval_95_pp": [
+        0.18342806807605377,
+        8.316841258593945
+      ]
+    },
+    {
+      "embryo": "44b6",
+      "method": "constant",
+      "radius_um": 7,
+      "delta_pp": -0.16750418760469013,
+      "interval_95_pp": [
+        -0.8080808080808081,
+        0.44645353946947874
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "20260914",
+      "radius_um": 3,
+      "delta_pp": 3.41545352743561,
+      "interval_95_pp": [
+        1.546106269424089,
+        5.470022937593924
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "20260914",
+      "radius_um": 7,
+      "delta_pp": 0.055991041433370664,
+      "interval_95_pp": [
+        -0.4209292021394436,
+        0.47847462557346404
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "314159",
+      "radius_um": 3,
+      "delta_pp": 4.1993281075028,
+      "interval_95_pp": [
+        2.162097310267676,
+        6.4958758028253865
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "314159",
+      "radius_um": 7,
+      "delta_pp": -0.11198208286674133,
+      "interval_95_pp": [
+        -0.7481920719469051,
+        0.38635211263224356
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "constant",
+      "radius_um": 3,
+      "delta_pp": 6.326987681970885,
+      "interval_95_pp": [
+        4.326900470219435,
+        8.543055632849166
+      ]
+    },
+    {
+      "embryo": "6bba",
+      "method": "constant",
+      "radius_um": 7,
+      "delta_pp": 0.22396416573348266,
+      "interval_95_pp": [
+        -0.21676398483638015,
+        0.6345893944589502
+      ]
+    }
+  ],
+  "input_sha256": {
+    "results/detector-development-20260914/cellpose_cpdino_vitb-integer-frames.json": "41c163eb8626f1c60a676173456fa91c9ee96bc5aa1754d349c2a496dad9597b",
+    "results/cellpose-refine-v1/seed-20260914-integer-frames.json": "da61a5dedc06c3aa4da96d0cd1843069ac15e315bf848e6a04d6f14583c93c6e",
+    "results/cellpose-refine-v1/seed-314159-integer-frames.json": "4badb2ac931fee50ab7b4acec890438dfae7298e26763b7289c20ade6f76ad5a",
+    "work/cellpose-refine-v1/offset-control/integer-detail.json": "82a83bd77ac2af3678d8b61920f22f40eb726de6a90d63f191747ccaf6f5d30a"
+  },
+  "scope": "Exploratory paired clip-resampling percentile intervals, stratified by embryo. These quantify sensitivity to the 40 observed clips. Crops can overlap and only two previously examined embryos exist; these are not biological-generalization confidence intervals. No multiplicity adjustment or model selection."
+}

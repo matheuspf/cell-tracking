@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-09-14T20:59:45.076156+00:00",
+  "checks": [
+    {
+      "source": "44b6",
+      "updates_at_checkpoint": 400,
+      "epoch": 1,
+      "offset": 3200,
+      "initial_checkpoint_sha256": "5b2d1629463f726215537a40456856c0a78edbde1b42d1e39da4de65c7a0544a",
+      "changes": {
+        "encoder": {
+          "keys": 64,
+          "l1_change": 2219.4328744485974
+        },
+        "detector": {
+          "keys": 2,
+          "l1_change": 0.42816224694252014
+        },
+        "association": {
+          "keys": 60,
+          "l1_change": 1936.7289009839296
+        }
+      },
+      "rejected_target_metadata_cache_and_public_weights": true
+    },
+    {
+      "source": "6bba",
+      "updates_at_checkpoint": 400,
+      "epoch": 1,
+      "offset": 3200,
+      "initial_checkpoint_sha256": "34fe32d3e89bf27c5b56af1d473d77d6eeaa79b6c77e6aabee7e74c00368beb6",
+      "changes": {
+        "encoder": {
+          "keys": 64,
+          "l1_change": 2440.7060385793447
+        },
+        "detector": {
+          "keys": 2,
+          "l1_change": 0.43437595665454865
+        },
+        "association": {
+          "keys": 60,
+          "l1_change": 2005.8600552603602
+        }
+      },
+      "rejected_target_metadata_cache_and_public_weights": true
+    }
+  ],
+  "scope": "All three model components changed from scratch initialization. Negative Python audit-hook access tests; not a kernel sandbox or target evaluation."
+}

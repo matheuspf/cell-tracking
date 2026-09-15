@@ -1,0 +1,63 @@
+{
+  "checked_utc": "2026-09-14T19:19:19.489748+00:00",
+  "revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "remote_commit_date": "2026-07-18T00:03:46Z",
+  "source_sha256": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+  "released_source_matches_local": true,
+  "examples": [
+    {
+      "scenario": "Reference",
+      "nodes": 1000,
+      "estimated_nodes": 1000,
+      "edge_tp": 80,
+      "edge_fp": 0,
+      "edge_fn": 20,
+      "edge_jaccard": 0.8,
+      "multiplier": 1.0,
+      "adjusted_edge_jaccard": 0.8,
+      "division_jaccard": 0.5,
+      "combined_score": 0.8500000000000001
+    },
+    {
+      "scenario": "20% more submitted nodes; same links",
+      "nodes": 1200,
+      "estimated_nodes": 1000,
+      "edge_tp": 80,
+      "edge_fp": 0,
+      "edge_fn": 20,
+      "edge_jaccard": 0.8,
+      "multiplier": 0.98,
+      "adjusted_edge_jaccard": 0.784,
+      "division_jaccard": 0.5,
+      "combined_score": 0.8340000000000001
+    },
+    {
+      "scenario": "20% more nodes; four recovered correct edges",
+      "nodes": 1200,
+      "estimated_nodes": 1000,
+      "edge_tp": 84,
+      "edge_fp": 0,
+      "edge_fn": 16,
+      "edge_jaccard": 0.84,
+      "multiplier": 0.98,
+      "adjusted_edge_jaccard": 0.8231999999999999,
+      "division_jaccard": 0.5,
+      "combined_score": 0.8732
+    },
+    {
+      "scenario": "20% more nodes; ten extra evaluable wrong edges",
+      "nodes": 1200,
+      "estimated_nodes": 1000,
+      "edge_tp": 80,
+      "edge_fp": 10,
+      "edge_fn": 20,
+      "edge_jaccard": 0.7272727272727273,
+      "multiplier": 0.98,
+      "adjusted_edge_jaccard": 0.7127272727272728,
+      "division_jaccard": 0.5,
+      "combined_score": 0.7627272727272728
+    }
+  ],
+  "source_url": "https://github.com/royerlab/kaggle-cell-tracking-competition/blob/075fc5f5a52d11077f9dc2b074644618f26939e2/src/tracking_cellmot/metrics.py",
+  "scope": "Illustrative inputs executed through official per_sample_metrics and summarise. Fixed division Jaccard 0.5; one sample. These are not model results or simulated image detections."
+}

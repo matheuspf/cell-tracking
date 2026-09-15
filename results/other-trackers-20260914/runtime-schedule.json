@@ -1,0 +1,13 @@
+{
+  "original_output": "/home/mpf/code/kaggle/cell-tracking/work/other-trackers-20260914",
+  "additional_output": "/home/mpf/code/kaggle/cell-tracking/work/other-trackers-20260914/organoid-worker",
+  "additional_clips": [
+    "6bba_e16ffc58",
+    "6bba_fe670320"
+  ],
+  "shared_gpu_lock": true,
+  "models_and_candidate_cache_shared_read_only": true,
+  "model_recipe_sha256": "427be5fd0dbb8d18ac1b10ed8b05e264a5b28a728a92bf75ee4adf682bcf1973",
+  "reason": "Overlap CPU patch preparation across clips; merge only complete private clips before the main worker reaches them.",
+  "numeric_parameters_changed": false
+}

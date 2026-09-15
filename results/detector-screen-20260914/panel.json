@@ -1,0 +1,7010 @@
+{
+  "definition_sha256": "02207ca375b21eb564667837daca8b4ed9efa16a6c926e0903213ff76f281f88",
+  "selection": "12 existing pilot frames plus 20 clips per embryo at evenly spaced ranks of annotated-node count, excluding pilot clips; five fixed adjacent-frame pairs per assessment clip. Frozen before challenger predictions.",
+  "frames": [
+    {
+      "key": "44b6_81c256f0-t025",
+      "dataset": "44b6_81c256f0",
+      "embryo": "44b6",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_81c256f0-t075",
+      "dataset": "44b6_81c256f0",
+      "embryo": "44b6",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8f5ab931-t025",
+      "dataset": "44b6_8f5ab931",
+      "embryo": "44b6",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8f5ab931-t075",
+      "dataset": "44b6_8f5ab931",
+      "embryo": "44b6",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_a21120c2-t025",
+      "dataset": "44b6_a21120c2",
+      "embryo": "44b6",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_a21120c2-t075",
+      "dataset": "44b6_a21120c2",
+      "embryo": "44b6",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_af149c94-t025",
+      "dataset": "6bba_af149c94",
+      "embryo": "6bba",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_af149c94-t075",
+      "dataset": "6bba_af149c94",
+      "embryo": "6bba",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_e16ffc58-t025",
+      "dataset": "6bba_e16ffc58",
+      "embryo": "6bba",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_e16ffc58-t075",
+      "dataset": "6bba_e16ffc58",
+      "embryo": "6bba",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_fe670320-t025",
+      "dataset": "6bba_fe670320",
+      "embryo": "6bba",
+      "time": 25,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_fe670320-t075",
+      "dataset": "6bba_fe670320",
+      "embryo": "6bba",
+      "time": 75,
+      "role": "pilot",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t009",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t010",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t029",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t030",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t049",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t050",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t069",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t070",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t089",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_1574802b-t090",
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t009",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t010",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t029",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t030",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t049",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t050",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t069",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t070",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t089",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_18ced818-t090",
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t009",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t010",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t029",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t030",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t049",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t050",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t069",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t070",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t089",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_33b596bf-t090",
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t009",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t010",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t029",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t030",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t049",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t050",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t069",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t070",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t089",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_341df25f-t090",
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t009",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t010",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t029",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t030",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t049",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t050",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t069",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t070",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t089",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_551a5dba-t090",
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t009",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t010",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t029",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t030",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t049",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t050",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t069",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t070",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t089",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_7e557709-t090",
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t009",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t010",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t029",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t030",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t049",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t050",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t069",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t070",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t089",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_8cc6506c-t090",
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t009",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t010",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t029",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t030",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t049",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t050",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t069",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t070",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t089",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_949adeb1-t090",
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t009",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t010",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t029",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t030",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t049",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t050",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t069",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t070",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t089",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_95029e92-t090",
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t009",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t010",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t029",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t030",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t049",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t050",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t069",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t070",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t089",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_b2c44266-t090",
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t009",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t010",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t029",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t030",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t049",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t050",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t069",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t070",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t089",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_c50204e0-t090",
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t009",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t010",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t029",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t030",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t049",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t050",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t069",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t070",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t089",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_cf8fed6b-t090",
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t009",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t010",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t029",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t030",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t049",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t050",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t069",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t070",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t089",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d29c9ab2-t090",
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t009",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t010",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t029",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t030",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t049",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t050",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t069",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t070",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t089",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d2f34f90-t090",
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t009",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t010",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t029",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t030",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t049",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t050",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t069",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t070",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t089",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_d754aa59-t090",
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t009",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t010",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t029",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t030",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t049",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t050",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t069",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t070",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t089",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_ddf577ad-t090",
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t009",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t010",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t029",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t030",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t049",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t050",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t069",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t070",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t089",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_deabac95-t090",
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t009",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t010",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t029",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t030",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t049",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t050",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t069",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t070",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t089",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e31261b4-t090",
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t009",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t010",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t029",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t030",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t049",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t050",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t069",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t070",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t089",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_e35b117d-t090",
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t009",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t010",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t029",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t030",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t049",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t050",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t069",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t070",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t089",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "44b6_f28707c6-t090",
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t009",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t010",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t029",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t030",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t049",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t050",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t069",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t070",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t089",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_07477033-t090",
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t009",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t010",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t029",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t030",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t049",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t050",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t069",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t070",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t089",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_09961292-t090",
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t009",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t010",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t029",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t030",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t049",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t050",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t069",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t070",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t089",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0c7fa718-t090",
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t009",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t010",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t029",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t030",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t049",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t050",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t069",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t070",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t089",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_0e7c0d07-t090",
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t009",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t010",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t029",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t030",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t049",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t050",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t069",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t070",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t089",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_13f19531-t090",
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t009",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t010",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t029",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t030",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t049",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t050",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t069",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t070",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t089",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_1ebfb80d-t090",
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t009",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t010",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t029",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t030",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t049",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t050",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t069",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t070",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t089",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_283bf9f1-t090",
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t009",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t010",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t029",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t030",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t049",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t050",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t069",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t070",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t089",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_372c8cb8-t090",
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t009",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t010",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t029",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t030",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t049",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t050",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t069",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t070",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t089",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_3abfe10a-t090",
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t009",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t010",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t029",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t030",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t049",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t050",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t069",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t070",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t089",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_5c824876-t090",
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t009",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t010",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t029",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t030",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t049",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t050",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t069",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t070",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t089",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_67ebd073-t090",
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t009",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t010",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t029",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t030",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t049",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t050",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t069",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t070",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t089",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_718b21f9-t090",
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t009",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t010",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t029",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t030",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t049",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t050",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t069",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t070",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t089",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_786893ac-t090",
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t009",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t010",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t029",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t030",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t049",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t050",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t069",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t070",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t089",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_7d3058ae-t090",
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t009",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t010",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t029",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t030",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t049",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t050",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t069",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t070",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t089",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_971fa5e0-t090",
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t009",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t010",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t029",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t030",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t049",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t050",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t069",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t070",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t089",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_bbb708ca-t090",
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t009",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t010",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t029",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t030",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t049",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t050",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t069",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t070",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t089",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_c328f2fd-t090",
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t009",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t010",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t029",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t030",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t049",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t050",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t069",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t070",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t089",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_cf35214c-t090",
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t009",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t010",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t029",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t030",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t049",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t050",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t069",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t070",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t089",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d2b9fc0c-t090",
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t009",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 9,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t010",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 10,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t029",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 29,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t030",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 30,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t049",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 49,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t050",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 50,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t069",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 69,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t070",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 70,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t089",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 89,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "key": "6bba_d82a4fc6-t090",
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "time": 90,
+      "role": "assessment",
+      "shape": [
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    }
+  ]
+}

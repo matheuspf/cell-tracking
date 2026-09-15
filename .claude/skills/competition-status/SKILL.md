@@ -4,11 +4,11 @@ description: "Local sync state, deadlines, submissions, and leaderboard lookup f
 ---
 # Competition status — Biohub - Cell Tracking During Development
 
-Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-08T14:53:57Z.
+Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-12T21:12:17Z.
 
 - Deadline at snapshot: 2026-09-29T23:59:00Z
 - Pages tracked: 8
-- Forum topics tracked: 99
+- Forum topics tracked: 102
 
 Read [reference/manifest.json](../../../reference/manifest.json) for sync state; do not hand-edit it.
 Run from the repository root in the `cell-tracking` environment:

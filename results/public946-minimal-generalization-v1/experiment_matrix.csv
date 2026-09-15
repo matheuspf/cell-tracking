@@ -1,0 +1,16 @@
+arm,parent,modules,status,eligible,expected_clips,completed_clips,failed_clips,score,original_export_score,delta_B0,delta_B1,min_embryo_delta_parent,seconds,reason,edge_tp,edge_fp,edge_fn,division_tp,division_fp,division_fn,division_jaccard,adj_edge_jaccard,num_pred_nodes,original_tp_survived,original_tp_lost,recovered_tp,fresh_tracking_model_clips,replayed_tracking_model_clips,allocated_gpu_peak_bytes,rss_peak_bytes,prediction_output_bytes,nodes_added_exact,nodes_removed_exact,edges_added_exact,edges_removed_exact
+B0,,,measured_control,,199,199,0,0.9117740142186423,0.9117740142186423,0.0,,0.0,21874.165620319007,,122201,6885,6682,23,97,128,0.09274193548387097,0.9024998206702552,4133687,,,,199,0,817150976,5050773504,7800652302,0,0,0,0
+B1,B0,no_motion,not_yet_executed,,199,19,0,,,,,,545.9374779779864,,,,,,,,,,,,,,0,19,181742080,2921766912,63101212,41511,43866,45608,49693
+E01,B0,E01,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E02,B0,E02,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E03,B0,E03,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E04,B0,E04,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E05,B0,E05,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E06,B0,E06,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E07,B0,E07,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+E08,B0,E08,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+C01,B0,E02+E03,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+C02,B0,E04+E05,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+C03,B0,E05+E06,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+X01,B1,,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+X02,B1,,not_yet_executed,,199,0,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,

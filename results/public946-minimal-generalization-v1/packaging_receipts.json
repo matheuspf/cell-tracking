@@ -1,0 +1,294 @@
+[
+  {
+    "arm": "B0",
+    "attribution": "flexonafft public notebook; pilkwang support/model datasets; preserve bundled LICENSE files and Kaggle source attribution",
+    "full_cohort_notebook_executed": false,
+    "full_cohort_scientific_worker_executed": false,
+    "leaderboard_score": null,
+    "license_status": "Public source/artifact licenses retained as bundled; no relicensing claim",
+    "modules": [],
+    "notebook": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/packages/baseline_public946.ipynb",
+    "notebook_returncode": 0,
+    "notebook_sha256": "6e7f9582dcd9cd7dc8b74d88dac73c780a934dcdacff1686dfdc3ee7e6be2020",
+    "notebook_test_seconds": 246.71506917100123,
+    "original_source_sha256": "7a949f3e5ee6136175b1f3806621697e68776e87f304a37c58132166eb02d645",
+    "pilot_graph_identity": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "pilot_score": {
+      "original_export": {
+        "adj_edge_jaccard": 0.9300230581686664,
+        "counts": {
+          "division_fn": 2,
+          "division_fp": 0,
+          "division_tp": 1,
+          "edge_fn": 104,
+          "edge_fp": 62,
+          "edge_tp": 1727,
+          "num_pred_nodes": 55238
+        },
+        "division_fn": 2,
+        "division_fp": 0,
+        "division_jaccard": 0.3333333333333333,
+        "division_tp": 1,
+        "edge_jaccard": 0.9123085050184891,
+        "n": 4,
+        "n_adj": 4,
+        "node_recall": 0.9754128317950453,
+        "score": 0.9633563915019997
+      },
+      "per_embryo": {
+        "44b6": {
+          "adj_edge_jaccard": 0.9948946059986814,
+          "counts": {
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 19,
+            "edge_fp": 9,
+            "edge_tp": 460,
+            "num_pred_nodes": 38880
+          },
+          "division_fn": 2,
+          "division_fp": 0,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.9426229508196722,
+          "n": 2,
+          "n_adj": 2,
+          "node_recall": 0.9839228295819935,
+          "score": 0.9948946059986814
+        },
+        "6bba": {
+          "adj_edge_jaccard": 0.9074911611287749,
+          "counts": {
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 1,
+            "edge_fn": 85,
+            "edge_fp": 53,
+            "edge_tp": 1267,
+            "num_pred_nodes": 16358
+          },
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_jaccard": 1.0,
+          "division_tp": 1,
+          "edge_jaccard": 0.9017793594306049,
+          "n": 2,
+          "n_adj": 2,
+          "node_recall": 0.9669028340080972,
+          "score": 1.007491161128775
+        }
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9300230581686664,
+        "counts": {
+          "division_fn": 2,
+          "division_fp": 0,
+          "division_tp": 1,
+          "edge_fn": 104,
+          "edge_fp": 62,
+          "edge_tp": 1727,
+          "num_pred_nodes": 55238
+        },
+        "division_fn": 2,
+        "division_fp": 0,
+        "division_jaccard": 0.3333333333333333,
+        "division_tp": 1,
+        "edge_jaccard": 0.9123085050184891,
+        "n": 4,
+        "n_adj": 4,
+        "node_recall": 0.9754128317950453,
+        "score": 0.9633563915019997
+      }
+    },
+    "public_inputs": [
+      "competition:biohub-cell-tracking-during-development",
+      "pilkwang/biohub-tracking-support-pack-50ep-v1",
+      "pilkwang/biohub-temporal-unet3d-seed314159-v1",
+      "pilkwang/biohub-deepcenter-unet3d-center-prior-v1"
+    ],
+    "python": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/packages/baseline_public946.py",
+    "python_sha256": "40f4579abda08067e62c2c803621473ffd779b2702870364098fc9226833e0bb",
+    "ready_for_manual_test": true,
+    "sanitized_source_sha256": "5edd39b48cb10b98861cefaa859e0ad562c52ba97d7a73c578345010a78fb4f7",
+    "scientific_changes": [],
+    "shared_runtime_changes": [
+      "Explicit offline paths",
+      "GT-reading validator workflow excluded",
+      "Image-only worker and descendant guard",
+      "Per-clip streaming/evidence fingerprints",
+      "Natural integer serialization followed by common bounds clipping"
+    ],
+    "software_hashes": {
+      "guard/sitecustomize.py": "9c8240e708a0b8d1f9014d18000fd14560a59effb60b91b2a5fc0d719c96f506",
+      "public946_minimal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public946_minimal/common.py": "d9919c9d8840e2a1a4122241adc5c768630be6c0a9b67e15b37bb2638fed4787",
+      "public946_minimal/isolation.py": "1fedd8832753546b78d5528a0ea5ac70c63fbc93765fef92203a48c500ff6cdd",
+      "public946_minimal/modules.py": "84955c1d0f5af38ab27e24e13398a228483ad7f6c493a5875366ea682cb5cb11",
+      "public946_minimal/neural.py": "7e678c0f80cf1f6b00e7abb0f13cc253216a3e385569fee97709e0a338e46ee8",
+      "public946_minimal/source.py": "7fe86da5ae20268a2cc0828531dfd1573d1144b8bdbeb0079e3c07f8db8261e6",
+      "public946_minimal/worker.py": "9ac13f8a4f8adcbe7113b9e652d986df0d77de4c0503d5eae48d865a966eb722",
+      "worker_entry.py": "cb5d0be7ae6f9f4b0d558c8dfb133a3b58ccd7f1928c86194c5e17e35a464e1a"
+    },
+    "submission_sha256": "7f2f027529fcfb4b581113e0b6a9044c3c30652eca8cd851624a3a043073d4a6",
+    "tested_pilots": [
+      "44b6_5740d24b",
+      "44b6_e28840c6",
+      "6bba_80d12824",
+      "6bba_a5e926bb"
+    ]
+  },
+  {
+    "arm": "B1",
+    "attribution": "flexonafft public notebook; pilkwang support/model datasets; preserve bundled LICENSE files and Kaggle source attribution",
+    "full_cohort_notebook_executed": false,
+    "full_cohort_scientific_worker_executed": false,
+    "leaderboard_score": null,
+    "license_status": "Public source/artifact licenses retained as bundled; no relicensing claim",
+    "modules": [
+      "no_motion"
+    ],
+    "notebook": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/packages/control_no_motion.ipynb",
+    "notebook_returncode": 0,
+    "notebook_sha256": "0b4978db80ea50e4f89b94b02fed2aefedb7f08de7cd69cac395242dcae8ad44",
+    "notebook_test_seconds": 235.7399518809998,
+    "original_source_sha256": "7a949f3e5ee6136175b1f3806621697e68776e87f304a37c58132166eb02d645",
+    "pilot_graph_identity": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "pilot_score": {
+      "original_export": {
+        "adj_edge_jaccard": 0.9668750024734721,
+        "counts": {
+          "division_fn": 2,
+          "division_fp": 1,
+          "division_tp": 1,
+          "edge_fn": 61,
+          "edge_fp": 34,
+          "edge_tp": 1770,
+          "num_pred_nodes": 55193
+        },
+        "division_fn": 2,
+        "division_fp": 1,
+        "division_jaccard": 0.25,
+        "division_tp": 1,
+        "edge_jaccard": 0.9490616621983914,
+        "n": 4,
+        "n_adj": 4,
+        "node_recall": 0.9846690038995147,
+        "score": 0.9918750024734722
+      },
+      "per_embryo": {
+        "44b6": {
+          "adj_edge_jaccard": 0.9800861859974906,
+          "counts": {
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 24,
+            "edge_fp": 11,
+            "edge_tp": 455,
+            "num_pred_nodes": 38799
+          },
+          "division_fn": 2,
+          "division_fp": 0,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.9285714285714286,
+          "n": 2,
+          "n_adj": 2,
+          "node_recall": 0.9839228295819935,
+          "score": 0.9800861859974906
+        },
+        "6bba": {
+          "adj_edge_jaccard": 0.9621670170721855,
+          "counts": {
+            "division_fn": 0,
+            "division_fp": 1,
+            "division_tp": 1,
+            "edge_fn": 37,
+            "edge_fp": 23,
+            "edge_tp": 1315,
+            "num_pred_nodes": 16394
+          },
+          "division_fn": 0,
+          "division_fp": 1,
+          "division_jaccard": 0.5,
+          "division_tp": 1,
+          "edge_jaccard": 0.9563636363636364,
+          "n": 2,
+          "n_adj": 2,
+          "node_recall": 0.9854151782170357,
+          "score": 1.0121670170721855
+        }
+      },
+      "pooled": {
+        "adj_edge_jaccard": 0.9668750024734721,
+        "counts": {
+          "division_fn": 2,
+          "division_fp": 1,
+          "division_tp": 1,
+          "edge_fn": 61,
+          "edge_fp": 34,
+          "edge_tp": 1770,
+          "num_pred_nodes": 55193
+        },
+        "division_fn": 2,
+        "division_fp": 1,
+        "division_jaccard": 0.25,
+        "division_tp": 1,
+        "edge_jaccard": 0.9490616621983914,
+        "n": 4,
+        "n_adj": 4,
+        "node_recall": 0.9846690038995147,
+        "score": 0.9918750024734722
+      }
+    },
+    "public_inputs": [
+      "competition:biohub-cell-tracking-during-development",
+      "pilkwang/biohub-tracking-support-pack-50ep-v1",
+      "pilkwang/biohub-temporal-unet3d-seed314159-v1",
+      "pilkwang/biohub-deepcenter-unet3d-center-prior-v1"
+    ],
+    "python": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/packages/control_no_motion.py",
+    "python_sha256": "6e1777eeb06237573b6f019aaea2893551f6952c56108f96a31ed2f629a2391c",
+    "ready_for_manual_test": true,
+    "sanitized_source_sha256": "5edd39b48cb10b98861cefaa859e0ad562c52ba97d7a73c578345010a78fb4f7",
+    "scientific_changes": [
+      "no_motion"
+    ],
+    "shared_runtime_changes": [
+      "Explicit offline paths",
+      "GT-reading validator workflow excluded",
+      "Image-only worker and descendant guard",
+      "Per-clip streaming/evidence fingerprints",
+      "Natural integer serialization followed by common bounds clipping"
+    ],
+    "software_hashes": {
+      "guard/sitecustomize.py": "9c8240e708a0b8d1f9014d18000fd14560a59effb60b91b2a5fc0d719c96f506",
+      "public946_minimal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public946_minimal/common.py": "d9919c9d8840e2a1a4122241adc5c768630be6c0a9b67e15b37bb2638fed4787",
+      "public946_minimal/isolation.py": "1fedd8832753546b78d5528a0ea5ac70c63fbc93765fef92203a48c500ff6cdd",
+      "public946_minimal/modules.py": "84955c1d0f5af38ab27e24e13398a228483ad7f6c493a5875366ea682cb5cb11",
+      "public946_minimal/neural.py": "7e678c0f80cf1f6b00e7abb0f13cc253216a3e385569fee97709e0a338e46ee8",
+      "public946_minimal/source.py": "7fe86da5ae20268a2cc0828531dfd1573d1144b8bdbeb0079e3c07f8db8261e6",
+      "public946_minimal/worker.py": "9ac13f8a4f8adcbe7113b9e652d986df0d77de4c0503d5eae48d865a966eb722",
+      "worker_entry.py": "cb5d0be7ae6f9f4b0d558c8dfb133a3b58ccd7f1928c86194c5e17e35a464e1a"
+    },
+    "submission_sha256": "774961905f1a84374b39d85649a106cb2b1bd30e025a13f0f6a81ccc86d59321",
+    "tested_pilots": [
+      "44b6_5740d24b",
+      "44b6_e28840c6",
+      "6bba_80d12824",
+      "6bba_a5e926bb"
+    ]
+  }
+]

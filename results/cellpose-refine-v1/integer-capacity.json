@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-09-14T18:30:59.473296+00:00",
+  "groups": [
+    {
+      "embryo": "44b6",
+      "gt": 597,
+      "integer_capacity": {
+        "1": 495,
+        "2": 561,
+        "3": 564,
+        "7": 591
+      },
+      "integer_capacity_recall": {
+        "1": 0.8291457286432161,
+        "2": 0.9396984924623115,
+        "3": 0.9447236180904522,
+        "7": 0.9899497487437185
+      },
+      "continuous_relaxation": {
+        "1": 553,
+        "2": 568,
+        "3": 580,
+        "7": 592
+      },
+      "integer_loss_from_relaxation": {
+        "1": 58,
+        "2": 7,
+        "3": 16,
+        "7": 1
+      },
+      "budgets": {
+        "100": {
+          "3": 240,
+          "7": 343
+        },
+        "200": {
+          "3": 341,
+          "7": 470
+        },
+        "400": {
+          "3": 505,
+          "7": 570
+        }
+      },
+      "remaining_count_gap_by_seed": {
+        "20260914": {
+          "1": 299,
+          "2": 110,
+          "3": 62,
+          "7": 6
+        },
+        "314159": {
+          "1": 290,
+          "2": 103,
+          "3": 49,
+          "7": 6
+        }
+      }
+    },
+    {
+      "embryo": "6bba",
+      "gt": 1786,
+      "integer_capacity": {
+        "1": 1257,
+        "2": 1558,
+        "3": 1584,
+        "7": 1733
+      },
+      "integer_capacity_recall": {
+        "1": 0.7038073908174692,
+        "2": 0.8723404255319149,
+        "3": 0.8868980963045913,
+        "7": 0.9703247480403135
+      },
+      "continuous_relaxation": {
+        "1": 1533,
+        "2": 1595,
+        "3": 1661,
+        "7": 1733
+      },
+      "integer_loss_from_relaxation": {
+        "1": 276,
+        "2": 37,
+        "3": 77,
+        "7": 0
+      },
+      "budgets": {
+        "100": {
+          "3": 1045,
+          "7": 1243
+        },
+        "200": {
+          "3": 1332,
+          "7": 1528
+        },
+        "400": {
+          "3": 1511,
+          "7": 1674
+        }
+      },
+      "remaining_count_gap_by_seed": {
+        "20260914": {
+          "1": 902,
+          "2": 521,
+          "3": 299,
+          "7": 33
+        },
+        "314159": {
+          "1": 872,
+          "2": 469,
+          "3": 285,
+          "7": 36
+        }
+      }
+    },
+    {
+      "embryo": "pooled",
+      "gt": 2383,
+      "integer_capacity": {
+        "1": 1752,
+        "2": 2119,
+        "3": 2148,
+        "7": 2324
+      },
+      "integer_capacity_recall": {
+        "1": 0.7352077213596308,
+        "2": 0.8892152748636173,
+        "3": 0.9013848090642048,
+        "7": 0.9752412924884599
+      },
+      "continuous_relaxation": {
+        "1": 2086,
+        "2": 2163,
+        "3": 2241,
+        "7": 2325
+      },
+      "integer_loss_from_relaxation": {
+        "1": 334,
+        "2": 44,
+        "3": 93,
+        "7": 1
+      },
+      "budgets": {
+        "100": {
+          "3": 1285,
+          "7": 1586
+        },
+        "200": {
+          "3": 1673,
+          "7": 1998
+        },
+        "400": {
+          "3": 2016,
+          "7": 2244
+        }
+      },
+      "remaining_count_gap_by_seed": {
+        "20260914": {
+          "1": 1201,
+          "2": 631,
+          "3": 361,
+          "7": 39
+        },
+        "314159": {
+          "1": 1162,
+          "2": 572,
+          "3": 334,
+          "7": 42
+        }
+      }
+    }
+  ],
+  "plan_sha256": "62b7e5c6821a8bf036e87c8c50dcff3a4b4ea4a6f98f38cf947dc94ac0573585",
+  "metrics_sha256": "6d83088d55b7dd1a2531a7d6dc60e013f8a30a7aa44aa3f234542d1d6ec8b081",
+  "data_fingerprint": "669baac144a2a7925fc4e66724d71a737afdc8d09040b49054a1bca533c01216",
+  "interpretation": "Per-proposal feasible integer destinations plus maximum-cardinality matching give an optimistic recall bound at fixed candidate count/rank and 3um movement. It ignores biological proposal identity, learned decisions and the official distance-weight preference. It is neither a predicted gain nor a bound on the competition graph score."
+}

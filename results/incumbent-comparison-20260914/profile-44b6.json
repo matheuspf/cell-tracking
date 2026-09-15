@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-09-14T20:30:33.573599+00:00",
+  "source": "44b6",
+  "batch_size": 8,
+  "updates": 4,
+  "seed": 314159,
+  "native_source": {
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/augmentations.py": "13db09817bf492f8d0f710a0a4d09776320b262060167055090a303fc6057f4e",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/dataspec.py": "e69bf952fb985477ac50ff8598a35020c95d20a035a09b81ab4056e655dd311f",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/evaluate.py": "614813cc51c3581c6ccda4bb20725a19da8ecac4a27620654bfca58319cffa3c",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/predict_unet_transformer.py": "c44e771ba5980b820f93091e03a303c25dfe8f3232e501f54dc9565731c234b9",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/__init__.py": "26a18d8da84e40da73281a48ebc3017d847a2e57431ab63e8629d2109e6e8571",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/division_metrics.py": "d1cf1e0a43009d02174f1699ce2aa28458a2220ac4b521731d3bcf31cf8c76be",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/metrics.py": "31baf45b54c78f68bab4f65dd8f4b38bca702abb644171c6df7c46cdeef55d83",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/__init__.py": "ab7587ef79856bae50d24b62e5805092d0459ee1c586522b763f9ef70c093e1d",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  },
+  "script_sha256": "3ae6c134f92e9c0bb8fa8cd4d131f5e5b422b533090402c31b09bca1b7cbd49b",
+  "retained_training": false,
+  "status": "passed",
+  "mean_edge_loss": 0.002194063097704202,
+  "mean_detection_loss": 0.33649226650595665,
+  "parameter_changes_l2": {
+    "encoder": 0.007629096508026123,
+    "detector": 0.0019107651896774769,
+    "association": 0.0191291943192482
+  },
+  "peak_allocated_bytes": 11462313984,
+  "peak_reserved_bytes": 22844276736,
+  "seconds_excluding_queue": 14.68462986999657,
+  "gpu_queue_seconds": 5.240002792561427e-06,
+  "source_windows": 6315,
+  "batches_per_source_epoch": 790
+}

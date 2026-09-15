@@ -1,0 +1,52 @@
+{
+  "base_config_sha256": "c6f4778d057e7401cdc126b454d7660b7e37384f7af4e512267fb46de64f7ca2",
+  "calibration_sha256": "d840d0703f756936486249d4bcabd14a6feac3b651d066fb2e720ff42e217be0",
+  "comparison": "Full official six-clip graph score, both embryos, TP/FP/FN, candidate coverage, and actual solver status. Report both arms; no replacement of v3.",
+  "configs": {
+    "pair-control": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-learned-divisions-20260914-pair-control.json",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-learned-divisions-20260914-pair-control",
+      "sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c"
+    },
+    "pair-image": {
+      "config": "/home/mpf/code/kaggle/cell-tracking/configs/cellpose-ultrack-learned-divisions-20260914-pair-image.json",
+      "root": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-learned-divisions-20260914-pair-image",
+      "sha256": "fdd34c3b9808196f9591eb05d9a703247dfe38c6cd29955dbd81042e2b557b4e"
+    }
+  },
+  "created_utc": "2026-09-14T19:24:11.332026+00:00",
+  "evidence_scale": 0.01,
+  "inherited_exposure": "Synthetic generator calibrated on Biohub 44b6; optical real-image fits use legacy incumbent points with historical upstream exposure. Opposite-embryo direct fitting does not erase that exposure.",
+  "logit_clip": 8.0,
+  "models": {
+    "44b6": {
+      "direct_sources": [
+        "44b6",
+        "synthetic"
+      ],
+      "initialization": "I_synthetic",
+      "name": "I_C4_44b6",
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_44b6.pt",
+      "sha256": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f",
+      "temperature": 0.8556631123250404,
+      "training_receipt_sha256": "efc9ee274a01fa9ee6083e87db83237b02465e822292b62b7c6b5b6ece27c086"
+    },
+    "6bba": {
+      "direct_sources": [
+        "6bba",
+        "synthetic"
+      ],
+      "initialization": "I_synthetic",
+      "name": "I_C4_6bba",
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_6bba.pt",
+      "sha256": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb",
+      "temperature": 0.8640514495008517,
+      "training_receipt_sha256": "877192dd1c266d1b3e2880c4504eb6cf2a0dfbaa860f1596804ca4cd7515b8bf"
+    }
+  },
+  "optical": "Parent and each daughter sampled at native centers across -1,0,+1 frames using the original v4 patch adapter; per-node encoding; symmetric daughter-pair logit minus parent no-fork logit, divided by the original model temperature, clipped to +/-8 and scaled by 0.01.",
+  "pairs": "All unordered nonoverlapping daughter pairs in the unchanged candidate-link graph; no top-k pair cap. Reuse the same pair bank in both arms.",
+  "panel_sha256": "7345f2b231befedc8db6e07ecc31085ea8312f4e43ccd1c6f6da5f1bede8961a",
+  "pruning": "Only discard pairs dominated in both arms: min(IoU1^4,IoU2^4) + division_weight - appear_weight + max(0,optical_bonus) < -1e-9. Replacing the worse edge by a birth keeps all selected nodes and downstream edges.",
+  "study": "cellpose-ultrack-learned-divisions-20260914"
+}

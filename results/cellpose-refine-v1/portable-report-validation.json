@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-09-14T19:20:22.010047+00:00",
+  "status": "passed",
+  "checks": [
+    "HTTP report renders all five series and measured pooled data",
+    "All six embryo and coordinate views show the correct constant-control R3 counts",
+    "Delta mode uses the selected embryo baseline",
+    "Calculator updates, validates inputs and reset restores the default comparison",
+    "Mobile viewport has no document-level horizontal overflow",
+    "Offline file URL renders without a server"
+  ],
+  "browser_errors": [],
+  "html_sha256": "1e17cc3581cd04d174e00f9076429945b141f9b3a04eca09531ac28a7979d6e2",
+  "scope": "UI/data presentation checks; not performance promotion or end-to-end model scoring.",
+  "scientific_and_browser_views_visually_checked": true,
+  "training_source_hashes_unchanged": true,
+  "frozen_metrics_unchanged": true,
+  "local_report_links_resolve": true,
+  "artifact_sha256": {
+    "docs/cellpose-refinement-results-20260914.md": "92f506818c6e1e91079a67b73761f82c46448c6ec3012c1808a5c16eea53488a",
+    "docs/cellpose-detector-plan-20260914.md": "767475bd75226bc464e803be95552ffe190617a828bf58d74754c7991c9c0ed1",
+    "tools/cellpose_refine_report.py": "96a7ef9ec88fadfc7ec3b039e14d61b1aa98f0b18c2a46ea161c15daa61d3a5b",
+    "tools/cellpose_refine_report.html": "d14dfb9cc6c7059c6af9e72405a76acad3cad878ba674aebf08977bf05d57129",
+    "tools/cellpose_refine_report.md": "a180ebc5c9b876823584d93c1a685158534218e86c24a7f56466d05630521bbe",
+    "results/cellpose-refine-v1/report-data.json": "cd1b6c95100a77977a42f47b06216b76a768c4db4990266196c61acdf98b10f4"
+  },
+  "supersedes_delivery_receipt": "presentation-validation.json"
+}

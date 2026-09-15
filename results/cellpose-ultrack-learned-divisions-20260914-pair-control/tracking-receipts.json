@@ -1,0 +1,848 @@
+[
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 20936
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_81c256f0",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "d56f17f8607c5b3611da3eff4afd71f07667cf05c038473a1527aecedb60c1c3",
+    "database_bytes": 86405120,
+    "database_counts": {
+      "links": 96546,
+      "nodes": 20936,
+      "overlaps": 79974
+    },
+    "dataset": "44b6_81c256f0",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "83e041de42e7a99f52ec8297e82b3da628fd2d28f099b14a95d7081fe846cc0d",
+    "division_evidence_sha256": "b4cb7f11c157c74c6322573cb2e3eada569df04ed801238d1f876769e7c7799c",
+    "fingerprint": "46f15117353f2677011c37fd91b5a93ee24753e9db1210afc8d7b25648d97742",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "0dc416b8c9e6bb3de4b0000e55bb829ae7907eb2ea7e3f162f886b65d06afc7f",
+    "input_instances": 12577,
+    "peak_process_rss_mib": 2039.109375,
+    "predicted_divisions": 28,
+    "selected_edges": 10291,
+    "selected_nodes": 10788,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 43938,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 448,
+          "parents_with_pairs": 290,
+          "restricted_division_variables": 5606
+        },
+        "gap": 0.0,
+        "objective": 408.58422209097637,
+        "objective_bound": 408.58422209097637,
+        "seconds": 3.9668641409989505,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 48708
+      },
+      {
+        "constraints": 50894,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 411,
+          "parents_with_pairs": 282,
+          "restricted_division_variables": 6502
+        },
+        "gap": 0.0,
+        "objective": 527.4906855190702,
+        "objective_bound": 527.4906855190702,
+        "seconds": 4.26768418699794,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 55940
+      },
+      {
+        "constraints": 37451,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 220,
+          "parents_with_pairs": 154,
+          "restricted_division_variables": 4631
+        },
+        "gap": 0.0,
+        "objective": 284.40370756842907,
+        "objective_bound": 284.40370756842907,
+        "seconds": 2.390411193999171,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 38264
+      },
+      {
+        "constraints": 35762,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 211,
+          "parents_with_pairs": 162,
+          "restricted_division_variables": 4427
+        },
+        "gap": 0.0,
+        "objective": 296.04292603589676,
+        "objective_bound": 296.04292603589676,
+        "seconds": 2.515265134999936,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 37908
+      },
+      {
+        "constraints": 34592,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 228,
+          "parents_with_pairs": 152,
+          "restricted_division_variables": 4151
+        },
+        "gap": 1.9510668064351177e-16,
+        "objective": 291.3453228424771,
+        "objective_bound": 291.3453228424772,
+        "seconds": 2.36561119900216,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 35005
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.026624906000507,
+      "link_seconds": 7.656375425001897,
+      "segment_seconds": 21.77747594900211,
+      "solve_seconds": 19.81340075299886
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 75965
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_8f5ab931",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "7600043eb2d8989fe1a20122159dbd1a7b1accb7c5ce1c28c7a71bb24df8a0b8",
+    "database_bytes": 274968576,
+    "database_counts": {
+      "links": 372188,
+      "nodes": 75965,
+      "overlaps": 504078
+    },
+    "dataset": "44b6_8f5ab931",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "c368982df2334a57bfda236f3344755124f3ad4274f812ca0b4319149398155c",
+    "division_evidence_sha256": "b0904f1c184ea29628a5f65e9ed255caeb53ea0f789cb4bfeedaf075d8ac6d4f",
+    "fingerprint": "acf72512d6107cbe6eb9a8d1abbf2fdfe7fba323a744a1dc61817c892fefa967",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "7ffac1b929f96f41f2cbd20fb99710486fd707b57872b74a4d1c59d767451f2c",
+    "input_instances": 42835,
+    "peak_process_rss_mib": 5990.5546875,
+    "predicted_divisions": 80,
+    "selected_edges": 33964,
+    "selected_nodes": 35978,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 275386,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 582,
+          "parents_with_pairs": 341,
+          "restricted_division_variables": 24247
+        },
+        "gap": 4.392747833456692e-06,
+        "objective": 612.6031410309555,
+        "objective_bound": 612.605832042076,
+        "seconds": 182.2082772970025,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 213164
+      },
+      {
+        "constraints": 233689,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 343,
+          "parents_with_pairs": 277,
+          "restricted_division_variables": 22082
+        },
+        "gap": 0.0,
+        "objective": 793.2769745113777,
+        "objective_bound": 793.2769745113777,
+        "seconds": 16.998549403000652,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 194089
+      },
+      {
+        "constraints": 139989,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 248,
+          "parents_with_pairs": 203,
+          "restricted_division_variables": 14316
+        },
+        "gap": 0.0,
+        "objective": 538.7466603580614,
+        "objective_bound": 538.7466603580614,
+        "seconds": 10.410400430999289,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 125077
+      },
+      {
+        "constraints": 195924,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 266,
+          "parents_with_pairs": 203,
+          "restricted_division_variables": 18009
+        },
+        "gap": 2.9844411214357342e-06,
+        "objective": 528.8106015072932,
+        "objective_bound": 528.8121797113978,
+        "seconds": 139.5493762920014,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 157083
+      },
+      {
+        "constraints": 127162,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 246,
+          "parents_with_pairs": 208,
+          "restricted_division_variables": 12521
+        },
+        "gap": 2.3787806983857385e-16,
+        "objective": 477.92063303172466,
+        "objective_bound": 477.9206330317248,
+        "seconds": 6.535366192001675,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 109096
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.64819850799904,
+      "link_seconds": 11.636263301999861,
+      "segment_seconds": 78.03280414599794,
+      "solve_seconds": 371.7613703390016
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 36713
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_a21120c2",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "2f2c49692c4f643bc77d0cd1a6137c01104414bd1d75ab9acfeb8e192d2e3da9",
+    "database_bytes": 85688320,
+    "database_counts": {
+      "links": 176647,
+      "nodes": 36713,
+      "overlaps": 86404
+    },
+    "dataset": "44b6_a21120c2",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "49ba2064ac23fd7e5b167fb085398adad687593acc2c4d30ae15eefc30e59b35",
+    "division_evidence_sha256": "d852bbfab0941b0aa96f5e2cb1158b3fadba05242c40a04695b090d67e1e5ae1",
+    "fingerprint": "e4ef58ba2951a0db519577ad41a0c0801bbbe3bd9199af35ae7de77d8ff29a71",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "c95a249e004d7196ef6ca3881d2dc82b82ba38b1657068a8dd41d8ea58d649d0",
+    "input_instances": 23635,
+    "peak_process_rss_mib": 5990.5546875,
+    "predicted_divisions": 2,
+    "selected_edges": 21867,
+    "selected_nodes": 22675,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 52674,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1150,
+          "parents_with_pairs": 492,
+          "restricted_division_variables": 9045
+        },
+        "gap": 0.0,
+        "objective": 219.0091542480752,
+        "objective_bound": 219.0091542480752,
+        "seconds": 4.991066124002828,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 79244
+      },
+      {
+        "constraints": 100314,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1341,
+          "parents_with_pairs": 637,
+          "restricted_division_variables": 13175
+        },
+        "gap": 3.357519071600599e-07,
+        "objective": 243.4640870515692,
+        "objective_bound": 243.46416879510076,
+        "seconds": 12.481656751002447,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 116397
+      },
+      {
+        "constraints": 37543,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 394,
+          "parents_with_pairs": 205,
+          "restricted_division_variables": 6807
+        },
+        "gap": 0.0,
+        "objective": 195.01144064129932,
+        "objective_bound": 195.01144064129932,
+        "seconds": 2.8113202679996903,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 59028
+      },
+      {
+        "constraints": 49984,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1014,
+          "parents_with_pairs": 445,
+          "restricted_division_variables": 7913
+        },
+        "gap": 1.1618424759732808e-16,
+        "objective": 244.6261865800268,
+        "objective_bound": 244.62618658002683,
+        "seconds": 3.151841160000913,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 69169
+      },
+      {
+        "constraints": 54700,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 387,
+          "parents_with_pairs": 211,
+          "restricted_division_variables": 7622
+        },
+        "gap": 0.0,
+        "objective": 143.06780370769872,
+        "objective_bound": 143.06780370769872,
+        "seconds": 3.0728349320015695,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 65787
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.296175415001926,
+      "link_seconds": 7.611064527998678,
+      "segment_seconds": 33.76955211200038,
+      "solve_seconds": 33.66871612599789
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 19172
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_af149c94",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "bd7da543bb448f2a85691d553f424d0edf093b76e8caf02bf00eb1111eaed855",
+    "database_bytes": 72880128,
+    "database_counts": {
+      "links": 88121,
+      "nodes": 19172,
+      "overlaps": 57635
+    },
+    "dataset": "6bba_af149c94",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "aef5b903fa16612a7ed82536ee0b39d22f3b7db4dd6965e4dc5b178e352684fe",
+    "division_evidence_sha256": "f213de336771ab873e00d6c648da51ebc11cc97e4ccc44d8fa7db065e4632500",
+    "fingerprint": "9e8348ce4cc7b2ef62ede999144f27e70284eb5ba4056aa26098be4ed900cae0",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "0753bdccce44c01b8e60e7bf41a3e618db18015416828a597f84acaed2a8ccd2",
+    "input_instances": 11028,
+    "peak_process_rss_mib": 5990.5546875,
+    "predicted_divisions": 36,
+    "selected_edges": 8758,
+    "selected_nodes": 9403,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 30343,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 419,
+          "parents_with_pairs": 293,
+          "restricted_division_variables": 4067
+        },
+        "gap": 0.0,
+        "objective": 547.6490862157781,
+        "objective_bound": 547.6490862157781,
+        "seconds": 2.4592378240013204,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 34322
+      },
+      {
+        "constraints": 45554,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 703,
+          "parents_with_pairs": 424,
+          "restricted_division_variables": 6213
+        },
+        "gap": 0.0,
+        "objective": 946.6609992718636,
+        "objective_bound": 946.6609992718636,
+        "seconds": 3.9068172730003425,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 53890
+      },
+      {
+        "constraints": 35440,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 269,
+          "parents_with_pairs": 158,
+          "restricted_division_variables": 5135
+        },
+        "gap": 0.0,
+        "objective": 234.53445178965148,
+        "objective_bound": 234.53445178965148,
+        "seconds": 3.1964391520014033,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 44018
+      },
+      {
+        "constraints": 25044,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 279,
+          "parents_with_pairs": 209,
+          "restricted_division_variables": 3453
+        },
+        "gap": 0.0,
+        "objective": 393.7721175685423,
+        "objective_bound": 393.7721175685423,
+        "seconds": 1.6390204629969958,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 29245
+      },
+      {
+        "constraints": 28642,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 268,
+          "parents_with_pairs": 185,
+          "restricted_division_variables": 4147
+        },
+        "gap": 0.0,
+        "objective": 365.09355311897934,
+        "objective_bound": 365.09355311897934,
+        "seconds": 2.2336070540004584,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 35200
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.735646711997106,
+      "link_seconds": 7.650738808002643,
+      "segment_seconds": 20.853922664999118,
+      "solve_seconds": 17.31087760900118
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 10652
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_e16ffc58",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "579cdc2027201affceda0288cd7585e32d5eab1a9a5641b2050bff2e6120387a",
+    "database_bytes": 38502400,
+    "database_counts": {
+      "links": 41147,
+      "nodes": 10652,
+      "overlaps": 19873
+    },
+    "dataset": "6bba_e16ffc58",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "c8c1268e296608a17b9fdbc05ebf9f738200ef26de838b580480ccd83b1cfb30",
+    "division_evidence_sha256": "c34045e3c860e1b2781b72bbe0b68ac07e87755e8d76a49fdb53bbb786f1074d",
+    "fingerprint": "640ebf1f2025f8374c795f9214839972080b92eaa77e7db22be3b2beb38f050a",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "5eb2af2f8ab9c261885f263751d2ab183e6a605398dc5cfa31288726b2116c27",
+    "input_instances": 7145,
+    "peak_process_rss_mib": 5990.5546875,
+    "predicted_divisions": 6,
+    "selected_edges": 5676,
+    "selected_nodes": 5982,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 15665,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 256,
+          "parents_with_pairs": 143,
+          "restricted_division_variables": 2736
+        },
+        "gap": 0.0,
+        "objective": 253.44036141477642,
+        "objective_bound": 253.44036141477642,
+        "seconds": 1.2194638180008042,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 21189
+      },
+      {
+        "constraints": 20728,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 226,
+          "parents_with_pairs": 114,
+          "restricted_division_variables": 3340
+        },
+        "gap": 0.0,
+        "objective": 287.06733528051814,
+        "objective_bound": 287.06733528051814,
+        "seconds": 1.633849690999341,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 26067
+      },
+      {
+        "constraints": 12759,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 310,
+          "parents_with_pairs": 125,
+          "restricted_division_variables": 2221
+        },
+        "gap": 0.0,
+        "objective": 434.5626879152303,
+        "objective_bound": 434.5626879152303,
+        "seconds": 0.9292868670017924,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 17221
+      },
+      {
+        "constraints": 15629,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 257,
+          "parents_with_pairs": 147,
+          "restricted_division_variables": 2465
+        },
+        "gap": 0.0,
+        "objective": 217.25620793119452,
+        "objective_bound": 217.25620793119452,
+        "seconds": 0.9957286620010564,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 19766
+      },
+      {
+        "constraints": 13272,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 251,
+          "parents_with_pairs": 104,
+          "restricted_division_variables": 2087
+        },
+        "gap": 2.6595572493908507e-16,
+        "objective": 427.4652773413885,
+        "objective_bound": 427.4652773413886,
+        "seconds": 0.772041710002668,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 16481
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.339779060999717,
+      "link_seconds": 6.898866974999692,
+      "segment_seconds": 16.59580566600198,
+      "solve_seconds": 7.739683484000125
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 19502
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_fe670320",
+    "config_sha256": "2cd703856beb7064949be3b6db372d823099608f2eb2ee68595230b7de90bf3c",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "0d3e03ba7fcae9657bb089b1e25159ba20da987ed245049c754dd0b0a40c2670",
+    "database_bytes": 40845312,
+    "database_counts": {
+      "links": 86777,
+      "nodes": 19502,
+      "overlaps": 24078
+    },
+    "dataset": "6bba_fe670320",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "f7fa13a580e2f5d80f66d1c312e65d307b6789c89bd74953e6748cb4ac04b0a6",
+    "division_evidence_sha256": "2be0114e3a07f0ea25ff77419463be62a227fd2792ecef05c560ad58eb9faa4c",
+    "fingerprint": "524fd3675584ace44c39e3cc2e1e67c5f2c081e371c41fad1c0076e44b9fed07",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "c9d58ced390926e18c85e17849a18b8b0e2b20fe693cd8ea58c820868cd450a8",
+    "input_instances": 13862,
+    "peak_process_rss_mib": 5990.5546875,
+    "predicted_divisions": 1,
+    "selected_edges": 10918,
+    "selected_nodes": 11619,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 13815,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 279,
+          "parents_with_pairs": 83,
+          "restricted_division_variables": 2387
+        },
+        "gap": 0.0,
+        "objective": 129.93315638285142,
+        "objective_bound": 129.93315638285142,
+        "seconds": 1.0861239379992185,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 18608
+      },
+      {
+        "constraints": 33817,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 873,
+          "parents_with_pairs": 256,
+          "restricted_division_variables": 5720
+        },
+        "gap": 6.474120276730551e-06,
+        "objective": 354.48430774577184,
+        "objective_bound": 354.4866027198164,
+        "seconds": 7.376320488998317,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 48670
+      },
+      {
+        "constraints": 40540,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1051,
+          "parents_with_pairs": 309,
+          "restricted_division_variables": 7700
+        },
+        "gap": 3.074870092080625e-09,
+        "objective": 807.3770276412166,
+        "objective_bound": 807.3770301237961,
+        "seconds": 5.036718018000101,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 66826
+      },
+      {
+        "constraints": 12727,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 51,
+          "parents_with_pairs": 31,
+          "restricted_division_variables": 2324
+        },
+        "gap": 0.0,
+        "objective": 37.154553454828495,
+        "objective_bound": 37.154553454828495,
+        "seconds": 0.9557263510032499,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 18521
+      },
+      {
+        "constraints": 29219,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1286,
+          "parents_with_pairs": 338,
+          "restricted_division_variables": 5283
+        },
+        "gap": 2.969666867546732e-09,
+        "objective": 645.2852987774341,
+        "objective_bound": 645.2853006937165,
+        "seconds": 2.6329125029988063,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 45350
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.29255166599978,
+      "link_seconds": 7.0809919189996435,
+      "segment_seconds": 25.493553317999613,
+      "solve_seconds": 20.701365705997887
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  }
+]

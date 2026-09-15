@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cell review · Pipeline errors</title>
+  <meta name="description" content="Synchronized microscopy, center assignments, tracking links, and real FOCUS-3D instance masks.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="detection_style.css">
+  <link rel="stylesheet" href="tracking_style.css">
+  <script src="error_view.js" defer></script>
+  <script src="viewer.js" defer></script>
+  <script src="tracking_view.js" defer></script>
+  <script src="detection_view.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <div><h1>Cell review</h1></div>
+    <div class="status"><span class="dot"></span><span id="status" role="status">Loading comparison…</span></div>
+  </header>
+  <nav class="main-tabs" role="tablist" aria-label="Review workspace">
+    <button id="tab-report" role="tab" aria-selected="false" aria-controls="report-panel">Pipeline report</button>
+    <button id="tab-detection" role="tab" aria-selected="true" aria-controls="detection-panel">Detection review</button>
+    <button id="tab-tracking" role="tab" aria-selected="false" aria-controls="tracking-panel">Tracking &amp; divisions</button>
+    <button id="tab-comparison" role="tab" aria-selected="false" aria-controls="comparison-panel">FOCUS comparison · 42 frames</button>
+  </nav>
+  <section id="report-panel" role="tabpanel" aria-labelledby="tab-report" hidden>
+    <div class="tr-heading"><div><p class="eyebrow">FULL PIPELINE AUDIT</p><h2>Where the score is being lost</h2></div><div class="tr-controls">
+      <label>Pipeline<select id="r-model"><option value="pooled">C4_m6 · highest pooled score</option><option value="best">P0 · retained pipeline</option></select></label>
+      <label>Evaluation scope<select id="r-embryo"><option value="all">All 199 clips</option><option value="44b6">44b6 · 71 clips</option><option value="6bba">6bba · 128 clips</option></select></label>
+      <a id="r-download" href="/api/tracking/report" download="pipeline-errors.json">Download evidence</a>
+    </div></div>
+    <p id="r-error" role="alert" hidden></p><div id="r-content" aria-live="polite"><p>Loading the verified pipeline report…</p></div>
+  </section>
+  <section id="tracking-panel" role="tabpanel" aria-labelledby="tab-tracking" hidden>
+    <div class="tr-heading"><div><p class="eyebrow">TRACKING &amp; DIVISIONS</p><h2>Compare the expected and predicted lineage</h2></div><button id="t-report">Back to pipeline report</button></div>
+    <p class="tr-scope">Every official link and division error across all 199 clips. Error flags can describe the same cells; their counts are not independent biological events.</p>
+    <div class="tr-controls tr-filters">
+      <label>Pipeline<select id="t-model"><option value="pooled">C4_m6</option><option value="best">P0</option></select></label>
+      <label>Error<select id="t-filter"><option value="all">All scored errors</option><option value="edge_endpoint">Unmatched endpoint</option><option value="edge_link">Matched cells, missing link</option><option value="edge_fp">Incorrect connection</option><option value="division_fn">Missed division</option><option value="division_fp">Incorrect division</option></select></label>
+      <label>Evidence<select id="t-stage"><option value="">All evidence groups</option></select></label>
+      <label>Embryo<select id="t-embryo"><option value="">Both embryos</option><option>44b6</option><option>6bba</option></select></label>
+      <label>Clip<select id="t-clip"><option value="">All clips</option></select></label>
+      <button id="t-reset">Reset filters</button>
+    </div>
+    <p id="t-error" role="alert" hidden></p>
+    <div class="tr-workspace">
+      <aside class="tr-browser"><div class="tr-list-head"><strong id="t-total" role="status">Loading…</strong><span id="t-range"></span></div><div id="t-list" role="list" aria-label="Tracking error examples"></div><div class="tr-pagination"><button id="t-page-prev" aria-label="Previous tracking page">←</button><span id="t-page-label"></span><button id="t-page-next" aria-label="Next tracking page">→</button></div></aside>
+      <div class="tr-case-area">
+        <div class="tr-navigation"><button id="t-prev">← Previous</button><strong id="t-progress" role="status"></strong><button id="t-next">Next →</button><label>Go to<input id="t-jump" type="number" min="1" value="1" aria-label="Tracking example number"></label><button id="t-go">Go</button><button id="t-copy">Copy case link</button></div>
+        <p id="t-empty" hidden>No cases match these filters. Choose another evidence group or reset filters.</p>
+        <div id="t-case" hidden>
+          <div class="tr-case-heading"><h3 id="t-title"></h3><span id="t-location"></span></div><p id="t-explanation"></p>
+          <div id="t-evidence" class="tr-evidence"></div>
+          <div id="t-graphs" class="tr-graphs" aria-label="Expected and actual connections"></div>
+          <p id="t-matching" class="tr-caption"></p>
+          <div class="tr-controls tr-view-controls">
+            <label>Plane<select id="t-plane"><option value="xy">XY</option><option value="xz">XZ</option><option value="yz">YZ</option></select></label>
+            <label>Image depth<select id="t-projection"><option value="local">Around these cells</option><option value="mip">Full-depth maximum</option></select></label>
+            <label>Brightness<input id="t-brightness" type="range" min="0.5" max="2.5" step="0.1" value="1"></label>
+            <label>Crop width<select id="t-width"><option value="auto">Fit this event</option><option value="30">30 µm</option><option value="50">50 µm</option><option value="104">104 µm</option></select></label>
+            <label class="check"><input id="t-overlays" type="checkbox" checked>Cell markers</label><button id="t-fit">Fit event</button><span id="t-loading" role="status"></span>
+          </div>
+          <p class="tr-legend"><span class="tr-gold">◇ Annotated observation</span><span class="tr-cyan">○ Prediction</span><span>Letters identify observations across both graph and images. Each image shows only its own timepoint.</span></p>
+          <div id="t-images" class="tr-images" aria-label="Microscopy at the event timepoints"></div>
+          <p class="tr-caption">Identical physical crop across time. Local projections include the displayed cells’ depths; 7 µm matching uses all three dimensions. A nearby unmatched prediction is not a confirmed false detection.</p>
+          <details class="tr-details" open><summary>Endpoint checks · open a cell in Detection review</summary><div class="tr-table-wrap"><table><thead><tr><th>Observation</th><th>Whole-clip center match</th><th>Nearest detector candidate</th><th>Inspect</th></tr></thead><tbody id="t-centers"></tbody></table></div></details>
+          <details class="tr-details"><summary>Scoring evidence and exact source IDs</summary><div id="t-source"></div></details>
+          <div class="tr-notes"><label>Your assessment<select id="t-verdict"><option value="">Not reviewed</option><option>Observation selection</option><option>Association / identity</option><option>Division decision</option><option>Detection / localization</option><option>Annotation issue</option><option>Uncertain</option></select></label><label>Notes<textarea id="t-notes" rows="2"></textarea></label><button id="t-save">Save notes</button><button id="t-export">Export notes</button><span id="t-note-status" role="status"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="comparison-panel" role="tabpanel" aria-labelledby="tab-comparison" hidden>
+  <p class="limited-export">This comparison uses 42 exported frames. <button id="open-all-errors">Open all error examples →</button></p>
+  <div id="error" role="alert" hidden></div>
+  <section class="error-review" aria-label="Complete pipeline error review">
+    <div class="section-heading"><div><p class="eyebrow">FIND THE FAILURE</p><h2 id="review-title">Center detection or frame-to-frame linking?</h2></div><span id="best-scope"></span></div>
+    <p class="review-intro">A missing center and a broken connection are different problems. Pick a failure type, then compare the annotated cells with the model’s result.</p>
+    <div class="error-controls">
+      <label class="sequence">Sequence<select id="sequence" aria-label="Sequence"></select></label>
+      <label>Center match radius<select id="radius"><option value="1">1 µm</option><option value="2">2 µm</option><option value="3">3 µm</option><option value="5">5 µm</option><option value="7" selected>7 µm · competition</option></select></label>
+      <label>Pipeline<select id="error-model"><option value="pooled" selected>C4_m6 · highest total</option><option value="best">P0 · retained</option></select></label>
+      <label>Failure type<select id="error-kind"><option value="all">All failure types</option><optgroup label="1 · Center detection"><option value="center_missing">Missing center</option><option value="center_conflict">Center assignment conflict</option><option value="center_offset">Center offset ≥3 µm</option></optgroup><optgroup label="2 · Between frames"><option value="link_missing">Detected cells are not linked</option><option value="link_wrong">Wrong / extra connection</option><option value="link_detection">Connection fails at a missing center</option></optgroup><optgroup label="3 · Cell division"><option value="division_missing">Missed division</option><option value="division_extra">Incorrect division</option></optgroup></select></label>
+      <label>Search in<select id="error-scope"><option value="sequence">This sequence</option><option value="all">All exported frames</option></select></label>
+      <button id="error-previous" aria-label="Previous error">← Previous case</button><button id="error-next" aria-label="Next error">Next case →</button><span id="error-count" role="status"></span>
+    </div>
+    <div id="error-categories" class="error-categories" aria-label="Failure categories and counts"></div>
+    <div class="error-layout">
+      <div><p class="list-label">CASES IN THE EXPORTED IMAGES</p><div id="error-list" class="error-list" aria-label="Error locations"></div></div>
+      <div class="case-area">
+        <div id="error-detail" aria-live="polite"></div>
+        <section id="case-visual" hidden aria-label="Selected failure explained">
+          <div class="case-view-controls"><label>Plane<select id="case-plane"><option value="xy">XY</option><option value="xz">XZ</option><option value="yz">YZ</option></select></label><label>Brightness<input id="case-brightness" aria-label="Error image brightness" type="range" min="0.5" max="2.5" step="0.1" value="1"></label><label class="check"><input id="case-isolate" type="checkbox" checked>Only this case</label><label>Image depth<select id="case-projection"><option value="local">Around these cells</option><option value="mip">Full-depth maximum</option></select></label><button id="case-clear">Return to full comparison</button><span id="case-loading" role="status"></span></div>
+          <div id="case-images" class="case-images"></div>
+          <p id="case-legend" class="case-legend"></p>
+          <div id="case-connections" class="case-connections"></div>
+          <p class="muted">Each image contains centers from its own frame. Matching a center to an annotation is a separate step from linking it to the next frame.</p>
+        </section>
+      </div>
+    </div>
+    <details class="score-details"><summary>Full evaluation scores and scoring details</summary><p id="best-overall"></p><p id="best-metrics" class="muted"></p><p class="muted">Center cases use the chosen radius. Connections and divisions use the official 7 µm metric. Related incorrect and missing edge flags are grouped into cases. Center and connection cases can involve the same cell. Unmatched predictions are not confirmed false positives.</p></details>
+  </section>
+  <details id="comparison-view" class="comparison-view" open><summary>Full microscopy, prediction and FOCUS comparison <span>Use this to inspect the surrounding cells</span></summary>
+  <section class="toolbar" aria-label="Comparison controls">
+
+    <label>Inspect<select id="mode"><option value="matches">Center assignments</option><option value="tracks">Temporal links</option></select></label>
+    <label>Current method<select id="current"><option value="pooled" selected>C4_m6 · highest total score</option><option value="best">P0 · retained pipeline</option><option value="detector">Detector · pre-ILP</option><option value="selected">C0 · selected v3 pipeline</option><option value="watershed">Seeded watershed · V5</option></select></label>
+    <label>FOCUS center<select id="focus"><option value="focus_centroid">Geometric centroid</option><option value="focus_weighted">Intensity-weighted centroid</option><option value="focus_peak">Smoothed intensity peak</option></select></label>
+
+  </section>
+  <section class="transport" aria-label="Playback">
+    <button id="previous" aria-label="Previous frame">←</button><button id="play" class="primary" aria-label="Play sequence">Play</button><button id="next" aria-label="Next frame">→</button>
+    <label class="timeline"><span>Frame <strong id="time-label">—</strong><span id="range-label"></span></span><input id="time" aria-label="Time frame" type="range" min="0" max="0" value="0"></label>
+    <label>Playback<select id="fps"><option value="1">1 fps</option><option value="2" selected>2 fps</option><option value="4">4 fps</option><option value="8">8 fps</option></select></label>
+  </section>
+  <section class="spatial" aria-label="Image and overlay controls">
+    <label>Plane<select id="plane"><option value="xy">XY · depth Z</option><option value="xz">XZ · depth Y</option><option value="yz">YZ · depth X</option></select></label>
+    <label>Projection<select id="projection"><option value="mip">Full-depth maximum</option><option value="slab">Slab · ±2 planes</option><option value="slice">Single slice</option></select></label>
+    <label class="depth">Depth <span id="depth-label">—</span><input id="depth" aria-label="Depth plane" type="range" min="0" max="63" value="32"></label>
+    <label>Brightness <output id="gamma-label">1.0</output><input id="gamma" aria-label="Brightness" type="range" min="0.5" max="2.5" step="0.1" value="1"></label>
+    <label>Mask opacity <output id="opacity-label">35%</output><input id="opacity" aria-label="Mask opacity" type="range" min="0" max="0.8" step="0.05" value="0.35"></label>
+    <label class="check"><input id="masks" type="checkbox" checked>Masks</label><label class="check"><input id="centers" type="checkbox" checked>Centers</label><label class="check"><input id="gt" type="checkbox" checked>Annotations</label><label class="check"><input id="lines" type="checkbox" checked>Links</label>
+    <button id="reset">Fit view</button>
+  </section>
+  <section id="panels" class="panels" aria-label="Synchronized comparison">
+    <article class="panel"><div class="panel-head"><h2>01 <span>Microscopy</span></h2><span id="gt-count"></span></div><canvas id="raw-canvas" width="720" height="720" tabindex="0" role="img" aria-label="Microscopy with sparse annotated centers"></canvas><div class="panel-foot"><span class="key gt-key">◇ Sparse annotation</span><span id="raw-foot">Native microscopy</span></div></article>
+    <article class="panel"><div class="panel-head"><h2>02 <span id="current-title">Current detector</span></h2><span id="current-count"></span></div><canvas id="current-canvas" width="720" height="720" tabindex="0" role="img" aria-label="Current predicted centers and assignments"></canvas><div class="panel-foot"><span class="key current-key">○ Predicted center</span><span id="current-foot"></span></div></article>
+    <article class="panel"><div class="panel-head"><h2>03 <span>FOCUS-3D nuclei</span></h2><span id="focus-count"></span></div><canvas id="focus-canvas" width="720" height="720" tabindex="0" role="img" aria-label="FOCUS-3D instance masks, mask-derived centers, and assignments"></canvas><div class="panel-foot"><span class="key focus-key">+ Mask-derived center</span><span id="focus-foot"></span></div></article>
+  </section>
+  <div class="view-caption"><span id="view-label"></span><span>Scroll to zoom · drag to pan · click a center or mask to inspect</span><span id="zoom-label">1.0×</span></div>
+  <p id="mode-note" class="notice"></p>
+  <section class="details">
+    <article class="assignments"><div class="section-heading"><h2>Annotation assignments</h2><span id="assignment-scope">Full 3D frame · not just the visible slice</span></div>
+      <div class="table-scroll"><table><thead><tr><th>Annotated node</th><th>Current error</th><th>FOCUS error</th><th>FOCUS − current</th></tr></thead><tbody id="assignments"></tbody></table></div>
+      <p class="muted">Click a row to inspect its depth and matched centers. A miss means no assignment within the selected radius.</p>
+    </article>
+    <article class="inspector"><div class="section-heading"><h2>Cell inspection</h2><button id="center-selection" disabled>Center selection</button></div><div id="inspector"><p>Select an annotation, predicted center, or mask.</p></div>
+      <div class="readouts"><div><span>Current annotated recall</span><strong id="current-recall">—</strong></div><div><span>FOCUS annotated recall</span><strong id="focus-recall">—</strong></div><div><span>FOCUS instances</span><strong id="mask-count">—</strong></div></div>
+    </article>
+  </section>
+  </details>
+  <details class="provenance"><summary>Methods, coordinates &amp; interpretation</summary><div id="provenance"></div></details>
+  <footer><span>Sparse labels: unmatched predictions are not confirmed false positives. No dense mask ground truth.</span><button id="copy-view">Copy view link</button><span id="copy-status" role="status"></span></footer>
+  </div>
+  <section id="detection-panel" role="tabpanel" aria-labelledby="tab-detection">
+    <div id="d-error" role="alert" hidden></div>
+    <div class="d-topbar">
+      <div id="d-groups" class="d-groups" aria-label="Examples to show">
+        <button data-filter="all" aria-pressed="true">All issues <b></b></button>
+        <button data-filter="detection" aria-pressed="false">Detection <b></b></button>
+        <button data-filter="association" aria-pressed="false">Association <b></b></button>
+        <button data-filter="unlabeled" aria-pressed="false">Unlabeled predictions <b></b></button>
+      </div>
+      <span id="d-coverage" role="status">Loading all datasets…</span>
+      <button id="d-reset">All datasets</button>
+      <details id="d-options" class="d-options"><summary>Options</summary><div class="d-filters">
+        <select id="d-model" aria-label="Catalog pipeline" hidden><option value="pooled">C4_m6</option><option value="best">P0</option></select>
+        <label>Group<select id="d-filter"><option value="all">All issues</option><option value="detection">Detection</option><option value="missing">Detector misses</option><option value="selection">Detector candidate, final missing</option><option value="offset">Offsets ≥3 µm</option><option value="association">Association</option><option value="ambiguous">Ambiguous</option><option value="unlabeled">Unlabeled predictions</option><option value="annotations">All annotations</option></select></label>
+        <label>Clip<select id="d-clip"><option value="">All 199 clips</option></select></label>
+        <label>Frame<input id="d-frame-filter" type="number" min="0" max="99" placeholder="All" aria-label="Filter detection cases by frame"></label>
+        <label id="d-pool-label" hidden>Predictions<select id="d-pool"><option value="final">Final pipeline</option><option value="raw">Detector · before tracking</option></select></label>
+        <label>Zoom depth<select id="d-projection"><option value="local">Automatic · cell depth</option><option value="slab">Slab · ±2 planes</option><option value="slice">Single slice</option><option value="mip">Full-depth maximum</option></select></label>
+        <label>Depth <span id="d-depth-label"></span><input id="d-depth" type="range" min="0" max="63" aria-label="Detection depth"></label>
+        <label>Zoom width<select id="d-width"><option value="24">24 µm</option><option value="40" selected>40 µm</option><option value="80">80 µm</option><option value="104">Full field</option></select></label>
+        <label class="check"><input id="d-centers" type="checkbox" checked>Predictions</label><label class="check"><input id="d-labels" type="checkbox" checked>Ground truth</label><label class="check"><input id="d-lines" type="checkbox" checked>Assignments</label>
+        <button id="d-recenter">Reset zoom</button><button id="d-copy">Copy example link</button>
+        <p id="d-scope"></p>
+      </div></details>
+    </div>
+    <p id="d-unknown-note" class="d-unknown-note" hidden>Sparse labels: these predictions are unassigned, not confirmed errors.</p>
+    <div class="d-workspace">
+      <aside class="d-browser" aria-label="All error examples">
+        <div class="d-page-head"><strong id="d-total">Loading…</strong><span id="d-range"></span></div>
+        <div id="d-list" class="d-list" role="list" aria-label="Error examples"></div>
+        <div class="d-pagination"><button id="d-page-prev" aria-label="Previous page">←</button><label>Page<input id="d-page" type="number" min="1" value="1" aria-label="Detection results page"></label><button id="d-page-go">Go</button><button id="d-page-next" aria-label="Next page">→</button></div>
+      </aside>
+      <div class="d-case-area">
+        <div class="d-navigation">
+          <button id="d-prev">← Previous</button><strong id="d-progress" role="status"></strong><button id="d-next" class="primary">Next →</button>
+          <label class="d-jump-label">Go to<input id="d-jump" type="number" min="1" value="1" aria-label="Example number"></label><button id="d-jump-go">Go</button>
+        </div>
+        <div class="d-case-heading"><h2 id="d-title">Loading examples…</h2><span id="d-kind"></span><span id="d-location"></span></div>
+        <div class="d-viewbar">
+          <label>Plane<select id="d-plane"><option value="xy">XY</option><option value="xz">XZ</option><option value="yz">YZ</option></select></label>
+          <label>Brightness<input id="d-brightness" type="range" min="0.5" max="2.5" step="0.1" value="1" aria-label="Detection brightness"></label>
+          <button id="d-back" aria-label="Previous context frame">←</button><button id="d-play">Play</button><button id="d-forward" aria-label="Next context frame">→</button>
+          <label class="d-time"><span id="d-time-label"></span><input id="d-time" type="range" min="0" max="0" value="0" aria-label="Detection context time"></label><button id="d-case-frame">Case frame</button><span id="d-loading" role="status"></span>
+        </div>
+        <div class="d-visual-key" aria-label="Overlay legend">
+          <span class="d-key-gt"><i class="d-symbol-gt"></i> Ground truth</span>
+          <span class="d-key-pred"><i class="d-symbol-pred"></i> Prediction</span>
+          <span class="d-key-gt"><i class="d-symbol-radius"></i> 7 µm radius</span>
+          <span class="d-select-hint">Click a cyan prediction to select it</span>
+        </div>
+        <div class="d-selection-controls">
+          <label>Predictions<select id="d-pred-source"><option value="final:pooled">Final output · C4_m6</option><option value="final:best">Final output · P0</option><option value="raw">Detector candidates · before tracking</option></select></label>
+          <label class="d-key-gt">Ground truth<select id="d-gt-choice" aria-label="Select ground truth"></select></label>
+          <label class="d-key-pred">Select prediction<select id="d-pred-choice" aria-label="Select prediction"></select></label>
+          <button id="d-fit-pair">Fit selected pair</button>
+        </div>
+        <div id="d-selection-readout" class="d-selection-readout" role="status"></div>
+        <div id="d-nearby-picks" class="d-nearby-picks" aria-label="Nearby predictions"></div>
+        <div id="d-images" class="d-images">
+          <article><header><h3>Full image</h3><span id="d-frame-count"></span></header><div class="d-full"><canvas id="d-final-full" width="720" height="720" tabindex="0" role="img" aria-label="Full image: gold ground truth, cyan predictions, 7 micrometer radius and zoom box"></canvas></div></article>
+          <article><header><h3>Zoom</h3><span id="d-zoom-status"></span></header><div class="d-zoom"><canvas id="d-final-canvas" width="720" height="720" tabindex="0" role="img" aria-label="Zoom: select a cyan prediction to compare with gold ground truth and its 7 micrometer radius"></canvas></div></article>
+        </div>
+        <p id="d-image-caption" class="d-caption"></p>
+        <div id="d-connections" class="d-connections"></div>
+        <details id="d-details" class="d-details"><summary>Details &amp; notes</summary>
+          <p id="d-evidence"></p><div id="d-center-status"></div><p id="d-picked"></p>
+          <p id="d-neighbor-caption"></p><div id="d-neighbors" class="d-neighbors"></div>
+          <section class="d-judgment" aria-label="Your assessment">
+            <label>Judgment<select id="d-verdict"><option value="">Not reviewed</option><option>Detection miss</option><option>Localization error</option><option>Selection / filtering issue</option><option>Association error</option><option>Looks correct / annotation issue</option><option>Uncertain</option></select></label>
+            <label class="d-notes">Notes<textarea id="d-notes" rows="2"></textarea></label>
+            <div><button id="d-save">Save</button><button id="d-export">Export notes</button><span id="d-save-status" role="status"></span></div>
+          </section>
+          <p id="d-provenance"></p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

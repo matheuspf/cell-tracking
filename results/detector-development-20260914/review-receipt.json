@@ -1,0 +1,104 @@
+{
+  "inspected_at_utc": "2026-09-14T15:47:50.980948+00:00",
+  "fetch_completed": true,
+  "remote_url": "https://github.com/matheuspf/cell-tracking.git",
+  "current_branch_unchanged": "handover/public946-minimal-generalization-v1",
+  "open_pull_requests": [
+    {
+      "headRefName": "handover/native-resolution-detector-v8",
+      "headRefOid": "e654c50c7543b3486556e2a1cd472f669f07a625",
+      "number": 11,
+      "title": "Native-resolution detector v8: 64\u00d7256\u00d7256 training, sparse labels and embryo-isolated validation",
+      "updatedAt": "2026-09-14T13:04:17Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/11"
+    },
+    {
+      "headRefName": "handover/ultrack-integration-v7",
+      "headRefOid": "d8af4b48b9948346e9d2bff78eba0dd13b58f850",
+      "number": 10,
+      "title": "Ultrack v7: local Codex execution plan for joint segmentation and lineage tracking",
+      "updatedAt": "2026-09-12T21:31:09Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/10"
+    },
+    {
+      "headRefName": "handover/instance-tracking-v6",
+      "headRefOid": "0f62fab58bc9b7242b44b10326e77c2c8966716b",
+      "number": 9,
+      "title": "Instance-mask tracking v6: FOCUS/Cellpose segmentation, mask-aware linking and Ultrack",
+      "updatedAt": "2026-09-10T21:38:35Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/9"
+    },
+    {
+      "headRefName": "handover/segmentation-tracking-v6",
+      "headRefOid": "06e2deedf23f5d7108423d14466316e608c93be1",
+      "number": 8,
+      "title": "Segmentation tracking v6: one focused tool-integration plan",
+      "updatedAt": "2026-09-10T22:35:49Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/8"
+    },
+    {
+      "headRefName": "handover/segmentation-first-tracking-v6",
+      "headRefOid": "5921724a6189a7a05662482de5fe367c4dea2fa1",
+      "number": 7,
+      "title": "Segmentation-first tracking v6: FOCUS-3D objects, mask-aware association and Ultrack",
+      "updatedAt": "2026-09-10T21:07:40Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/7"
+    },
+    {
+      "headRefName": "handover/image-native-tracking-v5",
+      "headRefOid": "fe00326ea6ca79a5b5c54910de03925d353e0629",
+      "number": 6,
+      "title": "Image-native tracking v5: pretrained HOCT, native 3D adaptation, new-cell hypotheses toward 0.95",
+      "updatedAt": "2026-09-10T21:35:03Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/6"
+    },
+    {
+      "headRefName": "handover/lineage-reconstruction-v5",
+      "headRefOid": "91a63729a56b702762eb5bc6d8ffdf41569bec65",
+      "number": 5,
+      "title": "Lineage reconstruction v5: pretrained 3D trackers, new detections and joint decoding toward 0.95",
+      "updatedAt": "2026-09-10T11:23:31Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/5"
+    },
+    {
+      "headRefName": "handover/multidata-training-v4",
+      "headRefOid": "cec119434f7001ea79beeb137a8f1063e5b0deeb",
+      "number": 4,
+      "title": "Multi-dataset training v4: synthetic microscopy and real-trajectory pretraining",
+      "updatedAt": "2026-09-10T10:46:08Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/4"
+    },
+    {
+      "headRefName": "handover/strong-tracker-v3",
+      "headRefOid": "292ecc2569f3a16676de92d80e382be02024d904",
+      "number": 3,
+      "title": "Strong-tracker v3: preserve v2 gains, arbitrate graph disagreements, learn division events",
+      "updatedAt": "2026-09-09T22:00:39Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/3"
+    },
+    {
+      "headRefName": "handover/strong-tracker-v2",
+      "headRefOid": "a58c80b041db0a05262a58b3d1b5f34045b8d2ff",
+      "number": 2,
+      "title": "Add strong-tracker v2 handover: division repair, association repair, native selection",
+      "updatedAt": "2026-09-09T17:10:48Z",
+      "url": "https://github.com/matheuspf/cell-tracking/pull/2"
+    }
+  ],
+  "reviewed": [
+    {
+      "version": "v8",
+      "branch": "handover/native-resolution-detector-v8",
+      "commit": "e654c50c7543b3486556e2a1cd472f669f07a625",
+      "pull_requests": [
+        11
+      ]
+    },
+    {
+      "version": "v9",
+      "branch": "handover/native-resolution-detector-v9-4090",
+      "commit": "01bbcd5bfe232c9364207246afb6a3b1d652860a",
+      "pull_requests": []
+    }
+  ]
+}

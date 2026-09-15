@@ -1,0 +1,10 @@
+{
+  "arms": {},
+  "definitions": {
+    "contrast": "metadata q99-q10 quartiles pooled across the 199 clips",
+    "crowding": "fraction of complete raw-image voxels above metadata q90; intensity occupancy proxy, not a count of individual cells",
+    "depth": "GT source-node z divided by true Z extent into four fixed bins; evaluator only",
+    "limitations": "Descriptive correlated groups, unknown crop overlaps, no subgroup deployment routing",
+    "temporal": "GT consecutive edges within two frames of either temporal endpoint versus interior; evaluator only"
+  }
+}

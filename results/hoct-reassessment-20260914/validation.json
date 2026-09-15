@@ -1,0 +1,64 @@
+{
+  "unit_checks": [
+    "test_unit_conversion_does_not_move_output_nodes_or_change_intensity",
+    "test_candidates_use_physical_distance_and_do_not_link_across_missing_frames",
+    "test_assignment_matches_exhaustive_legal_graphs_with_and_without_divisions",
+    "test_no_parent_probability_can_prevent_a_false_link",
+    "test_division_control_suppresses_second_child_without_creating_a_merge",
+    "test_residual_preserves_zero_update_and_parent_orphan_normalization",
+    "test_residual_gradient_matches_finite_differences",
+    "test_source_guard_blocks_other_embryo_in_a_separate_process"
+  ],
+  "real_region_parity": {
+    "dataset": "44b6_81c256f0",
+    "frames": [
+      0,
+      1
+    ],
+    "regions": 273,
+    "maximum_absolute_error": 7.490443266533475e-06,
+    "source": "34f651dcb247a185d8b70ed32d96fb5916565b470bd628ec256a3c0651693bf3",
+    "real_masks_and_images": true,
+    "note": "Feature parity only. Production candidates deliberately use physical distances; upstream candidate creation is not used."
+  },
+  "upstream_ilp_parity": [
+    {
+      "division": true,
+      "assignment_objective": -2.7890408590061355,
+      "upstream_objective": -2.7890408590061355,
+      "chosen_edges_equal": true
+    },
+    {
+      "division": false,
+      "assignment_objective": -2.6785084434862503,
+      "upstream_objective": -2.6785084434862503,
+      "chosen_edges_equal": true
+    },
+    {
+      "division": true,
+      "assignment_objective": -1.7520812311807725,
+      "upstream_objective": -1.7520812311807723,
+      "chosen_edges_equal": true
+    },
+    {
+      "division": false,
+      "assignment_objective": -1.9341671647702738,
+      "upstream_objective": -1.9341671647702738,
+      "chosen_edges_equal": true
+    },
+    {
+      "division": true,
+      "assignment_objective": -2.6931939378572167,
+      "upstream_objective": -2.6931939378572167,
+      "chosen_edges_equal": true
+    },
+    {
+      "division": false,
+      "assignment_objective": -2.131789054412046,
+      "upstream_objective": -2.131789054412046,
+      "chosen_edges_equal": true
+    }
+  ],
+  "seconds": 4.993519716001174,
+  "annotation_reads": false
+}

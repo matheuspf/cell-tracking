@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "study": "cellpose-ultrack-20260914",
+  "cellpose": {
+    "model": "cpdino-vitb",
+    "checkpoint_sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+    "recipe": "tools.detector_screen.cellpose_adapter; eager BF16 batch 8, native 3D, metadata anisotropy, unchanged benchmark defaults"
+  },
+  "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "geometry": "Audit SQL z/y/x against the serialized mask centroid and recomputed rounded native-mask centroid before linking. Pinned ultrack rounds centroids before insertion, so no coordinate changes are required. CSV uses np.rint.",
+  "segmentation": {
+    "min_area": 20,
+    "min_area_factor": 2.5,
+    "max_area": 100000,
+    "min_frontier": 0.05,
+    "n_workers": 4
+  },
+  "linking": {
+    "max_distance": 15.0,
+    "max_neighbors": 5,
+    "distance_weight": 0.0,
+    "n_workers": 4
+  },
+  "tracking": {
+    "solver_name": "CBC",
+    "n_threads": 8,
+    "time_limit": 180,
+    "window_size": null,
+    "solution_gap": 0.001,
+    "appear_weight": -0.001,
+    "disappear_weight": -0.001,
+    "division_weight": -0.001,
+    "link_function": "power",
+    "power": 4,
+    "bias": 0.0
+  },
+  "selection": "Configuration fixed before complete-graph evaluation. Area/frontier from documented native-volume probes; min_area_factor=2.5 removes disconnected components below the hierarchy's eight-voxel minimum after a first-clip runtime failure (no score inspected). Standard ultrack overlap weights, physical 15 micrometer gate, full-clip solve.",
+  "evaluation": "All nodes and edges of each complete 100-frame clip, integer native centroids, official GEFF total-node estimate, fresh official matching and micro aggregation.",
+  "exposure": "Frozen external pretrained checkpoint, no fitting or label-based tuning; reused public embryos and unresolved inherited checkpoint exposure. Exploratory local evaluation."
+}

@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "links",
+      "patches": 8,
+      "upstream_input_max_error": 0.0,
+      "cpu_cuda_max_probability_error": 2.384185791015625e-07,
+      "raw_probability_min": 0.0019151270389556885,
+      "raw_probability_max": 0.9999977350234985
+    },
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "divisions",
+      "patches": 4,
+      "upstream_input_max_error": 0.0,
+      "cpu_cuda_max_probability_error": 2.0463630789890885e-12,
+      "raw_probability_min": 2.1396102667381456e-08,
+      "raw_probability_max": 2.080488457067986e-06
+    },
+    {
+      "dataset": "6bba_af149c94",
+      "model": "links",
+      "patches": 8,
+      "upstream_input_max_error": 0.0,
+      "cpu_cuda_max_probability_error": 4.172325134277344e-07,
+      "raw_probability_min": 2.2519936464959756e-05,
+      "raw_probability_max": 0.9999017715454102
+    },
+    {
+      "dataset": "6bba_af149c94",
+      "model": "divisions",
+      "patches": 4,
+      "upstream_input_max_error": 0.0,
+      "cpu_cuda_max_probability_error": 1.2732925824820995e-11,
+      "raw_probability_min": 7.88189197464817e-07,
+      "raw_probability_max": 1.2683969544013962e-05
+    }
+  ],
+  "real_images": true,
+  "annotation_reads": false
+}

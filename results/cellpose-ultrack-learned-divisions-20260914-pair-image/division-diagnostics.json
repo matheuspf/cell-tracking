@@ -1,0 +1,138 @@
+[
+  {
+    "dataset": "44b6_a21120c2",
+    "description": "Official local division-window matching; parent side includes its predecessor, daughter sides include their successors. Availability is a diagnostic, not an alternative division score.",
+    "events": [
+      {
+        "gt_dividing_node": 68000000011,
+        "raw_cellpose": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "recovered": true,
+        "selected_ultrack": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 1
+        },
+        "time": 52
+      },
+      {
+        "gt_dividing_node": 76000000019,
+        "raw_cellpose": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "recovered": false,
+        "selected_ultrack": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "time": 60
+      }
+    ],
+    "graph_hash": "3a8e43c2f3105b52f0cf5726ef2c6f8335f6d64addc6c6c51bccdf8146b43bcd"
+  },
+  {
+    "dataset": "6bba_e16ffc58",
+    "description": "Official local division-window matching; parent side includes its predecessor, daughter sides include their successors. Availability is a diagnostic, not an alternative division score.",
+    "events": [
+      {
+        "gt_dividing_node": 27000395,
+        "raw_cellpose": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "recovered": false,
+        "selected_ultrack": {
+          "all_three_sides_matched": false,
+          "daughter_sides_matched": [
+            false,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "time": 26
+      }
+    ],
+    "graph_hash": "ea6648809a19226677e9bb21c750c05992de14ab38d276a0e207e242be3a94e2"
+  },
+  {
+    "dataset": "6bba_fe670320",
+    "description": "Official local division-window matching; parent side includes its predecessor, daughter sides include their successors. Availability is a diagnostic, not an alternative division score.",
+    "events": [
+      {
+        "gt_dividing_node": 1000014,
+        "raw_cellpose": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "recovered": false,
+        "selected_ultrack": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "time": 0
+      },
+      {
+        "gt_dividing_node": 67000712,
+        "raw_cellpose": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "recovered": false,
+        "selected_ultrack": {
+          "all_three_sides_matched": true,
+          "daughter_sides_matched": [
+            true,
+            true
+          ],
+          "parent_side_matched": true,
+          "predicted_forks_near_parent": 0
+        },
+        "time": 66
+      }
+    ],
+    "graph_hash": "2497fae5f6933f2f295c21446182b2cf18fe669c4af7c72b55e8a55ac853d59d"
+  }
+]

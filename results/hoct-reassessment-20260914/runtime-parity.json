@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "general_v1",
+      "batches": 4,
+      "maximum_logit_error": 0.00016592815518379211,
+      "runtime": {
+        "device": "CUDA FP32; upstream CPU interface; TF32 and autocast disabled",
+        "shared_lock": "/kaggle/working/cell-tracking/detector-screen-20260914.gpu.lock",
+        "batches_per_lease": 4,
+        "leases": 1,
+        "batches": 4,
+        "queue_seconds": 11.087767180004448,
+        "leased_seconds": 0.33574290799879236,
+        "peak_reserved_gib": 0.08984375,
+        "process_memory_cap_fraction": 0.3
+      }
+    },
+    {
+      "dataset": "44b6_81c256f0",
+      "model": "ctc_v0",
+      "batches": 4,
+      "maximum_logit_error": 0.00021719932556152344,
+      "runtime": {
+        "device": "CUDA FP32; upstream CPU interface; TF32 and autocast disabled",
+        "shared_lock": "/kaggle/working/cell-tracking/detector-screen-20260914.gpu.lock",
+        "batches_per_lease": 4,
+        "leases": 1,
+        "batches": 4,
+        "queue_seconds": 12.405267422000179,
+        "leased_seconds": 0.18683283800055506,
+        "peak_reserved_gib": 0.08984375,
+        "process_memory_cap_fraction": 0.3
+      }
+    },
+    {
+      "dataset": "44b6_8f5ab931",
+      "model": "general_v1",
+      "batches": 4,
+      "maximum_logit_error": 0.00015234947204589844,
+      "runtime": {
+        "device": "CUDA FP32; upstream CPU interface; TF32 and autocast disabled",
+        "shared_lock": "/kaggle/working/cell-tracking/detector-screen-20260914.gpu.lock",
+        "batches_per_lease": 4,
+        "leases": 1,
+        "batches": 4,
+        "queue_seconds": 11.011945362995903,
+        "leased_seconds": 2.129750220999995,
+        "peak_reserved_gib": 1.37890625,
+        "process_memory_cap_fraction": 0.3
+      }
+    },
+    {
+      "dataset": "44b6_8f5ab931",
+      "model": "ctc_v0",
+      "batches": 4,
+      "maximum_logit_error": 0.00012674182653427124,
+      "runtime": {
+        "device": "CUDA FP32; upstream CPU interface; TF32 and autocast disabled",
+        "shared_lock": "/kaggle/working/cell-tracking/detector-screen-20260914.gpu.lock",
+        "batches_per_lease": 4,
+        "leases": 1,
+        "batches": 4,
+        "queue_seconds": 11.847105280001415,
+        "leased_seconds": 2.175106689996028,
+        "peak_reserved_gib": 1.37890625,
+        "process_memory_cap_fraction": 0.3
+      }
+    }
+  ],
+  "annotation_reads": false,
+  "unchanged_model_features_and_decoder": true,
+  "config_sha256": "ae77510ec4ab7d95d80fa0704a1012d576a4c76d0f0473fa757647aa9399232e",
+  "runtime_sha256": "0f5f0971b0bf6d93009ffaffcaa611caf9e6873aa41138109b42ed87335d9759",
+  "reason": "Dense CPU runtime exceeded first-clip estimate; FP32 cooperative GPU execution preserves the model recipe."
+}

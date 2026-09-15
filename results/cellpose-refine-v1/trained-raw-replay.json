@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-09-14T18:30:17.793611+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "key": "44b6_81c256f0-t025",
+      "target_embryo": "44b6",
+      "training_source": "6bba",
+      "seed": 20260914,
+      "exact_equality": {
+        "centers_zyx": true,
+        "float_centers_zyx": true,
+        "offset_um": true,
+        "integer_bound_projected": true,
+        "scores": true,
+        "baseline_centers_zyx": true,
+        "original_scores": true,
+        "feature_arrays": true,
+        "source_identity": true,
+        "checkpoint_identity": true
+      },
+      "raw_receipt": {
+        "created_utc": "2026-09-14T18:30:01.633806+00:00",
+        "source": "6bba",
+        "input_sha256": "d71bfa3eb8c5a5a9d6994c80cc5464b85fcf8a1d52e52924019f233cb40b89c7",
+        "checkpoint_sha256": "65c04cd3b55301d202b71c837a78cf04b17ab2266ce84d0700584fedc3b44da4",
+        "prediction_sha256": "dc52d6b6eae4d5d21f68c73e411ad8c54acfad7b0e288d8cc1a05acb9f0ea6c1",
+        "feature_array_sha256": {
+          "feature": "7aa504ad2898c045fc883c46433448f101eb6a3b7b85abefb6d3a938981a40a3",
+          "patch": "1218608ade68133aa278804f7fc263ad000f665d53e2c52e615e28a78cc3d0cd",
+          "geometry": "5404a26025ed1c3c11d2492d70e8d0f1e2dc2c6ba6da61360a0aecc57e6296e2"
+        },
+        "seconds": 11.370076794999477,
+        "gpu_queue_seconds": 3.730001481017098e-06,
+        "annotation_access": false,
+        "cached_prediction_or_feature_access": false,
+        "read_guard": "Python audit hook; renamed raw input only, no kernel sandbox"
+      }
+    },
+    {
+      "key": "6bba_af149c94-t025",
+      "target_embryo": "6bba",
+      "training_source": "44b6",
+      "seed": 20260914,
+      "exact_equality": {
+        "centers_zyx": true,
+        "float_centers_zyx": true,
+        "offset_um": true,
+        "integer_bound_projected": true,
+        "scores": true,
+        "baseline_centers_zyx": true,
+        "original_scores": true,
+        "feature_arrays": true,
+        "source_identity": true,
+        "checkpoint_identity": true
+      },
+      "raw_receipt": {
+        "created_utc": "2026-09-14T18:30:17.279831+00:00",
+        "source": "44b6",
+        "input_sha256": "336113b649e197d451dc0d275106d07a9112c42fd96ae0f798c249dea58c0970",
+        "checkpoint_sha256": "eeeed41ce9b602a56ac3be222c8cfa795dfb3f03043a46c2717c0e35ebf876db",
+        "prediction_sha256": "465e03a151d8a59abee2b7e7004cd7abe4d4ece2bdb32f6e9c571347740f7f2d",
+        "feature_array_sha256": {
+          "feature": "077b9680c114887c0431d3af3c8545d4c7a0917d11bb58ee46ea36ff044694b3",
+          "patch": "c910629d613fa23ead1e5a92fc7f2538d33105bdfac81adf4f921f4d95725b97",
+          "geometry": "99a1f3eab50c40d2f1b4cb82564fb0f30de9c63c64adc2bd0f222e3b462fe013"
+        },
+        "seconds": 11.226430113998504,
+        "gpu_queue_seconds": 3.990000550402328e-06,
+        "annotation_access": false,
+        "cached_prediction_or_feature_access": false,
+        "read_guard": "Python audit hook; renamed raw input only, no kernel sandbox"
+      }
+    }
+  ],
+  "plan_sha256": "8f41e471526a35e85640515e40513188797c087944b5a8565b9599ea1130230a",
+  "predictions_lock_sha256": "fee2aac3f568b98a9dc291dafd88b36a95464a9fad8770c2441c2c08a04a3fd9",
+  "scope": "Two renamed raw volumes, one per held-out embryo, primary seed. Full Cellpose plus refiner with annotation/cache access blocked in inference; not complete clips or a Kaggle runtime check."
+}

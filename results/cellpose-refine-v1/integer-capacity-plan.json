@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-14T17:47:13.954891+00:00",
+  "script_sha256": "2641026d285ea028a84c7bfd5fe9098c5c37f645a69a7f68efbfd4493a632058",
+  "movement_um": 3.0,
+  "radii_um": [
+    1,
+    2,
+    3,
+    7
+  ],
+  "absolute_candidate_caps": [
+    100,
+    200,
+    400
+  ],
+  "purpose": "Diagnostic upper bound only; opens GT after the four-fit evaluation exists"
+}

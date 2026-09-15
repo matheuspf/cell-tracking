@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-09-14T18:40:01.918180+00:00",
+  "script_sha256": "0e73c7dab04c28c54e4cfb68f43e9bfd2e644638d04cd8d6a66d57d2a53f1a49",
+  "config_sha256": "5ba8b846668cb2741affc3957909b5c71d51dad7ce67a81fe1be05b17b039571",
+  "exploratory_after_v1": true,
+  "motivation": "Separate source-wide offset correction from image-dependent head effects",
+  "fit_labels": "Opposite embryo only; existing fixed source targets and weights",
+  "movement_limit_um": 3.0,
+  "selection": "One deterministic constant per source; no target-driven parameter search or seed selection"
+}

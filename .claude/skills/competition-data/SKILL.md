@@ -4,7 +4,7 @@ description: "Input paths, Zarr image volumes, cell annotations, and submission 
 ---
 # Competition data — Biohub - Cell Tracking During Development
 
-Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-08T14:53:57Z.
+Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-12T21:12:17Z.
 
 - Official schema: [reference/overview/data-description.md](../../../reference/overview/data-description.md)
 - Local inventory and observations: [docs/competition.md](../../../docs/competition.md)

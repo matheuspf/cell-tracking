@@ -1,0 +1,110 @@
+{
+  "all_registered_arms_accounted": false,
+  "blockers": [
+    {
+      "arm": "B1",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E01",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E02",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E03",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E04",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E05",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E06",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E07",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "E08",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "C01",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "C02",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "C03",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "X01",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "X02",
+      "reason": null,
+      "status": "not_yet_executed"
+    },
+    {
+      "arm": "B0/B1",
+      "reason": "Both reflected pilot evaluations and exact renamed/reordered graphs must complete.",
+      "status": "portability_checks_pending_or_failed"
+    }
+  ],
+  "clean_validation_available": false,
+  "control_portability_checks_complete": false,
+  "controls_only_is_complete": false,
+  "leaderboard_score": null,
+  "leaderboard_submission_performed": false,
+  "measured_arms": [
+    "B0"
+  ],
+  "no_improvement_definition": "No novel recipe passed every full-population, lineage, robustness and packaging gate; individual local gains remain reported.",
+  "output_root": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2",
+  "revision": 2,
+  "status": "partially_executed_with_named_blockers",
+  "study": "public946-minimal-generalization-v1",
+  "unrun_arms": [
+    "B1",
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "C01",
+    "C02",
+    "C03",
+    "X01",
+    "X02"
+  ],
+  "updated": "2026-09-13T20:43:24.513921+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-13T17:57:46.843605+00:00",
+  "current_upstream_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "current_verification": "verified",
+  "locked_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "source_files": {
+    "src/tracking_cellmot/__init__.py": "f9df2098dd85934d0b0d48d477420b1f9ed20a9a55ca6294a1874b964e9166e6",
+    "src/tracking_cellmot/division_metrics.py": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+    "src/tracking_cellmot/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "src/tracking_cellmot/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "src/tracking_cellmot/metrics.py": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+    "src/tracking_cellmot/models/__init__.py": "0861b0bf0d5a574dd0d582c529b763e75c8d271f4df48df15fae3cf5b5fbb127",
+    "src/tracking_cellmot/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "src/tracking_cellmot/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  }
+}

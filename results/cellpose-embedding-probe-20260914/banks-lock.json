@@ -1,0 +1,1974 @@
+{
+  "created_utc": "2026-09-14T20:03:43.752607+00:00",
+  "embedding_plan_sha256": "b46c294c14a8c0f314b02d96024e40ac4051919fc81b55cf69a673c01aade3ef",
+  "files": [
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_81c256f0-t025.npz",
+      "sha256": "c1f9291e1e8cde09a2b4b66657f9052a6278d578a50548ef53f09307bce415c7"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_81c256f0-t025.npz",
+      "sha256": "a38626cb79ff2cf2923bc292cae5024c9d1416745bc03dc7e05debfbe0491f67"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_81c256f0-t025.npz",
+      "sha256": "0789674653b2d37f4a37998ed5748747dcd54853d844a854507228ac88658a4a"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_81c256f0-t025.npz",
+      "sha256": "910d0d37f4e13e836b0dcb5056caac762e6c8b5047676cc788bffc231742c64b"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "f1841032ae2bf4f6603a76e83df4ae1c29f49f8b5d3dfc3118e2a4c365ac2433",
+      "candidates": 116
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "ddd46503e7618a5f53dbd00e2a50c917d144647f29595d80af3df4c0a9b579a3",
+      "candidates": 125
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "7caa486d8223fd342a803aac0ccb644172b5ced207d2ebac6bc225575bd446b7",
+      "candidates": 107
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "3d915964d36e548ba72de364688e8fe1b195808b37ffaf956deaa4f629db3c50",
+      "candidates": 115
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "f114346d1ff790cc2d4164ddefe44d492cbaa95a5c0dd2d7c5027070d314fc87",
+      "candidates": 136
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "ecd9c79655c1da03cc23a20be7cfda2d3caed3aa7893f0d8c4b153dd509b55b9",
+      "candidates": 145
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "61466746c6f2c5ce85db397a0724b72aefc40a057aa2e3e2ebcb4e6e464d88f1",
+      "candidates": 156
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "092d9fdda3e559c6e65d995f46e795181deb88137c501e4ca0f5961bc34896a8",
+      "candidates": 166
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_81c256f0-t025",
+      "sha256": "202361d52d115c2221b31b946a3ca1c1924178e09718308496b6f3e1d424c903",
+      "candidates": 198
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_81c256f0.npz",
+      "sha256": "99e52c30ea50d541ce1b7d7d72f90a0d8a41d1cb50830d56c0fa75d5d392715e"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_81c256f0-t026.npz",
+      "sha256": "515a4bd5de3e381a2103c45e5f365ca616d55c2cc4ca69245574cb84a5651598"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_81c256f0-t026.npz",
+      "sha256": "b175ea5fa8523421bf0eda80e095708874559f3e652bbcbec22f4806c394653c"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_81c256f0-t026.npz",
+      "sha256": "e9e819ec8e61989e5b150eca80d5103fdba3a0c63b6b95c95a304966c614f87e"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "ed2a55a974bbbf18717ee97cdc1895b5fdde024024fe370ef70bf15059fbad30",
+      "candidates": 115
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "f4f512afa828c5ca929b43742054a79f839a9a09c4a36fee9d0d727168f542a7",
+      "candidates": 131
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "89e98f23798cf1141bbfaf6c4e2844b8853177eb27afd7230490c8acd72b57c9",
+      "candidates": 105
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "9c15898cea43aa7e4d8ea0f38fa5a5edbd325e054d6198a2008daa6ece22c69d",
+      "candidates": 125
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "c16ddc13d252ad0dc879739866bac6696537121728d1fc0b54b79b97866e8e28",
+      "candidates": 141
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "866353948e80476090f978ab3adae9765090861b1b18f39bb715f85bed66df2c",
+      "candidates": 159
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "0fa00d3139bd42ee7e711fef3a1779a6d27726d7649f56110c14646879805f4d",
+      "candidates": 163
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "9eccd690f2a3ddc5005e8b6a726bf277511f5751a5543dc4da6931d0efe16f5d",
+      "candidates": 170
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_81c256f0-t026",
+      "sha256": "717c0f43b7731e90de66eb5b4c50030c2cd987f47fcf6ada56a3633f75ea78fb",
+      "candidates": 201
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_81c256f0-t075.npz",
+      "sha256": "e994ce71493125bb9f951439ae5862051ca527fcd81d9051cd4ebe9af26d581d"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_81c256f0-t075.npz",
+      "sha256": "a8347de70e97849f1f01ae1229f8356b2ccd9dc265b8a0f7d351b80f478c83c1"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_81c256f0-t075.npz",
+      "sha256": "facb8e89019dc4912edc37775a3f745b7ebd839416e517c6f7af870141db7ec2"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_81c256f0-t075.npz",
+      "sha256": "01940541ed13b7486bbe2bd5ec21b9910beaaefc17aab731f51b1a5fb70a0dcd"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "283f75dcb9b6ee2215aa581e4ffb66c2b9db9d96d13af8b70ec9e8acea45d578",
+      "candidates": 118
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "429a1b546591a952e491c7ecfb86b64c5aa9bf60e506edcd87a8dce8f36b34d0",
+      "candidates": 128
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "a6417811235368626b9ba6fda802753c2d57a8774c78353d1bd5251cffa536bc",
+      "candidates": 113
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "eb460699d747fd4ac9c6db500544433ad2037baad667a9b6a78a104f0db512d1",
+      "candidates": 114
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "c0985afedfcc392145edcf6df4ef6d6451b30cf12519bd58c9e651c47c69053f",
+      "candidates": 155
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "11af61cf9cb80b7e1d026d409937a3ade72649caca1d3b73eca0bbd248ba0629",
+      "candidates": 147
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "dce6700b2cbce10ec413c6c46ea9faeddd95ca988e1fc786bb391814d3b9741a",
+      "candidates": 167
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "7d2ccfff694c196bc8eb9887bbbab471982edb556214fb02811e50d769875bb6",
+      "candidates": 173
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_81c256f0-t075",
+      "sha256": "6fc58038908b700caca427b1dd1dd3e9a0c9fd1b392f50bc797aba4beed772d8",
+      "candidates": 205
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_81c256f0.npz",
+      "sha256": "99e52c30ea50d541ce1b7d7d72f90a0d8a41d1cb50830d56c0fa75d5d392715e"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_81c256f0-t076.npz",
+      "sha256": "73097f6e7608ff782b47b4ccf5ce8ef7bad13fd3cfd7a2829194096a93da6cd4"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_81c256f0-t076.npz",
+      "sha256": "fa016122dde67bf2bc318b1a42252e3c2c49e77e798aa157b07b3d2f4bc2ea81"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_81c256f0-t076.npz",
+      "sha256": "483f9e890dfe5557b2a230102db3649d300a7d2175e9ae897c376a522498f4e6"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "95a3a95dec7a659126889a1818d9d8a74b3b078356bbdb8b83f347a550284cea",
+      "candidates": 118
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "913f0f8f1c2487fe3012abf7cb83692d855700c27e574fcbb19fcca5ba016f67",
+      "candidates": 133
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "d8c1ad56c95fdc7b83f9f0c2dc6699b25098912d38f5a9286b0df3cda3a0aa6a",
+      "candidates": 115
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "41eee167b576937e4227e5f31091ecec50c97d6647687ca48352917b96686b9d",
+      "candidates": 111
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "7c7b730dedd90e75db93f10953f8ee9b54d119c8e6f1fd3a0f75a3fe0b1ea221",
+      "candidates": 156
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "835024f1ce75c77be539bdf97e858e52a52c3afbd6811ebb0f2109f486b0adb2",
+      "candidates": 153
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "bce85b8ab65be34908e0fc407ff33aa41e461805f76a190bba0aea3b580d4b4c",
+      "candidates": 172
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "8185eebb275620f6535f18c27963bc45948e34d64729bbb787819bf07c443d95",
+      "candidates": 183
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_81c256f0-t076",
+      "sha256": "d94c6eb3e7d4ced9821e87d032821f329d3c515d3f289dd7d05376d42847df85",
+      "candidates": 218
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_8f5ab931-t025.npz",
+      "sha256": "4ac067bd8729d2152ca610fc718f9fa903c9933864a16f03467035eb99441d47"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_8f5ab931-t025.npz",
+      "sha256": "946eaf3e25c9707ca2cce0f8add7eac61e2776e7d84fa6bd6aa42dc22ebc3fdf"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_8f5ab931-t025.npz",
+      "sha256": "e77101682d071304226e6b6b89559998515d27834e8c346690674c690bd6c2dd"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_8f5ab931-t025.npz",
+      "sha256": "fe9b9b83ddc15b1e34907d5a7ee13e94b3073f08c2ef73891ec4bb58a2de893a"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "3c5212bb1c01e0ede260e87dcccde20f33ba142e04cbce923fe9cc4b3a1530a7",
+      "candidates": 352
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "961b36853a819f1c4923f51100ed957f5402b666741747ccfa6d2761d7f08add",
+      "candidates": 555
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "f547286a82039b2037a331d71bb92aeb667d6fcf19fac6755a8a1436d53585c9",
+      "candidates": 477
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "206078f0d1c51b9ccb4ff6c18ae48607bcc866ee0e9a0b6e4ec1359b4ed6d34f",
+      "candidates": 394
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "afd2d6a4b89748e4423cc10abb219151b51976300345d0b97dda109494bbd606",
+      "candidates": 646
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "00cc813c3b9c41badba0fbddc8bc19532956fa0c48205f32dd59b0863a6ec9c3",
+      "candidates": 596
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "aec2c4cc064c67b69cf06679d9412b91a732f10fd669ebbf30dc9a03860fc318",
+      "candidates": 670
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "d4ceb18e9df789ba61a8952bd71bb7eb38685815b7d0cc2647bfe52fc4d3f75c",
+      "candidates": 646
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_8f5ab931-t025",
+      "sha256": "f4791b24c4ff760a318c55336ec3ad7987546170be8be5fed834d3b55119a50b",
+      "candidates": 761
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_8f5ab931.npz",
+      "sha256": "3fd9e8d76c451265a0316cf8e393711966fb651c6d61a9befc965584fc89a187"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_8f5ab931-t026.npz",
+      "sha256": "29608327c982dbbe5b8bf6e77ba7ab269999a5de04b2a93a40616fe81c170dbf"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_8f5ab931-t026.npz",
+      "sha256": "49c9c9627fb678a89f36e7446642696be12526a155acf0bf1462886ed2108d9f"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_8f5ab931-t026.npz",
+      "sha256": "4f53066cccfeabc34f22b782d325d056d1e08b3ccada93fc2d29bea8097bb99d"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "bdc42e5b94d6412fb2706bc793940fc1232cbf74e944492aba22ff89fd2528be",
+      "candidates": 365
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "a3a6e8555f07d4ee0a548cfb874968bb2714c26cc5c9b1f1eb5ab5097390b60b",
+      "candidates": 508
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "36606556a5dec48bfce5189b6835e2b668444a0b3802d9653c24b879835dbf5b",
+      "candidates": 473
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "87fc2d661423702f942a1b967baca3297fd2df82beff2d0c12aa49a43ea5b5dd",
+      "candidates": 410
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "f4d92cf04262b7b8055778e02082d5e64956849f96d00b77b7ba9cb3c4929729",
+      "candidates": 590
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "85aeae5030a2d3ce6ecec87fede2524e13d1a8f51cb9c87831365ee2e0e6eb1d",
+      "candidates": 570
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "ddde6432ec07a94f5f05155d341ba7a1154e2b897c7f39fef57d9b1093ea316d",
+      "candidates": 633
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "4b394a9ef68f325e707838d5f86f7d3c6f866e993c3f15fabfa1fd36093b3ef8",
+      "candidates": 621
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_8f5ab931-t026",
+      "sha256": "9dad0f4ec19fed600118e33b379a04e73b3a8b2377e66b951a8362cdbf8ee694",
+      "candidates": 740
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_8f5ab931-t075.npz",
+      "sha256": "b5e31d409dfcd7ba9e89046740ac668ed101d187cc642e8ff8245d53601fc15c"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_8f5ab931-t075.npz",
+      "sha256": "131d91abdb8c308bb0e3cf8df073241b42b1908e3e192ad3847831d039de59a2"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_8f5ab931-t075.npz",
+      "sha256": "00f7749b48db94a57e63c490aa70dee65cc44726e9ae0d8da12ff718642c7495"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_8f5ab931-t075.npz",
+      "sha256": "02ca8f304936c80ca87a5af5394baa52d616ba9d19aa07f26cdc7cb0e87bd801"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "f822a5b51fb7469889faf5eccb0b25fcc14d825f2f2708b39ad6dc69eab71e50",
+      "candidates": 285
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "0b5610d37c87c81b48f663d2a47e53f339389b7ac2d18efb925beae9b964b2ef",
+      "candidates": 363
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "c592e75f7dac0bbf54518100f6e3d03ea73a4fb60b4706ae217956ccec9db439",
+      "candidates": 331
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "158781ef7f2f278ce4a659394723b931db9edbb93ac50cb1f21f1b89c2b5606e",
+      "candidates": 259
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "d66e390ce175b216e131e3f10133e48e0c7b645b1a11f02c067abedb579bee4c",
+      "candidates": 438
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "e255ebd777d824ef1ec510a2292038ea890ea466aba8af2c6b284e59c841cef4",
+      "candidates": 409
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "72ca2a4b42b109154a097414a0e1bae03cce3bcb93dac9aa0604fcd6201f6ab3",
+      "candidates": 471
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "bdfb65267ea16f67016aec007b9982b6a1754b0968f3cf49ce0001daf49d2c8e",
+      "candidates": 451
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_8f5ab931-t075",
+      "sha256": "468e7298ff1049fba05edf5552c2ed4bedd6256eed197cab5eec884307119e1f",
+      "candidates": 542
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_8f5ab931.npz",
+      "sha256": "3fd9e8d76c451265a0316cf8e393711966fb651c6d61a9befc965584fc89a187"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_8f5ab931-t076.npz",
+      "sha256": "bf98a52c6cf238838b75cd1a9da8ea509445ad0c3e25c398dace374650860691"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_8f5ab931-t076.npz",
+      "sha256": "68a544de2e7bf903fef14f0dcd0c014492842386a4d59b0794a647b4762558ad"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_8f5ab931-t076.npz",
+      "sha256": "d36c4cea005d9f371c43cb29a53b35ca4144ebc9be2b05faeb87c5c367a6c74c"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "b1077fa950903c0204c7ebcdbec7adb193f20d77f7dd9473b94bed9b34884a79",
+      "candidates": 298
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "b8de0322f58ae1a586a8af69ab3c9c12303c13452f27fb444225224f0947a61c",
+      "candidates": 351
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "047b3a4217c6cb23012d51d331db21106731f6113f2c61203a6e2d73259b9537",
+      "candidates": 332
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "bb79267efa3e29c2ee958aae62a05ec08741f4fbe96c1dad31f551bf397d4254",
+      "candidates": 276
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "9ba9110e273e6232609b94c07c95f539e424b233b233de78996fa549ff1dc33a",
+      "candidates": 415
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "1e3444386df75312d985540aff278ffc179b8c7881ff7b5331b0c501482811f3",
+      "candidates": 412
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "d1b5c831d4e5b4c49c5ec640927357c0b87a96b09c02f7444d90fe3d93f3b9b2",
+      "candidates": 463
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "90105a1e45e88ce2bdf7eef80429a306f9bed9e84468293d42311b303f197302",
+      "candidates": 457
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_8f5ab931-t076",
+      "sha256": "431edb36cbd2bd0f15798d148fb112d3e54b9a3b89e6f26b4200331f79403dfd",
+      "candidates": 550
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_a21120c2-t025.npz",
+      "sha256": "760f810ba9fb3607814f6dfcb522a7e0665c8a0949550987ff3b672e41286390"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_a21120c2-t025.npz",
+      "sha256": "b36a9eba83d5c06fc42e3fa8b5dacf7f373a006bb4b2b1eb3742e980e95b15ee"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_a21120c2-t025.npz",
+      "sha256": "643b84ee448ceedba3ba4752ea46329ba6331fee07366bed2e479068e5f64c3c"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_a21120c2-t025.npz",
+      "sha256": "4b2f5cbd4715e030529a52b7a41fb86074283e1b35dca7a9fb6d726f055ad082"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "9e862c1aafe1dd76460c62a177ccb9a620565417149974b893aee5da2319ed63",
+      "candidates": 247
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "d594209ce7dde7122730c82b67454c032cdea9cf9a06646571cc4ff4216a46c6",
+      "candidates": 253
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "81b5b8c77a028d8d23af77e0a8e53e3dc2dce5d6c185fe8f2e914a01cfd91f8b",
+      "candidates": 249
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "f6926a0dae88f998cd9f2dceb119d633c06379b16570404a29466e2ea82a0832",
+      "candidates": 243
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "101360d8e9ac481dde5e838b7047f22c07bd8c35cfb5172998eb79a11d76b879",
+      "candidates": 255
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "48f01c10e8e2cbac9176cd23c8d5eb70bce93d49aebda12b1e750714cbbe9ebd",
+      "candidates": 254
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "101360d8e9ac481dde5e838b7047f22c07bd8c35cfb5172998eb79a11d76b879",
+      "candidates": 255
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "200de4a90d0fe7a4516d3fef178bed70c2ff4e20019e296e06210e1b0c1b8268",
+      "candidates": 262
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_a21120c2-t025",
+      "sha256": "038d5ef4b9d5464c76a2c0c52ca7830b8cb8a57611f070e6d7f1c5dded8af230",
+      "candidates": 268
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_a21120c2.npz",
+      "sha256": "d0fe904be90efb1f6854c0c607a3a815402b904cde4d9055e5e8fedbfbd7b444"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_a21120c2-t026.npz",
+      "sha256": "b798c8635b5a6495e5b62c60d45d07157a15bd1c988faf1a00a4075d5b2041cb"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_a21120c2-t026.npz",
+      "sha256": "12a11142c65a84acf0ecb5e02f1d0b39418949f91e374bad39eeff9a291c856d"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_a21120c2-t026.npz",
+      "sha256": "24095ff2688ec5568a14ce16fee986d81eef9fd3389c2a345140d2e735b69d7d"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "6bad6612e760ded282b80dde9cc78482a862222613ca9838bce25580fdc29307",
+      "candidates": 244
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "8be3fea055f04ab26d4775987be0603bba0948dcd693e2401056266b689c6674",
+      "candidates": 254
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "3a16ccfbf1a1083e9053d32b2c107a9cf4d32fd21bdc22baf86d50052e02dd32",
+      "candidates": 254
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "2b458a9adef257d8b81ec19fa7157820e401ed0d04ee802a5bcc3ec6220abb5e",
+      "candidates": 248
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "ab74ef7e134e8805af0a381ce28addfc9357ed2a8b890a1e96292ce20b7dd0bf",
+      "candidates": 257
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "13f872c9cf8e47d80efa85b8d3a669fe8ce73a3457b28bd06f8ec35e3e1a7487",
+      "candidates": 257
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "498711200baec6165caab30a945624ef122577ba0db109abe72c07bc5a2f0516",
+      "candidates": 260
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "3cef68ad7a864a23c003f436e48c9bb1bd7a7102e2d50a635be434e11fa688e4",
+      "candidates": 261
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_a21120c2-t026",
+      "sha256": "055cca0c28051bdc64a7d4bc2abd0411a05f37b57e5585e8eefebaeb6fad5ddd",
+      "candidates": 266
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/44b6_a21120c2-t075.npz",
+      "sha256": "b540e1fe0aa996fdb75ad85b23232640743e24be401f18547b0d8cd81721e811"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/44b6_a21120c2-t075.npz",
+      "sha256": "94c394e8fdf1383b5952f335f2dd0c9c19654ac024c0a29efb5efce73f89c5ed"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/44b6_a21120c2-t075.npz",
+      "sha256": "98b3a2898408a274c9ad836a6ec074f56221bf15f9ec0597105180adc96c5f00"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/44b6_a21120c2-t075.npz",
+      "sha256": "3edcc7ca261f6271f9660038557499c988b39a409b7863d2b7e4e450be393865"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "850ce41298f4ae7adaefed0c469ac20f70fd18fbc0413cf45ec61018da2b27b2",
+      "candidates": 204
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "b39614caba0836ee4b89537853c387e2ac25e3177ce26d72c684909b36281389",
+      "candidates": 221
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "6a7c58810949c3245d66837e87a1df9a120961409762234057a8b8c6e7c285ea",
+      "candidates": 212
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "163936fd78a8599feb27a31e621b0b6edbcff0c7fd810461faf4a0642cd17b5d",
+      "candidates": 208
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "0233e5ac5e9cb3a11dd89379f52af60fc368464e45aab2a28198bfa3df42d196",
+      "candidates": 228
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "e811423a640830eff1ba47d5027240d38adf727383d6ceff3b453ef656ca392d",
+      "candidates": 230
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "4ca143cc429baf055b4b9386d9945b5caf9d3f49f2510e3e784730bb916b6b07",
+      "candidates": 234
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "92d8a0e125ba5050590c704ee414566563b1033fe93377bdf018302911303bfc",
+      "candidates": 235
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_a21120c2-t075",
+      "sha256": "87c1d0a4200fe33999d22934e86e8e5631ef1ff490281984ec1d62f5a88c6d5f",
+      "candidates": 246
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_44b6_a21120c2.npz",
+      "sha256": "d0fe904be90efb1f6854c0c607a3a815402b904cde4d9055e5e8fedbfbd7b444"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/44b6_a21120c2-t076.npz",
+      "sha256": "3e033b5d080f3abf15b0476b7f7d5362381bbf72fa9b0f329953e102889cae91"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/44b6_a21120c2-t076.npz",
+      "sha256": "2fb0048cd2c1c3b3288e3d07e400c3637a92ca91b5857072a288d6abe302a958"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/44b6_a21120c2-t076.npz",
+      "sha256": "85311ce399c673fd60f9d5eacb56515ae4094e5884187b0c292ede7b979644cc"
+    },
+    {
+      "method": "incumbent",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "f4d75a5684ce81465b94a0b00efa50dfb18aa4e71405a94f3940034d426e16a7",
+      "candidates": 206
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "7024951bf3982924602cc0dfe03ef61cdbe2bdd6c27f6ac0f839371e07130370",
+      "candidates": 216
+    },
+    {
+      "method": "cpdino",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "cb60bc878ccd9addb80f63edbcc4ccedcbb15b76a5f4d40d645c161dda66d020",
+      "candidates": 213
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "553dd1f680552cc22eeb805ec3d0107bd9c1af070a509bdd79010d80fc840d79",
+      "candidates": 207
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "3bfacf722f36dc457f40753e5a5e0b312d06658357b1872cb1c513db20707be5",
+      "candidates": 221
+    },
+    {
+      "method": "vitb+sam",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "8fd053fb6427525df5389719eed0ac3706f81008f0cc380d40f625afb25169c7",
+      "candidates": 221
+    },
+    {
+      "method": "all_cellpose",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "262004d3c42c22618126c950b534ddd255552a9a4933bc9ac2f5bb3df66201d0",
+      "candidates": 224
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "0ecdd1042be2e40daefa9d88f7efc50a4dcc7ccbc6895b3431218a7c7f577a06",
+      "candidates": 236
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "44b6_a21120c2-t076",
+      "sha256": "3975f002f6e35ddaa8b67249d6a3c068b630eabdabd9d9c881ad70f50c33055b",
+      "candidates": 244
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_af149c94-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_af149c94-t025.npz",
+      "sha256": "d52e11a4ed880a845c44e74ddbba119fa76e1efe935d6b0b9c615559bc4e7aa8"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_af149c94-t025.npz",
+      "sha256": "a0ac932685ca1babc2d2d13de3f7dd34c551dc995c69ba2f7d58147cacb584a5"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_af149c94-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_af149c94-t025.npz",
+      "sha256": "ea086227f4d7f6a977522fd431000c51640df31ecc2a671d016760e03ae205c0"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_af149c94-t025.npz",
+      "sha256": "41bff4eae1a666f7387a6a824f07c9397019140a8f0357d8490feacb63a30340"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_af149c94-t025",
+      "sha256": "9c6acf54d1fbbdfaa83362a16d895c0cb5d0d0d8ee1f28dbe4b08a085847cffb",
+      "candidates": 88
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t025",
+      "sha256": "60cc02012bd7e27c415439d648d28cbc8a4f9d6b79a92d9b9eb8b39385c11d57",
+      "candidates": 109
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_af149c94-t025",
+      "sha256": "93e30993b0e3098154d6ed6cf45c4c4b7e10b40013cc8c1b1be592a134bee4ec",
+      "candidates": 123
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t025",
+      "sha256": "eb9561d618eb77a31563ab99751f9888c47fc9a8d223142b8555339330ac3e2a",
+      "candidates": 99
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_af149c94-t025",
+      "sha256": "9c0c803ac8522469eef963cdde4b31851558949aedd7e36d2ad97ba67c61b42d",
+      "candidates": 154
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_af149c94-t025",
+      "sha256": "604c0e4b9fe25734158bb0100e7ad67dae0b2fb59432ebba6fbee9f49a02fa40",
+      "candidates": 132
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_af149c94-t025",
+      "sha256": "5b2f240e59acd09231603cf13b6fd5e502fcd9d6ba3e0b42451a45c26dc7b8f1",
+      "candidates": 170
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_af149c94-t025",
+      "sha256": "7e6a5b558ac344beff7c7cdd03f6ee0db8d5af62fb76c42f0c6061145c2033a5",
+      "candidates": 161
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_af149c94-t025",
+      "sha256": "ef498d514a618f9ae60f9d87b553165efe2b519b6a86856fc960665a5ffc74ee",
+      "candidates": 220
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_af149c94-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_af149c94.npz",
+      "sha256": "17a7ee8ae7562095ca651d02e316ad0af2baeb3321538334c6436c19d35afc33"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_af149c94-t026.npz",
+      "sha256": "250f318591878c749b53f44926b6d1f0d7a3d7cd5605a9625a62d62753b514d9"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_af149c94-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_af149c94-t026.npz",
+      "sha256": "f553306458cd7ea90a3b4b4906459abc311dbdb77c145ed209822c855a80d130"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_af149c94-t026.npz",
+      "sha256": "de0ae474ed6bb6e2b4b22c43f0effdb86feedb13e9bdc4d6adfeb95fbde59a48"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_af149c94-t026",
+      "sha256": "83a7dbb34efd2c2110cb40ba0155daeb52033abc70489289e044904775f5851c",
+      "candidates": 84
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t026",
+      "sha256": "fdbdea412d064af470ab7c329a11fdf07422d7448c2546340a529d8e94eaaaef",
+      "candidates": 99
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_af149c94-t026",
+      "sha256": "5f18a91d64f173240d41bd19d047d3d0f8b1eb1540bd421d0e9f0fb4a7c30225",
+      "candidates": 119
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t026",
+      "sha256": "c4950b7aed9cb4e04707907051825b4e40afc7004082b9f13f0840729d9b74eb",
+      "candidates": 94
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_af149c94-t026",
+      "sha256": "fe410c0785fe7e4e67a86bc73840f38f2831adc80a7248c91b7ea70abc9d0062",
+      "candidates": 144
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_af149c94-t026",
+      "sha256": "af6bf3af9f49088e0b15dd373cd125e1eb554dc605b4958f1294adaf9b2c943d",
+      "candidates": 122
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_af149c94-t026",
+      "sha256": "eb97f9a56a9389d6c026e2450eee60c48af333d5d89c5545d9f462605bec626d",
+      "candidates": 158
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_af149c94-t026",
+      "sha256": "0d104514ceb40a609107842de5eb107a419ee174f7dac5381f19ed58d5783dc5",
+      "candidates": 144
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_af149c94-t026",
+      "sha256": "e184fd110e3f819f46bb189b5a5dd76dc4e64e1654dd92ee4c61bb4cb381355f",
+      "candidates": 203
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_af149c94-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_af149c94-t075.npz",
+      "sha256": "c72ef60f831847b284be846d9067afce71337901b1760ccea8a0548b72e83d4b"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_af149c94-t075.npz",
+      "sha256": "9d538533df13ebb09a68a0566f8b24338c91e097378e86da16be7a31d6ae413f"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_af149c94-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_af149c94-t075.npz",
+      "sha256": "4fac80aa528949f4b53e5b307bdb770fb0f8056e599817c474f3e6429189ca45"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_af149c94-t075.npz",
+      "sha256": "c2f989249296dd8d0fd68d8e57c13e4b9925e37f87ed93bcc0ec2141c637fc13"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_af149c94-t075",
+      "sha256": "653d98bf4ba69f191511374a104df569b95064a5304b045639c50ecf58f81220",
+      "candidates": 93
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t075",
+      "sha256": "eaf7ccea0063cac9621f967915ef7959ee9dc41f58bfb00967b98d05259d6b09",
+      "candidates": 115
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_af149c94-t075",
+      "sha256": "0d09a3ed784710c53f63f3f8319255ef8f4d42920cc794948f88ddc7f295e807",
+      "candidates": 127
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t075",
+      "sha256": "9501d3081fbc211020444f2f362a30ff4badd35b4bb70a269545b9410e5857f4",
+      "candidates": 108
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_af149c94-t075",
+      "sha256": "148868594852502be1afa622bf22d552f1731c0dd64f44280579741e29edd6d3",
+      "candidates": 152
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_af149c94-t075",
+      "sha256": "7aea32bb186bacc2cb4da7377a17056d213fa6f014e4b1e70ce588f1061f78af",
+      "candidates": 142
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_af149c94-t075",
+      "sha256": "02eeadfa6b0babe0424b75297074cf8c4f4863ecccee9a2801616f4be90603e8",
+      "candidates": 173
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_af149c94-t075",
+      "sha256": "15433c98b1814c5866c11298065515d5e309549f7d31eb94048c33d4dba5b1d8",
+      "candidates": 156
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_af149c94-t075",
+      "sha256": "2d3df68fc601a71d50a5b0c3ab01dc5bbf2611b695388294b28eacc0b821b068",
+      "candidates": 216
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_af149c94-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_af149c94.npz",
+      "sha256": "17a7ee8ae7562095ca651d02e316ad0af2baeb3321538334c6436c19d35afc33"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_af149c94-t076.npz",
+      "sha256": "b170657d1d5c69c4cf3d1fe1833998881ef5acb471b5982e9ca6f6465621ddc0"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_af149c94-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_af149c94-t076.npz",
+      "sha256": "1b42cea77af5f1557ab90656a7c0e6cf7a772df2353150c2adacfa2435a29909"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_af149c94-t076.npz",
+      "sha256": "8e7edb273bfa3555b01ef9eee28c7f6f8e8f3cd390442d8f243328ddc531d3a9"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_af149c94-t076",
+      "sha256": "dd3d33034c0d04b76b7c25df4b20d2942cbc9e079b25fddc2fb54cceabe46e2e",
+      "candidates": 98
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_af149c94-t076",
+      "sha256": "8251d9e50fe237053481cd3195c452a35b265dfe1ab58ebd6c950c5998d36499",
+      "candidates": 125
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_af149c94-t076",
+      "sha256": "387123ab2b408af56bfcb0b299d567ea40b163b68de14d3fbeb6da4d04f9f78a",
+      "candidates": 136
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_af149c94-t076",
+      "sha256": "de3cdf239ba1331a573d9ecbc210adf55a64f8001cf6812f2fdd7fcfbc93d01a",
+      "candidates": 115
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_af149c94-t076",
+      "sha256": "62891c73177339ccf4cd1d42c4d9bbce84ff357ec68bf2498721caeccc00578c",
+      "candidates": 172
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_af149c94-t076",
+      "sha256": "ecf9c42ec3c4a1d14d4c0a21e7756e59fcbea0f75136268faad34556f605b753",
+      "candidates": 156
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_af149c94-t076",
+      "sha256": "04f95391fd151d7dc0485c770e1516a9eb710cfd22dc0b89e420be266a6b3509",
+      "candidates": 194
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_af149c94-t076",
+      "sha256": "f7cb30feb668c2fd2c565c50ee0f0f0efa178e739cf289b5b27b2c340c1a5437",
+      "candidates": 167
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_af149c94-t076",
+      "sha256": "a1795252dba2046941e424fc23a8d884e5def3aee5e42da0bce67553a2cb00cb",
+      "candidates": 238
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_e16ffc58-t025.npz",
+      "sha256": "4cbf0b76760ace6b5dea30957b84a106a740ad5b5cb7fc703bbdcddd60049ad8"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_e16ffc58-t025.npz",
+      "sha256": "8140e2459d7abd0e9fb381a7c3ca8dcc6c4bab67d948b11b2e21b472e5e85c9a"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_e16ffc58-t025.npz",
+      "sha256": "04011f761df8193484cec6a15051873f1c29b860cae483181414c9c3ac930900"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_e16ffc58-t025.npz",
+      "sha256": "ccc9fcb407c76f02a9f5ecec0caf32c1f640ded9be51796bd751ff6a99111938"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "149086e8602b24e57d2f409d5e369687ebc6b93a2b71f0a0e7d389f00df92344",
+      "candidates": 71
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "ef2343ed56c8e86d7c9abf3d90e72f076f07af876ce23512f95e6d6156187017",
+      "candidates": 69
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "7f8d79164f1bf26595438c2fafeaba048d29374e79d7f6fcff9f5999c4b53638",
+      "candidates": 82
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "28e56c718278f304db53d89117bb397b8f262c8e0993e79786bd8f349cca4db7",
+      "candidates": 81
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "7515471af0e06fa30a2c2174d5cfe8d96b5f581398e8f3d154df9b6bcef1658b",
+      "candidates": 95
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "5fbc2b1c517462d0c0773c21bb02f02ac102e80d4341e448f687410f5af199af",
+      "candidates": 90
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "15fbe101fc187835cfcc5fb5b3246954abac0adb6ed5af19fc2b1da93aeec860",
+      "candidates": 114
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "1e62f5b37c10c3d93978268cbf2cd3651fd93ae2bcbcdd3f50b91d794a1019e5",
+      "candidates": 99
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_e16ffc58-t025",
+      "sha256": "22d5397e40384afc2c3c4467bed30aa1708b9fda6dae27a92809d914e4f3f842",
+      "candidates": 147
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_e16ffc58.npz",
+      "sha256": "b6cf19e8b38d62bde7cbd5d7ca764630af08a88250288859093737c33137d001"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_e16ffc58-t026.npz",
+      "sha256": "e8fd5ee5922d20cd6fdff061a7142b2b94747cf3846ca98f58dfdfa31e06d3b2"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_e16ffc58-t026.npz",
+      "sha256": "c8956e781adc49a00a60aae9de4fc27e4c439b3a7d0d5d5a9061dac82e04865c"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_e16ffc58-t026.npz",
+      "sha256": "8b6b3f20ae9da9525d4b56d3366cc12e99e2b92cc9610df8507a9e95a8c2feea"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "6e717e4378f6b906dfb46611da354ba887d3586aa3be227389f566fbab9cfff9",
+      "candidates": 71
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "f8a13d0fe3f2e977ac887c03720180eae45d1d1e7332f9374491fa071fd21ecd",
+      "candidates": 69
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "3d3cfdbeeeee92ab69a6505a02eb6f47e3dad4644672e182244e728740952cf5",
+      "candidates": 77
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "87b8082efb9e0b0eb0b896797d0470b8000310d09f34df7186600036cc71f0df",
+      "candidates": 74
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "f03ff6ffb20084491ef89bb8f2565c19203f77b6e7348825d0b57bfbfe0badc5",
+      "candidates": 87
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "47d23a3cf4b02797c5cd6f4cd478eb55c3f239f7c5e33089c62ca8b5ff9b58fe",
+      "candidates": 84
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "1ca10efa4530c1ebe1e43242df6aee2dc28bd56ef8bb47747c9619c8db1da2a3",
+      "candidates": 100
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "3de95a6b0baddc7b83fc16c75e682c849702a71204e1e896e905b7161b16530d",
+      "candidates": 105
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_e16ffc58-t026",
+      "sha256": "f8956670eab4e5d163bbbd7a05cc6fcc067cc8a58c8238d1d4c9247286cdc5c1",
+      "candidates": 139
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_e16ffc58-t075.npz",
+      "sha256": "d30023b90ba074f1efb815c9a39909c7616574f82a99d86a27e061e30195c529"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_e16ffc58-t075.npz",
+      "sha256": "80ca34be1595db1b68421e4e23db13f78334b0bf5e4f5302e86c009be5790211"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_e16ffc58-t075.npz",
+      "sha256": "c8d398b5b12ef76848e4b40aedc6b484d97d06429fdc294758ce2774c41d7f6c"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_e16ffc58-t075.npz",
+      "sha256": "4359576602003a956f00d6943b226664e3913a02a0148f8b49991206ffa94514"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "257b713f8ec8beff2bdf35960763e1bc3c16fa2d18d50fe1eb0c4ff723b9e6ef",
+      "candidates": 57
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "4507fc7b5f0ede0b5d5ee81f6af80d0b90e68679c3f5de3214ea88c0178a3406",
+      "candidates": 74
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "746d3ef7fd67b55faa923548c8eee34795c2b2cfea05c8a1539cc7cd79c83b9f",
+      "candidates": 65
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "81d11081d69b5f77186506012b7646e4b92fa3869bb8042fb0e63a97b238e254",
+      "candidates": 70
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "74318485ab575602ef675bbd5996dee2c366a0619720def52cb5046ef3b40e04",
+      "candidates": 92
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "54205d4137a148ab6a5d32246df0c91808a97ed57d3914d8fe24c55eacd6919a",
+      "candidates": 96
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "d7c32915df3493c3088909146db18dfeb2d6bc98e87211bd61126fb09ed4edfd",
+      "candidates": 108
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "d8a7ed267481dcf77471d619394d56bd3221423e09e650949878a189ef13116a",
+      "candidates": 108
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_e16ffc58-t075",
+      "sha256": "6c2933217831458ae5b607bda3ac9ceb824da37e921b5f0909a83490e39d49f9",
+      "candidates": 140
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_e16ffc58.npz",
+      "sha256": "b6cf19e8b38d62bde7cbd5d7ca764630af08a88250288859093737c33137d001"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_e16ffc58-t076.npz",
+      "sha256": "80ca34be1595db1b68421e4e23db13f78334b0bf5e4f5302e86c009be5790211"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_e16ffc58-t076.npz",
+      "sha256": "c8d398b5b12ef76848e4b40aedc6b484d97d06429fdc294758ce2774c41d7f6c"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_e16ffc58-t076.npz",
+      "sha256": "4359576602003a956f00d6943b226664e3913a02a0148f8b49991206ffa94514"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "43b5081683964fc5326c9abf008beac6d9dff8c8d88dd6ab4ae33931d211f13d",
+      "candidates": 58
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "4507fc7b5f0ede0b5d5ee81f6af80d0b90e68679c3f5de3214ea88c0178a3406",
+      "candidates": 74
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "746d3ef7fd67b55faa923548c8eee34795c2b2cfea05c8a1539cc7cd79c83b9f",
+      "candidates": 65
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "81d11081d69b5f77186506012b7646e4b92fa3869bb8042fb0e63a97b238e254",
+      "candidates": 70
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "74318485ab575602ef675bbd5996dee2c366a0619720def52cb5046ef3b40e04",
+      "candidates": 92
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "54205d4137a148ab6a5d32246df0c91808a97ed57d3914d8fe24c55eacd6919a",
+      "candidates": 96
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "d7c32915df3493c3088909146db18dfeb2d6bc98e87211bd61126fb09ed4edfd",
+      "candidates": 108
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "695033a91d8f49b7d1947944323670b37138b31ff1b23c1fb47b45ae9ece418a",
+      "candidates": 109
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_e16ffc58-t076",
+      "sha256": "012b1a2f8135a939848e805712e666df03993d6c8dd846f589fd6ebf88655612",
+      "candidates": 141
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_fe670320-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_fe670320-t025.npz",
+      "sha256": "163bee2f3f55fcb37ac7efc7aa3b86329ac7d30d493e3bcb129b3be5ff0bec32"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_fe670320-t025.npz",
+      "sha256": "3d15e2116973ac6d5cf5b208f23dd219569d22735fc8df5ac3ecb46a4f89c6d7"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_fe670320-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_fe670320-t025.npz",
+      "sha256": "d5774eb5cc3013347156ecb474f734d6278b23cf535c38a180185eb61029b75a"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t025",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_fe670320-t025.npz",
+      "sha256": "8ee5e2b969cadacb6e26dc4eb0dbc3fe3df5ee34ab073816fd776195cd06e32f"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_fe670320-t025",
+      "sha256": "72a23adfee873d03574263d93105d8377149183cc56f65e3f55ce7c0b6dab22f",
+      "candidates": 53
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t025",
+      "sha256": "95c26ba4a010270d4ade7b6a898c890f14397e9907a95b8be93df28b44d62ee2",
+      "candidates": 72
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_fe670320-t025",
+      "sha256": "a176a279dcb0732e7c5ca7793d8f8017a1bcc3e4ab95e4505e091b8b3d785127",
+      "candidates": 68
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t025",
+      "sha256": "2f701ede42acf680118a26e27e2958a1e01be02728409f22a535387e0f746b54",
+      "candidates": 61
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_fe670320-t025",
+      "sha256": "3c76da9c31bc912608454b2ff6891ef0b162207cc3192676d8db940a6da48e31",
+      "candidates": 91
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_fe670320-t025",
+      "sha256": "872e834a2459d3fa5e5539fa6e86b0a5682760ac1efd2ac2d8fc7ad313d5cdc3",
+      "candidates": 87
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_fe670320-t025",
+      "sha256": "4091ebe19c9f7e4576bba149d9a7d5adc00e30d9898115962eead77aed5db2f1",
+      "candidates": 104
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_fe670320-t025",
+      "sha256": "6c583d7e846ccc8cd0d502299f7fdad31b5b78c95431c6fa2fc729897dd4c172",
+      "candidates": 95
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_fe670320-t025",
+      "sha256": "7b3ac60e03062494794fad60c06780390df275b2eb9f9a86335b971899b4a506",
+      "candidates": 124
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_fe670320-t026",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_fe670320.npz",
+      "sha256": "59c006fb2e7ee23a9559eb27c6356e258d2ea623802d646e98ba54f2e79b60c6"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_fe670320-t026.npz",
+      "sha256": "11183f7d8b74375fe96a715d0a673c66b8084fed3261ee61734e075b0d303b1a"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_fe670320-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_fe670320-t026.npz",
+      "sha256": "5635a5134f607998b843243d0c59adaf2da85e64b7267092f4fb90a2a19a8370"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t026",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_fe670320-t026.npz",
+      "sha256": "4b8a60da17338b082f64c87481e9ae4cdc4934d0ff069c3c5807d67075388fc8"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_fe670320-t026",
+      "sha256": "10caaae786d8658efa5adffb276ab143c4ea79b90af01418ac752d4bd92c267c",
+      "candidates": 48
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t026",
+      "sha256": "43f698c0fb910a4f03c7d8a5c811df8bef484cf721572138b2b4c3fb176d8108",
+      "candidates": 72
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_fe670320-t026",
+      "sha256": "7a41b728c70e47f1e091a3212e4526476b386886291a077da4c29cce53f1a463",
+      "candidates": 65
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t026",
+      "sha256": "56f62bb6ed1769d8e8456ebcedb4076f22e6d77423101ebed8575cd562e27c88",
+      "candidates": 61
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_fe670320-t026",
+      "sha256": "0cfd094f9072417bfea63f13949c956a766a0922f686e2b840e2f9cef85a6957",
+      "candidates": 92
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_fe670320-t026",
+      "sha256": "2751aaabd55ab4cf455a696834583710ff7c0baa9aa57f32d5cda30addb0d886",
+      "candidates": 83
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_fe670320-t026",
+      "sha256": "c5b242329083bef0651eed7ceda31d31ccf2c90826079078852803be431fe722",
+      "candidates": 101
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_fe670320-t026",
+      "sha256": "bf6ee211ff8661994dd7889a36924725d16e2525d4dde68928d0213506748fb4",
+      "candidates": 92
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_fe670320-t026",
+      "sha256": "82d9f70cc4ec5f988bebedaf138a6ff3b663e77135259e4d06dc46de896ac2c8",
+      "candidates": 122
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_fe670320-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/incumbent/6bba_fe670320-t075.npz",
+      "sha256": "b8128410a4dcd4d584e70d697776ba585352c37c8028a1223f66c0479e1a8137"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/predictions/cellpose_cpdino_vitb/6bba_fe670320-t075.npz",
+      "sha256": "16b535832f424fbf6c8bc56c19594d1103db58a18927ea26e156cb916214fef7"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_fe670320-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpdino/6bba_fe670320-t075.npz",
+      "sha256": "175f629a377ac1451d5be6e43124058ef224696d87ca55e05b946e90c99c9059"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t075",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/predictions/cpsam_v2/6bba_fe670320-t075.npz",
+      "sha256": "5fe8e280157177b74b4df3abf1455b77b6ad81c45db762c08701658a2979fffd"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_fe670320-t075",
+      "sha256": "3e0e7303304319b09faaabc1073c634ee13557aa3528a7e66bf55cfaf7a058dc",
+      "candidates": 209
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t075",
+      "sha256": "2cdbe1162a64b0c3bad17e1dbbbe82f14c09f4d2fe97d9842196c0ad1b85542e",
+      "candidates": 196
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_fe670320-t075",
+      "sha256": "8f9d22825db8bdafd7c6eb3b733fbe3edbe310c964a9cd0ced2527bb5b5e2831",
+      "candidates": 238
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t075",
+      "sha256": "5fbac62456cdfeb16ea5891bfd847e872a1c6272bb2a51a9e0d041b3891b3a28",
+      "candidates": 223
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_fe670320-t075",
+      "sha256": "69889253869d5fa01d09ed04db94457d261a20caeed52e12f109e96e99b5ffb7",
+      "candidates": 261
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_fe670320-t075",
+      "sha256": "6e3a29455552fd5500d801f68588ae6242d14e4bf9d7272a531e4c18d27b94ad",
+      "candidates": 262
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_fe670320-t075",
+      "sha256": "85d6de54f5e02a12e52ee52e06db4a1a969e5df556b9889a00a9320934b4a196",
+      "candidates": 297
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_fe670320-t075",
+      "sha256": "3a7a37c79726949f4a220073bd22008cb9071f47addbba6e09262681e8ecef7c",
+      "candidates": 302
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_fe670320-t075",
+      "sha256": "a849ceeb36f94d5fad8fe2d5a20ed98f2339d3d1a84c2c91e58dbd705374e84d",
+      "candidates": 387
+    },
+    {
+      "source_only": true,
+      "method": "incumbent",
+      "key": "6bba_fe670320-t076",
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/inputs/pre_ilp_6bba_fe670320.npz",
+      "sha256": "59c006fb2e7ee23a9559eb27c6356e258d2ea623802d646e98ba54f2e79b60c6"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/predictions/cellpose_cpdino_vitb/6bba_fe670320-t076.npz",
+      "sha256": "bd2a433c88f81da2345cd00f6e90dd0833c90f555327425f030c055cabe980cc"
+    },
+    {
+      "source_only": true,
+      "method": "cpdino",
+      "key": "6bba_fe670320-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpdino/6bba_fe670320-t076.npz",
+      "sha256": "952365dce4cd7d21a4a152bb78da95f260e1a80dd5a299b71b084f9bcae0bbef"
+    },
+    {
+      "source_only": true,
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t076",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-embedding-probe-20260914/adjacent/predictions/cpsam_v2/6bba_fe670320-t076.npz",
+      "sha256": "eb3011c4b74a019a2534b3c2549a9cd84419f286aee4366799cf29935d951a45"
+    },
+    {
+      "method": "incumbent",
+      "key": "6bba_fe670320-t076",
+      "sha256": "086089d70f18647e13a49e5b0661af24719837138a90349dd5126058ba04b572",
+      "candidates": 200
+    },
+    {
+      "method": "cpdino-vitb",
+      "key": "6bba_fe670320-t076",
+      "sha256": "10a414d3b7334e9ee61bdd45c098fd99686c29c6894b731b067ecaf010647d52",
+      "candidates": 208
+    },
+    {
+      "method": "cpdino",
+      "key": "6bba_fe670320-t076",
+      "sha256": "6021fb94aea0a148427a2c91c2d593dcd526bb8b314dd5b8bb4d3268889701fa",
+      "candidates": 231
+    },
+    {
+      "method": "cpsam_v2",
+      "key": "6bba_fe670320-t076",
+      "sha256": "7e3980b3c0c0bb8a028a859b38ce52a0e40254a757581a881aac3b782c70a4ab",
+      "candidates": 224
+    },
+    {
+      "method": "vitb+vitl",
+      "key": "6bba_fe670320-t076",
+      "sha256": "47f0dc0f28a8db14234d52493a2795417f5efbb0940a15184362dcfd2bb66ece",
+      "candidates": 259
+    },
+    {
+      "method": "vitb+sam",
+      "key": "6bba_fe670320-t076",
+      "sha256": "73da7b24a4bfcb5b95f1670c0cfd71fdbd780bd0e0b9d32b2e17ad65b86dfa9f",
+      "candidates": 266
+    },
+    {
+      "method": "all_cellpose",
+      "key": "6bba_fe670320-t076",
+      "sha256": "6ed23df1c3e19fccb1dcfe12c0ac629785a0233cbd7ab62ffb0fac853d1a72de",
+      "candidates": 295
+    },
+    {
+      "method": "incumbent+vitb",
+      "key": "6bba_fe670320-t076",
+      "sha256": "43c6916573273d7bd1d76067216ae3e51475d89e24e4dddcd439153c201bc764",
+      "candidates": 291
+    },
+    {
+      "method": "incumbent+all_cellpose",
+      "key": "6bba_fe670320-t076",
+      "sha256": "566a1a80614edecc864edba60c919b71aaa5da6e33be74c17a457400c992996a",
+      "candidates": 362
+    }
+  ]
+}

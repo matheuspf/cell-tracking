@@ -1,0 +1,1190 @@
+[
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 20936
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_81c256f0",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "945ec46e7cfd575f7e5c7154d51c925dfe462d6551506b9430ab96da8d1e1ddf",
+    "database_bytes": 86405120,
+    "database_counts": {
+      "links": 96546,
+      "nodes": 20936,
+      "overlaps": 79974
+    },
+    "dataset": "44b6_81c256f0",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "83e041de42e7a99f52ec8297e82b3da628fd2d28f099b14a95d7081fe846cc0d",
+    "division_evidence_sha256": "b4cb7f11c157c74c6322573cb2e3eada569df04ed801238d1f876769e7c7799c",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 0,
+      "forks": 24
+    },
+    "fingerprint": "ee1d2d4f32bf9462463e2be9388e148c9d67196ee2676e1e32188377adcc5c88",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "94f147d487534dbbd4a5a83d98ba500af88b42c22238f6404bcd090674263730",
+    "input_instances": 12577,
+    "peak_process_rss_mib": 2061.3828125,
+    "predicted_divisions": 24,
+    "selected_edges": 10288,
+    "selected_nodes": 10786,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 44826,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 448,
+          "parents_with_pairs": 290,
+          "restricted_division_variables": 5606
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 888,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 8,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 0.0,
+        "objective": 408.5827262135066,
+        "objective_bound": 408.5827262135066,
+        "seconds": 4.324671428003057,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 48708
+      },
+      {
+        "constraints": 51696,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 411,
+          "parents_with_pairs": 282,
+          "restricted_division_variables": 6502
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 802,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 20,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 3.802647679883274e-07,
+        "objective": 527.4804703509062,
+        "objective_bound": 527.4806709331449,
+        "seconds": 10.58412551299989,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 55940
+      },
+      {
+        "constraints": 37885,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 220,
+          "parents_with_pairs": 154,
+          "restricted_division_variables": 4631
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 6,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 434,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 0.0,
+        "objective": 284.4037066193339,
+        "objective_bound": 284.4037066193339,
+        "seconds": 2.5031499930009886,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 38264
+      },
+      {
+        "constraints": 36185,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 211,
+          "parents_with_pairs": 162,
+          "restricted_division_variables": 4427
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 390,
+          "right_anchored": true,
+          "right_boundary_constraints": 32,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 1.9201681621745566e-16,
+        "objective": 296.03354529341766,
+        "objective_bound": 296.0335452934177,
+        "seconds": 2.835344752002129,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 37908
+      },
+      {
+        "constraints": 35048,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 228,
+          "parents_with_pairs": 152,
+          "restricted_division_variables": 4151
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 428,
+          "right_anchored": true,
+          "right_boundary_constraints": 28,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 1.9510668061562028e-16,
+        "objective": 291.3453228841264,
+        "objective_bound": 291.34532288412646,
+        "seconds": 2.604928447999555,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 35005
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.026624906000507,
+      "link_seconds": 7.656375425001897,
+      "segment_seconds": 21.77747594900211,
+      "solve_seconds": 27.25259466100033
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 75965
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_8f5ab931",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "32cf35ca44099cc3efadd6590fd9a45b645b0cff873747e017fec9257562c92c",
+    "database_bytes": 274968576,
+    "database_counts": {
+      "links": 372188,
+      "nodes": 75965,
+      "overlaps": 504078
+    },
+    "dataset": "44b6_8f5ab931",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "c368982df2334a57bfda236f3344755124f3ad4274f812ca0b4319149398155c",
+    "division_evidence_sha256": "b0904f1c184ea29628a5f65e9ed255caeb53ea0f789cb4bfeedaf075d8ac6d4f",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 4,
+      "forks": 69
+    },
+    "fingerprint": "f997e153d038ea2b59791cb2ad392a59eb17ba8e1f73b1546532e2d1fda06016",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "b251b0d1958ca2baf269e9e5edd10a82068855e99ec370dbbee356368cbb4f9a",
+    "input_instances": 42835,
+    "peak_process_rss_mib": 6018.4296875,
+    "predicted_divisions": 69,
+    "selected_edges": 33969,
+    "selected_nodes": 35985,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 276524,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 582,
+          "parents_with_pairs": 341,
+          "restricted_division_variables": 24247
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 1138,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 26,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 5.119076996998789e-06,
+        "objective": 612.5904687716674,
+        "objective_bound": 612.5936046694446,
+        "seconds": 182.26884905299812,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 213164
+      },
+      {
+        "constraints": 234349,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 343,
+          "parents_with_pairs": 277,
+          "restricted_division_variables": 22082
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 660,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 26,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 0.0,
+        "objective": 793.2592184018483,
+        "objective_bound": 793.2592184018483,
+        "seconds": 18.596091963998333,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 194089
+      },
+      {
+        "constraints": 140423,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 248,
+          "parents_with_pairs": 203,
+          "restricted_division_variables": 14316
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 62,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 434,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 6.580382607596673e-07,
+        "objective": 538.7425327177676,
+        "objective_bound": 538.7428872309669,
+        "seconds": 67.6082903159986,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 125077
+      },
+      {
+        "constraints": 196459,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 266,
+          "parents_with_pairs": 203,
+          "restricted_division_variables": 18009
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 2,
+          "local_constraints": 512,
+          "right_anchored": true,
+          "right_boundary_constraints": 20,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 2.3212609825184395e-06,
+        "objective": 528.8089525091636,
+        "objective_bound": 528.8101800127523,
+        "seconds": 181.41267012899698,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 157083
+      },
+      {
+        "constraints": 127653,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 246,
+          "parents_with_pairs": 208,
+          "restricted_division_variables": 12521
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 458,
+          "right_anchored": true,
+          "right_boundary_constraints": 34,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 2.378795308030273e-16,
+        "objective": 477.9176978272787,
+        "objective_bound": 477.9176978272788,
+        "seconds": 7.297674847999588,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 109096
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.64819850799904,
+      "link_seconds": 11.636263301999861,
+      "segment_seconds": 78.03280414599794,
+      "solve_seconds": 474.17009337799755
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 36713
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/44b6_a21120c2",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "df07bbed900004b2e7d98857e758464351ec9d526657cbe307a5010eda3bc689",
+    "database_bytes": 85688320,
+    "database_counts": {
+      "links": 176647,
+      "nodes": 36713,
+      "overlaps": 86404
+    },
+    "dataset": "44b6_a21120c2",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "49ba2064ac23fd7e5b167fb085398adad687593acc2c4d30ae15eefc30e59b35",
+    "division_evidence_sha256": "d852bbfab0941b0aa96f5e2cb1158b3fadba05242c40a04695b090d67e1e5ae1",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 0,
+      "forks": 2
+    },
+    "fingerprint": "5a9f7d883ba507375db1ba66b9ec6c4744eb6099c0cfafbc493bd4fdf33acc21",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "fa8f97de2fd2c5893867b8a1e13cf717343f375a62811636026811b037de1fae",
+    "input_instances": 23635,
+    "peak_process_rss_mib": 6018.4296875,
+    "predicted_divisions": 2,
+    "selected_edges": 21871,
+    "selected_nodes": 22679,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 54964,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1150,
+          "parents_with_pairs": 492,
+          "restricted_division_variables": 9045
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 2290,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 10,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 0.0,
+        "objective": 219.00915519164275,
+        "objective_bound": 219.00915519164275,
+        "seconds": 5.928059718997247,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 79244
+      },
+      {
+        "constraints": 102962,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1341,
+          "parents_with_pairs": 637,
+          "restricted_division_variables": 13175
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 2648,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 34,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 3.3575190277638287e-07,
+        "objective": 243.46409039961082,
+        "objective_bound": 243.46417214314243,
+        "seconds": 13.611201243998948,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 116397
+      },
+      {
+        "constraints": 38293,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 394,
+          "parents_with_pairs": 205,
+          "restricted_division_variables": 6807
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 38,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 750,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 0.0,
+        "objective": 195.0114404697719,
+        "objective_bound": 195.0114404697719,
+        "seconds": 4.1837647930005915,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 59028
+      },
+      {
+        "constraints": 52013,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1014,
+          "parents_with_pairs": 445,
+          "restricted_division_variables": 7913
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 2010,
+          "right_anchored": true,
+          "right_boundary_constraints": 18,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 0.0,
+        "objective": 244.62618613811313,
+        "objective_bound": 244.62618613811313,
+        "seconds": 5.3764628499993705,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 69169
+      },
+      {
+        "constraints": 55475,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 387,
+          "parents_with_pairs": 211,
+          "restricted_division_variables": 7622
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 752,
+          "right_anchored": true,
+          "right_boundary_constraints": 22,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 0.0,
+        "objective": 143.0678027272188,
+        "objective_bound": 143.0678027272188,
+        "seconds": 4.139277875998232,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 65787
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.296175415001926,
+      "link_seconds": 7.611064527998678,
+      "segment_seconds": 33.76955211200038,
+      "solve_seconds": 40.42887946200062
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 19172
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_af149c94",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "b5c7553b67db3de21ba7f83f3d9f2b5086829924109feece17a74934346b965a",
+    "database_bytes": 72880128,
+    "database_counts": {
+      "links": 88121,
+      "nodes": 19172,
+      "overlaps": 57635
+    },
+    "dataset": "6bba_af149c94",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "aef5b903fa16612a7ed82536ee0b39d22f3b7db4dd6965e4dc5b178e352684fe",
+    "division_evidence_sha256": "f213de336771ab873e00d6c648da51ebc11cc97e4ccc44d8fa7db065e4632500",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 0,
+      "forks": 29
+    },
+    "fingerprint": "6e82a65174d63a59470074bada687186865d3186020ffa8255d73984837142df",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "f13eee7e30dd17b146a0aaa946a7c58e7cd7222ee10122cc740c59fff8235c10",
+    "input_instances": 11028,
+    "peak_process_rss_mib": 6018.4296875,
+    "predicted_divisions": 29,
+    "selected_edges": 8756,
+    "selected_nodes": 9401,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 31145,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 419,
+          "parents_with_pairs": 293,
+          "restricted_division_variables": 4067
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 802,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 36,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 0.0,
+        "objective": 547.6353195129528,
+        "objective_bound": 547.6353195129528,
+        "seconds": 2.960342876998766,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 34322
+      },
+      {
+        "constraints": 46902,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 703,
+          "parents_with_pairs": 424,
+          "restricted_division_variables": 6213
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 1348,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 58,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 0.0,
+        "objective": 946.6387594196603,
+        "objective_bound": 946.6387594196603,
+        "seconds": 4.801845068002876,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 53890
+      },
+      {
+        "constraints": 35952,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 269,
+          "parents_with_pairs": 158,
+          "restricted_division_variables": 5135
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 26,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 512,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 0.0,
+        "objective": 234.53445209350852,
+        "objective_bound": 234.53445209350852,
+        "seconds": 3.2691041880025296,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 44018
+      },
+      {
+        "constraints": 25602,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 279,
+          "parents_with_pairs": 209,
+          "restricted_division_variables": 3453
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 520,
+          "right_anchored": true,
+          "right_boundary_constraints": 38,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 2.887122591563504e-16,
+        "objective": 393.77211779583496,
+        "objective_bound": 393.7721177958351,
+        "seconds": 1.87070956900061,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 29245
+      },
+      {
+        "constraints": 29180,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 268,
+          "parents_with_pairs": 185,
+          "restricted_division_variables": 4147
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 2,
+          "local_constraints": 512,
+          "right_anchored": true,
+          "right_boundary_constraints": 24,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 0.0,
+        "objective": 365.0807528127322,
+        "objective_bound": 365.0807528127322,
+        "seconds": 2.4269574390018533,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 35200
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.735646711997106,
+      "link_seconds": 7.650738808002643,
+      "segment_seconds": 20.853922664999118,
+      "solve_seconds": 19.23911649999718
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 10652
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_e16ffc58",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "8bb9ceed4b7e424a3a7d291cfbb3aabd2c0bbf2d0a3e8ac15e6f1388a4a06d3b",
+    "database_bytes": 38502400,
+    "database_counts": {
+      "links": 41147,
+      "nodes": 10652,
+      "overlaps": 19873
+    },
+    "dataset": "6bba_e16ffc58",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "c8c1268e296608a17b9fdbc05ebf9f738200ef26de838b580480ccd83b1cfb30",
+    "division_evidence_sha256": "c34045e3c860e1b2781b72bbe0b68ac07e87755e8d76a49fdb53bbb786f1074d",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 0,
+      "forks": 4
+    },
+    "fingerprint": "3aa47d9444e374a84711f70e252ebd21804d6f2d664ba278acd797adfad61563",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "8e42be78fd0dc8ed85667a08fe2569efd8eea966f71e41c2208b35b409f8d76b",
+    "input_instances": 7145,
+    "peak_process_rss_mib": 6018.4296875,
+    "predicted_divisions": 4,
+    "selected_edges": 5675,
+    "selected_nodes": 5981,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 16153,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 256,
+          "parents_with_pairs": 143,
+          "restricted_division_variables": 2736
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 488,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 24,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 0.0,
+        "objective": 253.44036141466574,
+        "objective_bound": 253.44036141466574,
+        "seconds": 1.3700613229993905,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 21189
+      },
+      {
+        "constraints": 21174,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 226,
+          "parents_with_pairs": 114,
+          "restricted_division_variables": 3340
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 446,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 6,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 0.0,
+        "objective": 287.06724041392823,
+        "objective_bound": 287.06724041392823,
+        "seconds": 1.694093056001293,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 26067
+      },
+      {
+        "constraints": 13375,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 310,
+          "parents_with_pairs": 125,
+          "restricted_division_variables": 2221
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 4,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 616,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 0.0,
+        "objective": 434.55718973018685,
+        "objective_bound": 434.55718973018685,
+        "seconds": 1.1385683549997339,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 17221
+      },
+      {
+        "constraints": 16142,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 257,
+          "parents_with_pairs": 147,
+          "restricted_division_variables": 2465
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 498,
+          "right_anchored": true,
+          "right_boundary_constraints": 16,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 2.616424368739969e-16,
+        "objective": 217.25611311357324,
+        "objective_bound": 217.2561131135733,
+        "seconds": 1.3073938249981438,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 19766
+      },
+      {
+        "constraints": 13776,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 251,
+          "parents_with_pairs": 104,
+          "restricted_division_variables": 2087
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 466,
+          "right_anchored": true,
+          "right_boundary_constraints": 36,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 1.3297786260141823e-16,
+        "objective": 427.4652769174662,
+        "objective_bound": 427.46527691746627,
+        "seconds": 1.1025977280005463,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 16481
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.339779060999717,
+      "link_seconds": 6.898866974999692,
+      "segment_seconds": 16.59580566600198,
+      "solve_seconds": 8.737926631998562
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  },
+  {
+    "annotations_used": false,
+    "centroid_audit": {
+      "coordinates_changed": false,
+      "mask_sql_and_serialized_linker_centroids_agree": true,
+      "maximum_disagreement_um": 0.0,
+      "nodes": 19502
+    },
+    "common_stages_reused_from": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/tracking/6bba_fe670320",
+    "config_sha256": "271bdebd7806153cda4b00cc0ba313b63f841d791026943e70134408e4794269",
+    "configuration_plan_sha256": "ff9476f510d112de35b6ee94ee9866d2b209d536dfcf7d99b4ef60e0fa1a144a",
+    "csv_round_trip_passed": true,
+    "csv_sha256": "559a6385956f0290e1d62efe5eb10412dd8bf9ecce35ae7845465a936017a2b5",
+    "database_bytes": 40845312,
+    "database_counts": {
+      "links": 86777,
+      "nodes": 19502,
+      "overlaps": 24078
+    },
+    "dataset": "6bba_fe670320",
+    "division_adapter_sha256": "718847a02688ad55419a464a89669af7dc5c76ab8cd39959f562d31f951f6612",
+    "division_evidence_receipt_sha256": "f7fa13a580e2f5d80f66d1c312e65d307b6789c89bd74953e6748cb4ac04b0a6",
+    "division_evidence_sha256": "2be0114e3a07f0ea25ff77419463be62a227fd2792ecef05c560ad58eb9faa4c",
+    "division_persistence_adapter_sha256": "9bf259dd52e7a575591d2b91949ca8c7225e16501488ea402dca3abbe726c87e",
+    "division_persistence_check": {
+      "all_interior_daughters_persist": true,
+      "clip_final_daughters": 0,
+      "forks": 0
+    },
+    "fingerprint": "77114012c8f3c19b606eeb2f7ca2ffedb07afcbbaae1ce2b04febe197e62705c",
+    "full_clip": true,
+    "graph_checks_passed": true,
+    "graph_sha256": "bda4458771871fdfadb2b919242366dcea2dd94fd93ab270c86e046e6e6202fa",
+    "input_instances": 13862,
+    "peak_process_rss_mib": 6018.4296875,
+    "predicted_divisions": 0,
+    "selected_edges": 10918,
+    "selected_nodes": 11620,
+    "selected_overlap_conflicts": 0,
+    "shape": [
+      100,
+      64,
+      256,
+      256
+    ],
+    "solver": [
+      {
+        "constraints": 14367,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 279,
+          "parents_with_pairs": 83,
+          "restricted_division_variables": 2387
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 552,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 6,
+          "window_end": 24,
+          "window_start": 0
+        },
+        "gap": 0.0,
+        "objective": 129.93315590138056,
+        "objective_bound": 129.93315590138056,
+        "seconds": 1.1762772030015185,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 18608
+      },
+      {
+        "constraints": 35563,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 873,
+          "parents_with_pairs": 256,
+          "restricted_division_variables": 5720
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 1746,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 64,
+          "window_start": 35
+        },
+        "gap": 3.5952692828541437e-06,
+        "objective": 354.4853293179463,
+        "objective_bound": 354.48660378816203,
+        "seconds": 11.695620929000142,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 48670
+      },
+      {
+        "constraints": 41328,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1051,
+          "parents_with_pairs": 309,
+          "restricted_division_variables": 7700
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 1314,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 788,
+          "right_anchored": false,
+          "right_boundary_constraints": 0,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 99,
+          "window_start": 75
+        },
+        "gap": 1.8296255920077895e-09,
+        "objective": 807.3757142826967,
+        "objective_bound": 807.3757157598919,
+        "seconds": 5.128195629000402,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 66826
+      },
+      {
+        "constraints": 12829,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 51,
+          "parents_with_pairs": 31,
+          "restricted_division_variables": 2324
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 98,
+          "right_anchored": true,
+          "right_boundary_constraints": 4,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 39,
+          "window_start": 20
+        },
+        "gap": 0.0,
+        "objective": 37.15455372983681,
+        "objective_bound": 37.15455372983681,
+        "seconds": 1.0249196999975538,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 18521
+      },
+      {
+        "constraints": 31791,
+        "division_evidence": {
+          "maximum_bonus": 0.0,
+          "minimum_bonus": 0.0,
+          "pair_variables": 1286,
+          "parents_with_pairs": 338,
+          "restricted_division_variables": 5283
+        },
+        "division_persistence": {
+          "clip_final_exemptions": 0,
+          "inherited_daughter_constraints": 0,
+          "local_constraints": 2566,
+          "right_anchored": true,
+          "right_boundary_constraints": 6,
+          "uncommitted_overlap_deferrals": 0,
+          "window_end": 79,
+          "window_start": 60
+        },
+        "gap": 4.33057546564887e-09,
+        "objective": 645.2853005568787,
+        "objective_bound": 645.2853033513354,
+        "seconds": 3.9716214569998556,
+        "solutions": 1,
+        "status": "OPTIMAL",
+        "variables": 45350
+      }
+    ],
+    "stage_seconds": {
+      "convert_seconds": 18.29255166599978,
+      "link_seconds": 7.0809919189996435,
+      "segment_seconds": 25.493553317999613,
+      "solve_seconds": 26.65954536299978
+    },
+    "ultrack_revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "ultrack_source": "/home/mpf/code/kaggle/ultrack/ultrack/__init__.py",
+    "versions": {
+      "higra": "0.6.13",
+      "mip": "2.0.0",
+      "numpy": "2.4.6",
+      "sqlalchemy": "2.0.52",
+      "zarr": "3.1.6"
+    }
+  }
+]

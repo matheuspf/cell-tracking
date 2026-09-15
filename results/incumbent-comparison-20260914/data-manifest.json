@@ -1,0 +1,1858 @@
+{
+  "created_utc": "2026-09-14T20:27:23.789003+00:00",
+  "split_sha256": "cbe8ace34ffc157172280538441454b60250f0188faa063d1a9eadfb1ac55c0b",
+  "native_source": {
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/augmentations.py": "13db09817bf492f8d0f710a0a4d09776320b262060167055090a303fc6057f4e",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/dataspec.py": "e69bf952fb985477ac50ff8598a35020c95d20a035a09b81ab4056e655dd311f",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/evaluate.py": "614813cc51c3581c6ccda4bb20725a19da8ecac4a27620654bfca58319cffa3c",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/predict_unet_transformer.py": "c44e771ba5980b820f93091e03a303c25dfe8f3232e501f54dc9565731c234b9",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/__init__.py": "26a18d8da84e40da73281a48ebc3017d847a2e57431ab63e8629d2109e6e8571",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/division_metrics.py": "d1cf1e0a43009d02174f1699ce2aa28458a2220ac4b521731d3bcf31cf8c76be",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/metrics.py": "31baf45b54c78f68bab4f65dd8f4b38bca702abb644171c6df7c46cdeef55d83",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/__init__.py": "ab7587ef79856bae50d24b62e5805092d0459ee1c586522b763f9ef70c093e1d",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/repo/src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  },
+  "clip_records": [
+    {
+      "dataset": "44b6_0113de3b",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_0113de3b.pt",
+      "sha256": "df36ba42f28ed91e4b95166a338cb592d90c8117d6550b2cfe5ecc06f7268ad3",
+      "windows": 50,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_0b24845f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_0b24845f.pt",
+      "sha256": "804ed364ed1fb4215719d42dac751ffd46fe87c65c53b3847f65bd9e5091cd84",
+      "windows": 39,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_0c582fdc",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_0c582fdc.pt",
+      "sha256": "0ca8fa284a87bd7482b78d7bd392d6a00c7100f0d7db60f12fcebbd7fce62013",
+      "windows": 70,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_0db75fae",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_0db75fae.pt",
+      "sha256": "c940ccebb83892cfe4fc9f8a53987d54c13953d7d964af3b74e3c85a320fc8b5",
+      "windows": 88,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_12dfb391",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_12dfb391.pt",
+      "sha256": "0b4df9f0bd95ae14dd07d50a446abba191bc355c9bde0e2779d6fb7d4f202dbb",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "44b6_144b256d",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_144b256d.pt",
+      "sha256": "0dd6197dc8dd6e7369dd48d4bb0374a4696e1fe3d9665c4a247342017cbbcb5e",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_1574802b",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_1574802b.pt",
+      "sha256": "5cc0ff61b77226d7592e8d9a9a39ec84e579453afb09e0c9cdc08b07bc0942f5",
+      "windows": 94,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_18ced818",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_18ced818.pt",
+      "sha256": "6e904fa663350aaafadf2ed48f50b17d66718c6e207f21ab2ab1fa0cb4f70165",
+      "windows": 99,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_1d530831",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_1d530831.pt",
+      "sha256": "1033c3bb1cd2272095c783c6f23546d597d86bc643d938dd2960213920b28663",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_24264f12",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_24264f12.pt",
+      "sha256": "f97bc8bec5a20836bf4db14f188e092ff9db145617e7273224034324889ca307",
+      "windows": 86,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_267148e4",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_267148e4.pt",
+      "sha256": "0b7a6f0fd346ba60890b3236fd4bc242e71624601ea6e0e4f3db3a42822546bf",
+      "windows": 99,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_2a2eff9f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_2a2eff9f.pt",
+      "sha256": "4605f596d4dcf0e52d1e833eaf5ff59a5c068320b89c7cdce5dc7ac4467108f4",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_2f31fc2f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_2f31fc2f.pt",
+      "sha256": "fb0df28f4c0eda9e87d279e03e898424bee77910c82fd242fb6bf1d848cd65c4",
+      "windows": 67,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_33b596bf",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_33b596bf.pt",
+      "sha256": "40844ca856f6217939d15ccb75ccc1b14f7acc4838be2dcd3e01461053b6f983",
+      "windows": 49,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_341df25f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_341df25f.pt",
+      "sha256": "2cd1cfce58784ed3693b57f2cf788321ed1957f8286754eed8a97c5915543386",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_3a861e03",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_3a861e03.pt",
+      "sha256": "e6c76dfbf88a02657dae5e467ff2656ecaa13a54c79e90501530c2dfa3437279",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "44b6_3bb3690f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_3bb3690f.pt",
+      "sha256": "830c75fbcfbdfea84b3113a5bc2c630ba25f7be1894771638c6613a6aae11414",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_40c45f5a",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_40c45f5a.pt",
+      "sha256": "8d8dba9bf76259ec30e628a9964f95db5ff46786db32791c58b6d0a1814e8076",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_415c0a3a",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_415c0a3a.pt",
+      "sha256": "a764c8e13e9ff2b6d7568f0a282203f19d03c172f16d12c708e8f2002e3df7ec",
+      "windows": 99,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "44b6_53f95252",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_53f95252.pt",
+      "sha256": "f1c10921dde7e4187b918081a83c5851505566dea0ccf5ef81cf4f1614a570a6",
+      "windows": 50,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_551a5dba",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_551a5dba.pt",
+      "sha256": "d3f27ab96d61971d6d3566edc0e40fc51e146f4dd9f3972bdd50b6af70b4a550",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_5740d24b",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_5740d24b.pt",
+      "sha256": "208cb7b6d755e7d775c9dc09e0e63743245f503d809964a6d68e9b56dcda20b6",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_587a1e22",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_587a1e22.pt",
+      "sha256": "1af64636fab5e1afddf1497ac27f4a825cceef476ce682a0f8dd8b80313d01e8",
+      "windows": 94,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "44b6_5f15d135",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_5f15d135.pt",
+      "sha256": "db27e4cbff9e0a1b1904d7ab9796347889c83fcaa2f0dde8d33330289cf69d96",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_668e0cc7",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_668e0cc7.pt",
+      "sha256": "979e36fd46e2a376b081641a5b941899fbe8675cb085bf40941472f79b7d6641",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "44b6_66f9292d",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_66f9292d.pt",
+      "sha256": "bd7ea62d215d2d4ee9c4f7740dfd9f1b813f6619b98dad499b938c5ed7a39234",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_706092f0",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_706092f0.pt",
+      "sha256": "2565692984bf04dae5073e409a86efed5442f843eef510ab59da8b1ef202c030",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_71a4179f",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_71a4179f.pt",
+      "sha256": "f91279a086b73f0e5e24d892395a18dfd5ccbaa7e137a5e8017435b9e7c6920e",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_74d0c52e",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_74d0c52e.pt",
+      "sha256": "4efcfe803287ab6f45998e533e28cc0b2f93a779fd5623470ff892e3e6e3ba8e",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_7a302da0",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_7a302da0.pt",
+      "sha256": "0e4edaac1a678615fb570f5e1c0d52754a09c824554c34fae0e725486f9571c4",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "44b6_7e557709",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_7e557709.pt",
+      "sha256": "c9ee25a957fd22a681af7d6ad9e65678bd439dcd984ae3345c8d93a02c391ebe",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "44b6_808952d6",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_808952d6.pt",
+      "sha256": "3ba84d55592f81be09cadae0a0e9d975c73165fecb030dc72cf0c6071a2a90f8",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_81c256f0",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_81c256f0.pt",
+      "sha256": "aefc776be313b0b29a9de7a67dcea38efc085bb4fae301e46d30a97ce1480d54",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_87bba6c4",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_87bba6c4.pt",
+      "sha256": "d49691ed942598b76d891eba98c0e67d782834e1c3d8fdbd6eae9aaf3cb8fbf2",
+      "windows": 78,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_8cc6506c",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_8cc6506c.pt",
+      "sha256": "674db69ce6a5663d79fe629e884128ff9e2a00955609881689bae24dc8c48281",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_8f5ab931",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_8f5ab931.pt",
+      "sha256": "fc1597cd87a3949106978e00f8e7c66f933ce72fc5945027d62ec13d1889a69c",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "44b6_8f9ecab4",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_8f9ecab4.pt",
+      "sha256": "125a1fc37e422f189b68331e2dc8dfee9949560ee50e725b173b5205dfe8e8d3",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_90724892",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_90724892.pt",
+      "sha256": "d55fdb569b2a5111a62fb98fb0dbe533c247555149eda967829d687d0665901e",
+      "windows": 56,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_949adeb1",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_949adeb1.pt",
+      "sha256": "a8a2135dcbe92acbe99d46d11b799565c7996e953611006de9f8d756f7df25ee",
+      "windows": 75,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "44b6_95029e92",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_95029e92.pt",
+      "sha256": "23873a12296fa76f10168cc2bf49ecd14506f3cf40d82076a4c2b94bb54aa93a",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_97725144",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_97725144.pt",
+      "sha256": "3d32b8599c85564ec038db79e16cf2e12ed2f5aa176633191895997fff5b2f41",
+      "windows": 99,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_996155de",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_996155de.pt",
+      "sha256": "34178461e7eac6ff9bdf4a6b9350bba434b28e9df5ab7cc344bf32deb9ea1213",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_9be80b04",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_9be80b04.pt",
+      "sha256": "1fde965edc0c8bdb90665e346c51ab7a10c21bf659fa0be678c89331b0f23325",
+      "windows": 99,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_9bfa6a0a",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_9bfa6a0a.pt",
+      "sha256": "4aa3e1e02037ef559c0091f94c6b45d291ef724fa2c08a6fcdcef5068ec719c9",
+      "windows": 99,
+      "max_nodes": 5
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_a21120c2.pt",
+      "sha256": "ddd95960d84aea60762f83847e0c6a9eacf7f2e8610d95adeee4c9c0abdf0386",
+      "windows": 84,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "44b6_a2bb48bb",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_a2bb48bb.pt",
+      "sha256": "c3234c00b3b04b99bf0bc1adbdcaaa7649b35b44aac94b5f8e4bd08df4791ded",
+      "windows": 99,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "44b6_aaf8b0ea",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_aaf8b0ea.pt",
+      "sha256": "ad4431a6c44ac406710b66558429f3e30f448920d2304381cf94cf6ffae6865a",
+      "windows": 99,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_abf82518",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_abf82518.pt",
+      "sha256": "c1d30d50e304ff6e6c4d808e5bc1f9b8c85cc146f93fa15907ff11c64cd9691b",
+      "windows": 57,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_b2c44266",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_b2c44266.pt",
+      "sha256": "8a390e1a8ed80732c5e76aacfcbeeeb665c2bf3629526bcdbcadb89d11510e8b",
+      "windows": 99,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_c15fded2",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_c15fded2.pt",
+      "sha256": "0578f1e54d1791858002fcec0dbf9a6e86c85e900653cfbaa66a91819a8e6207",
+      "windows": 53,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_c50204e0",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_c50204e0.pt",
+      "sha256": "e12551f6202bce207c9fe96c94c26f0f1c8fa4ea433f933e617a6a128d49d822",
+      "windows": 99,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "44b6_c771cb04",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_c771cb04.pt",
+      "sha256": "37b34469c18add8a7fba755b71f9fc9721c04c618baf4607696d831d36d6ee34",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_c8e2a523",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_c8e2a523.pt",
+      "sha256": "2503337823012f59e28577e6bc6d0960734d75dd12491899361c970858580f76",
+      "windows": 80,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_c96cfa10",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_c96cfa10.pt",
+      "sha256": "ed8d6a78e9c5ae1a7ab812ae869dadf82fb3896c274758248ea68c9dd6851be5",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "44b6_cf2536e8",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_cf2536e8.pt",
+      "sha256": "f37a6a74a05da7b4d56556c0ed123c2d60e482ad9a98d4073c92ad6611ef65a2",
+      "windows": 75,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_cf8fed6b.pt",
+      "sha256": "462235b146d7b5f99112bb8d05be1701b6a997d02998e09ca9a46a60d413fa91",
+      "windows": 93,
+      "max_nodes": 3
+    },
+    {
+      "dataset": "44b6_d29c9ab2",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_d29c9ab2.pt",
+      "sha256": "b6d6e78c281d41da30851df912c0c2983ae49b3bea1d055f06bee3462dd7968f",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "44b6_d2f34f90",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_d2f34f90.pt",
+      "sha256": "42d6a49613386871497de70a6278476eb3392410161e48fc3b33196d4c6f0c98",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_d5e7d891",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_d5e7d891.pt",
+      "sha256": "d506f4bb8225e2aa68e25b74d0544983cc8d3a9c1565b95c49e0fba4c05a56d4",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "44b6_d754aa59",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_d754aa59.pt",
+      "sha256": "c49f1118453c4f7dda846cd25e5e6d3152d9268e9b0d2a4dddaa6771c2c380b8",
+      "windows": 65,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_d78e09d9",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_d78e09d9.pt",
+      "sha256": "3613529f3ada48d31125bd11fe2891b836878e1cf1b35122388808ffcc9fb02f",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "44b6_db3c847b",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_db3c847b.pt",
+      "sha256": "aa7dc45fd5844eaa996ce47b61e380647ea71a07478a5447b291ccb843dd4f4c",
+      "windows": 85,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_ddf577ad",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_ddf577ad.pt",
+      "sha256": "154f3416e752a1a59bbbb9cc39e33c51f673caf60ef0c838bd2c68de7ae04590",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "44b6_deabac95",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_deabac95.pt",
+      "sha256": "d90577fa6a6705f9da5194a30b22d12261e4acfeca3545057e715bf85fe8ff24",
+      "windows": 81,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_e28840c6",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_e28840c6.pt",
+      "sha256": "a887d4b014398bb720ba065560a9564b745c0876c855913175ce37d764fcc6b1",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_e29f0176",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_e29f0176.pt",
+      "sha256": "f3d297e174428eec4ef2b54a60348a94daf7bf89bf0f47ed38a970348805dae6",
+      "windows": 50,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "44b6_e31261b4",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_e31261b4.pt",
+      "sha256": "4a84d74c5c7e41ea62eeb7ef5880b0b67d903763c393606a536dd9a0645b7863",
+      "windows": 81,
+      "max_nodes": 2
+    },
+    {
+      "dataset": "44b6_e35b117d",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_e35b117d.pt",
+      "sha256": "22b10cba0edd60c81ade4ef37edd15ef522c79ae7aec36b860e0e18aefaf2143",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_e57ff5c6",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_e57ff5c6.pt",
+      "sha256": "ae0644cade3179af62e3bbc2852313f6b558bbd13135f9da14aed426a4873b15",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "44b6_eb2880fc",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_eb2880fc.pt",
+      "sha256": "7883d40e35d24a7478b64443c98cd014426b94d56e8d4f956268f184414744d6",
+      "windows": 99,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "44b6_f28707c6",
+      "embryo": "44b6",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/44b6/44b6_f28707c6.pt",
+      "sha256": "a5dff946ca4e66ec7e4f3744de2580ee90d06007805042c40c70e75b03690e08",
+      "windows": 61,
+      "max_nodes": 1
+    },
+    {
+      "dataset": "6bba_05b6850b",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_05b6850b.pt",
+      "sha256": "a981c76f3daa47633ff42bfa6356102bc7e82547dd7ca0c46c0adc31c02dbc3e",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_05db0fb1",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_05db0fb1.pt",
+      "sha256": "fa6b3db7ba19d34372d8dc98a326866a924337f73fd2dc012d0f0435e06139bc",
+      "windows": 99,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_062c8d37",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_062c8d37.pt",
+      "sha256": "da6d242f52206fa9f1ab2151382a79a11e3f8782f37a8da94f6dee8b0df51f00",
+      "windows": 97,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_07477033",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_07477033.pt",
+      "sha256": "6815154681ce2fcb5f3803abbd0b8c7af2b00aa03e5d7daafc4322ba5b631382",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_07e24132",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_07e24132.pt",
+      "sha256": "bc22f282a6a605aa3f78be522aeb70987419064e427acf384de23ba0d963236f",
+      "windows": 99,
+      "max_nodes": 5
+    },
+    {
+      "dataset": "6bba_085bf656",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_085bf656.pt",
+      "sha256": "33118d26b45069dfde331b786bede9bd86af4299a18536a7e6d83619e7d4b67b",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_09961292",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_09961292.pt",
+      "sha256": "b8dd460506a42de51a70fb03e6d172f3d1794d70fe8cc730a9b62f5072a2d3f8",
+      "windows": 99,
+      "max_nodes": 33
+    },
+    {
+      "dataset": "6bba_0c7fa718",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_0c7fa718.pt",
+      "sha256": "c774224d1ffaa52019d7dad24b0d59fd1bc53b311b3b9082f9ef2ef075b4c799",
+      "windows": 92,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_0e7c0d07",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_0e7c0d07.pt",
+      "sha256": "205d898895ee97ca41a7b91b576bccb20a615720acd769abfb3aa42f0a4b3525",
+      "windows": 82,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "6bba_12665c0e",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_12665c0e.pt",
+      "sha256": "7a56ea94816cca647afcdfb3adbe6daa18f10b31494b2bf2f03691a5b1cf141a",
+      "windows": 99,
+      "max_nodes": 19
+    },
+    {
+      "dataset": "6bba_13f19531",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_13f19531.pt",
+      "sha256": "4b5e8de4e4a3c57c3c7dfdf8317238a255746c967a8b2ff61b91a38dda20b832",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_15403b9a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_15403b9a.pt",
+      "sha256": "34e71544a1295f5f2ef2cb95f61cacf4b2c4cdbdeadf5bbc3ffe6eac9331759d",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_1d0d8384",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_1d0d8384.pt",
+      "sha256": "068c73c1c56c12f90b53f6f0c0fe89a322376bf38d7e0c72ffc26155190ebc62",
+      "windows": 99,
+      "max_nodes": 27
+    },
+    {
+      "dataset": "6bba_1ebfb80d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_1ebfb80d.pt",
+      "sha256": "9c600d625604cc5668b57d7160d3f8eba599aba256ea8ff34515724668e53fa9",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_1f58c2f6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_1f58c2f6.pt",
+      "sha256": "bdbf72ee1aa4c24156949e8d4d0837cfc156deda466e2e2f1745558ffb892a91",
+      "windows": 97,
+      "max_nodes": 5
+    },
+    {
+      "dataset": "6bba_207c6aaf",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_207c6aaf.pt",
+      "sha256": "8c6bf771ae5091987e717fa8eb244498c1dd51824e70612197f84c11469f9a8e",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_20852818",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_20852818.pt",
+      "sha256": "f8a2fad8197b43f30ce08d6152bb24d4c08d60a7dc07be3dedf16c821e873b57",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_2312ac41",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_2312ac41.pt",
+      "sha256": "cde16b78b757ae8b97f6104db00cc4e3c4c5af4e2490979a6178cdb10d520932",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_23af9eeb",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_23af9eeb.pt",
+      "sha256": "57f242b3a25746d6934cf949bb6443f35d7bc82039b59ffef4cb8f8af764b6fc",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "6bba_2540cd90",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_2540cd90.pt",
+      "sha256": "3ed80d94965ebd1cd379c984229409d91d7f7b34abe7e2ff8815702de9e1ec38",
+      "windows": 99,
+      "max_nodes": 6
+    },
+    {
+      "dataset": "6bba_2646afc7",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_2646afc7.pt",
+      "sha256": "88f97de54e84a7655b1c8979c2148cdda08293a5915a34e92d122dc0c254943e",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_268e1230",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_268e1230.pt",
+      "sha256": "c714b98bb71a4860a4632d3a3b7cb45e55170b5f852f1afd02557085215b02d4",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_2819ca14",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_2819ca14.pt",
+      "sha256": "6a23c1e397909f8e42af01b528dbc42faf20a5fee40890ae32632889b7ff904b",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_283bf9f1",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_283bf9f1.pt",
+      "sha256": "d6c6f50dd3d040049440bb38a9ef4e2c99fff9f398fcf8b02575e0bc8068ae9e",
+      "windows": 99,
+      "max_nodes": 20
+    },
+    {
+      "dataset": "6bba_312f0dc3",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_312f0dc3.pt",
+      "sha256": "1d51ad3b874461f525c9ecc58c2c36ae5a65e5c9f00067828545c4ea06a95456",
+      "windows": 80,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_32db13fc",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_32db13fc.pt",
+      "sha256": "113b2d8ac2fb41da2fa72ae3266be59063e7256724d4fdecc58a1f6ee2117f0e",
+      "windows": 97,
+      "max_nodes": 24
+    },
+    {
+      "dataset": "6bba_337b1b3a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_337b1b3a.pt",
+      "sha256": "81d6378d0e049c0321a720f79231b784a5078baf6824e9d16976a25b613deeac",
+      "windows": 80,
+      "max_nodes": 27
+    },
+    {
+      "dataset": "6bba_372c8cb8",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_372c8cb8.pt",
+      "sha256": "070d0d10a73b71652ee199642b1f30c326ca22bd14a1a1ac0e4362bd5527b0fa",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_3a1849c2",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_3a1849c2.pt",
+      "sha256": "aa341763838252a2b2492d37df3f3e7cf299fa7a2a52f364d506dc12f3c5fd38",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_3abfe10a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_3abfe10a.pt",
+      "sha256": "349aeb9f61072ae81f4384f7bedeb955d0c9ae0d065bb36e913f7a4863dfa2ca",
+      "windows": 81,
+      "max_nodes": 26
+    },
+    {
+      "dataset": "6bba_3c5691b6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_3c5691b6.pt",
+      "sha256": "8c34a2901b04e5f5bf5208c6b78bed2a6470045b88d9539b03abd0e3b62f1207",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_3db54e20",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_3db54e20.pt",
+      "sha256": "a4ddedf748a24a78a840c3c8b2e9eafd723c1f7e951ce41e7c676d23e913901f",
+      "windows": 92,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_3fda6b25",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_3fda6b25.pt",
+      "sha256": "7fb69d7a121a0e9d0509f33f8d7d4d64b819acfe8cf25e2ac0e3ab3dd9f71284",
+      "windows": 98,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_43fea39d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_43fea39d.pt",
+      "sha256": "01a3c2d86d068262722d946df9ec23e57ec0de989dce7e069f2e8cecf31d7478",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_474be664",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_474be664.pt",
+      "sha256": "6c4e97940b025ef27b409c3bea228e91f4d5857c7dc12d2599e93112a386606d",
+      "windows": 99,
+      "max_nodes": 4
+    },
+    {
+      "dataset": "6bba_48816121",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_48816121.pt",
+      "sha256": "53174c871fe1f272aad6c50cba2e1fe668d193b42f1529622c8fccd5cb89e51d",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_4aa14c89",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_4aa14c89.pt",
+      "sha256": "46efc7b5b2712f7366737a9872f874340700627432be9d09dc311167488ff3a3",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_4f99ce20",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_4f99ce20.pt",
+      "sha256": "f1d24458ee06c5870df3d863158df0c5963d9de7e06dc9f21a69f1f5b00a7c28",
+      "windows": 97,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_4ffd3da3",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_4ffd3da3.pt",
+      "sha256": "30d170d490ce985abdf73c8d632bc725703167890e0371745baf1abfffc8027b",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_55b7eebe",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_55b7eebe.pt",
+      "sha256": "45610a756eb350860146a229a9693e08dbdd5f7f3d16e8eea6bbc27fc66c8b92",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_55c70843",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_55c70843.pt",
+      "sha256": "f25a82207f76c6d8167269a775b7d0abb748085682fa7cbd2fb6b6ea454ee329",
+      "windows": 80,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_57b7cc1e",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_57b7cc1e.pt",
+      "sha256": "8a4c1827feb199f9555c2d2ae479952f96c1b34bf901e47beeff586e594ad49d",
+      "windows": 99,
+      "max_nodes": 22
+    },
+    {
+      "dataset": "6bba_5a4d9360",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5a4d9360.pt",
+      "sha256": "d96329ca53c6f337f8f99491c55d1e3e35f35786e751bc9bf4a8e0e6da6a2ac5",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_5b28472a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5b28472a.pt",
+      "sha256": "d677acee6b5b774989c33f37400656f821354b3377834e89c63c454b18c5f580",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_5c039895",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5c039895.pt",
+      "sha256": "5b4140d0ed36dd1dcd9d1ab5c1d9a69e8ccf3adfab5fed65f3611a537193b4fd",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_5c824876",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5c824876.pt",
+      "sha256": "2dbd6e0993723d88265886bf1f090543e1234f057931a97aa17a1341300b953b",
+      "windows": 99,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_5dfe9ad1",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5dfe9ad1.pt",
+      "sha256": "a0a0b260a2e70e42b757abed8fba0c5c5f5a97717468f900e119b2a49ee4fb38",
+      "windows": 99,
+      "max_nodes": 21
+    },
+    {
+      "dataset": "6bba_5f89039d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_5f89039d.pt",
+      "sha256": "aa02dcbf47bac9239281391bae61cc47adc66c03a77b8fcb040076bfc556aabe",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_61dd1e0d.pt",
+      "sha256": "c54b5e69e6037a83c3f6c0d3255cb0f006825b5fdd5bba90f0659e2b8343410a",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_61ecbe65",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_61ecbe65.pt",
+      "sha256": "429060d043d839ec0055c5d3c84b1c8d81100da1c0b66115671b4bae49d160f1",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_6321a359",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6321a359.pt",
+      "sha256": "3aa68eaa37761e3db7533bb087e95c39b2d8b9d187941bb556256d18ce718f84",
+      "windows": 97,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_6479435d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6479435d.pt",
+      "sha256": "e07baff91cadb143bdda365d909110a4e93827c38599c7ccf4ab399f27ab2658",
+      "windows": 92,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_67ebd073",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_67ebd073.pt",
+      "sha256": "fd2ac634c95af535a88e8f135dfd379bcad67a3aca04837d31daf0776e3fdd5b",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_6ca87370",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6ca87370.pt",
+      "sha256": "182c0468064b1c7dea2d9c9db89cfc1c1fbb699224956129d489ea0269ba0e5c",
+      "windows": 99,
+      "max_nodes": 19
+    },
+    {
+      "dataset": "6bba_6db0e9b4",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6db0e9b4.pt",
+      "sha256": "f613798c98235ab545db1c23c38c9fd5fd23dac59ee99dfb9c64846472c6f111",
+      "windows": 87,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_6feb10f0",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6feb10f0.pt",
+      "sha256": "13067d2a380d41165de87af53361146fabc82f8fa48cb28a13470fd84beeedc9",
+      "windows": 99,
+      "max_nodes": 19
+    },
+    {
+      "dataset": "6bba_6feeb0b1",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_6feeb0b1.pt",
+      "sha256": "d68cf0d1961b27cf41741281e6c5db311529177d0cb74d8df39299978af600fe",
+      "windows": 99,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_705ec2c9",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_705ec2c9.pt",
+      "sha256": "0db0112ccfa466281f1479d8a0f0a3e30a72b5fd48bd8ec3043de00dbc426145",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_718b21f9",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_718b21f9.pt",
+      "sha256": "900ae3febad0b030c02efff34658ede1d335a674142ffc3853304aa1e3a2e158",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_74686d6a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_74686d6a.pt",
+      "sha256": "a99e1303a8630998d0697b340fd70da555576d94f236d95305167c58ead9cb41",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_767a1e17",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_767a1e17.pt",
+      "sha256": "fc55db08dba092d5d99f0ed6d686e51f4cbb9bda6e5506b0bf5f644a769f66cb",
+      "windows": 45,
+      "max_nodes": 31
+    },
+    {
+      "dataset": "6bba_76db78c1",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_76db78c1.pt",
+      "sha256": "203365ae2108a91247e698ea0bf7a1e4ac351add60dafdf4daa525af443198bd",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_784a78c9",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_784a78c9.pt",
+      "sha256": "01df592a2809f109f7dd1f2b53148d6dd380e26d3e05c05e823d69399ca2cf24",
+      "windows": 99,
+      "max_nodes": 21
+    },
+    {
+      "dataset": "6bba_786893ac",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_786893ac.pt",
+      "sha256": "26345e33d16b0d2d1d952ff7885e0075c3a73e7ff56f9cffc5c8d007c9475992",
+      "windows": 99,
+      "max_nodes": 28
+    },
+    {
+      "dataset": "6bba_789f8168",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_789f8168.pt",
+      "sha256": "48749e031e7bf80b5f554e752e840697f4a09db1bff6d556e10e398553830e0d",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_78a7bd97",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_78a7bd97.pt",
+      "sha256": "e5de73ceb05547852e0855ce3776a5d05e86dd2d8de3ba8f21cfd17185ccb5ca",
+      "windows": 93,
+      "max_nodes": 20
+    },
+    {
+      "dataset": "6bba_7af54fde",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_7af54fde.pt",
+      "sha256": "482279a23ea852e5f80a66e9e7f45fa2e14d41a88ba126f79f868cf246caeeac",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_7b5d3b2c",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_7b5d3b2c.pt",
+      "sha256": "748b9e133c38b8dcd8a6bd05e6d0752ca72a6f80aa6c15b0d82f7d2282bf475b",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "6bba_7d3058ae",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_7d3058ae.pt",
+      "sha256": "15123c6ae489aa9649fa7577a497f83f7d11891b452eb5eb77d9f7e1b23a2219",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_7f87b3d8",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_7f87b3d8.pt",
+      "sha256": "f2aa102d4c8b11fd44787620e8313737a84bc1f90d03ceda62b32e1360d826be",
+      "windows": 97,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_80d12824",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_80d12824.pt",
+      "sha256": "9bc22fe1c4b49695cb9440ecb786003f3222bb11a446b58e48c16702e8971d95",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_825bd1c6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_825bd1c6.pt",
+      "sha256": "e88df01d81a443d99bc6e682efe58e1f3722aacb5a017845c3df63499749298c",
+      "windows": 99,
+      "max_nodes": 18
+    },
+    {
+      "dataset": "6bba_87289e13",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_87289e13.pt",
+      "sha256": "5e6aebb0accd4d311d0cc9b8b572f593b530c817aa9cc222ca455375dae07500",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_8b7818bf",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_8b7818bf.pt",
+      "sha256": "1646d793b1dee0443adc913bb2ca1652e50029c45ee3d9efd2fbcde1d717f4e3",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_907271db",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_907271db.pt",
+      "sha256": "67bb1cb46c5803fa03be4a05c856598cfafc767efa1021e3d70dd98b2bfd3dce",
+      "windows": 99,
+      "max_nodes": 11
+    },
+    {
+      "dataset": "6bba_91951b3a",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_91951b3a.pt",
+      "sha256": "6385e217088c4b03ce66c7400304ac5e1f38e99a68bdcb4d57b4bf5c06a86fb4",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_96833384",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_96833384.pt",
+      "sha256": "7221c0a49d110ac575f1a0e57d3c57d85cf2f7f2617ea54a2665581fe5e705e2",
+      "windows": 96,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_969618f6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_969618f6.pt",
+      "sha256": "4a25ea61c9a12b7cb4d1f4fdcc1a5de0e8e05f4ff2160f538b5ae3c8c7465304",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_971fa5e0",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_971fa5e0.pt",
+      "sha256": "43251f70b0959dbc9bbc1a8f3ad4401b61c68beda6609ae76341be5cfa50ba13",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_9a41d029",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_9a41d029.pt",
+      "sha256": "0daf3a10ce7f3b21f7f92127694b850de838a9063f445fac76cca5ef77499813",
+      "windows": 99,
+      "max_nodes": 19
+    },
+    {
+      "dataset": "6bba_9e23430b",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_9e23430b.pt",
+      "sha256": "0ea4f5487ecc4f8232b63ed9c8a5a73a2d24617da9ac81b76fee1d3495c67e6f",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_a5e926bb",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_a5e926bb.pt",
+      "sha256": "047509effcadfca7a4c5368806741a64115502c1cede3f4f44a8136fb5739d4b",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_a90a0b9c",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_a90a0b9c.pt",
+      "sha256": "32181511c5bff7272194d76efba704c8033e49fa19a755700e6965b666bb89f4",
+      "windows": 99,
+      "max_nodes": 20
+    },
+    {
+      "dataset": "6bba_ab78413d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ab78413d.pt",
+      "sha256": "458bc9f8b966480ae6f6e0d6396fad5e578f92230b2f05bf72a6fad12e575e10",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_acd782a8",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_acd782a8.pt",
+      "sha256": "cfde7c562a082a5a9ebdfebaddc04f70c170413e5ec12ec8e7c132cd3a6395bf",
+      "windows": 87,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_ae82a791",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ae82a791.pt",
+      "sha256": "c06664423e1f9256327d0740c35605969f1dfd0539110be8725b443ad8c18ddc",
+      "windows": 99,
+      "max_nodes": 18
+    },
+    {
+      "dataset": "6bba_aeee7805",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_aeee7805.pt",
+      "sha256": "3ca8fbe69c521af679476de7fcab458617e72fbdb6008dbe93dcba4e72af907f",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_af149c94",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_af149c94.pt",
+      "sha256": "d296589be47f7ee60e72df3541eec5b12eed62cfb6aff3936ea8ec40f4703402",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_afb141ff",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_afb141ff.pt",
+      "sha256": "3500c79457f031da3df486d9f7c738bff8f4f0ee07476689ed74286306280bc9",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_b1ae37b9",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_b1ae37b9.pt",
+      "sha256": "b5af5944d926562df98431beb5851e00a8a53b4865a43194a9dee2e2182232e2",
+      "windows": 87,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_b204cac7",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_b204cac7.pt",
+      "sha256": "5b131d13d7c3b81ffcffefb37f219fc2037064e303c1b9226d8bab6712dbb766",
+      "windows": 99,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_b329af44",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_b329af44.pt",
+      "sha256": "14666fce10444baca26c37f413c9cea784e9e788e34f88121602704de931ddd3",
+      "windows": 99,
+      "max_nodes": 20
+    },
+    {
+      "dataset": "6bba_b693381b",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_b693381b.pt",
+      "sha256": "79dc3ea204d6920bea0f3ea7193f9863b13ddb8bfda89626a1fd5a397aab2421",
+      "windows": 97,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_bb9f20c3",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_bb9f20c3.pt",
+      "sha256": "2845273f7445859081b8c10faab07d4fdee37c031d687a28ff798e978e6fe2f0",
+      "windows": 95,
+      "max_nodes": 25
+    },
+    {
+      "dataset": "6bba_bbb708ca",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_bbb708ca.pt",
+      "sha256": "8551895805cca8a1a853a3d7f2596266c74f5ae85a4ed826613770b936a3b1ff",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_c27cba08",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_c27cba08.pt",
+      "sha256": "21580214622dd24ed34bf2b7b8abb8d1ec9de42f4e981cede76bd7b240937041",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_c328f2fd",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_c328f2fd.pt",
+      "sha256": "a25ee3022293c6f01ad1abe0fde90267ff822f07c81687bfc4c05d1b1858f6ab",
+      "windows": 95,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_c73a1d11",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_c73a1d11.pt",
+      "sha256": "8a9090132feea7c75b8c543e5d47ad09cf2338c690a0db5ef4892016922612ff",
+      "windows": 94,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_cdcfe533",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_cdcfe533.pt",
+      "sha256": "2c31578804af456cf686119b690643f32f232744945982f0064a43e2460f57cc",
+      "windows": 81,
+      "max_nodes": 28
+    },
+    {
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_cf35214c.pt",
+      "sha256": "118dcd387aa3ab339e0ad45628bc4037ad00b218a21519487bfee8100dd28f19",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_cff5865f",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_cff5865f.pt",
+      "sha256": "984db5f07b99ceec8eb4edc1f4fdf8887b06c162af1571c373a4e8d7d47c9c33",
+      "windows": 96,
+      "max_nodes": 28
+    },
+    {
+      "dataset": "6bba_d0fc38b5",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d0fc38b5.pt",
+      "sha256": "1021c087173d7f327a2727b7cbdb3b0ba76fc4eaecc6ae6d6f1a3d847308831e",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_d1acb6ff",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d1acb6ff.pt",
+      "sha256": "f7c72706af5b5f63a14e8e2858313e14a6252bd22438ebca459a5f5a8096bd5f",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_d2b9fc0c",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d2b9fc0c.pt",
+      "sha256": "4348e6f08022b6c4d3f385aa5aaa4fa575dbeff5ab6c7586603d523d41b3a395",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_d3da753b",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d3da753b.pt",
+      "sha256": "787e35421d5d2d7804c0a35d1d3cfc249193217b09749d1a1f31d90af176f481",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_d5eae175",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d5eae175.pt",
+      "sha256": "1f92c6ce75c5bf1051538638c00ceafd315dbf1bd0eec3dd4706cef65cab0ecc",
+      "windows": 97,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_d6ecebbb",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d6ecebbb.pt",
+      "sha256": "0e8acc70d46ad3f4db2f3de9de3223a12265b97ecbc1936523a27527eba29e19",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_d82a4fc6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_d82a4fc6.pt",
+      "sha256": "c67aea76b29be65d5530d02ebc40bf010e861136722db013a1cc14235c0cbaf2",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_debd7bfa",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_debd7bfa.pt",
+      "sha256": "a4b99daa620d197dbf30e1c916b29210b51aee2e4ecf5bbd0c3561bda646eae6",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_df673a83",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_df673a83.pt",
+      "sha256": "dcab683c3c6fbdc252b176c7cfe857176944e50b20db39503618589d9b47bbd2",
+      "windows": 98,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_e16ffc58.pt",
+      "sha256": "3c1fa913ba06eec520df22ebbe9973abc52ffbe798dd655ce0b5589c2a2102f3",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_e5e44988",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_e5e44988.pt",
+      "sha256": "4927f1acc408a9be81b077131d8b5c7b27c0b632200ca8308b252f0abbe6a048",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_ebdf3b34",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ebdf3b34.pt",
+      "sha256": "1625331a26e1b6d04d1cda7c9c6dea904cbd903f06578ecbf3e49c7699996a80",
+      "windows": 97,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_ebff6e76",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ebff6e76.pt",
+      "sha256": "18efb1f0f18e3657cb47f2582c41629940740d4763dc18cd49c4aab0ac9d09bf",
+      "windows": 99,
+      "max_nodes": 27
+    },
+    {
+      "dataset": "6bba_ed9377fd",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ed9377fd.pt",
+      "sha256": "108004f3390683650ac5235643300475d44102f461d37c1fbc20df7401493b7c",
+      "windows": 99,
+      "max_nodes": 7
+    },
+    {
+      "dataset": "6bba_edf14583",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_edf14583.pt",
+      "sha256": "6ad196bff3766aac14b60ad196c0876f7da6c456f6d1763946e8fbaa8a85ca1e",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_eebc57a5",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_eebc57a5.pt",
+      "sha256": "b30c7ef5f9f153cb90f9c6bdb14e397b25dcaaecd6e6e449501e1f70d70d2013",
+      "windows": 99,
+      "max_nodes": 13
+    },
+    {
+      "dataset": "6bba_ef7b4f7e",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_ef7b4f7e.pt",
+      "sha256": "a8c4388422eccb8a97ba1586c5f86b674beba4efd46cc6921e2aa004a900d21e",
+      "windows": 97,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_f17befbc",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_f17befbc.pt",
+      "sha256": "5fd71dd114685113e0e84597d290081720892ce19c53f08cbfddf43227a67345",
+      "windows": 97,
+      "max_nodes": 17
+    },
+    {
+      "dataset": "6bba_f1fde7e0",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_f1fde7e0.pt",
+      "sha256": "eb9030b2a7d41ae005a12f16fbb0f3bde7b98bb2043c8aa6d4c1eaaf0109bc7b",
+      "windows": 97,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_f20478e9",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_f20478e9.pt",
+      "sha256": "8adf196b41e4af7affda98d2f33d1b76f7a032bc47e5518eda586e04da56ddc9",
+      "windows": 99,
+      "max_nodes": 16
+    },
+    {
+      "dataset": "6bba_f4ae811c",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_f4ae811c.pt",
+      "sha256": "d3f6814a55d73ea322e754aa82c8e4094097def468730970c1a4916acd183f64",
+      "windows": 99,
+      "max_nodes": 15
+    },
+    {
+      "dataset": "6bba_f8ffd5e7",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_f8ffd5e7.pt",
+      "sha256": "67e10c6f9c8f091e991e12369bf9847ec0e281c9c8d2889204b3f1ec99d9211d",
+      "windows": 91,
+      "max_nodes": 9
+    },
+    {
+      "dataset": "6bba_fbc898dc",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_fbc898dc.pt",
+      "sha256": "c06567f595986d788b8dcd7d598437fea03091de0d41aba3c8a088eb35bb05e5",
+      "windows": 99,
+      "max_nodes": 10
+    },
+    {
+      "dataset": "6bba_fc516dc6",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_fc516dc6.pt",
+      "sha256": "620355f7fb3413a650857c9278f50d79596ebef5e9f9e3411235d28a18e6cb5c",
+      "windows": 99,
+      "max_nodes": 12
+    },
+    {
+      "dataset": "6bba_fc5f39dc",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_fc5f39dc.pt",
+      "sha256": "b17494d968ad0b9acf0a6e5dc9f62411d5baee61c152cce6c82d6d83635e1cb1",
+      "windows": 99,
+      "max_nodes": 8
+    },
+    {
+      "dataset": "6bba_fc83837d",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_fc83837d.pt",
+      "sha256": "73a40c288d879590b5e3d9d173c56ac833cca9eb657295827d324f2292b0dd62",
+      "windows": 99,
+      "max_nodes": 14
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "embryo": "6bba",
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/metadata/6bba/6bba_fe670320.pt",
+      "sha256": "48be11e8c6cc2c60bef1ccb56f65b280f0abaa9a9bcdadf33d5df1f124c5f36c",
+      "windows": 99,
+      "max_nodes": 13
+    }
+  ],
+  "train": [
+    "44b6_0113de3b",
+    "44b6_0b24845f",
+    "44b6_0c582fdc",
+    "44b6_0db75fae",
+    "44b6_12dfb391",
+    "44b6_144b256d",
+    "44b6_1574802b",
+    "44b6_18ced818",
+    "44b6_1d530831",
+    "44b6_24264f12",
+    "44b6_267148e4",
+    "44b6_2a2eff9f",
+    "44b6_2f31fc2f",
+    "44b6_33b596bf",
+    "44b6_341df25f",
+    "44b6_3a861e03",
+    "44b6_3bb3690f",
+    "44b6_40c45f5a",
+    "44b6_415c0a3a",
+    "44b6_53f95252",
+    "44b6_551a5dba",
+    "44b6_5740d24b",
+    "44b6_587a1e22",
+    "44b6_5f15d135",
+    "44b6_668e0cc7",
+    "44b6_66f9292d",
+    "44b6_706092f0",
+    "44b6_71a4179f",
+    "44b6_74d0c52e",
+    "44b6_7a302da0",
+    "44b6_7e557709",
+    "44b6_808952d6",
+    "44b6_81c256f0",
+    "44b6_87bba6c4",
+    "44b6_8cc6506c",
+    "44b6_8f5ab931",
+    "44b6_8f9ecab4",
+    "44b6_90724892",
+    "44b6_949adeb1",
+    "44b6_95029e92",
+    "44b6_97725144",
+    "44b6_996155de",
+    "44b6_9be80b04",
+    "44b6_9bfa6a0a",
+    "44b6_a21120c2",
+    "44b6_a2bb48bb",
+    "44b6_aaf8b0ea",
+    "44b6_abf82518",
+    "44b6_b2c44266",
+    "44b6_c15fded2",
+    "44b6_c50204e0",
+    "44b6_c771cb04",
+    "44b6_c8e2a523",
+    "44b6_c96cfa10",
+    "44b6_cf2536e8",
+    "44b6_cf8fed6b",
+    "44b6_d29c9ab2",
+    "44b6_d2f34f90",
+    "44b6_d5e7d891",
+    "44b6_d754aa59",
+    "44b6_d78e09d9",
+    "44b6_db3c847b",
+    "44b6_ddf577ad",
+    "44b6_deabac95",
+    "44b6_e28840c6",
+    "44b6_e29f0176",
+    "44b6_e31261b4",
+    "44b6_e35b117d",
+    "44b6_e57ff5c6",
+    "44b6_eb2880fc",
+    "44b6_f28707c6",
+    "6bba_05b6850b",
+    "6bba_05db0fb1",
+    "6bba_062c8d37",
+    "6bba_07477033",
+    "6bba_07e24132",
+    "6bba_085bf656",
+    "6bba_09961292",
+    "6bba_0c7fa718",
+    "6bba_0e7c0d07",
+    "6bba_12665c0e",
+    "6bba_13f19531",
+    "6bba_15403b9a",
+    "6bba_1d0d8384",
+    "6bba_1ebfb80d",
+    "6bba_1f58c2f6",
+    "6bba_207c6aaf",
+    "6bba_20852818",
+    "6bba_2312ac41",
+    "6bba_23af9eeb",
+    "6bba_2540cd90",
+    "6bba_2646afc7",
+    "6bba_268e1230",
+    "6bba_2819ca14",
+    "6bba_283bf9f1",
+    "6bba_312f0dc3",
+    "6bba_32db13fc",
+    "6bba_337b1b3a",
+    "6bba_372c8cb8",
+    "6bba_3a1849c2",
+    "6bba_3abfe10a",
+    "6bba_3c5691b6",
+    "6bba_3db54e20",
+    "6bba_3fda6b25",
+    "6bba_43fea39d",
+    "6bba_474be664",
+    "6bba_48816121",
+    "6bba_4aa14c89",
+    "6bba_4f99ce20",
+    "6bba_4ffd3da3",
+    "6bba_55b7eebe",
+    "6bba_55c70843",
+    "6bba_57b7cc1e",
+    "6bba_5a4d9360",
+    "6bba_5b28472a",
+    "6bba_5c039895",
+    "6bba_5c824876",
+    "6bba_5dfe9ad1",
+    "6bba_5f89039d",
+    "6bba_61dd1e0d",
+    "6bba_61ecbe65",
+    "6bba_6321a359",
+    "6bba_6479435d",
+    "6bba_67ebd073",
+    "6bba_6ca87370",
+    "6bba_6db0e9b4",
+    "6bba_6feb10f0",
+    "6bba_6feeb0b1",
+    "6bba_705ec2c9",
+    "6bba_718b21f9",
+    "6bba_74686d6a",
+    "6bba_767a1e17",
+    "6bba_76db78c1",
+    "6bba_784a78c9",
+    "6bba_786893ac",
+    "6bba_789f8168",
+    "6bba_78a7bd97",
+    "6bba_7af54fde",
+    "6bba_7b5d3b2c",
+    "6bba_7d3058ae",
+    "6bba_7f87b3d8",
+    "6bba_80d12824",
+    "6bba_825bd1c6",
+    "6bba_87289e13",
+    "6bba_8b7818bf",
+    "6bba_907271db",
+    "6bba_91951b3a",
+    "6bba_96833384",
+    "6bba_969618f6",
+    "6bba_971fa5e0",
+    "6bba_9a41d029",
+    "6bba_9e23430b",
+    "6bba_a5e926bb",
+    "6bba_a90a0b9c",
+    "6bba_ab78413d",
+    "6bba_acd782a8",
+    "6bba_ae82a791",
+    "6bba_aeee7805",
+    "6bba_af149c94",
+    "6bba_afb141ff",
+    "6bba_b1ae37b9",
+    "6bba_b204cac7",
+    "6bba_b329af44",
+    "6bba_b693381b",
+    "6bba_bb9f20c3",
+    "6bba_bbb708ca",
+    "6bba_c27cba08",
+    "6bba_c328f2fd",
+    "6bba_c73a1d11",
+    "6bba_cdcfe533",
+    "6bba_cf35214c",
+    "6bba_cff5865f",
+    "6bba_d0fc38b5",
+    "6bba_d1acb6ff",
+    "6bba_d2b9fc0c",
+    "6bba_d3da753b",
+    "6bba_d5eae175",
+    "6bba_d6ecebbb",
+    "6bba_d82a4fc6",
+    "6bba_debd7bfa",
+    "6bba_df673a83",
+    "6bba_e16ffc58",
+    "6bba_e5e44988",
+    "6bba_ebdf3b34",
+    "6bba_ebff6e76",
+    "6bba_ed9377fd",
+    "6bba_edf14583",
+    "6bba_eebc57a5",
+    "6bba_ef7b4f7e",
+    "6bba_f17befbc",
+    "6bba_f1fde7e0",
+    "6bba_f20478e9",
+    "6bba_f4ae811c",
+    "6bba_f8ffd5e7",
+    "6bba_fbc898dc",
+    "6bba_fc516dc6",
+    "6bba_fc5f39dc",
+    "6bba_fc83837d",
+    "6bba_fe670320"
+  ],
+  "monitor": [
+    "44b6_0113de3b",
+    "44b6_0b24845f",
+    "44b6_0c582fdc",
+    "44b6_0db75fae",
+    "44b6_12dfb391",
+    "44b6_144b256d",
+    "44b6_1574802b",
+    "44b6_18ced818",
+    "44b6_1d530831",
+    "44b6_24264f12",
+    "44b6_267148e4",
+    "44b6_2a2eff9f",
+    "44b6_2f31fc2f",
+    "44b6_33b596bf",
+    "44b6_341df25f",
+    "44b6_3a861e03",
+    "44b6_3bb3690f",
+    "44b6_40c45f5a",
+    "44b6_415c0a3a",
+    "44b6_53f95252",
+    "44b6_551a5dba",
+    "44b6_5740d24b",
+    "44b6_587a1e22",
+    "44b6_5f15d135",
+    "44b6_668e0cc7",
+    "44b6_66f9292d",
+    "44b6_706092f0",
+    "44b6_71a4179f",
+    "44b6_74d0c52e",
+    "44b6_7a302da0",
+    "44b6_7e557709",
+    "44b6_808952d6",
+    "44b6_81c256f0",
+    "44b6_87bba6c4",
+    "44b6_8cc6506c",
+    "44b6_8f5ab931",
+    "44b6_8f9ecab4",
+    "44b6_90724892",
+    "44b6_949adeb1",
+    "44b6_95029e92"
+  ],
+  "max_nodes_all": 33,
+  "total_windows": 18707
+}

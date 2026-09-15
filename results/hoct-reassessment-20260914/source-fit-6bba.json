@@ -1,0 +1,60 @@
+{
+  "source": "6bba",
+  "target": "44b6",
+  "plan_sha256": "f70cf65f7f214c35b5f6ee18b4a8457e9d6eb66a66b7a286a6e1bf8360eed3d3",
+  "code_sha256": "43489666bcace19dd175e368c19488a3b1edc8c5b1bc4a2f11e837b242a283a7",
+  "sha256": "58caf1d44a87a1b884c67cfb9e65eaef70dc2ce0c630739a4846bc1c377c580e",
+  "input_manifests": [
+    {
+      "dataset": "6bba_af149c94",
+      "files": {
+        "bank": "20de43a732b5014e8450502c0f9fc925090ebd51a0164adf53a799f124cf51dd",
+        "embeddings": "09dc8e2bdbfda5dcde9aeb397b499e03e84d8a10cc5f7adf0f190aee74798236",
+        "scores": "f552e06d9c15aa1117012a2002f36e7cb80bf9b7f9d24bc6cd8ea652dcca01ac",
+        "matches": "c1ab86b5268d5f8e4c8688c459fad6568b8ec16d9808cc45bcb78af20b09ca27"
+      },
+      "gt_metadata_sha256": "c8e557c6419e0964bfb621835f552882b658ac2a1950d8499d35054bd976273b",
+      "supported_targets": 1239,
+      "candidate_rows": 4322,
+      "positives": 1239
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "files": {
+        "bank": "08724568183ad08c59203b93bf98020de95e229e8e8e9280aede6475ec9e42a7",
+        "embeddings": "c825e999acfdfb1b14dec8298ce20edeee8fba4ed95f173902c85c9249a0ec17",
+        "scores": "e4f0843e48d6ae9a2bda51d2b132ec61c0eaa8d2270c33197772e982fb8affa4",
+        "matches": "c20fe489b757ca5c9dc965138a7169c8dd14ff38f4d73570b15c98de9219a8c9"
+      },
+      "gt_metadata_sha256": "24b7132a71b27dca227fe60796b8ca03391392dbe15af04047dce3226dd9fdf8",
+      "supported_targets": 870,
+      "candidate_rows": 2436,
+      "positives": 870
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "files": {
+        "bank": "b6d576bf362d774449f76d16458f6571dc7a68322f38e14d9cdf72c669424f91",
+        "embeddings": "5630215cd9e6bcbc05be16b8237a401140b6b1edcd132fdb2211ea95bedebf30",
+        "scores": "cf854ed8bbe817e9af70a2fab8dbe1dc4bbf5fc4e7afef1621e8bd7f32f38929",
+        "matches": "e68d33320e8efc3dbb44cf3cfcb53fa468418c2e6b6a30e425b0cc85b9794aaf"
+      },
+      "gt_metadata_sha256": "c0f04d1decc35aa52a69bcb42c7e6245db32b35874af776646c50571bc3016e1",
+      "supported_targets": 676,
+      "candidate_rows": 1883,
+      "positives": 676
+    }
+  ],
+  "targets": 2785,
+  "candidate_rows": 8641,
+  "channels": 288,
+  "initial_objective": 0.358076032979135,
+  "final_objective": 0.1795043696567751,
+  "iterations": 27,
+  "gradient_max": 2.176719838377708e-07,
+  "converged": true,
+  "seconds": 0.013305288004630711,
+  "source_guard_enabled": true,
+  "target_data_read": false,
+  "scope": "Training loss is source resubstitution, not held-out performance."
+}

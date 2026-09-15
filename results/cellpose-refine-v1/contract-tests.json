@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-14T17:11:51.796125+00:00",
+  "status": "passed",
+  "tests": 8,
+  "runtime": "/kaggle/envs/detector-screen-cellpose/bin/python",
+  "command": "python -m unittest discover -s tests -p test_cellpose_refine.py -v",
+  "test_source_sha256": "50b62d1ed3880a9ece012ea03d28bf8eb26c1b11aebfd86a9d0ce6e4af268dcb",
+  "log_sha256": "5251f1d07366104b2dc7058cf1dd91541712e2d950e2f608e05f6e9641ff8810"
+}

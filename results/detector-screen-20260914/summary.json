@@ -1,0 +1,5852 @@
+{
+  "date": "2026-09-14",
+  "panel_definition_sha256": "02207ca375b21eb564667837daca8b4ed9efa16a6c926e0903213ff76f281f88",
+  "selection": "12 existing pilot frames plus 20 clips per embryo at evenly spaced ranks of annotated-node count, excluding pilot clips; five fixed adjacent-frame pairs per assessment clip. Frozen before challenger predictions.",
+  "frames": {
+    "pilot": 12,
+    "assessment": 400
+  },
+  "primary_metric": "One-to-one annotated-node recall at 7 micrometers after integer submission rounding, before temporal linking.",
+  "models": [
+    {
+      "id": "anystar",
+      "name": "AnyStar-mix origins",
+      "complete_panels": [
+        "pilot"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 2998,
+          "matches": {
+            "5.0": 12,
+            "6.0": 15,
+            "7.0": 17
+          },
+          "recall": {
+            "5.0": 0.5,
+            "6.0": 0.625,
+            "7.0": 0.7083333333333334
+          },
+          "misses_at_7": 7,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 2.2677760968229954,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 7,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 123,
+          "gt_multiple_candidates_at_7": 13,
+          "nearest_coverage_at_7": 17,
+          "nearest_in_5_to_7_um": 5,
+          "p90_matched_error_um": 6.218807923032444,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 10,
+              "recall": 0.4166666666666667,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 13,
+              "recall": 0.5416666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 14,
+              "recall": 0.5833333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1643,
+              "matched": 15,
+              "recall": 0.625,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1901,
+              "matched": 16,
+              "recall": 0.6666666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 1951,
+          "matches": {
+            "5.0": 17,
+            "6.0": 21,
+            "7.0": 27
+          },
+          "recall": {
+            "5.0": 0.2537313432835821,
+            "6.0": 0.31343283582089554,
+            "7.0": 0.40298507462686567
+          },
+          "misses_at_7": 40,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 3.416812609457093,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 40,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 84,
+          "gt_multiple_candidates_at_7": 17,
+          "nearest_coverage_at_7": 27,
+          "nearest_in_5_to_7_um": 10,
+          "p90_matched_error_um": 6.87269005681023,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 11,
+              "recall": 0.16417910447761194,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 12,
+              "recall": 0.1791044776119403,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 13,
+              "recall": 0.19402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 713,
+              "matched": 14,
+              "recall": 0.208955223880597,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 858,
+              "matched": 17,
+              "recall": 0.2537313432835821,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 4949,
+          "matches": {
+            "5.0": 29,
+            "6.0": 36,
+            "7.0": 44
+          },
+          "recall": {
+            "5.0": 0.31868131868131866,
+            "6.0": 0.3956043956043956,
+            "7.0": 0.4835164835164835
+          },
+          "misses_at_7": 47,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 2.6143687268885367,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 47,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 207,
+          "gt_multiple_candidates_at_7": 30,
+          "nearest_coverage_at_7": 44,
+          "nearest_in_5_to_7_um": 15,
+          "p90_matched_error_um": 6.847431824357269,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 21,
+              "recall": 0.23076923076923078,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 25,
+              "recall": 0.27472527472527475,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 27,
+              "recall": 0.2967032967032967,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2356,
+              "matched": 29,
+              "recall": 0.31868131868131866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2759,
+              "matched": 33,
+              "recall": 0.3626373626373626,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 8.783361141499881,
+          "median_seconds": 7.81951067350019,
+          "max_seconds": 13.288650360999782
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 0
+      }
+    },
+    {
+      "id": "anystar_centroid",
+      "name": "AnyStar-mix mask centroids",
+      "complete_panels": [
+        "pilot"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 2998,
+          "matches": {
+            "5.0": 12,
+            "6.0": 15,
+            "7.0": 17
+          },
+          "recall": {
+            "5.0": 0.5,
+            "6.0": 0.625,
+            "7.0": 0.7083333333333334
+          },
+          "misses_at_7": 7,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 2.2677760968229954,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 7,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 114,
+          "gt_multiple_candidates_at_7": 12,
+          "nearest_coverage_at_7": 17,
+          "nearest_in_5_to_7_um": 5,
+          "p90_matched_error_um": 6.135771333348699,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 10,
+              "recall": 0.4166666666666667,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 13,
+              "recall": 0.5416666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 14,
+              "recall": 0.5833333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1643,
+              "matched": 15,
+              "recall": 0.625,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1901,
+              "matched": 16,
+              "recall": 0.6666666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 1951,
+          "matches": {
+            "5.0": 17,
+            "6.0": 21,
+            "7.0": 27
+          },
+          "recall": {
+            "5.0": 0.2537313432835821,
+            "6.0": 0.31343283582089554,
+            "7.0": 0.40298507462686567
+          },
+          "misses_at_7": 40,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 3.416812609457093,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 40,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 76,
+          "gt_multiple_candidates_at_7": 18,
+          "nearest_coverage_at_7": 27,
+          "nearest_in_5_to_7_um": 10,
+          "p90_matched_error_um": 6.87269005681023,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 11,
+              "recall": 0.16417910447761194,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 12,
+              "recall": 0.1791044776119403,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 13,
+              "recall": 0.19402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 713,
+              "matched": 14,
+              "recall": 0.208955223880597,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 858,
+              "matched": 17,
+              "recall": 0.2537313432835821,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 4949,
+          "matches": {
+            "5.0": 29,
+            "6.0": 36,
+            "7.0": 44
+          },
+          "recall": {
+            "5.0": 0.31868131868131866,
+            "6.0": 0.3956043956043956,
+            "7.0": 0.4835164835164835
+          },
+          "misses_at_7": 47,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 2.6143687268885367,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 47,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 190,
+          "gt_multiple_candidates_at_7": 30,
+          "nearest_coverage_at_7": 44,
+          "nearest_in_5_to_7_um": 15,
+          "p90_matched_error_um": 6.829206801796382,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 21,
+              "recall": 0.23076923076923078,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 25,
+              "recall": 0.27472527472527475,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 27,
+              "recall": 0.2967032967032967,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2356,
+              "matched": 29,
+              "recall": 0.31868131868131866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2759,
+              "matched": 33,
+              "recall": 0.3626373626373626,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 8.876497742666592,
+          "median_seconds": 7.933522032500605,
+          "max_seconds": 13.385380208999777
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 0
+      }
+    },
+    {
+      "id": "cellect",
+      "name": "CELLECT",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1754,
+          "matches": {
+            "5.0": 24,
+            "6.0": 24,
+            "7.0": 24
+          },
+          "recall": {
+            "5.0": 1.0,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.3267776096822996,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 12,
+          "nearest_coverage_at_7": 24,
+          "nearest_in_5_to_7_um": 0,
+          "p90_matched_error_um": 2.9928231197192217,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 17,
+              "recall": 0.7083333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 23,
+              "recall": 0.9583333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1290,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1501,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1661,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 677,
+          "matches": {
+            "5.0": 61,
+            "6.0": 63,
+            "7.0": 63
+          },
+          "recall": {
+            "5.0": 0.9104477611940298,
+            "6.0": 0.9402985074626866,
+            "7.0": 0.9402985074626866
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1856392294220666,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 22,
+          "nearest_coverage_at_7": 63,
+          "nearest_in_5_to_7_um": 2,
+          "p90_matched_error_um": 4.050112726308977,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 52,
+              "recall": 0.7761194029850746,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 58,
+              "recall": 0.8656716417910447,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 61,
+              "recall": 0.9104477611940298,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 675,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 677,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 2431,
+          "matches": {
+            "5.0": 85,
+            "6.0": 87,
+            "7.0": 87
+          },
+          "recall": {
+            "5.0": 0.9340659340659341,
+            "6.0": 0.9560439560439561,
+            "7.0": 0.9560439560439561
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.2842049656629688,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 34,
+          "nearest_coverage_at_7": 87,
+          "nearest_in_5_to_7_um": 2,
+          "p90_matched_error_um": 3.6652500849473304,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 69,
+              "recall": 0.7582417582417582,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 81,
+              "recall": 0.8901098901098901,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1861,
+              "matched": 85,
+              "recall": 0.9340659340659341,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2176,
+              "matched": 87,
+              "recall": 0.9560439560439561,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2338,
+              "matched": 87,
+              "recall": 0.9560439560439561,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 105408,
+          "matches": {
+            "5.0": 559,
+            "6.0": 567,
+            "7.0": 573
+          },
+          "recall": {
+            "5.0": 0.9363484087102177,
+            "6.0": 0.949748743718593,
+            "7.0": 0.9597989949748744
+          },
+          "misses_at_7": 24,
+          "gt_edge_endpoints_available": 277,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.9486301369863014,
+          "candidate_ratio_to_incumbent": 1.5073790184189453,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 24,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 300,
+          "nearest_coverage_at_7": 573,
+          "nearest_in_5_to_7_um": 14,
+          "p90_matched_error_um": 3.447145558284419,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 344,
+              "recall": 0.576214405360134,
+              "gt_edge_endpoints_available": 142,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4863013698630137
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 460,
+              "recall": 0.7705192629815746,
+              "gt_edge_endpoints_available": 202,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.6917808219178082
+            },
+            "1.0": {
+              "predicted": 69369,
+              "matched": 520,
+              "recall": 0.8710217755443886,
+              "gt_edge_endpoints_available": 242,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8287671232876712
+            },
+            "1.25": {
+              "predicted": 81315,
+              "matched": 545,
+              "recall": 0.9128978224455612,
+              "gt_edge_endpoints_available": 258,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8835616438356164
+            },
+            "1.5": {
+              "predicted": 88985,
+              "matched": 557,
+              "recall": 0.932998324958124,
+              "gt_edge_endpoints_available": 266,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.910958904109589
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 49744,
+          "matches": {
+            "5.0": 1519,
+            "6.0": 1565,
+            "7.0": 1594
+          },
+          "recall": {
+            "5.0": 0.8505039193729004,
+            "6.0": 0.8762597984322509,
+            "7.0": 0.8924972004479284
+          },
+          "misses_at_7": 192,
+          "gt_edge_endpoints_available": 760,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.8765859284890427,
+          "candidate_ratio_to_incumbent": 1.0673532882737904,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 183,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 592,
+          "nearest_coverage_at_7": 1594,
+          "nearest_in_5_to_7_um": 75,
+          "p90_matched_error_um": 3.72334275215162,
+          "budgets": {
+            "0.5": {
+              "predicted": 23286,
+              "matched": 1244,
+              "recall": 0.696528555431131,
+              "gt_edge_endpoints_available": 556,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6412918108419838
+            },
+            "0.75": {
+              "predicted": 34886,
+              "matched": 1468,
+              "recall": 0.8219484882418813,
+              "gt_edge_endpoints_available": 685,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.790080738177624
+            },
+            "1.0": {
+              "predicted": 44922,
+              "matched": 1578,
+              "recall": 0.883538633818589,
+              "gt_edge_endpoints_available": 751,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8662053056516724
+            },
+            "1.25": {
+              "predicted": 48732,
+              "matched": 1590,
+              "recall": 0.8902575587905935,
+              "gt_edge_endpoints_available": 758,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8742791234140715
+            },
+            "1.5": {
+              "predicted": 49605,
+              "matched": 1594,
+              "recall": 0.8924972004479284,
+              "gt_edge_endpoints_available": 760,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8765859284890427
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 155152,
+          "matches": {
+            "5.0": 2078,
+            "6.0": 2132,
+            "7.0": 2167
+          },
+          "recall": {
+            "5.0": 0.8720100713386487,
+            "6.0": 0.8946705832983634,
+            "7.0": 0.9093579521611415
+          },
+          "misses_at_7": 216,
+          "gt_edge_endpoints_available": 1037,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.8947368421052632,
+          "candidate_ratio_to_incumbent": 1.3313996893583793,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 207,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 892,
+          "nearest_coverage_at_7": 2167,
+          "nearest_in_5_to_7_um": 89,
+          "p90_matched_error_um": 3.65625,
+          "budgets": {
+            "0.5": {
+              "predicted": 58257,
+              "matched": 1588,
+              "recall": 0.6663869072597566,
+              "gt_edge_endpoints_available": 698,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6022433132010354
+            },
+            "0.75": {
+              "predicted": 87325,
+              "matched": 1928,
+              "recall": 0.8090642047838859,
+              "gt_edge_endpoints_available": 887,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7653149266609146
+            },
+            "1.0": {
+              "predicted": 114291,
+              "matched": 2098,
+              "recall": 0.8804028535459505,
+              "gt_edge_endpoints_available": 993,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8567730802415876
+            },
+            "1.25": {
+              "predicted": 130047,
+              "matched": 2135,
+              "recall": 0.8959295006294586,
+              "gt_edge_endpoints_available": 1016,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8766177739430544
+            },
+            "1.5": {
+              "predicted": 138590,
+              "matched": 2151,
+              "recall": 0.9026437263953,
+              "gt_edge_endpoints_available": 1026,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8852459016393442
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 0.9401390415832035,
+          "median_seconds": 0.8930495814997812,
+          "max_seconds": 1.2481728519996977
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 0.9078930291874735,
+          "median_seconds": 0.9023318730000938,
+          "max_seconds": 1.1314898130003712
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "cellpose_cpdino_vitb",
+      "name": "Cellpose cpdino-vitb",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1645,
+          "matches": {
+            "5.0": 24,
+            "6.0": 24,
+            "7.0": 24
+          },
+          "recall": {
+            "5.0": 1.0,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.2443267776096822,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 7,
+          "nearest_coverage_at_7": 24,
+          "nearest_in_5_to_7_um": 0,
+          "p90_matched_error_um": 3.2752922102462856,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 19,
+              "recall": 0.7916666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 23,
+              "recall": 0.9583333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1523,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1618,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 635,
+          "matches": {
+            "5.0": 62,
+            "6.0": 65,
+            "7.0": 66
+          },
+          "recall": {
+            "5.0": 0.9253731343283582,
+            "6.0": 0.9701492537313433,
+            "7.0": 0.9850746268656716
+          },
+          "misses_at_7": 1,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1120840630472855,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 1,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 14,
+          "nearest_coverage_at_7": 66,
+          "nearest_in_5_to_7_um": 4,
+          "p90_matched_error_um": 4.458929043700468,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 53,
+              "recall": 0.7910447761194029,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 556,
+              "matched": 66,
+              "recall": 0.9850746268656716,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 626,
+              "matched": 66,
+              "recall": 0.9850746268656716,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 635,
+              "matched": 66,
+              "recall": 0.9850746268656716,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 2280,
+          "matches": {
+            "5.0": 86,
+            "6.0": 89,
+            "7.0": 90
+          },
+          "recall": {
+            "5.0": 0.945054945054945,
+            "6.0": 0.978021978021978,
+            "7.0": 0.989010989010989
+          },
+          "misses_at_7": 1,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.2044374009508716,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 1,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 21,
+          "nearest_coverage_at_7": 90,
+          "nearest_in_5_to_7_um": 4,
+          "p90_matched_error_um": 3.876899505605229,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 72,
+              "recall": 0.7912087912087912,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 84,
+              "recall": 0.9230769230769231,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1878,
+              "matched": 89,
+              "recall": 0.978021978021978,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2149,
+              "matched": 90,
+              "recall": 0.989010989010989,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2253,
+              "matched": 90,
+              "recall": 0.989010989010989,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 105883,
+          "matches": {
+            "5.0": 568,
+            "6.0": 580,
+            "7.0": 586
+          },
+          "recall": {
+            "5.0": 0.9514237855946399,
+            "6.0": 0.9715242881072027,
+            "7.0": 0.981574539363484
+          },
+          "misses_at_7": 11,
+          "gt_edge_endpoints_available": 285,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.976027397260274,
+          "candidate_ratio_to_incumbent": 1.5141717194828967,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 11,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 10,
+          "gt_multiple_candidates_at_7": 264,
+          "nearest_coverage_at_7": 586,
+          "nearest_in_5_to_7_um": 18,
+          "p90_matched_error_um": 3.374565944310468,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 359,
+              "recall": 0.6013400335008375,
+              "gt_edge_endpoints_available": 144,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4931506849315068
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 490,
+              "recall": 0.8207705192629816,
+              "gt_edge_endpoints_available": 224,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.7671232876712328
+            },
+            "1.0": {
+              "predicted": 69906,
+              "matched": 546,
+              "recall": 0.914572864321608,
+              "gt_edge_endpoints_available": 258,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8835616438356164
+            },
+            "1.25": {
+              "predicted": 83319,
+              "matched": 563,
+              "recall": 0.9430485762144054,
+              "gt_edge_endpoints_available": 269,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9212328767123288
+            },
+            "1.5": {
+              "predicted": 90919,
+              "matched": 577,
+              "recall": 0.966499162479062,
+              "gt_edge_endpoints_available": 279,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9554794520547946
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 50343,
+          "matches": {
+            "5.0": 1595,
+            "6.0": 1661,
+            "7.0": 1699
+          },
+          "recall": {
+            "5.0": 0.893057110862262,
+            "6.0": 0.9300111982082867,
+            "7.0": 0.9512877939529675
+          },
+          "misses_at_7": 87,
+          "gt_edge_endpoints_available": 814,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.9388696655132641,
+          "candidate_ratio_to_incumbent": 1.0802059864821372,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 77,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 1,
+          "gt_multiple_candidates_at_7": 377,
+          "nearest_coverage_at_7": 1699,
+          "nearest_in_5_to_7_um": 104,
+          "p90_matched_error_um": 3.8667673429948506,
+          "budgets": {
+            "0.5": {
+              "predicted": 22989,
+              "matched": 1208,
+              "recall": 0.6763717805151176,
+              "gt_edge_endpoints_available": 549,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6332179930795848
+            },
+            "0.75": {
+              "predicted": 34166,
+              "matched": 1480,
+              "recall": 0.8286674132138858,
+              "gt_edge_endpoints_available": 685,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.790080738177624
+            },
+            "1.0": {
+              "predicted": 44544,
+              "matched": 1674,
+              "recall": 0.9372900335946248,
+              "gt_edge_endpoints_available": 797,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.9192618223760092
+            },
+            "1.25": {
+              "predicted": 48696,
+              "matched": 1693,
+              "recall": 0.9479283314669653,
+              "gt_edge_endpoints_available": 809,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.9331026528258363
+            },
+            "1.5": {
+              "predicted": 49511,
+              "matched": 1695,
+              "recall": 0.9490481522956327,
+              "gt_edge_endpoints_available": 811,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.9354094579008074
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 156226,
+          "matches": {
+            "5.0": 2163,
+            "6.0": 2241,
+            "7.0": 2285
+          },
+          "recall": {
+            "5.0": 0.907679395719681,
+            "6.0": 0.9404112463281578,
+            "7.0": 0.9588753671842216
+          },
+          "misses_at_7": 98,
+          "gt_edge_endpoints_available": 1099,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.9482312338222606,
+          "candidate_ratio_to_incumbent": 1.3406159628603056,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 88,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 11,
+          "gt_multiple_candidates_at_7": 641,
+          "nearest_coverage_at_7": 2285,
+          "nearest_in_5_to_7_um": 122,
+          "p90_matched_error_um": 3.65625,
+          "budgets": {
+            "0.5": {
+              "predicted": 57960,
+              "matched": 1567,
+              "recall": 0.6575744859420898,
+              "gt_edge_endpoints_available": 693,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.5979292493528904
+            },
+            "0.75": {
+              "predicted": 86605,
+              "matched": 1970,
+              "recall": 0.8266890474192194,
+              "gt_edge_endpoints_available": 909,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7842968075927523
+            },
+            "1.0": {
+              "predicted": 114450,
+              "matched": 2220,
+              "recall": 0.931598825010491,
+              "gt_edge_endpoints_available": 1055,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.910267471958585
+            },
+            "1.25": {
+              "predicted": 132015,
+              "matched": 2256,
+              "recall": 0.9467058329836341,
+              "gt_edge_endpoints_available": 1078,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.9301121656600517
+            },
+            "1.5": {
+              "predicted": 140430,
+              "matched": 2272,
+              "recall": 0.9534200587494754,
+              "gt_edge_endpoints_available": 1090,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.9404659188955996
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 9.22963332899993,
+          "median_seconds": 9.156849459000114,
+          "max_seconds": 9.588345629000287
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 9.485160650724982,
+          "median_seconds": 9.337732545999643,
+          "max_seconds": 10.699205351998899
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "focus_reference",
+      "name": "FOCUS-3D (previous pilot reference)",
+      "complete_panels": [
+        "pilot"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1783,
+          "matches": {
+            "5.0": 23,
+            "6.0": 23,
+            "7.0": 24
+          },
+          "recall": {
+            "5.0": 0.9583333333333334,
+            "6.0": 0.9583333333333334,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.348714069591528,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 7,
+          "nearest_coverage_at_7": 24,
+          "nearest_in_5_to_7_um": 1,
+          "p90_matched_error_um": 3.090654187755479,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 8,
+              "recall": 0.3333333333333333,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 14,
+              "recall": 0.5833333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1612,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1769,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 646,
+          "matches": {
+            "5.0": 59,
+            "6.0": 63,
+            "7.0": 65
+          },
+          "recall": {
+            "5.0": 0.8805970149253731,
+            "6.0": 0.9402985074626866,
+            "7.0": 0.9701492537313433
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1313485113835378,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 3,
+          "nearest_coverage_at_7": 65,
+          "nearest_in_5_to_7_um": 6,
+          "p90_matched_error_um": 4.938842902044208,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 29,
+              "recall": 0.43283582089552236,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 41,
+              "recall": 0.6119402985074627,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 568,
+              "matched": 57,
+              "recall": 0.8507462686567164,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 646,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 646,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 2429,
+          "matches": {
+            "5.0": 82,
+            "6.0": 86,
+            "7.0": 89
+          },
+          "recall": {
+            "5.0": 0.9010989010989011,
+            "6.0": 0.945054945054945,
+            "7.0": 0.978021978021978
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.283148441627047,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 10,
+          "nearest_coverage_at_7": 89,
+          "nearest_in_5_to_7_um": 7,
+          "p90_matched_error_um": 4.908737426772795,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 37,
+              "recall": 0.4065934065934066,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 55,
+              "recall": 0.6043956043956044,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1890,
+              "matched": 75,
+              "recall": 0.8241758241758241,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2258,
+              "matched": 86,
+              "recall": 0.945054945054945,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2415,
+              "matched": 89,
+              "recall": 0.978021978021978,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        }
+      ],
+      "runtime": [],
+      "confidence_ranking_available": false,
+      "progress": {
+        "pilot": 12,
+        "assessment": 0
+      }
+    },
+    {
+      "id": "incumbent",
+      "name": "Temporal U-Net ensemble (incumbent)",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1322,
+          "matches": {
+            "5.0": 23,
+            "6.0": 24,
+            "7.0": 24
+          },
+          "recall": {
+            "5.0": 0.9583333333333334,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 24,
+          "nearest_in_5_to_7_um": 1,
+          "p90_matched_error_um": 2.0470967989813476,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1322,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1322,
+              "matched": 24,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 571,
+          "matches": {
+            "5.0": 66,
+            "6.0": 67,
+            "7.0": 67
+          },
+          "recall": {
+            "5.0": 0.9850746268656716,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 5,
+          "nearest_coverage_at_7": 67,
+          "nearest_in_5_to_7_um": 1,
+          "p90_matched_error_um": 3.1604283843505887,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 60,
+              "recall": 0.8955223880597015,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 67,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 571,
+              "matched": 67,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 571,
+              "matched": 67,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 1893,
+          "matches": {
+            "5.0": 89,
+            "6.0": 91,
+            "7.0": 91
+          },
+          "recall": {
+            "5.0": 0.978021978021978,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 11,
+          "nearest_coverage_at_7": 91,
+          "nearest_in_5_to_7_um": 2,
+          "p90_matched_error_um": 3.0671202393287422,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 80,
+              "recall": 0.8791208791208791,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 87,
+              "recall": 0.9560439560439561,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 91,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1893,
+              "matched": 91,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1893,
+              "matched": 91,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 69928,
+          "matches": {
+            "5.0": 578,
+            "6.0": 591,
+            "7.0": 595
+          },
+          "recall": {
+            "5.0": 0.9681742043551089,
+            "6.0": 0.9899497487437185,
+            "7.0": 0.9966499162479062
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 290,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.9931506849315068,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 173,
+          "nearest_coverage_at_7": 596,
+          "nearest_in_5_to_7_um": 18,
+          "p90_matched_error_um": 3.29035124522853,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 504,
+              "recall": 0.8442211055276382,
+              "gt_edge_endpoints_available": 228,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.7808219178082192
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 576,
+              "recall": 0.964824120603015,
+              "gt_edge_endpoints_available": 274,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9383561643835616
+            },
+            "1.0": {
+              "predicted": 69928,
+              "matched": 595,
+              "recall": 0.9966499162479062,
+              "gt_edge_endpoints_available": 290,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9931506849315068
+            },
+            "1.25": {
+              "predicted": 69928,
+              "matched": 595,
+              "recall": 0.9966499162479062,
+              "gt_edge_endpoints_available": 290,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9931506849315068
+            },
+            "1.5": {
+              "predicted": 69928,
+              "matched": 595,
+              "recall": 0.9966499162479062,
+              "gt_edge_endpoints_available": 290,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.9931506849315068
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 46605,
+          "matches": {
+            "5.0": 1728,
+            "6.0": 1763,
+            "7.0": 1776
+          },
+          "recall": {
+            "5.0": 0.9675251959686451,
+            "6.0": 0.9871220604703248,
+            "7.0": 0.9944008958566629
+          },
+          "misses_at_7": 10,
+          "gt_edge_endpoints_available": 862,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.994232987312572,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 301,
+          "nearest_coverage_at_7": 1776,
+          "nearest_in_5_to_7_um": 48,
+          "p90_matched_error_um": 3.374565944310468,
+          "budgets": {
+            "0.5": {
+              "predicted": 23303,
+              "matched": 1495,
+              "recall": 0.8370660694288914,
+              "gt_edge_endpoints_available": 683,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.7877739331026529
+            },
+            "0.75": {
+              "predicted": 34949,
+              "matched": 1708,
+              "recall": 0.9563269876819709,
+              "gt_edge_endpoints_available": 814,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.9388696655132641
+            },
+            "1.0": {
+              "predicted": 46605,
+              "matched": 1776,
+              "recall": 0.9944008958566629,
+              "gt_edge_endpoints_available": 862,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.994232987312572
+            },
+            "1.25": {
+              "predicted": 46605,
+              "matched": 1776,
+              "recall": 0.9944008958566629,
+              "gt_edge_endpoints_available": 862,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.994232987312572
+            },
+            "1.5": {
+              "predicted": 46605,
+              "matched": 1776,
+              "recall": 0.9944008958566629,
+              "gt_edge_endpoints_available": 862,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.994232987312572
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 116533,
+          "matches": {
+            "5.0": 2306,
+            "6.0": 2354,
+            "7.0": 2371
+          },
+          "recall": {
+            "5.0": 0.9676877885018884,
+            "6.0": 0.9878304657994125,
+            "7.0": 0.994964330675619
+          },
+          "misses_at_7": 12,
+          "gt_edge_endpoints_available": 1152,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.993960310612597,
+          "candidate_ratio_to_incumbent": 1.0,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 474,
+          "nearest_coverage_at_7": 2372,
+          "nearest_in_5_to_7_um": 66,
+          "p90_matched_error_um": 3.350023320814349,
+          "budgets": {
+            "0.5": {
+              "predicted": 58274,
+              "matched": 1999,
+              "recall": 0.838858581619807,
+              "gt_edge_endpoints_available": 911,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7860224331320104
+            },
+            "0.75": {
+              "predicted": 87388,
+              "matched": 2284,
+              "recall": 0.9584557280738565,
+              "gt_edge_endpoints_available": 1088,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.9387402933563417
+            },
+            "1.0": {
+              "predicted": 116533,
+              "matched": 2371,
+              "recall": 0.994964330675619,
+              "gt_edge_endpoints_available": 1152,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.993960310612597
+            },
+            "1.25": {
+              "predicted": 116533,
+              "matched": 2371,
+              "recall": 0.994964330675619,
+              "gt_edge_endpoints_available": 1152,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.993960310612597
+            },
+            "1.5": {
+              "predicted": 116533,
+              "matched": 2371,
+              "recall": 0.994964330675619,
+              "gt_edge_endpoints_available": 1152,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.993960310612597
+            }
+          }
+        }
+      ],
+      "runtime": [],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "nucverse",
+      "name": "NucVerse3D generalized",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 783,
+          "matches": {
+            "5.0": 19,
+            "6.0": 19,
+            "7.0": 20
+          },
+          "recall": {
+            "5.0": 0.7916666666666666,
+            "6.0": 0.7916666666666666,
+            "7.0": 0.8333333333333334
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.5922844175491679,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 1,
+          "nearest_coverage_at_7": 20,
+          "nearest_in_5_to_7_um": 1,
+          "p90_matched_error_um": 3.9322098094880493,
+          "budgets": {
+            "0.5": {
+              "predicted": 602,
+              "matched": 17,
+              "recall": 0.7083333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 735,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 783,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 783,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 783,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 398,
+          "matches": {
+            "5.0": 60,
+            "6.0": 62,
+            "7.0": 63
+          },
+          "recall": {
+            "5.0": 0.8955223880597015,
+            "6.0": 0.9253731343283582,
+            "7.0": 0.9402985074626866
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.6970227670753065,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 4,
+          "nearest_coverage_at_7": 63,
+          "nearest_in_5_to_7_um": 3,
+          "p90_matched_error_um": 3.6379658564756103,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 53,
+              "recall": 0.7910447761194029,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 392,
+              "matched": 62,
+              "recall": 0.9253731343283582,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 398,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 398,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 398,
+              "matched": 63,
+              "recall": 0.9402985074626866,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 1181,
+          "matches": {
+            "5.0": 79,
+            "6.0": 81,
+            "7.0": 83
+          },
+          "recall": {
+            "5.0": 0.8681318681318682,
+            "6.0": 0.8901098901098901,
+            "7.0": 0.9120879120879121
+          },
+          "misses_at_7": 8,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.623877443211833,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 8,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 5,
+          "nearest_coverage_at_7": 83,
+          "nearest_in_5_to_7_um": 4,
+          "p90_matched_error_um": 3.8654364973227096,
+          "budgets": {
+            "0.5": {
+              "predicted": 886,
+              "matched": 70,
+              "recall": 0.7692307692307693,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1127,
+              "matched": 82,
+              "recall": 0.9010989010989011,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1181,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1181,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1181,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 33627,
+          "matches": {
+            "5.0": 321,
+            "6.0": 338,
+            "7.0": 364
+          },
+          "recall": {
+            "5.0": 0.5376884422110553,
+            "6.0": 0.5661641541038526,
+            "7.0": 0.609715242881072
+          },
+          "misses_at_7": 233,
+          "gt_edge_endpoints_available": 158,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.541095890410959,
+          "candidate_ratio_to_incumbent": 0.4808803340578881,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 232,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 77,
+          "nearest_coverage_at_7": 366,
+          "nearest_in_5_to_7_um": 42,
+          "p90_matched_error_um": 5.257636532874256,
+          "budgets": {
+            "0.5": {
+              "predicted": 26151,
+              "matched": 243,
+              "recall": 0.40703517587939697,
+              "gt_edge_endpoints_available": 93,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.3184931506849315
+            },
+            "0.75": {
+              "predicted": 32084,
+              "matched": 329,
+              "recall": 0.5510887772194305,
+              "gt_edge_endpoints_available": 137,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4691780821917808
+            },
+            "1.0": {
+              "predicted": 33627,
+              "matched": 364,
+              "recall": 0.609715242881072,
+              "gt_edge_endpoints_available": 158,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.541095890410959
+            },
+            "1.25": {
+              "predicted": 33627,
+              "matched": 364,
+              "recall": 0.609715242881072,
+              "gt_edge_endpoints_available": 158,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.541095890410959
+            },
+            "1.5": {
+              "predicted": 33627,
+              "matched": 364,
+              "recall": 0.609715242881072,
+              "gt_edge_endpoints_available": 158,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.541095890410959
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 19041,
+          "matches": {
+            "5.0": 1188,
+            "6.0": 1245,
+            "7.0": 1282
+          },
+          "recall": {
+            "5.0": 0.6651735722284434,
+            "6.0": 0.6970884658454647,
+            "7.0": 0.7178051511758119
+          },
+          "misses_at_7": 504,
+          "gt_edge_endpoints_available": 585,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.6747404844290658,
+          "candidate_ratio_to_incumbent": 0.4085613131638236,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 494,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 99,
+          "nearest_coverage_at_7": 1285,
+          "nearest_in_5_to_7_um": 97,
+          "p90_matched_error_um": 4.392383695854243,
+          "budgets": {
+            "0.5": {
+              "predicted": 16909,
+              "matched": 1158,
+              "recall": 0.6483762597984323,
+              "gt_edge_endpoints_available": 526,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6066897347174164
+            },
+            "0.75": {
+              "predicted": 18744,
+              "matched": 1271,
+              "recall": 0.7116461366181411,
+              "gt_edge_endpoints_available": 578,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6666666666666666
+            },
+            "1.0": {
+              "predicted": 19041,
+              "matched": 1282,
+              "recall": 0.7178051511758119,
+              "gt_edge_endpoints_available": 585,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6747404844290658
+            },
+            "1.25": {
+              "predicted": 19041,
+              "matched": 1282,
+              "recall": 0.7178051511758119,
+              "gt_edge_endpoints_available": 585,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6747404844290658
+            },
+            "1.5": {
+              "predicted": 19041,
+              "matched": 1282,
+              "recall": 0.7178051511758119,
+              "gt_edge_endpoints_available": 585,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6747404844290658
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 52668,
+          "matches": {
+            "5.0": 1509,
+            "6.0": 1583,
+            "7.0": 1646
+          },
+          "recall": {
+            "5.0": 0.6332354175409148,
+            "6.0": 0.6642887117079311,
+            "7.0": 0.6907259756609316
+          },
+          "misses_at_7": 737,
+          "gt_edge_endpoints_available": 743,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.6410698878343399,
+          "candidate_ratio_to_incumbent": 0.45195781452464107,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 726,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 176,
+          "nearest_coverage_at_7": 1651,
+          "nearest_in_5_to_7_um": 139,
+          "p90_matched_error_um": 4.623037847713985,
+          "budgets": {
+            "0.5": {
+              "predicted": 43060,
+              "matched": 1401,
+              "recall": 0.5879143936214856,
+              "gt_edge_endpoints_available": 619,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.5340811044003452
+            },
+            "0.75": {
+              "predicted": 50828,
+              "matched": 1600,
+              "recall": 0.6714225765841376,
+              "gt_edge_endpoints_available": 715,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6169111302847282
+            },
+            "1.0": {
+              "predicted": 52668,
+              "matched": 1646,
+              "recall": 0.6907259756609316,
+              "gt_edge_endpoints_available": 743,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6410698878343399
+            },
+            "1.25": {
+              "predicted": 52668,
+              "matched": 1646,
+              "recall": 0.6907259756609316,
+              "gt_edge_endpoints_available": 743,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6410698878343399
+            },
+            "1.5": {
+              "predicted": 52668,
+              "matched": 1646,
+              "recall": 0.6907259756609316,
+              "gt_edge_endpoints_available": 743,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6410698878343399
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 10.865097540749957,
+          "median_seconds": 10.144507441500082,
+          "max_seconds": 12.998549863000335
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 6.379344567967439,
+          "median_seconds": 5.990939046499989,
+          "max_seconds": 12.41733515100077
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "organoid",
+      "name": "OrganoidTracker 2.0",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 3930,
+          "matches": {
+            "5.0": 19,
+            "6.0": 21,
+            "7.0": 22
+          },
+          "recall": {
+            "5.0": 0.7916666666666666,
+            "6.0": 0.875,
+            "7.0": 0.9166666666666666
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 2.972768532526475,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 17,
+          "nearest_coverage_at_7": 22,
+          "nearest_in_5_to_7_um": 3,
+          "p90_matched_error_um": 5.136485906552417,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 16,
+              "recall": 0.6666666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 17,
+              "recall": 0.7083333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1653,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1983,
+              "matched": 22,
+              "recall": 0.9166666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 3626,
+          "matches": {
+            "5.0": 60,
+            "6.0": 66,
+            "7.0": 66
+          },
+          "recall": {
+            "5.0": 0.8955223880597015,
+            "6.0": 0.9850746268656716,
+            "7.0": 0.9850746268656716
+          },
+          "misses_at_7": 1,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 6.350262697022767,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 1,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 42,
+          "nearest_coverage_at_7": 66,
+          "nearest_in_5_to_7_um": 6,
+          "p90_matched_error_um": 4.865635072229026,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 35,
+              "recall": 0.5223880597014925,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 54,
+              "recall": 0.8059701492537313,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 62,
+              "recall": 0.9253731343283582,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 713,
+              "matched": 62,
+              "recall": 0.9253731343283582,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 858,
+              "matched": 62,
+              "recall": 0.9253731343283582,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 7556,
+          "matches": {
+            "5.0": 79,
+            "6.0": 87,
+            "7.0": 88
+          },
+          "recall": {
+            "5.0": 0.8681318681318682,
+            "6.0": 0.9560439560439561,
+            "7.0": 0.967032967032967
+          },
+          "misses_at_7": 3,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 3.9915478077126254,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 3,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 59,
+          "nearest_coverage_at_7": 88,
+          "nearest_in_5_to_7_um": 9,
+          "p90_matched_error_um": 4.983668228829407,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 51,
+              "recall": 0.5604395604395604,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 71,
+              "recall": 0.7802197802197802,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2366,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2841,
+              "matched": 84,
+              "recall": 0.9230769230769231,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 184739,
+          "matches": {
+            "5.0": 511,
+            "6.0": 553,
+            "7.0": 574
+          },
+          "recall": {
+            "5.0": 0.8559463986599665,
+            "6.0": 0.9262981574539364,
+            "7.0": 0.9614740368509213
+          },
+          "misses_at_7": 23,
+          "gt_edge_endpoints_available": 274,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.9383561643835616,
+          "candidate_ratio_to_incumbent": 2.6418458986385995,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 23,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 355,
+          "nearest_coverage_at_7": 575,
+          "nearest_in_5_to_7_um": 63,
+          "p90_matched_error_um": 5.149924597397418,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 294,
+              "recall": 0.49246231155778897,
+              "gt_edge_endpoints_available": 113,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.386986301369863
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 390,
+              "recall": 0.6532663316582915,
+              "gt_edge_endpoints_available": 164,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5616438356164384
+            },
+            "1.0": {
+              "predicted": 69928,
+              "matched": 457,
+              "recall": 0.7654941373534339,
+              "gt_edge_endpoints_available": 196,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.6712328767123288
+            },
+            "1.25": {
+              "predicted": 87417,
+              "matched": 488,
+              "recall": 0.8174204355108877,
+              "gt_edge_endpoints_available": 214,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.7328767123287672
+            },
+            "1.5": {
+              "predicted": 104746,
+              "matched": 519,
+              "recall": 0.8693467336683417,
+              "gt_edge_endpoints_available": 236,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8082191780821918
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 135276,
+          "matches": {
+            "5.0": 1417,
+            "6.0": 1627,
+            "7.0": 1709
+          },
+          "recall": {
+            "5.0": 0.7933930571108623,
+            "6.0": 0.9109742441209406,
+            "7.0": 0.9568868980963046
+          },
+          "misses_at_7": 77,
+          "gt_edge_endpoints_available": 811,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.9354094579008074,
+          "candidate_ratio_to_incumbent": 2.9026070164145477,
+          "gains_over_incumbent_at_7": 7,
+          "losses_from_incumbent_at_7": 74,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 1098,
+          "nearest_coverage_at_7": 1709,
+          "nearest_in_5_to_7_um": 292,
+          "p90_matched_error_um": 5.420051026051323,
+          "budgets": {
+            "0.5": {
+              "predicted": 23303,
+              "matched": 857,
+              "recall": 0.4798432250839866,
+              "gt_edge_endpoints_available": 321,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.370242214532872
+            },
+            "0.75": {
+              "predicted": 34949,
+              "matched": 1180,
+              "recall": 0.6606942889137738,
+              "gt_edge_endpoints_available": 491,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.566320645905421
+            },
+            "1.0": {
+              "predicted": 46605,
+              "matched": 1371,
+              "recall": 0.7676371780515118,
+              "gt_edge_endpoints_available": 594,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6851211072664359
+            },
+            "1.25": {
+              "predicted": 58261,
+              "matched": 1477,
+              "recall": 0.8269876819708847,
+              "gt_edge_endpoints_available": 658,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.7589388696655133
+            },
+            "1.5": {
+              "predicted": 69755,
+              "matched": 1565,
+              "recall": 0.8762597984322509,
+              "gt_edge_endpoints_available": 717,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8269896193771626
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 320015,
+          "matches": {
+            "5.0": 1928,
+            "6.0": 2180,
+            "7.0": 2283
+          },
+          "recall": {
+            "5.0": 0.8090642047838859,
+            "6.0": 0.9148132605958875,
+            "7.0": 0.9580360889634914
+          },
+          "misses_at_7": 100,
+          "gt_edge_endpoints_available": 1085,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.9361518550474547,
+          "candidate_ratio_to_incumbent": 2.7461319969450715,
+          "gains_over_incumbent_at_7": 9,
+          "losses_from_incumbent_at_7": 97,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 1453,
+          "nearest_coverage_at_7": 2284,
+          "nearest_in_5_to_7_um": 355,
+          "p90_matched_error_um": 5.401746832951781,
+          "budgets": {
+            "0.5": {
+              "predicted": 58274,
+              "matched": 1151,
+              "recall": 0.483004616030214,
+              "gt_edge_endpoints_available": 434,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.3744607420189819
+            },
+            "0.75": {
+              "predicted": 87388,
+              "matched": 1570,
+              "recall": 0.6588334032731851,
+              "gt_edge_endpoints_available": 655,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.5651423641069888
+            },
+            "1.0": {
+              "predicted": 116533,
+              "matched": 1828,
+              "recall": 0.7671002937473772,
+              "gt_edge_endpoints_available": 790,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6816220880069025
+            },
+            "1.25": {
+              "predicted": 145678,
+              "matched": 1965,
+              "recall": 0.824590851867394,
+              "gt_edge_endpoints_available": 872,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7523727351164797
+            },
+            "1.5": {
+              "predicted": 174501,
+              "matched": 2084,
+              "recall": 0.8745279060008393,
+              "gt_edge_endpoints_available": 953,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.822260569456428
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 1.891962642916648,
+          "median_seconds": 1.8722142289998374,
+          "max_seconds": 2.117479478999485
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 1.9619966226075212,
+          "median_seconds": 1.9607470290006859,
+          "max_seconds": 2.147361966999597
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "pacmap",
+      "name": "PAC-MAP spheroids",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1582,
+          "matches": {
+            "5.0": 17,
+            "6.0": 19,
+            "7.0": 20
+          },
+          "recall": {
+            "5.0": 0.7083333333333334,
+            "6.0": 0.7916666666666666,
+            "7.0": 0.8333333333333334
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1966717095310135,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 5,
+          "nearest_coverage_at_7": 20,
+          "nearest_in_5_to_7_um": 3,
+          "p90_matched_error_um": 5.455435658590487,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 16,
+              "recall": 0.6666666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1288,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1434,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1537,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 1962,
+          "matches": {
+            "5.0": 60,
+            "6.0": 66,
+            "7.0": 67
+          },
+          "recall": {
+            "5.0": 0.8955223880597015,
+            "6.0": 0.9850746268656716,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 3.436077057793345,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 67,
+          "nearest_in_5_to_7_um": 7,
+          "p90_matched_error_um": 4.956264734038538,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 48,
+              "recall": 0.7164179104477612,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 56,
+              "recall": 0.835820895522388,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 60,
+              "recall": 0.8955223880597015,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 713,
+              "matched": 66,
+              "recall": 0.9850746268656716,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 858,
+              "matched": 67,
+              "recall": 1.0,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 3544,
+          "matches": {
+            "5.0": 77,
+            "6.0": 85,
+            "7.0": 87
+          },
+          "recall": {
+            "5.0": 0.8461538461538461,
+            "6.0": 0.9340659340659341,
+            "7.0": 0.9560439560439561
+          },
+          "misses_at_7": 4,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.87216059165346,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 4,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 11,
+          "nearest_coverage_at_7": 87,
+          "nearest_in_5_to_7_um": 10,
+          "p90_matched_error_um": 5.173856152650247,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 64,
+              "recall": 0.7032967032967034,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 76,
+              "recall": 0.8351648351648352,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1859,
+              "matched": 80,
+              "recall": 0.8791208791208791,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2147,
+              "matched": 86,
+              "recall": 0.945054945054945,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2395,
+              "matched": 87,
+              "recall": 0.9560439560439561,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 74283,
+          "matches": {
+            "5.0": 441,
+            "6.0": 489,
+            "7.0": 528
+          },
+          "recall": {
+            "5.0": 0.7386934673366834,
+            "6.0": 0.8190954773869347,
+            "7.0": 0.8844221105527639
+          },
+          "misses_at_7": 69,
+          "gt_edge_endpoints_available": 247,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.8458904109589042,
+          "candidate_ratio_to_incumbent": 1.0622783434389658,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 69,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 86,
+          "nearest_coverage_at_7": 536,
+          "nearest_in_5_to_7_um": 87,
+          "p90_matched_error_um": 5.658407737606049,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 417,
+              "recall": 0.6984924623115578,
+              "gt_edge_endpoints_available": 180,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.6164383561643836
+            },
+            "0.75": {
+              "predicted": 51202,
+              "matched": 507,
+              "recall": 0.8492462311557789,
+              "gt_edge_endpoints_available": 233,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.797945205479452
+            },
+            "1.0": {
+              "predicted": 61778,
+              "matched": 523,
+              "recall": 0.8760469011725294,
+              "gt_edge_endpoints_available": 243,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8321917808219178
+            },
+            "1.25": {
+              "predicted": 66941,
+              "matched": 526,
+              "recall": 0.88107202680067,
+              "gt_edge_endpoints_available": 245,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.839041095890411
+            },
+            "1.5": {
+              "predicted": 69598,
+              "matched": 528,
+              "recall": 0.8844221105527639,
+              "gt_edge_endpoints_available": 247,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8458904109589042
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 68503,
+          "matches": {
+            "5.0": 1424,
+            "6.0": 1570,
+            "7.0": 1645
+          },
+          "recall": {
+            "5.0": 0.7973124300111982,
+            "6.0": 0.8790593505039194,
+            "7.0": 0.9210526315789473
+          },
+          "misses_at_7": 141,
+          "gt_edge_endpoints_available": 771,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.889273356401384,
+          "candidate_ratio_to_incumbent": 1.4698637485248365,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 132,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 250,
+          "nearest_coverage_at_7": 1650,
+          "nearest_in_5_to_7_um": 226,
+          "p90_matched_error_um": 5.265601817456386,
+          "budgets": {
+            "0.5": {
+              "predicted": 23303,
+              "matched": 1279,
+              "recall": 0.7161254199328108,
+              "gt_edge_endpoints_available": 569,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6562860438292965
+            },
+            "0.75": {
+              "predicted": 34682,
+              "matched": 1535,
+              "recall": 0.8594624860022396,
+              "gt_edge_endpoints_available": 713,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8223760092272203
+            },
+            "1.0": {
+              "predicted": 42524,
+              "matched": 1599,
+              "recall": 0.8952967525195968,
+              "gt_edge_endpoints_available": 750,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8650519031141869
+            },
+            "1.25": {
+              "predicted": 47130,
+              "matched": 1614,
+              "recall": 0.9036954087346024,
+              "gt_edge_endpoints_available": 755,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8708189158016147
+            },
+            "1.5": {
+              "predicted": 49982,
+              "matched": 1628,
+              "recall": 0.9115341545352743,
+              "gt_edge_endpoints_available": 760,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.8765859284890427
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 142786,
+          "matches": {
+            "5.0": 1865,
+            "6.0": 2059,
+            "7.0": 2173
+          },
+          "recall": {
+            "5.0": 0.7826269408308855,
+            "6.0": 0.8640369282417121,
+            "7.0": 0.9118757868233319
+          },
+          "misses_at_7": 210,
+          "gt_edge_endpoints_available": 1018,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.8783433994823123,
+          "candidate_ratio_to_incumbent": 1.2252838251825664,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 201,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 336,
+          "nearest_coverage_at_7": 2186,
+          "nearest_in_5_to_7_um": 313,
+          "p90_matched_error_um": 5.334077983184347,
+          "budgets": {
+            "0.5": {
+              "predicted": 58274,
+              "matched": 1696,
+              "recall": 0.7117079311791858,
+              "gt_edge_endpoints_available": 749,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6462467644521139
+            },
+            "0.75": {
+              "predicted": 85884,
+              "matched": 2042,
+              "recall": 0.8569030633655057,
+              "gt_edge_endpoints_available": 946,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.816220880069025
+            },
+            "1.0": {
+              "predicted": 104302,
+              "matched": 2122,
+              "recall": 0.8904741921947126,
+              "gt_edge_endpoints_available": 993,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8567730802415876
+            },
+            "1.25": {
+              "predicted": 114071,
+              "matched": 2140,
+              "recall": 0.8980276961812841,
+              "gt_edge_endpoints_available": 1000,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8628127696289906
+            },
+            "1.5": {
+              "predicted": 119580,
+              "matched": 2156,
+              "recall": 0.9047419219471254,
+              "gt_edge_endpoints_available": 1007,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.8688524590163934
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 1.3184225194164962,
+          "median_seconds": 1.296362883999791,
+          "max_seconds": 1.4714253139991342
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 1.3111282630700043,
+          "median_seconds": 1.2946613679996517,
+          "max_seconds": 1.460970420999729
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "spotiflow",
+      "name": "Spotiflow synth_3d",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 774,
+          "matches": {
+            "5.0": 14,
+            "6.0": 16,
+            "7.0": 18
+          },
+          "recall": {
+            "5.0": 0.5833333333333334,
+            "6.0": 0.6666666666666666,
+            "7.0": 0.75
+          },
+          "misses_at_7": 6,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.5854765506807866,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 6,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 18,
+          "nearest_in_5_to_7_um": 4,
+          "p90_matched_error_um": 5.81359543457941,
+          "budgets": {
+            "0.5": {
+              "predicted": 576,
+              "matched": 14,
+              "recall": 0.5833333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 739,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 774,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 774,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 774,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 525,
+          "matches": {
+            "5.0": 54,
+            "6.0": 62,
+            "7.0": 65
+          },
+          "recall": {
+            "5.0": 0.8059701492537313,
+            "6.0": 0.9253731343283582,
+            "7.0": 0.9701492537313433
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.9194395796847635,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 29,
+          "nearest_coverage_at_7": 65,
+          "nearest_in_5_to_7_um": 11,
+          "p90_matched_error_um": 5.290611172536291,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 33,
+              "recall": 0.4925373134328358,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 424,
+              "matched": 54,
+              "recall": 0.8059701492537313,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 507,
+              "matched": 64,
+              "recall": 0.9552238805970149,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 525,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 525,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 1299,
+          "matches": {
+            "5.0": 68,
+            "6.0": 78,
+            "7.0": 83
+          },
+          "recall": {
+            "5.0": 0.7472527472527473,
+            "6.0": 0.8571428571428571,
+            "7.0": 0.9120879120879121
+          },
+          "misses_at_7": 8,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.6862123613312203,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 8,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 35,
+          "nearest_coverage_at_7": 83,
+          "nearest_in_5_to_7_um": 15,
+          "p90_matched_error_um": 5.41970294697002,
+          "budgets": {
+            "0.5": {
+              "predicted": 860,
+              "matched": 47,
+              "recall": 0.5164835164835165,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1163,
+              "matched": 72,
+              "recall": 0.7912087912087912,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1281,
+              "matched": 82,
+              "recall": 0.9010989010989011,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1299,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1299,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 31473,
+          "matches": {
+            "5.0": 343,
+            "6.0": 364,
+            "7.0": 388
+          },
+          "recall": {
+            "5.0": 0.5745393634840871,
+            "6.0": 0.609715242881072,
+            "7.0": 0.6499162479061976
+          },
+          "misses_at_7": 209,
+          "gt_edge_endpoints_available": 172,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.589041095890411,
+          "candidate_ratio_to_incumbent": 0.4500772222857797,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 208,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 70,
+          "nearest_coverage_at_7": 394,
+          "nearest_in_5_to_7_um": 51,
+          "p90_matched_error_um": 5.159529739293321,
+          "budgets": {
+            "0.5": {
+              "predicted": 25749,
+              "matched": 295,
+              "recall": 0.49413735343383586,
+              "gt_edge_endpoints_available": 119,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4075342465753425
+            },
+            "0.75": {
+              "predicted": 30443,
+              "matched": 373,
+              "recall": 0.6247906197654941,
+              "gt_edge_endpoints_available": 162,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5547945205479452
+            },
+            "1.0": {
+              "predicted": 31377,
+              "matched": 388,
+              "recall": 0.6499162479061976,
+              "gt_edge_endpoints_available": 172,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.589041095890411
+            },
+            "1.25": {
+              "predicted": 31467,
+              "matched": 388,
+              "recall": 0.6499162479061976,
+              "gt_edge_endpoints_available": 172,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.589041095890411
+            },
+            "1.5": {
+              "predicted": 31473,
+              "matched": 388,
+              "recall": 0.6499162479061976,
+              "gt_edge_endpoints_available": 172,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.589041095890411
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 19975,
+          "matches": {
+            "5.0": 1093,
+            "6.0": 1180,
+            "7.0": 1244
+          },
+          "recall": {
+            "5.0": 0.6119820828667413,
+            "6.0": 0.6606942889137738,
+            "7.0": 0.696528555431131
+          },
+          "misses_at_7": 542,
+          "gt_edge_endpoints_available": 571,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.6585928489042676,
+          "candidate_ratio_to_incumbent": 0.4286020813217466,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 534,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 445,
+          "nearest_coverage_at_7": 1244,
+          "nearest_in_5_to_7_um": 151,
+          "p90_matched_error_um": 5.28125,
+          "budgets": {
+            "0.5": {
+              "predicted": 15351,
+              "matched": 846,
+              "recall": 0.47368421052631576,
+              "gt_edge_endpoints_available": 346,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.3990772779700115
+            },
+            "0.75": {
+              "predicted": 18428,
+              "matched": 1105,
+              "recall": 0.6187010078387458,
+              "gt_edge_endpoints_available": 479,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.552479815455594
+            },
+            "1.0": {
+              "predicted": 19706,
+              "matched": 1217,
+              "recall": 0.6814109742441209,
+              "gt_edge_endpoints_available": 550,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6343713956170703
+            },
+            "1.25": {
+              "predicted": 19961,
+              "matched": 1242,
+              "recall": 0.6954087346024636,
+              "gt_edge_endpoints_available": 569,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6562860438292965
+            },
+            "1.5": {
+              "predicted": 19975,
+              "matched": 1244,
+              "recall": 0.696528555431131,
+              "gt_edge_endpoints_available": 571,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6585928489042676
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 51448,
+          "matches": {
+            "5.0": 1436,
+            "6.0": 1544,
+            "7.0": 1632
+          },
+          "recall": {
+            "5.0": 0.6026017624842636,
+            "6.0": 0.6479227864036928,
+            "7.0": 0.6848510281158204
+          },
+          "misses_at_7": 751,
+          "gt_edge_endpoints_available": 743,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.6410698878343399,
+          "candidate_ratio_to_incumbent": 0.4414886770271082,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 742,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 515,
+          "nearest_coverage_at_7": 1638,
+          "nearest_in_5_to_7_um": 202,
+          "p90_matched_error_um": 5.265601817456386,
+          "budgets": {
+            "0.5": {
+              "predicted": 41100,
+              "matched": 1141,
+              "recall": 0.47880822492656316,
+              "gt_edge_endpoints_available": 465,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.4012079378774806
+            },
+            "0.75": {
+              "predicted": 48871,
+              "matched": 1478,
+              "recall": 0.6202266051195972,
+              "gt_edge_endpoints_available": 641,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.5530629853321829
+            },
+            "1.0": {
+              "predicted": 51083,
+              "matched": 1605,
+              "recall": 0.6735207721359631,
+              "gt_edge_endpoints_available": 722,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6229508196721312
+            },
+            "1.25": {
+              "predicted": 51428,
+              "matched": 1630,
+              "recall": 0.6840117498950902,
+              "gt_edge_endpoints_available": 741,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.639344262295082
+            },
+            "1.5": {
+              "predicted": 51448,
+              "matched": 1632,
+              "recall": 0.6848510281158204,
+              "gt_edge_endpoints_available": 743,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6410698878343399
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 0.07812627358324183,
+          "median_seconds": 0.061268145000212826,
+          "max_seconds": 0.29801076900002954
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 0.0402416832875042,
+          "median_seconds": 0.03273131600008128,
+          "max_seconds": 0.32375929499994527
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "spotiflow_loose",
+      "name": "Spotiflow synth_3d, threshold 0.05",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 842,
+          "matches": {
+            "5.0": 14,
+            "6.0": 16,
+            "7.0": 18
+          },
+          "recall": {
+            "5.0": 0.5833333333333334,
+            "6.0": 0.6666666666666666,
+            "7.0": 0.75
+          },
+          "misses_at_7": 6,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.6369137670196672,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 6,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 18,
+          "nearest_in_5_to_7_um": 4,
+          "p90_matched_error_um": 5.81359543457941,
+          "budgets": {
+            "0.5": {
+              "predicted": 629,
+              "matched": 14,
+              "recall": 0.5833333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 799,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 842,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 842,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 842,
+              "matched": 18,
+              "recall": 0.75,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 546,
+          "matches": {
+            "5.0": 54,
+            "6.0": 62,
+            "7.0": 65
+          },
+          "recall": {
+            "5.0": 0.8059701492537313,
+            "6.0": 0.9253731343283582,
+            "7.0": 0.9701492537313433
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.9562171628721541,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 29,
+          "nearest_coverage_at_7": 65,
+          "nearest_in_5_to_7_um": 11,
+          "p90_matched_error_um": 5.290611172536291,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 33,
+              "recall": 0.4925373134328358,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 54,
+              "recall": 0.8059701492537313,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 521,
+              "matched": 64,
+              "recall": 0.9552238805970149,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 546,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 546,
+              "matched": 65,
+              "recall": 0.9701492537313433,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 1388,
+          "matches": {
+            "5.0": 68,
+            "6.0": 78,
+            "7.0": 83
+          },
+          "recall": {
+            "5.0": 0.7472527472527473,
+            "6.0": 0.8571428571428571,
+            "7.0": 0.9120879120879121
+          },
+          "misses_at_7": 8,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 0.7332276809297411,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 8,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 35,
+          "nearest_coverage_at_7": 83,
+          "nearest_in_5_to_7_um": 15,
+          "p90_matched_error_um": 5.41970294697002,
+          "budgets": {
+            "0.5": {
+              "predicted": 913,
+              "matched": 47,
+              "recall": 0.5164835164835165,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1228,
+              "matched": 72,
+              "recall": 0.7912087912087912,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1363,
+              "matched": 82,
+              "recall": 0.9010989010989011,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1388,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1388,
+              "matched": 83,
+              "recall": 0.9120879120879121,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 35651,
+          "matches": {
+            "5.0": 348,
+            "6.0": 373,
+            "7.0": 400
+          },
+          "recall": {
+            "5.0": 0.5829145728643216,
+            "6.0": 0.6247906197654941,
+            "7.0": 0.6700167504187605
+          },
+          "misses_at_7": 197,
+          "gt_edge_endpoints_available": 175,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.5993150684931506,
+          "candidate_ratio_to_incumbent": 0.5098243908019677,
+          "gains_over_incumbent_at_7": 1,
+          "losses_from_incumbent_at_7": 196,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 83,
+          "nearest_coverage_at_7": 405,
+          "nearest_in_5_to_7_um": 57,
+          "p90_matched_error_um": 5.3510511439864175,
+          "budgets": {
+            "0.5": {
+              "predicted": 28469,
+              "matched": 303,
+              "recall": 0.507537688442211,
+              "gt_edge_endpoints_available": 120,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.410958904109589
+            },
+            "0.75": {
+              "predicted": 34186,
+              "matched": 384,
+              "recall": 0.6432160804020101,
+              "gt_edge_endpoints_available": 164,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5616438356164384
+            },
+            "1.0": {
+              "predicted": 35520,
+              "matched": 400,
+              "recall": 0.6700167504187605,
+              "gt_edge_endpoints_available": 175,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5993150684931506
+            },
+            "1.25": {
+              "predicted": 35639,
+              "matched": 400,
+              "recall": 0.6700167504187605,
+              "gt_edge_endpoints_available": 175,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5993150684931506
+            },
+            "1.5": {
+              "predicted": 35651,
+              "matched": 400,
+              "recall": 0.6700167504187605,
+              "gt_edge_endpoints_available": 175,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.5993150684931506
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 22445,
+          "matches": {
+            "5.0": 1115,
+            "6.0": 1214,
+            "7.0": 1290
+          },
+          "recall": {
+            "5.0": 0.6243001119820829,
+            "6.0": 0.6797312430011199,
+            "7.0": 0.7222844344904815
+          },
+          "misses_at_7": 496,
+          "gt_edge_endpoints_available": 590,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.6805074971164936,
+          "candidate_ratio_to_incumbent": 0.4816006866216071,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 489,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 484,
+          "nearest_coverage_at_7": 1290,
+          "nearest_in_5_to_7_um": 175,
+          "p90_matched_error_um": 5.420051026051323,
+          "budgets": {
+            "0.5": {
+              "predicted": 17141,
+              "matched": 877,
+              "recall": 0.4910414333706607,
+              "gt_edge_endpoints_available": 356,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.41061130334486734
+            },
+            "0.75": {
+              "predicted": 20652,
+              "matched": 1142,
+              "recall": 0.6394176931690929,
+              "gt_edge_endpoints_available": 492,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.5674740484429066
+            },
+            "1.0": {
+              "predicted": 22097,
+              "matched": 1262,
+              "recall": 0.7066069428891377,
+              "gt_edge_endpoints_available": 568,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6551326412918108
+            },
+            "1.25": {
+              "predicted": 22410,
+              "matched": 1288,
+              "recall": 0.7211646136618141,
+              "gt_edge_endpoints_available": 588,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6782006920415224
+            },
+            "1.5": {
+              "predicted": 22445,
+              "matched": 1290,
+              "recall": 0.7222844344904815,
+              "gt_edge_endpoints_available": 590,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6805074971164936
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 58096,
+          "matches": {
+            "5.0": 1463,
+            "6.0": 1587,
+            "7.0": 1690
+          },
+          "recall": {
+            "5.0": 0.6139320184641208,
+            "6.0": 0.6659672681493916,
+            "7.0": 0.7091900965169954
+          },
+          "misses_at_7": 693,
+          "gt_edge_endpoints_available": 765,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.6600517687661778,
+          "candidate_ratio_to_incumbent": 0.49853689512841853,
+          "gains_over_incumbent_at_7": 4,
+          "losses_from_incumbent_at_7": 685,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 567,
+          "nearest_coverage_at_7": 1695,
+          "nearest_in_5_to_7_um": 232,
+          "p90_matched_error_um": 5.420051026051323,
+          "budgets": {
+            "0.5": {
+              "predicted": 45610,
+              "matched": 1180,
+              "recall": 0.4951741502308015,
+              "gt_edge_endpoints_available": 476,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.41069887834339946
+            },
+            "0.75": {
+              "predicted": 54838,
+              "matched": 1526,
+              "recall": 0.6403692824171213,
+              "gt_edge_endpoints_available": 656,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.5660051768766178
+            },
+            "1.0": {
+              "predicted": 57617,
+              "matched": 1662,
+              "recall": 0.697440201426773,
+              "gt_edge_endpoints_available": 743,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6410698878343399
+            },
+            "1.25": {
+              "predicted": 58049,
+              "matched": 1688,
+              "recall": 0.7083508182962652,
+              "gt_edge_endpoints_available": 763,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6583261432269197
+            },
+            "1.5": {
+              "predicted": 58096,
+              "matched": 1690,
+              "recall": 0.7091900965169954,
+              "gt_edge_endpoints_available": 765,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6600517687661778
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 0.07812627358324183,
+          "median_seconds": 0.061268145000212826,
+          "max_seconds": 0.29801076900002954
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 0.0402416832875042,
+          "median_seconds": 0.03273131600008128,
+          "max_seconds": 0.32375929499994527
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "xenopus",
+      "name": "Xenopus StarDist3D origins",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1517,
+          "matches": {
+            "5.0": 17,
+            "6.0": 18,
+            "7.0": 22
+          },
+          "recall": {
+            "5.0": 0.7083333333333334,
+            "6.0": 0.75,
+            "7.0": 0.9166666666666666
+          },
+          "misses_at_7": 2,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1475037821482603,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 2,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 22,
+          "nearest_in_5_to_7_um": 5,
+          "p90_matched_error_um": 6.1342404786574845,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 12,
+              "recall": 0.5,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 17,
+              "recall": 0.7083333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1494,
+              "matched": 22,
+              "recall": 0.9166666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1517,
+              "matched": 22,
+              "recall": 0.9166666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 961,
+          "matches": {
+            "5.0": 33,
+            "6.0": 48,
+            "7.0": 51
+          },
+          "recall": {
+            "5.0": 0.4925373134328358,
+            "6.0": 0.7164179104477612,
+            "7.0": 0.7611940298507462
+          },
+          "misses_at_7": 16,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.683012259194396,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 16,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 32,
+          "nearest_coverage_at_7": 51,
+          "nearest_in_5_to_7_um": 18,
+          "p90_matched_error_um": 5.540511314400504,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 24,
+              "recall": 0.3582089552238806,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 30,
+              "recall": 0.44776119402985076,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 36,
+              "recall": 0.5373134328358209,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 685,
+              "matched": 44,
+              "recall": 0.6567164179104478,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 777,
+              "matched": 48,
+              "recall": 0.7164179104477612,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 2478,
+          "matches": {
+            "5.0": 50,
+            "6.0": 66,
+            "7.0": 73
+          },
+          "recall": {
+            "5.0": 0.5494505494505495,
+            "6.0": 0.7252747252747253,
+            "7.0": 0.8021978021978022
+          },
+          "misses_at_7": 18,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.3090332805071316,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 18,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 38,
+          "nearest_coverage_at_7": 73,
+          "nearest_in_5_to_7_um": 23,
+          "p90_matched_error_um": 5.906541805172291,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 36,
+              "recall": 0.3956043956043956,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 47,
+              "recall": 0.5164835164835165,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 57,
+              "recall": 0.6263736263736264,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2179,
+              "matched": 66,
+              "recall": 0.7252747252747253,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2294,
+              "matched": 70,
+              "recall": 0.7692307692307693,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 86902,
+          "matches": {
+            "5.0": 466,
+            "6.0": 500,
+            "7.0": 528
+          },
+          "recall": {
+            "5.0": 0.7805695142378559,
+            "6.0": 0.8375209380234506,
+            "7.0": 0.8844221105527639
+          },
+          "misses_at_7": 69,
+          "gt_edge_endpoints_available": 239,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.8184931506849316,
+          "candidate_ratio_to_incumbent": 1.242735384967395,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 67,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 261,
+          "nearest_coverage_at_7": 528,
+          "nearest_in_5_to_7_um": 62,
+          "p90_matched_error_um": 5.202538442914189,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 250,
+              "recall": 0.4187604690117253,
+              "gt_edge_endpoints_available": 74,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.2534246575342466
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 363,
+              "recall": 0.6080402010050251,
+              "gt_edge_endpoints_available": 131,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4486301369863014
+            },
+            "1.0": {
+              "predicted": 69463,
+              "matched": 448,
+              "recall": 0.7504187604690117,
+              "gt_edge_endpoints_available": 182,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.6232876712328768
+            },
+            "1.25": {
+              "predicted": 81341,
+              "matched": 510,
+              "recall": 0.8542713567839196,
+              "gt_edge_endpoints_available": 226,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.773972602739726
+            },
+            "1.5": {
+              "predicted": 85475,
+              "matched": 521,
+              "recall": 0.8726968174204355,
+              "gt_edge_endpoints_available": 234,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8013698630136986
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 58573,
+          "matches": {
+            "5.0": 1202,
+            "6.0": 1379,
+            "7.0": 1492
+          },
+          "recall": {
+            "5.0": 0.6730123180291153,
+            "6.0": 0.7721164613661814,
+            "7.0": 0.8353863381858903
+          },
+          "misses_at_7": 294,
+          "gt_edge_endpoints_available": 669,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.7716262975778547,
+          "candidate_ratio_to_incumbent": 1.2567964810642636,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 286,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 928,
+          "nearest_coverage_at_7": 1494,
+          "nearest_in_5_to_7_um": 290,
+          "p90_matched_error_um": 5.658407737606049,
+          "budgets": {
+            "0.5": {
+              "predicted": 23303,
+              "matched": 779,
+              "recall": 0.43617021276595747,
+              "gt_edge_endpoints_available": 248,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.28604382929642447
+            },
+            "0.75": {
+              "predicted": 34949,
+              "matched": 1060,
+              "recall": 0.593505039193729,
+              "gt_edge_endpoints_available": 394,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.4544405997693195
+            },
+            "1.0": {
+              "predicted": 46444,
+              "matched": 1263,
+              "recall": 0.7071668533034714,
+              "gt_edge_endpoints_available": 514,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.5928489042675894
+            },
+            "1.25": {
+              "predicted": 54098,
+              "matched": 1395,
+              "recall": 0.7810750279955208,
+              "gt_edge_endpoints_available": 603,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6955017301038062
+            },
+            "1.5": {
+              "predicted": 56295,
+              "matched": 1433,
+              "recall": 0.8023516237402015,
+              "gt_edge_endpoints_available": 628,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.7243367935409458
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 145475,
+          "matches": {
+            "5.0": 1668,
+            "6.0": 1879,
+            "7.0": 2020
+          },
+          "recall": {
+            "5.0": 0.6999580360889635,
+            "6.0": 0.7885018883759967,
+            "7.0": 0.8476710029374738
+          },
+          "misses_at_7": 363,
+          "gt_edge_endpoints_available": 908,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.7834339948231234,
+          "candidate_ratio_to_incumbent": 1.248358833978358,
+          "gains_over_incumbent_at_7": 2,
+          "losses_from_incumbent_at_7": 353,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 1189,
+          "nearest_coverage_at_7": 2022,
+          "nearest_in_5_to_7_um": 352,
+          "p90_matched_error_um": 5.540511314400504,
+          "budgets": {
+            "0.5": {
+              "predicted": 58274,
+              "matched": 1029,
+              "recall": 0.4318086445656735,
+              "gt_edge_endpoints_available": 322,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.27782571182053495
+            },
+            "0.75": {
+              "predicted": 87388,
+              "matched": 1423,
+              "recall": 0.5971464540495174,
+              "gt_edge_endpoints_available": 525,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.45297670405522
+            },
+            "1.0": {
+              "predicted": 115907,
+              "matched": 1711,
+              "recall": 0.7180025178346622,
+              "gt_edge_endpoints_available": 696,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6005176876617774
+            },
+            "1.25": {
+              "predicted": 135439,
+              "matched": 1905,
+              "recall": 0.7994125052454889,
+              "gt_edge_endpoints_available": 829,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7152717860224331
+            },
+            "1.5": {
+              "predicted": 141770,
+              "matched": 1954,
+              "recall": 0.8199748216533781,
+              "gt_edge_endpoints_available": 862,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7437446074201898
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 2.420231054833342,
+          "median_seconds": 1.9691926485002114,
+          "max_seconds": 7.419181429999298
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 2.4996404426050707,
+          "median_seconds": 2.317110810500708,
+          "max_seconds": 4.846005926999169
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "xenopus_centroid",
+      "name": "Xenopus StarDist3D mask centroids",
+      "complete_panels": [
+        "pilot",
+        "assessment"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 1517,
+          "matches": {
+            "5.0": 18,
+            "6.0": 21,
+            "7.0": 21
+          },
+          "recall": {
+            "5.0": 0.75,
+            "6.0": 0.875,
+            "7.0": 0.875
+          },
+          "misses_at_7": 3,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.1475037821482603,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 3,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 6,
+          "nearest_coverage_at_7": 21,
+          "nearest_in_5_to_7_um": 3,
+          "p90_matched_error_um": 5.343384490423649,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 11,
+              "recall": 0.4583333333333333,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 16,
+              "recall": 0.6666666666666666,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 20,
+              "recall": 0.8333333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1494,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1517,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 961,
+          "matches": {
+            "5.0": 39,
+            "6.0": 50,
+            "7.0": 52
+          },
+          "recall": {
+            "5.0": 0.582089552238806,
+            "6.0": 0.746268656716418,
+            "7.0": 0.7761194029850746
+          },
+          "misses_at_7": 15,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.683012259194396,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 15,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 35,
+          "nearest_coverage_at_7": 52,
+          "nearest_in_5_to_7_um": 13,
+          "p90_matched_error_um": 5.651068376668187,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 25,
+              "recall": 0.373134328358209,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 35,
+              "recall": 0.5223880597014925,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 39,
+              "recall": 0.582089552238806,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 685,
+              "matched": 47,
+              "recall": 0.7014925373134329,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 777,
+              "matched": 51,
+              "recall": 0.7611940298507462,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 2478,
+          "matches": {
+            "5.0": 57,
+            "6.0": 71,
+            "7.0": 73
+          },
+          "recall": {
+            "5.0": 0.6263736263736264,
+            "6.0": 0.7802197802197802,
+            "7.0": 0.8021978021978022
+          },
+          "misses_at_7": 18,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 1.3090332805071316,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 18,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 41,
+          "nearest_coverage_at_7": 73,
+          "nearest_in_5_to_7_um": 16,
+          "p90_matched_error_um": 5.552021507792208,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 36,
+              "recall": 0.3956043956043956,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 51,
+              "recall": 0.5604395604395604,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 59,
+              "recall": 0.6483516483516484,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2179,
+              "matched": 68,
+              "recall": 0.7472527472527473,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2294,
+              "matched": 72,
+              "recall": 0.7912087912087912,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "44b6",
+          "frames": 200,
+          "clips": 20,
+          "gt": 597,
+          "predicted": 86902,
+          "matches": {
+            "5.0": 475,
+            "6.0": 502,
+            "7.0": 528
+          },
+          "recall": {
+            "5.0": 0.7956448911222781,
+            "6.0": 0.8408710217755444,
+            "7.0": 0.8844221105527639
+          },
+          "misses_at_7": 69,
+          "gt_edge_endpoints_available": 241,
+          "gt_edges_in_panel": 292,
+          "edge_endpoint_availability": 0.8253424657534246,
+          "candidate_ratio_to_incumbent": 1.242735384967395,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 67,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 250,
+          "nearest_coverage_at_7": 528,
+          "nearest_in_5_to_7_um": 53,
+          "p90_matched_error_um": 5.0299534624602025,
+          "budgets": {
+            "0.5": {
+              "predicted": 34971,
+              "matched": 245,
+              "recall": 0.4103852596314908,
+              "gt_edge_endpoints_available": 72,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.2465753424657534
+            },
+            "0.75": {
+              "predicted": 52439,
+              "matched": 359,
+              "recall": 0.6013400335008375,
+              "gt_edge_endpoints_available": 131,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.4486301369863014
+            },
+            "1.0": {
+              "predicted": 69463,
+              "matched": 449,
+              "recall": 0.7520938023450586,
+              "gt_edge_endpoints_available": 185,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.6335616438356164
+            },
+            "1.25": {
+              "predicted": 81341,
+              "matched": 511,
+              "recall": 0.8559463986599665,
+              "gt_edge_endpoints_available": 229,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.7842465753424658
+            },
+            "1.5": {
+              "predicted": 85475,
+              "matched": 521,
+              "recall": 0.8726968174204355,
+              "gt_edge_endpoints_available": 236,
+              "gt_edges_in_panel": 292,
+              "edge_endpoint_availability": 0.8082191780821918
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "6bba",
+          "frames": 200,
+          "clips": 20,
+          "gt": 1786,
+          "predicted": 58573,
+          "matches": {
+            "5.0": 1264,
+            "6.0": 1421,
+            "7.0": 1500
+          },
+          "recall": {
+            "5.0": 0.7077267637178052,
+            "6.0": 0.7956326987681971,
+            "7.0": 0.8398656215005599
+          },
+          "misses_at_7": 286,
+          "gt_edge_endpoints_available": 671,
+          "gt_edges_in_panel": 867,
+          "edge_endpoint_availability": 0.7739331026528259,
+          "candidate_ratio_to_incumbent": 1.2567964810642636,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 279,
+          "paired_baseline_frames": 200,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 941,
+          "nearest_coverage_at_7": 1502,
+          "nearest_in_5_to_7_um": 238,
+          "p90_matched_error_um": 5.3479975698140425,
+          "budgets": {
+            "0.5": {
+              "predicted": 23303,
+              "matched": 791,
+              "recall": 0.4428891377379619,
+              "gt_edge_endpoints_available": 252,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.2906574394463668
+            },
+            "0.75": {
+              "predicted": 34949,
+              "matched": 1072,
+              "recall": 0.6002239641657335,
+              "gt_edge_endpoints_available": 402,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.46366782006920415
+            },
+            "1.0": {
+              "predicted": 46444,
+              "matched": 1273,
+              "recall": 0.7127659574468085,
+              "gt_edge_endpoints_available": 522,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.6020761245674741
+            },
+            "1.25": {
+              "predicted": 54098,
+              "matched": 1407,
+              "recall": 0.7877939529675252,
+              "gt_edge_endpoints_available": 612,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.7058823529411765
+            },
+            "1.5": {
+              "predicted": 56295,
+              "matched": 1448,
+              "recall": 0.8107502799552072,
+              "gt_edge_endpoints_available": 636,
+              "gt_edges_in_panel": 867,
+              "edge_endpoint_availability": 0.7335640138408305
+            }
+          }
+        },
+        {
+          "role": "assessment",
+          "embryo": "pooled",
+          "frames": 400,
+          "clips": 40,
+          "gt": 2383,
+          "predicted": 145475,
+          "matches": {
+            "5.0": 1739,
+            "6.0": 1923,
+            "7.0": 2028
+          },
+          "recall": {
+            "5.0": 0.7297524129248846,
+            "6.0": 0.8069660092320604,
+            "7.0": 0.8510281158203945
+          },
+          "misses_at_7": 355,
+          "gt_edge_endpoints_available": 912,
+          "gt_edges_in_panel": 1159,
+          "edge_endpoint_availability": 0.7868852459016393,
+          "candidate_ratio_to_incumbent": 1.248358833978358,
+          "gains_over_incumbent_at_7": 3,
+          "losses_from_incumbent_at_7": 346,
+          "paired_baseline_frames": 400,
+          "duplicate_centers": 0,
+          "gt_multiple_candidates_at_7": 1191,
+          "nearest_coverage_at_7": 2030,
+          "nearest_in_5_to_7_um": 291,
+          "p90_matched_error_um": 5.296851954227152,
+          "budgets": {
+            "0.5": {
+              "predicted": 58274,
+              "matched": 1036,
+              "recall": 0.4347461183382291,
+              "gt_edge_endpoints_available": 324,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.27955133735979293
+            },
+            "0.75": {
+              "predicted": 87388,
+              "matched": 1431,
+              "recall": 0.6005035669324381,
+              "gt_edge_endpoints_available": 533,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.4598792062122519
+            },
+            "1.0": {
+              "predicted": 115907,
+              "matched": 1722,
+              "recall": 0.7226185480486781,
+              "gt_edge_endpoints_available": 707,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.6100086281276963
+            },
+            "1.25": {
+              "predicted": 135439,
+              "matched": 1918,
+              "recall": 0.804867813680235,
+              "gt_edge_endpoints_available": 841,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.725625539257981
+            },
+            "1.5": {
+              "predicted": 141770,
+              "matched": 1969,
+              "recall": 0.8262694083088544,
+              "gt_edge_endpoints_available": 872,
+              "gt_edges_in_panel": 1159,
+              "edge_endpoint_availability": 0.7523727351164797
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 2.500958199499943,
+          "median_seconds": 2.047278119499879,
+          "max_seconds": 7.478031173999625
+        },
+        {
+          "role": "assessment",
+          "frames": 400,
+          "mean_seconds": 2.630935862802596,
+          "median_seconds": 2.43112047699924,
+          "max_seconds": 5.162757587999295
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 400
+      }
+    },
+    {
+      "id": "xenopus_loose",
+      "name": "Xenopus StarDist3D origins, threshold 0.1",
+      "complete_panels": [
+        "pilot"
+      ],
+      "summary": [
+        {
+          "role": "pilot",
+          "embryo": "44b6",
+          "frames": 6,
+          "clips": 3,
+          "gt": 24,
+          "predicted": 9011,
+          "matches": {
+            "5.0": 24,
+            "6.0": 24,
+            "7.0": 24
+          },
+          "recall": {
+            "5.0": 1.0,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 6.816187594553707,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 1,
+          "gt_multiple_candidates_at_7": 24,
+          "nearest_coverage_at_7": 24,
+          "nearest_in_5_to_7_um": 0,
+          "p90_matched_error_um": 3.3523133415823354,
+          "budgets": {
+            "0.5": {
+              "predicted": 661,
+              "matched": 12,
+              "recall": 0.5,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 991,
+              "matched": 17,
+              "recall": 0.7083333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1322,
+              "matched": 21,
+              "recall": 0.875,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 1653,
+              "matched": 23,
+              "recall": 0.9583333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 1983,
+              "matched": 23,
+              "recall": 0.9583333333333334,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "6bba",
+          "frames": 6,
+          "clips": 3,
+          "gt": 67,
+          "predicted": 10662,
+          "matches": {
+            "5.0": 67,
+            "6.0": 67,
+            "7.0": 67
+          },
+          "recall": {
+            "5.0": 1.0,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 18.672504378283712,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 6,
+          "duplicate_centers": 3,
+          "gt_multiple_candidates_at_7": 67,
+          "nearest_coverage_at_7": 67,
+          "nearest_in_5_to_7_um": 0,
+          "p90_matched_error_um": 3.0436923578469575,
+          "budgets": {
+            "0.5": {
+              "predicted": 284,
+              "matched": 24,
+              "recall": 0.3582089552238806,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 429,
+              "matched": 30,
+              "recall": 0.44776119402985076,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 571,
+              "matched": 36,
+              "recall": 0.5373134328358209,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 713,
+              "matched": 44,
+              "recall": 0.6567164179104478,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 858,
+              "matched": 48,
+              "recall": 0.7164179104477612,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        },
+        {
+          "role": "pilot",
+          "embryo": "pooled",
+          "frames": 12,
+          "clips": 6,
+          "gt": 91,
+          "predicted": 19673,
+          "matches": {
+            "5.0": 91,
+            "6.0": 91,
+            "7.0": 91
+          },
+          "recall": {
+            "5.0": 1.0,
+            "6.0": 1.0,
+            "7.0": 1.0
+          },
+          "misses_at_7": 0,
+          "gt_edge_endpoints_available": 0,
+          "gt_edges_in_panel": 0,
+          "edge_endpoint_availability": null,
+          "candidate_ratio_to_incumbent": 10.392498679344955,
+          "gains_over_incumbent_at_7": 0,
+          "losses_from_incumbent_at_7": 0,
+          "paired_baseline_frames": 12,
+          "duplicate_centers": 4,
+          "gt_multiple_candidates_at_7": 91,
+          "nearest_coverage_at_7": 91,
+          "nearest_in_5_to_7_um": 0,
+          "p90_matched_error_um": 3.2752922102462856,
+          "budgets": {
+            "0.5": {
+              "predicted": 945,
+              "matched": 36,
+              "recall": 0.3956043956043956,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "0.75": {
+              "predicted": 1420,
+              "matched": 47,
+              "recall": 0.5164835164835165,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.0": {
+              "predicted": 1893,
+              "matched": 57,
+              "recall": 0.6263736263736264,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.25": {
+              "predicted": 2366,
+              "matched": 67,
+              "recall": 0.7362637362637363,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            },
+            "1.5": {
+              "predicted": 2841,
+              "matched": 71,
+              "recall": 0.7802197802197802,
+              "gt_edge_endpoints_available": 0,
+              "gt_edges_in_panel": 0,
+              "edge_endpoint_availability": null
+            }
+          }
+        }
+      ],
+      "runtime": [
+        {
+          "role": "pilot",
+          "frames": 12,
+          "mean_seconds": 53.30241657400014,
+          "median_seconds": 51.7702372155004,
+          "max_seconds": 78.7094283690003
+        }
+      ],
+      "confidence_ranking_available": true,
+      "progress": {
+        "pilot": 12,
+        "assessment": 0
+      }
+    }
+  ],
+  "metric": "Installed tracksdata DistanceMatching optimal=True, scale=(1.625,0.40625,0.40625), radius7\u00b5m, after native integer rounding and clipping.",
+  "tracksdata_version": "0.1.0rc6.dev3+g980c2d30a",
+  "official_metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "scope": "Pretrained inference and detector evaluation only; no training, temporal association, submission, or competition score.",
+  "budget_definition": "Per-frame upper caps of 0.5/0.75/1/1.25/1.5 times incumbent candidate count, retaining each method's highest confidence candidates.",
+  "limitations": [
+    "Annotation-count stratified exploratory panel. Public incumbent has inherited exposure to both embryos. No independent biological validation, temporal association tuning, or competition-score claim.",
+    "Sparse annotations do not identify all real cells; unmatched candidates are not automatically false positives.",
+    "Both-endpoint coverage is a detector diagnostic under official per-frame matches, not edge Jaccard or division score.",
+    "Candidate counts are before any temporal pruning and do not directly determine the final node-count penalty.",
+    "Adapter-recorded compute excludes GPU queue waits; I/O coverage differs and the incumbent was reused rather than retimed.",
+    "Cellpose CPU affinity changed during assessment; timings are descriptive measurements, not a controlled speed comparison.",
+    "FOCUS reference confidence values are placeholders; its confidence-budget curves are not interpretable."
+  ],
+  "incumbent_failure_analysis": {
+    "cases": [
+      {
+        "key": "44b6_7e557709-t009",
+        "embryo": "44b6",
+        "gt_node_id": 100000000061,
+        "nearest_incumbent_distance_um": 5.87308811976289,
+        "cause": "one-to-one competition",
+        "recovered_by": [
+          "organoid",
+          "nucverse",
+          "spotiflow",
+          "cellpose_cpdino_vitb",
+          "pacmap",
+          "cellect",
+          "spotiflow_loose"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid",
+          "nucverse",
+          "spotiflow",
+          "cellpose_cpdino_vitb",
+          "pacmap",
+          "cellect",
+          "spotiflow_loose"
+        ]
+      },
+      {
+        "key": "44b6_c50204e0-t089",
+        "embryo": "44b6",
+        "gt_node_id": 232000000032,
+        "nearest_incumbent_distance_um": 7.761395352158012,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "cellpose_cpdino_vitb",
+          "pacmap",
+          "cellect"
+        ],
+        "recovered_at_same_budget_by": [
+          "cellpose_cpdino_vitb",
+          "pacmap",
+          "cellect"
+        ]
+      },
+      {
+        "key": "6bba_1ebfb80d-t069",
+        "embryo": "6bba",
+        "gt_node_id": 70000878,
+        "nearest_incumbent_distance_um": 7.4908798715504705,
+        "cause": "no candidate within7um",
+        "recovered_by": [],
+        "recovered_at_same_budget_by": []
+      },
+      {
+        "key": "6bba_1ebfb80d-t070",
+        "embryo": "6bba",
+        "gt_node_id": 71000890,
+        "nearest_incumbent_distance_um": 8.636993472846903,
+        "cause": "no candidate within7um",
+        "recovered_by": [],
+        "recovered_at_same_budget_by": []
+      },
+      {
+        "key": "6bba_5c824876-t069",
+        "embryo": "6bba",
+        "gt_node_id": 70001223,
+        "nearest_incumbent_distance_um": 7.323776028286228,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "xenopus",
+          "xenopus_centroid"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid",
+          "xenopus",
+          "xenopus_centroid"
+        ]
+      },
+      {
+        "key": "6bba_67ebd073-t090",
+        "embryo": "6bba",
+        "gt_node_id": 91000800,
+        "nearest_incumbent_distance_um": 8.375058302035873,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "pacmap"
+        ],
+        "recovered_at_same_budget_by": []
+      },
+      {
+        "key": "6bba_786893ac-t009",
+        "embryo": "6bba",
+        "gt_node_id": 10000461,
+        "nearest_incumbent_distance_um": 7.094851236107774,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "spotiflow",
+          "xenopus",
+          "xenopus_centroid",
+          "cellect",
+          "spotiflow_loose"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid",
+          "spotiflow",
+          "xenopus",
+          "xenopus_centroid",
+          "cellect",
+          "spotiflow_loose"
+        ]
+      },
+      {
+        "key": "6bba_786893ac-t010",
+        "embryo": "6bba",
+        "gt_node_id": 11000500,
+        "nearest_incumbent_distance_um": 7.012962328788028,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "xenopus_centroid",
+          "spotiflow_loose"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid",
+          "xenopus_centroid",
+          "spotiflow_loose"
+        ]
+      },
+      {
+        "key": "6bba_c328f2fd-t069",
+        "embryo": "6bba",
+        "gt_node_id": 70000335,
+        "nearest_incumbent_distance_um": 7.929683651476899,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid"
+        ]
+      },
+      {
+        "key": "6bba_c328f2fd-t070",
+        "embryo": "6bba",
+        "gt_node_id": 71000345,
+        "nearest_incumbent_distance_um": 7.929683651476899,
+        "cause": "no candidate within7um",
+        "recovered_by": [],
+        "recovered_at_same_budget_by": []
+      },
+      {
+        "key": "6bba_c328f2fd-t089",
+        "embryo": "6bba",
+        "gt_node_id": 90000522,
+        "nearest_incumbent_distance_um": 8.722557412393455,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid",
+          "spotiflow",
+          "spotiflow_loose"
+        ],
+        "recovered_at_same_budget_by": [
+          "spotiflow",
+          "spotiflow_loose"
+        ]
+      },
+      {
+        "key": "6bba_c328f2fd-t090",
+        "embryo": "6bba",
+        "gt_node_id": 91000529,
+        "nearest_incumbent_distance_um": 8.453514893965705,
+        "cause": "no candidate within7um",
+        "recovered_by": [
+          "organoid"
+        ],
+        "recovered_at_same_budget_by": [
+          "organoid"
+        ]
+      }
+    ],
+    "total_misses": 12,
+    "one_to_one_competition": 1,
+    "distance_7_to_9_um": 11,
+    "distance_over_9_um": 0,
+    "distance_7_to_7_1_um": 2,
+    "interpretation": "Post-hoc diagnostic of measured detector errors. Recovered_by is evidence of complementarity, not a deployable ensemble or a predicted competition-score gain. Same-budget recovery caps each challenger frame at the incumbent candidate count, using only its own confidence rank. No predictions are altered."
+  }
+}

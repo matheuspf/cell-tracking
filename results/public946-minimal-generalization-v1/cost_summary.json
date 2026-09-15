@@ -1,0 +1,14 @@
+{
+  "accounting": "Charged hours include completed study worker intervals, recorded failures, unscored smoke workers and actual package test wall time. Worker intervals include CPU graph work but exclude interpreter startup and initial hash checks. Agent/preflight/reporting time is not CUDA kernel time.",
+  "conservative_budget_charged_hours": 6.878079305713612,
+  "elapsed_since_preflight_hours": 2.7604586847222223,
+  "envelope": {
+    "filesystem_reserve_gib_min": 10,
+    "gpu_allocated_gib_max": 22,
+    "gpu_device_hours_max": 96,
+    "new_scratch_gib_max": 48
+  },
+  "full_matrix_worker_hours": 6.2278064161936095,
+  "new_scratch_bytes": 19926093194,
+  "successful_packaged_notebook_wall_hours": 0.13401528362555584
+}

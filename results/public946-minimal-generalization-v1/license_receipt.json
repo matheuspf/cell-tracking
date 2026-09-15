@@ -1,0 +1,56 @@
+{
+  "attribution": "Original notebook by flexonafft; support code and checkpoints by pilkwang. Dependencies retain their own installed licenses. No ownership or new relicensing of third-party work is claimed.",
+  "bundled_artifact_license_files": "No LICENSE file found in the three local public artifact trees; public dataset metadata identifies CC0-1.0.",
+  "checked_at": "2026-09-13T19:02:35.038226+00:00",
+  "datasets": [
+    {
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "ac13eec2a6aa02570bcce3d505727838f11f2db7607cfc6da83ce4caecbd7625",
+      "ref": "pilkwang/biohub-tracking-support-pack-50ep-v1",
+      "source": "https://www.kaggle.com/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1"
+    },
+    {
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "bf0ca6bbeda0ff8e70e7163e49b220e12ed4517958d13975f8581774de73f875",
+      "ref": "pilkwang/biohub-temporal-unet3d-seed314159-v1",
+      "source": "https://www.kaggle.com/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1"
+    },
+    {
+      "licenses": [
+        {
+          "name": "CC0-1.0"
+        }
+      ],
+      "metadata_sha256": "58d1c1fa1fe6a82c47dce2132761c2b3aed6967765f77045f7ddbe7ff5c2d375",
+      "ref": "pilkwang/biohub-deepcenter-unet3d-center-prior-v1",
+      "source": "https://www.kaggle.com/datasets/pilkwang/biohub-deepcenter-unet3d-center-prior-v1"
+    }
+  ],
+  "notebook": {
+    "evidence": "Public notebook page license section retrieved by web search; current slug-level license, not a separately versioned license snapshot.",
+    "license": "Apache-2.0",
+    "pinned_source_version": 29,
+    "script_version_id": 347965685,
+    "source": "https://www.kaggle.com/code/flexonafft/biohub-harmonic-fusion",
+    "source_sha256": "7a949f3e5ee6136175b1f3806621697e68776e87f304a37c58132166eb02d645",
+    "version_metadata_api_status": "Request for /29 returned HTTP403; no restricted data obtained."
+  },
+  "supplied_license_texts": {
+    "Apache-2.0.txt": {
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "source": "https://github.com/spdx/license-list-data/blob/main/text/Apache-2.0.txt"
+    },
+    "CC0-1.0.txt": {
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "source": "https://github.com/spdx/license-list-data/blob/main/text/CC0-1.0.txt"
+    }
+  }
+}

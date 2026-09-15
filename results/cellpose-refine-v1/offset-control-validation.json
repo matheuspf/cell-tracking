@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-09-14T18:46:20.342332+00:00",
+  "status": "passed",
+  "frames": 412,
+  "candidate_instances_including_pilot": 158506,
+  "max_integer_movement_um": 1.7235727791422095,
+  "source_only_calibration_verified": true,
+  "both_fits_and_all_predictions_frozen_before_control_scoring": true,
+  "metrics_sha256": "abed95fd289ab110acdd5173451e5a8501713209a7d16bd2f4bb09654d6d3aae",
+  "performance_gate_passed": false,
+  "scope": "Exploratory control after v1; inherited exposure unverified; no independent biological test"
+}

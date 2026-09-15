@@ -1,0 +1,209 @@
+{
+  "created_utc": "2026-09-13T12:54:59.739177+00:00",
+  "output_root": "/kaggle/working/cell-tracking/center-comparison",
+  "frames": 42,
+  "views": 8,
+  "movies": [
+    {
+      "dataset": "6bba_e16ffc58",
+      "frames": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "dataset": "44b6_8f5ab931",
+      "frames": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    }
+  ],
+  "new_focus_inference_frames": 30,
+  "pilot_snapshots": 12,
+  "unit_tests_passed": 8,
+  "data_validation": {
+    "passed": true,
+    "frames": 42,
+    "pilot_method_radius_comparisons": 360,
+    "native_mask_bytes_exact": true,
+    "display_voxels_exact": true,
+    "assignment_distances_verified": true,
+    "saved_graph_edges_verified": true,
+    "complete_pipeline_models": [
+      "best",
+      "pooled"
+    ],
+    "source_prediction_points_exact": true,
+    "error_context_edges_verified": true,
+    "explained_case_nodes_exact": true,
+    "explained_cases_cover_all_scoring_flags": true,
+    "center_displacement_axes_verified": true,
+    "center_failures_distinct_from_link_failures": true,
+    "correct_daughter_links_preserved": true,
+    "focus_preview_one_to_one_consecutive_only": true
+  },
+  "browser_validation": {
+    "passed": true,
+    "method_radius_combinations": 75,
+    "errors": [],
+    "failed_requests": [],
+    "synchronized_pixels": true,
+    "native_axis_and_mask_pixel_checks": true,
+    "playback_and_pause": true,
+    "rapid_seek": true,
+    "snapshot_gap_guard": true,
+    "temporal_links": true,
+    "mask_picking": true,
+    "selection_and_view_link": true,
+    "viewport_widths": [
+      390,
+      768,
+      1600
+    ],
+    "external_requests": 0,
+    "complete_pipeline_models": [
+      "pooled",
+      "best"
+    ],
+    "error_navigation": true,
+    "error_context_frames": true,
+    "error_share_links": true,
+    "whole_population_scores": true,
+    "separate_center_and_link_cases": true,
+    "paired_frame_pixels_verified": true,
+    "correct_daughter_preserved": true,
+    "case_isolation": true,
+    "error_mobile_layout": true,
+    "default_opens_actionable_case": true,
+    "final_center_overlay_visual_check": true
+  },
+  "ui_source_sha256": {
+    "index.html": "8da4d9a3fea8968361ac259aec16edd3b3d3ee34c0d340a68daa212c19e4bccf",
+    "viewer.js": "7c75f370a5cce7047df354d63a89a07ecccfe81f4784f2767e456870d36a3223",
+    "error_view.js": "ea7e2857c1e3a350169a470c63822553e81571f35239991df85035ee0c33e704",
+    "style.css": "8270e572a43292d2a5d9780bc55a2d8c95c7fbc86f1f2e369f5daf5f29559fa9"
+  },
+  "limitation": "Exploratory reused-embryo results with sparse point annotations. 199-clip scores are separate from the 42 exported image frames. C4_m6 has the highest pooled score but did not pass adoption checks. FOCUS temporal links are a one-to-one preview.",
+  "complete_pipeline_predictions": {
+    "P0": {
+      "default": false,
+      "description": "retained complete pipeline",
+      "selection_note": "Retained P0 pipeline; both embryo scores improved over C0. C0 is still available as the selected v3 comparison.",
+      "full_population_score": 0.9348649864131336,
+      "full_population_clips": 199,
+      "prediction_file_hashes_verified": 199,
+      "fresh_official_diagnostic_clips": 6,
+      "exported_frames": 42,
+      "error_counts_at_7um": {
+        "offset": 48,
+        "edge_fn": 14,
+        "edge_fp": 16,
+        "center_miss": 5,
+        "division_fn": 1
+      },
+      "source_graph_hashes": {
+        "6bba_e16ffc58": "8ead1213f4b0ba5ca6ba9ec5ddc9bfabffa59008b494c3ea45f1c961a472a8a4",
+        "44b6_8f5ab931": "08ef1f8198f53267c6d70144f235d6874a24f17cf0e7ec424f71346d4ce6db16",
+        "44b6_81c256f0": "79be762b4c8ccd79fa8ec1346a38e8e59e8ecc19071429feb153bda2fc77c298",
+        "44b6_a21120c2": "7b25656e166a01460e20242eaf9f9a757f84d99f27514d71e692169756b44e82",
+        "6bba_fe670320": "31d230e9577424c696394b1247c316fd62d2c6a74dca9fef2384513673d9e8c3",
+        "6bba_af149c94": "096422aed10ed1e6676ac032f61fac8be11e1a025cf49aea7b55055f809b1b7f"
+      },
+      "explained_case_counts_at_7um": {
+        "center_missing": 5,
+        "center_offset": 48,
+        "division_missing": 1,
+        "link_detection": 7,
+        "link_missing": 1,
+        "link_wrong": 6
+      },
+      "explained_cases_at_7um": 68,
+      "preserved_scoring_and_diagnostic_flags_at_7um": 84
+    },
+    "C4_m6": {
+      "default": true,
+      "description": "highest pooled score",
+      "selection_note": "Highest recorded pooled score among complete non-oracle pipelines. Not adopted: 6bba regressed by 0.000034 versus C0 and the required replication did not qualify.",
+      "full_population_score": 0.9351783702566538,
+      "full_population_clips": 199,
+      "prediction_file_hashes_verified": 199,
+      "fresh_official_diagnostic_clips": 6,
+      "exported_frames": 42,
+      "error_counts_at_7um": {
+        "offset": 48,
+        "edge_fn": 14,
+        "edge_fp": 16,
+        "center_miss": 5,
+        "division_fn": 1
+      },
+      "source_graph_hashes": {
+        "6bba_e16ffc58": "509eaa405c2004a0c47874c0dccd2ad308106e97c96243852655aae7b8e470dd",
+        "44b6_8f5ab931": "b6604de2986c5e7c97f79d0125a9b11aea87e43bf1e360556d6856c2a3bc5bad",
+        "44b6_81c256f0": "3f1d8bc910b4abd380bfde1f9014d2bfd021197d21bae665c022ef78a3f46e3e",
+        "44b6_a21120c2": "df7c162fb511ca9f3511852037a6942af530128ceb0545f35960d25364531b5d",
+        "6bba_fe670320": "c73c2bea0fd6ea2a854e7984d35da5ab19d81ac77ef7d9a8ef69cd6b79e11b3e",
+        "6bba_af149c94": "39ccee016c8d94f7a0b34fe192cfd64583d06c18cae5d6b57b8e243e6343ca39"
+      },
+      "explained_case_counts_at_7um": {
+        "center_missing": 5,
+        "center_offset": 48,
+        "division_missing": 1,
+        "link_detection": 7,
+        "link_missing": 1,
+        "link_wrong": 6
+      },
+      "explained_cases_at_7um": 68,
+      "preserved_scoring_and_diagnostic_flags_at_7um": 84
+    }
+  },
+  "error_review": {
+    "groups": [
+      "center detection",
+      "temporal linking",
+      "division"
+    ],
+    "center_views": "Same-frame annotated and predicted centers; physical displacement on each axis.",
+    "temporal_views": "Separate earlier and following images, with expected and actual connections.",
+    "unrelated_prediction_markers_hidden_by_default": true,
+    "paired_images_use_same_physical_crop": true,
+    "assignment_radius_um": [
+      1,
+      2,
+      3,
+      5,
+      7
+    ],
+    "tracking_and_division_radius_um": 7,
+    "grouped_cases_preserve_original_flags": true,
+    "limitation": "Cases may overlap across detection, linking and division; counts are not independent biological events."
+  }
+}

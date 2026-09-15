@@ -6,6 +6,11 @@ The repository scaffolding and reference extractor are adapted from the local
 
 ## Start working
 
+**For an agent planning from Git only:** start with the
+[current planning handover](docs/code-only-planning-20260915.md). It identifies
+the best available pipelines, completed evidence, unfinished studies, relevant
+code, and artifacts that are intentionally absent from a clone.
+
 ```sh
 conda activate cell-tracking
 export PYTHONNOUSERSITE=1
@@ -16,6 +21,13 @@ VS Code uses the `cell-tracking` environment; Jupyter provides a
 `Python (cell-tracking)` kernel. The locked runtime includes Zarr v3, NumPy,
 pandas, SciPy, scikit-image, image readers, plotting, and notebook tooling.
 Add training dependencies when selecting a model.
+
+For synchronized microscopy, center assignments, tracking trails and FOCUS-3D
+masks, see the [cell-center comparison viewer](docs/center-comparison-viewer.md).
+The [pipeline error report](docs/pipeline-errors-20260915.md) identifies the
+strongest complete solution and next priorities. Its **Pipeline report** and
+**Tracking & divisions** tabs cover all 199 training clips at
+[localhost:8767](http://localhost:8767/#tab=report).
 
 ## Layout
 
@@ -120,3 +132,11 @@ to review current results and propose the next study. It links the measured
 report, [offline dashboard](results/multidata-training-v4/dashboard.html),
 source/compute evidence and inference dependencies. Code and sanitized results
 are committed; microscopy, checkpoints and the inference ZIP remain local.
+
+The [Cellpose + ultrack study](docs/cellpose-ultrack-20260914.md) evaluates frozen
+cpDINO-ViT-B masks with the full competition metric on six complete clips. The
+[matched error analysis and division adaptations](docs/cellpose-ultrack-error-analysis-20260914.md)
+compare those same clips against v3, including event-cost controls, temporal
+daughter-pair image evidence and the continuation constraint. See
+[reproduction instructions](tools/cellpose_ultrack/README.md) for the pinned
+inputs, separate runtimes and saved checks.

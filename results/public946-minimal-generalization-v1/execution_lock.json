@@ -1,0 +1,351 @@
+{
+  "applicability": {
+    "E01": {
+      "required": "complete normalized native parent columns",
+      "seam": "atomic replacement immediately after motion_relink_edges",
+      "status": "applicable"
+    },
+    "E02": {
+      "affine": {
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "stride": [
+          1,
+          4,
+          4
+        ]
+      },
+      "response": "raw logits",
+      "seam": "same final scalar logits as _detect_cells_pooled; surviving unchanged originals before smoother",
+      "status": "applicable"
+    },
+    "E03": {
+      "evidence": [
+        {
+          "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+          "line": 293,
+          "text": "return np.concatenate([t_col, coords], axis=1).astype(np.int16)"
+        },
+        {
+          "file": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/tracking_repo/scripts/predict_unet_transformer.py",
+          "line": 824,
+          "text": "coords[:, 1:] *= ds_arr"
+        }
+      ],
+      "reason": "Public peak finder returns integer int16 grid coordinates; features have same spatial shape",
+      "status": "pending_numerical_identity"
+    },
+    "E04": {
+      "alignment": "shifted[q]=image[ds*q-shift]; response inverse samples q+shift/ds; retain baseline outside support",
+      "seam": "per-model scalar response before public detection calibration and retention guard",
+      "shift": [
+        0,
+        2,
+        2
+      ],
+      "status": "applicable"
+    },
+    "E05": {
+      "already_present": "feature-channel averaging is present; probability consensus is absent",
+      "reflection": "original X -> raw_width-1-X; then divide by XY stride for unchanged public truncation/gather; physical and positional coordinates use reflected values",
+      "seam": "mean of final normalized probabilities, fixed IDs; run full public association and primary feature TTA on X-reflected raw images",
+      "status": "applicable"
+    },
+    "E06": {
+      "reason": "Actual checkpoint config window_size=2; only one fully observed window contains any consecutive pair",
+      "status": "pending_numerical_identity",
+      "window_size": 2
+    },
+    "E07": {
+      "anchors": "fork, immediate predecessor, immediate daughters",
+      "seam": "original linefit neighborhood with anchors and no support crossing a fork",
+      "status": "applicable"
+    },
+    "E08": {
+      "seam": "mean -> even-count median of inverse-aligned raw detection logits independently in both branches; feature average unchanged",
+      "status": "applicable",
+      "views": 8
+    }
+  },
+  "artifact_hashes_sha256": "d500ad79075221d414d7f35ecb2411f9daa376172c0bffe25b0720bce15a0ffa",
+  "image_inventory_sha256": "632867ff4a50df000710071d95cdecd2a50b0a2aa6b4093aebdb50ed2cdd4398",
+  "limits": {
+    "filesystem_reserve_gib_min": 10,
+    "gpu_allocated_gib_max": 22,
+    "gpu_device_hours_max": 96,
+    "new_scratch_gib_max": 48
+  },
+  "metric": {
+    "checked_at": "2026-09-13T17:57:46.843605+00:00",
+    "current_upstream_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+    "current_verification": "verified",
+    "locked_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+    "source_files": {
+      "src/tracking_cellmot/__init__.py": "f9df2098dd85934d0b0d48d477420b1f9ed20a9a55ca6294a1874b964e9166e6",
+      "src/tracking_cellmot/division_metrics.py": "0635c38621a38f1eb4b55a302b4a817a88e9094930dfc2dab16faeeee60f4dc9",
+      "src/tracking_cellmot/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+      "src/tracking_cellmot/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+      "src/tracking_cellmot/metrics.py": "cfdd596e3f8909cca14db0682889738b19ff75c3808b3773175aba9367ca7444",
+      "src/tracking_cellmot/models/__init__.py": "0861b0bf0d5a574dd0d582c529b763e75c8d271f4df48df15fae3cf5b5fbb127",
+      "src/tracking_cellmot/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+      "src/tracking_cellmot/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+    }
+  },
+  "pilots": [
+    {
+      "contrast": 1382.0000000000002,
+      "dataset": "44b6_e28840c6",
+      "embryo": "44b6",
+      "percentile": 25,
+      "target_contrast": 1392.5
+    },
+    {
+      "contrast": 2513.1888888888916,
+      "dataset": "44b6_5740d24b",
+      "embryo": "44b6",
+      "percentile": 75,
+      "target_contrast": 2456.594444444446
+    },
+    {
+      "contrast": 572.0,
+      "dataset": "6bba_a5e926bb",
+      "embryo": "6bba",
+      "percentile": 25,
+      "target_contrast": 571.4999999999999
+    },
+    {
+      "contrast": 1116.6000000000026,
+      "dataset": "6bba_80d12824",
+      "embryo": "6bba",
+      "percentile": 75,
+      "target_contrast": 1117.9500000000016
+    }
+  ],
+  "plan_sha256": "f4f91d0fcf559aa0303ffb121d3f32ca9a62875d4abb074bbb736cf8b82ff567",
+  "recipes": {
+    "B0": {
+      "id": "B0",
+      "modules": [],
+      "name": "Original public Harmonic Fusion v29",
+      "parent": null,
+      "status": "planned_not_executed"
+    },
+    "B1": {
+      "id": "B1",
+      "modules": [
+        "no_motion"
+      ],
+      "name": "Known no-motion control",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "C01": {
+      "id": "C01",
+      "modules": [
+        "E02",
+        "E03"
+      ],
+      "name": "Localization plus feature sampling",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "C02": {
+      "id": "C02",
+      "modules": [
+        "E04",
+        "E05"
+      ],
+      "name": "Detector plus association consistency",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "C03": {
+      "id": "C03",
+      "modules": [
+        "E05",
+        "E06"
+      ],
+      "name": "Spatial plus temporal association consensus",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E01": {
+      "id": "E01",
+      "modules": [
+        "E01"
+      ],
+      "name": "Native-evidence-gated relinking",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E02": {
+      "id": "E02",
+      "modules": [
+        "E02"
+      ],
+      "name": "Analytic sub-voxel localization",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E03": {
+      "id": "E03",
+      "modules": [
+        "E03"
+      ],
+      "name": "Continuous feature sampling",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E04": {
+      "id": "E04",
+      "modules": [
+        "E04"
+      ],
+      "name": "Half-grid detector consensus",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E05": {
+      "id": "E05",
+      "modules": [
+        "E05"
+      ],
+      "name": "Association reflection consensus",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E06": {
+      "id": "E06",
+      "modules": [
+        "E06"
+      ],
+      "name": "Forward-time context consensus",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E07": {
+      "id": "E07",
+      "modules": [
+        "E07"
+      ],
+      "name": "Fork-anchored smoothing",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "E08": {
+      "id": "E08",
+      "modules": [
+        "E08"
+      ],
+      "name": "Median detection-view aggregation",
+      "parent": "B0",
+      "status": "planned_not_executed"
+    },
+    "X01": {
+      "id": "X01",
+      "modules": [
+        "locked_finalist"
+      ],
+      "name": "First locked non-E01 recipe on B1",
+      "parent": "B1",
+      "status": "planned_not_executed"
+    },
+    "X02": {
+      "id": "X02",
+      "modules": [
+        "locked_finalist"
+      ],
+      "name": "Second locked non-E01 recipe on B1",
+      "parent": "B1",
+      "status": "planned_not_executed"
+    }
+  },
+  "run_envelope": "96 total worker GPU device-hours, 22 GiB allocated GPU, 48 GiB new scratch, 10 GiB reserve; Kaggle GPU <=12h; actual hidden-population feasibility unverified until Kaggle run",
+  "sanitation": "All arms: round naturally with ties-to-even, then clip spatial coordinates to true bounds; original serialized coordinates retained and freshly scored separately",
+  "scientific_code": {
+    "common.py": "40ade286efb91f4595c765df4f5f8b716728b9046b13c20d807c0c7de281ff27",
+    "isolation.py": "1fedd8832753546b78d5528a0ea5ac70c63fbc93765fef92203a48c500ff6cdd",
+    "modules.py": "84955c1d0f5af38ab27e24e13398a228483ad7f6c493a5875366ea682cb5cb11",
+    "neural.py": "7e678c0f80cf1f6b00e7abb0f13cc253216a3e385569fee97709e0a338e46ee8",
+    "source.py": "7fe86da5ae20268a2cc0828531dfd1573d1144b8bdbeb0079e3c07f8db8261e6",
+    "worker.py": "9ac13f8a4f8adcbe7113b9e652d986df0d77de4c0503d5eae48d865a966eb722"
+  },
+  "selection": "4ee4f39cc8ba20e6bccec1b0836cb47aaf2c8d752d80f56d1a6360b506d6419d",
+  "source": {
+    "original_sha256": "7a949f3e5ee6136175b1f3806621697e68776e87f304a37c58132166eb02d645",
+    "settings": {
+      "BIOHUB_ADAPTIVE_SHORT_TRACK_RESCUE": "1",
+      "BIOHUB_BIDIRECTIONAL_EDGE_WEIGHT": "0.15",
+      "BIOHUB_BIDIRECTIONAL_FUSION_MODE": "harmonic_probability",
+      "BIOHUB_DEEPCENTER_CHECKPOINT": "/kaggle/input/datasets/pilkwang/biohub-deepcenter-unet3d-center-prior-v1/weights/full_frame_center/best.pt",
+      "BIOHUB_DEEPCENTER_EXPECTED_EPOCH": "2",
+      "BIOHUB_DEEPCENTER_GAP_CONFIRM_MIN_SPAN_UM": "8.5",
+      "BIOHUB_DEEPCENTER_GAP_THRESHOLD": "0.25",
+      "BIOHUB_DEEPCENTER_GAP_VETO": "1",
+      "BIOHUB_DEEPCENTER_SAFE_DIV_THRESHOLD": "0.25",
+      "BIOHUB_DEEPCENTER_SAFE_DIV_VETO": "1",
+      "BIOHUB_DET_THRESHOLD": "0.965",
+      "BIOHUB_DIAGNOSTIC_ARM": "harmonic_association_production",
+      "BIOHUB_DUAL_SEED_EDGE_THRESHOLD": "0.48",
+      "BIOHUB_DUAL_SEED_MIN_CANDIDATE_RETENTION": "0.90",
+      "BIOHUB_EDGE_FEATURE_TTA": "1",
+      "BIOHUB_GAP_CLOSE_MAX_GAP": "2",
+      "BIOHUB_GAP_CLOSE_UM": "5.0",
+      "BIOHUB_GAP_DENSITY_ADAPTIVE": "1",
+      "BIOHUB_GAP_DENSITY_GAIN": "0.040",
+      "BIOHUB_GAP_DENSITY_MAX_STEP_DELTA_UM": "0.125",
+      "BIOHUB_GAP_DENSITY_NEIGHBORS": "3",
+      "BIOHUB_GAP_DENSITY_REFERENCE_UM": "6.5",
+      "BIOHUB_ILP_APPEARANCE_WEIGHT": "0.0",
+      "BIOHUB_ILP_DISAPPEARANCE_WEIGHT": "2",
+      "BIOHUB_ILP_DIVISION_WEIGHT": "1.2",
+      "BIOHUB_MOTION_RELINK_LEARNED_BONUS": "1.0",
+      "BIOHUB_OUTPUT_FILTER_SHORT_TRACKS": "1",
+      "BIOHUB_OUTPUT_GAP2_RECOVERY": "1",
+      "BIOHUB_OUTPUT_KEEP_DIVISION_COMPONENTS": "1",
+      "BIOHUB_OUTPUT_MIN_TRACK_LEN": "6",
+      "BIOHUB_PPSWEEP_MAX_ADJ_LOSS": "0.0005",
+      "BIOHUB_PPSWEEP_SELECT_MARGIN": "0.001",
+      "BIOHUB_REQUIRE_DEEPCENTER_VETO": "1",
+      "BIOHUB_RUN_OUTPUT_DIAGNOSTICS": "0",
+      "BIOHUB_SAFE_DIV_DIVERGE_UM": "2.25",
+      "BIOHUB_SAFE_DIV_EXISTING_CHILD_MAX_UM": "10.0",
+      "BIOHUB_SAFE_DIV_FRAME_FRAC_CAP": "0.0076",
+      "BIOHUB_SAFE_DIV_GLOBAL_FRAC_CAP": "0.00375",
+      "BIOHUB_SAFE_DIV_MAX_UM": "9.0",
+      "BIOHUB_SAFE_DIV_SISTER_MAX_UM": "14.0",
+      "BIOHUB_SAFE_DIV_SISTER_SYMMETRY_TAU": "0.6",
+      "BIOHUB_SECONDARY_DETECTION_WEIGHT": "0.80",
+      "BIOHUB_SECONDARY_EDGE_WEIGHT": "0.15",
+      "BIOHUB_SECONDARY_LINK_MODE": "low_margin_consensus",
+      "BIOHUB_SECONDARY_LOW_MARGIN_MAX": "0.35",
+      "BIOHUB_SECONDARY_MIX_TEMPERATURE": "1",
+      "BIOHUB_SECONDARY_WEIGHTS": "/kaggle/working/cell-tracking/public946-minimal-generalization-v1/revision-2/public_source/secondary_seed_weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "BIOHUB_SHORT_TRACK_RESCUE_MAX_MEAN_EDGE_DIST_UM": "3.0",
+      "BIOHUB_SHORT_TRACK_RESCUE_MAX_NODES_ABS": "120",
+      "BIOHUB_SHORT_TRACK_RESCUE_MAX_NODES_FRAC": "0.012",
+      "BIOHUB_SHORT_TRACK_RESCUE_MIN_LEN": "4",
+      "BIOHUB_SHORT_TRACK_RESCUE_MIN_MEAN_EDGE_PROB": "0.88",
+      "BIOHUB_USE_DEEPCENTER_VETO": "1",
+      "BIOHUB_VALIDATOR_N_PER_TYPE": "4"
+    },
+    "source_hashes": {
+      "tracking_repo/scripts/augmentations.py": "13db09817bf492f8d0f710a0a4d09776320b262060167055090a303fc6057f4e",
+      "tracking_repo/scripts/dataspec.py": "e69bf952fb985477ac50ff8598a35020c95d20a035a09b81ab4056e655dd311f",
+      "tracking_repo/scripts/evaluate.py": "614813cc51c3581c6ccda4bb20725a19da8ecac4a27620654bfca58319cffa3c",
+      "tracking_repo/scripts/predict_unet_transformer.py": "0e056db9d184916e848929a9d078a541fa6e79353bd068bcff7b0e0f67db0c16",
+      "tracking_repo/scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+      "tracking_repo/src/biohub_tracking/__init__.py": "26a18d8da84e40da73281a48ebc3017d847a2e57431ab63e8629d2109e6e8571",
+      "tracking_repo/src/biohub_tracking/division_metrics.py": "d1cf1e0a43009d02174f1699ce2aa28458a2220ac4b521731d3bcf31cf8c76be",
+      "tracking_repo/src/biohub_tracking/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+      "tracking_repo/src/biohub_tracking/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+      "tracking_repo/src/biohub_tracking/metrics.py": "31baf45b54c78f68bab4f65dd8f4b38bca702abb644171c6df7c46cdeef55d83",
+      "tracking_repo/src/biohub_tracking/models/__init__.py": "ab7587ef79856bae50d24b62e5805092d0459ee1c586522b763f9ef70c093e1d",
+      "tracking_repo/src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+      "tracking_repo/src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+    }
+  }
+}

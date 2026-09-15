@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-14T17:15:59.023870+00:00",
+  "status": "passed",
+  "frames": 412,
+  "seconds": 11.342699395998352,
+  "annotation_access": false,
+  "checks": "Every cached image matches the original detector input hash and its canonical Zarr timepoint exactly; existing feature-volume hashes agree",
+  "detail_sha256": "0671d412ad9bf60ecd1f8029660e79a4bd11e0d6dd9e62f9f1557aedfa52dd92"
+}

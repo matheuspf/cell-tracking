@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-14T17:17:28.849654+00:00",
+  "status": "passed",
+  "training_lock_sha256": "458366c0290af6a99e1f42a13c75c434465e7f92e54e7c426f13748978045df1",
+  "checks": [
+    "package compile",
+    "8 sparse/geometry/ancestry/diagnostic CPU contract tests",
+    "frozen feature numerical and actual GPU backward preflight",
+    "raw identity parity",
+    "raw feature and nonzero-input-dependent head parity",
+    "412 original input hashes and canonical Zarr frames equal"
+  ],
+  "receipt_sha256": {
+    "preflight.json": "7004a361201da3f76c137033e6c17d43741ef5f169c176968743c2f3b8039429",
+    "contract-tests.json": "50dfda200d0bf159798fe60cc8bc658a6271cf0c3297bd2bbe8704bd2a6aff6f",
+    "raw-identity-replay.json": "08a7b91f7083ecc89eb315db5165267b8c2e52d5dfe4018a6c994a4ce0a3a79c",
+    "raw-feature-replay.json": "dff3a466563b9580cc2f11df5def9bcc1885321fef4f65c7695b7757a2aab867",
+    "raw-input-audit.json": "d183df5f955ca017cf290885dbabb61941e743cfa8ab6628536dd6fb61edb0df"
+  },
+  "retained_training_started": false,
+  "target_scores_opened": false
+}

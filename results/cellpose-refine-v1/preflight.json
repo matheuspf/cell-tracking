@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-14T16:39:19.800668+00:00",
+  "status": "passed",
+  "config_sha256": "5ba8b846668cb2741affc3957909b5c71d51dad7ce67a81fe1be05b17b039571",
+  "checks": {
+    "cellpose_commit": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+    "dinov3_commit": "6876159a11b4df116f30f667f8c9888617df0751",
+    "integer_identity_and_3um_net_movement_bound": true,
+    "resize_half_pixel_and_native_patch_ramps": true,
+    "token_bilinear_sampling_matches_torch_grid_sample": true,
+    "unknown_query_gradient_exactly_zero": true,
+    "all_target_exposure_fields_and_wrong_source_rows_rejected": true,
+    "real_features_and_patches_repeat_bitwise": true,
+    "encoder_weights_unchanged_and_frozen": true,
+    "feature_tap_reconstructs_original_cellpose_logits_exactly": true,
+    "head_zero_initialization_bounded_output_and_real_backward": true
+  },
+  "resources": {
+    "batch_size": 128,
+    "updates": 30,
+    "seconds": 0.18261895600153366,
+    "max_reserved_bytes_including_feature_preflight": 939524096,
+    "head_parameters": 398755,
+    "toy_loss_first_last": [
+      0.09375,
+      0.0021939880680292845
+    ],
+    "feature_probe": {
+      "total": 1.1812048940009845,
+      "normalization_resize_patch": 0.9420788160023221,
+      "queried_planes": 11
+    },
+    "gpu_queue_seconds": 6.46191579600054
+  },
+  "probe_frame": "44b6_81c256f0-t025",
+  "labels_read": false,
+  "training": "30 disposable constant-offset optimization steps only; no retained fit",
+  "source_sha256": {
+    "tools/cellpose_refine/features.py": "56c2797867cbc174b603f9345a1d1d6d429def8570e72c2bd978ccf473ca9db4",
+    "tools/cellpose_refine/common.py": "d970fba68507a70f4ab977f97116d6a81d8cefb9d62495cd22ebe8225c3ee607",
+    "tools/cellpose_refine/model.py": "093ae7b0f8d33e675056ec1f814914d68c9efa7946e698870658090e41437099",
+    "tools/cellpose_refine/extract.py": "3528eed5b352f5c99eb6e91a886d3df586de31ab23a0e0aa7c8f9f766731a031",
+    "tools/cellpose_refine/prepare.py": "d94c005848990ef539a83badc746fcb31660211bdb3b7e69278727a90bd0d308",
+    "tools/cellpose_refine/preflight.py": "a9a50a4c3d73c80673355a08e09f57b870d46f74459fca58ec10266135592c3c",
+    "tools/cellpose_refine/__init__.py": "d7dd741b2487965abf0735dba2c05ae61579ecfd5028e7b2c65ae3d1e50d471b"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "stage": "complete",
+  "completed_at_utc": "2026-09-14T23:06:21.126922+00:00",
+  "cohort": {
+    "clips": 6,
+    "frames_per_clip": 100,
+    "total_frames": 600
+  },
+  "completed_arms": [
+    "organoid",
+    "organoid_no_division",
+    "cellect",
+    "cellect_no_division"
+  ],
+  "best_new_arm": "organoid",
+  "best_new_score": 0.8312629194902845,
+  "delta_ultrack": 0.0013893517584026016,
+  "baseline_promoted": false,
+  "interpretation": "Small pooled OrganoidTracker2 gain is driven by divisions; ordinary linking and embryo 6bba regress. CELLECT association does not improve the control. Reused public clips do not establish new-embryo generalization.",
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "upstream_revisions": {
+    "organoid": "db28ff26584ac6d1230ea90750a3324a2778fb31",
+    "cellect": "3586070926f7f1fd5d8df37456861d22bdc63236"
+  },
+  "validation": {
+    "graph_and_csv_hashes_verified": 24,
+    "frame_artifact_hashes_verified": 1200,
+    "organoid_zero_gap_optima": 12,
+    "comparison_rows": 42,
+    "flow_exhaustive_cases": 16,
+    "organoid_real_patch_cpu_cuda_batches": 4,
+    "organoid_real_patches": 24,
+    "cellect_contract_and_real_patch_checks_passed": true,
+    "merged_worker_frames_byte_identical": 200,
+    "python_compile_passed": true,
+    "canvas_typescript_passed": true,
+    "whitespace_checks_passed": true,
+    "canvas_browser_render_tested": false,
+    "kaggle_notebook_integration_tested": false
+  },
+  "sha256": {
+    "tools/other_trackers/__init__.py": "5c0a8973909f0fef2972936a4fcd82bc6b46218815ad49b7b09664a65d4cc960",
+    "tools/other_trackers/cellect.py": "d8d4f5ef9b76ef48fb2d41fa61a273fd3de2e9ef9241d5fd027637092168853c",
+    "tools/other_trackers/common.py": "1d30e8141156353080279762fd57fed8776905a0fa062eb32cad11aef1e1da02",
+    "tools/other_trackers/decode.py": "e7576eea23319222bbb4bbc2c21b5653df4d7319fe5fd555dee9b7032c278db1",
+    "tools/other_trackers/evaluate.py": "15ce6edc934e86eef107cfbb178f3fa7ce8599bc577f04ee341e10f6ba62fa43",
+    "tools/other_trackers/finish.py": "419de310b47dd755772aac59188afb3271d6a3e44a25b9240191478329af5d86",
+    "tools/other_trackers/organoid.py": "9c1e43cb1afb042c64c1bb166294a965949f5071d6aa883a7c69a35513114a26",
+    "tools/other_trackers/report.py": "637b8959fc3430b8bd3b8a92383c759750ec765fa4339f14b05a439bb9fb78a9",
+    "tools/other_trackers/validate.py": "cedcb5470b9831fa670a375a91b5a030ecf56616be2b13352a0e797417ebc484",
+    "tools/other_trackers/README.md": "7ee10d37b523988d952491865d7149deea7a1885acdb0054bf056749398cab92",
+    "configs/other-trackers-20260914.json": "427be5fd0dbb8d18ac1b10ed8b05e264a5b28a728a92bf75ee4adf682bcf1973",
+    "docs/other-trackers-20260914.md": "c40ac0c2d3f11dbe1e580a89570f6d45da8c0fa1f2b3fe94d0fc44aabdbd2a76",
+    "/home/mpf/.cursor/projects/home-mpf-code-kaggle-cell-tracking/canvases/other-trackers-20260914.canvas.tsx": "ae5c39759892cdf896f9adb50c087b0ed391b19b0ed0ff14d1a32b43b6043ed7",
+    "results/other-trackers-20260914/cellect-models.json": "a01955b954b0194dece16876c6c08bee29e126f8305be595979a0c50c9fd31ce",
+    "results/other-trackers-20260914/cellect-validation.json": "b920d70d53aa1506927b3c16dc8c6dd7474458d09a351cffbae7b46ab99c3019",
+    "results/other-trackers-20260914/comparison.json": "2f3317343f9e1594ca9c0e17ad2953380dfe80a2fa5e28240accf1572625eab5",
+    "results/other-trackers-20260914/flow-validation.json": "27b362cbbc8463590cb3d0efe74cc97e676a9ca96e995131084f42aafa140c0a",
+    "results/other-trackers-20260914/organoid-validation.json": "78804b8976f9229d73235d61e8a06f47aaf15c3b0f68510af16e23925712a83d",
+    "results/other-trackers-20260914/provenance.json": "ac26c835f7f519275297ae72b0cf947f3b4e5d825311ca9828d341d7f0b97c67",
+    "results/other-trackers-20260914/runtime-schedule.json": "5d951e6342abc84db56252cf370a63daef1d8451ae6d88a56a58eb5def7fda2e",
+    "results/other-trackers-20260914/summary-cellect-cellect_no_division.json": "ea130a79ec4185a8a80e078d0f845894490e92e35a586bcb4b8dd5eabf32e472",
+    "results/other-trackers-20260914/summary-organoid-organoid_no_division.json": "92e0507a18f265f897f0432b119798b98dd7c25086a5d4d734a90c34ef334757"
+  }
+}

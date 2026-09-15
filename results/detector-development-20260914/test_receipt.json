@@ -1,0 +1,50 @@
+[
+  {
+    "version": "v8",
+    "command": [
+      "/kaggle/envs/cell-tracking-notebooks/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/mpf/code/kaggle/cell-tracking/work/detector-development-20260914/review/v8",
+      "-p",
+      "test_reference.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 1.3904591109985631,
+    "output": "/home/mpf/code/kaggle/cell-tracking/work/detector-development-20260914/review/v8_test_output.txt",
+    "tail": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 38 tests in 0.045s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "version": "v9",
+    "command": [
+      "/kaggle/envs/cell-tracking-notebooks/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/mpf/code/kaggle/cell-tracking/work/detector-development-20260914/review/v9",
+      "-p",
+      "test_handover.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 0.06463196299955598,
+    "output": "/home/mpf/code/kaggle/cell-tracking/work/detector-development-20260914/review/v9_test_output.txt",
+    "tail": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 26 tests in 0.028s",
+      "",
+      "OK"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-14T17:47:13.547209+00:00",
+  "status": "passed",
+  "checks": {
+    "44b6": {
+      "max_jitter_offset_um": 2.4999608993530273,
+      "max_zero_query_offset_um": 0.0,
+      "frames": 355
+    },
+    "6bba": {
+      "max_jitter_offset_um": 2.4999704360961914,
+      "max_zero_query_offset_um": 0.0,
+      "frames": 640
+    }
+  },
+  "scope": "All prepared source queries; no target model scores used"
+}

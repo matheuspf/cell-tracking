@@ -1,0 +1,117 @@
+{
+  "clips": [
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "44b6_81c256f0",
+      "embryo": "44b6",
+      "image_metadata_sha256": "66aa9fe10dca3ff941bd4b4bc5f99de1428c2a37d2b45045e3fd22a2ae118b67",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/44b6_81c256f0.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "44b6_8f5ab931",
+      "embryo": "44b6",
+      "image_metadata_sha256": "0d1687e30eeb096f6890201178d6b388a6485abafac262c1ab440036d3acc2d3",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/44b6_8f5ab931.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "44b6_a21120c2",
+      "embryo": "44b6",
+      "image_metadata_sha256": "893e37bd55a36db299c61db7b1fb3daf5dd5532c939c1110c11b6b6fa9e5ed57",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/44b6_a21120c2.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "6bba_af149c94",
+      "embryo": "6bba",
+      "image_metadata_sha256": "44bbe018c9c9599e2a98cca0ee5d219f5d22d5875ee8aebb16a8771af77bf85f",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/6bba_af149c94.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "6bba_e16ffc58",
+      "embryo": "6bba",
+      "image_metadata_sha256": "61d8c37fb90e25e178774412cf0f6f3fce89eb5ef860650ebe02b9e5be350760",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/6bba_e16ffc58.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "array_metadata_sha256": "73e3ff105fe0c50983cff97a50bfa95f8c0da16e1cb5adb56968d1cb7e1c41b0",
+      "dataset": "6bba_fe670320",
+      "embryo": "6bba",
+      "image_metadata_sha256": "8939caa683fd2e6f117960a6db08319f78ae3df1704a22d904829878de5f2748",
+      "image_path": "/kaggle/input/competitions/biohub-cell-tracking-during-development/train/6bba_fe670320.zarr",
+      "shape": [
+        100,
+        64,
+        256,
+        256
+      ],
+      "spacing_um": [
+        1.625,
+        0.40625,
+        0.40625
+      ]
+    }
+  ],
+  "inference_annotations": "No GT, estimated cell counts, or existing tracker outputs in this manifest.",
+  "schema": 1,
+  "scope": "pilot",
+  "selection": "All frames of the previously frozen detector-screen clip cohort; no outcome-based selection.",
+  "source_panel_sha256": "60671a3108fd465ff175c30d9608e8a61f7492ee7030e40f6f5ee873c4ad817a"
+}

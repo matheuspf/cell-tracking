@@ -1,0 +1,1133 @@
+{
+  "created_utc": "2026-09-14T19:51:12.095191+00:00",
+  "pilot_plan_sha256": "f45d387dbe7ded72bf949d6624572a2a40f2a483d344255ac56244f507180df2",
+  "adjacent_plan_sha256": "0c277c05d61b33934f41ea1859421fe502e5f7bfd852a51df63dd275fed561fc",
+  "protocol_revision": "v1: correct nonadjacent t25/t75 pilot by adding t26/t76; v0 was never executed. No GT opened for revision.",
+  "panel": {
+    "frames": [
+      {
+        "key": "44b6_81c256f0-t025",
+        "dataset": "44b6_81c256f0",
+        "embryo": "44b6",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_81c256f0-t026",
+        "dataset": "44b6_81c256f0",
+        "embryo": "44b6",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_81c256f0-t075",
+        "dataset": "44b6_81c256f0",
+        "embryo": "44b6",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_81c256f0-t076",
+        "dataset": "44b6_81c256f0",
+        "embryo": "44b6",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t025",
+        "dataset": "44b6_8f5ab931",
+        "embryo": "44b6",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t026",
+        "dataset": "44b6_8f5ab931",
+        "embryo": "44b6",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t075",
+        "dataset": "44b6_8f5ab931",
+        "embryo": "44b6",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t076",
+        "dataset": "44b6_8f5ab931",
+        "embryo": "44b6",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t025",
+        "dataset": "44b6_a21120c2",
+        "embryo": "44b6",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t026",
+        "dataset": "44b6_a21120c2",
+        "embryo": "44b6",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t075",
+        "dataset": "44b6_a21120c2",
+        "embryo": "44b6",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t076",
+        "dataset": "44b6_a21120c2",
+        "embryo": "44b6",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t025",
+        "dataset": "6bba_af149c94",
+        "embryo": "6bba",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t026",
+        "dataset": "6bba_af149c94",
+        "embryo": "6bba",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t075",
+        "dataset": "6bba_af149c94",
+        "embryo": "6bba",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t076",
+        "dataset": "6bba_af149c94",
+        "embryo": "6bba",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t025",
+        "dataset": "6bba_e16ffc58",
+        "embryo": "6bba",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t026",
+        "dataset": "6bba_e16ffc58",
+        "embryo": "6bba",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t075",
+        "dataset": "6bba_e16ffc58",
+        "embryo": "6bba",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t076",
+        "dataset": "6bba_e16ffc58",
+        "embryo": "6bba",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t025",
+        "dataset": "6bba_fe670320",
+        "embryo": "6bba",
+        "time": 25,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t025.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t024.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t026.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t026",
+        "dataset": "6bba_fe670320",
+        "embryo": "6bba",
+        "time": 26,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t026.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t025.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t027.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t075",
+        "dataset": "6bba_fe670320",
+        "embryo": "6bba",
+        "time": 75,
+        "role": "pilot",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t075.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t074.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t076.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t076",
+        "dataset": "6bba_fe670320",
+        "embryo": "6bba",
+        "time": 76,
+        "role": "pilot_adjacent_extension",
+        "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t076.npy",
+        "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t075.npy",
+        "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t077.npy",
+        "spacing_um": [
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "shape": [
+          64,
+          256,
+          256
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "key": "44b6_81c256f0-t025",
+        "dataset": "44b6_81c256f0",
+        "time": 25,
+        "frames": [
+          {
+            "key": "44b6_81c256f0-t025",
+            "dataset": "44b6_81c256f0",
+            "embryo": "44b6",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_81c256f0-t026",
+            "dataset": "44b6_81c256f0",
+            "embryo": "44b6",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "44b6_81c256f0-t075",
+        "dataset": "44b6_81c256f0",
+        "time": 75,
+        "frames": [
+          {
+            "key": "44b6_81c256f0-t075",
+            "dataset": "44b6_81c256f0",
+            "embryo": "44b6",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_81c256f0-t076",
+            "dataset": "44b6_81c256f0",
+            "embryo": "44b6",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_81c256f0/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t025",
+        "dataset": "44b6_8f5ab931",
+        "time": 25,
+        "frames": [
+          {
+            "key": "44b6_8f5ab931-t025",
+            "dataset": "44b6_8f5ab931",
+            "embryo": "44b6",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_8f5ab931-t026",
+            "dataset": "44b6_8f5ab931",
+            "embryo": "44b6",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "44b6_8f5ab931-t075",
+        "dataset": "44b6_8f5ab931",
+        "time": 75,
+        "frames": [
+          {
+            "key": "44b6_8f5ab931-t075",
+            "dataset": "44b6_8f5ab931",
+            "embryo": "44b6",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_8f5ab931-t076",
+            "dataset": "44b6_8f5ab931",
+            "embryo": "44b6",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_8f5ab931/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t025",
+        "dataset": "44b6_a21120c2",
+        "time": 25,
+        "frames": [
+          {
+            "key": "44b6_a21120c2-t025",
+            "dataset": "44b6_a21120c2",
+            "embryo": "44b6",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_a21120c2-t026",
+            "dataset": "44b6_a21120c2",
+            "embryo": "44b6",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "44b6_a21120c2-t075",
+        "dataset": "44b6_a21120c2",
+        "time": 75,
+        "frames": [
+          {
+            "key": "44b6_a21120c2-t075",
+            "dataset": "44b6_a21120c2",
+            "embryo": "44b6",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "44b6_a21120c2-t076",
+            "dataset": "44b6_a21120c2",
+            "embryo": "44b6",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/44b6_a21120c2/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t025",
+        "dataset": "6bba_af149c94",
+        "time": 25,
+        "frames": [
+          {
+            "key": "6bba_af149c94-t025",
+            "dataset": "6bba_af149c94",
+            "embryo": "6bba",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_af149c94-t026",
+            "dataset": "6bba_af149c94",
+            "embryo": "6bba",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_af149c94-t075",
+        "dataset": "6bba_af149c94",
+        "time": 75,
+        "frames": [
+          {
+            "key": "6bba_af149c94-t075",
+            "dataset": "6bba_af149c94",
+            "embryo": "6bba",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_af149c94-t076",
+            "dataset": "6bba_af149c94",
+            "embryo": "6bba",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_af149c94/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t025",
+        "dataset": "6bba_e16ffc58",
+        "time": 25,
+        "frames": [
+          {
+            "key": "6bba_e16ffc58-t025",
+            "dataset": "6bba_e16ffc58",
+            "embryo": "6bba",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_e16ffc58-t026",
+            "dataset": "6bba_e16ffc58",
+            "embryo": "6bba",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_e16ffc58-t075",
+        "dataset": "6bba_e16ffc58",
+        "time": 75,
+        "frames": [
+          {
+            "key": "6bba_e16ffc58-t075",
+            "dataset": "6bba_e16ffc58",
+            "embryo": "6bba",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_e16ffc58-t076",
+            "dataset": "6bba_e16ffc58",
+            "embryo": "6bba",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_e16ffc58/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t025",
+        "dataset": "6bba_fe670320",
+        "time": 25,
+        "frames": [
+          {
+            "key": "6bba_fe670320-t025",
+            "dataset": "6bba_fe670320",
+            "embryo": "6bba",
+            "time": 25,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t025.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t024.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t026.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_fe670320-t026",
+            "dataset": "6bba_fe670320",
+            "embryo": "6bba",
+            "time": 26,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t026.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t025.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t027.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "key": "6bba_fe670320-t075",
+        "dataset": "6bba_fe670320",
+        "time": 75,
+        "frames": [
+          {
+            "key": "6bba_fe670320-t075",
+            "dataset": "6bba_fe670320",
+            "embryo": "6bba",
+            "time": 75,
+            "role": "pilot",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t075.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t074.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t076.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          },
+          {
+            "key": "6bba_fe670320-t076",
+            "dataset": "6bba_fe670320",
+            "embryo": "6bba",
+            "time": 76,
+            "role": "pilot_adjacent_extension",
+            "image_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t076.npy",
+            "previous_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t075.npy",
+            "next_path": "/home/mpf/code/kaggle/cell-tracking/work/detector-screen-20260914/images/6bba_fe670320/t077.npy",
+            "spacing_um": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "shape": [
+              64,
+              256,
+              256
+            ]
+          }
+        ]
+      }
+    ],
+    "image_sha256": {
+      "44b6_81c256f0-t025": "d71bfa3eb8c5a5a9d6994c80cc5464b85fcf8a1d52e52924019f233cb40b89c7",
+      "44b6_81c256f0-t075": "2e59fd9afeb057bee196e9351184f183543e761fe0beb6bd5b0ac70f7a291a9d",
+      "44b6_8f5ab931-t025": "666c8fad1bad0036bef197f7f22b86a6873c134be013a21c4962ad4e0eaf6e7f",
+      "44b6_8f5ab931-t075": "97a049516ff311594f65ff15b7bdba50f93b72705e5f17609d5e2b2f28c43b3d",
+      "44b6_a21120c2-t025": "ed53b30b0a9a2e0b51d33c59e5e0578bce967e67f7963a9f2abea5e9743246d2",
+      "44b6_a21120c2-t075": "e78f6c311d4420bb6b0cbbd6ec7356e86986fb0a161530400e3882a4ede8ead2",
+      "6bba_af149c94-t025": "336113b649e197d451dc0d275106d07a9112c42fd96ae0f798c249dea58c0970",
+      "6bba_af149c94-t075": "3d6d43b1e55b88da2168a9c24731b56ba25ff64bfafc38d8ccccefab32e7b837",
+      "6bba_e16ffc58-t025": "a887920d6e155dd3624e378f6b314fefcbf397c928fb1f60aa84bcac679fc302",
+      "6bba_e16ffc58-t075": "202d3ea51e60183a0aa44ba750372a6937be78ed3dd514b06474ac57ce0c8993",
+      "6bba_fe670320-t025": "1e337515d8f7239e33ffb20f51272002f6462017e21737b20e9b5cf92bccf20a",
+      "6bba_fe670320-t075": "d349964c8cd304cfd0176f97803f8616b598dd996f94b21336781aab03725548",
+      "44b6_81c256f0-t026": "adbabfc132e538ed65c9a7a2322e2f89721775fcf00fff79745d4683ef3f1838",
+      "44b6_81c256f0-t076": "cd307429e3c2641e3a848a3d2bf89a6119674db412aae878ac6dac8a29b17f5d",
+      "44b6_8f5ab931-t026": "bcb82b7f077fe749524e566417d19de12512fa15b130bd91d1745202f81f276f",
+      "44b6_8f5ab931-t076": "8f73b2f001860038e8f01f2485b41c0053e34ce947673f9d3cae3432c576d754",
+      "44b6_a21120c2-t026": "82a1d038c4b90298546d358a36b00c85c5a1db9c6e915ebb46425403a775df2f",
+      "44b6_a21120c2-t076": "145036997aa80fa7850d0695660c39cb9419be14c7e278e0633af7ccc3cf51c8",
+      "6bba_af149c94-t026": "2d00736f734a404093d7e7d52fd41d33a6ad3135c0ba99a7cbf4ceeafc228fc6",
+      "6bba_af149c94-t076": "ff995051f9325d81fff7130bb939e67e81bccb6a39e446d37e95c8620c89e8a3",
+      "6bba_e16ffc58-t026": "df8620459234db74cce10c211bc736beec107f4181bd18cc7fa7ed51857e3ab9",
+      "6bba_e16ffc58-t076": "202d3ea51e60183a0aa44ba750372a6937be78ed3dd514b06474ac57ce0c8993",
+      "6bba_fe670320-t026": "c06d4ccde64dc86bdf65b5155dc169593a458cd06bce39c7c4e34188bdaa259f",
+      "6bba_fe670320-t076": "791fb9105f1eeb8d2f17f1aa66ca90d34dc6f47841209d4a8bf75c402103f2d4"
+    }
+  },
+  "weights": {
+    "primary": {
+      "path": "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "12f6881ee3620a831697ca098ff8f48e687a24225f4e048b538deec3562fe771"
+    },
+    "secondary": {
+      "path": "/kaggle/input/datasets/pilkwang/biohub-temporal-unet3d-seed314159-v1/weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "9bac2fa0dadc4a6fc1899e0caf187f4b553e0a7cd90ba1261a68b35ffe9e305f"
+    }
+  },
+  "native_source": {
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/augmentations.py": "13db09817bf492f8d0f710a0a4d09776320b262060167055090a303fc6057f4e",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/dataspec.py": "e69bf952fb985477ac50ff8598a35020c95d20a035a09b81ab4056e655dd311f",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/evaluate.py": "614813cc51c3581c6ccda4bb20725a19da8ecac4a27620654bfca58319cffa3c",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/predict_unet_transformer.py": "c44e771ba5980b820f93091e03a303c25dfe8f3232e501f54dc9565731c234b9",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/__init__.py": "26a18d8da84e40da73281a48ebc3017d847a2e57431ab63e8629d2109e6e8571",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/division_metrics.py": "d1cf1e0a43009d02174f1699ce2aa28458a2220ac4b521731d3bcf31cf8c76be",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/img_proc.py": "00e8ef0adc8b39f1aaaa547ea6197b906bf9e8c009e339d3e95f8f8dbf31be3f",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/io.py": "efae135b088cecaab463d889f16c885ef6da3ad27b0747327d8ddc28d866b7bd",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/metrics.py": "31baf45b54c78f68bab4f65dd8f4b38bca702abb644171c6df7c46cdeef55d83",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/__init__.py": "ab7587ef79856bae50d24b62e5805092d0459ee1c586522b763f9ef70c093e1d",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e",
+    "/kaggle/input/datasets/pilkwang/biohub-tracking-support-pack-50ep-v1/repo/src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac"
+  },
+  "embeddings": "32-dimensional trained TemporalUNet features at each bank-specific center. Encoder is run once per frame pair and weight; node-transformer is run separately per bank with all its candidates.",
+  "coordinates": "Integer native exported point divided by (1,4,4); original floor-and-clamp feature indexing, sinusoidal positions, original-voxel edge coordinates. Strided native input and original full-movie quantile normalization.",
+  "controls": [
+    "negative physical distance",
+    "primary trained encoder + trained transformer",
+    "primary zero image features + same trained transformer",
+    "fixed notebook low-margin ensemble, image and zero-image",
+    "secondary trained encoder + trained transformer",
+    "secondary zero image features + same trained transformer"
+  ],
+  "link_gate_um": 15.0,
+  "union_suppression_um": 2.0,
+  "methods": [
+    "incumbent",
+    "cpdino-vitb",
+    "cpdino",
+    "cpsam_v2",
+    "vitb+vitl",
+    "vitb+sam",
+    "all_cellpose",
+    "incumbent+vitb",
+    "incumbent+all_cellpose"
+  ],
+  "evaluation": "Detector recall1-7um and close-pair recovery. Continuation top1 child ranking, top1 parent ranking for all GT edges, and true-division top2 recovery, using actual7um per-frame assignment. Unknown cells remain candidate competitors. No learned calibration or target fitting.",
+  "scope": "24 frames, twelve adjacent pairs, six reused pilot clips. No complete-clip competition score. Encoders inherit incumbent exposure.",
+  "script_sha256": "29c46d409b7f74e0ff4db716532e4acbe38bc00dd751d57eaae0e88b46c0dc6a"
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Detector comparison · validation replay and new training</title>
+<style>
+:root{color-scheme:light;--ink:#172b34;--muted:#52636c;--line:#d1dadd;--accent:#126f71;--paper:#f7f9f8}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,sans-serif}main{max-width:1220px;margin:auto;padding:34px 28px 70px}h1{font-size:28px;line-height:1.2;margin:8px 0 16px;font-weight:650}h2{font-size:21px;margin:36px 0 12px}p{max-width:980px}a{color:var(--accent)}.eyebrow,.caption{color:var(--muted);font-size:13px}.lede{font-size:18px}.metrics{display:flex;gap:35px;flex-wrap:wrap;padding:22px 0;border-block:1px solid var(--line)}.metrics strong{display:block;font-size:25px;font-variant-numeric:tabular-nums}.metrics span{font-size:13px;color:var(--muted)}.note{border-left:3px solid var(--accent);padding:1px 16px;background:#edf3f2;margin:20px 0}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px;margin:14px 0}th,td{padding:10px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}th:first-child,td:first-child{text-align:left}th{background:#eaf0ee;font-weight:600}tr.new{background:#edf5f1}select{font:inherit;padding:7px 12px;border:1px solid #94a8ad;border-radius:3px;background:white;color:var(--ink)}label{display:inline-flex;gap:12px;align-items:center}.chart{background:white;border:1px solid var(--line);padding:16px;margin-top:18px}.chart svg{width:100%;height:auto;display:block}.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:12px}.legend span:before{content:' ';display:inline-block;width:24px;margin:0 8px 4px 0;border-top:3px solid var(--c)}.job{display:grid;grid-template-columns:170px 1fr;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}progress{width:100%;accent-color:var(--accent)}.status{display:flex;gap:16px;flex-wrap:wrap}.pill{background:#e2ece9;padding:4px 9px;font-size:12px}.muted{color:var(--muted)}code{font-size:12px;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);margin-top:34px;padding-top:20px;color:var(--muted);font-size:13px}
+@media(max-width:640px){main{padding:22px 15px}h1{font-size:24px}.job{grid-template-columns:1fr;gap:3px}.metrics{gap:18px}.metrics strong{font-size:21px}}
+</style>
+<main>
+<div class="eyebrow">BIOHUB CELL TRACKING · SHARED WORKSPACE · 14 SEPTEMBER 2026</div>
+<h1>Comparable validation, then generalization</h1>
+<p class="lede">The released validation result is reproduced closely. New fits trained on both embryos measure the effect of training exposure; separate native fits exclude each target embryo entirely.</p>
+<div class="status"><span class="pill" id="connection">Saved snapshot</span><span class="caption" id="updated"></span></div>
+<h2>Released checkpoint replay</h2>
+<div class="metrics" id="replay"></div>
+<p>The historical metric is edge-classification accuracy × detected-node recall, using greedy <strong>5 µm</strong> matching. It is not the competition score. The monitoring set is included in training and comes entirely from embryo 44b6.</p>
+<div class="scroll" id="replaytable"></div>
+<p class="caption">The 200-batch prefix contains only 19 of 40 monitoring clips. Counts include repeated frames in adjacent windows. The recall matches the published result exactly; the small edge-accuracy discrepancy remains unresolved.</p>
+<h2>Center localization on the same 400 frames</h2>
+<label>Assessment group <select id="embryo"><option value="pooled">Both embryos · pooled</option><option value="44b6">44b6 · 200 frames</option><option value="6bba">6bba · 200 frames</option></select></label>
+<div class="chart"><div id="curve"></div><div id="legend" class="legend"></div></div>
+<div class="scroll" id="detectors"></div>
+<p class="caption">Native integer coordinates; one-to-one optimal matching at each radius. Close-pair columns count pairs of annotated cells within 7 or 14 µm, both recovered by separate detections within 3 µm. Sparse annotations do not permit a complete precision estimate.</p>
+<div class="note"><p id="exposure"></p><p>Both-embryo fitting matches the incumbent’s clip population. It does not match exact time sampling, labels consumed, optimization budget, architecture or pretraining. Source-only refers to refiner adaptation; cpDINO pretraining ancestry remains unresolved.</p></div>
+<h2>Complete-clip competition-score comparison</h2>
+<p>Nine registered methods on six complete 100-frame clips. Every bank gets fresh native embeddings at its own centers and the same fixed native linker. Added-proposal variants retain their extra nodes, so both link quality and the official node-count adjustment affect the result.</p>
+<div id="full"></div>
+<p class="caption">Common linker: public primary association weights, source-normalized softmax >0.5, at most one parent and two children, no motion gate. This is a controlled native pipeline, not the full production Harmonic pipeline. These reused clips and released association weights are training-exposed.</p>
+<h2>Native models with each embryo excluded</h2>
+<p>Entire encoder, detector and association head initialized randomly. Fixed final epoch 400; no target evaluation until both fits finish. Source-only read guards and frozen input hashes apply to each worker.</p>
+<div id="jobs"></div>
+<p id="duration"></p>
+<p class="caption">Batch size 8, AdamW 1e-4, original losses and augmentation; saved optimizer and random-generator state. Workers release the GPU every eight updates. The estimate uses recent compute time and excludes future contention.</p>
+<footer><p>Files: <code>results/incumbent-comparison-20260914/</code> · Report: <code>docs/incumbent-comparison-20260914.md</code><br>Checkpoints and logs: <code>work/incumbent-comparison-20260914/</code></p><p>Only two public embryos are available. Report each direction separately; overlapping crops and repeatedly inspected panels limit claims about new embryos. Native target inference/evaluation is a later stage after training, not an automatically scheduled worker.</p></footer>
+</main>
+<script>
+let data=__DATA__;
+const $=id=>document.getElementById(id), esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const n=v=>Number(v).toLocaleString('en-US'), pct=v=>(v*100).toFixed(2)+'%', table=(headers,rows)=>'<table><thead><tr>'+headers.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr'+(String(r[0]).includes('both embryos')?' class="new"':'')+'>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table>';
+const colors={'incumbent':'#233b45','baseline':'#909ea4','constant':'#9b6a39','20260914':'#64989c','314159':'#477c92','both-20260914':'#117364','both-314159':'#394e7b'};
+function render(){
+ $('updated').textContent='Updated '+data.updated_utc;
+ const cap=data.replay.cap200,full=data.replay.full40;
+ $('replay').innerHTML='<div><strong>'+cap.product.toFixed(10)+'</strong><span>Replayed 200-batch proxy</span></div><div><strong>'+data.published.product.toFixed(10)+'</strong><span>Published proxy · epoch 381</span></div><div><strong>'+cap.product_delta_from_published.toExponential(3)+'</strong><span>Replay − published</span></div>';
+ $('replaytable').innerHTML=table(['Protocol','Clips','Windows','Detected GT','Node recall','Edge accuracy','Product'],[['Historical cap · 200 batches',cap.clip_count,n(cap.window_count),n(cap.counts.gt_matched)+' / '+n(cap.counts.gt_total),pct(cap.node_recall),cap.accuracy.toFixed(10),cap.product.toFixed(10)],['Entire monitor · '+full.batches+' batches',full.clip_count,n(full.window_count),n(full.counts.gt_matched)+' / '+n(full.counts.gt_total),pct(full.node_recall),full.accuracy.toFixed(10),full.product.toFixed(10)]]);
+ const rows=data.curves.filter(r=>r.embryo===$('embryo').value);
+ $('detectors').innerHTML=table(['Detector / adaptation','GT','Candidates','1 µm','2 µm','3 µm','4 µm','5 µm','6 µm','7 µm','Close ≤7','Close ≤14'],rows.map(r=>[r.label,n(r.gt),n(r.candidates),...[1,2,3,4,5,6,7].map(k=>pct(r.recall[k])),...['7','14'].map(k=>r.close[k].both_at3+' / '+r.close[k].pairs)]));
+ const x=k=>65+(k-1)*145,y=p=>300-p*245;
+ let svg='<svg viewBox="0 0 1010 365" role="img" aria-label="One-to-one detection recall by localization tolerance, 1 to 7 micrometers"><text x="65" y="21" font-size="14" fill="#172b34">Detection recall (%) · '+esc($('embryo').selectedOptions[0].text)+'</text>';
+ for(let p=0;p<=100;p+=20){svg+='<line x1="65" x2="935" y1="'+y(p/100)+'" y2="'+y(p/100)+'" stroke="#e0e7e6"/><text x="53" y="'+(y(p/100)+4)+'" text-anchor="end" font-size="12" fill="#52636c">'+p+'</text>';}
+ for(let k=1;k<=7;k++)svg+='<text x="'+x(k)+'" y="320" text-anchor="middle" font-size="12" fill="#52636c">'+k+'</text>';
+ svg+='<text x="500" y="348" text-anchor="middle" font-size="13" fill="#52636c">Localization tolerance (µm)</text>';
+ for(const r of rows){const pts=[1,2,3,4,5,6,7].map(k=>x(k)+','+y(r.recall[k])).join(' ');svg+='<polyline fill="none" stroke="'+colors[r.method]+'" stroke-width="'+(r.method.startsWith('both')?3:2)+'" points="'+pts+'"/>';for(let k=1;k<=7;k++)svg+='<circle cx="'+x(k)+'" cy="'+y(r.recall[k])+'" r="3" fill="'+colors[r.method]+'"><title>'+esc(r.label)+': '+pct(r.recall[k])+' at '+k+' µm</title></circle>';}
+ $('curve').innerHTML=svg+'</svg>';
+ $('legend').innerHTML=rows.map(r=>'<span style="--c:'+colors[r.method]+'">'+esc(r.label)+'</span>').join('');
+ $('exposure').textContent=data.refits_assessed?'Both refiner seeds trained on both embryos are now included. These are resubstitution results: assessment labels were eligible for training. All new fits and predictions were frozen before this evaluation.':'Both refiner seeds trained on both embryos have finished fitting; their frozen 400-frame assessment is in progress.';
+ const f=data.full_clips;
+ if(f.evaluation){const rows=Object.entries(f.evaluation.summaries).map(([method,groups])=>{const r=groups[$('embryo').value];return[method,r.score.toFixed(8),r.edge_jaccard.toFixed(6),r.adj_edge_jaccard.toFixed(6),n(r.proposals),pct(r.detector_recall['3']),pct(r.detector_recall['7']),n(r.linked_gt_edges)+' / '+n(r.available_gt_edges)]});$('full').innerHTML='<div class="scroll">'+table(['Method','Official local score','Edge Jaccard','Adjusted edge','Nodes','Recall 3 µm','Recall 7 µm','Linked / available GT edges'],rows)+'</div>';}
+ else if(f.progress){const p=f.progress,failed=f.driver?.stages?.find(s=>s.status==='failed'),stopped=f.driver&&!f.driver.process_running&&!f.driver.completed_utc;$('full').innerHTML='<div class="note"><p><strong>'+esc(failed?'Failed stage: '+failed.stage:stopped?'Worker stopped · inspect log':p.stage)+'</strong> · '+p.completed+' / '+p.total+'</p><progress value="'+p.completed+'" max="'+p.total+'"></progress><p class="caption">'+esc(p.updated_utc)+' · No complete-clip score available yet.</p></div>';}
+ $('jobs').innerHTML=data.native_training.map(r=>'<div class="job"><div><strong>'+r.source+' → '+r.target+'</strong><br><span class="caption">'+(r.complete?'Complete':r.process_running?'Running · epoch '+r.epoch+' / '+r.target_epochs:'Worker stopped · inspect log')+'</span></div><div><progress value="'+r.fraction+'" max="1"></progress><div>'+n(r.updates)+' updates · '+n(r.epoch_windows)+' / '+n(r.windows_per_epoch)+' windows this epoch · '+(r.peak_reserved_bytes/2**30).toFixed(2)+' GiB peak reserved</div><div class="caption">Last update '+esc(r.updated_utc)+' · '+(r.checkpoint_exists?'Resume checkpoint saved':'No resume checkpoint yet')+'</div></div></div>').join('');
+ $('duration').textContent='Estimated remaining compute: '+data.native_training.reduce((sum,r)=>sum+r.remaining_compute_days_estimate,0).toFixed(1)+' GPU-days across both runs. GPU memory is not blocking training; this is a long campaign on one 4090.';
+}
+render();$('embryo').addEventListener('change',render);
+async function refresh(){if(location.protocol==='file:')return;try{const res=await fetch('/status.json',{cache:'no-store'});if(!res.ok)throw Error(res.status);data=await res.json();render();$('connection').textContent='Live · refreshes every 10 seconds';}catch(e){$('connection').textContent='Saved snapshot · live refresh unavailable';}}
+refresh();setInterval(refresh,10000);
+</script></html>

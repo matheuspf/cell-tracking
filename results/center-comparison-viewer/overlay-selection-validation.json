@@ -1,0 +1,127 @@
+{
+  "created_utc": "2026-09-14T15:21:32.334899+00:00",
+  "viewer_url": "http://localhost:8767",
+  "behavior": "Full image and zoom each overlay gold GT diamonds and cyan predictions. A 7 micrometer circle surrounds the selected GT. Click a prediction in either image, its nearby button, or the all-predictions selector. Clearly named prediction sources preserve the selected GT and frame. The selection bar separates 3D distance, radius eligibility and actual assignment.",
+  "datasets": 199,
+  "frames": 19900,
+  "annotations": 133318,
+  "counts": {
+    "pooled": {
+      "all": 50546,
+      "detection": 42868,
+      "missing": 920,
+      "selection": 1765,
+      "association": 7678,
+      "ambiguous": 33362,
+      "offset": 23980,
+      "annotations": 133318,
+      "unlabeled": 3978107
+    },
+    "best": {
+      "all": 50535,
+      "detection": 42868,
+      "missing": 920,
+      "selection": 1765,
+      "association": 7667,
+      "ambiguous": 33361,
+      "offset": 23980,
+      "annotations": 133318,
+      "unlabeled": 3978107
+    }
+  },
+  "detector_unmatched": 4698870,
+  "full_dataset_audit_database_sha256": "2a13b4cfe5008273c9fef063f1996084c3c400689d61294626b417fa80a660cf",
+  "data_audit_unchanged": true,
+  "data_and_predictions_changed": false,
+  "focus_masks_changed": false,
+  "full_data_audit": "results/center-comparison-viewer/detection-validation.json",
+  "tests": {
+    "passed": 21,
+    "skipped": 0
+  },
+  "browser_validation": {
+    "passed": true,
+    "datasets": 199,
+    "frames": 19900,
+    "annotations": 133318,
+    "default_all_examples": 50546,
+    "legacy_28_case_links_open_all_data": true,
+    "first_and_last_examples_reachable": true,
+    "next_crosses_page_boundary": true,
+    "raw_pool_last_example": true,
+    "model_filter_combinations": 8,
+    "native_frame_bytes_independently_verified": true,
+    "full_and_zoom_pixels_in_all_planes": true,
+    "full_image_not_cropped": true,
+    "synchronized_overlays": true,
+    "automatic_depth_includes_selected_centers": true,
+    "overlay_views": 2,
+    "full_image_click_moves_zoom": true,
+    "own_frame_centers": true,
+    "association_endpoints": true,
+    "rapid_frame_navigation": true,
+    "playback_pause": true,
+    "clip_frame_reset": true,
+    "local_assessment_export": true,
+    "case_links_and_tab_state": true,
+    "empty_filter_recovery": true,
+    "zero_annotation_frames": true,
+    "viewport_widths": [
+      390,
+      768,
+      1700
+    ],
+    "errors": [],
+    "failed_requests": [],
+    "external_requests": 0
+  },
+  "selection_validation": {
+    "passed": true,
+    "gt_color": "#ffd166",
+    "prediction_color": "#42e4f5",
+    "both_colors_in_full_and_zoom_pixels": true,
+    "zero_distance_keeps_both_colors": true,
+    "real_radius_arcs_7um_on_gt_all_planes": true,
+    "no_gt_no_radius": true,
+    "independent_3d_distances": true,
+    "depth_only_outside_radius": true,
+    "nearest_chips_and_all_prediction_dropdown": true,
+    "click_prediction_full_and_zoom": true,
+    "far_prediction_fits_crop_and_depth": true,
+    "selection_does_not_change_assignments": true,
+    "sources_preserve_selected_gt_and_frame": true,
+    "source_counts_correct": true,
+    "source_and_selected_pair_restore_from_link": true,
+    "frame_selection_uses_own_time": true,
+    "assignment_distinct_from_radius": true,
+    "conflicting_assignment_gt_visible": true,
+    "real_example_keys": {
+      "exact": "pooled:44b6_0c582fdc:g:144000000080",
+      "conflict": "pooled:44b6_706092f0:g:447000000016"
+    },
+    "viewport_widths": [
+      390,
+      768,
+      1700
+    ],
+    "errors": [],
+    "failed_requests": []
+  },
+  "visually_inspected": [
+    "clear-overlay-default.png",
+    "clear-overlay-desktop.png",
+    "exact-match.png",
+    "assignment-conflict.png",
+    "clear-overlay-mobile.png"
+  ],
+  "screenshot_directory": "/kaggle/working/cell-tracking/center-comparison/detection-review/checks",
+  "source_sha256": {
+    "tools/center_comparison/index.html": "a449122b90cecde8f2b90dce8a42913451e559d90e97e81605b80a145f7e130b",
+    "tools/center_comparison/detection_view.js": "e3597fdd43fb45f36588b7538e71cfe727d063a3a6fbd62fb1b69b4eb1cf73ec",
+    "tools/center_comparison/detection_style.css": "27049bec99989ec43258d7f97ba4587e3b052a56a2cf3b771045dd2dd2cbfaf2",
+    "tools/center_comparison/verify_detection_browser.py": "493c4fd800d4dd533b514eaac58a6ab394a755134dee6c2e55a9bf90356f0538",
+    "tools/center_comparison/verify_detection_selection.py": "a284ad7e541da9556da2164f99e3e4dc285b193a7c29223e4e305d40fe76c980",
+    "docs/center-comparison-viewer.md": "59d7c17a7b877156a6e0c05f34536e67e9a89fdc2091b67c184a2f5d6a0ee16e"
+  },
+  "interpretation": "A projected 7 micrometer circle does not remove hidden-axis distance. Eligibility and assignment use 3D coordinates. Ambiguous cases remain available; unassigned predictions have unknown truth status because GT is sparse."
+}

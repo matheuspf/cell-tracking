@@ -4,7 +4,7 @@ description: "Official rules, external data allowances, team limits, and submiss
 ---
 # Competition rules — Biohub - Cell Tracking During Development
 
-Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-08T14:53:57Z.
+Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-12T21:12:17Z.
 
 Read [reference/overview/rules.md](../../../reference/overview/rules.md) and the relevant overview page before
 answering a rules question. Check the source date and refresh current rules when

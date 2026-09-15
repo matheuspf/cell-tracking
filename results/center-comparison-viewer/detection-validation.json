@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-09-14T12:55:38.118136+00:00",
+  "viewer_url": "http://localhost:8767/#tab=detection",
+  "datasets": 199,
+  "frames": 19900,
+  "annotations": 133318,
+  "models": {
+    "pooled": "C4_m6",
+    "best": "P0"
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "database_sha256": "2a13b4cfe5008273c9fef063f1996084c3c400689d61294626b417fa80a660cf",
+  "full_clip_official_audits": 398,
+  "all_canonical_frame_chunks_present": 19900,
+  "unit_tests": {
+    "passed": 20,
+    "skipped": 0,
+    "runtime": "/kaggle/envs/cell-tracking-annotation-selection-v1"
+  },
+  "data_validation": {
+    "passed": true,
+    "clips": 199,
+    "frames": 19900,
+    "annotations": 133318,
+    "model_clips": 398,
+    "gt_case_rows": 266636,
+    "scored_incorrect_edges": 9964,
+    "missing_edges_accounted_for": 11461,
+    "matches_checked": 261672,
+    "all_annotated_nodes_present": true,
+    "physical_distances_and_one_to_one_assignments": true,
+    "candidate_counts_independently_verified": true,
+    "all_official_edge_errors_accounted_for": true,
+    "unmatched_pool_last_pages_verified": true,
+    "database_sha256": "2a13b4cfe5008273c9fef063f1996084c3c400689d61294626b417fa80a660cf",
+    "counts": {
+      "pooled": {
+        "detection": 42868,
+        "missing": 920,
+        "selection": 1765,
+        "association": 7678,
+        "ambiguous": 33362,
+        "offset": 23980,
+        "annotations": 133318,
+        "unlabeled": 3978107
+      },
+      "best": {
+        "detection": 42868,
+        "missing": 920,
+        "selection": 1765,
+        "association": 7667,
+        "ambiguous": 33361,
+        "offset": 23980,
+        "annotations": 133318,
+        "unlabeled": 3978107
+      }
+    },
+    "raw_unmatched": 4698870
+  },
+  "browser_validation": {
+    "passed": true,
+    "datasets": 199,
+    "frames": 19900,
+    "annotations": 133318,
+    "model_filter_combinations": 16,
+    "native_frame_bytes_independently_verified": true,
+    "all_plane_pixels_verified": true,
+    "synchronized_images": true,
+    "own_frame_centers": true,
+    "association_endpoints": true,
+    "rapid_case_and_frame_navigation": true,
+    "playback_pause": true,
+    "unknown_pool_pagination": true,
+    "clip_frame_filters": true,
+    "local_assessment_export": true,
+    "case_links_and_tab_state": true,
+    "empty_filter_recovery": true,
+    "zero_annotation_frames": true,
+    "viewport_widths": [
+      390,
+      768,
+      1700
+    ],
+    "errors": [],
+    "failed_requests": [],
+    "external_requests": 0
+  },
+  "existing_comparison_regression": {
+    "passed": true,
+    "method_radius_combinations": 75,
+    "errors": [],
+    "failed_requests": [],
+    "synchronized_pixels": true,
+    "native_axis_and_mask_pixel_checks": true,
+    "playback_and_pause": true,
+    "rapid_seek": true,
+    "snapshot_gap_guard": true,
+    "temporal_links": true,
+    "mask_picking": true,
+    "selection_and_view_link": true,
+    "viewport_widths": [
+      390,
+      768,
+      1600
+    ],
+    "external_requests": 0,
+    "complete_pipeline_models": [
+      "pooled",
+      "best"
+    ],
+    "error_navigation": true,
+    "error_context_frames": true,
+    "error_share_links": true,
+    "whole_population_scores": true,
+    "separate_center_and_link_cases": true,
+    "paired_frame_pixels_verified": true,
+    "correct_daughter_preserved": true,
+    "case_isolation": true,
+    "error_mobile_layout": true
+  },
+  "source_sha256": {
+    "detection_index.py": "dbccaaeeaaa3e889f1977774b8281cdd41ac58e454ea1005e0ac89aeb5b95e51",
+    "detection_server.py": "70394ff6c5a6782787ffb3d366e4bd2f70817757ca2f1ec4ceab96fda8f2a459",
+    "pipeline.py": "6125a354b43683cb9d3faba16cfd9c2751223e7883d9d488c3c3b4f0ce7dd498",
+    "index.html": "2dfe4671694b738f263dbb730f4e6064da81e3e0c9ed7059a68fc8360aa9a0d4",
+    "viewer.js": "fa044e314fb8424b215fda2258fbbbc11f76747f5578860d4af8c0756ae071c4",
+    "style.css": "8270e572a43292d2a5d9780bc55a2d8c95c7fbc86f1f2e369f5daf5f29559fa9",
+    "error_view.js": "ea7e2857c1e3a350169a470c63822553e81571f35239991df85035ee0c33e704",
+    "detection_view.js": "089c0e923763e35808ad1fa6376890cd35f221135d6c2f2be1f498b7ea438590",
+    "detection_style.css": "7484958b54d94b58a2e1219c4b7df080776988f704ac5ae7e5d013fbf74aa2ed"
+  },
+  "review_groups": [
+    "Detection concerns",
+    "Raw detection gaps",
+    "Proposal present, final center absent",
+    "Center offsets >=3 um",
+    "Association concerns",
+    "Conflicts and identity ambiguity",
+    "Unmatched predictions: unknown",
+    "Every annotated center"
+  ],
+  "notes": "All groups are evidence for human review and can overlap. Sparse annotations do not establish whole-field false-positive counts. All unmatched raw/final predictions are pageable, including frames with no GT. Saved human judgments remain in browser storage and can be exported. FOCUS masks remain available in the existing 42-frame comparison."
+}

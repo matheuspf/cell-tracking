@@ -1,0 +1,519 @@
+{
+  "benchmark_parity": [
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_81c256f0-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_81c256f0-t075",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_8f5ab931-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_8f5ab931-t075",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_a21120c2-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "44b6_a21120c2-t075",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_af149c94-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_af149c94-t075",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_e16ffc58-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_e16ffc58-t075",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_fe670320-t025",
+      "mask_equal": true
+    },
+    {
+      "fields": {
+        "centers_zyx": true,
+        "instance_ids": true,
+        "volumes_voxels": true
+      },
+      "key": "6bba_fe670320-t075",
+      "mask_equal": true
+    }
+  ],
+  "benchmark_parity_frames": 12,
+  "cellpose_checkpoint_sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+  "cellpose_gpu_queue_seconds": 1040.4899463230322,
+  "cellpose_mean_processing_seconds": 9.217845579668252,
+  "cellpose_peak_allocated_bytes": 675974656,
+  "cellpose_preset": {
+    "anisotropy": "spacing_um[0] / spacing_um[1]; equal XY spacing required",
+    "annotation_access": "none",
+    "augment": false,
+    "batch_size": 8,
+    "bsize": null,
+    "cellpose_revision": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+    "cellprob_threshold": 0.0,
+    "center_definition": "geometric centroid of each reconstructed 3D instance in native ZYX coordinates",
+    "checkpoint_sha256": "3ed4c06a3963ab13ff377d4e2957174aaaf637434eb031ae9931fcbfaf9a217f",
+    "diameter": null,
+    "dinov3_revision": "6876159a11b4df116f30f667f8c9888617df0751",
+    "do_3D": true,
+    "effective_bsize": 384,
+    "effective_niter": 200,
+    "flow3D_smooth": 0,
+    "flow_threshold": 0.4,
+    "input": "native ZYX single fluorescence channel, z_axis=0",
+    "max_size_fraction": 0.4,
+    "min_size": 15,
+    "model": "cpdino-vitb",
+    "niter": null,
+    "normalization_description": "upstream global 3D 1st/99th percentiles",
+    "normalize": true,
+    "resample": true,
+    "score_definition": "mean sigmoid of upstream summed orthogonal cell-score logits over instance; uncalibrated confidence proxy",
+    "tile_overlap": 0.1,
+    "use_bfloat16": true
+  },
+  "cellpose_preset_sha256": "ae471ce2196163231c79af7c38f8fefa41ce85ed15e3cf9feb3662a730d39375",
+  "cellpose_processing_seconds": 5530.7073478009515,
+  "cellpose_projected_19900_volume_processing_hours": 50.95420195427728,
+  "cellpose_runtime_versions": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128"
+  },
+  "cellpose_source_revision": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+  "checked_utc": "2026-09-14T18:27:35.021689+00:00",
+  "combined_csv": "/home/mpf/code/kaggle/cell-tracking/work/cellpose-ultrack-20260914/submission.csv",
+  "combined_csv_rows": 191117,
+  "combined_csv_sha256": "c39f767a625c1d4ecb9dcf9e2b1cca510886efd602e14b433dbf09fb0299c550",
+  "complete_clips": 6,
+  "complete_frames": 600,
+  "dinov3_source_revision": "6876159a11b4df116f30f667f8c9888617df0751",
+  "graph_and_csv_hashes_passed": true,
+  "gt_edge_and_division_accounting_passed": true,
+  "largest_tracking_process_rss_mib": 5964.3828125,
+  "passed": true,
+  "solver_statuses": [
+    {
+      "dataset": "44b6_81c256f0",
+      "solves": [
+        {
+          "constraints": 37436,
+          "gap": 0.0,
+          "objective": 408.81706689799194,
+          "objective_bound": 408.81706689799194,
+          "seconds": 5.962256877999607,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 48260
+        },
+        {
+          "constraints": 43570,
+          "gap": 0.0,
+          "objective": 527.6666601590751,
+          "objective_bound": 527.6666601590751,
+          "seconds": 6.207165023002744,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 55529
+        },
+        {
+          "constraints": 32380,
+          "gap": 0.0,
+          "objective": 284.5805392682973,
+          "objective_bound": 284.5805392682973,
+          "seconds": 4.121909957000753,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 38044
+        },
+        {
+          "constraints": 30912,
+          "gap": 1.9190527840174573e-16,
+          "objective": 296.20560379693507,
+          "objective_bound": 296.2056037969351,
+          "seconds": 10.417989353001758,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 37697
+        },
+        {
+          "constraints": 29986,
+          "gap": 1.9499101970349288e-16,
+          "objective": 291.5181373339409,
+          "objective_bound": 291.51813733394096,
+          "seconds": 8.872458521000226,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 34777
+        }
+      ]
+    },
+    {
+      "dataset": "44b6_8f5ab931",
+      "solves": [
+        {
+          "constraints": 249975,
+          "gap": 0.0,
+          "objective": 613.5342247198083,
+          "objective_bound": 613.5342247198083,
+          "seconds": 59.176750473998254,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 212582
+        },
+        {
+          "constraints": 210921,
+          "gap": 0.0,
+          "objective": 794.2324113495838,
+          "objective_bound": 794.2324113495838,
+          "seconds": 45.7226038689987,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 193746
+        },
+        {
+          "constraints": 125177,
+          "gap": 0.0,
+          "objective": 539.3525032680423,
+          "objective_bound": 539.3525032680423,
+          "seconds": 22.174246638001932,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 124829
+        },
+        {
+          "constraints": 177385,
+          "gap": 0.0,
+          "objective": 529.4361148088979,
+          "objective_bound": 529.4361148088979,
+          "seconds": 61.73844970599748,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 156817
+        },
+        {
+          "constraints": 114150,
+          "gap": 2.3752208640676005e-16,
+          "objective": 478.63691095625376,
+          "objective_bound": 478.63691095625387,
+          "seconds": 34.03673122799955,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 108850
+        }
+      ]
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "solves": [
+        {
+          "constraints": 41329,
+          "gap": 0.0,
+          "objective": 219.03034760563796,
+          "objective_bound": 219.03034760563796,
+          "seconds": 7.6876582379991305,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 78094
+        },
+        {
+          "constraints": 84457,
+          "gap": 0.0,
+          "objective": 243.53080722055444,
+          "objective_bound": 243.53080722055444,
+          "seconds": 15.294315553997876,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 115056
+        },
+        {
+          "constraints": 29948,
+          "gap": 0.0,
+          "objective": 195.09424231880607,
+          "objective_bound": 195.09424231880607,
+          "seconds": 5.072591023999848,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 58634
+        },
+        {
+          "constraints": 40044,
+          "gap": 0.0,
+          "objective": 244.65747745342225,
+          "objective_bound": 244.65747745342225,
+          "seconds": 14.22969808400012,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 68155
+        },
+        {
+          "constraints": 46307,
+          "gap": 0.0,
+          "objective": 143.115548434975,
+          "objective_bound": 143.115548434975,
+          "seconds": 12.284275093003089,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 65400
+        }
+      ]
+    },
+    {
+      "dataset": "6bba_af149c94",
+      "solves": [
+        {
+          "constraints": 25438,
+          "gap": 0.0,
+          "objective": 547.8886693669643,
+          "objective_bound": 547.8886693669643,
+          "seconds": 3.4889732650008227,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 33903
+        },
+        {
+          "constraints": 37935,
+          "gap": 0.0,
+          "objective": 947.0265984834246,
+          "objective_bound": 947.0265984834246,
+          "seconds": 6.349848154000938,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 53187
+        },
+        {
+          "constraints": 29767,
+          "gap": 0.0,
+          "objective": 234.7450442669737,
+          "objective_bound": 234.7450442669737,
+          "seconds": 4.672905177998473,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 43749
+        },
+        {
+          "constraints": 21032,
+          "gap": 0.0,
+          "objective": 393.9133179564331,
+          "objective_bound": 393.9133179564331,
+          "seconds": 6.427113885001745,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 28966
+        },
+        {
+          "constraints": 23959,
+          "gap": 0.0,
+          "objective": 365.27610300019916,
+          "objective_bound": 365.27610300019916,
+          "seconds": 8.680616475001443,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 34932
+        }
+      ]
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "solves": [
+        {
+          "constraints": 12417,
+          "gap": 0.0,
+          "objective": 253.4931208199156,
+          "objective_bound": 253.4931208199156,
+          "seconds": 1.7730195980002463,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 20933
+        },
+        {
+          "constraints": 16936,
+          "gap": 0.0,
+          "objective": 287.1212040422263,
+          "objective_bound": 287.1212040422263,
+          "seconds": 2.2578207689984993,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 25841
+        },
+        {
+          "constraints": 9918,
+          "gap": 0.0,
+          "objective": 434.5931476716662,
+          "objective_bound": 434.5931476716662,
+          "seconds": 1.3372545370002626,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 16911
+        },
+        {
+          "constraints": 12650,
+          "gap": 1.3080338768417526e-16,
+          "objective": 217.28572886069446,
+          "objective_bound": 217.2857288606945,
+          "seconds": 3.3615445280011045,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 19509
+        },
+        {
+          "constraints": 10687,
+          "gap": 2.6591964476202843e-16,
+          "objective": 427.52327615116366,
+          "objective_bound": 427.52327615116377,
+          "seconds": 1.6495142959975055,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 16230
+        }
+      ]
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "solves": [
+        {
+          "constraints": 10870,
+          "gap": 0.0,
+          "objective": 129.98834258712273,
+          "objective_bound": 129.98834258712273,
+          "seconds": 3.931493470001442,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 18329
+        },
+        {
+          "constraints": 26351,
+          "gap": 0.0,
+          "objective": 354.5161438569813,
+          "objective_bound": 354.5161438569813,
+          "seconds": 5.789705818002403,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 47797
+        },
+        {
+          "constraints": 30738,
+          "gap": 0.0,
+          "objective": 807.4317029539664,
+          "objective_bound": 807.4317029539664,
+          "seconds": 6.61891116300103,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 65775
+        },
+        {
+          "constraints": 10301,
+          "gap": 0.0,
+          "objective": 37.20256210776087,
+          "objective_bound": 37.20256210776087,
+          "seconds": 3.029539166996983,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 18470
+        },
+        {
+          "constraints": 21364,
+          "gap": 0.00027754421704754515,
+          "objective": 645.270671547425,
+          "objective_bound": 645.4497626907433,
+          "seconds": 19.940948316001595,
+          "solutions": 1,
+          "status": "OPTIMAL",
+          "variables": 44064
+        }
+      ]
+    }
+  ],
+  "source_checkouts": {
+    "cellpose": {
+      "path": "/home/mpf/code/kaggle/cellpose",
+      "revision": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+      "tracked_files_clean": true
+    },
+    "dinov3": {
+      "path": "/home/mpf/code/kaggle/dinov3",
+      "revision": "6876159a11b4df116f30f667f8c9888617df0751",
+      "tracked_files_clean": true
+    },
+    "ultrack": {
+      "path": "/home/mpf/code/kaggle/ultrack",
+      "revision": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+      "tracked_files_clean": true
+    }
+  },
+  "test_receipts": {
+    "test-hierarchy.log": ".                                                                        [100%]\n1 passed, 8 deselected in 2.47s",
+    "tests-full.log": "........                                                                 [100%]\n8 passed in 3.05s"
+  },
+  "tracking_stage_seconds": 782.5522524600055
+}

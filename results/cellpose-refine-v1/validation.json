@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-14T18:35:33.386895+00:00",
+  "status": "passed",
+  "scope": "Artifact integrity, source isolation declarations, finite learned parameters, all frozen prediction arrays, and replay; distinct from the failed performance gate",
+  "models": [
+    {
+      "source": "44b6",
+      "target": "6bba",
+      "seed": 20260914,
+      "sha256": "eeeed41ce9b602a56ac3be222c8cfa795dfb3f03043a46c2717c0e35ebf876db"
+    },
+    {
+      "source": "44b6",
+      "target": "6bba",
+      "seed": 314159,
+      "sha256": "42eba744041969fa465f77c4383a32644d6a8b44ed965a90542bdc48d78c8937"
+    },
+    {
+      "source": "6bba",
+      "target": "44b6",
+      "seed": 20260914,
+      "sha256": "65c04cd3b55301d202b71c837a78cf04b17ab2266ce84d0700584fedc3b44da4"
+    },
+    {
+      "source": "6bba",
+      "target": "44b6",
+      "seed": 314159,
+      "sha256": "ebc5b0e5e2e4001fdb8aaa2fe4cef16e45d81395d6dd9350ed2a05625c0d82e0"
+    }
+  ],
+  "prediction_frames": 824,
+  "candidate_instances_across_two_seeds_including_pilot": 317012,
+  "max_integer_movement_um": 2.9575446425202108,
+  "max_continuous_movement_um": 3.0000002817018188,
+  "integer_projection_instances": 16770,
+  "all_counts_scores_and_bounds_verified": true,
+  "all_models_and_predictions_locked_before_target_scores": true,
+  "training_lock_sha256": "458366c0290af6a99e1f42a13c75c434465e7f92e54e7c426f13748978045df1",
+  "predictions_lock_sha256": "fee2aac3f568b98a9dc291dafd88b36a95464a9fad8770c2441c2c08a04a3fd9",
+  "metrics_sha256": "6d83088d55b7dd1a2531a7d6dc60e013f8a30a7aa44aa3f234542d1d6ec8b081",
+  "raw_replay_sha256": "8de6e0c9e1e44fb0a0d05a0189546404a756bc07aa997585a109d65604a7f9be",
+  "integer_capacity_sha256": "6704ce1a38e4b73f101cd3da6345e9d97844ab51e4e42dc12365f2748957ccd6",
+  "performance_gate_passed": false
+}

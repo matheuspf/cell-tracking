@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-14T21:00:38.864496+00:00",
+  "checks": [
+    {
+      "method": "incumbent",
+      "edge_count": 109,
+      "expected_logits_sha256": "b96bdeffe1bd8bde261e0259ffcc764f8e3da31d32b1583e3af3754e82654186",
+      "exact_edges_against_prior_native_logits": true,
+      "exact_centers_against_prior_pilot": true
+    },
+    {
+      "method": "cellpose",
+      "edge_count": 94,
+      "expected_logits_sha256": "5ba9334f69f10a5d847e5d7557aab32ea2008cb99d62400cd70f27116e411609",
+      "exact_edges_against_prior_native_logits": true,
+      "exact_centers_against_prior_pilot": true
+    }
+  ],
+  "methods_with_valid_graphs": 9,
+  "annotation_access": false,
+  "scope": "Inference-only preflight on original t25/t26, rebased to t0/t1. No annotation access or scoring."
+}

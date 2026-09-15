@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Biohub · A guide to our external training data</title>
+<style>
+:root{--ink:#162e2b;--muted:#52635f;--paper:#f5f4ed;--white:#fffefa;--line:#d9dfd6;--green:#14634f;--lime:#dcedaf;--amber:#7a4c13;--sand:#fff0d2;--blue:#345785;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.62 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--green);text-underline-offset:3px}a:hover{color:#082c22}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #3b78ba;outline-offset:4px}button{cursor:pointer}.skip{position:fixed;top:-70px;left:20px;background:white;padding:12px;z-index:9}.skip:focus{top:12px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(245,244,237,.97);border-bottom:1px solid var(--line)}.bar-inner{max-width:1180px;margin:auto;padding:15px 36px;display:flex;justify-content:space-between;gap:20px;align-items:center}.brand{font-size:13px;letter-spacing:.12em;font-weight:750;text-transform:uppercase;white-space:nowrap}.brand span{color:var(--green)}nav{display:flex;gap:24px;font-size:13px}nav a{text-decoration:none;color:var(--muted)}.print{border:1px solid var(--line);border-radius:6px;background:transparent;font-size:12px;padding:5px 10px;color:var(--ink)}
+main{max-width:1180px;margin:auto;padding:0 36px 72px}.hero{padding:61px 0 37px}.eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.pill{display:inline-block;background:var(--lime);border-radius:20px;padding:4px 10px;letter-spacing:.035em;font-size:11px;font-weight:700}.hero h1{font-size:clamp(36px,5vw,58px);font-weight:600;line-height:1.08;letter-spacing:-.045em;margin:23px 0 21px;max-width:780px}.hero .lead{max-width:790px;font-size:18px;line-height:1.65;color:var(--muted);margin-bottom:22px}.meta{font-size:12px;color:var(--muted)}.meta a{color:inherit}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.button{padding:10px 17px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:650;border:1px solid var(--green)}.button.primary{background:var(--green);color:white}.button.secondary{background:transparent}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;gap:20px}.stat{padding-left:22px;border-left:1px solid var(--line)}.stat:first-child{padding-left:0;border-left:none}.stat strong{font-size:29px;font-weight:550;letter-spacing:-.04em;display:block;line-height:1.25}.stat span{font-size:12px;color:var(--muted)}
+section{margin-top:54px}.section-head{display:flex;gap:17px;align-items:baseline;margin-bottom:20px}.section-no{font:12px ui-monospace,monospace;color:var(--green);padding-top:8px}.section-head h2{font-size:26px;line-height:1.2;letter-spacing:-.025em;font-weight:600;margin:0}.intro{color:var(--muted);max-width:820px;margin:0 0 23px}h3{font-size:18px;line-height:1.35;margin:0 0 13px;font-weight:650}h4{font-size:14px;margin:0 0 8px}p{margin:0 0 14px}p:last-child{margin-bottom:0}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.card p,.card li{font-size:14px}.card .tag{margin-bottom:17px}.tag{font-size:10px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--green);display:block}.tag.amber{color:var(--amber)}.tag.blue{color:var(--blue)}.large-count{font-size:24px;font-weight:600;letter-spacing:-.035em;margin-bottom:4px}.small{font-size:12px!important;color:var(--muted)}.verdict{border-top:1px solid var(--line);padding-top:15px;margin-top:16px;font-size:13px!important}.source{font-size:11px!important;color:var(--muted);margin-top:14px!important}.source a{color:var(--muted)}
+.callout{padding:18px 21px;border-radius:10px;background:#e7eddc;border-left:3px solid #709850;font-size:14px;margin-top:20px}.callout.amber{background:var(--sand);border-color:#ba8743}.callout strong{font-weight:700}.task-flow{display:grid;grid-template-columns:1fr 26px 1fr 26px 1fr;align-items:center;gap:8px;margin-top:20px}.task-box{border:1px solid var(--line);border-radius:10px;padding:17px;background:var(--white);height:100%}.task-box span{display:block;font-size:12px;color:var(--muted)}.task-box strong{display:block;margin-bottom:6px;font-size:14px}.arrow{text-align:center;color:var(--green);font-size:24px}.metric{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;background:#193b32;color:#e7f2da;padding:15px 19px;border-radius:9px;margin-top:15px;overflow-wrap:anywhere}
+.explorer{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid var(--line);background:var(--white);border-radius:var(--radius);overflow:hidden}.image-side{background:#0e1c1a;padding:22px;display:flex;flex-direction:column;gap:12px}.image-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:11px ui-monospace,monospace;color:#c3d7cc}.projection{width:100%;height:auto;max-width:430px;align-self:center;display:block;background:#111;aspect-ratio:1/1}.projection image{image-rendering:pixelated}.image-legend{font-size:11px;color:#c7d5cf}.dot{display:inline-block;width:8px;height:8px;border:1px solid #dcf984;border-radius:50%;margin-right:5px}.controls{padding:28px;display:flex;flex-direction:column;gap:20px}.field label,.field-label{display:block;font-size:12px;color:var(--muted);font-weight:650;margin-bottom:7px}select{width:100%;border:1px solid #bac9bf;border-radius:8px;background:white;color:var(--ink);padding:10px;font-size:14px}input[type=range]{width:100%;accent-color:var(--green)}.frame-label{display:flex;justify-content:space-between;font-size:12px}.switch{display:flex;align-items:center;gap:9px;font-size:13px}.switch input{accent-color:var(--green);width:17px;height:17px}.sample-description{font-size:14px;border-top:1px solid var(--line);padding-top:17px}.sample-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sample-facts div{background:var(--paper);padding:12px;border-radius:8px}.sample-facts strong{display:block;font:17px ui-monospace,monospace}.sample-facts span{font-size:11px;color:var(--muted)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--white)}table{border-collapse:collapse;width:100%;font-size:13px;text-align:left}caption{text-align:left;padding:14px 18px;font-size:12px;color:var(--muted);caption-side:bottom}th{background:#e9ede2;color:#374e42;font-size:11px;text-transform:uppercase;letter-spacing:.04em;font-weight:700}th,td{padding:13px 17px;border-bottom:1px solid var(--line);vertical-align:top}tbody tr:last-child td{border-bottom:0}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td:first-child{font-weight:600}.yes{color:var(--green);font-weight:650}.conditional{color:var(--amber);font-weight:650}.none{color:var(--muted)}.label-table{min-width:660px}
+details{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--white);padding:0 20px}summary{cursor:pointer;padding:15px 0;font-size:13px;font-weight:650}details[open] summary{margin-bottom:6px}details .detail-body{padding-bottom:19px;font-size:13px;color:var(--muted)}details li{margin:7px 0}details code{font-size:12px}ul,ol{margin:12px 0;padding-left:22px}li+li{margin-top:7px}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em;overflow-wrap:anywhere}pre{background:#193b32;color:#e4efdf;padding:17px;border-radius:9px;overflow-x:auto;font-size:12px;line-height:1.65;margin:14px 0 0}pre code{overflow-wrap:normal}
+.converter{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;margin-top:20px}.coord-inputs{display:flex;gap:10px}.coord-inputs label{font:12px ui-monospace,monospace;color:var(--muted);flex:1;min-width:0}.coord-inputs input{width:100%;padding:8px;border:1px solid #bcc8bd;border-radius:6px;background:white;color:var(--ink);margin-top:6px;font-size:14px}.coord-output{padding:11px 15px;background:#eaf0df;border-radius:8px;margin-top:11px;font:13px ui-monospace,monospace;min-height:80px}.coord-output span{display:block;margin-top:5px}.coord-error{color:#a33321;font-size:12px;min-height:20px;margin-top:5px}.fork{width:100%;height:auto;max-height:150px}.fork text{font-family:system-ui,sans-serif;fill:var(--ink);font-size:12px}.fork .minor{fill:var(--muted);font-size:11px}
+.plan{counter-reset:step;display:grid;gap:12px}.plan-row{counter-increment:step;display:grid;grid-template-columns:34px 1fr;gap:15px;border-bottom:1px solid var(--line);padding:10px 0 19px}.plan-row:before{content:counter(step);background:var(--green);color:white;width:27px;height:27px;border-radius:50%;text-align:center;line-height:27px;font-size:12px;margin-top:2px}.plan-row h3{font-size:15px;margin:0 0 7px}.plan-row p{font-size:14px;color:var(--muted)}.file-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.file-links a{display:block;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:12px;background:white}.sources{display:grid;grid-template-columns:1fr 1fr;gap:15px;font-size:12px}.sources a{font-weight:600}.sources p{color:var(--muted)}.sources code{font-size:10px}footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}.print-only{display:none}
+@media(max-width:800px){.bar-inner{padding:13px 22px}nav{gap:13px}main{padding:0 22px 40px}.hero{padding-top:39px}.grid3{grid-template-columns:1fr}.grid3 .card{display:block}.explorer{grid-template-columns:1fr 1fr}.controls{padding:21px}.image-side{padding:16px}.converter{grid-template-columns:1fr}.grid2{gap:15px}.stats{gap:12px}.stat{padding-left:12px}.stat strong{font-size:25px}.sources{gap:20px}.brand{font-size:11px;letter-spacing:.06em}}
+@media(max-width:600px){nav{display:none}.bar-inner{padding:13px 20px}main{padding:0 20px 32px}.hero{padding:34px 0 27px}.hero h1{font-size:40px}.hero .lead{font-size:16px}.stats{grid-template-columns:1fr 1fr;gap:20px}.stat:nth-child(3){border-left:none;padding-left:0}.grid2,.explorer{grid-template-columns:1fr}.section-head h2{font-size:23px}section{margin-top:39px}.card{padding:21px}.task-flow{grid-template-columns:1fr;gap:7px}.task-box{padding:12px 16px}.arrow{transform:rotate(90deg);line-height:20px}.image-side{padding:18px}.controls{padding:23px}.sample-facts{grid-template-columns:1fr 1fr}.sources{grid-template-columns:1fr}.section-head{gap:12px}.coord-inputs{gap:7px}footer{display:block}footer span{display:block;margin-bottom:7px}.table-wrap th,.table-wrap td{padding:11px 13px}.zoo-table{min-width:530px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white;font-size:11px;color:#132d25}.bar,.hero-actions,.skip,.print,.file-links{display:none}main{max-width:none;padding:0}.hero{padding-top:10px}.hero h1{font-size:34px}.hero .lead{font-size:13px}.hero .meta{font-size:10px}.stats{padding:12px 0}.stat strong{font-size:22px}section{margin-top:25px}.section-head h2{font-size:21px}.card{padding:15px;break-inside:avoid}.card p,.card li,.plan-row p,.intro{font-size:11px}.explorer{grid-template-columns:1fr 1fr;break-inside:avoid}.controls{padding:18px;gap:12px}.image-side{padding:14px}.projection{max-width:250px}.grid3{grid-template-columns:repeat(3,1fr)}.grid2,.sources{grid-template-columns:1fr 1fr}.converter{grid-template-columns:1fr 1fr}.source{font-size:9px!important}.callout{font-size:11px;padding:12px 15px}.table-wrap{overflow:visible}.label-table,.zoo-table{min-width:0}table{font-size:10px}th,td{padding:7px 10px}th{font-size:9px}a{color:inherit}details{break-inside:avoid}details:not([open]){display:none}.print-only{display:block}.plan-row{break-inside:avoid}.sample-description{font-size:11px}.sample-facts strong{font-size:13px}.metric{font-size:11px}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{margin:15mm}}
+</style>
+<style>
+.visual-toc{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:12px}.visual-toc a{color:var(--muted)}
+.subsection{margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}.subsection h3{font-size:21px;letter-spacing:-.02em}.subsection>.small{max-width:850px;margin-bottom:20px}.visual-toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:17px}.visual-toolbar h3{margin:0}.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 18px}.visual-figure{margin:0;min-width:0}.visual-figure svg,.visual-figure img{display:block;width:100%;height:auto;aspect-ratio:1/1;background:#0e1c1a;border-radius:11px;image-rendering:pixelated}.visual-figure figcaption{font-size:12px;line-height:1.55;padding:12px 0 0}.visual-figure figcaption strong{display:block;font-size:14px;margin:0 0 5px}.visual-figure figcaption span{display:block;color:var(--muted);overflow-wrap:anywhere}.centre-ring{fill:none;stroke:#dcf984;stroke-width:1.1;filter:drop-shadow(0 0 .6px #102016)}.gallery-labels{display:none}.mini-source{font:10px ui-monospace,monospace!important;margin-top:5px}.depth-shell{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden}.depth-shell .image-side{justify-content:center}.depth-shell .projection{max-width:410px}.axis-note{font:11px ui-monospace,monospace;color:#bfcec8;text-align:center}.depth-shell .controls{gap:15px}.depth-shell .controls p{font-size:13px}.inline-readout{font:12px ui-monospace,monospace;background:var(--paper);padding:12px;border-radius:8px;overflow-wrap:anywhere}.target-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.target-grid figcaption{font-size:12px}.heat-scale{display:flex;align-items:center;gap:8px;font-size:10px;margin-top:10px}.heat-scale i{width:12px;height:12px;display:block;border:1px solid #758176}.filmstrip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.filmstrip svg{aspect-ratio:auto}.filmstrip figcaption{font-size:11px}.frame-label-list{font:10px ui-monospace,monospace}.point-label{fill:#fff;stroke:#13281f;stroke-width:1;paint-order:stroke;font-size:3px;font-weight:600}
+.plot-shell{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:23px;margin-top:18px}.plot-toolbar{display:grid;grid-template-columns:1.2fr .7fr 1.2fr;gap:22px;align-items:end}.plot-toolbar label{display:block;font-size:12px;font-weight:650;color:var(--muted);margin-bottom:6px}.plot-toolbar select{padding:8px;font-size:13px}.plot{width:100%;height:auto;display:block;margin:13px auto 0;max-width:720px;background:var(--white)}.plot text{font:11px system-ui,sans-serif;fill:var(--muted)}.plot .axis-label{font-size:12px;font-weight:650}.plot-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:8px}.plot-legend span{display:flex;align-items:center;gap:7px}.legend-line{display:inline-block;width:18px;height:2px;background:#328570}.legend-node{display:inline-block;width:8px;height:8px;border-radius:50%;background:#174f41}.legend-fork{display:inline-block;width:9px;height:9px;border:2px solid #a95c16;border-radius:50%}.plot-facts{display:flex;gap:18px;flex-wrap:wrap;padding-top:14px;margin-top:13px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.plot-facts strong{color:var(--ink)}.plot-caption{font-size:12px;color:var(--muted);margin-top:14px}.riken-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:24px}.riken-grid .plot-shell{margin-top:0}.riken-feature{padding-top:17px;margin-top:17px;border-top:1px solid var(--line)}.riken-feature .plot{margin-top:0}.measurements{font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.measurements dt{color:var(--muted);font-size:11px}.measurements dd{margin:3px 0 0;font-weight:650;font-variant-numeric:tabular-nums}.learning-notes{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin-top:23px}.learning-notes article{border-left:2px solid #a6b990;padding-left:17px}.learning-notes h4{font-size:14px}.learning-notes p{font-size:13px;color:var(--muted)}.coord-output{overflow-wrap:anywhere}
+@media(max-width:800px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filmstrip{grid-template-columns:repeat(2,minmax(0,1fr))}.riken-grid{grid-template-columns:1fr}.plot-toolbar{gap:14px}.target-grid{gap:12px}}
+@media(max-width:600px){.depth-shell{grid-template-columns:1fr}.gallery-grid{gap:20px 12px}.visual-figure figcaption strong{font-size:12px}.visual-figure figcaption{font-size:11px}.target-grid{grid-template-columns:1fr}.target-grid .visual-figure{display:grid;grid-template-columns:1fr 1fr;gap:13px;align-items:center}.target-grid figcaption{padding-top:0}.learning-notes{grid-template-columns:1fr}.plot-shell{padding:15px}.plot-toolbar{grid-template-columns:1fr 1fr}.plot-toolbar .time-control{grid-column:1/-1}.plot-facts{gap:7px 15px}.filmstrip{gap:15px 12px}.visual-toc{gap:8px 15px}.measurements{gap:10px}.subsection h3{font-size:20px}}
+@media print{.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.visual-toolbar .switch,.visual-toc{display:none}.visual-figure{break-inside:avoid}.visual-figure figcaption,.plot-caption{font-size:9px}.visual-figure figcaption strong{font-size:11px}.subsection{margin-top:21px;padding-top:17px}.subsection h3{font-size:17px}.depth-shell{grid-template-columns:1fr 1fr;break-inside:avoid}.depth-shell .projection{max-width:235px}.target-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.target-grid .visual-figure{display:block}.filmstrip{grid-template-columns:repeat(4,minmax(0,1fr))}.plot-shell{break-inside:avoid;padding:14px}.plot{max-width:480px}.plot-toolbar{gap:12px}.riken-grid{grid-template-columns:1fr 1fr;gap:17px}.riken-grid .plot{max-width:340px}.learning-notes{gap:15px;grid-template-columns:1fr 1fr}.learning-notes article{break-inside:avoid}.learning-notes p{font-size:10px}.plot-facts,.plot-legend,.plot-toolbar label{font-size:9px}.plot-toolbar select{font-size:10px}.measurements{display:block;font-size:10px}.measurements>div{margin-bottom:9px}}
+</style>
+<style>@media(max-width:600px){.plot text{font-size:17px}.plot .axis-label{font-size:18px}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><div class="bar-inner"><div class="brand"><span>Biohub</span> / data notes</div><nav aria-label="Document sections"><a href="#inventory">What we have</a><a href="#explore">See the labels</a><a href="#adapt">Adaptation</a><a href="#prepared">Prepared files</a></nav><button class="print" id="print-button" type="button">Print / save PDF</button></div></header>
+<main id="main">
+<div class="hero">
+<div class="eyebrow">Cell tracking during development <span class="pill">Prepared locally</span></div>
+<h1>From forum downloads<br>to training data.</h1>
+<p class="lead"><strong>Yes, we can adapt this data for Biohub.</strong> The synthetic images can teach cell detection and division tracking. The Zoo contributes experimental trajectories. The RIKEN files provide cell measurements, with more work needed before they can teach tracking.</p>
+<div class="meta">Inspected 8 September 2026 · <a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/732103">Source discussion and replies</a> · A local guide for the Biohub competition</div>
+<div class="hero-actions"><a class="button primary" href="#explore">Explore actual samples ↓</a><a class="button secondary" href="#prepared">Open the prepared files</a></div>
+<div class="visual-toc" aria-label="Visual examples"><a href="#gallery">Six image examples</a><a href="#depth">Browse depth slices</a><a href="#heatmaps">Points → heatmaps</a><a href="#division-film">A division in images</a><a href="#zoo-viewer">Six species in motion</a><a href="#riken-viewer">RIKEN measurements</a></div>
+<div class="stats">
+<div class="stat"><strong>3,713</strong><span>synthetic examples, all adapted</span></div>
+<div class="stat"><strong>165,267</strong><span>synthetic division parents</span></div>
+<div class="stat"><strong>6</strong><span>Zoo tracking graphs converted</span></div>
+<div class="stat"><strong>7</strong><span>RIKEN archives available</span></div>
+</div>
+</div>
+
+<section id="inventory">
+<div class="section-head"><span class="section-no">01</span><h2>What we have, and where it fits</h2></div>
+<div class="grid3">
+<article class="card"><span class="tag">Start here · synthetic microscopy</span><h3>Images with dense point labels</h3><div class="large-count">1,539 + 2,174</div><p class="small">Static volumes + six-frame sequences</p><p><strong>423,853 static centres</strong> and <strong>4,056,226 sequence observations</strong>. The videos include temporal edges and division parents. All images are 3D fluorescence simulations.</p><p class="verdict"><strong>Best use:</strong> pretrain a centre detector, a temporal linker and a division head; then fine-tune on real Biohub data.</p><p class="source"><a href="../biohub-forum-archive/topics/732103.md">Author’s post</a> · <a href="prepared/synthetic_audit.json">Measured counts</a></p></article>
+<article class="card"><span class="tag blue">Second stage · Virtual Embryo Zoo</span><h3>Real experimental trajectories</h3><div class="large-count">@@ZOO_MILLIONS@@ million</div><p class="small">Cell observations across six species</p><p>Positions, time, track segments and lineage relationships. Some stores also hold radius and display attributes. <strong>The downloaded bundles have no raw microscopy images.</strong></p><p class="verdict"><strong>Best use:</strong> train or stress-test a graph linker after checking physical scale, frame timing and source tracking quality.</p><p class="source"><a href="https://virtual-embryo-zoo.sf.czbiohub.org/">Virtual Embryo Zoo</a> · <a href="prepared/zoo_manifest.json">Converted inventory</a></p></article>
+<article class="card"><span class="tag amber">Conditional · RIKEN / Keller</span><h3>Embryo positions and measurements</h3><div class="large-count">7 archives</div><p class="small">BDML XML + HDF5, without image volumes</p><p>The inspected animal C has <strong>3,447,269 point measurements</strong>, 821 timepoints and 14 intensity/size features. Its inspected structure contains no explicit temporal or parent–child links.</p><p class="verdict"><strong>Best use:</strong> cell layout, density and size priors for a future simulator. Tracking supervision needs verified correspondences.</p><p class="source"><a href="https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/">RIKEN project</a> · <a href="prepared/riken_audit.json">Inspection scope</a></p></article>
+</div>
+<div class="callout"><strong>These are different kinds of training evidence.</strong> A point label says “a cell centre is here.” An edge says “these detections are related across time.” A division needs one parent linked to two daughters. None of these downloads provides ready-to-use dense cell segmentation masks.</div>
+</section>
+
+<section id="target">
+<div class="section-head"><span class="section-no">02</span><h2>What the competition actually asks for</h2></div>
+<p class="intro">For each 3D video, detect cell centres and connect them through time. A cell division creates two daughter branches in the tracking graph.</p>
+<div class="task-flow">
+<div class="task-box"><strong>1 · Image volume</strong><span>Usually 100 timepoints × 64 Z × 256 Y × 256 X. Fluorescence intensity, uint16.</span></div><span class="arrow" aria-hidden="true">→</span>
+<div class="task-box"><strong>2 · Centre detections</strong><span>One node per detected cell and timepoint: ID, t, z, y, x.</span></div><span class="arrow" aria-hidden="true">→</span>
+<div class="task-box"><strong>3 · Temporal graph</strong><span>Directed source → target links between adjacent frames, including daughter links.</span></div>
+</div>
+<div class="metric">score = adjusted_edge_jaccard + 0.1 × division_jaccard</div>
+<p class="source">The metric matches centres within 7 µm, evaluates temporal links, and checks local division topology. The 7 µm tolerance is for matching predictions to annotations; it does not set a tracking search radius. <a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/data">Official data format</a> · <a href="https://github.com/royerlab/kaggle-cell-tracking-competition/blob/075fc5f5a52d11077f9dc2b074644618f26939e2/metrics.md">Pinned metric description</a></p>
+<div class="callout amber"><strong>Real labels are sparse.</strong> Our 199 local training samples contain 133,318 annotated nodes and 151 annotated division parents, across two embryos. This is about 2.8% of the estimated cells. Unmarked image regions are not reliable background negatives. The forum’s approximate 304 divisions uses a different or unverified count; we should use the measured graph and avoid inferring a real division frequency from sparse labels. <a href="reference/local-train-audit.json">Local audit</a>.</div>
+</section>
+
+<section id="explore">
+<div class="section-head"><span class="section-no">03</span><h2>Look inside the data</h2></div>
+<p class="intro">These are previews from our actual files. Each picture collapses depth using a maximum-intensity projection, so circles at different depths can overlap.</p>
+<div id="gallery" class="visual-toolbar"><h3>A broader view of synthetic and real images</h3><label class="switch"><input id="gallery-label-toggle" type="checkbox"> Overlay available centres</label></div>
+<div class="gallery-grid">@@GALLERY_CARDS@@</div>
+<p class="source">Synthetic examples span different labelled counts; real examples include both training embryos. Each max-Z preview has its own stated contrast range. Brightness between tiles is not an intensity comparison, and real annotation counts are not total cell counts. <a href="visual_examples.json">Preview metadata and selection</a>.</p>
+<h3 class="subsection">Follow a six-frame synthetic sequence</h3>
+<div class="explorer">
+<div class="image-side">
+<div class="image-top"><span id="image-title">seq_0000 · t = 0</span><span>XY / max over Z</span></div>
+<svg class="projection" id="projection" viewBox="0 0 64 64" role="img" aria-labelledby="projection-title projection-description"><title id="projection-title">Synthetic volume projection with cell centre labels</title><desc id="projection-description">A maximum intensity projection of a 3D microscopy volume. Rings show projected labelled cell centres.</desc><image id="sample-image" href="@@FIRST_IMAGE@@" x="0" y="0" width="64" height="64"/><g id="point-layer" fill="none" stroke="#dcf984" opacity=".9"></g></svg>
+<div class="image-legend"><span class="dot"></span>Labelled centre · brightness scaled separately for each preview</div>
+</div>
+<div class="controls">
+<div class="field"><label for="sample-select">Sample type</label><select id="sample-select"><option value="sequence">Synthetic sequence · 6 frames</option><option value="static">Synthetic static volume · native resolution</option><option value="real">Real Biohub frame · sparse annotations</option></select></div>
+<div class="field"><div class="frame-label"><label for="frame-slider">Timepoint</label><output id="frame-value" for="frame-slider">0 / 5</output></div><input id="frame-slider" type="range" min="0" max="5" value="0" step="1"></div>
+<label class="switch"><input id="show-labels" type="checkbox" checked> Show centre labels</label>
+<div class="sample-facts"><div><strong id="sample-shape">64 × 64 × 64</strong><span>image shape, Z × Y × X</span></div><div><strong id="sample-count">201</strong><span>labelled centres in frame</span></div></div>
+<p class="sample-description" id="sample-description">The sequence images are already sampled every fourth pixel in X and Y. The prepared labels are converted to match this 64³ grid.</p>
+<p class="small">A projection demonstrates label type and coverage. It cannot establish full 3D alignment or prove that simulated texture matches real microscopy.</p>
+</div>
+</div>
+<noscript><p class="callout">JavaScript is disabled. The first synthetic image remains visible; enable JavaScript for the frame slider, point overlay and coordinate calculator.</p></noscript>
+<div class="grid2" style="margin-top:20px">
+<div class="card"><h3>The coordinate fix that matters</h3><p>Sequence images are <strong>64 × 64 × 64</strong>, while their original node coordinates still refer to a <strong>64 × 256 × 256</strong> grid. Divide Y and X by four; keep Z unchanged. Static images use the full native grid.</p><p class="small">“Pooled” below means stride sampling <code>[:, ::4, ::4]</code>, not block averaging. This is optional model preprocessing. The competition still uses native coordinates.</p>
+<div class="converter">
+<div><span class="field-label">Try a native point (Z, Y, X)</span><div class="coord-inputs"><label>Z<input id="coord-z" type="number" min="0" max="63.999" step="any" value="32"></label><label>Y<input id="coord-y" type="number" min="0" max="255.999" step="any" value="128"></label><label>X<input id="coord-x" type="number" min="0" max="255.999" step="any" value="128"></label></div><div id="coord-error" class="coord-error" role="status"></div></div>
+<div><span class="field-label">Same point, different units</span><div id="coord-output" class="coord-output" aria-live="polite"><span>Pooled: (32, 32, 32)</span><span>µm: (52, 52, 52)</span></div></div>
+</div>
+<p class="small">Native spacing Z/Y/X: 1.625 / 0.40625 / 0.40625 µm. Sampled spacing: 1.625 µm on every axis. Keep fractional coordinates during training; map predictions back and round only for the final CSV.</p></div>
+<div class="card"><h3>A division is a graph fork</h3><p>This actual example from <code>seq_0000</code> links node 479 at t = 2 to daughters 700 and 701 at t = 3.</p>
+<svg class="fork" viewBox="0 0 390 135" role="img" aria-label="Node 479 at time 2 branches to daughters 700 and 701 at time 3"><path d="M104 67 L260 32 M104 67 L260 104" fill="none" stroke="#45836b" stroke-width="2"/><circle cx="97" cy="67" r="27" fill="#dcedaf" stroke="#14634f"/><circle cx="281" cy="31" r="27" fill="#eef3e5" stroke="#14634f"/><circle cx="281" cy="103" r="27" fill="#eef3e5" stroke="#14634f"/><text x="97" y="72" text-anchor="middle">479</text><text x="281" y="36" text-anchor="middle">700</text><text x="281" y="108" text-anchor="middle">701</text><text class="minor" x="44" y="72" text-anchor="end">t = 2</text><text class="minor" x="326" y="72">t = 3</text></svg>
+<p>The original field called <code>track_id</code> is shared by daughters: it identifies a <strong>clone or lineage</strong>. It is not a unique cell trajectory. The preparation preserves that field and derives separate tracklet IDs that break at divisions.</p><p class="small">A tracklet is a continuous path between a birth, division or endpoint. Last-frame cells have no observed future; the loader masks them out of division-negative targets.</p></div>
+</div>
+<div class="subsection" id="depth">
+<h3>One volume, one depth slice at a time</h3>
+<p class="small">A bright spot in a projection may combine several cells at different depths. Move through Z to see a true 2D plane from the 3D volume. Only centres assigned to the selected plane are shown; the other depth labels are hidden.</p>
+<div class="depth-shell"><div class="image-side"><div class="image-top"><span id="depth-title"></span><span>Single XY slice</span></div><svg id="depth-image" class="projection" viewBox="0 0 256 256" role="img" aria-label="Microscopy depth slice and centres assigned to this plane"></svg><div class="axis-note">Horizontal: X pixels · vertical: Y pixels · Z chosen at right</div></div>
+<div class="controls"><div class="field"><label for="depth-sample">Volume</label><select id="depth-sample">@@DEPTH_OPTIONS@@</select></div><div class="field"><div class="frame-label"><label for="depth-slider">Z slice</label><output for="depth-slider" id="depth-value"></output></div><input id="depth-slider" type="range" min="0" max="63" value="32" step="1"></div><label class="switch"><input id="depth-label-toggle" type="checkbox" checked> Show centres in this plane</label><div id="depth-readout" class="inline-readout" aria-live="polite"></div><p>Each centre is assigned to its nearest Z plane. A nucleus has thickness, so it may remain visible in neighbouring slices even when its centre marker disappears.</p><p class="small" id="depth-caption"></p><p class="small">The intensity scale stays fixed while you move through a volume. On real data, a visible nucleus without a marker can simply be unlabeled.</p></div></div>
+</div>
+<div class="subsection" id="heatmaps">
+<h3>From a point list to a detector training target</h3>
+<p class="small">The same actual synthetic volume is shown three ways. The heatmap is generated from its centre coordinates; its bright areas represent a chosen target response, not observed cell outlines.</p>
+<div class="target-grid">@@HEATMAP_PANELS@@</div>
+<div class="learning-notes"><article><h4>What the network would learn</h4><p>A centre detector can learn a high response around each labelled point. We use a Gaussian width of 2 µm for this illustration. The width is a training choice; changing it changes the target, not the biological annotation.</p></article><article><h4>Why this is not a segmentation mask</h4><p>A heatmap does not assign every foreground voxel to a cell or trace its boundary. Dense synthetic centres can support this target. Sparse real centres need a loss that handles missing labels rather than declaring every unmarked region negative.</p></article></div>
+</div>
+<div class="subsection" id="division-film">
+<div class="visual-toolbar"><h3>A labelled division in successive images</h3><label class="switch"><input id="division-label-toggle" type="checkbox" checked> Show lineage markers</label></div>
+<p class="small">The same crop and contrast are used at every timepoint. Markers identify one selected lineage from the source graph, amid neighbouring fluorescent cells. The images give context; the supplied graph establishes the parent and daughter relationships.</p>
+<div class="filmstrip">@@DIVISION_FRAMES@@</div>
+<p class="source">@@DIVISION_CAPTION@@</p>
+<div class="callout"><strong>Two targets come from this example.</strong> The linker learns which detections connect between frames. The division head learns when one parent has two daughter links. Losing a daughter at a crop boundary creates incomplete evidence, so training crops need their graph and target-validity masks updated together.</div>
+</div>
+</section>
+
+<section id="adapt">
+<div class="section-head"><span class="section-no">04</span><h2>Which labels transfer?</h2></div>
+<div class="table-wrap"><table class="label-table"><thead><tr><th scope="col">Source</th><th scope="col">Images + centres</th><th scope="col">Temporal links</th><th scope="col">Division labels</th><th scope="col">Can we adapt it?</th></tr></thead><tbody>
+<tr><td>Synthetic static</td><td class="yes">Yes · dense points</td><td class="none">No time axis</td><td class="none">No</td><td>Yes, for detector pretraining</td></tr>
+<tr><td>Synthetic sequences</td><td class="yes">Yes · dense points</td><td class="yes">Explicit edges</td><td class="yes">Explicit parent forks</td><td>Yes, with the coordinate correction</td></tr>
+<tr><td>Zoo exports</td><td>Points only; no images</td><td class="yes">Reconstructed</td><td class="conditional">Graph-derived; species-dependent</td><td>Yes, for trajectory models after calibration</td></tr>
+<tr><td>RIKEN animal C</td><td>Points/features; no images</td><td class="none">Not found</td><td class="none">Not found</td><td>Geometry priors; no verified tracking targets yet</td></tr>
+</tbody><caption>No source above supplies pixelwise instance masks. A Gaussian heatmap generated around a centre is a detector target, not an observed cell boundary.</caption></table></div>
+<h3 style="margin-top:27px">The six Zoo graphs we prepared</h3>
+<div class="table-wrap"><table class="zoo-table"><thead><tr><th scope="col">Species / file</th><th scope="col" class="num">Frames</th><th scope="col" class="num">Observations</th><th scope="col" class="num">Tracklets</th><th scope="col" class="num">Division parents</th></tr></thead><tbody>@@ZOO_ROWS@@</tbody><caption>Counts measured from the downloaded stores. An observation is one cell at one timepoint, not a unique biological cell. Basic bundles and attribute bundles overlap and must not be counted twice.</caption></table></div>
+<div class="callout amber"><strong>Mouse has no recorded division forks in this export.</strong> Its paths can still teach continuity. Zero recorded forks does not establish biological absence or make every node a reliable negative division label.</div>
+<div class="subsection" id="zoo-viewer">
+<h3>Explore a small piece of each species’ tracking graph</h3>
+<p class="small">These are sampled trajectories from our prepared Zoo files, with the original time indices and source coordinates. Change species, viewing plane and timepoint. No microscopy image sits behind this plot.</p>
+<div class="plot-shell">
+<div class="plot-toolbar"><div><label for="zoo-species">Species</label><select id="zoo-species">@@ZOO_OPTIONS@@</select></div><div><label for="zoo-plane">Viewing plane</label><select id="zoo-plane"><option value="xy">XY</option><option value="xz">XZ</option><option value="yz">YZ</option></select></div><div class="time-control"><div class="frame-label"><label for="zoo-time">Timepoint</label><output id="zoo-time-value" for="zoo-time"></output></div><input id="zoo-time" type="range" min="0" max="15" value="15" step="1"></div></div>
+<svg id="zoo-plot" class="plot" viewBox="0 0 580 430" role="img" aria-label="Experimental cell trajectories in source coordinate units"></svg>
+<div class="plot-legend"><span><i class="legend-line"></i>Observed links up to selected t</span><span><i class="legend-node"></i>Nodes at selected t</span><span><i class="legend-fork"></i>Forks observed by selected t</span></div>
+<div id="zoo-facts" class="plot-facts" aria-live="polite"></div><p id="zoo-caption" class="plot-caption"></p>
+</div>
+<div class="learning-notes"><article><h4>Useful for association and motion</h4><p>A graph model can learn to associate candidate detections, including branching paths. These paths can also be perturbed to simulate missed detections or location noise. Any perturbed labels would be explicitly derived training examples.</p></article><article><h4>What the plot cannot establish</h4><p>Source coordinate units and frame indices do not establish µm per voxel or seconds per frame. Each species uses its own axes and range here. Path length on the page cannot compare physical cell speed across species.</p></article></div>
+<p class="source"><a href="trajectory_examples.json">Selected node IDs, edges, bounds and provenance</a>. Small deterministic selections; they are not a population sample or a cross-species benchmark.</p>
+</div>
+<div class="subsection" id="riken-viewer">
+<h3>RIKEN: cell measurements, without verified identity links</h3>
+<p class="small">Browse all points in the ten prepared animal C frames. Positions have physical units, but moving through frames does not tell us which point corresponds to the same cell.</p>
+<div class="riken-grid">
+<div class="plot-shell"><div class="field"><div class="frame-label"><label for="riken-time">Animal C timepoint</label><output id="riken-time-value" for="riken-time"></output></div><input id="riken-time" type="range" min="0" max="9" value="0" step="1"></div><svg id="riken-plot" class="plot" viewBox="0 0 580 430" role="img" aria-label="RIKEN animal C point positions in micrometres; no temporal links"></svg><div id="riken-facts" class="plot-facts" aria-live="polite"></div><p class="plot-caption">XY projection of measured 3D positions, with fixed axes across frames. No temporal lines are drawn because the inspected data does not establish those correspondences.</p></div>
+<div class="card"><span class="tag amber">Actual measurement features</span><h3>Zoom into one recorded nucleus</h3><div class="field"><label for="riken-measurement">Measurement ID, from the first frame</label><select id="riken-measurement">@@RIKEN_OPTIONS@@</select></div><div class="riken-feature"><svg id="riken-box" class="plot" viewBox="0 0 580 430" role="img" aria-label="Measured bounding box, FWHM extent and centre in XY micrometres"></svg><div class="plot-legend"><span><i class="legend-line"></i>Bounding box</span><span><i class="legend-fork"></i>FWHM extent</span></div><dl id="riken-measurements" class="measurements"></dl></div><p class="small">FWHM describes the width of the fluorescence distribution at half its maximum. These coordinate extents can inform size priors; neither rectangle is a pixelwise cell mask.</p></div>
+</div>
+<p class="source" id="riken-source-note"></p>
+<div class="callout amber"><strong>Inspect size features before fitting a prior.</strong> Some FWHM extents are missing or much broader than the nucleus-core box. For example, measurement 00100003 records a 291 µm Y intensity width beside a 15 µm core-box width. These are source values that need inspection, not interchangeable estimates of cell diameter. Missing values remain missing.</div>
+</div>
+<details><summary>Zoo: what the conversion does, and what is still uncertain</summary><div class="detail-body">
+<p>The original Zarr stores are viewer exports. The adapter reads time and raw Z/Y/X coordinates from <code>tracks_to_points</code>, extracts direct parent-track metadata from <code>tracks_to_tracks</code>, then connects consecutive observations and parent endpoints to daughter starts. All six converted stores passed adjacency and parent-consistency checks; the ascidian and worm reconstructions also match their original CSVs exactly.</p>
+<p><code>tracks_to_tracks</code> stores lineage reachability, so treating every entry as a temporal edge would invent links. The <code>divisions</code> display attribute holds hex colours, not a binary target. We derive forks from edges instead.</p>
+<p>Coordinates remain in <strong>source units</strong>; display metadata is not proof of physical calibration. Species-specific voxel scale, time cadence and quality checks are still needed before transfer. Tracking results are not assumed to be manually verified ground truth. Radius and the other original viewer attributes remain in the source archive; the prepared graphs focus on positions and relationships.</p>
+<p><a href="https://github.com/royerlab/inTRACKtive/blob/8afc30b5c0a42632ad971e76dbdb559286bec0bf/python/src/intracktive/convert.py">Pinned export implementation</a> · <a href="reference/zoo-audit.json">Original attribute inventory</a></p>
+</div></details>
+<details><summary>RIKEN: labels, units and the limit of our inspection</summary><div class="detail-body">
+<p>For animal C, positions are in micrometres and consecutive frames are 90 seconds apart. The 14 features describe two fluorescence measurements, six bounding-box coordinates and six FWHM coordinates. These are measurements of a nucleus; they do not provide a dense segmentation mask.</p>
+<p>The HDF5 measurement IDs are frame-specific identifiers. We found no explicit cross-time identity or parent field in the inspected sample. Nearest-neighbour matching would create pseudo-labels, not recover verified lineage labels.</p>
+<p>We audited animal C’s full structure and counts and exported its first 10 frames. The other six archives are downloaded and inventoried, but their labels have not been audited in the same detail. Source terms are CC BY-NC-SA; confirm the intended training use before including this source in a prize solution.</p>
+</div></details>
+</section>
+
+<section id="plan">
+<div class="section-head"><span class="section-no">05</span><h2>A practical training sequence</h2></div>
+<div class="plan">
+<div class="plan-row"><div><h3>Establish a real-data baseline and a held-out embryo</h3><p>Use embryo <code>44b6</code> (71 samples) for initial training and <code>6bba</code> (128) for validation. Keep all fields and frames of an embryo together. Evaluate centres, links and divisions with the official sparse-label metric; do not treat all unlabeled cells as false detections.</p></div></div>
+<div class="plan-row"><div><h3>Pretrain detection on the synthetic images, then fine-tune</h3><p>Use static volumes and sequence frames to predict centre heatmaps or points. The loader can generate Gaussian centre targets. Add realistic intensity and spatial augmentation with the same transform applied to labels. Adapt to real images using a loss that accounts for missing annotations.</p></div></div>
+<div class="plan-row"><div><h3>Learn temporal links and divisions from the synthetic graph</h3><p>Supervise motion, link choices and parent-to-daughter branching. Synthetic clips are only six frames long and contain many deliberately sampled divisions. Measure the benefit on the held-out real embryo; tune sampling and thresholds there, rather than copying a claimed real division prior.</p></div></div>
+<div class="plan-row"><div><h3>Add calibrated Zoo trajectories as a separate experiment</h3><p>Start with zebrafish for the closest species match. After checking units, timing and tracking quality, test trajectory pretraining or realistic detection noise. Keep each source’s contribution measurable. RIKEN-driven rendering is a later project because image generation and verified correspondence are not supplied.</p></div></div>
+</div>
+<div class="callout"><strong>Calibration affects the split.</strong> The published generator fits density and tissue shape on ten videos from the first sorted embryo (<code>44b6</code> here). Holding out <code>6bba</code> avoids reusing those calibration videos. Fixed motion and rendering settings need a provenance audit before claiming complete fold isolation. Reversing the embryo split requires recalibration from that training fold.</div>
+<p class="source">Preparation is complete; no training or transfer-gain experiment has been run. Synthetic division parents are 4.07% of all synthetic sequence nodes, a descriptive count with final-frame censoring—not a calibrated probability of division. <a href="../biohub-forum-archive/notebooks/josefreitasalvesneto/biohub-synthetic-dataset/biohub-synthetic-dataset.py">Archived generator</a>.</p>
+<div class="subsection"><h3>What to check before calling an adaptation successful</h3><div class="learning-notes">
+<article><h4>Keep image transforms and labels together</h4><p>A spatial crop, flip or resampling operation must transform every affected point. Preserve node IDs when transforming coordinates; when removing nodes, filter edges and reconsider division targets whose daughter branches were cut away.</p></article>
+<article><h4>Separate errors in detection and association</h4><p>First check whether centres align in the image grid and physical space. Then check the graph endpoints and division branches. A correct linker cannot recover a missing daughter that the detector never proposed.</p></article>
+<article><h4>Test transfer on a whole real embryo</h4><p>Compare a real-data baseline against the same pipeline with synthetic pretraining, then add Zoo data as another controlled experiment. Keep the real validation split fixed and report edge and division contributions separately.</p></article>
+<article><h4>Treat unseen futures as unknown</h4><p>The last frame cannot show a later division. A cropped or incomplete track can also end without proving that a cell died or stayed undivided. Mask unavailable targets instead of converting them into negative examples.</p></article>
+</div></div>
+</section>
+
+<section id="prepared">
+<div class="section-head"><span class="section-no">06</span><h2>The prepared files</h2></div>
+<p class="intro">The original downloads are preserved. New label files take about <strong>395 MB</strong>; the synthetic loader reads images from the existing archive, avoiding another copy of the image data.</p>
+<div class="grid2">
+<div class="card"><span class="tag">Done · all synthetic examples</span><h3>Aligned image and graph targets</h3><p>3,713 label NPZs, a manifest with image paths, native/sampled/physical centre coordinates, and unique tracklets. Sequence labels include edges and division parents.</p><p class="small">3,359 synthetic training examples / 354 synthetic holdout examples, assigned deterministically by sample ID. This is a generator sanity split, not a substitute for real embryo validation.</p><div class="file-links"><a href="prepared/synthetic_manifest.json">Manifest</a><a href="data_adapter.py">Python loader</a><a href="prepared/synthetic/seq_0000_labels.npz">Example labels</a></div></div>
+<div class="card"><span class="tag blue">Done · trajectory preparation</span><h3>Six Zoo graphs + RIKEN preview</h3><p>Zoo NPZs contain node IDs, time, source coordinates, tracklets, direct parents, temporal edges and derived forks. RIKEN’s first ten animal C frames contain positions and measurement IDs.</p><p class="small">Zoo physical calibration and dataset terms remain source-specific. RIKEN’s other six archives and any inferred tracking labels require further work.</p><div class="file-links"><a href="prepared/zoo_manifest.json">Zoo manifest</a><a href="prepared/riken_animal_c_first10_frames.npz">RIKEN preview</a><a href="verification.json">Verification report</a></div></div>
+</div>
+<details><summary>Load a training sample in Python</summary><div class="detail-body"><p>Run from this guide’s directory with NumPy installed. The loader returns float32 images in [0,1]; it applies stride sampling only to native static images. The sequence images are already on the sampled grid.</p>
+<pre><code>from data_adapter import load_synthetic, points_to_heatmap
+
+sample = load_synthetic("seq_0000")
+image = sample["image"][0]                  # Z,Y,X = 64,64,64
+points = sample["zyx_image"][sample["t"] == 0]
+target = points_to_heatmap(
+    image.shape, points, sample["voxel_um_zyx"], sigma_um=2.0
+)
+edges = sample["edges"]                     # source/target node indices
+known = sample["division_target_observed"]  # excludes the final frame
+division_target = sample["is_division_parent"]</code></pre>
+<p style="margin-top:12px">The heatmap width is a training choice. The loader supports <code>source_root=...</code> if you move the original <code>biohub_synthetic</code> folder. <a href="README.md">Setup and reproduction instructions</a> · <a href="requirements-preparation.txt">Pinned preparation dependencies</a>.</p>
+</div></details>
+<details><summary>How these labels connect to the submission format</summary><div class="detail-body">
+<p>External labels train a model. The model must then predict every hidden test video. The final CSV uses native integer Z/Y/X coordinates and the exact test folder basename in <code>dataset</code>. Predictions made on the sampled grid need Y/X multiplied by four before rounding.</p>
+<pre><code>id,dataset,row_type,node_id,t,z,y,x,source_id,target_id
+0,SYNTHETIC_FORMAT_DEMO,node,0,0,32,128,128,-1,-1
+1,SYNTHETIC_FORMAT_DEMO,node,1,1,33,130,125,-1,-1
+2,SYNTHETIC_FORMAT_DEMO,edge,-1,-1,-1,-1,-1,0,1</code></pre>
+<p style="margin-top:12px">The loader includes a CSV row writer, plus a <a href="prepared/synthetic_format_example.csv">format demonstration from an actual synthetic graph</a>. The example above is illustrative; neither demo is a submission. The Kaggle rerun has internet disabled, so inference weights and required external assets must be attached to the notebook. <a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/overview/evaluation">Official output format</a> · <a href="reference/code-requirements.md">Saved notebook requirements</a>.</p>
+</div></details>
+</section>
+
+<section id="terms">
+<div class="section-head"><span class="section-no">07</span><h2>Permission to use is source-specific</h2></div>
+<p class="intro">The competition permits external data subject to its access conditions. A downloaded file still carries its own source terms. Technical conversion alone does not settle those terms.</p>
+<div class="grid3">
+<div class="card"><h3>Synthetic: CC0 declared</h3><p>The author explicitly releases the dataset as CC0 in the source post. Keep the archived post and generator with the experiment’s provenance.</p><p class="source"><a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/732103">Author’s release</a></p></div>
+<div class="card"><h3>Zoo: check the originating study</h3><p>An organizer explicitly permits public Zebrahub resources and confirms no hidden-test overlap. Other species still need their own dataset terms. The viewer’s MIT software license is not a license for every hosted dataset.</p><p class="source"><a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/discussion/734330">Organizer’s Zebrahub confirmation</a></p></div>
+<div class="card"><h3>RIKEN: conditional reuse</h3><p>The project declares CC BY-NC-SA. Confirm that the intended training and prize-related use is permitted. The competition’s winner clause exempts input data/models from relicensing, so its MIT requirement alone does not establish a conflict.</p><p class="source"><a href="https://ssbd.riken.jp/database/project/5-Keller-FishEmbryo/">Source terms</a> · <a href="https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/rules">Rules §2.5 and §2.8</a></p></div>
+</div>
+</section>
+
+<section id="sources">
+<div class="section-head"><span class="section-no">08</span><h2>Evidence and reproducibility</h2></div>
+<div class="sources">
+<div><p><a href="../biohub-forum-archive/README.md">Download report and original files</a><br>Thread 732103 and all ten retrieved replies, linked datasets, notebooks and checksums. The unavailable Tribolium ZIP was rebuilt from the complete public directory and is recorded as a local replacement.</p></div>
+<div><p><a href="reference/data-description.md">Saved official data description</a> · <a href="reference/rules.md">Rules</a><br>Biohub-specific references for this cell-tracking workspace. The official Biohub training data was already present locally.</p></div>
+<div><p><a href="prepare_data.py">Preparation source</a> · <a href="verify_data.py">Validation source</a> · <a href="verification.json">Results</a><br>All synthetic graph labels checked; six Zoo graphs decoded; ascidian and worm compared against source CSVs. RIKEN inspection is limited to the stated animal C scope.</p></div>
+<div><p><a href="catalog.json">Machine-readable catalogue</a> · <a href="README.md">Run instructions</a><br>Metric reference pinned at <code>075fc5f5a52d11077f9dc2b074644618f26939e2</code>; viewer converter pinned at <code>8afc30b5c0a42632ad971e76dbdb559286bec0bf</code>. Recheck official requirements before submission.</p></div>
+</div>
+</section>
+<footer><span>Biohub data guide · 8 September 2026 · Works offline in a browser</span><span>Prepared locally · No model trained or submitted</span></footer>
+</main>
+<script id="guide-data" type="application/json">@@CATALOG_JSON@@</script>
+<script id="visual-data" type="application/json">@@VISUAL_JSON@@</script>
+<script id="trajectory-data" type="application/json">@@TRAJECTORY_JSON@@</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById("guide-data").textContent);
+const byId=id=>document.getElementById(id);
+const descriptions={
+ sequence:"The sequence images are already sampled every fourth pixel in X and Y. The prepared labels are converted to match this 64³ grid.",
+ static:"This static volume keeps the native 64 × 256 × 256 grid. All 201 simulated centres are labelled, but a single image has no temporal or division targets.",
+ real:"This real frame has one annotated centre. Many other nuclei are visible: sparse annotation means they are unlabeled, not absent. This is sample "+data.previews.real.sample+"."
+};
+function updateSample(){
+ const kind=byId("sample-select").value;
+ const slider=byId("frame-slider");
+ slider.disabled=kind!=="sequence";
+ const frame=kind==="sequence"?Number(slider.value):0;
+ const sample=kind==="sequence"?data.previews.sequence[frame]:data.previews[kind];
+ const size=kind==="sequence"?64:256;
+ const name=kind==="sequence"?"seq_0000":kind==="static"?"vol_00000":data.previews.real.sample;
+ const svg=byId("projection");
+ svg.setAttribute("viewBox","0 0 "+size+" "+size);
+ const picture=byId("sample-image");
+ picture.setAttribute("href",sample.image);picture.setAttribute("width",size);picture.setAttribute("height",size);
+ const layer=byId("point-layer");layer.replaceChildren();
+ if(byId("show-labels").checked){
+  const fragment=document.createDocumentFragment();
+  for(const p of sample.centroids){
+   const point=document.createElementNS("http://www.w3.org/2000/svg","circle");
+   point.setAttribute("cx",p[2]);point.setAttribute("cy",p[1]);point.setAttribute("r",size/155);
+   point.setAttribute("stroke-width",size/600);fragment.appendChild(point);
+  }
+  layer.appendChild(fragment);
+ }
+ byId("image-title").textContent=name+" · t = "+frame;
+ byId("frame-value").textContent=kind==="sequence"?frame+" / 5":"0 · single preview";
+ byId("sample-shape").textContent="64 × "+size+" × "+size;
+ byId("sample-count").textContent=sample.centroids.length.toLocaleString("en-US");
+ byId("sample-description").textContent=descriptions[kind];
+ byId("projection-title").textContent=(kind==="real"?"Real Biohub":"Synthetic")+" frame "+frame+", "+sample.centroids.length+" labelled centres";
+}
+function convertPoint(){
+ const inputs=["coord-z","coord-y","coord-x"].map(byId);
+ const xyz=inputs.map(e=>e.value===""?NaN:Number(e.value));
+ const valid=xyz.every((v,i)=>Number.isFinite(v)&&v>=0&&v<[64,256,256][i]);
+ byId("coord-error").textContent=valid?"":"Use 0 ≤ Z < 64 and 0 ≤ Y, X < 256.";
+ byId("coord-output").replaceChildren();
+ if(!valid){byId("coord-output").textContent="Enter a valid point to convert.";return;}
+ const fmt=v=>Number(v.toFixed(4)).toLocaleString("en-US",{maximumFractionDigits:4});
+ const pooled=xyz.map((v,i)=>v/[1,4,4][i]);
+ const physical=xyz.map((v,i)=>v*data.native_um_per_voxel_zyx[i]);
+ for(const [label,values] of [["Pooled",pooled],["µm",physical]]){
+  const line=document.createElement("span");line.textContent=label+": ("+values.map(fmt).join(", ")+")";
+  byId("coord-output").appendChild(line);
+ }
+}
+byId("sample-select").addEventListener("change",updateSample);
+byId("frame-slider").addEventListener("input",updateSample);
+byId("show-labels").addEventListener("change",updateSample);
+["coord-z","coord-y","coord-x"].forEach(id=>byId(id).addEventListener("input",convertPoint));
+byId("print-button").addEventListener("click",()=>window.print());
+updateSample();convertPoint();
+</script>
+<script>@@VISUAL_SCRIPT@@</script>
+</body>
+</html>

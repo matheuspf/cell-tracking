@@ -1,0 +1,85 @@
+{
+  "exhaustive_cases": [
+    {
+      "divisions": true,
+      "exhaustive_objective": 4.65905272834317,
+      "solver_objective": 4.65905272834317
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 4.282018355431609,
+      "solver_objective": 4.282018355431609
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 1.0603479097501456,
+      "solver_objective": 1.0603479097501456
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 1.8534819214202096,
+      "solver_objective": 1.8534819214202098
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 2.310198717564513,
+      "solver_objective": 2.3101987175645124
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 2.117455141830157,
+      "solver_objective": 2.117455141830157
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 2.034173125214667,
+      "solver_objective": 2.034173125214667
+    },
+    {
+      "divisions": true,
+      "exhaustive_objective": 3.2869633776066074,
+      "solver_objective": 3.2869633776066074
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 2.2817930941134206,
+      "solver_objective": 2.2817930941134206
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 3.8627925206807987,
+      "solver_objective": 3.8627925206807987
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 0.6661517850673411,
+      "solver_objective": 0.6661517850673411
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 5.210823040449173,
+      "solver_objective": 5.210823040449173
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": -0.42104266820567937,
+      "solver_objective": -0.42104266820567915
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 2.810200579725979,
+      "solver_objective": 2.8102005797259793
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 3.1171513380102134,
+      "solver_objective": 3.1171513380102134
+    },
+    {
+      "divisions": false,
+      "exhaustive_objective": 4.363312090613577,
+      "solver_objective": 4.363312090613576
+    }
+  ],
+  "cellect_no_match_division_and_unique_parent": true
+}

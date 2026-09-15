@@ -1,0 +1,9 @@
+{
+  "allocated_gib_per_worker": 11,
+  "full_cohort_workers": 2,
+  "gpu_device_count": 1,
+  "runtime_projection": "Use serial worker sum as conservative local estimate; concurrency speedup not assumed",
+  "selection_input": "pilot runtime/memory only; no scores",
+  "serial_baseline_pilots": "two independent processes per clip",
+  "total_gpu_allocated_gib_cap": 22
+}

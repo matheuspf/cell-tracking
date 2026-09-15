@@ -1,0 +1,23 @@
+{
+  "validated_prediction_artifacts": 4168,
+  "completed_assessment_methods": [
+    "incumbent",
+    "cellect",
+    "organoid",
+    "nucverse",
+    "spotiflow",
+    "spotiflow_loose",
+    "xenopus",
+    "xenopus_centroid",
+    "pacmap",
+    "cellpose_cpdino_vitb"
+  ],
+  "full_assessment_frames_per_method": 400,
+  "gt_nodes_per_assessment": 2383,
+  "gt_edges_per_assessment": 1159,
+  "shared_data_fingerprint": "669baac144a2a7925fc4e66724d71a737afdc8d09040b49054a1bca533c01216",
+  "all_output_manifest_hashes_valid": true,
+  "all_adapter_hashes_valid": true,
+  "canvas_matches_published_evidence": true,
+  "required_receipts_present": true
+}

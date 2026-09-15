@@ -1,0 +1,49 @@
+{
+  "feature_jobs": 1407,
+  "feature_frame_seconds_including_queue": 6419.512751232931,
+  "feature_gpu_queue_seconds": 4302.247946369884,
+  "max_feature_gpu_reserved_bytes": 1040187392,
+  "cache_bytes": 1957633917,
+  "fits": [
+    {
+      "fit": "source-44b6-seed-20260914",
+      "seconds_including_queue": 12.052570570998796,
+      "gpu_queue_seconds": 2.684375036998972,
+      "peak_gpu_reserved_bytes": 322961408,
+      "supervised_queries": {
+        "natural": 595,
+        "jitter_and_center": 4008
+      }
+    },
+    {
+      "fit": "source-44b6-seed-314159",
+      "seconds_including_queue": 10.753713402998983,
+      "gpu_queue_seconds": 1.4631674550000753,
+      "peak_gpu_reserved_bytes": 322961408,
+      "supervised_queries": {
+        "natural": 595,
+        "jitter_and_center": 4008
+      }
+    },
+    {
+      "fit": "source-6bba-seed-20260914",
+      "seconds_including_queue": 9.328161348999856,
+      "gpu_queue_seconds": 4.620000254362822e-06,
+      "peak_gpu_reserved_bytes": 612368384,
+      "supervised_queries": {
+        "natural": 1673,
+        "jitter_and_center": 23080
+      }
+    },
+    {
+      "fit": "source-6bba-seed-314159",
+      "seconds_including_queue": 9.47643074500229,
+      "gpu_queue_seconds": 4.440000338945538e-06,
+      "peak_gpu_reserved_bytes": 612368384,
+      "supervised_queries": {
+        "natural": 1673,
+        "jitter_and_center": 23080
+      }
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "events": [
+    {
+      "dataset": "44b6_8f5ab931",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 4.095676422119141,
+      "parent": 16000026,
+      "time": 15,
+      "timepoints_remaining": 84
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 1.6419750452041626,
+      "parent": 3000196,
+      "time": 2,
+      "timepoints_remaining": 97
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        4
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 4.075483798980713,
+      "parent": 3000257,
+      "time": 2,
+      "timepoints_remaining": 97
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 1.8369905948638916,
+      "parent": 10000358,
+      "time": 9,
+      "timepoints_remaining": 90
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        1
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 4.885817050933838,
+      "parent": 11000362,
+      "time": 10,
+      "timepoints_remaining": 89
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 8.44678020477295,
+      "parent": 13000266,
+      "time": 12,
+      "timepoints_remaining": 87
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 1.6454131603240967,
+      "parent": 16000305,
+      "time": 15,
+      "timepoints_remaining": 84
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 14.736898422241211,
+      "parent": 20000283,
+      "time": 19,
+      "timepoints_remaining": 80
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 4.046594142913818,
+      "parent": 20000355,
+      "time": 19,
+      "timepoints_remaining": 80
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 5.788086414337158,
+      "parent": 30000343,
+      "time": 29,
+      "timepoints_remaining": 70
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        4,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 6.667584419250488,
+      "parent": 35000403,
+      "time": 34,
+      "timepoints_remaining": 65
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        1,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 8.082914352416992,
+      "parent": 37000388,
+      "time": 36,
+      "timepoints_remaining": 63
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 4.974304676055908,
+      "parent": 38000050,
+      "time": 37,
+      "timepoints_remaining": 62
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        2
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 1.5558198690414429,
+      "parent": 42000170,
+      "time": 41,
+      "timepoints_remaining": 58
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        1
+      ],
+      "kind": "TP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 6.28312349319458,
+      "parent": 53000055,
+      "time": 52,
+      "timepoints_remaining": 47
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        2,
+        0
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 2.0843255519866943,
+      "parent": 63000428,
+      "time": 62,
+      "timepoints_remaining": 37
+    },
+    {
+      "dataset": "44b6_a21120c2",
+      "daughter_depths_capped_at_5": [
+        5,
+        1
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 2.2502341270446777,
+      "parent": 66000381,
+      "time": 65,
+      "timepoints_remaining": 34
+    },
+    {
+      "dataset": "6bba_af149c94",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 3.871009588241577,
+      "parent": 69000085,
+      "time": 68,
+      "timepoints_remaining": 31
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        5,
+        3
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 7.172765731811523,
+      "parent": 3000066,
+      "time": 2,
+      "timepoints_remaining": 97
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 9.000737190246582,
+      "parent": 16000056,
+      "time": 15,
+      "timepoints_remaining": 84
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 5.579889297485352,
+      "parent": 21000029,
+      "time": 20,
+      "timepoints_remaining": 79
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 2.0328004360198975,
+      "parent": 26000005,
+      "time": 25,
+      "timepoints_remaining": 74
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 3.8698105812072754,
+      "parent": 27000008,
+      "time": 26,
+      "timepoints_remaining": 73
+    },
+    {
+      "dataset": "6bba_e16ffc58",
+      "daughter_depths_capped_at_5": [
+        5,
+        0
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 1.3024065494537354,
+      "parent": 28000131,
+      "time": 27,
+      "timepoints_remaining": 72
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 3.8433127403259277,
+      "parent": 1000059,
+      "time": 0,
+      "timepoints_remaining": 99
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 1.7477887868881226,
+      "parent": 7000080,
+      "time": 6,
+      "timepoints_remaining": 93
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        3,
+        0
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 2.0938663482666016,
+      "parent": 13000090,
+      "time": 12,
+      "timepoints_remaining": 87
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 1.384078860282898,
+      "parent": 63000198,
+      "time": 62,
+      "timepoints_remaining": 37
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        5,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": false,
+      "missing_two_step_daughter_persistence": false,
+      "optical_logit": 2.084240436553955,
+      "parent": 74000129,
+      "time": 73,
+      "timepoints_remaining": 26
+    },
+    {
+      "dataset": "6bba_fe670320",
+      "daughter_depths_capped_at_5": [
+        0,
+        5
+      ],
+      "kind": "FP",
+      "missing_immediate_daughter_persistence": true,
+      "missing_two_step_daughter_persistence": true,
+      "optical_logit": 2.886380672454834,
+      "parent": 91000188,
+      "time": 90,
+      "timepoints_remaining": 9
+    }
+  ],
+  "scope": "Official evaluable forks in the frozen pair-image graph. Path depth is a diagnostic, not a biological label or an inference-time GT feature.",
+  "summary": {
+    "FP": {
+      "events": 29,
+      "less_than_two_step_persistence": 12,
+      "minimum_depth_histogram": {
+        "0": 9,
+        "1": 3,
+        "2": 1,
+        "3": 1,
+        "4": 2,
+        "5": 13
+      },
+      "no_immediate_persistence": 9
+    },
+    "TP": {
+      "events": 1,
+      "less_than_two_step_persistence": 1,
+      "minimum_depth_histogram": {
+        "1": 1
+      },
+      "no_immediate_persistence": 0
+    }
+  }
+}

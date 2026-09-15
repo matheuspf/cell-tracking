@@ -4,7 +4,7 @@ description: "Goal, evaluation, timeline, and submission format for Biohub - Cel
 ---
 # Competition overview — Biohub - Cell Tracking During Development
 
-Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-08T14:53:57Z.
+Competition: `biohub-cell-tracking-during-development`. Reference snapshot: 2026-09-12T21:12:17Z.
 
 Read the relevant official page before answering, and cite its local path or
 source URL. Refresh time-sensitive facts when the snapshot may be stale.

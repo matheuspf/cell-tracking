@@ -1,0 +1,29 @@
+{
+  "allocated_gib_per_new_worker": 5.5,
+  "at": "2026-09-13T19:03:13.577848+00:00",
+  "completed_before_transition": [
+    "44b6_0113de3b",
+    "44b6_0b24845f",
+    "44b6_0c582fdc",
+    "44b6_0db75fae",
+    "44b6_12dfb391",
+    "44b6_144b256d",
+    "44b6_1574802b",
+    "44b6_18ced818",
+    "44b6_1d530831"
+  ],
+  "evidence": {
+    "completed_clips": 9,
+    "hardware": "One RTX4090, 16 CPU cores and 64 GiB RAM",
+    "max_allocated_gib": 0.7594537734985352,
+    "max_rss_gib": 4.522495269775391,
+    "observations": "Sampled GPU activity leaves idle periods while workers perform CPU graph repair; no full-cohort comparative score existed."
+  },
+  "gpu_device_count": 1,
+  "new_workers": 4,
+  "original_workers": 2,
+  "prior_policy_sha256": "ae8276a1038231366e5c9dfcdf1e37a70d5440e790f036bd4913138219876469",
+  "scientific_changes": "None; model/source/recipe/thread counts and all scientific hashes unchanged. Completed job fingerprints reconstruct original recorded resource allocations.",
+  "total_allocated_gib_cap": 22,
+  "transition": "Stopped scheduler; all two active workers finished successfully before controller restart. No worker terminated."
+}

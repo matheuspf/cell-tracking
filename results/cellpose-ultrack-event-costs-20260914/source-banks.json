@@ -1,0 +1,110 @@
+{
+  "44b6_81c256f0": {
+    "links": {
+      "rows": 96546,
+      "sha256": "e17bacd2dcee918ff2c00f363e13272ac4aa53279f364d4e128b7a96a2b1479c"
+    },
+    "nodes": {
+      "rows": 20936,
+      "sha256": "4f8dc88f2a28e9ac436a77c458136df144a3f0716a44511741e1d3071e5554ad"
+    },
+    "overlaps": {
+      "rows": 79974,
+      "sha256": "a0bfe9c069e0da01fd3ce9c56713e1aa107c76bbe5adb666994dce44168ea9c8"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      0.8978905533476002
+    ]
+  },
+  "44b6_8f5ab931": {
+    "links": {
+      "rows": 372188,
+      "sha256": "be472bbc38f3f19879fce6d64c36e1fcc4680de1595cde38d816a1b8b3e31e0c"
+    },
+    "nodes": {
+      "rows": 75965,
+      "sha256": "cac13b43ec34b646868a7d6d82199c3f83f75b5d8242ab77148537da1c3290d3"
+    },
+    "overlaps": {
+      "rows": 504078,
+      "sha256": "decc22157414805c1b0533269539e9311178bb3a5eca8aeef43c1d11b283e56d"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      0.8728070175438597
+    ]
+  },
+  "44b6_a21120c2": {
+    "links": {
+      "rows": 176647,
+      "sha256": "3e1fd2152ca71e9f3e7419af1fe331f99e311ce827894251370edb9caf686b54"
+    },
+    "nodes": {
+      "rows": 36713,
+      "sha256": "7e7d2179a9fa2a644c57277c3d6c0d7ffc33ce7488f8f221763ab45a4400a809"
+    },
+    "overlaps": {
+      "rows": 86404,
+      "sha256": "d7e7206017677de98892ddbd0bdba2de091ad8f40ab949b51ff0304a7c3281de"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      0.8813982521847691
+    ]
+  },
+  "6bba_af149c94": {
+    "links": {
+      "rows": 88121,
+      "sha256": "2b15b9dbeb1317080d01295d988969cef10d175f8054bd06029afa5c31fa050c"
+    },
+    "nodes": {
+      "rows": 19172,
+      "sha256": "54490b441d78bd488685c9b7519060e034b792526300f0d745527502c64b95c4"
+    },
+    "overlaps": {
+      "rows": 57635,
+      "sha256": "be4abb5a23ab56682146defc4935c14334a96ee8c0fec014add4543557e7da3e"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "6bba_e16ffc58": {
+    "links": {
+      "rows": 41147,
+      "sha256": "93b9cb3bcf658dc3bd31bf9b301e98070e777ac7066a6e5059e13bd93e653d9d"
+    },
+    "nodes": {
+      "rows": 10652,
+      "sha256": "f863446e761ee3fcd7bdc3972725b3826c87c09ada9a77d416da56407dc17fed"
+    },
+    "overlaps": {
+      "rows": 19873,
+      "sha256": "ae580d590508a312bdff8b8b00fc34c3994dca770239800d8366e5597c8a415d"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "6bba_fe670320": {
+    "links": {
+      "rows": 86777,
+      "sha256": "e23ca70065617dc233b7e094dbfa9776a0493b85a7deedebf9dbd7da2a3d19d9"
+    },
+    "nodes": {
+      "rows": 19502,
+      "sha256": "e1d1272af7c163fa9205d92d0e8fbb4a495998e432c0d00516cc993562cbe213"
+    },
+    "overlaps": {
+      "rows": 24078,
+      "sha256": "4367858489e96068b7cda11f55d2a64a443036fe903781056c3ecb6db53dce83"
+    },
+    "raw_link_weight_range": [
+      0.0,
+      1.0
+    ]
+  }
+}

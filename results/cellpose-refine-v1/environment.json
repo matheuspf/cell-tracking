@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-09-14T16:54:59.933659+00:00",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+  "executable": "/kaggle/envs/detector-screen-cellpose/bin/python",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "zarr": "3.2.1",
+    "cellpose": "4.2.1.1",
+    "dinov3": "0.0.1",
+    "opencv-python-headless": "4.11.0.86",
+    "scikit-image": "0.26.0",
+    "tifffile": "2026.8.23"
+  },
+  "repositories": {
+    "cellpose": {
+      "commit": "a54cb48849b7e225a81e8e43dcb042d42427f543",
+      "worktree_status": ""
+    },
+    "dinov3": {
+      "commit": "6876159a11b4df116f30f667f8c9888617df0751",
+      "worktree_status": ""
+    }
+  }
+}

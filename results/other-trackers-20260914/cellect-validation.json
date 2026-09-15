@@ -1,0 +1,12 @@
+{
+  "upstream_channel_lookup_exact": true,
+  "border_tile_coverage": true,
+  "unique_native_tiles": 3,
+  "preprocess_numpy_torch_max_error": 9.5367431640625e-07,
+  "real_patch_cpu_cuda_errors": [
+    3.516674041748047e-06,
+    9.685754776000977e-08,
+    0.0
+  ],
+  "scope": "32x32x32 real-patch numerical parity; production uses full native 256x256x32 tiles"
+}

@@ -1,0 +1,46 @@
+{
+  "config_sha256": "ae77510ec4ab7d95d80fa0704a1012d576a4c76d0f0473fa757647aa9399232e",
+  "hoct_revision": "2ccc5040823bc944ab67790abd1f56eea7cd4f05",
+  "model_files": {
+    "general_v1": "5bd836dfcb15ad796ea79a9595841a3e73b650a71c4acba3fc66aac65d745b33",
+    "ctc_v0": "b9be3d976e2d51ae946128ded99142a81b5ba99fb87a0da67c38de2934944000"
+  },
+  "source_files": {
+    "__about__.py": "b3d5375f9e0f76bf89961f463fa2c169afd5468b3baacff0b6b55e7d41c73480",
+    "_io.py": "14af711bcc13935e880762c3b1b8d8fdf24fc7f50964d68b9c7c9a75dbfaaba1",
+    "correction.py": "34fa20e198a75baecb39b3668957d6baa4ead391111d6827f7082b6e2e367d3e",
+    "__init__.py": "1390ba6d9a32ac8e90aba7ec3207b15756872ee6ab8a08e5b41a2af97eb9f58c",
+    "_api.py": "62f35e372eff20f4da143105bccf62619daab31b46c340b00a60614fc681b925",
+    "_models.py": "9db1a59b66012112b91f406c0ed0fd6bc8f0abd85e45f2c028c92b5521b37ab1",
+    "_logging.py": "b20e9359f5b736729654e9822ad9dbb644b68c2bf15a576b1ab44a06256d720b",
+    "cli.py": "a69802a683f1b78d8cbe603c38ecbbfd93aa77a874515d71319d12e5c9506402",
+    "data/_labeled_dataset.py": "6b21e6dd543c5c9c46d1fb94120e3675f1727763535069e59ae727e646e82d2b",
+    "data/__init__.py": "1160bf6e2f357b8369cd1d0c3fd3d185142bdafe2d7020c0ae758d07555e6c92",
+    "data/_frame_dataset.py": "a940c2220e3f10adee172a2a3a50b7659abbf6f4dfe43d921e2f508c8b8c0b62",
+    "data/_batching.py": "b768d27c794e0e3dd7e029e13d39f8e96e27c83338e17f0fdfd403533fe20fba",
+    "data/_tiled_dataset.py": "bd78131c3175dd08a2960aa0ae8df0e58151d1a775e09447dbc070c2c81a2ce3",
+    "data/_transforms.py": "27d7596700fe04b6936fec00b6edddff801d9f33f2421d362b6aeea4cfdb1f8a",
+    "tracking/_tracklet_solver.py": "d8531daf32b066317fd9e3cdb07113d4fbd1cbb9a58ae6921b28cf0d0903b9cc",
+    "tracking/__init__.py": "15301eec9b77514263c41c472f69521fcfb7a78e398f7b69a5562225c8bd0cab",
+    "tracking/_solver.py": "3757c3525483d4927fd3bc44a17c499333b37ebf9aca07aeda081709431226fb",
+    "inference/_predict.py": "57921cbeed3d92ffc6abbf15f1a3a44213812b4c8385ff24d4ce0b02f30c381c",
+    "inference/__init__.py": "2e4ecabec7276b224cbf0ba89287c19625c1a7e1d1a0bc12cecab19fb5c530b9",
+    "features/constants.py": "1027e0e7d5288d1782a0698278b4782806973813ea65709efa8dd139b4d91972",
+    "features/__init__.py": "d72c4d09486c458d25e7314e41550baef8cf91a25f0fb72a7fca76afe4d0ab81",
+    "features/graph.py": "34f651dcb247a185d8b70ed32d96fb5916565b470bd628ec256a3c0651693bf3",
+    "features/features.py": "4b5c383823d382a11a779cb79b1a3aa7c90608e1e906f2fc2f6a59f73632e106"
+  },
+  "runtime": {
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "numpy": "2.5.3",
+    "polars": "1.42.0",
+    "scikit-image": "0.26.0",
+    "scipy": "1.18.1",
+    "spatial-graph": "0.1.1"
+  },
+  "runtime_path": "/kaggle/envs/cell-tracking-notebooks/bin/python",
+  "isolated_added_dependency": "work/hoct-reassessment-20260914/python/spatial_graph (0.1.1); shared environments unchanged",
+  "checkpoint_training_exposure": "Registry/release notes do not provide checkpoint-linked training sample lists. Unresolved; no claim of zero exposure.",
+  "baseline_exposure": "Legacy detections and protected edges inherit confirmed public-training overlap."
+}

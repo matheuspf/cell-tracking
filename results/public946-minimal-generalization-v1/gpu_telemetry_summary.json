@@ -1,0 +1,56 @@
+{
+  "cuda_event_active_seconds": null,
+  "definition": "One-second nvidia-smi pmon per-process samples; positive-SM sample duration and utilization integral are estimates, not CUDA-event kernel time. Missing samples remain unavailable.",
+  "groups": {
+    "aa1/E04": {
+      "max_framebuffer_mib": 1472.0,
+      "observed_seconds": 222.15827322006226,
+      "positive_sm_sample_seconds": 213.0232663154602,
+      "samples": 310,
+      "sm_utilization_integral_seconds": 168.30636196136484,
+      "unavailable_or_gapped_samples": 92
+    },
+    "aa1/E05": {
+      "max_framebuffer_mib": 1470.0,
+      "observed_seconds": 112.06335043907166,
+      "positive_sm_sample_seconds": 100.89214944839478,
+      "samples": 179,
+      "sm_utilization_integral_seconds": 82.00737855195997,
+      "unavailable_or_gapped_samples": 69
+    },
+    "full/B0": {
+      "max_framebuffer_mib": 1474.0,
+      "observed_seconds": 12858.778292655945,
+      "positive_sm_sample_seconds": 12760.185842752457,
+      "samples": 21605,
+      "sm_utilization_integral_seconds": 4646.5851316857115,
+      "unavailable_or_gapped_samples": 9024
+    },
+    "full/B1": {
+      "max_framebuffer_mib": 718.0,
+      "observed_seconds": 12.249646663665771,
+      "positive_sm_sample_seconds": 11.249646663665771,
+      "samples": 609,
+      "sm_utilization_integral_seconds": 0.22505838871002198,
+      "unavailable_or_gapped_samples": 597
+    },
+    "package/B0": {
+      "max_framebuffer_mib": 1470.0,
+      "observed_seconds": 134.45274138450623,
+      "positive_sm_sample_seconds": 120.2586977481842,
+      "samples": 225,
+      "sm_utilization_integral_seconds": 86.29090651035311,
+      "unavailable_or_gapped_samples": 93
+    },
+    "package/B1": {
+      "max_framebuffer_mib": 1470.0,
+      "observed_seconds": 126.3090877532959,
+      "positive_sm_sample_seconds": 119.23406147956848,
+      "samples": 214,
+      "sm_utilization_integral_seconds": 87.1215288305283,
+      "unavailable_or_gapped_samples": 90
+    }
+  },
+  "status": "sampled",
+  "telemetry_sha256": "f3834b0d55e601c5c0928da3de7698f4495fe199cef70b0060b2edb19306e05d"
+}
