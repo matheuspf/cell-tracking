@@ -3,9 +3,23 @@
   "cpu_contract": "Process affinity restricted to 16 logical CPUs; BLAS threads 1, data loaders 0, scorer processes 4. Initial Zarr pools had excess idle OS threads; corrected nested configuration is retained with the original measurements.",
   "gpu_budget": {
     "accounting": "GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.",
-    "active_leases": [],
+    "active_leases": [
+      {
+        "arguments": [
+          "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
+          "train",
+          "--source",
+          "6bba",
+          "--arm",
+          "D20_temporal"
+        ],
+        "category": "first_seed_training",
+        "pid": 1221271,
+        "started_epoch": 1789508232.5682611
+      }
+    ],
     "charge_other_programs": false,
-    "completed_intervals": 841,
+    "completed_intervals": 977,
     "limits_hours": {
       "final_inference_and_package": 8.0,
       "first_seed_training": 24.0,
@@ -14,15 +28,15 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 5.203408243641681,
+      "first_seed_training": 5.643714464491035,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
-    "total_hours": 5.784690380453191
+    "total_hours": 6.2249966013025455
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 84,
-  "peak_all_study_process_rss_gib": 12.750835418701172,
+  "measurements": 85,
+  "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 12.322921752929688,
   "peak_total_gpu_gib": 6.892578125,
   "records": [
@@ -133,6 +147,16 @@
       "resource_error": null,
       "sha256": "e681806c964bde37dc42dfd4697ed23be0625e0b33df9123cbc95a8449dca113",
       "wall_seconds": 3.037628959998983
+    },
+    {
+      "path": "resources/encoder-compute-profile.json",
+      "peak_all_study_process_rss_gib": 18.222946166992188,
+      "peak_os_threads": 7,
+      "peak_total_gpu_gib": 3.388671875,
+      "peak_tree_rss_gib": 2.099517822265625,
+      "resource_error": null,
+      "sha256": "6dcff229489acc1f18e304d14574394b3d010ecd69e3e3b24b3f6890bda22854",
+      "wall_seconds": 12.759204996000335
     },
     {
       "path": "resources/prepare-44b6.json",

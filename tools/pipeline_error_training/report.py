@@ -459,6 +459,10 @@ closed-bank observation selection run independently. Complete decisions include 
 The common source-only throughput lock reduced the proposed 16,000-update ceiling to {lock['training']['updates']} updates,
 with equal budgets across matched fits. Models use the fixed final checkpoint, source-only regularized calibration,
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
+Equal optimizer-update counts do not imply equal computation. [Encoder operation profiles](encoder_compute_profile.csv)
+report fixed 16-node forward/backward costs, boundary support and checkpoint recomputation using PyTorch's registered
+FLOP formulas; these exclude unsupported operations, decision heads and variable group sizes, and are not full-training
+FLOP totals or hardware throughput. Actual fit and inference times are reported separately.
 The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
 also shortens its warmup denominator to {lock['training']['updates']}. See [the exact schedule](executed_training_schedule.json).
 These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.

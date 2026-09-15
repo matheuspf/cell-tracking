@@ -42,10 +42,14 @@ closed-bank observation selection run independently. Complete decisions include 
 The common source-only throughput lock reduced the proposed 16,000-update ceiling to 178 updates,
 with equal budgets across matched fits. Models use the fixed final checkpoint, source-only regularized calibration,
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
+Equal optimizer-update counts do not imply equal computation. [Encoder operation profiles](encoder_compute_profile.csv)
+report fixed 16-node forward/backward costs, boundary support and checkpoint recomputation using PyTorch's registered
+FLOP formulas; these exclude unsupported operations, decision heads and variable group sizes, and are not full-training
+FLOP totals or hardware throughput. Actual fit and inference times are reported separately.
 The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
 also shortens its warmup denominator to 178. See [the exact schedule](executed_training_schedule.json).
 These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
-Cumulative charged GPU lease time is 5.785 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 6.225 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
