@@ -1,0 +1,41 @@
+{
+  "cached_embeddings_used": false,
+  "dataset": "44b6_5f15d135",
+  "exact_full_clip_embeddings": true,
+  "exact_full_clip_masks": true,
+  "frames": 100,
+  "implementation_sha256": "883e96c63e8f47431b9d82307ee7fd2e3b4e706e4ac9fa84333fd65a748efdb6",
+  "new_target_metrics_read": false,
+  "node_count": 21935,
+  "nodes_per_second": 974.8075246941349,
+  "not_a_full_pipeline_Kaggle_runtime": true,
+  "pixel_cases": [
+    {
+      "exact_masks": true,
+      "exact_pixels": true,
+      "frame": 0,
+      "nodes": 16
+    },
+    {
+      "exact_masks": true,
+      "exact_pixels": true,
+      "frame": 50,
+      "nodes": 16
+    },
+    {
+      "exact_masks": true,
+      "exact_pixels": true,
+      "frame": 99,
+      "nodes": 16
+    }
+  ],
+  "preserved_precision": "Original uint8 quantization, scipy order-one resizing and float32 masks; identical batches of 32",
+  "reference_embedding_sha256": "7df3ea518ee2c3826f859246a0b38e71b63e84d6b908ebdf286cf130d90df229",
+  "sampler_sha256": "50adaa49d4f335706223c80ce92300ed13d9c70ed4fe253c224207a4b7ed1cb6",
+  "seconds": 22.50187800600179,
+  "shared_quantizer_sha256": "976d3c2f4c946037aeadf06bcedd6f7ac2756b700df75aca155c0c46d6dfa8d4",
+  "source": "44b6",
+  "source_model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+  "status": "measured",
+  "training_crops_unchanged": true
+}

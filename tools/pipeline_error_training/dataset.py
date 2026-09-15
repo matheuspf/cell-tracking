@@ -11,8 +11,11 @@ from .feasibility import records
 
 
 class SourceDataset:
-    def __init__(self, source, partition='fit'):
+    def __init__(self, source, partition='fit', *, graph_cache_size=16, crop_cache_size=8192):
         self.source, self.partition = source, partition
+        self.graph_cache_size, self.crop_cache_size = graph_cache_size, crop_cache_size
+        if min(graph_cache_size,crop_cache_size)<1:
+            raise ValueError('Source RAM caches must have positive bounded capacities')
         split = read_json(RESULTS / 'split_manifest.json')['directions'][source]
         self.rows = {r['dataset']: r for r in inputs() if r['embryo'] == source and
                      split[r['dataset']]['partition'] == partition}
@@ -55,7 +58,7 @@ class SourceDataset:
             _, pred, succ = adjacency(graph['nodes'], graph['edges'])
             feature_map = {tuple(map(int, pair)): k for k, pair in enumerate(native['pairs'])}
             self.graphs[name] = (graph, native, pred, succ, feature_map)
-            while len(self.graphs) > 4:
+            while len(self.graphs) > self.graph_cache_size:
                 self.graphs.popitem(last=False)
         self.graphs.move_to_end(name)
         return self.graphs[name]
@@ -101,7 +104,7 @@ class SourceDataset:
                                 metadata_sha256=np.array(row['metadata_sha256']))
                     self.cache_bytes += path.stat().st_size
             self.crop_cache[key] = (patch, valid)
-            while len(self.crop_cache) > 512:
+            while len(self.crop_cache) > self.crop_cache_size:
                 self.crop_cache.popitem(last=False)
         self.crop_cache.move_to_end(key)
         patch, valid = self.crop_cache[key]

@@ -1,0 +1,18 @@
+{
+  "inference_sha256": "b1c430cd14163bb3142124e59aabecbc7b41ba2fc19468c900c41c7afa52e9cd",
+  "model_weights_or_scientific_recipes_changed": false,
+  "new_target_metrics_read": false,
+  "proofs": {
+    "compact_crop_parity": "f93f0bf045ad19da7e0873d07791e8a3a99d8fda5bb4061b0a141003ac5bf2c9",
+    "frame_crop_parity": "78a3fb977ccb2441098f78515993f6088ec33c10e99d7ef2fb1a584d7187f818",
+    "organoid_crop_parity": "a7772d7946a4d0a134b7046a1902aee8fb69c7f5ab1eb3f0cc2b1e86dae47032",
+    "training_cache_parity": "24e26cb4c98e030f2981fcf40e8995809bce98ba4009bbf60ee247bd705d11b5"
+  },
+  "runtime_comparability": "Pre-optimization and post-optimization training wall times are not matched architecture cost comparisons",
+  "source_inference_reference_preserved": "execution_versions/inference_before_frame_reuse",
+  "source_training_cache_version": "dcc04c013be4c1ebd7a1ecfbc1ef3d08fee50097097a8ca1b233e6602030ef87",
+  "status": "measured",
+  "stress_hook_sha256": "5365a0cfa637ea01ba5e3466955d6c096a09ab66122b4d94c76e978bf55c8913",
+  "timing_comparison_scope": "Measured cold image embeddings on 44b6_5f15d135; not an all-199 or Kaggle runtime claim",
+  "unchanged_training_cache_fingerprint": true
+}

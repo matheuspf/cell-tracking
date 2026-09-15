@@ -6,6 +6,7 @@ arithmetic, then gather uint8 crops. Scale two samples integer voxels directly.
 This does not alter training crops, context, padding, precision or rounding.
 """
 from collections import OrderedDict
+import weakref
 
 import numpy as np
 
@@ -32,7 +33,7 @@ def quantized_frames(frame, lo, hi):
 
 class FrameCache:
     def __init__(self, images):
-        self.images = images
+        self.images = weakref.proxy(images)
         self.frames = OrderedDict()
 
     def get(self, t):

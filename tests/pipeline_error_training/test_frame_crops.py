@@ -25,3 +25,18 @@ def test_normalized_frames_match_original_boundary_and_rounding():
 def test_frame_sampler_rejects_unverified_dtype():
     with pytest.raises(ValueError, match='uint16'):
         quantized_frames(np.zeros((3,3,3), np.float32), 0., 1.)
+
+
+def test_direct_triplanes_equal_full_normalized_native_crop():
+    from pipeline_error_training.compact_inference_crops import planes
+    from pipeline_error_training.crops import SHAPE
+    rng = np.random.default_rng(22)
+    frame = rng.integers(0,65536,(29,75,79),dtype=np.uint16)
+    lo,hi = np.quantile(frame,[.01,.99])
+    half,_ = quantized_frames(frame,lo,hi)
+    for position in [(0,0,0),(14,37,39),(28,74,78),(29,75,79)]:
+        full,mask = values(frame,position,1)
+        full = np.rint(np.clip((full-lo)/max(float(hi-lo),1.),0,1)*mask*255).astype(np.uint8)
+        expected = [full[SHAPE[0]//2],full[:,SHAPE[1]//2],full[:,:,SHAPE[2]//2]]
+        for a,b in zip(planes(half,position),expected):
+            np.testing.assert_array_equal(a,b)

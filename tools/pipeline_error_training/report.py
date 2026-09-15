@@ -233,6 +233,79 @@ def pad_metric_tables(experiments):
         write_csv(RESULTS/filename,measured)
 
 
+def outcome_text(recommended):
+    measured = [r for r in csv_rows(RESULTS/'scores.csv')
+                if r.get('status')=='measured' and r['arm'] not in ['P0','C4_m6','C0','D00']]
+    if not measured:
+        return 'No new model has a complete all-199 target comparison yet. The source screens are reported separately.'
+    embryos = {(r['arm'],r['embryo']):r for r in csv_rows(RESULTS/'per_embryo_scores.csv')
+               if r.get('status')=='measured'}
+    changes = {r['arm']:r for r in csv_rows(RESULTS/'error_transitions.csv') if r['embryo']=='pooled'}
+    lines = []
+    if recommended['candidate']:
+        lines.append(f"Recommended candidate: **{recommended['candidate']}**. It passed the frozen two-seed, both-embryo and fresh-inference gates. P0 remains the production default.")
+    else:
+        lines.append('No candidate has passed every frozen recommendation gate; P0 is retained. A higher descriptive score alone does not establish a recommendation.')
+    best = max(measured,key=lambda r:float(r['score']))
+    lines += ['',f"Highest completed new-model pooled result: **{best['arm']} {float(best['score']):.12f}** "
+              f"(P0 delta {float(best['delta_P0']):+.12f}; C4_m6 delta {float(best['delta_C4_m6']):+.12f}).",'',
+              'Complete all-199 results, with embryos ordered 44b6 / 6bba:','']
+    for row in sorted(measured,key=lambda r:r['arm']):
+        arm = row['arm']
+        both = ' / '.join(f"{float(embryos[arm,e]['score']):.9f} ({float(embryos[arm,e]['delta_P0']):+.9f})"
+                          for e in ['44b6','6bba'])
+        lines.append(f"- **{arm}**: pooled {float(row['score']):.12f}; embryos {both}. "
+                     f"Edge TP/FP/FN {row['edge_tp']}/{row['edge_fp']}/{row['edge_fn']}; "
+                     f"division TP/FP/FN {row['division_tp']}/{row['division_fp']}/{row['division_fn']}; "
+                     f"predicted nodes {row['num_pred_nodes']}.")
+        if arm in changes:
+            c = changes[arm]
+            lines.append(f"  Relative to P0: edge TP recovered/lost {c['tp_edges_recovered']}/{c['tp_edges_lost']}, "
+                f"edge FP removed/introduced {c['fp_edges_removed']}/{c['fp_edges_introduced']}; "
+                f"division TP recovered/lost {c['tp_divisions_recovered']}/{c['tp_divisions_lost']}, "
+                f"division FP removed/introduced {c['fp_divisions_removed']}/{c['fp_divisions_introduced']}.")
+    return '\n'.join(lines)
+
+
+def source_decision_text():
+    nomination = optional(RESULTS/'nomination.json')
+    if not nomination:
+        return 'Source-only family nomination and conditional replication are pending. No target result is used to choose a checkpoint, margin or training budget.'
+    replication = read_json(RESULTS/'replication.json')
+    lines = [f"Source nominees: division **{nomination['division_nominee'] or 'none'}**; "
+             f"identity/observation **{nomination['identity_nominee'] or 'none'}**. "
+             f"Replication status: **{replication['status']}**.", '']
+    for arm,record in nomination['candidates'].items():
+        evidence = '; '.join(f"{s}: delta {d['source_delta']:+.9f}, graph gate {'pass' if d['source_graph_safe'] else 'fail'}"
+                             if 'source_delta' in d else f"{s}: {d['reason']}"
+                             for s,d in record['directions'].items())
+        lines.append(f"- {arm}: {'qualified' if record['qualified'] else 'not qualified'}; {evidence}.")
+    lines += ['', 'These are the predeclared complete source calibration clips, not the all-199 target comparison. '
+              'The source split is not independently certified. Nominee-only replication does not establish a second-seed advantage over a newly trained matched control.']
+    if not replication['conditional_random_control']:
+        lines += ['', 'D10_random was not run because the Organoid family did not qualify in both source directions. No pretrained-advantage claim is made.']
+    return '\n'.join(lines)
+
+
+def proof_text():
+    tested = optional(RESULTS/'test_validation.json') or {}
+    fresh = optional(RESULTS/'fresh_image_validation.json') or {}
+    clips = fresh.get('clips',[])
+    lines = [f"Tests: **{tested.get('status','not run')}** — {tested.get('summary','final executable test receipt pending')}.", '']
+    if fresh.get('status')=='measured':
+        times = ', '.join(f"{r['unfamiliar_name']}: {r['seconds']:.3f} s" for r in clips)
+        lines.append('The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran '
+            f'from both renamed 100-frame images ({times}). Startup guards denied annotations, historical prediction caches and network access; '
+            'both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. '
+            'A recommended candidate also requires its own cold-image proof.')
+    else:
+        lines.append(f"Fresh-image pipeline proof: {fresh.get('status','not run')}.")
+    lines += ['', '[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), '
+              '[actual changed-coordinate feature proof](native_refresh_validation.json), '
+              '[resumption proof](resume_validation.json) and [resource measurements](resource.json).']
+    return '\n'.join(lines)
+
+
 def continuation(status):
     pending=[r for r in status['experiments'] if r['status']!='measured']
     lines=['# Continuation — pipeline error training', '',
@@ -310,7 +383,8 @@ def run(complete=False):
         inherited_notebook_dependencies='cell-tracking-notebooks',organoid_additional_environment='detector-screen-organoid',
         official_scorer_revision='075fc5f5a52d11077f9dc2b074644618f26939e2',runtime_installations_by_this_study=False))
     measured=sum(r['status']=='measured' for r in fits)
-    report=f'''{recommended['status']}
+    heading = f"Candidate recommended: {recommended['candidate']}" if recommended['candidate'] else 'P0 retained'
+    report=f'''{heading}
 
 # Pipeline error training — September 15, 2026
 
@@ -328,6 +402,14 @@ Both embryos and all recovered/lost TP and removed/introduced FP counts are repo
 - [Every clip](per_clip_scores.csv) and [changed errors](error_transitions.csv)
 - [Directional fits](training_fits.csv) and [source-only full-clip screens](source_model_scores.csv)
 - [Source feasibility witnesses](source_feasibility_scores.csv)
+
+## Measured model outcomes
+
+{outcome_text(recommended)}
+
+## Source-only branching
+
+{source_decision_text()}
 
 ## Interpretation
 
@@ -348,6 +430,10 @@ with equal budgets across matched fits. Models use the fixed final checkpoint, s
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
 Cumulative charged GPU lease time is {resource['gpu_budget']['total_hours']:.3f} hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
+
+## Executable validation and fresh inference
+
+{proof_text()}
 
 See [CONTINUATION.md](CONTINUATION.md) for exact commands and remaining work.
 '''

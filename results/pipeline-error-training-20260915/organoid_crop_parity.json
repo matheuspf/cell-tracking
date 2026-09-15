@@ -1,0 +1,39 @@
+{
+  "cached_embeddings_used": false,
+  "dataset": "44b6_5f15d135",
+  "exact_full_clip_embeddings": true,
+  "exact_full_clip_masks": true,
+  "exact_separate_vs_joint_quantiles_for_all_frames": true,
+  "frames": 100,
+  "historical_code_or_model_changed": false,
+  "implementation_sha256": "2a7dbb9c474e8e22c470ccbddc55c449baaccf1dda096772e3176e0abc6e35c5",
+  "new_target_metrics_read": false,
+  "node_count": 21935,
+  "nodes_per_second": 447.01402333242913,
+  "not_a_full_pipeline_Kaggle_runtime": true,
+  "pixel_cases": [
+    {
+      "exact_float32_pixels": true,
+      "frame": 0,
+      "nodes": 32
+    },
+    {
+      "exact_float32_pixels": true,
+      "frame": 50,
+      "nodes": 32
+    },
+    {
+      "exact_float32_pixels": true,
+      "frame": 99,
+      "nodes": 32
+    }
+  ],
+  "preserved_precision": "Released float32 normalization order, nearest resizing, missing-frame filling; identical batches of 32",
+  "reference_embedding_sha256": "cabf190229a72d13ba84e0a8b7fe6e75c1f0c050d8f6002a2d4a3b5ec6df8277",
+  "sampler_sha256": "eea160d665352535f37d54d223ac09e37a250f685d63a682f10572342c780798",
+  "seconds": 49.070048935998784,
+  "source": "44b6",
+  "source_model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+  "status": "measured",
+  "training_crops_unchanged": true
+}

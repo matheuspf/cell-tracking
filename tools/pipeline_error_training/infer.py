@@ -10,7 +10,9 @@ from .actions import Alternatives, apply_decisions
 from .bank import EventBank
 from .common import WORK, digest, graph_hash, read_json, save_arrays, save_graph, sha, write_json
 from .crops import Images, compact_view, prediction_tracklet
-from .fast_crops import sample_native, sample_gpu
+from .compact_inference_crops import sample as sample_compact
+from .fast_crops import sample_native
+from .frame_crops import sample_gpu
 from .scoring import load_model, score
 
 
@@ -23,7 +25,10 @@ def embeddings(model, row, graph, bank, path, model_hash, indices=None):
                  encoder_code_sha256={name: sha(Path(__file__).with_name(name+'.py')) for name in ['models', 'organoid_adapter', 'crops']},
                  embedding_function_sha256=digest(__import__('inspect').getsource(embeddings)),
                  requested_node_indices_sha256=digest(requested),
-                 sampler_sha256=sha(Path(__file__).with_name('fast_crops.py')),
+                 sampler_code_sha256={name:sha(Path(__file__).with_name(name+'.py')) for name in
+                     {'organoid':['organoid_inference_crops'],
+                      'compact':['frame_crops','compact_inference_crops'],
+                      'temporal':['frame_crops']}[model.family]},
                  source_image_sha256=sha(Path(row['image_path']) / 'zarr.json'))
     if path.exists():
         receipt = read_json(path.with_suffix('.json'))
@@ -45,7 +50,7 @@ def embeddings(model, row, graph, bank, path, model_hash, indices=None):
             for start in range(0, len(ids), 32):
                 ii = ids[start:start+32]
                 if model.family == 'organoid':
-                    from .organoid_adapter import patches
+                    from .organoid_inference_crops import patches
                     p = patches(images, nodes, ii)
                     masks = []
                     for i in ii:
@@ -54,13 +59,12 @@ def embeddings(model, row, graph, bank, path, model_hash, indices=None):
                                       for dt in range(-2, 5)])
                     v = np.asarray(masks, np.float32)
                     x = torch.from_numpy(p).cuda()
+                elif model.family == 'compact':
+                    p, v = sample_compact(images,nodes,bank.pred,bank.succ,ii)
+                    x = torch.from_numpy(p).cuda().float()/255
                 else:
                     p, vv = sample_gpu(images, nodes, bank.pred, bank.succ, ii)
                     v = vv.cpu().numpy()
-                    if model.family == 'compact':
-                        p = np.stack([compact_view(a) for a in p.cpu().numpy()])
-                        v = v[:, 1:4]
-                        p = torch.from_numpy(p).cuda()
                     x = p.float()/255
                 result[ii] = model.encoder(x, torch.from_numpy(v).cuda()).cpu().numpy()
                 valid_result[ii] = v

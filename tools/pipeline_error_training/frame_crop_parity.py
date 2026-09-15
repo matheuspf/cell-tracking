@@ -86,3 +86,14 @@ if __name__=='__main__':
     from .resources import cpu_budget
     cpu_budget(4)
     run()
+    import sys
+    if '--await-adoption' in sys.argv:
+        from .common import WORK, read_json, sha
+        marker = WORK/'maintenance/frame_sampler_adoption.json'
+        print('Source parity passed; GPU released; waiting at the inference implementation boundary.',flush=True)
+        while not marker.exists():
+            time.sleep(5)
+        accepted = read_json(marker)
+        if accepted['sampler_sha256']!=sha(Path(__file__).with_name('frame_crops.py')) or \
+                accepted['inference_sha256']!=sha(Path(__file__).with_name('infer.py')):
+            raise ValueError('Inference sampler adoption does not identify the verified implementation')

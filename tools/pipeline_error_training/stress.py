@@ -40,8 +40,8 @@ def perturb(patch, nodes, indices, spacing, recipe, image_identity):
 
 def install(recipe):
     """Patch only this study's in-memory adapters in an isolated stress worker."""
-    from . import infer, organoid_adapter, scoring
-    original_sampler, original_patches, original_load = infer.sample_gpu, organoid_adapter.patches, scoring.load_model
+    from . import infer, organoid_inference_crops, scoring
+    original_sampler, original_patches, original_load = infer.sample_gpu, organoid_inference_crops.patches, scoring.load_model
     def native(images, nodes, pred, succ, indices):
         patch, valid = original_sampler(images, nodes, pred, succ, indices)
         spacing = np.stack([images.scale, 2*images.scale])
@@ -55,6 +55,12 @@ def install(recipe):
         out = perturb(patch, nodes, indices, [[2., .32, .32]], recipe, str(images.path))
         out[:, 2] = 0
         return out.squeeze(2).permute(0, 2, 3, 4, 1).cpu().numpy()
+    def compact(images,nodes,pred,succ,indices):
+        # Perturb the same complete native voxels as the temporal control before
+        # extracting triplanes. This retains the frozen stress recipe exactly.
+        from .crops import compact_view
+        patch,valid = native(images,nodes,pred,succ,indices)
+        return np.stack([compact_view(p) for p in patch.cpu().numpy()]),valid.cpu().numpy()[:,1:4]
     def load(path):
         model, spec = original_load(path)
         def mask_context(module, args):
@@ -63,4 +69,5 @@ def install(recipe):
             return patch, mask
         model.encoder.register_forward_pre_hook(mask_context)
         return model, spec
-    infer.sample_gpu, organoid_adapter.patches, scoring.load_model, infer.load_model = native, organoid, load, load
+    infer.sample_gpu, organoid_inference_crops.patches, scoring.load_model, infer.load_model = native, organoid, load, load
+    infer.sample_compact = compact
