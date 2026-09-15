@@ -15,12 +15,12 @@
         ],
         "category": "first_seed_training",
         "pid": 1669556,
-        "started_epoch": 1789515124.495439
+        "started_epoch": 1789516676.4991877
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1242,
+    "completed_intervals": 1320,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +30,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 7.323214318009311,
+      "first_seed_training": 7.755376181389322,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
@@ -40,7 +40,7 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 7.904496454820822,
+    "total_hours": 8.336658318200833,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,

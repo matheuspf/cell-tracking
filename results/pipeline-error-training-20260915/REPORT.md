@@ -54,9 +54,12 @@ These short, matched fits do not establish convergence or rule out the architect
 Event minibatches are conditioned on groups containing a supported biological positive: the completed temporal
 packages record 15 such groups for 44b6 and 74 for 6bba. Their alternatives supply supported identity confusers and
 metric-risk negatives; groups containing only negative event hypotheses are not a separate event-minibatch pool.
-Identity minibatches sample supported trajectory groups, and source calibration uses the unbalanced candidate
-distribution. This sampling distinction limits conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 7.904 hours of 48; detailed memory/runtime evidence is in resource.json.
+Identity minibatches sample supported trajectory groups. Calibration expands the supported source sample:
+ordinary anchors use one deterministic temporal residue out of nine and receive ninefold weight; event-compatible
+anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
+source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
+prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
+Cumulative charged GPU lease time is 8.337 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference

@@ -1,0 +1,210 @@
+{
+  "calibration_scope": "Expanded supported source candidate sample; not an exact census of every source-field hypothesis",
+  "directions": [
+    {
+      "anchor_expansion_weights": [
+        1.0,
+        9.0
+      ],
+      "cache_records": [
+        {
+          "dataset": "44b6_0b24845f",
+          "sha256": "b517f99395054048947f1d0930e532e9556426b727138c8ee17efe964a3e2940"
+        },
+        {
+          "dataset": "44b6_0db75fae",
+          "sha256": "bfcbb02126e314e48d4c1ada3b3ecf5ee329bd9a0b9735affd8fc046d5cc06dd"
+        },
+        {
+          "dataset": "44b6_24264f12",
+          "sha256": "e372f8e7a46b8f3c69c916e2dc270ab111da95dfda020a62ca745ef360e91384"
+        },
+        {
+          "dataset": "44b6_341df25f",
+          "sha256": "6d8a4e3091d224293bd7517df0b30d8392dd0f4ade3ab632a27259e90ebb2aad"
+        },
+        {
+          "dataset": "44b6_5f15d135",
+          "sha256": "1f4148aa29e4606c59b0e9493c06a702eface738208746639c3331878afbfb57"
+        },
+        {
+          "dataset": "44b6_81c256f0",
+          "sha256": "45de3194a1f418be41680935cb85dbeda6e02d3c0d8d63e6a195aee895aa2763"
+        },
+        {
+          "dataset": "44b6_8f5ab931",
+          "sha256": "e172b49f82be5a7d7eee66d9abba9cbe5cfe77f15e72cbbd3fb94344163127dd"
+        },
+        {
+          "dataset": "44b6_949adeb1",
+          "sha256": "a1f20fcfac52c303554362eaa1dc8acf2d86add36ec0d4f6ca922c628bb49c10"
+        },
+        {
+          "dataset": "44b6_996155de",
+          "sha256": "f6f867e3cbcec7a716cf367882a0194c5ff50560c83ac36160c76e6529145485"
+        },
+        {
+          "dataset": "44b6_b2c44266",
+          "sha256": "32003d1d88353e8cb8d76c974fa7e32626dd7fc713ed40dbc0eacd3ee15084b4"
+        },
+        {
+          "dataset": "44b6_cf8fed6b",
+          "sha256": "43a68a090b0dbd67c07450942cdb02179a862e48bc8304ba68cc6e2edf1a3a24"
+        },
+        {
+          "dataset": "44b6_d754aa59",
+          "sha256": "dabcc30eded8cc70daacb62d2929fd2548c45183eb802da409c3409d89f82e0b"
+        },
+        {
+          "dataset": "44b6_db3c847b",
+          "sha256": "66d1f2f53fc5c84693503eb074e4097520f7f402eba9a864c1c48b4d36e7c21f"
+        },
+        {
+          "dataset": "44b6_ddf577ad",
+          "sha256": "2e73b02a45e8a59f1f0aa54ea34eae2c4abf235a5822269d20635e41b408bbab"
+        },
+        {
+          "dataset": "44b6_e31261b4",
+          "sha256": "b60b1811971480c70e263e1172fc54bcad2027bfec61776c01ab46c3d511abdc"
+        },
+        {
+          "dataset": "44b6_f28707c6",
+          "sha256": "2d77d8754063f0f43dbad8375fea1cfdd29643347bd895d6048834206025654a"
+        }
+      ],
+      "calibration_sha256": "1e4b40212ec439064b10840ffc2a1fff0611e62c4838d226c07edf4b39e7183f",
+      "checkpoint_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+      "expanded_supported_positive_fraction": 0.0043210278729753325,
+      "positive_event_groups_in_training_pool": 15,
+      "positive_rows": 266,
+      "raw_supported_positive_fraction": 0.006080694936564179,
+      "source": "44b6",
+      "supported_rows": 43745,
+      "weighted_positive_rows": 1658.0,
+      "weighted_supported_rows": 383705.0
+    },
+    {
+      "anchor_expansion_weights": [
+        1.0,
+        9.0
+      ],
+      "cache_records": [
+        {
+          "dataset": "6bba_12665c0e",
+          "sha256": "740b0bcc3c5cf517691c0b0b622db92c49e7c3bfc487afc6ae287279c145d11d"
+        },
+        {
+          "dataset": "6bba_2540cd90",
+          "sha256": "0d5a10b992fbe3b3fb20c886d3ba3834896db3b0e0dc3f752b3371d779fe19fc"
+        },
+        {
+          "dataset": "6bba_283bf9f1",
+          "sha256": "215b0cf1d7331ac12f07d2cce4f07645448e21beae60bae4d40bfc5040555aa9"
+        },
+        {
+          "dataset": "6bba_337b1b3a",
+          "sha256": "37c38c1fd006b7f6758fead263c7aa4771cbdd5a446fbb16ff53b77a4205c4c8"
+        },
+        {
+          "dataset": "6bba_474be664",
+          "sha256": "08a67a70b06f16af9adc59a5ff5ebeaa19d76727a4377a32a6331f2faec812b2"
+        },
+        {
+          "dataset": "6bba_4ffd3da3",
+          "sha256": "93b288323b21b36a8fe721084b0af3736d3ef94da81b399b54fc4c689795eb1e"
+        },
+        {
+          "dataset": "6bba_74686d6a",
+          "sha256": "8f4c022094be2810908774746fd14eb568b316747b0cd79f4c09f16dd623ce24"
+        },
+        {
+          "dataset": "6bba_767a1e17",
+          "sha256": "4960ae95ef21ab1c772663c0893026987e40fb400801987d00c2ddc5f3b91b49"
+        },
+        {
+          "dataset": "6bba_80d12824",
+          "sha256": "feef0fbff082e621af33d195dabc5e5a84eb52027a3a592832432ef613fe0a93"
+        },
+        {
+          "dataset": "6bba_825bd1c6",
+          "sha256": "733e56ce1c53e59605397f7b0b1ea5a6b179cfada02b4f1b2572de1e2326e33c"
+        },
+        {
+          "dataset": "6bba_971fa5e0",
+          "sha256": "ff28903fe0ffab29e765506e8060c5b68917f7f971803fe93f945da9005183c8"
+        },
+        {
+          "dataset": "6bba_ae82a791",
+          "sha256": "44341717a663d6be0c286aae27e5c1fea10b77c160a7525e1826132657a511ad"
+        },
+        {
+          "dataset": "6bba_b1ae37b9",
+          "sha256": "0f557f314cc5987f91f7da2bf10b9fcad77270dacb634a1e6ead6bdf3c292a93"
+        },
+        {
+          "dataset": "6bba_b204cac7",
+          "sha256": "f90b182116550e0498575f456bc9ca4c01545c8478e9b845db0ab71c65fd7320"
+        },
+        {
+          "dataset": "6bba_bb9f20c3",
+          "sha256": "6ffa528b09a02088d546be18375d972f64339298994c55e3ce2917770d726c84"
+        },
+        {
+          "dataset": "6bba_c328f2fd",
+          "sha256": "0ef3048b5411b1f9c849d1e92168a49e196063f6fe88175502a2da5543655429"
+        },
+        {
+          "dataset": "6bba_c73a1d11",
+          "sha256": "5c00c6d0d71f1b80b00af5562be516e3bc2af4372ee9e7927fd8bbea28ab3954"
+        },
+        {
+          "dataset": "6bba_cf35214c",
+          "sha256": "252472f77a6a408a73a1e8247a4d9952480e1018d30f3562ac36d42b467d3c16"
+        },
+        {
+          "dataset": "6bba_d6ecebbb",
+          "sha256": "029e58721b8933d9f24f7486133eabcad91c7fd0aeab1858841bc543d2c9dd74"
+        },
+        {
+          "dataset": "6bba_e5e44988",
+          "sha256": "3a3cc1e7d9adcfb5eebf3ca72138d3ad5155f91a72fe8da068109b259e788f62"
+        },
+        {
+          "dataset": "6bba_fbc898dc",
+          "sha256": "43daabddc77c3eb635819e6001ad0128680da8f507d44c985317ef5b40ea2caf"
+        },
+        {
+          "dataset": "6bba_fe670320",
+          "sha256": "9690cf1e5d095f5825772facf614a487ee9b8b1d6772295c8e08b256562f69c3"
+        }
+      ],
+      "calibration_sha256": "1630b923445f1644d9d8acdd42b45177d1c148a64db75d3ad3b47781e09b1360",
+      "checkpoint_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+      "expanded_supported_positive_fraction": 0.00697675038234244,
+      "positive_event_groups_in_training_pool": 74,
+      "positive_rows": 1093,
+      "raw_supported_positive_fraction": 0.012169865942190354,
+      "source": "6bba",
+      "supported_rows": 89812,
+      "weighted_positive_rows": 5237.0,
+      "weighted_supported_rows": 750636.0
+    }
+  ],
+  "field_interpretation": "The existing sampling_probability=1/9 field denotes a deterministic temporal sampling fraction; inverse_anchor_inclusion=9 is a fixed expansion weight, not a proven randomized row propensity.",
+  "group_preservation": "Event-compatible anchors and all competing alternatives remain grouped; this audit does not alter the prepared bank.",
+  "inspected_source_sha256": {
+    "calibration": "e17b8acb0d85738f4ce6e128a30d1bd579fdb40dea057f3491e1df74532e5d32",
+    "dataset": "dcc04c013be4c1ebd7a1ecfbc1ef3d08fee50097097a8ca1b233e6602030ef87",
+    "prepare": "fb68833015670b9cd9a7263604dbffc04d15016ce48612954a5d0e10344ac4c8"
+  },
+  "limitations": [
+    "Deterministic temporal phase can correlate with lineage indexing or changing candidate difficulty.",
+    "Unknown labels remain censored; the annotated supported population need not represent unannotated cells.",
+    "Inner source independence is not certified; calibration remains exploratory."
+  ],
+  "models_refitted": false,
+  "new_target_metrics_read": false,
+  "ordinary_anchor_rule": "frame % 9 == source GT component index % 9; all supported event-compatible anchors retained",
+  "recipes_changed": false,
+  "status": "measured"
+}
