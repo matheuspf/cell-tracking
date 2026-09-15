@@ -1,0 +1,23 @@
+{
+  "annotation_labels_read": false,
+  "cached_embeddings_used": false,
+  "checkpoint_for_timing_only_not_candidate_selection": true,
+  "dataset": "44b6_5f15d135",
+  "frames": 100,
+  "full_clip": true,
+  "implementation_sha256": "9095e66b55502823817d64fa0327d258ca477191000bdc2eb378d65f4a6380ae",
+  "matched_architecture": [
+    "D20_temporal",
+    "D20_no_pretrain",
+    "A10",
+    "O10_swap"
+  ],
+  "new_target_metrics_read": false,
+  "node_count": 21935,
+  "nodes_per_second": 223.02442369118117,
+  "not_a_full_pipeline_Kaggle_runtime": true,
+  "seconds": 98.35245681599918,
+  "source": "44b6",
+  "source_pilot_checkpoint_sha256": "a43a24c26c665c594caa3b13f8119c1cf8bcab8051097043669e24846ed98724",
+  "status": "measured"
+}

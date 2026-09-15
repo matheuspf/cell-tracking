@@ -26,6 +26,10 @@ def run():
                 arm = 'O10_restore' if experiment.startswith('O10_restore') else model['arm']
                 root = WORK/'final_point_inference'/experiment/row['dataset']
                 destination = root/f'{row["dataset"]}.npz'
+                if arm=='O10_restore':
+                    from .cache_reuse import observation as reuse
+                    source_cache = WORK/'final_point_inference'/original/row['dataset']/'current_image_cache'
+                    reuse(source_cache,root/'current_image_cache',model['weights_sha256'],row['metadata_sha256'])
                 path = root/'job.json'
                 job = prediction_job(row, source, package, destination, arm=arm)
                 job['wait_for_lease'] = True

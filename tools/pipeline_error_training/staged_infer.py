@@ -48,6 +48,23 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
     dtype = np.dtype([('event', '<i8', (5,)), ('value', '<f4', (len(names),))])
     z, valid = {}, {}
     begin = time.monotonic()
+    # Geometry enumeration is CPU work independent of every neural model. Keep
+    # its exact 2048-row order and normalization, and acquire the GPU afterwards.
+    feature_dtype = np.dtype([('event', '<i8', (5,)), ('features', '<f4', (40,))])
+    feature_path = root/'event_features.partial'
+    feature_count = 0
+    with feature_path.open('wb') as stream:
+        for rows in event_batches(bank):
+            record = np.empty(len(rows), dtype=feature_dtype)
+            record['event'] = np.asarray([e for e, _ in rows], np.int64)
+            record['features'] = np.clip(np.asarray([f for _, f in rows])/EVENT_SCALE, -10, 10).astype(np.float32)
+            stream.write(record.tobytes())
+            feature_count += len(rows)
+            if monitor:
+                monitor.check()
+    feature_sha256 = sha(feature_path)
+    cpu_geometry_seconds = time.monotonic()-begin
+    feature_records = np.memmap(feature_path, mode='r', dtype=feature_dtype, shape=(feature_count,)) if feature_count else []
     with Lease(required_gib=8., wait=wait) if device == 'cuda' else nullcontext():
         leased = time.monotonic()
         for name, model in models.items():
@@ -62,10 +79,11 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
         zz = {name: torch.as_tensor(z[name], device=device) for name in names}
         count = 0
         with (root/'events.partial').open('wb') as stream, torch.inference_mode():
-            for rows in event_batches(bank):
-                events = np.asarray([e for e, _ in rows], np.int64)
+            for start in range(0, feature_count, 2048):
+                rows = feature_records[start:start+2048]
+                events = rows['event'].copy()
                 indices = torch.as_tensor(events[:, :3], device=device)
-                features = torch.as_tensor(np.clip(np.asarray([f for _, f in rows])/EVENT_SCALE, -10, 10).astype(np.float32), device=device)
+                features = torch.as_tensor(rows['features'].copy(), device=device)
                 record = np.empty(len(rows), dtype=dtype)
                 record['event'] = events
                 for k, name in enumerate(names):
@@ -83,11 +101,17 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
         torch.cuda.empty_cache()
         gpu_seconds = time.monotonic()-leased if device == 'cuda' else 0.
     (root/'events.partial').replace(root/'events.bin')
+    del feature_records
+    # This deterministic temporary geometry is reproducible from the immutable
+    # bank. Keep its digest; persistent neural quantities retain all event IDs.
+    feature_path.unlink()
     receipt = dict(status='measured', inputs=stamp, names=names, records=count,
         dtype='event:5*i8; value:M*f4', files={k: sha(root/k) for k in ['events.bin', 'scalars.npz']},
         calibration={n: specs[n]['calibration'] for n in names}, arms={n: specs[n]['recipe']['arm'] for n in names},
         sources={n: specs[n]['recipe']['source'] for n in names}, elapsed_seconds=time.monotonic()-begin,
-        measured_gpu_lease_seconds=gpu_seconds, complete_bank=True, no_annotation_reads=True)
+        measured_gpu_lease_seconds=gpu_seconds, cpu_geometry_seconds=cpu_geometry_seconds,
+        geometry_materialization_sha256=feature_sha256,
+        CPU_candidate_geometry_outside_GPU_lease=True, complete_bank=True, no_annotation_reads=True)
     write_json(final, receipt, immutable=True)
     return bank, receipt
 

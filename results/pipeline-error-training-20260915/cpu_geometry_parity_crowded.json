@@ -1,0 +1,25 @@
+{
+  "case": "crowded",
+  "cold_image_runtime": false,
+  "dataset": "6bba_767a1e17",
+  "event_count": 1325079,
+  "exact_neural_event_and_scalar_values": true,
+  "geometry_seconds": 50.9684730279987,
+  "implementation_sha256": "9f6192f29eff168ba10c909114a6faa8710c6e5cbc7ba6e7d230cdf591fd792e",
+  "measured_gpu_lease_seconds": 0.0,
+  "model_count": 1,
+  "models": [
+    {
+      "arm": "D10_frozen",
+      "exact_edges": true,
+      "exact_nodes": true,
+      "prediction_sha256": "116f98d82f9b9a7fd9fe91c6cc1bc2f1ee8fab7d7ce56f5d4304984dccbcec9a",
+      "reference_sha256": "116f98d82f9b9a7fd9fe91c6cc1bc2f1ee8fab7d7ce56f5d4304984dccbcec9a"
+    }
+  ],
+  "new_target_metrics_read": false,
+  "seconds": 293.86826400099744,
+  "source": "6bba",
+  "status": "measured",
+  "verified_source_embeddings_reused": true
+}

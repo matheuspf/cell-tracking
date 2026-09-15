@@ -64,12 +64,14 @@ def run(run_tests=False):
     native=optional(RESULTS/'native_refresh_validation.json') or {}
     required=['real_event_fixture.json','inference_optimization.json','staged_inference_parity.json',
               'staged_crowded_parity.json','multi_model_parity.json','replacement_bound_parity.json',
-              'resume_validation.json','C4_trace_validation.json']
+              'resume_validation.json','observation_unknown_validation.json','C4_trace_validation.json',
+              'cpu_geometry_parity_small.json','cpu_geometry_parity_crowded.json']
     contracts={name:(optional(RESULTS/name) or {}).get('status','not run') for name in required}
     hard=bool(frozen and tested and tested['status']=='measured' and actual_baseline_hashes and baseline['status']=='measured'
         and zero['status']=='measured' and fresh.get('status')=='measured' and all(v=='measured' for v in contracts.values()))
     if any(a.startswith('O') and r['status']=='measured' for a,r in arms.items()):
-        hard=hard and native.get('status')=='measured'
+        hard=hard and native.get('status')=='measured' and \
+            (optional(RESULTS/'observation_cache_parity.json') or {}).get('status')=='measured'
     result=dict(status='measured' if hard else 'failed',hard_correctness_pass=hard,
         reason=None if hard else 'One or more required executable correctness or fresh-image contracts are incomplete or failed',
         tests=tested,baseline_hashes_preserved=actual_baseline_hashes,zero_head=zero,

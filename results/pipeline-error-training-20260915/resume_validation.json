@@ -1,0 +1,16 @@
+{
+  "atol": 1e-07,
+  "checkpoint_sha256": "d63faa97e3de896612f870da5eef18b01291599538d0515f79f8d4d4e41f4895",
+  "max_abs_tensor_difference": 7.450580596923828e-09,
+  "model_optimizer_rng_and_group_visits_match": true,
+  "new_target_metrics_read": false,
+  "real_source_groups_per_update": 32,
+  "reference_updates": 2,
+  "restarted_from_update": 1,
+  "rtol": 1e-06,
+  "seconds": 63.07070550199933,
+  "separate_worker_process": true,
+  "source": "44b6",
+  "status": "measured",
+  "validation_weights_eligible_for_selection": false
+}

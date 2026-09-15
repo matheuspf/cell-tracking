@@ -79,6 +79,10 @@ def run(source, arm, seed=20260915):
     for row in rows:
         name = row['dataset']
         destination = root / 'predictions' / name / f'{name}.npz'
+        if arm=='O10_restore':
+            from .cache_reuse import observation as reuse
+            source_cache = WORK/'source_screen/O10_swap'/source/str(seed)/'predictions'/name/'current_image_cache'
+            reuse(source_cache,destination.parent/'current_image_cache',sha(package/'model.pt'),row['metadata_sha256'])
         path = root / 'jobs' / f'{name}.json'
         write_json(path, job(row, source, package, destination, arm=arm), immutable=True)
         log_path = root / f'{name}.log'
