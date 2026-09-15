@@ -62,6 +62,11 @@ memory, disk and cumulative lease time are monitored. The budget reserves 4/24/1
 GPU lease hours for pilots, first seed, replication and final work, respectively.
 Other programs' device memory contributes to admission; their GPU time is not
 charged. A failed resource admission is a blocker, not permission to disrupt them.
+After source jobs finish and before target freezing, the unused first-seed
+reservation becomes available for final inference. These two phases share at
+most 32 hours; preflight retains 4 and replication retains all 12. The overall
+48-hour cap and fixed training recipes remain unchanged. The immutable
+`gpu_reservation_settlement.json` records measured usage and this allocation.
 
 `executed_training_schedule.json` records the exact learning-rate schedule used
 by the shortened, matched fits. Inference reuses frame quantiles and quantized

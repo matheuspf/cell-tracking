@@ -52,6 +52,12 @@ def verify_primary_availability():
 
 def verify_existing_freeze():
     frozen = read_json(RESULTS/'target_freeze.json')
+    settlement = frozen.get('gpu_reservation_settlement_sha256')
+    if settlement is not None:
+        from .budget import ROOT as budget_root,transfer_settled
+        if not transfer_settled() or sha(RESULTS/'gpu_reservation_settlement.json')!=settlement \
+                or sha(budget_root/'reservation_settlement.json')!=settlement:
+            raise ValueError('Frozen GPU reservation settlement changed before queue resumption')
     for package in frozen['packages']:
         for kind in ['manifest','weights']:
             if sha(package[kind+'_path'])!=package[kind+'_sha256']:

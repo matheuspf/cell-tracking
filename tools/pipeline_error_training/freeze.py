@@ -9,6 +9,8 @@ PRIMARY = ['D10_frozen', 'D10_adapted', 'D20_compact', 'D20_temporal', 'D20_no_p
 def run():
     nomination = read_json(RESULTS/'nomination.json')
     replication = read_json(RESULTS/'replication.json')
+    from .budget import settle_reservations
+    settle_reservations()
     fits = [(arm, 20260915, arm) for arm in PRIMARY]
     if replication['conditional_random_control']:
         fits.append(('D10_random', 20260915, 'D10_random'))
@@ -53,6 +55,7 @@ def run():
         input_manifest_sha256=sha(RESULTS/'input_manifest.json'),
         execution_lock_sha256=sha(RESULTS/'execution_repair_lock.json'),
         diagnostic_lock_sha256=sha(RESULTS/'diagnostic_lock.json'),
+        gpu_reservation_settlement_sha256=sha(RESULTS/'gpu_reservation_settlement.json'),
         files={p.name: sha(p) for p in sorted(Path(__file__).parent.glob('*.py'))},
         expected_target_clips=[r['dataset'] for r in inputs()],
         direct_new_head_target_fitting=False, inherited_upstream_exposure=True,
