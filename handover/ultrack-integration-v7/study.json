@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "planned_not_executed",
+  "created": "2026-09-12",
+  "branch": "handover/ultrack-integration-v7",
+  "base_commit": "fb5521629eb41c8c485b291a5bcf344944c113ae",
+  "upstream": {
+    "repository": "royerlab/ultrack",
+    "commit": "5c94d845eb0a7b78c8dc24492ef00f218a467995",
+    "python": "3.12",
+    "solver": "CBC",
+    "native_cost_link_function": "identity"
+  },
+  "inherited_scores": {
+    "C0": {
+      "pooled": 0.934802374260586,
+      "44b6": 0.931664468721842,
+      "6bba": 0.935221784097327
+    },
+    "P0": {
+      "pooled": 0.934864986413134,
+      "44b6": 0.931727256413358,
+      "6bba": 0.935284191136704
+    }
+  },
+  "evaluation": {
+    "clips": 199,
+    "embryo_clip_counts": {
+      "44b6": 71,
+      "6bba": 128
+    },
+    "target_score": 0.95,
+    "promotion_reference": "P0",
+    "require_both_embryos_nonregression": true,
+    "fresh_official_matching": true,
+    "aggregation": "official_pooled_sufficient_statistics",
+    "validation_claim": "exploratory_reused_embryos"
+  },
+  "arms": [
+    {
+      "id": "C0",
+      "role": "preserved_incumbent",
+      "required": true
+    },
+    {
+      "id": "P0",
+      "role": "stronger_retained_point_control",
+      "required": true
+    },
+    {
+      "id": "U0",
+      "role": "image_derived_ultrack",
+      "required": true,
+      "learned_masks": false
+    },
+    {
+      "id": "U1",
+      "role": "same_hierarchy_native_edge_costs",
+      "required": true,
+      "same_candidate_bank_as": "U0"
+    },
+    {
+      "id": "H1",
+      "role": "P0_preserving_association_hybrid",
+      "required": true,
+      "freeze_forks": true,
+      "max_changed_edge_fraction": 0.02
+    },
+    {
+      "id": "U2",
+      "role": "authorized_learned_masks_ultrack_native",
+      "required": false,
+      "blocked_score": null
+    }
+  ],
+  "ceilings": {
+    "complete_selectable_arms": 6,
+    "pilot_recipes_per_source": 8,
+    "pilot_clips_per_source": 4,
+    "gpu_device_hours": 24,
+    "cpu_heavy_wall_hours": 48,
+    "gpu_workers": 1,
+    "cpu_threads": 8,
+    "simultaneous_clip_databases": 1,
+    "gpu_gib": 20,
+    "process_tree_rss_gib": 24,
+    "free_disk_reserve_gib": 8,
+    "ram_scratch_reserve_gib": 8,
+    "solver_initial_window_seconds": 600
+  },
+  "stages": [
+    "V700_runtime_and_resource_admission",
+    "V710_actual_ultrack_smoke",
+    "V720_source_only_pilot",
+    "V730_freeze_hierarchy_and_native_costs",
+    "V740_complete_comparisons",
+    "V750_cold_inference_and_delivery"
+  ],
+  "defaults": {
+    "data": "/kaggle/input/competitions/biohub-cell-tracking-during-development",
+    "output": "/kaggle/working/cell-tracking/ultrack-integration-v7",
+    "historical_output": "/kaggle/working/cell-tracking/segmentation-tracking-v6"
+  },
+  "inference_forbidden_inputs": [
+    "annotations",
+    "ground_truth_matching",
+    "old_prediction_caches",
+    "network"
+  ],
+  "authoring": {
+    "real_ultrack_executed": false,
+    "microscopy_executed": false,
+    "new_scores": null
+  }
+}
