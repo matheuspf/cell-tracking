@@ -55,11 +55,22 @@ def run():
         expected, actual = load_graph(original/f'{name}.npz'), load_graph(destination)
         for key in ['nodes','edges']:
             np.testing.assert_array_equal(expected[key],actual[key])
+        native_reused = (original/'fresh_native/query_reuse.json').exists()
+        if native_reused:
+            for basename in ['query.npz','current_features.npz']:
+                with np.load(original/'fresh_native'/basename,allow_pickle=False) as a, \
+                        np.load(root/'fresh_native'/basename,allow_pickle=False) as b:
+                    if set(a.files)!=set(b.files):
+                        raise ValueError('Cold and reused native query feature schemas differ')
+                    for field in a.files:
+                        np.testing.assert_array_equal(a[field],b[field])
     result = dict(status='measured',source=source,dataset=name,arm=arm,
         source_model_sha256=sha(package/'model.pt'),seconds=time.monotonic()-began,
         graph_hash=graph_hash(actual['nodes'],actual['edges']),complete_graph_exact=True,
         model_and_image_specific_embedding_parity=records,cold_reference_replay=True,
         guard=guard,new_target_metrics_read=False,fresh_upstream_pipeline_claim=False)
+    result.update(native_query_reused_in_reference=native_reused,
+        cold_full_native_arrays_exact_if_reused=native_reused)
     write_json(RESULTS/'observation_cache_parity.json',result,immutable=True)
     return result
 

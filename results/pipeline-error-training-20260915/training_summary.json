@@ -411,14 +411,14 @@
       "calibrated": false,
       "calibration_sha256": null,
       "claim": "Source-only head; inherited upstream exposure",
-      "completed_updates": 2,
+      "completed_updates": 104,
       "execution_phase": "running",
-      "final_recorded_loss": 1.713572186708916,
+      "final_recorded_loss": 1.3164557594172948,
       "first_recorded_loss": 1.952472172682974,
       "frozen_package_sha256": null,
       "full_fit_wall_seconds": null,
       "locked_updates": 178,
-      "measured_update_lease_seconds": 59.939551085997664,
+      "measured_update_lease_seconds": 3042.984542330014,
       "model_sha256": null,
       "reason": "Incomplete directional training; see execution phase and continuation state",
       "recipe_sha256": "539f4875c524a11c4c64eb71c912e0ea3c378297c8c9fdaa2fbbfd32a3608c60",
@@ -427,7 +427,7 @@
       "source_groups_visited": null,
       "status": "not run",
       "target": "6bba",
-      "unique_optimizer_steps": 2
+      "unique_optimizer_steps": 104
     },
     {
       "arm": "D20_no_pretrain",

@@ -51,15 +51,17 @@ implementation and are not a controlled comparison of architecture speed.
 The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
 also shortens its warmup denominator to 178. See [the exact schedule](executed_training_schedule.json).
 These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
-Cumulative charged GPU lease time is 6.551 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 7.380 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
 
-Tests: **measured** — 50 passed in 7.67s.
+Tests: **measured** — 52 passed in 6.56s.
 
 The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran from both renamed 100-frame images (specimen_alder: 168.987 s, specimen_birch: 283.788 s). Startup guards denied annotations, historical prediction caches and network access; both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. A recommended candidate also requires its own cold-image proof.
 
-[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), [actual changed-coordinate feature proof](native_refresh_validation.json), [resumption proof](resume_validation.json) and [resource measurements](resource.json).
+Identical observation-policy coordinate queries can reuse the verified full-ensemble neural output. A CUDA-disabled replay rebuilt all graph feature arrays exactly at the real changed-coordinate fixture; changed node IDs or coordinates reject reuse. Each ordinary query loader still verifies checkpoints, code and image chunks. This operational cache reuse is separate from the cold-image proof.
+
+[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), [actual changed-coordinate feature proof](native_refresh_validation.json), [identical native-query reuse proof](native_query_reuse_parity.json), [resumption proof](resume_validation.json) and [resource measurements](resource.json).
 
 See [CONTINUATION.md](CONTINUATION.md) for exact commands and remaining work.

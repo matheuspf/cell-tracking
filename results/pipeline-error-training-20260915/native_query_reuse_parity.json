@@ -1,0 +1,41 @@
+{
+  "CUDA_hidden": true,
+  "CUDA_initialized": false,
+  "actual_changed_observation": true,
+  "all_rebuilt_feature_arrays_exact": true,
+  "annotation_reads": 0,
+  "changed_ids_and_coordinates_rejected": true,
+  "dataset": "44b6_d754aa59",
+  "fields": [
+    "edge_features",
+    "native_confidence",
+    "native_index",
+    "node_features",
+    "node_relocation_um",
+    "pairs",
+    "tracklet"
+  ],
+  "frames": 100,
+  "guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+    }
+  },
+  "implementation_sha256": {
+    "cache_reuse": "88d50ea10a7d7af87beea26dba3865f5d532e73cf3b035e5b91893e4a1b1616d",
+    "native_refresh": "1b31ed2ac1d1ff20569d673de1b1343b475599af06bc931bae3e3e7b66f8cdf8",
+    "observation_infer": "dce15d4433ec2c4f78de1233481fda38262cafd801786b0bdb2393af4060758a"
+  },
+  "new_target_metrics_read": false,
+  "original_query_loader_verified_weights_code_and_image_chunks": true,
+  "reused_query_sha256": "b5ba474a221d3da54fc38c38dd165713b71e0a7c63f2cc8a5b811abeecaf5035",
+  "scope": "Previously executed full-ensemble query reused only for identical observations; graph-dependent features rebuilt",
+  "seconds": 31.555589684998267,
+  "source_query_sha256": "b5ba474a221d3da54fc38c38dd165713b71e0a7c63f2cc8a5b811abeecaf5035",
+  "status": "measured"
+}

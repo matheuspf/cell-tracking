@@ -330,8 +330,15 @@ def proof_text():
             'A recommended candidate also requires its own cold-image proof.')
     else:
         lines.append(f"Fresh-image pipeline proof: {fresh.get('status','not run')}.")
+    reused = optional(RESULTS/'native_query_reuse_parity.json') or {}
+    if reused.get('status')=='measured':
+        lines += ['', 'Identical observation-policy coordinate queries can reuse the verified full-ensemble neural output. '
+            'A CUDA-disabled replay rebuilt all graph feature arrays exactly at the real changed-coordinate fixture; '
+            'changed node IDs or coordinates reject reuse. Each ordinary query loader still verifies checkpoints, code and image chunks. '
+            'This operational cache reuse is separate from the cold-image proof.']
     lines += ['', '[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), '
               '[actual changed-coordinate feature proof](native_refresh_validation.json), '
+              '[identical native-query reuse proof](native_query_reuse_parity.json), '
               '[resumption proof](resume_validation.json) and [resource measurements](resource.json).']
     return '\n'.join(lines)
 

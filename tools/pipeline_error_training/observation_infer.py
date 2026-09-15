@@ -189,6 +189,10 @@ def predict(row, graph, native, package, destinations, cache_root, p0_model, *, 
         selected, ledger = apply_observations(bank, actions, streaming, restore)
         fresh = None
         if ledger['accepted_observation_actions']:
+            from .cache_reuse import native_query
+            reused = native_query(Path(cache_root)/'native_query_reference',Path(destination).parent/'fresh_native',
+                                  selected['nodes'],row['metadata_sha256'])
+            ledger['identical_native_query_reused'] = reused is not None
             fresh = refresh(row, selected, graph, native, Path(destination).parent/'fresh_native')
             changed_ids = {int(n[0]) for e in ledger['edits'] for n in e['new_nodes']}
             remaining = ledger['changed_edge_cap']-ledger['observation_changed_edges']

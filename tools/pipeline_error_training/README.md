@@ -75,6 +75,11 @@ encoder. This path stays disabled until `continuation_cache_parity` compares its
 embeddings and both complete division/continuation graphs against independent
 source predictions. The source proof runs before nomination and target freezing;
 final jobs verify the proved implementation hashes before enabling reuse.
+The observation policies may reuse the full-ensemble neural coordinate query
+only when node IDs, order and coordinates match exactly. They rebuild all graph
+features. `native_query_reuse_parity` verifies that path against the previously
+executed real changed-point fixture with CUDA hidden; ordinary cache loading
+still verifies both upstream weights, native code and all image chunks.
 
 ## Validation and results
 

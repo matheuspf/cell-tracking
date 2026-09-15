@@ -15,11 +15,11 @@
         ],
         "category": "first_seed_training",
         "pid": 1382503,
-        "started_epoch": 1789509900.2311373
+        "started_epoch": 1789512884.1494963
       }
     ],
     "charge_other_programs": false,
-    "completed_intervals": 1046,
+    "completed_intervals": 1148,
     "limits_hours": {
       "final_inference_and_package": 8.0,
       "first_seed_training": 24.0,
@@ -28,14 +28,14 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 5.970044613002499,
+      "first_seed_training": 6.799211965519946,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
-    "total_hours": 6.5513267498140095
+    "total_hours": 7.380494102331457
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 90,
+  "measurements": 91,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.032306671142578,
   "peak_total_gpu_gib": 6.892578125,
@@ -260,6 +260,16 @@
       "resource_error": null,
       "sha256": "17246a124239234d1622e956fa1fe20320fef8ed7faf0a1f84b3b43449a4b3dd",
       "wall_seconds": 58.1772229369999
+    },
+    {
+      "path": "native_query_reuse_parity/resources.json",
+      "peak_all_study_process_rss_gib": 9.835338592529297,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 2.90625,
+      "peak_tree_rss_gib": 0.8544235229492188,
+      "resource_error": null,
+      "sha256": "719e701d92a510f4361852d247efa3f140d813fc806e848f12e7465f7908cbfa",
+      "wall_seconds": 31.55265767899982
     },
     {
       "path": "multi_model_validation/resources.json",
