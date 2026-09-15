@@ -56,7 +56,7 @@ packages record 15 such groups for 44b6 and 74 for 6bba. Their alternatives supp
 metric-risk negatives; groups containing only negative event hypotheses are not a separate event-minibatch pool.
 Identity minibatches sample supported trajectory groups, and source calibration uses the unbalanced candidate
 distribution. This sampling distinction limits conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 7.889 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 7.904 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
