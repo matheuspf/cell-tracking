@@ -12,6 +12,7 @@ def main():
     job = json.loads(args.job.read_text())
     root = Path(job['root'])
     allowed = [job['graph_path'], job['evidence_path'], *job['packages'].values(),
+               *job.get('embedding_packages',{}).values(),
                *[d['path'] for d in job['dependencies']]]
     from .guard import install
     guard = install(fresh_root=root, allowed_models=allowed, images=[job['row']['image_path']])
@@ -35,15 +36,17 @@ def main():
     for dep in job['dependencies']:
         if sha(dep['path']) != dep['sha256']:
             raise ValueError('Architecture dependency hash mismatch')
-    for name, path in job['packages'].items():
-        spec = read_json(Path(path)/'frozen_package.json')
-        if spec['recipe']['source'] != job['source'] or sha(Path(path)/'frozen_package.json') != job['package_sha256'][name]:
-            raise PermissionError('Explicit frozen source model mismatch')
+    for group, hashes in [('packages','package_sha256'),('embedding_packages','embedding_package_sha256')]:
+        for name, path in job.get(group,{}).items():
+            spec = read_json(Path(path)/'frozen_package.json')
+            if spec['recipe']['source'] != job['source'] or sha(Path(path)/'frozen_package.json') != job[hashes][name]:
+                raise PermissionError('Explicit frozen source model mismatch')
     from .staged_infer import predict_many
     from .serialization import export_csv
     with Monitor(root/'resources.json') as monitor:
         predict_many(job['row'], load_graph(job['graph_path']), load_graph(job['evidence_path']),
-            job['packages'], job['destinations'], root/'neural', monitor=monitor, wait=True)
+            job['packages'], job['destinations'], root/'neural', monitor=monitor, wait=True,
+            embedding_packages=job.get('embedding_packages'))
         if job.get('replacement_destinations'):
             from .bank import EventBank
             from .fork_reference import prepare as reference_prepare

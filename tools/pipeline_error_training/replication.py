@@ -45,6 +45,8 @@ def run():
             raise RuntimeError('Independent primary lanes must finish before source-only selection')
     if not (RESULTS/'observation_cache_parity.json').exists():
         subprocess.run([sys.executable,'-m','pipeline_error_training.observation_cache_parity'],check=True)
+    if not (RESULTS/'continuation_cache_parity.json').exists():
+        subprocess.run([sys.executable,'-m','pipeline_error_training.continuation_cache_parity'],check=True)
     # Compute the independent source identity diagnostics in separate guarded
     # processes so one source's annotation capability never leaks into the other.
     for source in ['44b6', '6bba']:

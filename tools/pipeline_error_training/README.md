@@ -70,6 +70,11 @@ Whole-source parity checks cover every embedding and validity mask before these
 optimizations are adopted; each encoder retains its own weights and output cache.
 The original independent embedding loader verifies every reused cache and image
 hash. No shared-crop optimization changes training examples or decision rules.
+Continuation can also consume the same P0 crop batches through its distinct
+encoder. This path stays disabled until `continuation_cache_parity` compares its
+embeddings and both complete division/continuation graphs against independent
+source predictions. The source proof runs before nomination and target freezing;
+final jobs verify the proved implementation hashes before enabling reuse.
 
 ## Validation and results
 

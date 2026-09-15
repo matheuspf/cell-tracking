@@ -22,7 +22,7 @@ from .scoring import EVENT_SCALE, load_model
 from .shared_embeddings import embeddings_many
 
 
-def prepare(row, graph, native, packages, root, monitor=None, wait=False, device='cuda'):
+def prepare(row, graph, native, packages, root, monitor=None, wait=False, device='cuda', embedding_packages=None):
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
     bank = EventBank(graph['nodes'], graph['edges'], native, row['physical_scale'])
@@ -33,19 +33,34 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
         if not spec['recipe']['arm'].startswith('D'):
             raise ValueError('Only division models share the complete-event bank')
         models[name], specs[name] = model, spec
+    # Continuation uses the same P0 tracklets and temporal crop contract. Its
+    # separately trained encoder can consume the identical batches; its head
+    # and graph solver remain in the independent continuation process.
+    auxiliary_models, auxiliary_specs = {}, {}
+    for name, path in (embedding_packages or {}).items():
+        if name in models:
+            raise ValueError('Auxiliary embedding names must not shadow division models')
+        model, spec = load_model(path)
+        if spec['recipe']['arm'] != 'A10':
+            raise ValueError('Only continuation shares the full P0 embedding query')
+        auxiliary_models[name], auxiliary_specs[name] = model, spec
+    all_models, all_specs = dict(models, **auxiliary_models), dict(specs, **auxiliary_specs)
     stamp = dict(bank_sha256=bank.hash, model_sha256={n: specs[n]['weights_sha256'] for n in names},
                  package_sha256={n: sha(Path(packages[n])/'frozen_package.json') for n in names},
                  shared_embedding_code_sha256=sha(Path(__file__).with_name('shared_embeddings.py')),
                  implementation_sha256=sha(Path(__file__)), device=device)
+    if auxiliary_models:
+        stamp['auxiliary_embeddings'] = {n:dict(model_sha256=s['weights_sha256'],
+            package_sha256=sha(Path(embedding_packages[n])/'frozen_package.json')) for n,s in auxiliary_specs.items()}
     final = root/'prepared.json'
     if final.exists():
         receipt = read_json(final)
         if receipt['inputs'] != stamp or any(sha(root/k) != v for k, v in receipt['files'].items()):
             raise ValueError('Frozen staged neural quantities changed')
         # Every used image chunk is checked, even when all neural outputs exist.
-        for name in names:
-            embeddings(models[name], row, graph, bank, root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz',
-                       specs[name]['weights_sha256'])
+        for name in all_models:
+            embeddings(all_models[name], row, graph, bank, root/'embeddings'/all_specs[name]['weights_sha256']/f'{row["dataset"]}.npz',
+                       all_specs[name]['weights_sha256'])
         return bank, receipt
     dtype = np.dtype([('event', '<i8', (5,)), ('value', '<f4', (len(names),))])
     z, valid = {}, {}
@@ -69,13 +84,13 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
     feature_records = np.memmap(feature_path, mode='r', dtype=feature_dtype, shape=(feature_count,)) if feature_count else []
     with Lease(required_gib=8., wait=wait) if device == 'cuda' else nullcontext():
         leased = time.monotonic()
-        for name, model in models.items():
+        for name, model in all_models.items():
             model.to(device)
-            if device == 'cpu' and not (root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz').exists():
+            if device == 'cpu' and not (root/'embeddings'/all_specs[name]['weights_sha256']/f'{row["dataset"]}.npz').exists():
                 raise ValueError('CPU parity requires verified existing image-derived embeddings')
-        shared = embeddings_many(models, row, graph, bank,
-            {name:root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz' for name in names},
-            {name:specs[name]['weights_sha256'] for name in names})
+        shared = embeddings_many(all_models, row, graph, bank,
+            {name:root/'embeddings'/all_specs[name]['weights_sha256']/f'{row["dataset"]}.npz' for name in all_models},
+            {name:all_specs[name]['weights_sha256'] for name in all_models})
         for name in names:
             z[name], valid[name] = shared[name]
         if monitor:
@@ -100,7 +115,7 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
                     monitor.check()
         save_arrays(root/'scalars.npz', pairs=np.asarray(scalar.pairs, np.int64), links=scalar.links, costs=scalar.costs,
                     threshold=scalar.threshold)
-        for model in models.values():
+        for model in all_models.values():
             model.cpu()
         del zz, scalar
         torch.cuda.empty_cache()
@@ -195,6 +210,6 @@ def solve(row, graph, bank, root, destinations, monitor=None):
     return results
 
 
-def predict_many(row, graph, native, packages, destinations, root, monitor=None, wait=False):
-    bank, _ = prepare(row, graph, native, packages, root, monitor, wait)
+def predict_many(row, graph, native, packages, destinations, root, monitor=None, wait=False, embedding_packages=None):
+    bank, _ = prepare(row, graph, native, packages, root, monitor, wait, embedding_packages=embedding_packages)
     return solve(row, graph, bank, root, destinations, monitor)

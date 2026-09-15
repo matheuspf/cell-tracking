@@ -13,16 +13,25 @@ from .resources import Monitor, cpu_budget
 def division_job(row, freeze):
     source = '6bba' if row['embryo'] == '44b6' else '44b6'
     selected = [p for p in freeze['packages'] if p['source'] == source and p['arm'].startswith('D')]
+    proof_path = RESULTS/'continuation_cache_parity.json'
+    proof = read_json(proof_path) if proof_path.exists() else {}
+    if proof.get('status')=='measured' and any(sha(Path(__file__).with_name(n+'.py'))!=value
+            for n,value in proof['implementation_sha256'].items()):
+        raise ValueError('Continuation embedding reuse changed after its complete source proof')
+    auxiliary = ([p for p in freeze['packages'] if p['source']==source and p['arm']=='A10']
+                 if proof.get('status')=='measured' else [])
     root = WORK/'final_inference'/row['dataset']
     safe = {k: row[k] for k in ['dataset', 'image_path', 'image_shape', 'physical_scale', 'metadata_sha256']}
     packages = {p['experiment']: str(Path(p['manifest_path']).parent) for p in selected}
     deps = {}
-    for p in selected:
+    for p in [*selected,*auxiliary]:
         spec = read_json(p['manifest_path'])
         if 'architecture_dependency' in spec:
             dep = spec['architecture_dependency']; deps[dep['path']] = dep
     return dict(row=safe, source=source, root=str(root), packages=packages,
         package_sha256={p['experiment']: p['manifest_sha256'] for p in selected}, dependencies=list(deps.values()),
+        embedding_packages={p['experiment']:str(Path(p['manifest_path']).parent) for p in auxiliary},
+        embedding_package_sha256={p['experiment']:p['manifest_sha256'] for p in auxiliary},
         graph_path=row['baselines']['P0']['path'], graph_sha256=row['baselines']['P0']['sha256'],
         evidence_path=row['evidence']['path'], evidence_sha256=row['evidence']['sha256'],
         destinations={n: str(root/n/f'{row["dataset"]}.npz') for n in packages},

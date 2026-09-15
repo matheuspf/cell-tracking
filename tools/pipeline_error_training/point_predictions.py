@@ -26,6 +26,11 @@ def run():
                 arm = 'O10_restore' if experiment.startswith('O10_restore') else model['arm']
                 root = WORK/'final_point_inference'/experiment/row['dataset']
                 destination = root/f'{row["dataset"]}.npz'
+                if arm=='A10':
+                    from .cache_reuse import continuation as reuse_continuation
+                    shared = WORK/'final_inference'/row['dataset']/'neural/embeddings'/model['weights_sha256']/destination.name
+                    reused = root/'current_image_cache'/model['weights_sha256']/destination.name
+                    reuse_continuation(shared,reused,model['weights_sha256'],row['metadata_sha256'])
                 if arm=='O10_restore':
                     from .cache_reuse import observation as reuse
                     source_cache = WORK/'final_point_inference'/original/row['dataset']/'current_image_cache'

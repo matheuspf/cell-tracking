@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from pipeline_error_training.cache_reuse import observation
+from pipeline_error_training.cache_reuse import continuation, observation
 from pipeline_error_training.common import sha
 
 
@@ -39,3 +39,18 @@ def test_observation_reuse_keeps_immutable_files_and_receipts(tmp_path):
     assert receipt['annotations_copied'] is False
     assert receipt['fresh_end_to_end_claim'] is False
     observation(source,destination,'weights','images')
+
+
+def test_continuation_reuse_rejects_changed_image_before_writing(tmp_path):
+    source = source_cache(tmp_path)/'P0.npz'
+    destination = tmp_path/'destination/model/clip.npz'
+    with pytest.raises(ValueError,match='provenance'):
+        continuation(source,destination,'weights','different images')
+    assert not destination.parent.exists()
+    receipt = continuation(source,destination,'weights','images')
+    assert receipt['annotations_copied'] is False
+    assert destination.stat().st_ino==source.stat().st_ino
+    assert sha(destination.with_suffix('.json'))==sha(source.with_suffix('.json'))
+    destination.with_suffix('.json').write_text('{}')
+    with pytest.raises(ValueError,match='receipt changed'):
+        continuation(source,destination,'weights','images')

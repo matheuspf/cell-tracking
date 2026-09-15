@@ -1,9 +1,35 @@
-"""Reuse only verified image embeddings between the two observation policies."""
+"""Reuse immutable model- and image-specific embeddings across graph policies."""
 import os
 from pathlib import Path
 import shutil
 
 from .common import read_json, sha, write_json
+
+
+def continuation(source, target, model_sha256, metadata_sha256):
+    """The ordinary embedding loader subsequently checks graph, queries and frames."""
+    source, target = Path(source), Path(target)
+    if not source.exists():
+        return None
+    receipt = read_json(source.with_suffix('.json'))
+    if sha(source)!=receipt['sha256'] or receipt['inputs']['model_sha256']!=model_sha256 \
+            or receipt['inputs']['image_metadata_sha256']!=metadata_sha256:
+        raise ValueError('Continuation embedding provenance changed')
+    if target.exists() and sha(target)!=receipt['sha256']:
+        raise ValueError('Existing continuation embedding differs from its verified source')
+    if target.with_suffix('.json').exists() and sha(target.with_suffix('.json'))!=sha(source.with_suffix('.json')):
+        raise ValueError('Existing continuation embedding receipt changed')
+    target.parent.mkdir(parents=True,exist_ok=True)
+    if not target.exists():
+        os.link(source,target)
+    if not target.with_suffix('.json').exists():
+        shutil.copyfile(source.with_suffix('.json'),target.with_suffix('.json'))
+    result = dict(status='measured',kind='Distinct frozen continuation encoder on identical full P0 tracklets',
+        source_sha256=receipt['sha256'],receipt_sha256=sha(source.with_suffix('.json')),
+        model_sha256=model_sha256,metadata_sha256=metadata_sha256,annotations_copied=False,
+        graph_queries_and_frames_verified_by_ordinary_loader=True,fresh_end_to_end_claim=False)
+    write_json(target.with_suffix('.reuse.json'),result,immutable=True)
+    return result
 
 
 def observation(source_cache, destination_cache, model_sha256, metadata_sha256):

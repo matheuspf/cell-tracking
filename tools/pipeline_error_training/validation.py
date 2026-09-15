@@ -74,11 +74,15 @@ def run(run_tests=False):
     if any(a.startswith('O') and r['status']=='measured' for a,r in arms.items()):
         hard=hard and native.get('status')=='measured' and \
             (optional(RESULTS/'observation_cache_parity.json') or {}).get('status')=='measured'
+    auxiliary_used = any(read_json(p).get('embedding_packages') for p in (WORK/'final_inference').glob('*/job.json'))
+    if auxiliary_used:
+        hard=hard and (optional(RESULTS/'continuation_cache_parity.json') or {}).get('status')=='measured'
     result=dict(status='measured' if hard else 'failed',hard_correctness_pass=hard,
         reason=None if hard else 'One or more required executable correctness or fresh-image contracts are incomplete or failed',
         tests=tested,baseline_hashes_preserved=actual_baseline_hashes,zero_head=zero,
         contracts=contracts,arms=arms,fresh_image_status=fresh.get('status','not run'),
         actual_changed_coordinate_status=native.get('status','not run'),target_freeze_exists=bool(frozen),
+        shared_continuation_embeddings_used=auxiliary_used,
         new_target_fitting=False,source_only_head_inherited_upstream_exposure=True,
         clean_end_to_end_transfer=dict(status='blocked',reason='Completed clean upstream fits are unavailable'),
         independent_source_groups_certified=False,production_default_changed=False,
