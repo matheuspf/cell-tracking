@@ -9,17 +9,17 @@
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
           "train",
           "--source",
-          "6bba",
+          "44b6",
           "--arm",
-          "D20_temporal"
+          "D20_no_pretrain"
         ],
         "category": "first_seed_training",
-        "pid": 1221271,
-        "started_epoch": 1789508232.5682611
+        "pid": 1382503,
+        "started_epoch": 1789509900.2311373
       }
     ],
     "charge_other_programs": false,
-    "completed_intervals": 977,
+    "completed_intervals": 1046,
     "limits_hours": {
       "final_inference_and_package": 8.0,
       "first_seed_training": 24.0,
@@ -28,16 +28,16 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 5.643714464491035,
+      "first_seed_training": 5.970044613002499,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
-    "total_hours": 6.2249966013025455
+    "total_hours": 6.5513267498140095
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 85,
+  "measurements": 90,
   "peak_all_study_process_rss_gib": 18.222946166992188,
-  "peak_process_tree_rss_gib": 12.322921752929688,
+  "peak_process_tree_rss_gib": 17.032306671142578,
   "peak_total_gpu_gib": 6.892578125,
   "records": [
     {
@@ -319,6 +319,16 @@
       "resource_error": null,
       "sha256": "e9f23971ea5b56a67cf0880a1376802bee6d455004f8265e8fe1eca04c595316",
       "wall_seconds": 135.91745802099467
+    },
+    {
+      "path": "calibration/D20_temporal/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.799835205078125,
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 4.7373046875,
+      "peak_tree_rss_gib": 1.6803359985351562,
+      "resource_error": null,
+      "sha256": "48ac3c3e1d10a1f1206f6dd377b5465c34c520cef20a366089c342789731d71c",
+      "wall_seconds": 208.2729657420059
     },
     {
       "path": "calibration/D10_adapted/44b6/20260915/resources.json",
@@ -612,6 +622,36 @@
       "wall_seconds": 117.24368380800297
     },
     {
+      "path": "source_screen/D20_temporal/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 3.2692642211914062,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 3.603515625,
+      "peak_tree_rss_gib": 1.4374732971191406,
+      "resource_error": null,
+      "sha256": "670e93b74663e8abd0cb0b15b265bf393cb747d3d3ce219c443e560e5aec2848",
+      "wall_seconds": 94.6205037940017
+    },
+    {
+      "path": "source_screen/D20_temporal/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 3.1964149475097656,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.0810546875,
+      "peak_tree_rss_gib": 1.4150466918945312,
+      "resource_error": null,
+      "sha256": "023e28a6313e53a7d16c14407418bd383f3c338172ff4f08318d9052290b4f13",
+      "wall_seconds": 81.64363524800137
+    },
+    {
+      "path": "source_screen/D20_temporal/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 3.5488929748535156,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 3.8662109375,
+      "peak_tree_rss_gib": 1.6170005798339844,
+      "resource_error": null,
+      "sha256": "2dcdefd8440c459c408b8d8005ca7f8a779fc6233d1a53d29642c692edee5560",
+      "wall_seconds": 315.0407331240058
+    },
+    {
       "path": "source_screen/D10_adapted/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
       "peak_all_study_process_rss_gib": 4.198768615722656,
       "peak_os_threads": 10,
@@ -738,6 +778,16 @@
       "resource_error": null,
       "sha256": "0ebb34a5d72b8577ef02f7169eeb3c283ccf194650fb33eb6b9baa9b242712a6",
       "wall_seconds": 2843.4528651149994
+    },
+    {
+      "path": "training/D20_temporal/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 17.317401885986328,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 3.7900390625,
+      "peak_tree_rss_gib": 17.032306671142578,
+      "resource_error": null,
+      "sha256": "e8b00433e70b65a924bf7a33de64e375d47959b2d5526bd17412868a3a8808c1",
+      "wall_seconds": 2440.3339448749975
     },
     {
       "path": "training/D10_adapted/44b6/20260915/resources.json",
