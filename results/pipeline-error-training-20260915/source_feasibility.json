@@ -1,0 +1,159 @@
+{
+  "coordinate_source": "Closed raw bank only; no GT coordinate injection",
+  "count_scenarios_not_used_as_predictions": true,
+  "directions": {
+    "44b6": {
+      "experiments": {
+        "source_witness_continuation": 71,
+        "source_witness_division": 71,
+        "source_witness_observation_swap": 71
+      },
+      "full_clip_graph_scores": true,
+      "source": "44b6",
+      "summaries": {
+        "source_witness_continuation": {
+          "adj_edge_jaccard": 0.922916417872386,
+          "counts": {
+            "division_fn": 19,
+            "division_fp": 22,
+            "division_tp": 7,
+            "edge_fn": 886,
+            "edge_fp": 1035,
+            "edge_tp": 18940,
+            "num_pred_nodes": 1972750
+          },
+          "division_fn": 19,
+          "division_fp": 22,
+          "division_jaccard": 0.14583333333333334,
+          "division_tp": 7,
+          "edge_jaccard": 0.907914289823115,
+          "n": 71,
+          "n_adj": 71,
+          "node_recall": 0.9877569341470968,
+          "score": 0.9374997512057193
+        },
+        "source_witness_division": {
+          "adj_edge_jaccard": 0.9173106231093876,
+          "counts": {
+            "division_fn": 7,
+            "division_fp": 22,
+            "division_tp": 19,
+            "edge_fn": 950,
+            "edge_fp": 1091,
+            "edge_tp": 18876,
+            "num_pred_nodes": 1972750
+          },
+          "division_fn": 7,
+          "division_fp": 22,
+          "division_jaccard": 0.3958333333333333,
+          "division_tp": 19,
+          "edge_jaccard": 0.9024238657551275,
+          "n": 71,
+          "n_adj": 71,
+          "node_recall": 0.9877569341470968,
+          "score": 0.9568939564427209
+        },
+        "source_witness_observation_swap": {
+          "adj_edge_jaccard": 0.9167627767679623,
+          "counts": {
+            "division_fn": 19,
+            "division_fp": 22,
+            "division_tp": 7,
+            "edge_fn": 961,
+            "edge_fp": 1091,
+            "edge_tp": 18865,
+            "num_pred_nodes": 1972750
+          },
+          "division_fn": 19,
+          "division_fp": 22,
+          "division_jaccard": 0.14583333333333334,
+          "division_tp": 7,
+          "edge_jaccard": 0.9018979777214706,
+          "n": 71,
+          "n_adj": 71,
+          "node_recall": 0.9877569341470968,
+          "score": 0.9313461101012955
+        }
+      },
+      "summary_sha256": "9037fd998aee2e2e1c6d46910a8fc410c75d15710450c60a1f162f866473ab9c"
+    },
+    "6bba": {
+      "experiments": {
+        "source_witness_continuation": 128,
+        "source_witness_division": 128,
+        "source_witness_observation_swap": 128
+      },
+      "full_clip_graph_scores": true,
+      "source": "6bba",
+      "summaries": {
+        "source_witness_continuation": {
+          "adj_edge_jaccard": 0.9264933305553453,
+          "counts": {
+            "division_fn": 103,
+            "division_fp": 70,
+            "division_tp": 22,
+            "edge_fn": 4591,
+            "edge_fp": 3780,
+            "edge_tp": 104466,
+            "num_pred_nodes": 2136193
+          },
+          "division_fn": 103,
+          "division_fp": 70,
+          "division_jaccard": 0.11282051282051282,
+          "division_tp": 22,
+          "edge_jaccard": 0.9258133413685228,
+          "n": 128,
+          "n_adj": 128,
+          "node_recall": 0.9795753914358454,
+          "score": 0.9377753818373966
+        },
+        "source_witness_division": {
+          "adj_edge_jaccard": 0.9242443677515549,
+          "counts": {
+            "division_fn": 39,
+            "division_fp": 70,
+            "division_tp": 86,
+            "edge_fn": 4710,
+            "edge_fp": 3927,
+            "edge_tp": 104347,
+            "num_pred_nodes": 2136193
+          },
+          "division_fn": 39,
+          "division_fp": 70,
+          "division_jaccard": 0.441025641025641,
+          "division_tp": 86,
+          "edge_jaccard": 0.9235555476881683,
+          "n": 128,
+          "n_adj": 128,
+          "node_recall": 0.9795753914358454,
+          "score": 0.968346931854119
+        },
+        "source_witness_observation_swap": {
+          "adj_edge_jaccard": 0.9238494373923468,
+          "counts": {
+            "division_fn": 103,
+            "division_fp": 70,
+            "division_tp": 22,
+            "edge_fn": 4762,
+            "edge_fp": 3919,
+            "edge_tp": 104295,
+            "num_pred_nodes": 2136193
+          },
+          "division_fn": 103,
+          "division_fp": 70,
+          "division_jaccard": 0.11282051282051282,
+          "division_tp": 22,
+          "edge_jaccard": 0.9231606712930179,
+          "n": 128,
+          "n_adj": 128,
+          "node_recall": 0.9795808243287523,
+          "score": 0.9351314886743981
+        }
+      },
+      "summary_sha256": "9dfa21c5622f9e219f4ec0b79e5a078031c21f92070605fbd5c34784da325c58"
+    }
+  },
+  "observation_witness_limitation": "Closer raw localization can be the wrong biological identity; this witness is not an achievable bound or a selector score.",
+  "source_label_guided_witnesses_not_learned_results": true,
+  "status": "measured"
+}

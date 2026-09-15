@@ -1,0 +1,15 @@
+adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,edge_fn,edge_fp,edge_jaccard,edge_tp,embryo,matched_nodes,n,n_adj,node_recall,num_pred_nodes,score,status,delta_P0,delta_C4_m6,node_adjustment,reason,seed
+0.9229308300345328,P0,199,122,92,0.11934156378600823,29,5711,4996,0.9200247985120893,123172,pooled,130836,199,199,0.982494434312724,4108943,0.9348649864131336,measured,0.0,-0.00031338384352019855,0.0029060315224435085,,
+0.9228326912443082,C4_m6,199,121,92,0.12345679012345678,30,5750,4968,0.9199258877408462,123133,pooled,130836,199,199,0.982494434312724,4108943,0.9351783702566538,measured,0.00031338384352019855,0.0,0.002906803503462063,,
+0.9228682178819851,C0,199,122,92,0.11934156378600823,29,5748,4965,0.9199614488076027,123135,pooled,130836,199,199,0.982494434312724,4108943,0.934802374260586,measured,-6.261215254765862e-05,-0.00037599599606785716,0.002906769074382476,,
+0.9229308300345328,D00,199,122,92,0.11934156378600823,29,5711,4996,0.9200247985120893,123172,pooled,130836,199,199,0.982494434312724,4108943,0.9348649864131336,measured,0.0,-0.00031338384352019855,0.0029060315224435085,,
+,D10_frozen,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_adapted,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_random,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_compact,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_no_pretrain,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,A10,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_swap,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_restore,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,C10,,,,,,,,,,pooled,,,,,,,not run,,,,Required execution or validation is incomplete,20260915

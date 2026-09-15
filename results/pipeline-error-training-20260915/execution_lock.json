@@ -1,0 +1,52 @@
+{
+  "augmentations": {
+    "brightness": [
+      0.9,
+      1.1
+    ],
+    "context_dropout_probability": 0.1,
+    "contrast": [
+      0.9,
+      1.1
+    ],
+    "coordinate_semantics": "Coherent XY symmetries preserve every distance/angle scalar feature; never exchange Z with XY or reverse time.",
+    "deferred": [
+      "physical scale and center jitter require a jointly transformed geometry adapter; not enabled in this recipe"
+    ],
+    "gamma": [
+      0.9,
+      1.1
+    ],
+    "read_noise_std": 0.01,
+    "xy_flips": true,
+    "xy_right_angle_rotations": true
+  },
+  "deviation": "Budget selected from measured source end-to-end throughput; matched arms retain equal optimizer updates.",
+  "first_seed_directional_fit_budget": 14,
+  "inference_gpu_hours_reserved": 8,
+  "new_target_scores_read": false,
+  "normalization": "fixed 1/99% per-frame robust crop normalization",
+  "pilot_sha256": "330067be245e954dd0a76dad303fe67963f291ea34eb351b7250f43e9bfd8343",
+  "precision": "FP32; TF32 disabled; activation checkpoint chunks of 16 tokens",
+  "primary_gpu_hours_reserved": 24,
+  "recipe_sha256": "cbca9b490934b3554355db938d6e692bb227e0d807956bd2b9dcb7348f894f9b",
+  "replication_gpu_hours_reserved": 12,
+  "seconds_per_update_bound": 22.967797944000267,
+  "source_checkpoint": "fixed final checkpoint; no target selection",
+  "status": "source_only_frozen_before_target_comparisons",
+  "temporal_operator": "GRUCell",
+  "training": {
+    "effective_batch_groups": 32,
+    "gradient_clip_norm": 1.0,
+    "joint_updates": 89,
+    "learning_rate": 0.0003,
+    "optimizer": "AdamW",
+    "pretrain_updates": 89,
+    "pretrained_block_learning_rate": 3e-05,
+    "source_only_common_budget_lock_required": true,
+    "target_checkpoint_selection": false,
+    "updates": 178,
+    "warmup_updates": 500,
+    "weight_decay": 0.0001
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "implementation_repair",
+  "failures": [
+    "Reexecuting the pinned inference module installed its second startup guard after numerical imports",
+    "Prediction cache denial also rejected two fixed scikit-image structuring-element tables"
+  ],
+  "repairs": [
+    "Direct call to the unchanged pinned predict_directory function with its original early startup guard",
+    "Allow only named disk/ball morphology package tables and record their consumed SHA256"
+  ],
+  "preserved": [
+    {
+      "path": "fresh_validation/specimen_alder/output",
+      "preserved_as": "invalid/startup_validation_attempt1/fresh_validation/specimen_alder/output"
+    },
+    {
+      "path": "fresh_validation/specimen_birch/output",
+      "preserved_as": "invalid/startup_validation_attempt1/fresh_validation/specimen_birch/output"
+    },
+    {
+      "path": "native_validation/output",
+      "preserved_as": "invalid/startup_validation_attempt1/native_validation/output"
+    },
+    {
+      "path": "native_validation/worker.log",
+      "preserved_as": "invalid/startup_validation_attempt1/native_validation/worker.log"
+    }
+  ],
+  "training_model_or_calibration_changed": false,
+  "new_target_scores_read": false
+}

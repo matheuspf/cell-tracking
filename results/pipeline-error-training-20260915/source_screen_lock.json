@@ -1,0 +1,35 @@
+{
+  "independently_certified": false,
+  "new_target_scores_read": false,
+  "qualification": {
+    "both_directions_required": true,
+    "division_nominees": [
+      "D10_adapted",
+      "D20_temporal"
+    ],
+    "identity_nominees": [
+      "A10",
+      "O10_swap"
+    ],
+    "matched_loss": "Raw supported held-group loss before calibration; useful distinct full-graph tradeoff may also qualify.",
+    "max_extra_division_fp": 2,
+    "max_source_score_regression": 0.001,
+    "maximum_division_nominees": 1,
+    "maximum_identity_nominees": 1
+  },
+  "selected": {
+    "44b6": {
+      "44b6_5f15d135": "ordinary: median source calibration P0 count",
+      "44b6_d754aa59": "event support: maximum available source calibration division groups",
+      "44b6_e31261b4": "crowded: maximum source calibration P0 count"
+    },
+    "6bba": {
+      "6bba_4ffd3da3": "ordinary: median source calibration P0 count",
+      "6bba_767a1e17": "crowded: maximum source calibration P0 count",
+      "6bba_bb9f20c3": "event support: maximum available source calibration division groups"
+    }
+  },
+  "source_replay_scope": "Complete 100-frame ordinary, crowded and event-supported source calibration clips; duplicate selections collapse.",
+  "split_manifest_sha256": "c0916043735f5b30f9a9ce57a4e800b6b5296409bc94c966b5e8a356b53dba05",
+  "status": "source_only_frozen"
+}

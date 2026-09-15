@@ -1,0 +1,69 @@
+{
+  "augmentations": {
+    "blur_kernel": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "blur_probability": 0.2,
+    "brightness": [
+      0.9,
+      1.1
+    ],
+    "context_dropout_probability": 0.1,
+    "contrast": [
+      0.9,
+      1.1
+    ],
+    "coordinate_semantics": "Coherent XY symmetries preserve every distance/angle scalar feature; never exchange Z with XY or reverse time.",
+    "gamma": [
+      0.9,
+      1.1
+    ],
+    "read_noise_std": 0.01,
+    "sampling_scale": [
+      0.97,
+      1.03
+    ],
+    "shared_center_jitter_um_zyx": [
+      0.4,
+      0.2,
+      0.2
+    ],
+    "spatial_semantics": "All tokens share one physical sampling shift and support-scale change; world node coordinates and their relative geometry stay fixed. This perturbs image sampling, not graph identity.",
+    "xy_flips": true,
+    "xy_right_angle_rotations": true
+  },
+  "deviation": "Budget selected from measured source end-to-end throughput; matched arms retain equal optimizer updates.",
+  "first_seed_directional_fit_budget": 14,
+  "inference_gpu_hours_reserved": 8,
+  "invalid_attempt_manifest_sha256": "f70e28581ca26ecf7169a017f839836bde82e8d49a9422377bfbc74f0db0e964",
+  "new_target_scores_read": false,
+  "no_target_driven_selection": true,
+  "normalization": "fixed 1/99% per-frame robust crop normalization",
+  "pilot_sha256": "330067be245e954dd0a76dad303fe67963f291ea34eb351b7250f43e9bfd8343",
+  "precision": "FP32; TF32 disabled; activation checkpoint chunks of 16 tokens",
+  "primary_gpu_hours_reserved": 24,
+  "recipe_sha256": "cbca9b490934b3554355db938d6e692bb227e0d807956bd2b9dcb7348f894f9b",
+  "repair": "Complete-decision labels did not penalize removed supported GT edges; augmentation recipe omitted specified blur and crop-sampling perturbations.",
+  "replication_gpu_hours_reserved": 12,
+  "seconds_per_update_bound": 22.967797944000267,
+  "source_checkpoint": "fixed final checkpoint; no target selection",
+  "status": "source_only_frozen_before_target_comparisons",
+  "supersedes_sha256": "ec1fc28235d1180f1fcc323adb1f3c262f079386d111e3b07cca3eba49fa16f3",
+  "temporal_operator": "GRUCell",
+  "training": {
+    "effective_batch_groups": 32,
+    "gradient_clip_norm": 1.0,
+    "joint_updates": 89,
+    "learning_rate": 0.0003,
+    "optimizer": "AdamW",
+    "pretrain_updates": 89,
+    "pretrained_block_learning_rate": 3e-05,
+    "source_only_common_budget_lock_required": true,
+    "target_checkpoint_selection": false,
+    "updates": 178,
+    "warmup_updates": 500,
+    "weight_decay": 0.0001
+  }
+}

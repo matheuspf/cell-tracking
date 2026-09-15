@@ -1,0 +1,45 @@
+{
+  "actual_changed_observation": true,
+  "all_38_features_recomputed": true,
+  "changed_graph_hash": "e12db56bbea4deda9151b28136a53c2832efadb5d1b6cc11555b6535cb2c4093",
+  "complete_frames": 100,
+  "dataset": "44b6_d754aa59",
+  "edge_score_max_abs_difference": 0.0,
+  "fixture_is_not_a_trained_observation_result": true,
+  "guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+    }
+  },
+  "harmonic_bidirectional_consensus_reexecuted": true,
+  "inherited_teacher_identity_for_new_point": false,
+  "nearest_old_feature_copies": 0,
+  "new_coordinate": [
+    40,
+    1,
+    100,
+    48
+  ],
+  "new_node_id": 8863,
+  "new_raw_provenance_id": 2454,
+  "no_target_metrics_read": true,
+  "old_coordinate": [
+    40,
+    1,
+    99,
+    47
+  ],
+  "old_node_id": 2454,
+  "original_graph_hash": "9abaccbd86323c99158c3bac0df9678559046fc70e4acbde2c7ee1cb5c471043",
+  "primary_and_secondary_reexecuted": true,
+  "probability_absolute_tolerance": 1e-06,
+  "probability_relative_tolerance": 1e-05,
+  "status": "measured",
+  "unchanged_raw_query_coordinate_parity": true,
+  "unchanged_raw_query_probability_parity": true
+}

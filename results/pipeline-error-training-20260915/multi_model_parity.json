@@ -1,0 +1,27 @@
+{
+  "cold_image_runtime": false,
+  "dataset": "44b6_d754aa59",
+  "event_count": 14110,
+  "model_count": 2,
+  "models": [
+    {
+      "arm": "D10_frozen",
+      "exact_edges": true,
+      "exact_nodes": true,
+      "separate_prediction_sha256": "0b2abaa8ca76c6364a56cb7ce68d58de4f986b21b41342b7fb3fe99a1781c02f",
+      "shared_prediction_sha256": "0b2abaa8ca76c6364a56cb7ce68d58de4f986b21b41342b7fb3fe99a1781c02f"
+    },
+    {
+      "arm": "D10_adapted",
+      "exact_edges": true,
+      "exact_nodes": true,
+      "separate_prediction_sha256": "cd6f41a23088c5768a8791e98fb4a575b7b251db92fc91de8c481a6b01f90116",
+      "shared_prediction_sha256": "cd6f41a23088c5768a8791e98fb4a575b7b251db92fc91de8c481a6b01f90116"
+    }
+  ],
+  "new_target_metrics_read": false,
+  "seconds": 7.838498160999734,
+  "source": "44b6",
+  "status": "measured",
+  "verified_source_image_embeddings_reused": true
+}

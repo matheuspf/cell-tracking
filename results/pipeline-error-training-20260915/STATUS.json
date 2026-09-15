@@ -1,0 +1,125 @@
+{
+  "clean_transfer": {
+    "readiness_sha256": "8de88f49c8c3edbc2a4e44ed59c03445e34c3a1830568b579d8f8ce4fd57b66f",
+    "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
+    "status": "blocked"
+  },
+  "created": "2026-09-15T18:18:38.037885+00:00",
+  "experiments": [
+    {
+      "clips": null,
+      "experiment": "S00",
+      "reason": null,
+      "score": null,
+      "status": "measured"
+    },
+    {
+      "clips": null,
+      "experiment": "S10",
+      "reason": null,
+      "score": null,
+      "status": "measured"
+    },
+    {
+      "clips": 199,
+      "experiment": "D00",
+      "reason": null,
+      "score": 0.9348649864131336,
+      "status": "measured"
+    },
+    {
+      "clips": null,
+      "experiment": "D10_frozen",
+      "reason": "2/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D10_adapted",
+      "reason": "2/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D10_random",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D20_compact",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D20_temporal",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D20_no_pretrain",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "A10",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "O10_swap",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "O10_restore",
+      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "R10",
+      "reason": "Required execution or validation is incomplete",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "C10",
+      "reason": "Required execution or validation is incomplete",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "V10",
+      "reason": "Required execution or validation is incomplete",
+      "score": null,
+      "status": "not run"
+    }
+  ],
+  "merged": false,
+  "production_default": "P0",
+  "queues": {
+    "observation_queue": "waiting",
+    "queue": "running"
+  },
+  "recommendation": null,
+  "status": "executing",
+  "uploads": false,
+  "weights_published": false
+}

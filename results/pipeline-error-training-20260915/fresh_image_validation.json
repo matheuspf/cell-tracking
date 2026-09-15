@@ -1,0 +1,158 @@
+{
+  "Kaggle_12_hour_runtime_proven": false,
+  "arm": "D10_frozen",
+  "candidate_proof": false,
+  "clips": [
+    {
+      "baseline_P0_exact_nodes_and_edges": true,
+      "cached_prediction_inputs": false,
+      "complete_primary_secondary_harmonic_DeepCenter_P0": true,
+      "dataset": "44b6_d754aa59",
+      "exact_CSV_and_GEFF_roundtrip": true,
+      "explicit_source": "6bba",
+      "frames": 100,
+      "module_graph_hash": "5cd9119d7bbfa6ccf5d82747a6de9acb40369d0aa68aec9162d5820e4c0661cf",
+      "module_sha256": "65d4be18e1f2fde531cbf7eafe9b22bb01423a439233a444a9da39581e473c0c",
+      "new_target_metrics_read": false,
+      "seconds": 168.98717555500116,
+      "source_checkpoint_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+      "stages": [
+        {
+          "seconds": 72.17301026100176,
+          "stage": "baseline",
+          "status": "measured"
+        },
+        {
+          "seconds": 52.59569939799985,
+          "stage": "point-head",
+          "status": "measured"
+        },
+        {
+          "seconds": 44.1953609259981,
+          "stage": "module",
+          "status": "measured"
+        }
+      ],
+      "startup_guards": [
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "6bba",
+          "stage": "point-head"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "6bba",
+          "stage": "module"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "6bba",
+          "stage": "baseline"
+        }
+      ],
+      "status": "measured",
+      "unfamiliar_name": "specimen_alder"
+    },
+    {
+      "baseline_P0_exact_nodes_and_edges": true,
+      "cached_prediction_inputs": false,
+      "complete_primary_secondary_harmonic_DeepCenter_P0": true,
+      "dataset": "6bba_bb9f20c3",
+      "exact_CSV_and_GEFF_roundtrip": true,
+      "explicit_source": "44b6",
+      "frames": 100,
+      "module_graph_hash": "61762d2d8c8c6a3f098a2925f0814da19af0fe83f8ef8c0d924e56bfd535af82",
+      "module_sha256": "70bd0f2d27398c8ae8382ef3d0bf0e8a47ff183ae5c7272f0c06a6799d64b9e1",
+      "new_target_metrics_read": false,
+      "seconds": 283.7879380640006,
+      "source_checkpoint_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+      "stages": [
+        {
+          "seconds": 95.88760218199968,
+          "stage": "baseline",
+          "status": "measured"
+        },
+        {
+          "seconds": 60.45095162800135,
+          "stage": "point-head",
+          "status": "measured"
+        },
+        {
+          "seconds": 127.4409946529995,
+          "stage": "module",
+          "status": "measured"
+        }
+      ],
+      "startup_guards": [
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "44b6",
+          "stage": "module"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "44b6",
+          "stage": "baseline"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "44b6",
+          "stage": "point-head"
+        }
+      ],
+      "status": "measured",
+      "unfamiliar_name": "specimen_birch"
+    }
+  ],
+  "created": "2026-09-15T17:58:40.600397+00:00",
+  "new_target_scores_read": false,
+  "status": "measured"
+}

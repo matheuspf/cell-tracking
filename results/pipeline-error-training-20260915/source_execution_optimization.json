@@ -1,0 +1,13 @@
+{
+  "change": "Use the parity-checked staged neural prepass and CPU decoder for subsequent source predictions as well as the final matrix; release the GPU lease before CPU graph solving.",
+  "code_sha256": "5bdb367c0311e559773d19aec6f9d625baf38e4f9b5a9a83bfc6c40187698f22",
+  "complete_bank": true,
+  "exact_graph_parity_proofs": {
+    "staged_crowded_parity.json": "544c174eac5cb0cca98d1a430194e5b0143af21a11dd047d8359ebdbe1edcdc6",
+    "staged_inference_parity.json": "05e2b35a652287d225cf0fb252c1b1cb1e6d3d495f094bf13513a528c4f2a7e2"
+  },
+  "existing_source_predictions_unchanged": true,
+  "new_target_scores_read": false,
+  "status": "measured",
+  "weights_or_thresholds_changed": false
+}

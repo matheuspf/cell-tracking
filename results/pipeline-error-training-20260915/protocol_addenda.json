@@ -1,0 +1,5 @@
+{
+  "before_target_comparisons": true,
+  "context_dropout": "All representations drop relative frame -1 or +1. This preserves the existing Organoid and compact behavior and aligns the seven-frame representation before its primary training starts.",
+  "observation_provenance": "Original raw graph hashes additionally verified against the already pinned v3 fresh-evidence receipts. Pre-verification preparation is preserved under the new invalid-attempt root; no O model used it."
+}

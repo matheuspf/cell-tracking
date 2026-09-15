@@ -1,0 +1,23 @@
+{
+  "bound_disabled_for_affected_incumbent_forks": true,
+  "bounded_enumeration": {
+    "complete_assignments_scored": 4658,
+    "events": 14110,
+    "unrepresented_complete_fork_window_abstentions": 2082
+  },
+  "bounded_seconds": 2.0007210210023914,
+  "dataset": "44b6_d754aa59",
+  "exact_edges": true,
+  "exact_nodes": true,
+  "new_target_scores_read": false,
+  "reference_forks": 12,
+  "source_model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+  "source_only": true,
+  "status": "measured",
+  "unbounded_enumeration": {
+    "complete_assignments_scored": 55200,
+    "events": 14110,
+    "unrepresented_complete_fork_window_abstentions": 2082
+  },
+  "unbounded_seconds": 7.1198290579995955
+}

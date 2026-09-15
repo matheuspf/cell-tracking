@@ -1,0 +1,10 @@
+{
+  "new_target_scores_read": false,
+  "primary_seed": 20260915,
+  "replacement_default_nomination": false,
+  "replication_seed": 314159,
+  "selection_code_sha256": "37b05dc48275b498362ac96111d07982029917768dcb8d48d6501fa416dd78f6",
+  "source_screen_lock_sha256": "4df73d5ff9cb16e4aa5251544fb66367fd705e2c29272d7c82fca2967c3e758a",
+  "status": "source_only_locked",
+  "tie_break": "Largest mean source full-graph delta among families qualified in both directions, then lexical arm name"
+}

@@ -1,0 +1,14 @@
+{
+  "change": "Explicit boolean dtype for empty supported-decision masks",
+  "log_sha256": "e56f5e56fc8e4d567ae905a157d521552e79cda81c65f4be4a830fac2f622509",
+  "new_target_scores_read": false,
+  "preserved_files": [
+    {
+      "path": "calibration/D10_frozen/6bba/20260915/6bba_2540cd90.npz",
+      "sha256": "e5a46347758227fb58832b291350f5d57bc5210971013859dd5c98dedae16166"
+    }
+  ],
+  "source_calibration_recipe_unchanged": true,
+  "source_weights_unchanged": true,
+  "status": "repair queued"
+}

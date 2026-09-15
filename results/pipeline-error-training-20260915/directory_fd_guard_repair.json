@@ -1,0 +1,15 @@
+{
+  "cause": "Python audit open events omit dir_fd. TemporaryDirectory cleanup opened a relative predictions directory in this study work root, but the guard resolved it against the repository cwd and falsely recorded an old-cache access.",
+  "guard_sha256": "cbbe616fdedc2726d7c66e9625b6f5b4408144e45a4a8953afe1e05a3e7d329c",
+  "new_target_scores_read": false,
+  "preserved": [
+    "fresh_validation/specimen_alder/output",
+    "native_validation/output",
+    "native_validation/worker.log"
+  ],
+  "repair": "Wrap os.open only to retain the actual dir_fd-relative path for the audit; preserve the filesystem call and deny real external label/cache paths.",
+  "status": "implementation_repair",
+  "unchanged_native_query_edge_score_max_abs_difference": 0.0,
+  "unchanged_original_P0_nodes_and_edges_on_first_full_clip": true,
+  "weights_calibration_and_scientific_policy_unchanged": true
+}

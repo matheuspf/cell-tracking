@@ -1,0 +1,11 @@
+{
+  "attempts": [
+    {
+      "artifact_manifest_sha256": "f70e28581ca26ecf7169a017f839836bde82e8d49a9422377bfbc74f0db0e964",
+      "reason": "Complete-decision labels did not penalize removed supported GT edges; augmentation recipe omitted specified blur and crop-sampling perturbations.",
+      "source_only": true,
+      "status": "failed",
+      "stopped_only_this_study_process": true
+    }
+  ]
+}

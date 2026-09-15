@@ -1,0 +1,29 @@
+adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,edge_fn,edge_fp,edge_jaccard,edge_tp,embryo,matched_nodes,n,n_adj,node_recall,num_pred_nodes,score,status,delta_P0,delta_C4_m6,node_adjustment,reason,seed
+0.9171439230800242,P0,71,19,22,0.14583333333333334,7,957,1087,0.9022617510639315,18869,44b6,19968,71,71,0.9877569341470968,1972750,0.9317272564133575,measured,0.0,-0.0019772970673124224,0.014882172016092765,,
+0.9240021398546523,P0,128,103,70,0.11282051282051282,22,4754,3909,0.9233132092842095,104303,6bba,110868,128,128,0.9795753914358454,2136193,0.9352841911367036,measured,0.0,9.647160287518108e-05,0.0006889305704428361,,
+0.9170378868140032,C4_m6,71,18,22,0.16666666666666666,8,960,1086,0.9021614384085692,18866,44b6,19968,71,71,0.9877569341470968,1972750,0.9337045534806699,measured,0.0019772970673124224,0.0,0.014876448405434006,,
+0.9239056682517771,C4_m6,128,103,70,0.11282051282051282,22,4790,3882,0.923215186959332,104267,6bba,110868,128,128,0.9795753914358454,2136193,0.9351877195338284,measured,-9.647160287518108e-05,0.0,0.0006904812924450887,,
+0.9170811353885086,C0,71,19,22,0.14583333333333334,7,960,1085,0.9022045813208359,18866,44b6,19968,71,71,0.9877569341470968,1972750,0.9316644687218418,measured,-6.278769151568664e-05,-0.002040084758828109,0.014876554067672632,,
+0.9239397328152761,C0,128,103,70,0.11282051282051282,22,4788,3880,0.9232492451543781,104269,6bba,110868,128,128,0.9795753914358454,2136193,0.9352217840973274,measured,-6.240703937621106e-05,3.4064563498970024e-05,0.0006904876608979649,,
+0.9171439230800242,D00,71,19,22,0.14583333333333334,7,957,1087,0.9022617510639315,18869,44b6,19968,71,71,0.9877569341470968,1972750,0.9317272564133575,measured,0.0,-0.0019772970673124224,0.014882172016092765,,
+0.9240021398546523,D00,128,103,70,0.11282051282051282,22,4754,3909,0.9233132092842095,104303,6bba,110868,128,128,0.9795753914358454,2136193,0.9352841911367036,measured,0.0,9.647160287518108e-05,0.0006889305704428361,,
+,D10_frozen,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_frozen,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_adapted,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_adapted,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_random,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_random,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_compact,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_compact,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_no_pretrain,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_no_pretrain,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,A10,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,A10,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_swap,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_swap,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_restore,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,O10_restore,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,C10,,,,,,,,,,44b6,,,,,,,not run,,,,Required execution or validation is incomplete,20260915
+,C10,,,,,,,,,,6bba,,,,,,,not run,,,,Required execution or validation is incomplete,20260915

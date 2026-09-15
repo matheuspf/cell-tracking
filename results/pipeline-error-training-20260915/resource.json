@@ -1,0 +1,585 @@
+{
+  "Kaggle_runtime_measured": false,
+  "cpu_contract": "Process affinity restricted to 16 logical CPUs; BLAS threads 1, data loaders 0, scorer processes 4. Initial Zarr pools had excess idle OS threads; corrected nested configuration is retained with the original measurements.",
+  "gpu_budget": {
+    "accounting": "GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.",
+    "active_leases": [
+      {
+        "arguments": [
+          "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
+          "train",
+          "--source",
+          "44b6",
+          "--arm",
+          "D20_compact"
+        ],
+        "category": "first_seed_training",
+        "pid": 805698,
+        "started_epoch": 1789496311.9220886
+      }
+    ],
+    "charge_other_programs": false,
+    "completed_intervals": 257,
+    "limits_hours": {
+      "final_inference_and_package": 8.0,
+      "first_seed_training": 24.0,
+      "preflight_and_pilots": 4.0,
+      "replication": 12.0
+    },
+    "measured_gpu_lease_hours": {
+      "final_inference_and_package": 0.0,
+      "first_seed_training": 2.9731924366806197,
+      "preflight_and_pilots": 0.481291644215944,
+      "replication": 0.0
+    },
+    "total_hours": 3.4544840808965636
+  },
+  "historical_or_other_studies_restarted": false,
+  "measurements": 56,
+  "peak_all_study_process_rss_gib": 10.05893325805664,
+  "peak_process_tree_rss_gib": 7.576938629150391,
+  "peak_total_gpu_gib": 6.708984375,
+  "records": [
+    {
+      "path": "staged_crowded_parity/resources.json",
+      "peak_all_study_process_rss_gib": 4.568855285644531,
+      "peak_os_threads": 6,
+      "peak_total_gpu_gib": 5.154296875,
+      "peak_tree_rss_gib": 1.0348854064941406,
+      "resource_error": null,
+      "sha256": "255f5f61d55942c6846672a8eb6d4fce329a1ab55e35eee2a41cfd7e408c8cbc",
+      "wall_seconds": 168.81825433300037
+    },
+    {
+      "path": "replacement_parity/resources.json",
+      "peak_all_study_process_rss_gib": 2.7002639770507812,
+      "peak_os_threads": 6,
+      "peak_total_gpu_gib": 2.9482421875,
+      "peak_tree_rss_gib": 0.8576507568359375,
+      "resource_error": null,
+      "sha256": "f4b20cf4f5306906e87bbc7ebadc79e77c96fa025831465b2f758dc683d5c472",
+      "wall_seconds": 13.215103077000094
+    },
+    {
+      "path": "resources/trace-P0.json",
+      "peak_os_threads": 2,
+      "peak_total_gpu_gib": 1.5498046875,
+      "peak_tree_rss_gib": 0.3790168762207031,
+      "resource_error": null,
+      "sha256": "1cc76b49b35b196cc3fcf2788c586909eb5721712c1975618766e74693529951",
+      "wall_seconds": 97.79984064300152
+    },
+    {
+      "path": "resources/profile.json",
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 1.5498046875,
+      "peak_tree_rss_gib": 1.8088722229003906,
+      "resource_error": null,
+      "sha256": "e681806c964bde37dc42dfd4697ed23be0625e0b33df9123cbc95a8449dca113",
+      "wall_seconds": 3.037628959998983
+    },
+    {
+      "path": "resources/prepare-44b6.json",
+      "peak_os_threads": 23,
+      "peak_total_gpu_gib": 1.3515625,
+      "peak_tree_rss_gib": 0.5870437622070312,
+      "resource_error": null,
+      "sha256": "ca5ddf1bdc51be7bb81533805c51dd5a7d0fef96d37145cdf0f2ded10dcab319",
+      "wall_seconds": 108.7037726719991
+    },
+    {
+      "path": "resources/feasibility-44b6.json",
+      "peak_os_threads": 32,
+      "peak_total_gpu_gib": 1.5146484375,
+      "peak_tree_rss_gib": 0.7828903198242188,
+      "resource_error": null,
+      "sha256": "44fbbb8418ca149730a5eac4d99830160946b198a62f2d82191a4675be554d7a",
+      "wall_seconds": 200.90577500699874
+    },
+    {
+      "path": "resources/full-evaluation-C4_m6.json",
+      "peak_all_study_process_rss_gib": 10.05893325805664,
+      "peak_os_threads": 173,
+      "peak_total_gpu_gib": 2.9189453125,
+      "peak_tree_rss_gib": 2.488086700439453,
+      "resource_error": null,
+      "sha256": "1afb8a15fd113fdcbf4af292662e608bb8db637026ca453018ca2585e9e5af59",
+      "wall_seconds": 111.05824806199962
+    },
+    {
+      "path": "resources/full-evaluation-P0.json",
+      "peak_os_threads": 174,
+      "peak_total_gpu_gib": 2.9013671875,
+      "peak_tree_rss_gib": 2.4724044799804688,
+      "resource_error": null,
+      "sha256": "d6271a9e6feb3673cdec185b0cffb536a8c2abe6864e0849a49b2fd24e0f79ab",
+      "wall_seconds": 119.2342565900035
+    },
+    {
+      "path": "resources/trace-C4_m6.json",
+      "peak_all_study_process_rss_gib": 2.6092071533203125,
+      "peak_os_threads": 25,
+      "peak_total_gpu_gib": 1.5537109375,
+      "peak_tree_rss_gib": 2.5244407653808594,
+      "resource_error": null,
+      "sha256": "266e51e06d0d6c4a5d0fa12f47d28a14bd0b3d2eb7cfae8367efa893dddf5567",
+      "wall_seconds": 530.2905923580001
+    },
+    {
+      "path": "resources/baselines.json",
+      "peak_os_threads": 237,
+      "peak_total_gpu_gib": 1.1923828125,
+      "peak_tree_rss_gib": 2.352924346923828,
+      "resource_error": null,
+      "sha256": "8ca88222ec5d8b70be27a9d8c406252d8a5a2c4059cc32c30e57df6f5b9b0e39",
+      "wall_seconds": 100.04964124000071
+    },
+    {
+      "path": "resources/feasibility-6bba.json",
+      "peak_os_threads": 43,
+      "peak_total_gpu_gib": 1.7939453125,
+      "peak_tree_rss_gib": 1.1449203491210938,
+      "resource_error": null,
+      "sha256": "34b17158b24abf6f92afa31af42d9764325dde83cf19bfee643aeedd677b9f77",
+      "wall_seconds": 306.43185335199996
+    },
+    {
+      "path": "resources/fast_crop_parity.json",
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 1.3515625,
+      "peak_tree_rss_gib": 1.041839599609375,
+      "resource_error": null,
+      "sha256": "2fc332e0df7db1618fa7f04ec4d0e8a3171b18b0bd50e0bedadf270954469b0b",
+      "wall_seconds": 0.6759729700006574
+    },
+    {
+      "path": "resources/full-evaluation-D00.json",
+      "peak_all_study_process_rss_gib": 6.066551208496094,
+      "peak_os_threads": 53,
+      "peak_total_gpu_gib": 4.8349609375,
+      "peak_tree_rss_gib": 2.4314537048339844,
+      "resource_error": null,
+      "sha256": "82ab4e3f4a5861063939b8a2eb50250e558deac92c25212d023c5835a0d136ad",
+      "wall_seconds": 111.65248726199934
+    },
+    {
+      "path": "resources/prepare-6bba.json",
+      "peak_os_threads": 42,
+      "peak_total_gpu_gib": 0.8779296875,
+      "peak_tree_rss_gib": 0.6433525085449219,
+      "resource_error": null,
+      "sha256": "4af756d9c91edc536a799f54ab91f81058dd572f7413030c8f5b3d9b20638040",
+      "wall_seconds": 173.09808096000052
+    },
+    {
+      "path": "multi_model_validation/resources.json",
+      "peak_all_study_process_rss_gib": 4.295337677001953,
+      "peak_os_threads": 6,
+      "peak_total_gpu_gib": 4.412109375,
+      "peak_tree_rss_gib": 0.8432350158691406,
+      "resource_error": null,
+      "sha256": "b0524e2ea542da9510ea6f4520ce2526090287262155c7b20c864a8a4f17778d",
+      "wall_seconds": 7.837395123999158
+    },
+    {
+      "path": "calibration/D10_frozen/44b6/20260915/resources.json",
+      "peak_os_threads": 17,
+      "peak_total_gpu_gib": 3.3056640625,
+      "peak_tree_rss_gib": 1.82696533203125,
+      "resource_error": null,
+      "sha256": "7f803d5cffe21183b50756a02aaeebb04faafdbe6a4e04026ca279ed85f23f12",
+      "wall_seconds": 139.3220592130001
+    },
+    {
+      "path": "calibration/D10_frozen/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 2.3093795776367188,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 3.7138671875,
+      "peak_tree_rss_gib": 1.8507728576660156,
+      "resource_error": null,
+      "sha256": "00354053e3970665cb122dbb1d8681ce5dbaee2b3b32acac9e6f3cb02011a897",
+      "wall_seconds": 246.19723671999964
+    },
+    {
+      "path": "calibration/D10_adapted/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 2.6310386657714844,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 3.4248046875,
+      "peak_tree_rss_gib": 1.8128509521484375,
+      "resource_error": null,
+      "sha256": "eec0eb4cf78aa2ecdd548028a5541e821866a381baf822286ca888a810755981",
+      "wall_seconds": 165.64927758799968
+    },
+    {
+      "path": "calibration/D10_adapted/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.9276618957519531,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 4.3515625,
+      "peak_tree_rss_gib": 1.8459510803222656,
+      "resource_error": null,
+      "sha256": "763404f5f5dd1eb6c05626d4553f7ad23da668ca5ecacb100e3c976d776eff82",
+      "wall_seconds": 259.74805982199905
+    },
+    {
+      "path": "invalid/startup_validation_attempt1/fresh_validation/specimen_birch/output/baseline.resources.json",
+      "peak_all_study_process_rss_gib": 2.028331756591797,
+      "peak_os_threads": 1,
+      "peak_total_gpu_gib": 1.7861328125,
+      "peak_tree_rss_gib": 0.0416107177734375,
+      "resource_error": null,
+      "sha256": "e41bf9c8fcb5b906f72fd69f932affb60640556d11e5eb795c980b619e5eff2a",
+      "wall_seconds": 0.4752951419977762
+    },
+    {
+      "path": "invalid/startup_validation_attempt1/fresh_validation/specimen_alder/output/baseline.resources.json",
+      "peak_all_study_process_rss_gib": 2.0293617248535156,
+      "peak_os_threads": 1,
+      "peak_total_gpu_gib": 1.7861328125,
+      "peak_tree_rss_gib": 0.0399322509765625,
+      "resource_error": null,
+      "sha256": "5bd74a01e49ffa069bc140526f5d538e03446da67607c1bf20ff8ae08b87a50e",
+      "wall_seconds": 0.48349466400031815
+    },
+    {
+      "path": "invalid/startup_validation_attempt1/native_validation/output/resources.json",
+      "peak_all_study_process_rss_gib": 0.8164100646972656,
+      "peak_os_threads": 6,
+      "peak_total_gpu_gib": 0.990234375,
+      "peak_tree_rss_gib": 0.6581497192382812,
+      "resource_error": null,
+      "sha256": "7a689cbb240ecc2835e1697e052049739cf433462875ed83d7610edd34654d5e",
+      "wall_seconds": 3.2969455249985913
+    },
+    {
+      "path": "invalid/directory_fd_guard_attempt2/fresh_validation/specimen_alder/output/module.resources.json",
+      "peak_all_study_process_rss_gib": 1.8537406921386719,
+      "peak_os_threads": 17,
+      "peak_total_gpu_gib": 4.1552734375,
+      "peak_tree_rss_gib": 1.7344818115234375,
+      "resource_error": null,
+      "sha256": "af54da21006b834b902d88964c8d34562e0186add2e044cc4a98db0a2add192e",
+      "wall_seconds": 36.28343877599764
+    },
+    {
+      "path": "invalid/directory_fd_guard_attempt2/fresh_validation/specimen_alder/output/point-head.resources.json",
+      "peak_all_study_process_rss_gib": 1.6762657165527344,
+      "peak_os_threads": 15,
+      "peak_total_gpu_gib": 2.1650390625,
+      "peak_tree_rss_gib": 1.5417633056640625,
+      "resource_error": null,
+      "sha256": "6833ae8342d857d82ce08858c9aa83753825faf73376d669e9d9207524e63b0d",
+      "wall_seconds": 46.36642451300213
+    },
+    {
+      "path": "invalid/directory_fd_guard_attempt2/fresh_validation/specimen_alder/output/baseline.resources.json",
+      "peak_all_study_process_rss_gib": 2.2527008056640625,
+      "peak_os_threads": 20,
+      "peak_total_gpu_gib": 2.9482421875,
+      "peak_tree_rss_gib": 2.1327438354492188,
+      "resource_error": null,
+      "sha256": "302a3adf4014e81b7153aad0dfd724af7db523bc959711005b1dabdc2dbd4420",
+      "wall_seconds": 95.91719455800194
+    },
+    {
+      "path": "invalid/directory_fd_guard_attempt2/native_validation/output/resources.json",
+      "peak_all_study_process_rss_gib": 2.1192779541015625,
+      "peak_os_threads": 19,
+      "peak_total_gpu_gib": 2.9013671875,
+      "peak_tree_rss_gib": 1.9618949890136719,
+      "resource_error": null,
+      "sha256": "3b8790b336013ccf651cda235d5e562e67436d7e4aca0a63f8d5e9f20038c5a9",
+      "wall_seconds": 71.49897220999992
+    },
+    {
+      "path": "invalid/observation_before_preuse_hash_check/44b6/resources.json",
+      "peak_os_threads": 31,
+      "peak_total_gpu_gib": 1.7626953125,
+      "peak_tree_rss_gib": 0.601165771484375,
+      "resource_error": null,
+      "sha256": "28878a780f433b94722ef0153a45206c5c0b1d78b7a08dff4034b03a94bbad32",
+      "wall_seconds": 65.536086428001
+    },
+    {
+      "path": "invalid/observation_before_preuse_hash_check/6bba/resources.json",
+      "peak_os_threads": 43,
+      "peak_total_gpu_gib": 1.767578125,
+      "peak_tree_rss_gib": 0.6656837463378906,
+      "resource_error": null,
+      "sha256": "efa0d1861f5909f3be10a4e6d82f36a5433647f1ea3cb07291982a7eec758210",
+      "wall_seconds": 86.17457173500043
+    },
+    {
+      "path": "invalid/attempt1/training/D10_frozen/44b6/20260915/resources.json",
+      "peak_os_threads": 43,
+      "peak_total_gpu_gib": 2.3359375,
+      "peak_tree_rss_gib": 4.867401123046875,
+      "resource_error": null,
+      "sha256": "c41f0d0138a35fc883fbad3ab4d0f56c93d9b1b336ae79e5751dfddbb2aef1b7",
+      "wall_seconds": 1433.5921200130015
+    },
+    {
+      "path": "invalid/attempt1/training_pilot/D20_temporal/44b6/20260915/resources.json",
+      "peak_os_threads": 35,
+      "peak_total_gpu_gib": 2.16796875,
+      "peak_tree_rss_gib": 4.711906433105469,
+      "resource_error": null,
+      "sha256": "1a10686fee5c1e6845f61b147f193d0ecb185ab401bf14b222fa8731c3bc4947",
+      "wall_seconds": 68.88481139200121
+    },
+    {
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 6.708984375,
+      "peak_tree_rss_gib": 1.6876220703125,
+      "resource_error": null,
+      "sha256": "0eff8ea428253800018f8ea3edf64fee19287f39e46f61ac736bcdd0944fcef4",
+      "wall_seconds": 901.3917015409988
+    },
+    {
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 3.478515625,
+      "peak_tree_rss_gib": 1.5119514465332031,
+      "resource_error": null,
+      "sha256": "fda6e14ab84287f1d0b68bd9e1bc0b662b772c10dbd658ef0e9978ee10744d70",
+      "wall_seconds": 32.982238960999894
+    },
+    {
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 4.099609375,
+      "peak_tree_rss_gib": 1.5697822570800781,
+      "resource_error": null,
+      "sha256": "837c89229a5cd8aa4d946c025ee10db43cadf60da17e49b0dc53e03d2bf21fbe",
+      "wall_seconds": 254.8701765879996
+    },
+    {
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 3.5717735290527344,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.509765625,
+      "peak_tree_rss_gib": 1.6039314270019531,
+      "resource_error": null,
+      "sha256": "a20cb8f0ab38cca49f3f1c1576ee37c317d1eb69b8b26d3ec8a8d82efcd425df",
+      "wall_seconds": 129.30567134000012
+    },
+    {
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 3.5252647399902344,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.5,
+      "peak_tree_rss_gib": 1.5895843505859375,
+      "resource_error": null,
+      "sha256": "2c2a1ccb15d284ecdc045cbe96bdbcead7dcea3936f185a9818c83cc3f1f2e43",
+      "wall_seconds": 122.44332887799828
+    },
+    {
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 6.038448333740234,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.1865234375,
+      "peak_tree_rss_gib": 1.709716796875,
+      "resource_error": null,
+      "sha256": "f101d5870fd1343a0d34861fca7defc7359f345a9ff4ae1b12ba33a06558d98b",
+      "wall_seconds": 340.19703064200075
+    },
+    {
+      "path": "source_screen/D10_adapted/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "peak_all_study_process_rss_gib": 4.198768615722656,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.34375,
+      "peak_tree_rss_gib": 1.7764739990234375,
+      "resource_error": null,
+      "sha256": "70532e0b183f47abfabb84fd6c2f4685705798d0fec1dc7c90dd9e57330ef09c",
+      "wall_seconds": 456.55203961400184
+    },
+    {
+      "path": "source_screen/D10_adapted/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "peak_all_study_process_rss_gib": 3.4116439819335938,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 3.7470703125,
+      "peak_tree_rss_gib": 1.5380401611328125,
+      "resource_error": null,
+      "sha256": "63a029cf123cd85d051a56ae05d056770f35dc399e2b82dc8c001db911f00818",
+      "wall_seconds": 32.86682423000093
+    },
+    {
+      "path": "source_screen/D10_adapted/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "peak_all_study_process_rss_gib": 3.4604415893554688,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.62109375,
+      "peak_tree_rss_gib": 1.6037254333496094,
+      "resource_error": null,
+      "sha256": "99669ceecae6a6d902327c600405c217dc2ac599a69e9ae93aae4e8154c4b4a9",
+      "wall_seconds": 142.388361936999
+    },
+    {
+      "path": "source_screen/D10_adapted/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 4.2946624755859375,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.65234375,
+      "peak_tree_rss_gib": 1.5783233642578125,
+      "resource_error": null,
+      "sha256": "41fc2c869169c981b3217ddeb737477c57ccecc288f2368958c1e27eaa1e484f",
+      "wall_seconds": 164.74267377499928
+    },
+    {
+      "path": "source_screen/D10_adapted/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 3.4104347229003906,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.4541015625,
+      "peak_tree_rss_gib": 1.5436897277832031,
+      "resource_error": null,
+      "sha256": "e3fe8faff11c95a3fc840fd288fe8f8d61088b82945853aadfeb6d7a1cb28047",
+      "wall_seconds": 116.56684795599722
+    },
+    {
+      "path": "source_screen/D10_adapted/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 3.6198348999023438,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.7275390625,
+      "peak_tree_rss_gib": 1.7089653015136719,
+      "resource_error": null,
+      "sha256": "13288e3059a40461030317885c54bc6a5eef3342d467b6d3e8a3b7985341c4df",
+      "wall_seconds": 325.9639497950011
+    },
+    {
+      "path": "observation_source/44b6/resources.json",
+      "peak_os_threads": 35,
+      "peak_total_gpu_gib": 6.498046875,
+      "peak_tree_rss_gib": 0.6001930236816406,
+      "resource_error": null,
+      "sha256": "439d121caaec42c1024199cb3c77bd0c12657512177a19b85be6182c6943afd1",
+      "wall_seconds": 64.38587476800058
+    },
+    {
+      "path": "observation_source/6bba/resources.json",
+      "peak_os_threads": 40,
+      "peak_total_gpu_gib": 6.5009765625,
+      "peak_tree_rss_gib": 0.64752197265625,
+      "resource_error": null,
+      "sha256": "679ef4f8413bae70cdfccbe8408f0ab5f6842c250d0983661cdbfdcac1e09e50",
+      "wall_seconds": 88.66789700700065
+    },
+    {
+      "path": "training/D10_frozen/44b6/20260915/resources.json",
+      "peak_os_threads": 43,
+      "peak_total_gpu_gib": 2.4892578125,
+      "peak_tree_rss_gib": 4.942371368408203,
+      "resource_error": null,
+      "sha256": "f76ae28d758722c9130c58d3e0d0e4d288c073e622cd0315deabe5548bba4318",
+      "wall_seconds": 1225.5859150859997
+    },
+    {
+      "path": "training/D10_frozen/6bba/20260915/resources.json",
+      "peak_os_threads": 43,
+      "peak_total_gpu_gib": 2.982421875,
+      "peak_tree_rss_gib": 7.576938629150391,
+      "resource_error": null,
+      "sha256": "855cbe3f36afdc28def5dc1c11808bf2d359eb74276d09ae13ed19aa3c64355d",
+      "wall_seconds": 2078.6629750390002
+    },
+    {
+      "path": "training/D10_adapted/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 5.4199676513671875,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 2.5146484375,
+      "peak_tree_rss_gib": 4.70233154296875,
+      "resource_error": null,
+      "sha256": "8ceee10ba23dd554d997916fcb308cb8f4137684c42b2fc444c9b43aa0e29bcd",
+      "wall_seconds": 1204.576936294001
+    },
+    {
+      "path": "training/D10_adapted/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 8.13412857055664,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 3.6396484375,
+      "peak_tree_rss_gib": 7.2087860107421875,
+      "resource_error": null,
+      "sha256": "3e055e7f294672d893eb6665c24e6178e71a94488a87f0bd2a0de28f7c342729",
+      "wall_seconds": 970.3000997570016
+    },
+    {
+      "path": "fresh_validation/specimen_birch/output/module.resources.json",
+      "peak_all_study_process_rss_gib": 1.9234428405761719,
+      "peak_os_threads": 17,
+      "peak_total_gpu_gib": 4.541015625,
+      "peak_tree_rss_gib": 1.8266868591308594,
+      "resource_error": null,
+      "sha256": "4cb88d00462eb8e09042d9813368a495b5f800e0dbe1291884921fdd1cd14e76",
+      "wall_seconds": 127.44040372400195
+    },
+    {
+      "path": "fresh_validation/specimen_birch/output/point-head.resources.json",
+      "peak_all_study_process_rss_gib": 2.0588226318359375,
+      "peak_os_threads": 16,
+      "peak_total_gpu_gib": 2.197265625,
+      "peak_tree_rss_gib": 1.8926162719726562,
+      "resource_error": null,
+      "sha256": "e38ca1cdac6227b5cd206cb9125b6eeb2f539bbf93fe8837bcbbe11f8d884f2a",
+      "wall_seconds": 60.45029371800047
+    },
+    {
+      "path": "fresh_validation/specimen_birch/output/baseline.resources.json",
+      "peak_all_study_process_rss_gib": 2.622112274169922,
+      "peak_os_threads": 20,
+      "peak_total_gpu_gib": 3.076171875,
+      "peak_tree_rss_gib": 2.5337448120117188,
+      "resource_error": null,
+      "sha256": "11588a858d8005ab08f5ea04b97e733d065730c6dac9386e764076f3c2314579",
+      "wall_seconds": 95.88689907300068
+    },
+    {
+      "path": "fresh_validation/specimen_alder/output/module.resources.json",
+      "peak_all_study_process_rss_gib": 1.8547897338867188,
+      "peak_os_threads": 17,
+      "peak_total_gpu_gib": 4.154296875,
+      "peak_tree_rss_gib": 1.7354240417480469,
+      "resource_error": null,
+      "sha256": "047e6b471d3f42b912573c0c96cb1cca2c7886624823381c047c90d7a59c61dc",
+      "wall_seconds": 44.19481994899979
+    },
+    {
+      "path": "fresh_validation/specimen_alder/output/point-head.resources.json",
+      "peak_all_study_process_rss_gib": 1.6940574645996094,
+      "peak_os_threads": 16,
+      "peak_total_gpu_gib": 2.1708984375,
+      "peak_tree_rss_gib": 1.5512619018554688,
+      "resource_error": null,
+      "sha256": "3ded7974f4de5e49ce6820b2567f94ee183e9495e70220b75332d9eea8439e51",
+      "wall_seconds": 52.59521745099846
+    },
+    {
+      "path": "fresh_validation/specimen_alder/output/baseline.resources.json",
+      "peak_all_study_process_rss_gib": 2.179302215576172,
+      "peak_os_threads": 20,
+      "peak_total_gpu_gib": 2.90625,
+      "peak_tree_rss_gib": 2.1586761474609375,
+      "resource_error": null,
+      "sha256": "60cc0dd8a62d40400b7b5e02b6778530730684cbf5b57fc9e7b9eeff9df6ca74",
+      "wall_seconds": 72.17247702299937
+    },
+    {
+      "path": "training_pilot/D20_temporal/44b6/20260915/resources.json",
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 2.1484375,
+      "peak_tree_rss_gib": 5.391910552978516,
+      "resource_error": null,
+      "sha256": "de7a579411828e5cca95483abaebeaf18257aa6dc64896ff08c191b9c6aa855e",
+      "wall_seconds": 42.01798786499967
+    },
+    {
+      "path": "native_validation/output/resources.json",
+      "peak_all_study_process_rss_gib": 2.1301841735839844,
+      "peak_os_threads": 19,
+      "peak_total_gpu_gib": 2.8203125,
+      "peak_tree_rss_gib": 1.9725151062011719,
+      "resource_error": null,
+      "sha256": "fab1a66e159b74f50b862477cb924a7bd58fe8bf732f3b616a681632f0b4a54d",
+      "wall_seconds": 77.51245477500197
+    }
+  ],
+  "resource_errors": [],
+  "status": "measured",
+  "total_device_measurement_includes_other_programs": true
+}

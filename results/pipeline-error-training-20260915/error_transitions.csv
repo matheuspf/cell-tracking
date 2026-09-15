@@ -1,0 +1,7 @@
+arm,embryo,clips,edge_endpoint:selection_after,edge_endpoint:selection_before,fp_divisions_introduced,fp_divisions_removed,fp_edges_introduced,fp_edges_removed,matched_gt_lost,matched_gt_recovered,tp_divisions_lost,tp_divisions_recovered,tp_edges_lost,tp_edges_recovered,division_fp:division_extra_after,division_fp:division_extra_before,edge_fp:unmatched_after,edge_fp:unmatched_before,edge_fp:competing_after,edge_fp:competing_before,edge_link:association_after,edge_link:association_before,division_fn:division_no_fork_after,division_fn:division_no_fork_before,edge_endpoint:proposal_gap_after,edge_endpoint:proposal_gap_before,edge_endpoint:assignment_after,edge_endpoint:assignment_before,edge_fp:wrong_identity_after,edge_fp:wrong_identity_before,division_fn:division_observation_after,division_fn:division_observation_before,division_fp:division_cross_after,division_fp:division_cross_before
+C4_m6,pooled,199,1970,1970,0,0,4,32,0,0,0,1,40,1,87,87,2440,2461,2467,2474,2710,2671,97,98,1009,1009,61,61,61,61,24,24,5,5
+C4_m6,44b6,71,214,214,0,0,1,2,0,0,0,1,4,1,22,22,366,365,698,700,664,661,16,17,64,64,18,18,22,22,2,2,,
+C4_m6,6bba,128,1756,1756,0,0,3,30,0,0,0,0,36,0,65,65,2074,2096,1769,1774,2046,2010,81,81,945,945,43,43,39,39,22,22,5,5
+D00,pooled,199,1970,1970,0,0,0,0,0,0,0,0,0,0,87,87,2461,2461,2474,2474,2671,2671,98,98,1009,1009,61,61,61,61,24,24,5,5
+D00,44b6,71,214,214,0,0,0,0,0,0,0,0,0,0,22,22,365,365,700,700,661,661,17,17,64,64,18,18,22,22,2,2,,
+D00,6bba,128,1756,1756,0,0,0,0,0,0,0,0,0,0,65,65,2096,2096,1774,1774,2010,2010,81,81,945,945,43,43,39,39,22,22,5,5

@@ -1,0 +1,169 @@
+{
+  "incomplete_existing_worker": "The D10_adapted/44b6 calibration process started before ledger installation; its complete resource-wall receipt will be charged separately.",
+  "records": [
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "first_seed_training",
+      "measurement_sha256": "993ed7848dd34220656651372d32315e53089288caa0b2d04b20e8f8dedfcc29",
+      "path": "invalid/attempt1/training/D10_frozen/44b6/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 1425.4275029389973,
+      "status": "measured"
+    },
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "330067be245e954dd0a76dad303fe67963f291ea34eb351b7250f43e9bfd8343",
+      "path": "invalid/attempt1/training_pilot/D20_temporal/44b6/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 68.80079412799932,
+      "status": "measured"
+    },
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "first_seed_training",
+      "measurement_sha256": "a394b719cad6702b157b5377927d385e5efab4e957c255a0d5f97df2971a514d",
+      "path": "training/D10_frozen/44b6/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 1224.7085335510237,
+      "status": "measured"
+    },
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "first_seed_training",
+      "measurement_sha256": "7e13487a95b4549b026effd9aa43df056c63dec40baf920691afff0b2fcefe07",
+      "path": "training/D10_frozen/6bba/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 2077.898438730015,
+      "status": "measured"
+    },
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "first_seed_training",
+      "measurement_sha256": "6e5a2563a7295260d240547a2227c56a22244fbf088061c1ec55693ce9a4ba91",
+      "path": "training/D10_adapted/44b6/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 1203.473894024988,
+      "status": "measured"
+    },
+    {
+      "accounting": "Measured completed optimizer-step lease intervals",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "432282ed06da41aeab89c29fdf0997c125f62c22c328bae83d15608a75e1c1d6",
+      "path": "training_pilot/D20_temporal/44b6/20260915/history.jsonl",
+      "pre_ledger": true,
+      "seconds": 41.93538560200068,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "7f803d5cffe21183b50756a02aaeebb04faafdbe6a4e04026ca279ed85f23f12",
+      "path": "calibration/D10_frozen/44b6/20260915/resources.json",
+      "pre_ledger": true,
+      "seconds": 139.3220592130001,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "00354053e3970665cb122dbb1d8681ce5dbaee2b3b32acac9e6f3cb02011a897",
+      "path": "calibration/D10_frozen/6bba/20260915/resources.json",
+      "pre_ledger": true,
+      "seconds": 246.19723671999964,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "5bd74a01e49ffa069bc140526f5d538e03446da67607c1bf20ff8ae08b87a50e",
+      "path": "invalid/startup_validation_attempt1/fresh_validation/specimen_alder/output/baseline.resources.json",
+      "pre_ledger": true,
+      "seconds": 0.48349466400031815,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "e41bf9c8fcb5b906f72fd69f932affb60640556d11e5eb795c980b619e5eff2a",
+      "path": "invalid/startup_validation_attempt1/fresh_validation/specimen_birch/output/baseline.resources.json",
+      "pre_ledger": true,
+      "seconds": 0.4752951419977762,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "7a689cbb240ecc2835e1697e052049739cf433462875ed83d7610edd34654d5e",
+      "path": "invalid/startup_validation_attempt1/native_validation/output/resources.json",
+      "pre_ledger": true,
+      "seconds": 3.2969455249985913,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "preflight_and_pilots",
+      "measurement_sha256": "e681806c964bde37dc42dfd4697ed23be0625e0b33df9123cbc95a8449dca113",
+      "path": "resources/profile.json",
+      "pre_ledger": true,
+      "seconds": 3.037628959998983,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "837c89229a5cd8aa4d946c025ee10db43cadf60da17e49b0dc53e03d2bf21fbe",
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "pre_ledger": true,
+      "seconds": 254.8701765879996,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "fda6e14ab84287f1d0b68bd9e1bc0b662b772c10dbd658ef0e9978ee10744d70",
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "pre_ledger": true,
+      "seconds": 32.982238960999894,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "0eff8ea428253800018f8ea3edf64fee19287f39e46f61ac736bcdd0944fcef4",
+      "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "pre_ledger": true,
+      "seconds": 901.3917015409988,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "2c2a1ccb15d284ecdc045cbe96bdbcead7dcea3936f185a9818c83cc3f1f2e43",
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "pre_ledger": true,
+      "seconds": 122.44332887799828,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "f101d5870fd1343a0d34861fca7defc7359f345a9ff4ae1b12ba33a06558d98b",
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "pre_ledger": true,
+      "seconds": 340.19703064200075,
+      "status": "measured"
+    },
+    {
+      "accounting": "Conservative full worker resource-wall charge; may include CPU work outside the lease",
+      "category": "first_seed_training",
+      "measurement_sha256": "a20cb8f0ab38cca49f3f1c1576ee37c317d1eb69b8b26d3ec8a8d82efcd425df",
+      "path": "source_screen/D10_frozen/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "pre_ledger": true,
+      "seconds": 129.30567134000012,
+      "status": "measured"
+    }
+  ],
+  "scientific_recipe_unchanged": true,
+  "status": "measured"
+}

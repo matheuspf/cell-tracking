@@ -1,0 +1,91 @@
+{
+  "event_support": "Post-freeze official local-window observation/topology categories; never a model input.",
+  "no_repeated_stress_selection": true,
+  "representative_clips": {
+    "44b6": {
+      "44b6_5f15d135": "ordinary: median source calibration P0 count",
+      "44b6_d754aa59": "event support: maximum available source calibration division groups",
+      "44b6_e31261b4": "crowded: maximum source calibration P0 count"
+    },
+    "6bba": {
+      "6bba_4ffd3da3": "ordinary: median source calibration P0 count",
+      "6bba_767a1e17": "crowded: maximum source calibration P0 count",
+      "6bba_bb9f20c3": "event support: maximum available source calibration division groups"
+    }
+  },
+  "split_manifest_sha256": "c0916043735f5b30f9a9ce57a4e800b6b5296409bc94c966b5e8a356b53dba05",
+  "status": "source_only_frozen",
+  "stress": {
+    "blur_kernel": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "brightness": 0.9,
+    "center_shift_um_zyx": [
+      0.4,
+      0.2,
+      0.2
+    ],
+    "contrast": 0.9,
+    "gamma": 1.1,
+    "missing_relative_frame": 1,
+    "read_noise_std": 0.01,
+    "sampling_scale": 1.02,
+    "scope": "One combined fixed module perturbation at P0 observations; upstream P0 outputs and native evidence remain the same. This is not a new independent embryo or a detector stress test.",
+    "seed": 20260915
+  },
+  "targets_used_to_fit_thresholds": false,
+  "thresholds": {
+    "44b6": {
+      "close_center_distance_um": 7.0,
+      "density10": [
+        1.0,
+        2.0
+      ],
+      "intensity": [
+        0.45848631858825684,
+        0.7005009949207306
+      ],
+      "local_contrast": [
+        0.11504177749156952,
+        0.25124332308769226
+      ],
+      "normalized_depth": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "source_image_only_rows": 97639,
+      "spatial_boundary_um": 7.0,
+      "temporal_boundary_frames": [
+        2,
+        4
+      ]
+    },
+    "6bba": {
+      "close_center_distance_um": 7.0,
+      "density10": [
+        0.0,
+        2.0
+      ],
+      "intensity": [
+        0.41117528080940247,
+        0.6800087094306946
+      ],
+      "local_contrast": [
+        0.08350319415330887,
+        0.237792506814003
+      ],
+      "normalized_depth": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "source_image_only_rows": 109869,
+      "spatial_boundary_um": 7.0,
+      "temporal_boundary_frames": [
+        2,
+        4
+      ]
+    }
+  }
+}

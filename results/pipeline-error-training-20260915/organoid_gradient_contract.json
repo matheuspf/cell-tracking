@@ -1,0 +1,12 @@
+{
+  "actual_nonzero_gradient_tensors": 8,
+  "gpu_used": false,
+  "only_final_block_and_projection": true,
+  "status": "measured",
+  "trainable_layers": [
+    "down3>conv1",
+    "down3>conv2",
+    "down3>pool",
+    "dense"
+  ]
+}

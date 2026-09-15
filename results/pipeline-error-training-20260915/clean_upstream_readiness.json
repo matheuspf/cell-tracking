@@ -1,0 +1,41 @@
+{
+  "another_study_modified_or_resumed": false,
+  "both_completed_directional_checkpoints_available": false,
+  "checked_utc": "2026-09-15T18:18:37.981913+00:00",
+  "clean_comparison_score": null,
+  "fits": [
+    {
+      "checkpoint_sha256": null,
+      "final_checkpoint": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/models/native/source-44b6-seed-314159/final.pt",
+      "final_checkpoint_available": false,
+      "last_progress_utc": "2026-09-15T03:21:05.405181+00:00",
+      "last_recorded_epoch": 17,
+      "last_recorded_updates": 13064,
+      "progress_sha256": "0282f2316b3efe4a9510f0865c8cec06a90489c0d54dac5028fcd688a8850b8d",
+      "reason": "Required fixed final 400-epoch checkpoint is absent",
+      "required_epochs": 400,
+      "source": "44b6",
+      "status": "blocked",
+      "target": "6bba"
+    },
+    {
+      "checkpoint_sha256": null,
+      "final_checkpoint": "/home/mpf/code/kaggle/cell-tracking/work/incumbent-comparison-20260914/models/native/source-6bba-seed-314159/final.pt",
+      "final_checkpoint_available": false,
+      "last_progress_utc": "2026-09-15T03:21:11.614156+00:00",
+      "last_recorded_epoch": 9,
+      "last_recorded_updates": 13072,
+      "progress_sha256": "96ef6537c233f157ff118910dde10f80dce678e9f745728da3e15b5e1276a27e",
+      "reason": "Required fixed final 400-epoch checkpoint is absent",
+      "required_epochs": 400,
+      "source": "6bba",
+      "status": "blocked",
+      "target": "44b6"
+    }
+  ],
+  "original_plan_sha256": "f4976b944948ade348207b2655324b161ebda0a784bfe1914a9e9b839d12b438",
+  "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
+  "running_job_claim_based_on_current_processes": true,
+  "running_native_training_pids": [],
+  "status": "blocked"
+}

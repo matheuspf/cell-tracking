@@ -1,0 +1,11 @@
+# Only concise metric tables from this study override the repository CSV ignore.
+!scores.csv
+!per_embryo_scores.csv
+!per_clip_scores.csv
+!experiment_matrix.csv
+!error_transitions.csv
+!source_feasibility_scores.csv
+!source_model_scores.csv
+!stress_scores.csv
+!diagnostic_strata.csv
+!training_fits.csv

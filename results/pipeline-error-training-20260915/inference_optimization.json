@@ -1,0 +1,16 @@
+{
+  "baseline_method": "Original per-parent CUDA complete-decision scoring",
+  "bounded_graph_hash": "00611bc61f5df50927738dbff7645ccd75cfce4cdbbc89ce39a53c40ab79657a",
+  "dataset": "44b6_d754aa59",
+  "exact_edges": true,
+  "exact_nodes": true,
+  "files": {
+    "actions": "4aea567852918a75600aaca7be14a0d0b77135b29119a47dd7aaac220dc94b04",
+    "fast_infer": "059360eff3b98bc41dfe1afc2e24e5b0138bfad8a383e0eddfafc09bedf34e18"
+  },
+  "optimized_method": "One-time pair scoring, event batches, optimistic complete-assignment upper bounds; CPU audit",
+  "reference_graph_hash": "00611bc61f5df50927738dbff7645ccd75cfce4cdbbc89ce39a53c40ab79657a",
+  "source_only": true,
+  "status": "measured",
+  "target_scores_read": false
+}

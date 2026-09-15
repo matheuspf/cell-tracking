@@ -1,0 +1,16 @@
+{
+  "claim": "source-only head; inherited upstream exposure",
+  "clean_end_to_end_transfer": false,
+  "external_synthetic": "Excluded: historical simulator calibrated on 44b6.",
+  "native_clean_fits": "No running native-training process observed at preflight. Existing 400-epoch fits are incomplete; left untouched.",
+  "public_primary_exposure": "Training split unresolved.",
+  "public_primary_sha256": "12f6881ee3620a831697ca098ff8f48e687a24225f4e048b538deec3562fe771",
+  "public_secondary_exposure": "All 199 clips in checkpoint-linked training manifest; 80% of detector logits only.",
+  "public_secondary_sha256": "9bac2fa0dadc4a6fc1899e0caf187f4b553e0a7cd90ba1261a68b35ffe9e305f",
+  "source_labels": "Only explicitly selected source embryo may be opened by each fit/calibration process.",
+  "sources": [
+    "docs/incumbent-provenance-20260914.md",
+    "results/strong-tracker-v3/final_report.md"
+  ],
+  "teacher_exposure": "Historical v2 E_hgb teacher fitted on the opposite embryo; retained in P0 upstream evidence."
+}
