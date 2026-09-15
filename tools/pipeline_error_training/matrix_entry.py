@@ -23,7 +23,9 @@ def main():
             cached_operational_inputs=True, fresh_end_to_end=False))+'\n')
     atexit.register(record)
     from .resources import Monitor, cpu_budget
-    cpu_budget(4)
+    # All four workers inherit the same bounded 16-CPU mask. Restricting every
+    # worker to its first four CPUs would concentrate them on the same cores.
+    cpu_budget()
     import torch
     torch.set_num_threads(2)
     from .common import load_graph, read_json, sha

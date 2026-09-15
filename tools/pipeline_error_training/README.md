@@ -63,6 +63,14 @@ GPU lease hours for pilots, first seed, replication and final work, respectively
 Other programs' device memory contributes to admission; their GPU time is not
 charged. A failed resource admission is a blocker, not permission to disrupt them.
 
+`executed_training_schedule.json` records the exact learning-rate schedule used
+by the shortened, matched fits. Inference reuses frame quantiles and quantized
+crops, then reads each batch once for distinct encoders of the same family.
+Whole-source parity checks cover every embedding and validity mask before these
+optimizations are adopted; each encoder retains its own weights and output cache.
+The original independent embedding loader verifies every reused cache and image
+hash. No shared-crop optimization changes training examples or decision rules.
+
 ## Validation and results
 
 ```sh

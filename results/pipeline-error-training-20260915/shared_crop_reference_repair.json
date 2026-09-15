@@ -1,0 +1,12 @@
+{
+  "failed_before_GPU_lease": true,
+  "invalid_artifacts": {
+    "shared_embedding_parity.py": "57bc75e53fee41abaa9d20a1e603f1faf95897285071d8c36ec6b2b1167df510",
+    "source-shared-crop-parity.json": "86687e901cae306e2a4cade6e45b58a232bb488129d18c26f1a029934f87d2af",
+    "source-shared-crop-parity.log": "6492be8520717d2ea603eb791619cde7f1cec569826dfe1fe27851c95a01515d"
+  },
+  "model_training_unchanged": true,
+  "new_target_scores_read": false,
+  "reason": "Proof expected compact embedding directly below current_image_cache; this completed control used its embeddings subdirectory.",
+  "status": "failed"
+}

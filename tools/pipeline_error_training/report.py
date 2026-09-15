@@ -3,6 +3,7 @@ from collections import Counter
 import csv
 import importlib.metadata
 import json
+import math
 from pathlib import Path
 import subprocess
 
@@ -76,6 +77,35 @@ def source_rows():
             row['calibrated_source_grouped_decision_loss'] = diagnostic.get('after', {}).get('loss')
             row['calibration_temperature'] = calibration.get('calibration', {}).get('temperature')
         result.append(row)
+    return result
+
+
+def executed_schedule(training):
+    """Describe the existing executed schedule without changing any fit."""
+    updates = training['updates']
+    warmup = min(500, updates)
+    factors = [min(1., (step+1)/warmup)*.5*(1+math.cos(math.pi*step/updates))
+               for step in range(updates)]
+    peak = max(range(updates), key=factors.__getitem__)
+    result = dict(status='measured', total_updates=updates,
+        effective_batch_groups=training['effective_batch_groups'],
+        nominal_warmup_updates=training['warmup_updates'], effective_warmup_denominator=warmup,
+        zero_based_step_formula='base_lr * min(1, (step+1)/min(500, updates)) * (1+cos(pi*step/updates))/2',
+        warmup_and_cosine_applied_concurrently=True,
+        new_parameter_learning_rates=dict(first=.0003*factors[0], peak=.0003*factors[peak],
+            last=.0003*factors[-1], peak_update_one_based=peak+1),
+        pretrained_parameter_learning_rate_multiplier=.1,
+        identity_only_prefix_updates=training['pretrain_updates'],
+        standard_joint_update_groups=dict(identity=16, biological_event=16),
+        continuation_control='A10 uses 32 identity groups at every update',
+        no_pretrain_control='D20_no_pretrain uses 16 identity and 16 biological-event groups from its first update',
+        observation_joint_update_groups=dict(identity=16, observation=16,
+            synthetic_probability_per_observation_group=.25),
+        organoid_adaptation_starts_at_update_one_based=max(1,updates//8)+1,
+        code_sha256={name:sha(Path(__file__).with_name(name)) for name in ['train.py','observation_train.py']},
+        changed_training=False, target_results_used=False,
+        interpretation='The common throughput reduction also shortens the warmup denominator. This records the schedule already used by all valid fits; it is not a new recipe or a convergence claim.')
+    write_json(RESULTS/'executed_training_schedule.json',result)
     return result
 
 
@@ -351,6 +381,7 @@ def run(complete=False):
     lock=read_json(RESULTS/'execution_repair_lock.json')
     training=dict(status='measured' if any(r['status']=='measured' for r in fits) else 'not run',
         matched_primary_updates=lock['training']['updates'],effective_batch_groups=32,
+        executed_schedule=executed_schedule(lock['training']),
         source_checkpoint_selection='Fixed final checkpoint after the common source-only throughput lock',
         fits=fits,source_scores=source,matched_common_prefixes=matched_training_controls(),
         source_independence_certified=False,clean_end_to_end_out_of_fold=False,
@@ -428,6 +459,9 @@ closed-bank observation selection run independently. Complete decisions include 
 The common source-only throughput lock reduced the proposed 16,000-update ceiling to {lock['training']['updates']} updates,
 with equal budgets across matched fits. Models use the fixed final checkpoint, source-only regularized calibration,
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
+The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
+also shortens its warmup denominator to {lock['training']['updates']}. See [the exact schedule](executed_training_schedule.json).
+These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
 Cumulative charged GPU lease time is {resource['gpu_budget']['total_hours']:.3f} hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 

@@ -1,10 +1,10 @@
 {
   "clean_transfer": {
-    "readiness_sha256": "e215b6853bfec29fc6dcbf1d0786d1ff4471bbee33124757081111c33dd403a8",
+    "readiness_sha256": "57f346dafbbf901f2dd7b37a238ecb91f49a9be5a2f0742e100db68000d71913",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "created": "2026-09-15T20:04:24.127573+00:00",
+  "created": "2026-09-15T21:10:54.497792+00:00",
   "experiments": [
     {
       "clips": null,
@@ -58,7 +58,7 @@
     {
       "clips": null,
       "experiment": "D20_temporal",
-      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "reason": "1/2 directional fits complete; all-199 target score unavailable",
       "score": null,
       "status": "not run"
     },

@@ -19,6 +19,7 @@ from .fast_infer import AdditiveScores, event_batches
 from .infer import embeddings
 from .resources import Lease
 from .scoring import EVENT_SCALE, load_model
+from .shared_embeddings import embeddings_many
 
 
 def prepare(row, graph, native, packages, root, monitor=None, wait=False, device='cuda'):
@@ -34,6 +35,7 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
         models[name], specs[name] = model, spec
     stamp = dict(bank_sha256=bank.hash, model_sha256={n: specs[n]['weights_sha256'] for n in names},
                  package_sha256={n: sha(Path(packages[n])/'frozen_package.json') for n in names},
+                 shared_embedding_code_sha256=sha(Path(__file__).with_name('shared_embeddings.py')),
                  implementation_sha256=sha(Path(__file__)), device=device)
     final = root/'prepared.json'
     if final.exists():
@@ -71,10 +73,13 @@ def prepare(row, graph, native, packages, root, monitor=None, wait=False, device
             model.to(device)
             if device == 'cpu' and not (root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz').exists():
                 raise ValueError('CPU parity requires verified existing image-derived embeddings')
-            z[name], valid[name] = embeddings(model, row, graph, bank,
-                root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz', specs[name]['weights_sha256'])
-            if monitor:
-                monitor.check()
+        shared = embeddings_many(models, row, graph, bank,
+            {name:root/'embeddings'/specs[name]['weights_sha256']/f'{row["dataset"]}.npz' for name in names},
+            {name:specs[name]['weights_sha256'] for name in names})
+        for name in names:
+            z[name], valid[name] = shared[name]
+        if monitor:
+            monitor.check()
         scalar = AdditiveScores(models, specs, bank, z, valid)
         zz = {name: torch.as_tensor(z[name], device=device) for name in names}
         count = 0

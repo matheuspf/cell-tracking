@@ -6,11 +6,11 @@
     "tests/pipeline_error_training",
     "-q"
   ],
-  "log_sha256": "2610a3fcbf975778221c3695022099666493a9ce77e4217c7c9515b6964b7913",
+  "log_sha256": "13c41bfd7b396092f5cc446995c0b217e3cfabc741be5af7e52b5742ae541e87",
   "returncode": 0,
-  "seconds": 8.224549636997835,
+  "seconds": 9.310446230003436,
   "status": "measured",
-  "summary": "48 passed in 6.53s",
+  "summary": "50 passed in 7.67s",
   "test_files_sha256": {
     "test_accounting.py": "d779eb83494f64ea7e6cc8a1f6be93e5537176e67d48f784411a5a4f1552a819",
     "test_additive_bound.py": "40cb87392f364b56b8107ee24566b16551c7d699fcd37af678a143d34adf247a",
@@ -25,6 +25,7 @@
     "test_observation_actions.py": "902ae10f1112dca9f34718a019734cf12384c94f80f6c28742ee031d48850d6b",
     "test_replacement.py": "4c880d94d31bc7d7b1cf9196607eddfdd105fb572ab2a9f1d80cf3a7696c2928",
     "test_scientific_contracts.py": "d05178c12ec5b7b0c926f7ab811181ebc4cfa7623f44af2608cfaf2e8b6585a5",
+    "test_shared_embeddings.py": "2e28205ad6da45b8ecf6a36a089ef16441949389f12c94d9219ada03e9bba71a",
     "test_stress.py": "fc61a4d67aa6d2bbe98d2a68ecca2818f8945d8c8d3df3b5bc0855d4a59e36b1"
   },
   "tested_source_sha256": {
@@ -69,7 +70,7 @@
     "inventory.py": "e7ae2caf8fc1f6c1334e3847ffd29fbe591d950976cb340b790ceabeccf2bcdf",
     "labels.py": "1d2b49e0017bcb6e3d481a2d4d690d0e23494718e05992be831651941ec6fa02",
     "maintenance.py": "f22595d5d47871f368ae83e15fc9aae42fa43b2ab5e040d3653a021d3bb3dbbf",
-    "matrix_entry.py": "a6bfe4ac92c17e31539fac21b73a2e453e7d943e4afb4ca1ecf5d88e613fa159",
+    "matrix_entry.py": "1daaab16dbafce063e063fc30b926e92b5a8e8384fb3846d32f6683d2fa41c71",
     "models.py": "1e38f217c11b9af800b29f1ce2dc95ac3146219530260efe8c5308fb79833202",
     "multi_model_validation.py": "af64b0b86e6fdd44cfa0fc0945434c13f026f6a912ea55c2a870b19bdf65fcbb",
     "native_refresh.py": "1b31ed2ac1d1ff20569d673de1b1343b475599af06bc931bae3e3e7b66f8cdf8",
@@ -93,16 +94,18 @@
     "repairs.py": "360a481ee3b74766c4291babb5044375d16cc1681e2659d5b72a95ee3da634fb",
     "replacement.py": "fce49c29e36f23d27eeae3d4e80b2039c4adf8e64906c41f7cfe65068e26b642",
     "replication.py": "b8c717b8546b4bfe0f2edf7c11bc637b1169a5551f39d7e5b0a673e7d6460a87",
-    "report.py": "c623207a5fc874ed15503992ee6bb343738cd7426a607af848f4e737a869355f",
+    "report.py": "9b1d65a9deede57c2178ee671abbb504b5e1d749a9d18dcee8e27afbff28b14e",
     "resources.py": "7ba89ff970ac17a8e5b394581beee657671d2e685e6cd9a01a878cac5f3178dc",
     "resume_validation.py": "dd624be4c999d362fb6dc84b9f7878ad5f048c27fcc797aa7d80134f2ac3164e",
     "scoring.py": "bc9ff97c3d3e448c360d64738a578b763a742bbd7319382a8a131b87135c9542",
     "selection.py": "37b05dc48275b498362ac96111d07982029917768dcb8d48d6501fa416dd78f6",
     "serialization.py": "decc110b794310579168180f35cfc8cc53b7f5982dad8bfdefe76b138ce8b9b3",
+    "shared_embedding_parity.py": "56f4bfe41f4b7e4711928c42434a79e263b17331fe21fa99af319318a209ad7f",
+    "shared_embeddings.py": "3e0f3119b28468be9cf72c74d75767708550179e61b4c700d3cf2f2dcbeee971",
     "source_replacement.py": "b25bcaaf4499748b99723c8ee5be9660b49b93b7a2a6244bace82bdbf7fe2207",
     "source_screen.py": "ccc5400cdf7e1f380310b55d356e60d45b8dc0b8a6034583a8fd4299f3879b0d",
     "splits.py": "ddbcb46b742ee15a89848985474db7e2bfb42cde6bbb8fcde8703646354c8e2f",
-    "staged_infer.py": "9f6192f29eff168ba10c909114a6faa8710c6e5cbc7ba6e7d230cdf591fd792e",
+    "staged_infer.py": "6642568d829f3616722df623777df0fb74103b3a52a8c13f54b7568b9fb10b3e",
     "strata.py": "6d3ee8f715b18a4484fd1ea7840b04813356c470358bd71e5fd424e09e1c8c0f",
     "stress.py": "5365a0cfa637ea01ba5e3466955d6c096a09ab66122b4d94c76e978bf55c8913",
     "stress_loss.py": "a0b3ae384a7e1f1d007df9680e7103968941cd053f88dd1b99686f80e5f96937",
@@ -110,6 +113,6 @@
     "trace.py": "0f4faadabe4b2cf5160149fff5955592cbf02de0b41b7b4ea42aa30c64a3e4ca",
     "train.py": "651e6aeaadd0675d0cc4267b18d8d1d6f78d3484dc8a94d795a08adf4fcc7cbd",
     "training_cache_parity.py": "89ae80cb231e9a24de08604f5f4c782ed900de9b380dd11b7b8fea81595f0566",
-    "validation.py": "0c7ce67fbd538672b00df4f1c4497ec4a439a2b84288c29d0a91099117813b2b"
+    "validation.py": "6e17a4ae28ec3891548cbcb2657f2a2c2959aafbbd7b86a54fe321f3ba16930b"
   }
 }

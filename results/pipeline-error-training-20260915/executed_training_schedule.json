@@ -1,0 +1,36 @@
+{
+  "changed_training": false,
+  "code_sha256": {
+    "observation_train.py": "f8c259f21c51e1b441e427d20e5703031abea51a25ca9d696a971c51bc5a5eca",
+    "train.py": "651e6aeaadd0675d0cc4267b18d8d1d6f78d3484dc8a94d795a08adf4fcc7cbd"
+  },
+  "continuation_control": "A10 uses 32 identity groups at every update",
+  "effective_batch_groups": 32,
+  "effective_warmup_denominator": 178,
+  "identity_only_prefix_updates": 89,
+  "interpretation": "The common throughput reduction also shortens the warmup denominator. This records the schedule already used by all valid fits; it is not a new recipe or a convergence claim.",
+  "new_parameter_learning_rates": {
+    "first": 1.6853932584269661e-06,
+    "last": 2.336198445021531e-08,
+    "peak": 7.97397001665447e-05,
+    "peak_update_one_based": 75
+  },
+  "no_pretrain_control": "D20_no_pretrain uses 16 identity and 16 biological-event groups from its first update",
+  "nominal_warmup_updates": 500,
+  "observation_joint_update_groups": {
+    "identity": 16,
+    "observation": 16,
+    "synthetic_probability_per_observation_group": 0.25
+  },
+  "organoid_adaptation_starts_at_update_one_based": 23,
+  "pretrained_parameter_learning_rate_multiplier": 0.1,
+  "standard_joint_update_groups": {
+    "biological_event": 16,
+    "identity": 16
+  },
+  "status": "measured",
+  "target_results_used": false,
+  "total_updates": 178,
+  "warmup_and_cosine_applied_concurrently": true,
+  "zero_based_step_formula": "base_lr * min(1, (step+1)/min(500, updates)) * (1+cos(pi*step/updates))/2"
+}

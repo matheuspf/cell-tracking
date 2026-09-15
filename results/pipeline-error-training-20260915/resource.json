@@ -5,7 +5,7 @@
     "accounting": "GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.",
     "active_leases": [],
     "charge_other_programs": false,
-    "completed_intervals": 642,
+    "completed_intervals": 841,
     "limits_hours": {
       "final_inference_and_package": 8.0,
       "first_seed_training": 24.0,
@@ -14,17 +14,17 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 4.352667332608264,
-      "preflight_and_pilots": 0.5494694213473426,
+      "first_seed_training": 5.203408243641681,
+      "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
-    "total_hours": 4.902136753955606
+    "total_hours": 5.784690380453191
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 76,
+  "measurements": 84,
   "peak_all_study_process_rss_gib": 12.750835418701172,
-  "peak_process_tree_rss_gib": 7.576938629150391,
-  "peak_total_gpu_gib": 6.708984375,
+  "peak_process_tree_rss_gib": 12.322921752929688,
+  "peak_total_gpu_gib": 6.892578125,
   "records": [
     {
       "path": "staged_crowded_parity/resources.json",
@@ -45,6 +45,16 @@
       "resource_error": null,
       "sha256": "537fe06baf4b7d0225e8597c71cd4168172749c8ff9799df00f000144bd83289",
       "wall_seconds": 24.91417113100033
+    },
+    {
+      "path": "shared_embedding_parity/resources.json",
+      "peak_all_study_process_rss_gib": 2.197376251220703,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 6.892578125,
+      "peak_tree_rss_gib": 2.0395774841308594,
+      "resource_error": null,
+      "sha256": "ab71498b6c8b360a7dca20bb9912efff669ed162e8cf839547208a159c6d6d1b",
+      "wall_seconds": 115.25841670799855
     },
     {
       "path": "frame_crop_parity/resources.json",
@@ -275,6 +285,16 @@
       "resource_error": null,
       "sha256": "8938478980c2296540ae673c5e11ec829456ef912ff85a3718497cfc9d0c71aa",
       "wall_seconds": 190.51615327999752
+    },
+    {
+      "path": "calibration/D20_temporal/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.7917404174804688,
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 4.9892578125,
+      "peak_tree_rss_gib": 1.6735649108886719,
+      "resource_error": null,
+      "sha256": "e9f23971ea5b56a67cf0880a1376802bee6d455004f8265e8fe1eca04c595316",
+      "wall_seconds": 135.91745802099467
     },
     {
       "path": "calibration/D10_adapted/44b6/20260915/resources.json",
@@ -508,6 +528,16 @@
       "wall_seconds": 140.34111109899823
     },
     {
+      "path": "source_screen/D20_compact/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 3.4781455993652344,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 2.4248046875,
+      "peak_tree_rss_gib": 1.5259475708007812,
+      "resource_error": null,
+      "sha256": "518187b2b5edb73d4286371f4b03b4b9f1ab302d9983539f1f2313aefa6f17d4",
+      "wall_seconds": 90.13987539500158
+    },
+    {
       "path": "source_screen/D20_compact/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
       "peak_all_study_process_rss_gib": 4.026313781738281,
       "peak_os_threads": 9,
@@ -516,6 +546,46 @@
       "resource_error": null,
       "sha256": "0b954a4ccaaa2d158a6570afe7c76adf1eab6ad0b46388b294855bedc3dec0ef",
       "wall_seconds": 80.41440926799987
+    },
+    {
+      "path": "source_screen/D20_compact/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 3.7620773315429688,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 2.4501953125,
+      "peak_tree_rss_gib": 1.8529243469238281,
+      "resource_error": null,
+      "sha256": "e6af160852801173eea007855553db4689331b8b08a48a8eeb59953b8f8049dc",
+      "wall_seconds": 311.4499829669985
+    },
+    {
+      "path": "source_screen/D20_temporal/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "peak_all_study_process_rss_gib": 3.64154052734375,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 5.4296875,
+      "peak_tree_rss_gib": 1.842864990234375,
+      "resource_error": null,
+      "sha256": "9221f19d34ab34eff52011c2ffb24e022411897089584b08459db7b0cadbbd80",
+      "wall_seconds": 399.2897666880017
+    },
+    {
+      "path": "source_screen/D20_temporal/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "peak_all_study_process_rss_gib": 3.1587181091308594,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 5.0537109375,
+      "peak_tree_rss_gib": 1.393646240234375,
+      "resource_error": null,
+      "sha256": "4f55ca565ccc146cf69bb9eeeabfd16bcb8a318bdee2d5b183ad48949cab29e6",
+      "wall_seconds": 14.901462822999747
+    },
+    {
+      "path": "source_screen/D20_temporal/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "peak_all_study_process_rss_gib": 3.1953697204589844,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 5.1650390625,
+      "peak_tree_rss_gib": 1.3930854797363281,
+      "resource_error": null,
+      "sha256": "e519cf535faaeca8ec520a26f5826f769c781da6530a87ffbd1b24c4895d3cff",
+      "wall_seconds": 117.24368380800297
     },
     {
       "path": "source_screen/D10_adapted/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
@@ -634,6 +704,16 @@
       "resource_error": null,
       "sha256": "78968a54019d8e7721bc737bbeeb036d31b244cc748880a5a904162e34821126",
       "wall_seconds": 2565.612893089001
+    },
+    {
+      "path": "training/D20_temporal/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 12.59177017211914,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.158203125,
+      "peak_tree_rss_gib": 12.322921752929688,
+      "resource_error": null,
+      "sha256": "0ebb34a5d72b8577ef02f7169eeb3c283ccf194650fb33eb6b9baa9b242712a6",
+      "wall_seconds": 2843.4528651149994
     },
     {
       "path": "training/D10_adapted/44b6/20260915/resources.json",

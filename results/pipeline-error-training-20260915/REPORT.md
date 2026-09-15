@@ -2,7 +2,7 @@ P0 retained
 
 # Pipeline error training — September 15, 2026
 
-Execution status: **executing**. 6 directional fits have completed the locked 178 updates.
+Execution status: **executing**. 7 directional fits have completed the locked 178 updates.
 The adopted production default remains P0. The recommendation is recorded separately in recommendation.json.
 
 ## Exact controls and evidence
@@ -42,12 +42,15 @@ closed-bank observation selection run independently. Complete decisions include 
 The common source-only throughput lock reduced the proposed 16,000-update ceiling to 178 updates,
 with equal budgets across matched fits. Models use the fixed final checkpoint, source-only regularized calibration,
 and no target threshold selection. Failed implementation attempts remain under the new ignored invalid/ directory.
-Cumulative charged GPU lease time is 4.902 hours of 48; detailed memory/runtime evidence is in resource.json.
+The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
+also shortens its warmup denominator to 178. See [the exact schedule](executed_training_schedule.json).
+These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
+Cumulative charged GPU lease time is 5.785 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
 
-Tests: **measured** — 48 passed in 6.53s.
+Tests: **measured** — 50 passed in 7.67s.
 
 The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran from both renamed 100-frame images (specimen_alder: 168.987 s, specimen_birch: 283.788 s). Startup guards denied annotations, historical prediction caches and network access; both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. A recommended candidate also requires its own cold-image proof.
 
