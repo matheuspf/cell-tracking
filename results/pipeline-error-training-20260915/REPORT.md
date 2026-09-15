@@ -2,7 +2,7 @@ P0 retained
 
 # Pipeline error training — September 15, 2026
 
-Execution status: **executing**. 8 directional fits have completed the locked 178 updates.
+Execution status: **executing**. 9 directional fits have completed the locked 178 updates.
 The adopted production default remains P0. The recommendation is recorded separately in recommendation.json.
 
 ## Exact controls and evidence
@@ -51,7 +51,12 @@ implementation and are not a controlled comparison of architecture speed.
 The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
 also shortens its warmup denominator to 178. See [the exact schedule](executed_training_schedule.json).
 These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
-Cumulative charged GPU lease time is 7.380 hours of 48; detailed memory/runtime evidence is in resource.json.
+Event minibatches are conditioned on groups containing a supported biological positive: the completed temporal
+packages record 15 such groups for 44b6 and 74 for 6bba. Their alternatives supply supported identity confusers and
+metric-risk negatives; groups containing only negative event hypotheses are not a separate event-minibatch pool.
+Identity minibatches sample supported trajectory groups, and source calibration uses the unbalanced candidate
+distribution. This sampling distinction limits conclusions about whole-field false-fork rejection.
+Cumulative charged GPU lease time is 7.889 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference

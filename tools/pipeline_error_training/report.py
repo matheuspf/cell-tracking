@@ -56,6 +56,7 @@ def fit_rows():
                     frozen_package_sha256=sha(root/'frozen_package.json') if frozen else None,
                     calibrated=bool(frozen), calibration_sha256=sha(root/'calibration.json') if frozen else None,
                     source_groups_visited=package.get('source_groups_visited', len(package.get('group_visits', {}))) if package else None,
+                    positive_biological_event_groups_in_fit_pool=package.get('source_event_groups') if package else None,
                     claim='Source-only head; inherited upstream exposure'))
     return result
 
@@ -475,6 +476,11 @@ implementation and are not a controlled comparison of architecture speed.
 The executed learning-rate schedule applies warmup and cosine decay concurrently; the shortened update budget
 also shortens its warmup denominator to {lock['training']['updates']}. See [the exact schedule](executed_training_schedule.json).
 These short, matched fits do not establish convergence or rule out the architectures after longer source-only training.
+Event minibatches are conditioned on groups containing a supported biological positive: the completed temporal
+packages record 15 such groups for 44b6 and 74 for 6bba. Their alternatives supply supported identity confusers and
+metric-risk negatives; groups containing only negative event hypotheses are not a separate event-minibatch pool.
+Identity minibatches sample supported trajectory groups, and source calibration uses the unbalanced candidate
+distribution. This sampling distinction limits conclusions about whole-field false-fork rejection.
 Cumulative charged GPU lease time is {resource['gpu_budget']['total_hours']:.3f} hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
