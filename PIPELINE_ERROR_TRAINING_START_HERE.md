@@ -1,9 +1,21 @@
 # Error-driven training: start here
 
+## Local execution record
+
+The implementation and measured evidence are under
+[results/pipeline-error-training-20260915/REPORT.md](results/pipeline-error-training-20260915/REPORT.md).
+Read [STATUS.json](results/pipeline-error-training-20260915/STATUS.json) and
+[CONTINUATION.md](results/pipeline-error-training-20260915/CONTINUATION.md) for the
+current execution state and exact commands. Inspect live processes before starting
+a queue; the work directory contains resumable jobs and preserved failed attempts.
+Production P0 remains unchanged. The original handover below is the study plan.
+
+## Original handover
+
 This is the active handover for branch `handover/pipeline-error-training-20260915`.
 It starts from `main` commit `bd844731c0e93b401cf94e67c92350d4109e12df`.
 The implementation and experiments are to be performed locally by Codex, on one
-RTX 4090 (24 GB), 16 CPU cores and 64 GB RAM. This commit is a plan, not a measured improvement.
+RTX 4090 (24 GB), 16 CPU cores and 64 GB RAM. The handover itself does not establish a measured improvement.
 
 ## Give Codex this instruction
 
