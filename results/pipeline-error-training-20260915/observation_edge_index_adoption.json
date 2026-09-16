@@ -1,0 +1,15 @@
+{
+  "active_observation_fit_not_restarted": true,
+  "adopted": "2026-09-16T02:39:52.753417+00:00",
+  "adopted_implementation_sha256": "16e4857231c84fc424155f87d23373b4a6066850e986b52e3aa618b63d28c372",
+  "new_target_metrics_read": false,
+  "only_post_proof_change": "Default indexed_edges=False becomes True; proof called both settings explicitly",
+  "previous_original_sha256": "dce15d4433ec2c4f78de1233481fda38262cafd801786b0bdb2393af4060758a",
+  "proof_implementation_sha256": {
+    "observation_edges": "3af99777f7a34120894183cae1648f0887c8312fa265a67cb7ac27d3032bc0ed",
+    "observation_infer": "931bd8569d409a6eaacd0dac799693ae15b3101c9f6b438e08f0210e5f34bd91"
+  },
+  "proof_sha256": "3a394e651a50522462241d21237f93ca1cdf05554008bf8f8430e56a263091f6",
+  "status": "measured",
+  "weights_calibration_bank_and_decision_policy_unchanged": true
+}

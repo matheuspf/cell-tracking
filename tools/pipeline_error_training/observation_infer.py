@@ -14,7 +14,7 @@ from .observations import CONFIG, ObservationBank, raw_graph
 from .scoring import load_model
 
 
-def construct_actions(bank, gain, restore):
+def construct_actions(bank, gain, restore, *, indexed_edges=True):
     """Complete observation/incident-edge replacements with stable raw provenance."""
     from strong_tracker_v3.decode import Action, BoundedActionComponents
     protected = fork_support(bank.nodes, bank.graph['edges'])
@@ -24,6 +24,8 @@ def construct_actions(bank, gain, restore):
     pair_index = {tuple(p): i for i, p in enumerate(bank.pairs)}
     seen = set()
     original_edges = set(map(tuple, bank.graph['edges']))
+    from .observation_edges import ObservationEdges
+    lookup = ObservationEdges(bank.graph['edges'],bank.raw['edges']) if indexed_edges else None
     for k, (old, raw) in enumerate(bank.pairs):
         state = 2 if restore else 1
         tube = bank.tube(int(old), int(raw))
@@ -45,7 +47,8 @@ def construct_actions(bank, gain, restore):
             removed_nodes = []
             new_nodes = [[prefix+j, *bank.raw_nodes[j, 1:]] for j in raw_ids]
             remove = set()
-            add = {(prefix+int(a), prefix+int(b)) for a, b in bank.raw['edges'] if int(a) in raw_ids and int(b) in raw_ids}
+            add = (lookup.restored(raw_ids,prefix) if lookup is not None else
+                   {(prefix+int(a), prefix+int(b)) for a, b in bank.raw['edges'] if int(a) in raw_ids and int(b) in raw_ids})
             # Fragment endpoints are explicit births/terminations. Attaching them
             # to an occupied incumbent endpoint requires the later closed native
             # association step to score the complete ownership consequences.
@@ -59,7 +62,8 @@ def construct_actions(bank, gain, restore):
             removed_nodes = [int(bank.nodes[i, 0]) for i, _ in changed]
             new_nodes = [[prefix+j, *bank.raw_nodes[j, 1:]] for _, j in changed]
             replacement = {int(bank.nodes[i, 0]): prefix+j for i, j in changed}
-            remove = {(int(a), int(b)) for a, b in original_edges if a in replacement or b in replacement}
+            remove = (lookup.removed(replacement) if lookup is not None else
+                      {(int(a), int(b)) for a, b in original_edges if a in replacement or b in replacement})
             add = {(replacement.get(a, a), replacement.get(b, b)) for a, b in remove}
             raw_ids = [j for _, j in changed]
         key = digest([removed_nodes, new_nodes, sorted(remove), sorted(add)])

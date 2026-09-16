@@ -355,6 +355,7 @@ def proof_text():
     lines += ['', '[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), '
               '[actual changed-coordinate feature proof](native_refresh_validation.json), '
               '[identical native-query reuse proof](native_query_reuse_parity.json), '
+              '[indexed observation-action proof](observation_edge_parity.json), '
               '[resumption proof](resume_validation.json) and [resource measurements](resource.json).']
     return '\n'.join(lines)
 
