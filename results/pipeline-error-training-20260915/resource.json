@@ -7,20 +7,20 @@
       {
         "arguments": [
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
-          "train",
+          "calibrate",
           "--source",
           "6bba",
           "--arm",
           "D20_no_pretrain"
         ],
         "category": "first_seed_training",
-        "pid": 1669556,
-        "started_epoch": 1789516676.4991877
+        "pid": 1850085,
+        "started_epoch": 1789518421.6020172
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1320,
+    "completed_intervals": 1435,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +30,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 7.755376181389322,
+      "first_seed_training": 8.233019985409678,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
@@ -40,11 +40,11 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 8.336658318200833,
+    "total_hours": 8.81430212222119,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 96,
+  "measurements": 97,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.032306671142578,
   "peak_total_gpu_gib": 6.892578125,
@@ -877,6 +877,16 @@
       "resource_error": null,
       "sha256": "e97b059068cb11921a437d081d168c0169b6dbab19f4afc232f6cea2a75f7443",
       "wall_seconds": 4796.232945411997
+    },
+    {
+      "path": "training/D20_no_pretrain/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 15.895759582519531,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 3.8447265625,
+      "peak_tree_rss_gib": 15.954647064208984,
+      "resource_error": null,
+      "sha256": "9cc6546b31735eaece1d1fdb526ad74639fb2e9cc84c0ef66bd2cf22e62c8121",
+      "wall_seconds": 3200.0067849049956
     },
     {
       "path": "fresh_validation/specimen_birch/output/module.resources.json",
