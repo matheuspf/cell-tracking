@@ -7,20 +7,20 @@
       {
         "arguments": [
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
-          "calibrate",
+          "train",
           "--source",
-          "6bba",
+          "44b6",
           "--arm",
-          "D20_no_pretrain"
+          "A10"
         ],
         "category": "first_seed_training",
-        "pid": 1850085,
-        "started_epoch": 1789518421.6020172
+        "pid": 1882037,
+        "started_epoch": 1789518911.7679844
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1435,
+    "completed_intervals": 1460,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +30,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 8.233019985409678,
+      "first_seed_training": 8.284147989801664,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
@@ -40,11 +40,11 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 8.81430212222119,
+    "total_hours": 8.865430126613175,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 97,
+  "measurements": 101,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.032306671142578,
   "peak_total_gpu_gib": 6.892578125,
@@ -378,6 +378,16 @@
       "resource_error": null,
       "sha256": "406380e7656a6fc5534aa2c60c7343478c70fe4e1fe4864133449cab72fc7fe8",
       "wall_seconds": 93.63332784399972
+    },
+    {
+      "path": "calibration/D20_no_pretrain/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.8217887878417969,
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 4.99609375,
+      "peak_tree_rss_gib": 1.6670913696289062,
+      "resource_error": null,
+      "sha256": "6d34383f25f1d58201e00562064f23c47e163ac212b69146e3f17ae9916aabfc",
+      "wall_seconds": 148.45029611099744
     },
     {
       "path": "invalid/observation_localization_ties/observation_source/44b6/resources.json",
@@ -769,6 +779,36 @@
       "resource_error": null,
       "sha256": "0df1bca3dfb4b2c5f8d4e8fba9f463a1e3b9f57d38b51adda4512228eb598e3b",
       "wall_seconds": 75.64560013099981
+    },
+    {
+      "path": "source_screen/D20_no_pretrain/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 3.2834434509277344,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.369140625,
+      "peak_tree_rss_gib": 1.4166107177734375,
+      "resource_error": null,
+      "sha256": "d82129d92dd6cc405d2ab128adbfe6d97499453b22381de854a38d648ff7a695",
+      "wall_seconds": 68.50777775900497
+    },
+    {
+      "path": "source_screen/D20_no_pretrain/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 3.2715721130371094,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.21484375,
+      "peak_tree_rss_gib": 1.4362945556640625,
+      "resource_error": null,
+      "sha256": "3507a1eb7c2c5c88ffad365df26b8fddd49f12dbd617902714ff6696fc3ea3c2",
+      "wall_seconds": 57.04325463800342
+    },
+    {
+      "path": "source_screen/D20_no_pretrain/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 3.5742645263671875,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.509765625,
+      "peak_tree_rss_gib": 1.6327362060546875,
+      "resource_error": null,
+      "sha256": "d55a92ccfbee2accdf8ec657a6091dc0cd0c81caaf63cc475420201d9c4854e4",
+      "wall_seconds": 212.59731878000457
     },
     {
       "path": "observation_source/44b6/resources.json",

@@ -59,7 +59,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 8.814 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 8.865 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
