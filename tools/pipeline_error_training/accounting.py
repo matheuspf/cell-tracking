@@ -1,6 +1,7 @@
 """Separate complete-graph scoring and identity-based changed-error accounting."""
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
+import fcntl
 import multiprocessing as mp
 from pathlib import Path
 import time
@@ -145,6 +146,16 @@ def one(task):
 
 
 def run(arm, prediction_root=None):
+    # Early complete-inventory audits and the final queue share these exports.
+    # One scorer at a time also keeps the total worker count at four.
+    root = WORK / 'full_evaluation'
+    root.mkdir(parents=True, exist_ok=True)
+    with (root / 'scoring.lock').open('a+') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        return run_locked(arm, prediction_root)
+
+
+def run_locked(arm, prediction_root=None):
     require_target_freeze(arm)
     rows = inputs()
     if prediction_root is None:

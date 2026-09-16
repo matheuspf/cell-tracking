@@ -1,0 +1,10 @@
+{
+  "all_original_function_bodies_ast_equal": true,
+  "created": "2026-09-16T12:11:43.315814+00:00",
+  "current_code_sha256": "9a2a0a2fed5ab58954998bbffda81b00d9b38639253cf44da9a9be7e3464d82c",
+  "original_code_sha256": "5a69485504958eabfb7dc308c03e3964d643645af25f88810062cc4c6b75d161",
+  "purpose": "Serialize early audits and the final queue, including their shared table exports; at most four scorer workers run.",
+  "scoring_changes": false,
+  "status": "measured",
+  "target_models_or_thresholds_changed": false
+}
