@@ -388,6 +388,13 @@ def continuation(status):
         '## Pending or unsuccessful registered experiments', '']
     lines.extend(f"- {r['experiment']}: {r['status']} — {r['reason']}" for r in pending)
     if not pending:lines.append('All registered experiments have complete measured receipts.')
+    retired = optional(RESULTS/'training_crop_retirement.json')
+    if retired:
+        lines += ['', '## Completed-fit crop caches', '',
+            f"The frozen fits' regenerable training crops ({retired['bytes']/2**30:.2f} GiB) were retired to reserve space for inference. "
+            f"All {retired['retained_training_state_files']} model/optimizer/RNG state files were hash-verified before and after. "
+            'The data loaders rebuild missing crops on demand from pinned images. '
+            'See training_crop_retirement.json and work/pipeline-error-training-20260915/maintenance/training_crop_retirement/manifest.json.']
     lines += ['', '## Artifact locations and restrictions', '',
         '- Resumable weights, optimizer/RNG state, full graphs, source labels, image embeddings and logs: work/pipeline-error-training-20260915/.',
         '- Queue state: queue/progress.json, observation_queue/progress.json, finish_queue/progress.json under that root.',

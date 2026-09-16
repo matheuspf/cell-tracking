@@ -7,16 +7,16 @@
       {
         "arguments": [
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/matrix_entry.py",
-          "/home/mpf/code/kaggle/cell-tracking/work/pipeline-error-training-20260915/final_inference/44b6_0113de3b/job.json"
+          "/home/mpf/code/kaggle/cell-tracking/work/pipeline-error-training-20260915/final_inference/44b6_0b24845f/job.json"
         ],
         "category": "final_inference_and_package",
-        "pid": 3646634,
-        "started_epoch": 1789534661.992232
+        "pid": 3646633,
+        "started_epoch": 1789534862.4549952
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": 32.0,
-    "completed_intervals": 2677,
+    "completed_intervals": 2679,
     "dependent_phase_limits_not_additive": true,
     "limits_hours": {
       "final_inference_and_package": 20.748066842769163,
@@ -25,7 +25,7 @@
       "replication": 12.0
     },
     "measured_gpu_lease_hours": {
-      "final_inference_and_package": 0.015325972437858581,
+      "final_inference_and_package": 0.06130982081095377,
       "first_seed_training": 11.251933157230836,
       "preflight_and_pilots": 0.5909951908459556,
       "replication": 0.8199997957547517
@@ -36,7 +36,7 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 12.678254116269402,
+    "total_hours": 12.724237964642496,
     "unused_first_seed_reservation_transfer_enabled": true
   },
   "historical_or_other_studies_restarted": false,

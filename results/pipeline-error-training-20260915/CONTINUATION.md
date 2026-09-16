@@ -51,6 +51,10 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 - D10_adapted_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_temporal_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 
+## Completed-fit crop caches
+
+The frozen fits' regenerable training crops (23.45 GiB) were retired to reserve space for inference. All 32 model/optimizer/RNG state files were hash-verified before and after. The data loaders rebuild missing crops on demand from pinned images. See training_crop_retirement.json and work/pipeline-error-training-20260915/maintenance/training_crop_retirement/manifest.json.
+
 ## Artifact locations and restrictions
 
 - Resumable weights, optimizer/RNG state, full graphs, source labels, image embeddings and logs: work/pipeline-error-training-20260915/.

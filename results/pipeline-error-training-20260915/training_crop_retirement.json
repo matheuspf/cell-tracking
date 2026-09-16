@@ -1,0 +1,20 @@
+{
+  "bytes": 25174443872,
+  "created": "2026-09-16T05:00:54.394828+00:00",
+  "files": 55765,
+  "invalid_artifacts_removed": false,
+  "manifest_sha256": "3fc93da8798cbd9957cb4da00fdfd3428f53abc28a266b7365797ba683ea1e6e",
+  "new_target_metrics_read": false,
+  "predictions_or_inference_caches_removed": false,
+  "raw_inputs_modified": false,
+  "reason": "All primary and nominated replication fits are complete and frozen; reserve the 80 GiB study footprint for all-199 inference",
+  "regeneration": "SourceDataset and ObservationDataset regenerate missing normalized image crops on demand from pinned original images and source graph queries",
+  "retained_training_state_files": 32,
+  "retired_roots": [
+    "crop_cache",
+    "observation_crop_cache"
+  ],
+  "seconds": 33.55324230999395,
+  "status": "measured",
+  "training_state_hashes_verified_before_and_after": true
+}
