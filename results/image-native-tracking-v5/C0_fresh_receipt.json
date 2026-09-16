@@ -1,0 +1,18 @@
+{
+  "created": "2026-09-10T11:45:57.890795+00:00",
+  "clips": [
+    {
+      "dataset": "44b6_24264f12",
+      "exact_C0_graph_parity": true,
+      "seconds": 126.8988458616659,
+      "inference_receipt_sha256": "3cdd770b1f9498a51ea17c1d35863a86d49e8eafb68db1a0d8ecc4bb1e02fe44"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "exact_C0_graph_parity": true,
+      "seconds": 83.19678779132664,
+      "inference_receipt_sha256": "c01dbe2417650f457fbfb5922ab7db9d8280ab2199f37e34cfc2e10194392289"
+    }
+  ],
+  "complete": true
+}

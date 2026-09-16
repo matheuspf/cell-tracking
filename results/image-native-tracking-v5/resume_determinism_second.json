@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-10T19:07:05.505293+00:00",
+  "source": "6bba",
+  "stage": "N2",
+  "seed": 20260910,
+  "resume_step": 7750,
+  "repeated_logged_updates": 91,
+  "compared_steps": [
+    7761,
+    7781,
+    7801,
+    7821,
+    7841
+  ],
+  "comparisons": [
+    {
+      "step": 7761,
+      "before": 0.00056,
+      "after": 0.00056,
+      "difference": 0.0,
+      "equal": true
+    },
+    {
+      "step": 7781,
+      "before": 0.00044,
+      "after": 0.00044,
+      "difference": 0.0,
+      "equal": true
+    },
+    {
+      "step": 7801,
+      "before": 0.00026,
+      "after": 0.00026,
+      "difference": 0.0,
+      "equal": true
+    },
+    {
+      "step": 7821,
+      "before": 0.00026,
+      "after": 0.00026,
+      "difference": 0.0,
+      "equal": true
+    },
+    {
+      "step": 7841,
+      "before": 0.00183,
+      "after": 0.00182,
+      "difference": -1e-05,
+      "equal": false
+    }
+  ],
+  "identical_logged_losses": false,
+  "matching_logged_losses": 4,
+  "logged_loss_decimals": 5,
+  "max_logged_absolute_difference": 1e-05,
+  "checkpoint_sha256": "2d6c0c41aae0db3d38f44dba89e7fa5d738db933e3ad2c9ce6627683b557976e",
+  "optimizer_body_unchanged": true,
+  "scope": "Optimizer, RNG and data-order state restored. Four of five overlapping logged losses match; the fifth differs by 0.00001. Bitwise training reproducibility is not established. The registered recipe does not enable PyTorch deterministic algorithms. No model or optimizer change was made in response.",
+  "source44": "Checkpoint 750 is later than last printed step 741, so no duplicated logged steps are available for comparison."
+}

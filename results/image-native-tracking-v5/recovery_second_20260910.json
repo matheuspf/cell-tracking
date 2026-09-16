@@ -1,0 +1,121 @@
+{
+  "at": "2026-09-10T19:00:25.596349+00:00",
+  "incident": 2,
+  "boot_id": "fa62f505-1c77-41b4-b459-7fc45b6a495d",
+  "reason": "Second machine reboot reported by user; no v5 process survived; container kernel log access denied; cause unknown",
+  "resume_runs": [
+    {
+      "key": "44b6_N1_314159",
+      "resume_step": 750,
+      "checkpoint_sha256": "a1e749be19d2a0d34e623db4af4a1874280f3da06f7bcfb251a30b3fcf192604",
+      "last_logged_step": 741,
+      "last_logged_seconds": 300.9,
+      "repeated_logged_updates": 0,
+      "unlogged_loss_bound_updates": null,
+      "saved_history_last_step": 741,
+      "checkpoint_interval_updates": 250
+    },
+    {
+      "key": "6bba_N2_20260910",
+      "resume_step": 7750,
+      "checkpoint_sha256": "2d6c0c41aae0db3d38f44dba89e7fa5d738db933e3ad2c9ce6627683b557976e",
+      "last_logged_step": 7841,
+      "last_logged_seconds": 6150.6,
+      "repeated_logged_updates": 91,
+      "unlogged_loss_bound_updates": null,
+      "saved_history_last_step": 7741,
+      "checkpoint_interval_updates": 250
+    }
+  ],
+  "bad_json_preserved": [
+    "training/44b6_N1_314159_progress.json",
+    "supervisor_state.json"
+  ],
+  "cache_hash_checks": {
+    "observations": 199,
+    "hoct_training_features": 199,
+    "deepcenter": 199,
+    "banks/44b6/P0": 199,
+    "banks/44b6/P1": 129,
+    "banks/6bba/P0": 199,
+    "banks/6bba/P1": 72,
+    "model_scores/H": 199,
+    "model_scores/N1_20260910": 199
+  },
+  "completed_models": {
+    "44b6_N1_20260910_tiny": {
+      "sha256": "c6b0c8617a6d799de8705f908b822efd036b734073476d0aca2e10139817d879",
+      "steps": 100,
+      "tiny": true
+    },
+    "44b6_N2_20260910_tiny": {
+      "sha256": "da04f4f96dcdb0a5b83f3cc12a3b232d49a15aa93d058cdf721baa6818c8def5",
+      "steps": 100,
+      "tiny": true
+    },
+    "44b6_N1_20260910": {
+      "sha256": "090b0e8430273c9d58d7e84ce12027169e35ed445d6c368331b6e7d8869e4d30",
+      "steps": 8000,
+      "tiny": false
+    },
+    "6bba_N1_20260910": {
+      "sha256": "8170686443308f12b2e4b0df609b5e3e02a62178d9668cf41a37e3983f5f3377",
+      "steps": 8000,
+      "tiny": false
+    },
+    "44b6_N2_20260910": {
+      "sha256": "0c6f6b414ce15ae9551a34b542fd39c8a71e5e29632e91072b902ff8e12e7317",
+      "steps": 12000,
+      "tiny": false
+    },
+    "44b6_probe_20260910": {
+      "sha256": "8a010301092d574dc557d23e1dd90acd51989599dbbdb26dde8780370a92b100",
+      "steps": 2000,
+      "tiny": false
+    },
+    "6bba_probe_20260910": {
+      "sha256": "4c0b0e2007618c9f58bb03ad02f10f7aeca69359b21673432a273adec4fa66fa",
+      "steps": 2000,
+      "tiny": false
+    },
+    "44b6_probe_314159": {
+      "sha256": "2792acbdf2c0491a4c16591e397f68542c751cacf13fff8480101434eed1de11",
+      "steps": 2000,
+      "tiny": false
+    },
+    "6bba_probe_314159": {
+      "sha256": "1fa958867cc204d858b52eb1e3195e48e04d71ee3eacc34b1dbfbdbac7518ab5",
+      "steps": 2000,
+      "tiny": false
+    }
+  },
+  "evaluation_counts": {
+    "C0": 199,
+    "J_native_frozen": 199,
+    "Oracle_fixed": 199,
+    "Oracle_augmented": 199,
+    "P_union_native_J": 199,
+    "P_DC_native_J": 199
+  },
+  "critical_old_hashes_preserved": true,
+  "prediction_counts": {
+    "J_native_frozen": 199,
+    "P_union_native_J": 199,
+    "P_DC_native_J": 199,
+    "P_image_ablation": 31
+  },
+  "last_precrash_sample": {
+    "at": "2026-09-10T18:11:35.233679+00:00",
+    "gpu_mib": 5631,
+    "gpu_util_percent": 81,
+    "temperature_c": 47,
+    "summed_process_rss_gib": 14.463462829589844,
+    "free_gib": 20.350082397460938,
+    "RSS_scope": "all v5 Python roots and recursive children, deduplicated; early samples tracked named v5 roots only"
+  },
+  "restart_policy": "Main queue resumes source6 primary N2 after source44 N2 calibration. Existing source44/source6 helper lanes run registered replicas, at most two native fits. Calibration and image inference share one serialized auxiliary GPU lane. Up to eight CPU pool workers plus one admitted scorer. Recipes and frozen graph grid unchanged.",
+  "training_optimizer_body_unchanged": true,
+  "completed_artifacts_reused": true,
+  "unlogged_update_limit": "Unknown: 250 is the configured snapshot interval, not a guaranteed loss bound when page-cache writes can be lost during machine failure.",
+  "clarified_at": "2026-09-10T19:08:59.975645+00:00"
+}

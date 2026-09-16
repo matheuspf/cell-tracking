@@ -1,0 +1,38 @@
+{
+  "clips": [
+    {
+      "dataset": "44b6_24264f12",
+      "fields": {
+        "nodes": true,
+        "oldmask": true,
+        "features_source": true,
+        "features_target": true,
+        "properties": true,
+        "valid_region": true,
+        "collisions": true,
+        "optical_centroids": true,
+        "confidence": true,
+        "split_owner": true
+      },
+      "seconds": 31.511832723394036
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "fields": {
+        "nodes": true,
+        "oldmask": true,
+        "features_source": true,
+        "features_target": true,
+        "properties": true,
+        "valid_region": true,
+        "collisions": true,
+        "optical_centroids": true,
+        "confidence": true,
+        "split_owner": true
+      },
+      "seconds": 14.843535645864904
+    }
+  ],
+  "all_arrays_exact": true,
+  "source": "fresh full-image computation; cached comparison only after prediction"
+}

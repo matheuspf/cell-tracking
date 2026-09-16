@@ -1,0 +1,91 @@
+{
+  "frozen": "2026-09-10T14:37:32.471687+00:00",
+  "clips": [
+    {
+      "dataset": "44b6_e29f0176",
+      "embryo": "44b6",
+      "nodes": 13522,
+      "density": 3.223896026611328e-05,
+      "rank": 7,
+      "quantile": 0.1,
+      "source": "6bba",
+      "unfamiliar_name": "volume_01"
+    },
+    {
+      "dataset": "44b6_24264f12",
+      "embryo": "44b6",
+      "nodes": 27034,
+      "density": 6.44540786743164e-05,
+      "rank": 35,
+      "quantile": 0.5,
+      "source": "6bba",
+      "unfamiliar_name": "volume_02"
+    },
+    {
+      "dataset": "44b6_cf8fed6b",
+      "embryo": "44b6",
+      "nodes": 41645,
+      "density": 9.92894172668457e-05,
+      "rank": 63,
+      "quantile": 0.9,
+      "source": "6bba",
+      "unfamiliar_name": "volume_03"
+    },
+    {
+      "dataset": "6bba_2819ca14",
+      "embryo": "6bba",
+      "nodes": 4957,
+      "density": 1.1818408966064453e-05,
+      "rank": 13,
+      "quantile": 0.1,
+      "source": "44b6",
+      "unfamiliar_name": "volume_04"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "embryo": "6bba",
+      "nodes": 9584,
+      "density": 2.285003662109375e-05,
+      "rank": 64,
+      "quantile": 0.5,
+      "source": "44b6",
+      "unfamiliar_name": "volume_05"
+    },
+    {
+      "dataset": "6bba_cf35214c",
+      "embryo": "6bba",
+      "nodes": 35110,
+      "density": 8.37087631225586e-05,
+      "rank": 114,
+      "quantile": 0.9,
+      "source": "44b6",
+      "unfamiliar_name": "volume_06"
+    }
+  ],
+  "variants": [
+    "C0",
+    "J_native_frozen",
+    "H_general_J",
+    "H_probe_J",
+    "H_probe_native_J",
+    "N_head_J",
+    "N_backbone_J",
+    "P_union_native_J",
+    "P_union_N_J",
+    "P_DC_native_J",
+    "P_DC_N_J",
+    "P_image_ablation"
+  ],
+  "selection": "image-derived C0 density ranks 10%, 50%, 90% within each embryo; no GT or variant score selection",
+  "node_only_controls": [
+    "P_union_native_J",
+    "P_union_N_J",
+    "P_DC_native_J",
+    "P_DC_N_J",
+    "P_image_ablation"
+  ],
+  "node_only_scope": "six full clips only; not another 199-clip configuration",
+  "parity": "exact graph preferred; otherwise fresh official integer counts and score equality within 1e-12 are required",
+  "decoder": "frozen five-frame MILP; wall-clock limits can make graph identity depend on machine scheduling",
+  "package_guard": "process-start Python audit hooks; no OS namespace claim"
+}

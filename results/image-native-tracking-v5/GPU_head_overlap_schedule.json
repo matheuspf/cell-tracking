@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-10T19:26:33.607965+00:00",
+  "registered_fit": "6bba_N1_314159",
+  "seed": 314159,
+  "steps": 8000,
+  "reason": "Start the independent second-seed association fit before its own source primary backbone finishes, using the otherwise idle auxiliary lane.",
+  "dependency": "N1 starts from the unchanged primary checkpoint; no dependency on primary N2. Its own N2 replica still waits for the completed N1 replica.",
+  "maximum_active_optimizers": 3,
+  "maximum_backbone_optimizers": 2,
+  "auxiliary_exclusion": "This extra N1 fit holds gpu_aux, so it cannot overlap fresh-image/calibration/model-scoring auxiliary work.",
+  "per_fit_locks": true,
+  "numerical_recipe_unchanged": true,
+  "train_native_sha256": "d0a4a6cb1d576528e750e2e3925cc2db71bb37fa2967a596a2668c161da4cf7c",
+  "before": {
+    "6bba_N2_20260910": {
+      "step": 9701,
+      "updates_per_second": 1.4816991771026111
+    },
+    "44b6_N1_314159": {
+      "step": 4481,
+      "updates_per_second": 2.581925170923528
+    }
+  },
+  "resource_before": {
+    "at": "2026-09-10T19:26:32.122684+00:00",
+    "gpu_mib": 5639,
+    "gpu_util_percent": 86,
+    "temperature_c": 47,
+    "summed_process_rss_gib": 14.95315170288086,
+    "free_gib": 20.303512573242188,
+    "RSS_scope": "all v5 Python roots and recursive children, deduplicated; early samples tracked named v5 roots only"
+  },
+  "benchmark_status": "Pending measured concurrent throughput; preserve original active fits.",
+  "GT_results_used": false
+}

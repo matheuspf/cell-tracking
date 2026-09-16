@@ -1,0 +1,38 @@
+[
+  {
+    "family": "C0",
+    "direct_fit": "legacy source/opposite-embryo repair pipeline",
+    "inherited": "public primary/secondary native, DeepCenter and v2 E_hgb; embryos repeatedly reused",
+    "independent": false
+  },
+  {
+    "family": "H0",
+    "direct_fit": "source-only logit scale/offset and C0 structural prior",
+    "inherited": "public HOCT general_v1 training biology not independently certified; C0 centers/regions inherit native exposure",
+    "independent": false
+  },
+  {
+    "family": "H1/H2",
+    "direct_fit": "supported transitions in own source embryo; unknown edges masked; no hard ILP consistency",
+    "inherited": "HOCT public backbone plus inherited C0 and native evidence; reused source resubstitution calibration",
+    "independent": false
+  },
+  {
+    "family": "N1/N2",
+    "direct_fit": "own source images and supported incoming-parent targets; source-only teacher KL on confident unknown targets",
+    "inherited": "installed native primary checkpoint and C0 teachers may have seen either embryo",
+    "independent": false
+  },
+  {
+    "family": "P1/PDC",
+    "direct_fit": "proposal extraction fixed before target scores; N2 association direct fitting source-only",
+    "inherited": "native and optional DeepCenter public detectors; repeated source pilots",
+    "independent": false
+  },
+  {
+    "family": "Oracles",
+    "direct_fit": "explicit target truth-assisted evaluation-only interventions",
+    "inherited": "not deployable, not promotion candidates, not upper bounds",
+    "independent": false
+  }
+]

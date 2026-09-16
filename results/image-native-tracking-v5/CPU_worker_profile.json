@@ -1,0 +1,220 @@
+{
+  "at": "2026-09-10T15:26:31.346015+00:00",
+  "observed_workers": [
+    {
+      "pid": 19750,
+      "rss_gib": 0.7789268493652344,
+      "cpu_seconds": 1975.28
+    },
+    {
+      "pid": 19751,
+      "rss_gib": 0.5998268127441406,
+      "cpu_seconds": 1988.48
+    },
+    {
+      "pid": 19752,
+      "rss_gib": 0.6504135131835938,
+      "cpu_seconds": 1991.33
+    },
+    {
+      "pid": 19753,
+      "rss_gib": 1.1989707946777344,
+      "cpu_seconds": 1897.95
+    },
+    {
+      "pid": 19754,
+      "rss_gib": 0.7571334838867188,
+      "cpu_seconds": 1974.2800000000002
+    },
+    {
+      "pid": 19755,
+      "rss_gib": 0.6261558532714844,
+      "cpu_seconds": 1986.1399999999999
+    }
+  ],
+  "observed_active_pool_size": 6,
+  "new_max_pool_workers": 8,
+  "cpu_quota_cores": 40.95999,
+  "resource_current": {
+    "at": "2026-09-10T15:26:27.737896+00:00",
+    "gpu_mib": 2951,
+    "gpu_util_percent": 46,
+    "temperature_c": 49,
+    "summed_process_rss_gib": 9.873699188232422,
+    "free_gib": 20.60916519165039,
+    "processes": [
+      {
+        "pid": 2448,
+        "rss_gib": 0.031284332275390625,
+        "threads": 2,
+        "cpu_seconds": 0.63,
+        "module": "resume"
+      },
+      {
+        "pid": 2457,
+        "rss_gib": 0.0302734375,
+        "threads": 2,
+        "cpu_seconds": 0.26,
+        "module": "queue_native"
+      },
+      {
+        "pid": 2459,
+        "rss_gib": 0.03127288818359375,
+        "threads": 2,
+        "cpu_seconds": 0.24,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2460,
+        "rss_gib": 0.03131103515625,
+        "threads": 2,
+        "cpu_seconds": 0.30000000000000004,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2461,
+        "rss_gib": 0.03128814697265625,
+        "threads": 2,
+        "cpu_seconds": 0.33,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2462,
+        "rss_gib": 0.03128814697265625,
+        "threads": 2,
+        "cpu_seconds": 0.32,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2463,
+        "rss_gib": 0.03127288818359375,
+        "threads": 2,
+        "cpu_seconds": 0.32999999999999996,
+        "module": "queue_predictions"
+      },
+      {
+        "pid": 2464,
+        "rss_gib": 0.3434715270996094,
+        "threads": 63,
+        "cpu_seconds": 4.94,
+        "module": "headroom"
+      },
+      {
+        "pid": 2465,
+        "rss_gib": 0.0,
+        "threads": 1,
+        "cpu_seconds": 2.08,
+        "module": "inference_or_worker_child"
+      },
+      {
+        "pid": 21063,
+        "rss_gib": 1.7451744079589844,
+        "threads": 73,
+        "cpu_seconds": 1796.5700000000002,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 2496,
+        "rss_gib": 0.533172607421875,
+        "threads": 3,
+        "cpu_seconds": 2.29,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19750,
+        "rss_gib": 0.7711143493652344,
+        "threads": 64,
+        "cpu_seconds": 1971.3700000000001,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19751,
+        "rss_gib": 0.5998268127441406,
+        "threads": 64,
+        "cpu_seconds": 1984.3700000000001,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19752,
+        "rss_gib": 0.6504135131835938,
+        "threads": 64,
+        "cpu_seconds": 1987.47,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19753,
+        "rss_gib": 1.1989707946777344,
+        "threads": 64,
+        "cpu_seconds": 1894.32,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19754,
+        "rss_gib": 0.7571334838867188,
+        "threads": 64,
+        "cpu_seconds": 1970.4,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 19755,
+        "rss_gib": 0.6290397644042969,
+        "threads": 64,
+        "cpu_seconds": 1982.03,
+        "module": "predict_batch"
+      },
+      {
+        "pid": 13073,
+        "rss_gib": 1.7891883850097656,
+        "threads": 68,
+        "cpu_seconds": 3465.61,
+        "module": "train_native"
+      },
+      {
+        "pid": 12045,
+        "rss_gib": 0.1056060791015625,
+        "threads": 5,
+        "cpu_seconds": 0.6799999999999999,
+        "module": "regret"
+      },
+      {
+        "pid": 21017,
+        "rss_gib": 0.10933685302734375,
+        "threads": 5,
+        "cpu_seconds": 2.09,
+        "module": "live"
+      },
+      {
+        "pid": 22763,
+        "rss_gib": 0.10651779174804688,
+        "threads": 5,
+        "cpu_seconds": 0.8099999999999999,
+        "module": "fresh_validate"
+      },
+      {
+        "pid": 22766,
+        "rss_gib": 0.10457229614257812,
+        "threads": 5,
+        "cpu_seconds": 0.5599999999999999,
+        "module": "final_analysis"
+      },
+      {
+        "pid": 22771,
+        "rss_gib": 0.10464859008789062,
+        "threads": 5,
+        "cpu_seconds": 0.56,
+        "module": "finalize"
+      },
+      {
+        "pid": 22775,
+        "rss_gib": 0.10752105712890625,
+        "threads": 5,
+        "cpu_seconds": 0.72,
+        "module": "division_review"
+      }
+    ],
+    "RSS_scope": "all v5 Python roots and recursive children, deduplicated; early samples tracked named v5 roots only"
+  },
+  "decision": "eight future decoder workers after profiling six; current control pool preserved, other CPU batches still serialized",
+  "model_or_decoder_objective_changed": false,
+  "GT_scores_used_for_resource_decision": false
+}

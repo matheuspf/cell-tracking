@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-10T15:24:01.735198+00:00",
+  "source_array_equivalence_sha256": "090d93134089804be8dc19461aba2e665d88ebb45b0d335e701b72e33131c7a6",
+  "decoder_sha256": "e205beb88c39f1bc220c690dbf71e397ef03f27fea3043d999c7599db9e5d4e9",
+  "index_sha256": "7c7033fbf9a7cd22592c42b92972a8b28fa99c1cdba35cd66ad1f7f552fc959d",
+  "identical_MILP_arrays": true,
+  "model_scores_or_hyperparameters_changed": false,
+  "existing_control_jobs_preserved": true,
+  "assembly_median_old_seconds": 0.03667696350021288,
+  "assembly_median_new_seconds": 0.021773025499896903,
+  "caveat": "only assembly overhead is reduced; MILP solve time remains dominant"
+}

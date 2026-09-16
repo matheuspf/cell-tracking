@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-10T16:50:30.279335+00:00",
+  "benchmark_sha256": "8c178bdfceb6ada950042be05d5f4c02d7a8082a08ed2230b321314a8be759cf",
+  "maximum_native_fits": 2,
+  "source_rule": "One active fit per source; each source replica waits for its own complete primary N2 model, then runs N1 followed by N2.",
+  "main_queue": "Preserved original queue; per-fit locks avoid duplicate updates and it completes all source calibrations.",
+  "calibration_and_inference": "One shared auxiliary GPU lane; the initial concurrent source6 primary fit already owns it until completion.",
+  "optimizer_body_unchanged": true,
+  "source_split_and_steps_unchanged": true,
+  "full_variant_grid_unchanged": true,
+  "target_scores_used_for_scheduling": false,
+  "reason": "Measured 2.50 combined native updates/s versus earlier 1.40 single-source updates/s, with 9.34 GiB GPU and 13.54 GiB summed RSS peaks."
+}

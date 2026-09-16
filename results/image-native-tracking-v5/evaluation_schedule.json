@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-10T15:56:30.688930+00:00",
+  "early_variant": "J_native_frozen",
+  "complete_clips": 199,
+  "parallel_scorers": 1,
+  "existing_decoder_workers": 6,
+  "purpose": "Publish a completed preregistered control while other frozen families continue; no target-label model or solver changes",
+  "rerun_policy": "The later control evaluation validates and reuses these same graph-hashed official receipts.",
+  "acceptance_policy": "Every primary requires six-clip fresh graph or exact official-count parity before promotion. Failed parity remains a measured failure and is never relabeled as a pass.",
+  "maximum_complete_variants_unchanged": 18
+}

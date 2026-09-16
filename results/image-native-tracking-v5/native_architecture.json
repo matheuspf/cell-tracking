@@ -1,0 +1,487 @@
+{
+  "architecture": "installed UNetNodeTransformer / TemporalUNet3D / SimpleNodeTransformer",
+  "parameters": 2076706,
+  "encoder_parameters": 1496320,
+  "module_files": {
+    "scripts/train_unet_transformer.py": "c4f6317736bb3bb1ec8f3f6e9a6d935a463e3f0f1f685481b2d13218d35dc9ea",
+    "src/biohub_tracking/models/temporal_unet.py": "d809c35d42f504161074ddeaaa7aee5b407e5bca7f9b4e1d5f9b2ff345666cac",
+    "src/biohub_tracking/models/simple_node_transformer.py": "b97209edeb03840e80d903e3e2a8c81c520641c8ef343f6ca2904d0f80db064e"
+  },
+  "keys_shapes": {
+    "unet.encoder_blocks.0.0.weight": [
+      32,
+      1,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.0.1.weight": [
+      32
+    ],
+    "unet.encoder_blocks.0.1.bias": [
+      32
+    ],
+    "unet.encoder_blocks.0.1.running_mean": [
+      32
+    ],
+    "unet.encoder_blocks.0.1.running_var": [
+      32
+    ],
+    "unet.encoder_blocks.0.1.num_batches_tracked": [],
+    "unet.encoder_blocks.0.3.weight": [
+      32,
+      32,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.0.4.weight": [
+      32
+    ],
+    "unet.encoder_blocks.0.4.bias": [
+      32
+    ],
+    "unet.encoder_blocks.0.4.running_mean": [
+      32
+    ],
+    "unet.encoder_blocks.0.4.running_var": [
+      32
+    ],
+    "unet.encoder_blocks.0.4.num_batches_tracked": [],
+    "unet.encoder_blocks.1.0.weight": [
+      64,
+      32,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.1.1.weight": [
+      64
+    ],
+    "unet.encoder_blocks.1.1.bias": [
+      64
+    ],
+    "unet.encoder_blocks.1.1.running_mean": [
+      64
+    ],
+    "unet.encoder_blocks.1.1.running_var": [
+      64
+    ],
+    "unet.encoder_blocks.1.1.num_batches_tracked": [],
+    "unet.encoder_blocks.1.3.weight": [
+      64,
+      64,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.1.4.weight": [
+      64
+    ],
+    "unet.encoder_blocks.1.4.bias": [
+      64
+    ],
+    "unet.encoder_blocks.1.4.running_mean": [
+      64
+    ],
+    "unet.encoder_blocks.1.4.running_var": [
+      64
+    ],
+    "unet.encoder_blocks.1.4.num_batches_tracked": [],
+    "unet.encoder_blocks.2.0.weight": [
+      128,
+      64,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.2.1.weight": [
+      128
+    ],
+    "unet.encoder_blocks.2.1.bias": [
+      128
+    ],
+    "unet.encoder_blocks.2.1.running_mean": [
+      128
+    ],
+    "unet.encoder_blocks.2.1.running_var": [
+      128
+    ],
+    "unet.encoder_blocks.2.1.num_batches_tracked": [],
+    "unet.encoder_blocks.2.3.weight": [
+      128,
+      128,
+      3,
+      3,
+      3
+    ],
+    "unet.encoder_blocks.2.4.weight": [
+      128
+    ],
+    "unet.encoder_blocks.2.4.bias": [
+      128
+    ],
+    "unet.encoder_blocks.2.4.running_mean": [
+      128
+    ],
+    "unet.encoder_blocks.2.4.running_var": [
+      128
+    ],
+    "unet.encoder_blocks.2.4.num_batches_tracked": [],
+    "unet.temporal_blocks.1.norm.weight": [
+      64
+    ],
+    "unet.temporal_blocks.1.norm.bias": [
+      64
+    ],
+    "unet.temporal_blocks.1.attn.in_proj_weight": [
+      192,
+      64
+    ],
+    "unet.temporal_blocks.1.attn.in_proj_bias": [
+      192
+    ],
+    "unet.temporal_blocks.1.attn.out_proj.weight": [
+      64,
+      64
+    ],
+    "unet.temporal_blocks.1.attn.out_proj.bias": [
+      64
+    ],
+    "unet.temporal_blocks.2.norm.weight": [
+      128
+    ],
+    "unet.temporal_blocks.2.norm.bias": [
+      128
+    ],
+    "unet.temporal_blocks.2.attn.in_proj_weight": [
+      384,
+      128
+    ],
+    "unet.temporal_blocks.2.attn.in_proj_bias": [
+      384
+    ],
+    "unet.temporal_blocks.2.attn.out_proj.weight": [
+      128,
+      128
+    ],
+    "unet.temporal_blocks.2.attn.out_proj.bias": [
+      128
+    ],
+    "unet.decoder_blocks.0.0.weight": [
+      64,
+      192,
+      3,
+      3,
+      3
+    ],
+    "unet.decoder_blocks.0.1.weight": [
+      64
+    ],
+    "unet.decoder_blocks.0.1.bias": [
+      64
+    ],
+    "unet.decoder_blocks.0.1.running_mean": [
+      64
+    ],
+    "unet.decoder_blocks.0.1.running_var": [
+      64
+    ],
+    "unet.decoder_blocks.0.1.num_batches_tracked": [],
+    "unet.decoder_blocks.0.3.weight": [
+      64,
+      64,
+      3,
+      3,
+      3
+    ],
+    "unet.decoder_blocks.0.4.weight": [
+      64
+    ],
+    "unet.decoder_blocks.0.4.bias": [
+      64
+    ],
+    "unet.decoder_blocks.0.4.running_mean": [
+      64
+    ],
+    "unet.decoder_blocks.0.4.running_var": [
+      64
+    ],
+    "unet.decoder_blocks.0.4.num_batches_tracked": [],
+    "unet.decoder_blocks.1.0.weight": [
+      32,
+      96,
+      3,
+      3,
+      3
+    ],
+    "unet.decoder_blocks.1.1.weight": [
+      32
+    ],
+    "unet.decoder_blocks.1.1.bias": [
+      32
+    ],
+    "unet.decoder_blocks.1.1.running_mean": [
+      32
+    ],
+    "unet.decoder_blocks.1.1.running_var": [
+      32
+    ],
+    "unet.decoder_blocks.1.1.num_batches_tracked": [],
+    "unet.decoder_blocks.1.3.weight": [
+      32,
+      32,
+      3,
+      3,
+      3
+    ],
+    "unet.decoder_blocks.1.4.weight": [
+      32
+    ],
+    "unet.decoder_blocks.1.4.bias": [
+      32
+    ],
+    "unet.decoder_blocks.1.4.running_mean": [
+      32
+    ],
+    "unet.decoder_blocks.1.4.running_var": [
+      32
+    ],
+    "unet.decoder_blocks.1.4.num_batches_tracked": [],
+    "unet.head.weight": [
+      32,
+      32,
+      1,
+      1,
+      1
+    ],
+    "unet.head.bias": [
+      32
+    ],
+    "detect_head.weight": [
+      1,
+      32,
+      1,
+      1,
+      1
+    ],
+    "detect_head.bias": [
+      1
+    ],
+    "transformer.proj.weight": [
+      128,
+      64
+    ],
+    "transformer.proj.bias": [
+      128
+    ],
+    "transformer.norm_in.weight": [
+      128
+    ],
+    "transformer.norm_in.bias": [
+      128
+    ],
+    "transformer.blocks.0.norm1.weight": [
+      128
+    ],
+    "transformer.blocks.0.norm1.bias": [
+      128
+    ],
+    "transformer.blocks.0.norm2.weight": [
+      128
+    ],
+    "transformer.blocks.0.norm2.bias": [
+      128
+    ],
+    "transformer.blocks.0.cross_attn.in_proj_weight": [
+      384,
+      128
+    ],
+    "transformer.blocks.0.cross_attn.in_proj_bias": [
+      384
+    ],
+    "transformer.blocks.0.cross_attn.out_proj.weight": [
+      128,
+      128
+    ],
+    "transformer.blocks.0.cross_attn.out_proj.bias": [
+      128
+    ],
+    "transformer.blocks.0.mlp.0.weight": [
+      256,
+      128
+    ],
+    "transformer.blocks.0.mlp.0.bias": [
+      256
+    ],
+    "transformer.blocks.0.mlp.3.weight": [
+      128,
+      256
+    ],
+    "transformer.blocks.0.mlp.3.bias": [
+      128
+    ],
+    "transformer.blocks.1.norm1.weight": [
+      128
+    ],
+    "transformer.blocks.1.norm1.bias": [
+      128
+    ],
+    "transformer.blocks.1.norm2.weight": [
+      128
+    ],
+    "transformer.blocks.1.norm2.bias": [
+      128
+    ],
+    "transformer.blocks.1.cross_attn.in_proj_weight": [
+      384,
+      128
+    ],
+    "transformer.blocks.1.cross_attn.in_proj_bias": [
+      384
+    ],
+    "transformer.blocks.1.cross_attn.out_proj.weight": [
+      128,
+      128
+    ],
+    "transformer.blocks.1.cross_attn.out_proj.bias": [
+      128
+    ],
+    "transformer.blocks.1.mlp.0.weight": [
+      256,
+      128
+    ],
+    "transformer.blocks.1.mlp.0.bias": [
+      256
+    ],
+    "transformer.blocks.1.mlp.3.weight": [
+      128,
+      256
+    ],
+    "transformer.blocks.1.mlp.3.bias": [
+      128
+    ],
+    "transformer.blocks.2.norm1.weight": [
+      128
+    ],
+    "transformer.blocks.2.norm1.bias": [
+      128
+    ],
+    "transformer.blocks.2.norm2.weight": [
+      128
+    ],
+    "transformer.blocks.2.norm2.bias": [
+      128
+    ],
+    "transformer.blocks.2.cross_attn.in_proj_weight": [
+      384,
+      128
+    ],
+    "transformer.blocks.2.cross_attn.in_proj_bias": [
+      384
+    ],
+    "transformer.blocks.2.cross_attn.out_proj.weight": [
+      128,
+      128
+    ],
+    "transformer.blocks.2.cross_attn.out_proj.bias": [
+      128
+    ],
+    "transformer.blocks.2.mlp.0.weight": [
+      256,
+      128
+    ],
+    "transformer.blocks.2.mlp.0.bias": [
+      256
+    ],
+    "transformer.blocks.2.mlp.3.weight": [
+      128,
+      256
+    ],
+    "transformer.blocks.2.mlp.3.bias": [
+      128
+    ],
+    "transformer.blocks.3.norm1.weight": [
+      128
+    ],
+    "transformer.blocks.3.norm1.bias": [
+      128
+    ],
+    "transformer.blocks.3.norm2.weight": [
+      128
+    ],
+    "transformer.blocks.3.norm2.bias": [
+      128
+    ],
+    "transformer.blocks.3.cross_attn.in_proj_weight": [
+      384,
+      128
+    ],
+    "transformer.blocks.3.cross_attn.in_proj_bias": [
+      384
+    ],
+    "transformer.blocks.3.cross_attn.out_proj.weight": [
+      128,
+      128
+    ],
+    "transformer.blocks.3.cross_attn.out_proj.bias": [
+      128
+    ],
+    "transformer.blocks.3.mlp.0.weight": [
+      256,
+      128
+    ],
+    "transformer.blocks.3.mlp.0.bias": [
+      256
+    ],
+    "transformer.blocks.3.mlp.3.weight": [
+      128,
+      256
+    ],
+    "transformer.blocks.3.mlp.3.bias": [
+      128
+    ],
+    "transformer.norm_out.weight": [
+      128
+    ],
+    "transformer.norm_out.bias": [
+      128
+    ],
+    "transformer.pair_mlp.0.weight": [
+      128,
+      259
+    ],
+    "transformer.pair_mlp.0.bias": [
+      128
+    ],
+    "transformer.pair_mlp.3.weight": [
+      64,
+      128
+    ],
+    "transformer.pair_mlp.3.bias": [
+      64
+    ],
+    "transformer.pair_mlp.5.weight": [
+      1,
+      64
+    ],
+    "transformer.pair_mlp.5.bias": [
+      1
+    ]
+  },
+  "downsample": [
+    1,
+    4,
+    4
+  ],
+  "spacing_um": [
+    1.625,
+    1.625,
+    1.625
+  ],
+  "image_context_frames": 2,
+  "decoder_context_frames": 5,
+  "receptive_field": "Full 64 cubed downsampled frame; cross-time voxel attention, global frame-node competitors",
+  "normalization": "stored 0.001/0.999 quantiles; clamp minimum zero, no upper clipping",
+  "native_changed_tensors": "N comparisons use primary checkpoint only, no 8-view detection TTA or secondary harmonic mixture; C0 remains full unchanged control"
+}

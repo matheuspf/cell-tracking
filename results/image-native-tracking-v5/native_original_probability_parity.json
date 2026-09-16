@@ -1,0 +1,66 @@
+{
+  "clips": [
+    {
+      "dataset": "44b6_24264f12",
+      "fields": {
+        "coords": {
+          "shape": [
+            29042,
+            4
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        },
+        "node_probabilities": {
+          "shape": [
+            29042
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        },
+        "edge_scores": {
+          "shape": [
+            27332,
+            4
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        }
+      },
+      "new_sha256": "c674ab9101dafafdf9c87b94b46446e4ca6d51f6278f732328d01b9106759ab5",
+      "old_sha256": "c674ab9101dafafdf9c87b94b46446e4ca6d51f6278f732328d01b9106759ab5"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "fields": {
+        "coords": {
+          "shape": [
+            10885,
+            4
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        },
+        "node_probabilities": {
+          "shape": [
+            10885
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        },
+        "edge_scores": {
+          "shape": [
+            9909,
+            4
+          ],
+          "exact": true,
+          "max_abs_diff": 0.0
+        }
+      },
+      "new_sha256": "a8bfc09d6be2f0571da3f73757f48fbfb985de964b039baf5e96858987a42837",
+      "old_sha256": "a8bfc09d6be2f0571da3f73757f48fbfb985de964b039baf5e96858987a42837"
+    }
+  ],
+  "all_exact": true,
+  "new_native_comparison": "Primary-only original model at fixed C0 centers and unchanged native downsample; this intentional tensor change is separate from full-incumbent parity."
+}

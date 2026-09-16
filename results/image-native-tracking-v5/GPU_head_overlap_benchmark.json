@@ -1,0 +1,40 @@
+{
+  "at": "2026-09-10T19:32:16.168902+00:00",
+  "schedule_sha256": "9507b26a9f4face1681bef03f897a968810428d7c8d73d4b8e878c11d2e01879",
+  "concurrent_registered_fit_rates": {
+    "6bba_N2_20260910": {
+      "last_step": 10181,
+      "sampled_updates": 380,
+      "sampled_seconds": 271.5461475379998,
+      "updates_per_second": 1.3993938173872393
+    },
+    "44b6_N1_314159": {
+      "last_step": 5341,
+      "sampled_updates": 380,
+      "sampled_seconds": 157.08649575900017,
+      "updates_per_second": 2.4190494425630993
+    },
+    "6bba_N1_314159": {
+      "last_step": 901,
+      "sampled_updates": 380,
+      "sampled_seconds": 134.4111434030001,
+      "updates_per_second": 2.8271465473711483
+    }
+  },
+  "preceding_two_fit_rates": {
+    "6bba_N2_20260910": {
+      "step": 9701,
+      "updates_per_second": 1.4816991771026111
+    },
+    "44b6_N1_314159": {
+      "step": 4481,
+      "updates_per_second": 2.581925170923528
+    }
+  },
+  "sampled_GPU_peak_gib": 6.34765625,
+  "sampled_summed_RSS_peak_gib": 17.294353485107422,
+  "minimum_free_gib": 20.286983489990234,
+  "decision": "Continue the registered N1 replica on the auxiliary lane to overlap its independent initialization with the unfinished primary N2. All numerical budgets and checkpoints remain unchanged.",
+  "caveat": "Throughput spans different source windows, so this is an operational concurrency observation, not a controlled identical-batch timing comparison. Head updates and image-backbone updates are reported separately.",
+  "model_or_optimizer_changed": false
+}

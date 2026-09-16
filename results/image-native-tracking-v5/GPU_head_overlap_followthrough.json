@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-10T19:55:46.131398+00:00",
+  "phase": "Temporary three-optimizer overlap ended when source6 primary N2 completed.",
+  "schedule_sha256": "9507b26a9f4face1681bef03f897a968810428d7c8d73d4b8e878c11d2e01879",
+  "sampled_GPU_peak_gib": 10.220703125,
+  "sampled_summed_RSS_peak_gib": 17.294353485107422,
+  "minimum_free_gib": 20.247581481933594,
+  "model_recipe_changed": false,
+  "now_active": "Source44 N2 replica plus source6 N1 replica; primary calibration waits for the auxiliary head fit."
+}

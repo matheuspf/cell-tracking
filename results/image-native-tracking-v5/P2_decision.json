@@ -1,0 +1,78 @@
+{
+  "at": "2026-09-10T14:51:34.011865+00:00",
+  "run": false,
+  "status": "conditional dense-detector extension not scheduled",
+  "based_on": "source-only final-objective full-field proposal pilots; no opposite-direction score tuning",
+  "source_pilots": [
+    {
+      "dataset": "44b6_24264f12",
+      "source": "44b6",
+      "variant": "J_native_frozen",
+      "added_nodes": 0,
+      "removed_nodes": 0,
+      "new_GT_matches": 0,
+      "lost_GT_matches": 0,
+      "matched_new_nodes": 0,
+      "source_calibration_sha256": "c339ac5785fe05fb0f2565a79af8e884f20669bc0d26ef5687d0b85c8e0e0dd6"
+    },
+    {
+      "dataset": "44b6_24264f12",
+      "source": "44b6",
+      "variant": "P_union_native_J",
+      "added_nodes": 4389,
+      "removed_nodes": 228,
+      "new_GT_matches": 2,
+      "lost_GT_matches": 0,
+      "matched_new_nodes": 17,
+      "source_calibration_sha256": "c339ac5785fe05fb0f2565a79af8e884f20669bc0d26ef5687d0b85c8e0e0dd6"
+    },
+    {
+      "dataset": "44b6_24264f12",
+      "source": "44b6",
+      "variant": "P_DC_native_J",
+      "added_nodes": 71,
+      "removed_nodes": 6,
+      "new_GT_matches": 0,
+      "lost_GT_matches": 0,
+      "matched_new_nodes": 2,
+      "source_calibration_sha256": "c339ac5785fe05fb0f2565a79af8e884f20669bc0d26ef5687d0b85c8e0e0dd6"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "source": "6bba",
+      "variant": "J_native_frozen",
+      "added_nodes": 0,
+      "removed_nodes": 0,
+      "new_GT_matches": 0,
+      "lost_GT_matches": 0,
+      "matched_new_nodes": 0,
+      "source_calibration_sha256": "a96cdb303739fa65129e18061af46d20e0a8dae04767c79505110deab13959c3"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "source": "6bba",
+      "variant": "P_union_native_J",
+      "added_nodes": 2345,
+      "removed_nodes": 76,
+      "new_GT_matches": 3,
+      "lost_GT_matches": 2,
+      "matched_new_nodes": 32,
+      "source_calibration_sha256": "a96cdb303739fa65129e18061af46d20e0a8dae04767c79505110deab13959c3"
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "source": "6bba",
+      "variant": "P_DC_native_J",
+      "added_nodes": 15,
+      "removed_nodes": 3,
+      "new_GT_matches": 0,
+      "lost_GT_matches": 0,
+      "matched_new_nodes": 0,
+      "source_calibration_sha256": "a96cdb303739fa65129e18061af46d20e0a8dae04767c79505110deab13959c3"
+    }
+  ],
+  "reasoning": "P1 discovery and the P0/P1 representation factorial are running in full. Source coverage alone does not establish reliable dense teacher labels; fixed-node association headroom has not been exhausted. Complete the registered H/N/P evidence before spending a new dense-detector training arm.",
+  "real_dense_voxels_supervised": false,
+  "sparse_unknowns_remain_unknown": true,
+  "optional_FOCUS": "no already-authorized checkpoint found; no gated terms accepted or microscopy uploaded"
+}

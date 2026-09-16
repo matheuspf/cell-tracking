@@ -1,0 +1,161 @@
+{
+  "created": "2026-09-10T12:20:41.023275+00:00",
+  "variants": {
+    "C0": {
+      "family": "incumbent"
+    },
+    "J_native_frozen": {
+      "family": "N0",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "H_general_J": {
+      "family": "H0",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "H_probe_J": {
+      "family": "H1",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "H_probe_native_J": {
+      "family": "H2",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "N_head_J": {
+      "family": "N1",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "N_backbone_J": {
+      "family": "N2",
+      "seed": 20260910,
+      "pop": "P0"
+    },
+    "P_union_native_J": {
+      "family": "N0",
+      "seed": 20260910,
+      "pop": "P1"
+    },
+    "P_union_N_J": {
+      "family": "N2",
+      "seed": 20260910,
+      "pop": "P1"
+    },
+    "P_DC_native_J": {
+      "family": "N0",
+      "seed": 20260910,
+      "pop": "PDC"
+    },
+    "P_DC_N_J": {
+      "family": "N2",
+      "seed": 20260910,
+      "pop": "PDC"
+    },
+    "P_image_ablation": {
+      "family": "N0",
+      "seed": 20260910,
+      "pop": "Pnoimage"
+    },
+    "N_final_seed2": {
+      "family": "N2",
+      "seed": 314159,
+      "pop": "P0"
+    },
+    "H_final_seed2": {
+      "family": "H2",
+      "seed": 314159,
+      "pop": "P0"
+    },
+    "P_final_seed2": {
+      "family": "N2",
+      "seed": 314159,
+      "pop": "P1"
+    },
+    "P_DC_final_seed2": {
+      "family": "N2",
+      "seed": 314159,
+      "pop": "PDC"
+    },
+    "Oracle_fixed": {
+      "family": "evaluation-only truth-assisted"
+    },
+    "Oracle_augmented": {
+      "family": "evaluation-only truth-assisted"
+    }
+  },
+  "max_complete_variants": 18,
+  "initial_complete_variants": 18,
+  "source_directions": [
+    [
+      "44b6",
+      "6bba"
+    ],
+    [
+      "6bba",
+      "44b6"
+    ]
+  ],
+  "source_development": "first 10 lexicographic source clips for graph score calibration; dependent and reused",
+  "native_recipe": {
+    "head_updates": 8000,
+    "backbone_updates": 12000,
+    "effective_windows_per_batch": 4,
+    "head_lr": 0.0001,
+    "backbone_lr": 1e-05,
+    "weight_decay": 0.01,
+    "max_gradient_norm": 1.0,
+    "freeze_detection_population_initially": true,
+    "all_source_transitions_sampling_eligible": true,
+    "source_diagnosed_optimizer_repairs_per_family": 1
+  },
+  "N2_source_selection": "Both actual native modules pass real-source overfit; native features cover every C0/new point, while HOCT morphology masks unsupported regions. Choose N2 for required P1 factorial before target outcomes.",
+  "P_DC_registration": "Source pilot P1 gains two GT node matches but loses 11 edge TP and adds 4955 net nodes. Register continuous frozen DeepCenter agreement as an image-evidence control. Retain original P1 control, no target feedback.",
+  "sparse_labels": "Incoming alternatives negative only if matched positive predecessor represented; unrecorded second daughters unknown; zero GT-derived inference features",
+  "training_seed2": [
+    20260910,
+    314159
+  ],
+  "promotion": {
+    "positive_pooled_delta_required": true,
+    "max_embryo_regression": 1e-08,
+    "learned_same_recipe_second_seed_required": true,
+    "export_primary_seed": true,
+    "fresh_image_finalist_clips_minimum": 6,
+    "target_success_score": 0.95,
+    "retain_qualifying_subtarget_gains": true
+  },
+  "no_new_Zoo_rendering": true,
+  "no_v4_rerun": true,
+  "revised_before_outer_results": "2026-09-10T12:51:47.477288+00:00",
+  "revisions": [
+    "CTC_v0 source-only diagnostic reserves two required oracle slots; 16 operational including C0 plus two truth-assisted complete graphs.",
+    "Final J includes spatial boundary costs and max compatible timing explanations on predicted paths; source44 final J preserves C0 official counts.",
+    "Empty/censored native objective guard adds no change to nonempty production catalog losses."
+  ],
+  "decoder_defaults": {
+    "birth_cost": 2.0,
+    "termination_cost": 1.0,
+    "split_cost": 4.0,
+    "incumbent_edge_bonus": 0.75,
+    "new_node_cost": 2.0,
+    "context_frames": 5,
+    "time_limit": 2.0,
+    "mip_rel_gap": 0.001,
+    "spatial_shape": [
+      64,
+      256,
+      256
+    ],
+    "spacing_um": [
+      1.625,
+      0.40625,
+      0.40625
+    ],
+    "spatial_border_um": 3.25
+  },
+  "decoder_code_sha256": "c956eec020d215c1232d04e715efa6e265c9bc388bf173f5666f48835d396ed6",
+  "event_identity_code_sha256": "fd440b76ace6a8a27f30c425ab46c2192e2080d51841599b2e35736dd6a8f412"
+}

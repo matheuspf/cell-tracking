@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "at": "2026-09-10T21:33:42.332253+00:00",
+  "states": [
+    {
+      "embryo": "pooled",
+      "rows": 9
+    },
+    {
+      "embryo": "44b6",
+      "rows": 9
+    },
+    {
+      "embryo": "6bba",
+      "rows": 9
+    }
+  ],
+  "errors": [],
+  "network_requests": [],
+  "screenshots": [
+    {
+      "file": "dashboard_desktop.png",
+      "sha256": "ae08a96b16ae9520782034f40531a56fb64dc830d7945362ea9bad9ba1884185",
+      "width": 1360,
+      "height": 960
+    },
+    {
+      "file": "dashboard_mobile.png",
+      "sha256": "1caba8429b7bade30e49d1f108caa46a40f0b453117c61b711ce57deafd6436b",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "browser_version": "151.0.7922.34",
+  "python": "/root/.conda/envs/cell-tracking/bin/python",
+  "dashboard_sha256": "439ae0839b4652ccd12bed151958f14af712c454e41579317a78acbe94bc69ba",
+  "downloaded_rows": 33,
+  "HOCT_feature_filter_populations": 3,
+  "HOCT_unit_limitation_visible": true
+}
