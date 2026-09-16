@@ -11,27 +11,52 @@ def identity_loss(source, arm, seed=20260915):
     from .guard import install
     # Called in a dedicated directional subprocess by the command below.
     install(source=source)
+    package = WORK/'training'/arm/source/str(seed)
+    spec = read_json(package/'frozen_package.json')
+    calibration = read_json(package/'calibration.json')
+    if spec['recipe']['source']!=source or spec['recipe']['seed']!=seed or spec['recipe']['arm']!=arm \
+            or sha(package/'model.pt')!=spec['weights_sha256'] \
+            or sha(package/'calibration.json')!=spec['calibration_sha256']:
+        raise ValueError('Source identity diagnostic package provenance changed')
+    rows = {row['dataset']:row for row in inputs()}
+    registered = calibration['clips']
+    if not registered or any(name not in rows or rows[name]['embryo']!=source for name in registered):
+        raise PermissionError('Explicit complete source calibration inventory required')
     losses, controls = [], []
-    for row in inputs():
-        if row['embryo'] != source:
-            continue
+    verified = []
+    for name in registered:
+        row = rows[name]
         table = WORK/'calibration'/arm/source/str(seed)/f'{row["dataset"]}.npz'
-        if not table.exists():
-            continue
+        if not table.exists() or not table.with_suffix('.json').exists():
+            raise ValueError('Complete registered source calibration cache required')
+        receipt = read_json(table.with_suffix('.json'))
+        if sha(table)!=receipt['sha256'] or receipt['model_sha256']!=spec['weights_sha256']:
+            raise ValueError('Source identity diagnostic calibration cache changed')
         with np.load(table, allow_pickle=False) as arrays:
             values, labels, groups = arrays['pair_score'], arrays['pair_y'], arrays['pair_group']
-        with np.load(WORK/'source'/source/'pairs'/f'{row["dataset"]}.npz', allow_pickle=False) as arrays:
+        pairs = WORK/'source'/source/'pairs'/f'{row["dataset"]}.npz'
+        preparation = read_json(WORK/'source'/source/'receipts'/f'{row["dataset"]}.json')
+        if sha(pairs)!=preparation['files'][str(pairs)]:
+            raise ValueError('Prepared source pair identities changed')
+        with np.load(pairs, allow_pickle=False) as arrays:
             index = arrays['index']
+            np.testing.assert_array_equal(labels,arrays['labels'])
+            np.testing.assert_array_equal(groups,arrays['group'])
+        if not np.isfinite(values).all() or not np.isin(labels,[0,1]).all():
+            raise ValueError('Identity diagnostic requires finite supported source pairs')
         native = verified_evidence(row)['edge_features'][index, 23]
         loss = np.logaddexp(0., values)-labels*values
         baseline = np.logaddexp(0., native)-labels*native
         for group in np.unique(groups):
             selected = groups == group
             losses.append(float(loss[selected].mean())); controls.append(float(baseline[selected].mean()))
+        verified.append(dict(dataset=name,calibration_cache_sha256=receipt['sha256'],prepared_pairs_sha256=sha(pairs)))
     receipt = dict(status='measured', source=source, arm=arm, seed=seed, groups=len(losses),
         raw_source_grouped_pair_nll=float(np.mean(losses)) if losses else None,
         unchanged_native_offset_grouped_pair_nll=float(np.mean(controls)) if controls else None,
         calibration_applied=False, source_only=True, no_target_scores_read=True,
+        complete_registered_source_clips=True,clips=len(registered),verified_inputs=verified,
+        model_sha256=spec['weights_sha256'],calibration_sha256=spec['calibration_sha256'],
         baseline='Fixed native logits on P0 candidate pairs, not a new fitted control')
     write_json(WORK/'training'/arm/source/str(seed)/'identity_diagnostic.json', receipt, immutable=True)
     return receipt

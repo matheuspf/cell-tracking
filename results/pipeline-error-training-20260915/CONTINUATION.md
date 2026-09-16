@@ -4,7 +4,7 @@ Read REPORT.md and STATUS.json first. This file is generated from the current ex
 
 ## Current state
 
-State: executing. Production default: P0. No new target fitting or threshold selection is authorized.
+State: awaiting_final_validation. Production default: P0. No new target fitting or threshold selection is authorized.
 
 Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.
 Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.
@@ -53,7 +53,7 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 
 - Resumable weights, optimizer/RNG state, full graphs, source labels, image embeddings and logs: work/pipeline-error-training-20260915/.
 - Queue state: queue/progress.json, observation_queue/progress.json, finish_queue/progress.json under that root.
-- GPU accounting: gpu_budget/ledger.json; limits are 20 GiB total device memory, 50 GiB study RSS, and the frozen 4/24/12/8 lease-hour reservations.
+- GPU accounting: gpu_budget/ledger.json; limits are 20 GiB total device memory, 50 GiB study RSS and 48 total lease-hours. The original reservations are 4/24/12/8 hours. Before target evaluation, gpu_reservation_settlement.json records unused first-seed hours shared with final inference; all 12 replication hours remain reserved.
 - Concrete validation failures: fresh_image_validation.json and native_refresh_validation.json, with log hashes; original failed attempts stay under invalid/.
 - Missing clean upstream fits block a clean end-to-end transfer claim; they do not block the independent operational lanes.
 - Do not change the production default, merge, upload to Kaggle or publish weights.

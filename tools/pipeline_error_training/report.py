@@ -77,6 +77,14 @@ def source_rows():
             row['raw_source_grouped_decision_loss'] = diagnostic.get('before', {}).get('loss')
             row['calibrated_source_grouped_decision_loss'] = diagnostic.get('after', {}).get('loss')
             row['calibration_temperature'] = calibration.get('calibration', {}).get('temperature')
+        if receipt['arm']=='A10':
+            diagnostic_path = WORK/'training/A10'/receipt['source']/str(receipt['seed'])/'identity_diagnostic.json'
+            diagnostic = optional(diagnostic_path)
+            if diagnostic:
+                for field in ['raw_source_grouped_pair_nll','unchanged_native_offset_grouped_pair_nll']:
+                    row[field] = diagnostic[field]
+                row['identity_diagnostic_groups'] = diagnostic['groups']
+                row['identity_diagnostic_sha256'] = sha(diagnostic_path)
         result.append(row)
     return result
 
@@ -373,7 +381,7 @@ def continuation(status):
     lines += ['', '## Artifact locations and restrictions', '',
         '- Resumable weights, optimizer/RNG state, full graphs, source labels, image embeddings and logs: work/pipeline-error-training-20260915/.',
         '- Queue state: queue/progress.json, observation_queue/progress.json, finish_queue/progress.json under that root.',
-        '- GPU accounting: gpu_budget/ledger.json; limits are 20 GiB total device memory, 50 GiB study RSS, and the frozen 4/24/12/8 lease-hour reservations.',
+        '- GPU accounting: gpu_budget/ledger.json; limits are 20 GiB total device memory, 50 GiB study RSS and 48 total lease-hours. The original reservations are 4/24/12/8 hours. Before target evaluation, gpu_reservation_settlement.json records unused first-seed hours shared with final inference; all 12 replication hours remain reserved.',
         '- Concrete validation failures: fresh_image_validation.json and native_refresh_validation.json, with log hashes; original failed attempts stay under invalid/.',
         '- Missing clean upstream fits block a clean end-to-end transfer claim; they do not block the independent operational lanes.',
         '- Do not change the production default, merge, upload to Kaggle or publish weights.', '']

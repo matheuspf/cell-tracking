@@ -7,20 +7,20 @@
       {
         "arguments": [
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
-          "calibrate",
+          "train",
           "--source",
-          "6bba",
+          "44b6",
           "--arm",
-          "A10"
+          "O10_swap"
         ],
         "category": "first_seed_training",
-        "pid": 2091775,
-        "started_epoch": 1789521802.8675494
+        "pid": 2120954,
+        "started_epoch": 1789522401.0204017
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1826,
+    "completed_intervals": 1899,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +30,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 9.06042454579019,
+      "first_seed_training": 9.207792540178126,
       "preflight_and_pilots": 0.5840357303358077,
       "replication": 0.0
     },
@@ -40,14 +40,14 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 9.644460276125997,
+    "total_hours": 9.791828270513934,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 110,
+  "measurements": 115,
   "peak_all_study_process_rss_gib": 18.222946166992188,
-  "peak_process_tree_rss_gib": 17.032306671142578,
-  "peak_total_gpu_gib": 6.892578125,
+  "peak_process_tree_rss_gib": 17.08428955078125,
+  "peak_total_gpu_gib": 6.91015625,
   "records": [
     {
       "path": "staged_crowded_parity/resources.json",
@@ -88,6 +88,15 @@
       "resource_error": null,
       "sha256": "a0a2538b323b97e63a2c29e2927aadcbbd7f1b2f5bedc9d6ca8e01fb0ef7bc19",
       "wall_seconds": 16.219007756000792
+    },
+    {
+      "path": "queue/resources.json",
+      "peak_os_threads": 47,
+      "peak_total_gpu_gib": 6.91015625,
+      "peak_tree_rss_gib": 17.08428955078125,
+      "resource_error": null,
+      "sha256": "a4b7e6a790e3bde55b20cfe20d537bf50dd61b82449b710ba58027ae67f9b14f",
+      "wall_seconds": 36826.16648646
     },
     {
       "path": "training_cache_parity/resources.json",
@@ -309,6 +318,16 @@
       "resource_error": null,
       "sha256": "6b6c77f45af2f76742ac16b70c2d301000512c91fbc0930c1ae04ae3b33ea398",
       "wall_seconds": 101.5642123699945
+    },
+    {
+      "path": "calibration/A10/6bba/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.818817138671875,
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 5.095703125,
+      "peak_tree_rss_gib": 1.7388763427734375,
+      "resource_error": null,
+      "sha256": "d30572f5bed178e7655e770cb4ba75fb884d222bdfa266610881eafe52ddbaf2",
+      "wall_seconds": 216.83976624699426
     },
     {
       "path": "calibration/D10_frozen/44b6/20260915/resources.json",
@@ -582,6 +601,36 @@
       "resource_error": null,
       "sha256": "4f8abeeda0b94627044f323e5db58e8721a9544dcaa5a288a71a98785f778ac1",
       "wall_seconds": 16.88736938000511
+    },
+    {
+      "path": "source_screen/A10/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 3.2678871154785156,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.2431640625,
+      "peak_tree_rss_gib": 1.474517822265625,
+      "resource_error": null,
+      "sha256": "174502b2033360fa6d5b1bb2751ffb39bfec0bb0074a44f6037d14cde021e082",
+      "wall_seconds": 23.838916355001857
+    },
+    {
+      "path": "source_screen/A10/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 3.2393417358398438,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.4130859375,
+      "peak_tree_rss_gib": 1.4373321533203125,
+      "resource_error": null,
+      "sha256": "235cddb27bcfa3b50f0485f10617556a56f87883e965669dec11b8d6a4923fb5",
+      "wall_seconds": 22.57131246800418
+    },
+    {
+      "path": "source_screen/A10/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 3.324535369873047,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.4375,
+      "peak_tree_rss_gib": 1.4933662414550781,
+      "resource_error": null,
+      "sha256": "481193227fae7b74df7f5e2990ca2a2f07a0bb33a690adf523c0e8d6de4cc694",
+      "wall_seconds": 38.088477853998484
     },
     {
       "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
