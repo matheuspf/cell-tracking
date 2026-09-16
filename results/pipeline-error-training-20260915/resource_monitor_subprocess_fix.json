@@ -1,0 +1,20 @@
+{
+  "change": "Pass an explicit environment snapshot to each nvidia-smi subprocess launched from the monitor thread.",
+  "created": "2026-09-16T18:44:25.551937+00:00",
+  "errors_suppressed": false,
+  "exact_retry_passed_before_code_change": true,
+  "live_gpu_sample": {
+    "total_gib": 1.2451171875,
+    "utilization_percent": 1.0
+  },
+  "previous_code_sha256": "7ba89ff970ac17a8e5b394581beee657671d2e685e6cd9a01a878cac5f3178dc",
+  "reason": "Avoid exposing child process launch to concurrent changes to the inherited process environment.",
+  "resource_limits_changed": false,
+  "root_cause_reproduced": false,
+  "scientific_recipe_changed": false,
+  "status": "measured",
+  "targeted_tests": "1 passed",
+  "test_file_sha256": "d798346ac5efe98f44fb8f8859b33dee4a25f48a79bc44326c1d9e0dd1eb5b70",
+  "trigger": "A single nvidia-smi exec failed with EFAULT during the final O10_swap clip.",
+  "updated_code_sha256": "fbbf790aa7c78d555b959e43aa4ca2658545bbcd36eda8235dd83359e02acd77"
+}

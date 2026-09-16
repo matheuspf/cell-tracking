@@ -16,7 +16,9 @@ from .common import Blocked, GPU_LOCK, WORK, now, write_json
 def gpu_snapshot():
     result = subprocess.run(
         ['nvidia-smi', '--query-gpu=memory.used,utilization.gpu', '--format=csv,noheader,nounits'],
-        text=True, capture_output=True, check=True,
+        # Numerical libraries can update the process environment while this
+        # background sampler spawns a child. Give exec a stable explicit copy.
+        text=True, capture_output=True, check=True, env=os.environ.copy(),
     )
     memory, utilization = result.stdout.strip().splitlines()[0].split(',')
     return dict(total_gib=float(memory) / 1024, utilization_percent=float(utilization))

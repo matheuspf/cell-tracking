@@ -1,0 +1,13 @@
+{
+  "complete_inventory_required": true,
+  "created": "2026-09-16T18:42:54.706310+00:00",
+  "eligible_experiments": [
+    "O10_swap",
+    "O10_restore"
+  ],
+  "shared_scorer_lock": true,
+  "status": "not run",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4",
+  "target_results_used_for_selection": false,
+  "update_active": false
+}

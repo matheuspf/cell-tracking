@@ -1,0 +1,45 @@
+{
+  "annotation_guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "cached_operational_inputs": true,
+    "explicit_source_model": "44b6",
+    "fresh_end_to_end": false,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+      "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+    }
+  },
+  "arm": "O10_swap",
+  "created": "2026-09-16T18:42:54.549569+00:00",
+  "dataset": "6bba_fe670320",
+  "frozen_job_sha256": "287aeb94bb0b1b82b13b976961c12f4daef1ad72aa11b0f64f791c4b477acfea",
+  "identical_prediction_bytes": true,
+  "model_or_threshold_selection": false,
+  "original_failure": {
+    "arm": "O10_swap",
+    "dataset": "6bba_fe670320",
+    "log_sha256": "0d7fd4466bf12b7603501a59333573f2799d14fc036e485cfa4b126cb3192598",
+    "returncode": 1,
+    "status": "failed"
+  },
+  "original_peak_gpu_gib": 2.8388671875,
+  "original_resource_error": "Resource monitor failed: [Errno 14] Bad address: 'nvidia-smi'",
+  "original_wall_seconds": 73.10737713200069,
+  "prediction_sha256": "442057e3ef6606b0ff359ac3df49de892583896fba3e9a334712fcd94dbb1acf",
+  "preservation_manifest_sha256": "1640aa18a49c47f0e36745e928ec097ad0a43c18a48b08aa2e2ee58892620bbf",
+  "queue_receipt_reconciliation_pending": true,
+  "retry": {
+    "job": "repair-O10_swap-monitor",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "returncode": 0,
+    "seconds": 27.886038854001526,
+    "status": "measured"
+  },
+  "retry_resource_error": null,
+  "scientific_code_changed": false,
+  "status": "measured",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4"
+}
