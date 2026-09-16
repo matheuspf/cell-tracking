@@ -1,7 +1,7 @@
 {
   "active_stage": "stress_suite",
   "clean_transfer": {
-    "readiness_sha256": "49c761a6218c6e853b1969243b050adac9249c8aaff1fb8410a416ffea74fe5e",
+    "readiness_sha256": "4811286764e8e5bf0f42e6193c548247a9edc1a5498fe6899bfb73a5ceb8c54b",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
@@ -12,7 +12,9 @@
     "O10_restore": 199,
     "O10_swap": 199
   },
-  "created": "2026-09-16T19:02:59.810484+00:00",
+  "complete_stress_cases": 9,
+  "created": "2026-09-16T19:32:48.618777+00:00",
+  "expected_stress_cases": 42,
   "experiments": [
     {
       "clips": null,

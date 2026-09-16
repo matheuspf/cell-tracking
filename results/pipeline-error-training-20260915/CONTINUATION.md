@@ -9,6 +9,8 @@ State: executing. Production default: P0. No new target fitting or threshold sel
 Active stage: stress_suite. Completed division matrices: 199/199.
 Completed point predictions per arm: A10=199/199, A10_replication=199/199, O10_restore=199/199, O10_swap=199/199.
 
+Completed source stress cases: 9/42.
+
 Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.
 Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.
 
