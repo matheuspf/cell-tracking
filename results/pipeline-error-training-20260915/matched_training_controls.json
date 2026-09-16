@@ -44,11 +44,25 @@
       "status": "measured"
     },
     {
+      "common_updates": 89,
+      "exact_recorded_losses": false,
+      "history_sha256": [
+        "f618ecfd82a16fb5ad5c63fdee44af0ee76bd97ac3c82c916e0cda2ca4760a51",
+        "80517deb5440dc2aa97b51a9acd7059934abed41fe3574771abec302a44d77a2"
+      ],
       "left": "D20_temporal",
-      "reason": "Both declared common training prefixes have not completed",
+      "max_abs_recorded_loss_difference": {
+        "consistency": 1.361266654953397e-11,
+        "contrastive": 1.955777406692505e-08,
+        "decision": 0.0,
+        "identity": 1.5195837477222085e-08,
+        "metric_risk": 0.0,
+        "total": 1.5328623703680933e-08
+      },
       "right": "A10",
+      "scope": "Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim",
       "source": "44b6",
-      "status": "not run"
+      "status": "measured"
     },
     {
       "left": "D20_temporal",

@@ -520,27 +520,27 @@
     },
     {
       "arm": "A10",
-      "calibrated": false,
-      "calibration_sha256": null,
+      "calibrated": true,
+      "calibration_sha256": "dd515b74149128ed3cd7cd7fe4b9dc0f24461afb6f3697efa3d0399b3888b81e",
       "claim": "Source-only head; inherited upstream exposure",
-      "completed_updates": 16,
-      "execution_phase": "running",
-      "final_recorded_loss": 0.478956764927716,
+      "completed_updates": 178,
+      "execution_phase": "complete",
+      "final_recorded_loss": 0.04257326243805437,
       "first_recorded_loss": 0.1794475580618382,
-      "frozen_package_sha256": null,
-      "full_fit_wall_seconds": null,
+      "frozen_package_sha256": "913bd2ba71cc2927d9a781b72db8d6fb0aea7d7006a76f8ebacc46353710f605",
+      "full_fit_wall_seconds": 1154.3512521349985,
       "locked_updates": 178,
-      "measured_update_lease_seconds": 83.81163373099116,
-      "model_sha256": null,
-      "positive_biological_event_groups_in_fit_pool": null,
-      "reason": "Incomplete directional training; see execution phase and continuation state",
+      "measured_update_lease_seconds": 1139.961322328978,
+      "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+      "positive_biological_event_groups_in_fit_pool": 15,
+      "reason": null,
       "recipe_sha256": "fb69e5a77ee1047a195420aba6bdca0bb78559ee4734d67de6deda8a6835d940",
       "seed": 20260915,
       "source": "44b6",
-      "source_groups_visited": null,
-      "status": "not run",
+      "source_groups_visited": 284,
+      "status": "measured",
       "target": "6bba",
-      "unique_optimizer_steps": 16
+      "unique_optimizer_steps": 178
     },
     {
       "arm": "A10",
@@ -851,11 +851,25 @@
       "status": "measured"
     },
     {
+      "common_updates": 89,
+      "exact_recorded_losses": false,
+      "history_sha256": [
+        "f618ecfd82a16fb5ad5c63fdee44af0ee76bd97ac3c82c916e0cda2ca4760a51",
+        "80517deb5440dc2aa97b51a9acd7059934abed41fe3574771abec302a44d77a2"
+      ],
       "left": "D20_temporal",
-      "reason": "Both declared common training prefixes have not completed",
+      "max_abs_recorded_loss_difference": {
+        "consistency": 1.361266654953397e-11,
+        "contrastive": 1.955777406692505e-08,
+        "decision": 0.0,
+        "identity": 1.5195837477222085e-08,
+        "metric_risk": 0.0,
+        "total": 1.5328623703680933e-08
+      },
       "right": "A10",
+      "scope": "Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim",
       "source": "44b6",
-      "status": "not run"
+      "status": "measured"
     },
     {
       "left": "D20_temporal",

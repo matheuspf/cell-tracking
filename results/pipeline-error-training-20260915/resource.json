@@ -3,24 +3,10 @@
   "cpu_contract": "Process affinity restricted to 16 logical CPUs; BLAS threads 1, data loaders 0, scorer processes 4. Initial Zarr pools had excess idle OS threads; corrected nested configuration is retained with the original measurements.",
   "gpu_budget": {
     "accounting": "GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.",
-    "active_leases": [
-      {
-        "arguments": [
-          "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
-          "train",
-          "--source",
-          "44b6",
-          "--arm",
-          "A10"
-        ],
-        "category": "first_seed_training",
-        "pid": 1882037,
-        "started_epoch": 1789518911.7679844
-      }
-    ],
+    "active_leases": [],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1460,
+    "completed_intervals": 1638,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +16,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 8.284147989801664,
+      "first_seed_training": 8.599918177378278,
       "preflight_and_pilots": 0.5812821368115106,
       "replication": 0.0
     },
@@ -40,11 +26,11 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 8.865430126613175,
+    "total_hours": 9.18120031418979,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 101,
+  "measurements": 103,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.032306671142578,
   "peak_total_gpu_gib": 6.892578125,
@@ -289,6 +275,16 @@
       "resource_error": null,
       "sha256": "b0524e2ea542da9510ea6f4520ce2526090287262155c7b20c864a8a4f17778d",
       "wall_seconds": 7.837395123999158
+    },
+    {
+      "path": "calibration/A10/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 1.8061943054199219,
+      "peak_os_threads": 11,
+      "peak_total_gpu_gib": 4.2666015625,
+      "peak_tree_rss_gib": 1.6724929809570312,
+      "resource_error": null,
+      "sha256": "6b6c77f45af2f76742ac16b70c2d301000512c91fbc0930c1ae04ae3b33ea398",
+      "wall_seconds": 101.5642123699945
     },
     {
       "path": "calibration/D10_frozen/44b6/20260915/resources.json",
@@ -829,6 +825,16 @@
       "resource_error": null,
       "sha256": "cca8abab222434b3ba5ac4ad3f8c8aafd2d9ccdee647c1bd36b6e87a2a400693",
       "wall_seconds": 115.13649550799892
+    },
+    {
+      "path": "training/A10/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 11.538902282714844,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 2.6513671875,
+      "peak_tree_rss_gib": 11.48062515258789,
+      "resource_error": null,
+      "sha256": "2309a41fd391dbc985bfa50c77f8494817c79cdedeb2bc0ff096a874772644ea",
+      "wall_seconds": 1141.297326109001
     },
     {
       "path": "training/D10_frozen/44b6/20260915/resources.json",
