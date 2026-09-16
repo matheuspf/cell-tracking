@@ -3,10 +3,26 @@
   "cpu_contract": "Process affinity restricted to 16 logical CPUs; BLAS threads 1, data loaders 0, scorer processes 4. Initial Zarr pools had excess idle OS threads; corrected nested configuration is retained with the original measurements.",
   "gpu_budget": {
     "accounting": "GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.",
-    "active_leases": [],
+    "active_leases": [
+      {
+        "arguments": [
+          "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
+          "train",
+          "--source",
+          "44b6",
+          "--arm",
+          "A10",
+          "--seed",
+          "314159"
+        ],
+        "category": "replication",
+        "pid": 3243230,
+        "started_epoch": 1789531748.0264113
+      }
+    ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 2253,
+    "completed_intervals": 2299,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -16,9 +32,9 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 11.108799203222418,
+      "first_seed_training": 11.251933157230836,
       "preflight_and_pilots": 0.5909951908459556,
-      "replication": 0.0
+      "replication": 0.04326440566115908
     },
     "original_reservations_hours": {
       "final_inference_and_package": 8.0,
@@ -26,11 +42,11 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 11.699794394068373,
+    "total_hours": 11.88619275373795,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 135,
+  "measurements": 147,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.08428955078125,
   "peak_total_gpu_gib": 6.91015625,
@@ -639,6 +655,66 @@
       "wall_seconds": 38.088477853998484
     },
     {
+      "path": "source_screen/D10_adapted_replacement/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "peak_all_study_process_rss_gib": 3.064849853515625,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.71484375,
+      "peak_tree_rss_gib": 2.5783767700195312,
+      "resource_error": null,
+      "sha256": "85b014c5aca2369dae939c0b35bbdf560814ce4648762208d8968102637df558",
+      "wall_seconds": 604.4556605739999
+    },
+    {
+      "path": "source_screen/D10_adapted_replacement/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "peak_all_study_process_rss_gib": 2.0206680297851562,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 3.8046875,
+      "peak_tree_rss_gib": 1.5489578247070312,
+      "resource_error": null,
+      "sha256": "2dc8a727a5d1101594fdce653581aecc6d64985be9a76003aeaabcaf9dd10a82",
+      "wall_seconds": 29.660675646002346
+    },
+    {
+      "path": "source_screen/D10_adapted_replacement/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "peak_all_study_process_rss_gib": 2.2483482360839844,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 4.3837890625,
+      "peak_tree_rss_gib": 1.8266487121582031,
+      "resource_error": null,
+      "sha256": "8a4a59f5a8f6d3bb2fdab781db93ba4da2cfa5224541f2a38bca0ba9a028e3b2",
+      "wall_seconds": 190.20902614999795
+    },
+    {
+      "path": "source_screen/D10_adapted_replacement/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 2.242645263671875,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.1220703125,
+      "peak_tree_rss_gib": 1.723236083984375,
+      "resource_error": null,
+      "sha256": "06d3d87d0312336fec3436c18d874ac5a6c719a912df2cfe53ba2c8b79af22b9",
+      "wall_seconds": 95.30397863200051
+    },
+    {
+      "path": "source_screen/D10_adapted_replacement/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 2.1516342163085938,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.2470703125,
+      "peak_tree_rss_gib": 1.7306175231933594,
+      "resource_error": null,
+      "sha256": "68ab6b7d0197516d4fc012832fecdd107bbe03065b77a682903f01db5891023d",
+      "wall_seconds": 83.33251414699771
+    },
+    {
+      "path": "source_screen/D10_adapted_replacement/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 2.774463653564453,
+      "peak_os_threads": 10,
+      "peak_total_gpu_gib": 5.47265625,
+      "peak_tree_rss_gib": 2.288921356201172,
+      "resource_error": null,
+      "sha256": "b6f0fd30e3d0338a0d6450e32c10ef99c4931a4addf06a66fd99b15e94036288",
+      "wall_seconds": 286.6436146269989
+    },
+    {
       "path": "source_screen/D10_frozen/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
       "peak_os_threads": 11,
       "peak_total_gpu_gib": 6.708984375,
@@ -694,6 +770,66 @@
       "resource_error": null,
       "sha256": "f101d5870fd1343a0d34861fca7defc7359f345a9ff4ae1b12ba33a06558d98b",
       "wall_seconds": 340.19703064200075
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",
+      "peak_all_study_process_rss_gib": 2.8224945068359375,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.302734375,
+      "peak_tree_rss_gib": 2.351299285888672,
+      "resource_error": null,
+      "sha256": "b5f13c5567b59b4c548c14a2bf65c9c63e45987259b1742872c834ee6c71b7aa",
+      "wall_seconds": 304.4571635579996
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/44b6/20260915/predictions/44b6_d754aa59/44b6_d754aa59.resources.json",
+      "peak_all_study_process_rss_gib": 1.9163589477539062,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.072265625,
+      "peak_tree_rss_gib": 1.3684158325195312,
+      "resource_error": null,
+      "sha256": "a5214c1cefd901a6ddd70c0e32d35b8b59a373cbcbc4103efc60bfb7b9872add",
+      "wall_seconds": 12.071465738998086
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/44b6/20260915/predictions/44b6_5f15d135/44b6_5f15d135.resources.json",
+      "peak_all_study_process_rss_gib": 2.0363731384277344,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.3681640625,
+      "peak_tree_rss_gib": 1.5982322692871094,
+      "resource_error": null,
+      "sha256": "32028c7662f6fc99a53cca8e50d8339eb4106727791eb3620e25e33801ffffdc",
+      "wall_seconds": 86.20753843899729
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/6bba/20260915/predictions/6bba_bb9f20c3/6bba_bb9f20c3.resources.json",
+      "peak_all_study_process_rss_gib": 2.0380859375,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.119140625,
+      "peak_tree_rss_gib": 1.5259666442871094,
+      "resource_error": null,
+      "sha256": "c3eeadcc165c9d095dd4a9699bf7f8fbed524b981e2ed6f166264f1e6c6c2777",
+      "wall_seconds": 68.8556297890027
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/6bba/20260915/predictions/6bba_4ffd3da3/6bba_4ffd3da3.resources.json",
+      "peak_all_study_process_rss_gib": 1.9405174255371094,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.3388671875,
+      "peak_tree_rss_gib": 1.5194015502929688,
+      "resource_error": null,
+      "sha256": "54d61cd993cde837a0cf7f3da8b1e578856a2680b0f367df216cc1a06f993721",
+      "wall_seconds": 61.28305239600013
+    },
+    {
+      "path": "source_screen/D20_temporal_replacement/6bba/20260915/predictions/6bba_767a1e17/6bba_767a1e17.resources.json",
+      "peak_all_study_process_rss_gib": 2.5745811462402344,
+      "peak_os_threads": 9,
+      "peak_total_gpu_gib": 4.22265625,
+      "peak_tree_rss_gib": 2.0712623596191406,
+      "resource_error": null,
+      "sha256": "63b4f6234ec3078ef1fd6af5a13a0766c75ef05c3d2ce35eb13d87a03a12cf4f",
+      "wall_seconds": 232.91346820299805
     },
     {
       "path": "source_screen/D20_compact/44b6/20260915/predictions/44b6_e31261b4/44b6_e31261b4.resources.json",

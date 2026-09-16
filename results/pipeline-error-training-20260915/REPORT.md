@@ -23,7 +23,16 @@ No new model has a complete all-199 target comparison yet. The source screens ar
 
 ## Source-only branching
 
-Source-only family nomination and conditional replication are pending. No target result is used to choose a checkpoint, margin or training budget.
+Source nominees: division **none**; identity/observation **A10**. Replication status: **in progress**.
+
+- A10: qualified; 44b6: delta +0.000000000, graph gate pass; 6bba: delta +0.000294383, graph gate pass.
+- D10_adapted: not qualified; 44b6: delta -0.018544154, graph gate fail; 6bba: delta -0.012731289, graph gate fail.
+- D20_temporal: not qualified; 44b6: delta -0.018544154, graph gate fail; 6bba: delta -0.005245592, graph gate fail.
+- O10_swap: not qualified; 44b6: delta +0.000000000, graph gate pass; 6bba: delta +0.000000000, graph gate pass.
+
+These are the predeclared complete source calibration clips, not the all-199 target comparison. The source split is not independently certified. Nominee-only replication does not establish a second-seed advantage over a newly trained matched control.
+
+D10_random was not run because the Organoid family did not qualify in both source directions. No pretrained-advantage claim is made.
 
 ## Interpretation
 
@@ -59,7 +68,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 11.700 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 11.886 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference

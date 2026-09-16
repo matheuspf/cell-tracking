@@ -1,0 +1,14 @@
+{
+  "defects": [
+    "Intermediate report assumed a completed replication receipt immediately after nomination",
+    "Archived aggregate resource report was incorrectly treated as an individual monitor receipt"
+  ],
+  "invalid_artifacts": "invalid/report_pending_replication",
+  "new_target_metrics_read": false,
+  "original_report_sha256": "04b7ac464739c49c306e6b85ea0148bc7138feff49abb2e5bef4abb4c167faed",
+  "repaired": "2026-09-16T04:09:08.540756+00:00",
+  "repaired_report_sha256": "11c1fdd49a53091b3b81274fdee806835dc30e64db4d77dbd669fe9e24ced152",
+  "status": "measured",
+  "training_checkpoints_recipes_calibration_and_selection_unchanged": true,
+  "verification": "Real report export succeeded with immutable nomination present and replication actively running"
+}

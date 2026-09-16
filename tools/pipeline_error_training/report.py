@@ -246,7 +246,8 @@ def resources():
         if 'resource' not in path.name and path.parent.name!='resources':
             continue
         receipt=optional(path)
-        if not isinstance(receipt,dict) or 'peak_total_gpu_gib' not in receipt:
+        if not isinstance(receipt,dict) or not {'peak_total_gpu_gib','peak_tree_rss_gib','wall_seconds'}<=receipt.keys():
+            # Archived aggregate reports are not individual monitor receipts.
             continue
         records.append(dict(path=str(path.relative_to(WORK)),sha256=sha(path),**{k:receipt[k] for k in [
             'wall_seconds','peak_total_gpu_gib','peak_tree_rss_gib','peak_all_study_process_rss_gib','peak_os_threads','resource_error'] if k in receipt}))
@@ -317,7 +318,8 @@ def source_decision_text():
     nomination = optional(RESULTS/'nomination.json')
     if not nomination:
         return 'Source-only family nomination and conditional replication are pending. No target result is used to choose a checkpoint, margin or training budget.'
-    replication = read_json(RESULTS/'replication.json')
+    replication = optional(RESULTS/'replication.json') or dict(status='in progress',
+        conditional_random_control=nomination['candidates']['D10_adapted']['qualified'])
     lines = [f"Source nominees: division **{nomination['division_nominee'] or 'none'}**; "
              f"identity/observation **{nomination['identity_nominee'] or 'none'}**. "
              f"Replication status: **{replication['status']}**.", '']

@@ -1,5 +1,14 @@
 {
-  "assessed": [],
+  "assessed": [
+    {
+      "candidate": "A10",
+      "candidate_fresh_validation": "not run",
+      "hard_correctness_pass": false,
+      "metric_gate_pass": false,
+      "recommended": false,
+      "seed_results": []
+    }
+  ],
   "candidate": null,
   "clean_end_to_end_transfer": "unestablished",
   "leaderboard_improvement_claim": false,
