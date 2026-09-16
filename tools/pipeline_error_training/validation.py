@@ -4,8 +4,29 @@ import subprocess
 import sys
 import time
 
-from .common import RESULTS, WORK, inputs, read_json, sha, write_json
+from .common import RESULTS, WORK, inputs, load_graph, read_json, sha, write_json
 from .report import optional
+
+
+def candidate_replay_parity(arm, fresh):
+    """Compare cold-image candidate graphs with the graphs actually scored."""
+    import numpy as np
+    if fresh.get('status') != 'measured':
+        return dict(status=fresh.get('status', 'not run'), reason='Candidate cold-image proof is incomplete')
+    records = []
+    for clip in fresh['clips']:
+        cold = WORK/'fresh_candidates'/arm/clip['unfamiliar_name']/'output/module.npz'
+        scored = WORK/'predictions'/arm/f'{clip["dataset"]}.npz'
+        if sha(cold) != clip['module_sha256']:
+            raise ValueError('Completed cold-image candidate bytes changed')
+        cold_graph, scored_graph = load_graph(cold), load_graph(scored)
+        for key in ['nodes', 'edges']:
+            np.testing.assert_array_equal(cold_graph[key], scored_graph[key],
+                err_msg=f'Cold-image candidate differs from scored graph: {arm}/{clip["dataset"]}/{key}')
+        records.append(dict(dataset=clip['dataset'], unfamiliar_name=clip['unfamiliar_name'],
+            cold_sha256=sha(cold), scored_sha256=sha(scored), exact_nodes_and_edges=True))
+    return dict(status='measured' if len(records)==2 else 'failed', clips=records,
+        reason=None if len(records)==2 else 'Both registered fresh-image clips are required')
 
 
 def tests():
@@ -70,8 +91,15 @@ def run(run_tests=False):
               'shared_embedding_parity.json','encoder_compute_profile.json','native_query_reuse_parity.json',
               'training_frame_statistics_parity.json','observation_edge_parity.json']
     contracts={name:(optional(RESULTS/name) or {}).get('status','not run') for name in required}
+    nomination = optional(RESULTS/'nomination.json') or {}
+    candidate_parity = {arm: candidate_replay_parity(arm, optional(RESULTS/f'fresh_candidate_{arm}.json') or {})
+        for arm in [nomination.get('division_nominee'), nomination.get('identity_nominee')]
+        if arm}
+    if frozen.get('composition', {}).get('enabled'):
+        candidate_parity['C10'] = candidate_replay_parity('C10', optional(RESULTS/'fresh_candidate_C10.json') or {})
     hard=bool(frozen and tested and tested['status']=='measured' and actual_baseline_hashes and baseline['status']=='measured'
-        and zero['status']=='measured' and fresh.get('status')=='measured' and all(v=='measured' for v in contracts.values()))
+        and zero['status']=='measured' and fresh.get('status')=='measured' and all(v=='measured' for v in contracts.values())
+        and all(r['status']=='measured' for r in candidate_parity.values()))
     if any(a.startswith('O') and r['status']=='measured' for a,r in arms.items()):
         hard=hard and native.get('status')=='measured' and \
             (optional(RESULTS/'observation_cache_parity.json') or {}).get('status')=='measured'
@@ -84,6 +112,7 @@ def run(run_tests=False):
         contracts=contracts,arms=arms,fresh_image_status=fresh.get('status','not run'),
         actual_changed_coordinate_status=native.get('status','not run'),target_freeze_exists=bool(frozen),
         shared_continuation_embeddings_used=auxiliary_used,
+        candidate_fresh_graph_parity=candidate_parity,
         new_target_fitting=False,source_only_head_inherited_upstream_exposure=True,
         clean_end_to_end_transfer=dict(status='blocked',reason='Completed clean upstream fits are unavailable'),
         independent_source_groups_certified=False,production_default_changed=False,

@@ -1,0 +1,14 @@
+{
+  "created": "2026-09-16T15:24:35.847650+00:00",
+  "implementation_sha256": "6dbf6d45b477ff5fe856b6d4d3b7a106f14f847afd2ea754a706b4f998bae0a2",
+  "lease_wait_enabled": true,
+  "new_target_model_or_threshold_selection": false,
+  "previous_implementation_sha256": "fa6c59139ff61f2daccf676e22c211da5ad4740af14893b9f981eba8ca4be753",
+  "reason": "Run already-required frozen candidate cold-image proof while point inference is pending; release the shared lease between stages.",
+  "shared_gpu_lease": true,
+  "source_frozen_nominee": "A10",
+  "stage": "fresh_candidates",
+  "status": "not run",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4",
+  "update_active": false
+}

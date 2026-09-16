@@ -78,7 +78,7 @@ def run(arm='D10_frozen', *, candidate=False):
                 stages.append(dict(stage=stage, status='measured', resumed=True))
                 continue
             begin = time.monotonic()
-            with Monitor(output/f'{stage}.resources.json'), Lease(required_gib=12. if stage == 'baseline' else 8.):
+            with Monitor(output/f'{stage}.resources.json'), Lease(required_gib=12. if stage == 'baseline' else 8., wait=True):
                 with (output/f'{stage}.log').open('a') as log:
                     child = subprocess.run([*command, '--stage', stage], stdout=log, stderr=subprocess.STDOUT)
             if child.returncode:
