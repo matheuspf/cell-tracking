@@ -428,10 +428,18 @@ def run(complete=False):
     write_json(RESULTS/'recommendation.json',recommended)
     queues={q:(optional(WORK/q/'progress.json') or {}).get('status','not started') for q in ['queue','observation_queue']}
     finished=optional(WORK/'finish_queue/progress.json') or {}
+    active=optional(WORK/'finish_queue/active.json') or {}
+    import psutil
+    try:
+        stage_running=psutil.Process(active['pid']).cmdline()==active['command']
+    except (KeyError,psutil.NoSuchProcess,psutil.AccessDenied):
+        stage_running=False
     if complete and (any(v!='complete' for v in queues.values()) or finished.get('status')!='complete'):
         raise RuntimeError('Cannot mark this study complete while its execution queues are unfinished')
-    status=dict(created=now(),status='executing' if any(v=='running' for v in queues.values()) else 'awaiting_final_validation',
+    status=dict(created=now(),status='executing' if stage_running or any(v=='running' for v in queues.values()) else 'awaiting_final_validation',
         experiments=table,queues=queues,recommendation=recommended['candidate'],production_default='P0',
+        active_stage=active.get('job') if stage_running else None,
+        complete_division_clip_matrices=len(list((WORK/'final_inference').glob('*/complete.json'))),
         clean_transfer=dict(status='blocked',reason=clean['reason'],
             readiness_sha256=sha(RESULTS/'clean_upstream_readiness.json')),
         uploads=False,weights_published=False,merged=False)

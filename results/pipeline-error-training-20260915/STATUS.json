@@ -1,10 +1,12 @@
 {
+  "active_stage": "final_predictions",
   "clean_transfer": {
-    "readiness_sha256": "296618152037dfaeb73348b0f9efdd71f401eed34ba0c4852fe3db8ab021c3e1",
+    "readiness_sha256": "a552001ec3b01f67a3710359a9db3578aef3050ddc310df8a1f16acca3608f14",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "created": "2026-09-16T05:01:22.829095+00:00",
+  "complete_division_clip_matrices": 29,
+  "created": "2026-09-16T05:59:51.990968+00:00",
   "experiments": [
     {
       "clips": null,
@@ -140,7 +142,7 @@
     "queue": "complete"
   },
   "recommendation": null,
-  "status": "awaiting_final_validation",
+  "status": "executing",
   "uploads": false,
   "weights_published": false
 }
