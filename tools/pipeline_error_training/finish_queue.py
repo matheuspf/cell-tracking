@@ -8,7 +8,7 @@ import time
 from .common import RESULTS,WORK,inputs,now,read_json,sha,write_json
 
 
-def execute(name,module,args=()):
+def execute(name,module,args=(),*,update_active=True):
     root=WORK/'finish_queue';root.mkdir(parents=True,exist_ok=True)
     previous = root/f'{name}.json'
     if previous.exists() and name not in ['validation', 'report']:
@@ -19,7 +19,8 @@ def execute(name,module,args=()):
     start=time.monotonic()
     with (root/f'{name}.log').open('a') as log:
         process=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT)
-        write_json(root/'active.json',dict(job=name,pid=process.pid,command=command,started=now()))
+        if update_active:
+            write_json(root/'active.json',dict(job=name,pid=process.pid,command=command,started=now()))
         code=process.wait()
     result=dict(job=name,status='measured' if code==0 else 'failed',returncode=code,
         seconds=time.monotonic()-start,log_sha256=sha(root/f'{name}.log'))

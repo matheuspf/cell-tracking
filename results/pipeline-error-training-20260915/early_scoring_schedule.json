@@ -1,0 +1,21 @@
+{
+  "concurrent_scorer_processes": 4,
+  "continuation_priority": true,
+  "created": "2026-09-16T11:41:45.427347+00:00",
+  "eligible_experiments": [
+    "A10",
+    "A10_replication",
+    "D10_frozen",
+    "D10_adapted",
+    "D20_compact",
+    "D20_temporal",
+    "D20_no_pretrain",
+    "D10_adapted_replacement",
+    "D20_temporal_replacement"
+  ],
+  "execution_only_change": true,
+  "implementation_sha256": "eb7438d4a2a50b2c10cb2a0e55af73fc69223cfb84a2d5b085775a00870804f0",
+  "reason": "CPU scoring will run only after each complete frozen all-199 prediction inventory is available, while independent point inference continues.",
+  "status": "not run",
+  "target_results_change_models_or_thresholds": false
+}
