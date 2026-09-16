@@ -146,6 +146,543 @@
         }
       }
     },
+    "D10_adapted": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 16,
+          "division_fn:division_observation": 2,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 86,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 711,
+          "edge_fp:unmatched": 445,
+          "edge_fp:wrong_identity": 21,
+          "edge_link:association": 684
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 71,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 49,
+          "division_fp:division_extra": 714,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1783,
+          "edge_fp:unmatched": 2967,
+          "edge_fp:wrong_identity": 63,
+          "edge_link:association": 2225
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 87,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 2,
+          "division_fp:division_cross": 50,
+          "division_fp:division_extra": 800,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2494,
+          "edge_fp:unmatched": 3412,
+          "edge_fp:wrong_identity": 84,
+          "edge_link:association": 2909
+        }
+      }
+    },
+    "D10_adapted_replacement": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 16,
+          "division_fn:division_observation": 2,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 84,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 711,
+          "edge_fp:unmatched": 443,
+          "edge_fp:wrong_identity": 21,
+          "edge_link:association": 684
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 71,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 49,
+          "division_fp:division_extra": 715,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1783,
+          "edge_fp:unmatched": 2968,
+          "edge_fp:wrong_identity": 62,
+          "edge_link:association": 2223
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 87,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 2,
+          "division_fp:division_cross": 50,
+          "division_fp:division_extra": 799,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2494,
+          "edge_fp:unmatched": 3411,
+          "edge_fp:wrong_identity": 83,
+          "edge_link:association": 2907
+        }
+      }
+    },
+    "D10_frozen": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 15,
+          "division_fn:division_observation": 2,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 87,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 712,
+          "edge_fp:unmatched": 444,
+          "edge_fp:wrong_identity": 22,
+          "edge_link:association": 684
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 68,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 38,
+          "division_fp:division_extra": 823,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1792,
+          "edge_fp:unmatched": 3031,
+          "edge_fp:wrong_identity": 56,
+          "edge_link:association": 2178
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 83,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 2,
+          "division_fp:division_cross": 39,
+          "division_fp:division_extra": 910,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2504,
+          "edge_fp:unmatched": 3475,
+          "edge_fp:wrong_identity": 78,
+          "edge_link:association": 2862
+        }
+      }
+    },
+    "D20_compact": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 15,
+          "division_fn:division_observation": 2,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 137,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 720,
+          "edge_fp:unmatched": 470,
+          "edge_fp:wrong_identity": 23,
+          "edge_link:association": 661
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 62,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 2,
+          "division_fp:division_cross": 37,
+          "division_fp:division_extra": 1070,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1811,
+          "edge_fp:unmatched": 3147,
+          "edge_fp:wrong_identity": 53,
+          "edge_link:association": 1994
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 77,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 2,
+          "division_fp:division_cross": 38,
+          "division_fp:division_extra": 1207,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2531,
+          "edge_fp:unmatched": 3617,
+          "edge_fp:wrong_identity": 76,
+          "edge_link:association": 2655
+        }
+      }
+    },
+    "D20_no_pretrain": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 17,
+          "division_fn:division_observation": 2,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 58,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 706,
+          "edge_fp:unmatched": 407,
+          "edge_fp:wrong_identity": 21,
+          "edge_link:association": 671
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 71,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 3,
+          "division_fp:division_cross": 49,
+          "division_fp:division_extra": 608,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1788,
+          "edge_fp:unmatched": 2862,
+          "edge_fp:wrong_identity": 72,
+          "edge_link:association": 2259
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 88,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 3,
+          "division_fp:division_cross": 50,
+          "division_fp:division_extra": 666,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2494,
+          "edge_fp:unmatched": 3269,
+          "edge_fp:wrong_identity": 93,
+          "edge_link:association": 2930
+        }
+      }
+    },
+    "D20_temporal": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 16,
+          "division_fn:division_observation": 2,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 92,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 716,
+          "edge_fp:unmatched": 428,
+          "edge_fp:wrong_identity": 22,
+          "edge_link:association": 663
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 62,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 3,
+          "division_fp:division_cross": 37,
+          "division_fp:division_extra": 922,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1811,
+          "edge_fp:unmatched": 3019,
+          "edge_fp:wrong_identity": 54,
+          "edge_link:association": 2040
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 78,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 4,
+          "division_fp:division_cross": 38,
+          "division_fp:division_extra": 1014,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2527,
+          "edge_fp:unmatched": 3447,
+          "edge_fp:wrong_identity": 76,
+          "edge_link:association": 2703
+        }
+      }
+    },
+    "D20_temporal_replacement": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 16,
+          "division_fn:division_observation": 2,
+          "division_fn:division_topology": 1,
+          "division_fp:division_cross": 1,
+          "division_fp:division_extra": 92,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 716,
+          "edge_fp:unmatched": 428,
+          "edge_fp:wrong_identity": 22,
+          "edge_link:association": 663
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 64,
+          "division_fn:division_observation": 22,
+          "division_fn:division_topology": 3,
+          "division_fp:division_cross": 36,
+          "division_fp:division_extra": 914,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1811,
+          "edge_fp:unmatched": 3011,
+          "edge_fp:wrong_identity": 54,
+          "edge_link:association": 2041
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 80,
+          "division_fn:division_observation": 24,
+          "division_fn:division_topology": 4,
+          "division_fp:division_cross": 37,
+          "division_fp:division_extra": 1006,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2527,
+          "edge_fp:unmatched": 3439,
+          "edge_fp:wrong_identity": 76,
+          "edge_link:association": 2704
+        }
+      }
+    },
     "P0": {
       "44b6": {
         "centers": {

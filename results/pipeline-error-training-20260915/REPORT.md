@@ -19,7 +19,26 @@ Both embryos and all recovered/lost TP and removed/introduced FP counts are repo
 
 ## Measured model outcomes
 
-No new model has a complete all-199 target comparison yet. The source screens are reported separately.
+No candidate has passed every frozen recommendation gate; P0 is retained. A higher descriptive score alone does not establish a recommendation.
+
+Highest completed new-model pooled result: **D20_no_pretrain 0.919262753299** (P0 delta -0.015602233114; C4_m6 delta -0.015915616958).
+
+Complete all-199 results, with embryos ordered 44b6 / 6bba:
+
+- **D10_adapted**: pooled 0.918152447085; embryos 0.918298579 (-0.013428677) / 0.918262675 (-0.017021516). Edge TP/FP/FN 122934/5990/5949; division TP/FP/FN 38/850/113; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 22/260, edge FP removed/introduced 18/1012; division TP recovered/lost 9/0, division FP removed/introduced 0/758.
+- **D10_adapted_replacement**: pooled 0.918184567596; embryos 0.918497058 (-0.013230198) / 0.918276236 (-0.017007955). Edge TP/FP/FN 122936/5988/5947; division TP/FP/FN 38/849/113; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 22/258, edge FP removed/introduced 18/1010; division TP recovered/lost 9/0, division FP removed/introduced 0/757.
+- **D10_frozen**: pooled 0.918073020654; embryos 0.919079150 (-0.012648106) / 0.918107435 (-0.017176756). Edge TP/FP/FN 122981/6057/5902; division TP/FP/FN 42/949/109; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 30/221, edge FP removed/introduced 25/1086; division TP recovered/lost 13/0, division FP removed/introduced 0/857.
+- **D20_compact**: pooled 0.918100978703; embryos 0.917144686 (-0.014582570) / 0.918382547 (-0.016901644). Edge TP/FP/FN 123188/6224/5695; division TP/FP/FN 48/1245/103; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 62/46, edge FP removed/introduced 13/1241; division TP recovered/lost 19/0, division FP removed/introduced 0/1153.
+- **D20_no_pretrain**: pooled 0.919262753299; embryos 0.922841374 (-0.008885882) / 0.918911867 (-0.016372324). Edge TP/FP/FN 122913/5856/5970; division TP/FP/FN 36/716/115; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 15/274, edge FP removed/introduced 11/871; division TP recovered/lost 7/0, division FP removed/introduced 0/624.
+- **D20_temporal**: pooled 0.919226643837; embryos 0.919484793 (-0.012242464) / 0.919338549 (-0.015945642). Edge TP/FP/FN 123140/6050/5743; division TP/FP/FN 45/1052/106; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 45/77, edge FP removed/introduced 19/1073; division TP recovered/lost 16/0, division FP removed/introduced 0/960.
+- **D20_temporal_replacement**: pooled 0.919134189858; embryos 0.919484793 (-0.012242464) / 0.919237362 (-0.016046829). Edge TP/FP/FN 123139/6042/5744; division TP/FP/FN 43/1043/108; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 44/77, edge FP removed/introduced 20/1066; division TP recovered/lost 15/1, division FP removed/introduced 2/953.
 
 ## Source-only branching
 
@@ -68,7 +87,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 18.627 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 20.003 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.

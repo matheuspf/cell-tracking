@@ -1,12 +1,12 @@
 {
-  "active_stage": "final_predictions",
+  "active_stage": "point_predictions",
   "clean_transfer": {
-    "readiness_sha256": "778a9d73b7bf20b101fc1a0748bbbdcf99e6fa6f8310148ae74f11ed3671931f",
+    "readiness_sha256": "2b398cb3bb2c32274298d0d3cd3ed0cb997950269405a8c36ecbb9acc740c719",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "complete_division_clip_matrices": 132,
-  "created": "2026-09-16T11:23:05.291455+00:00",
+  "complete_division_clip_matrices": 199,
+  "created": "2026-09-16T13:02:21.906985+00:00",
   "experiments": [
     {
       "clips": null,
@@ -30,18 +30,18 @@
       "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D10_frozen",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9180730206541367,
+      "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D10_adapted",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9181524470850979,
+      "status": "measured"
     },
     {
       "clips": null,
@@ -51,25 +51,25 @@
       "status": "not run"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D20_compact",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9181009787029242,
+      "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D20_temporal",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9192266438365844,
+      "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D20_no_pretrain",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9192627532991191,
+      "status": "measured"
     },
     {
       "clips": null,
@@ -121,18 +121,18 @@
       "status": "not run"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D10_adapted_replacement",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9181845675964755,
+      "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "D20_temporal_replacement",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9191341898575551,
+      "status": "measured"
     }
   ],
   "merged": false,

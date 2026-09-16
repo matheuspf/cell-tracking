@@ -29,6 +29,11 @@ $STUDY_PY -m pipeline_error_training.finish_queue
 $STUDY_PY -m pipeline_error_training.report
 ```
 
+For early CPU audits while the finish queue is running in another terminal, use
+`$STUDY_PY -m pipeline_error_training.early_scoring`. It requires every completed clip and
+serialization file. A global scorer lock serializes audits and shared table exports;
+the final queue reuses completed scoring receipts. This does not change model selection.
+
 The post-primary queue requires both primary progress files to say complete. It performs source-only
 qualification and replication before the target freeze. Every failed independent prediction lane is retained.
 If a frozen stage fails, preserve its files under the new invalid/ root, record a named implementation repair,
@@ -36,20 +41,13 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 
 ## Pending or unsuccessful registered experiments
 
-- D10_frozen: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D10_adapted: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D10_random: not run — Organoid family did not qualify in both source directions; conditional control was not authorized
-- D20_compact: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D20_temporal: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D20_no_pretrain: not run — 2/2 directional fits complete; all-199 target score unavailable
 - A10: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_swap: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
 - C10: not run — Required execution or validation is incomplete
 - V10: not run — Required execution or validation is incomplete
 - A10_replication: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D10_adapted_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D20_temporal_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 
 ## Host restart recovery
 

@@ -2,12 +2,12 @@ experiment,status,score,clips,reason
 S00,measured,,,
 S10,measured,,,
 D00,measured,0.9348649864131336,199,
-D10_frozen,not run,,,2/2 directional fits complete; all-199 target score unavailable
-D10_adapted,not run,,,2/2 directional fits complete; all-199 target score unavailable
+D10_frozen,measured,0.9180730206541367,199,
+D10_adapted,measured,0.9181524470850979,199,
 D10_random,not run,,,Organoid family did not qualify in both source directions; conditional control was not authorized
-D20_compact,not run,,,2/2 directional fits complete; all-199 target score unavailable
-D20_temporal,not run,,,2/2 directional fits complete; all-199 target score unavailable
-D20_no_pretrain,not run,,,2/2 directional fits complete; all-199 target score unavailable
+D20_compact,measured,0.9181009787029242,199,
+D20_temporal,measured,0.9192266438365844,199,
+D20_no_pretrain,measured,0.9192627532991191,199,
 A10,not run,,,2/2 directional fits complete; all-199 target score unavailable
 O10_swap,not run,,,2/2 directional fits complete; all-199 target score unavailable
 O10_restore,not run,,,2/2 directional fits complete; all-199 target score unavailable
@@ -15,5 +15,5 @@ R10,measured,,,
 C10,not run,,,Required execution or validation is incomplete
 V10,not run,,,Required execution or validation is incomplete
 A10_replication,not run,,,2/2 directional fits complete; all-199 target score unavailable
-D10_adapted_replacement,not run,,,2/2 directional fits complete; all-199 target score unavailable
-D20_temporal_replacement,not run,,,2/2 directional fits complete; all-199 target score unavailable
+D10_adapted_replacement,measured,0.9181845675964755,199,
+D20_temporal_replacement,measured,0.9191341898575551,199,
