@@ -77,6 +77,13 @@ def source_rows():
             row['raw_source_grouped_decision_loss'] = diagnostic.get('before', {}).get('loss')
             row['calibrated_source_grouped_decision_loss'] = diagnostic.get('after', {}).get('loss')
             row['calibration_temperature'] = calibration.get('calibration', {}).get('temperature')
+            if receipt['arm'].startswith('O10_'):
+                selector = calibration['calibration']
+                row['raw_source_grouped_selection_loss'] = calibration['source_grouped_selection_loss']
+                row['raw_source_selection_loss'] = selector['before_loss']
+                row['regularized_calibrated_source_selection_loss'] = selector['after_loss']
+                for state, count in zip(['keep','swap','both'],selector['state_counts']):
+                    row['calibration_supported_'+state+'_choices'] = count
         if receipt['arm']=='A10':
             diagnostic_path = WORK/'training/A10'/receipt['source']/str(receipt['seed'])/'identity_diagnostic.json'
             diagnostic = optional(diagnostic_path)
