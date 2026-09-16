@@ -7,20 +7,20 @@
       {
         "arguments": [
           "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/__main__.py",
-          "train",
+          "calibrate",
           "--source",
           "44b6",
           "--arm",
           "O10_swap"
         ],
         "category": "first_seed_training",
-        "pid": 2120954,
-        "started_epoch": 1789522401.0204017
+        "pid": 2351103,
+        "started_epoch": 1789524700.8142087
       }
     ],
     "charge_other_programs": false,
     "combined_first_seed_and_final_hours": null,
-    "completed_intervals": 1899,
+    "completed_intervals": 2027,
     "dependent_phase_limits_not_additive": false,
     "limits_hours": {
       "final_inference_and_package": 8.0,
@@ -30,7 +30,7 @@
     },
     "measured_gpu_lease_hours": {
       "final_inference_and_package": 0.0,
-      "first_seed_training": 9.207792540178126,
+      "first_seed_training": 9.843407098901366,
       "preflight_and_pilots": 0.5840357303358077,
       "replication": 0.0
     },
@@ -40,11 +40,11 @@
       "preflight_and_pilots": 4.0,
       "replication": 12.0
     },
-    "total_hours": 9.791828270513934,
+    "total_hours": 10.427442829237174,
     "unused_first_seed_reservation_transfer_enabled": false
   },
   "historical_or_other_studies_restarted": false,
-  "measurements": 115,
+  "measurements": 116,
   "peak_all_study_process_rss_gib": 18.222946166992188,
   "peak_process_tree_rss_gib": 17.08428955078125,
   "peak_total_gpu_gib": 6.91015625,
@@ -1026,6 +1026,16 @@
       "resource_error": null,
       "sha256": "e8b00433e70b65a924bf7a33de64e375d47959b2d5526bd17412868a3a8808c1",
       "wall_seconds": 2440.3339448749975
+    },
+    {
+      "path": "training/O10_swap/44b6/20260915/resources.json",
+      "peak_all_study_process_rss_gib": 12.6851806640625,
+      "peak_os_threads": 12,
+      "peak_total_gpu_gib": 3.197265625,
+      "peak_tree_rss_gib": 12.601577758789062,
+      "resource_error": null,
+      "sha256": "76f5444545cdfd5a8b69f9ecbb3a0505487f0d4ef23e64d2c68153129dc186df",
+      "wall_seconds": 2559.759867890003
     },
     {
       "path": "training/D10_adapted/44b6/20260915/resources.json",

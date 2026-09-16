@@ -4,7 +4,7 @@ Read REPORT.md and STATUS.json first. This file is generated from the current ex
 
 ## Current state
 
-State: awaiting_final_validation. Production default: P0. No new target fitting or threshold selection is authorized.
+State: executing. Production default: P0. No new target fitting or threshold selection is authorized.
 
 Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.
 Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.
@@ -43,8 +43,8 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 - D20_temporal: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_no_pretrain: not run — 2/2 directional fits complete; all-199 target score unavailable
 - A10: not run — 2/2 directional fits complete; all-199 target score unavailable
-- O10_swap: not run — 0/2 directional fits complete; all-199 target score unavailable
-- O10_restore: not run — 0/2 directional fits complete; all-199 target score unavailable
+- O10_swap: not run — 1/2 directional fits complete; all-199 target score unavailable
+- O10_restore: not run — 1/2 directional fits complete; all-199 target score unavailable
 - R10: not run — Required execution or validation is incomplete
 - C10: not run — Required execution or validation is incomplete
 - V10: not run — Required execution or validation is incomplete

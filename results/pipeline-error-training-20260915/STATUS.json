@@ -1,10 +1,10 @@
 {
   "clean_transfer": {
-    "readiness_sha256": "c8a671475775ef0eae353bca81ec6ff86af44d1b067ee12a8b301a1ab8e64326",
+    "readiness_sha256": "7480f28c7f5e6606e443a13566cb64f35250e4cfacb26b0a8b657db65809ae90",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "created": "2026-09-16T01:33:25.041073+00:00",
+  "created": "2026-09-16T02:11:43.836365+00:00",
   "experiments": [
     {
       "clips": null,
@@ -79,14 +79,14 @@
     {
       "clips": null,
       "experiment": "O10_swap",
-      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "reason": "1/2 directional fits complete; all-199 target score unavailable",
       "score": null,
       "status": "not run"
     },
     {
       "clips": null,
       "experiment": "O10_restore",
-      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "reason": "1/2 directional fits complete; all-199 target score unavailable",
       "score": null,
       "status": "not run"
     },
@@ -115,11 +115,11 @@
   "merged": false,
   "production_default": "P0",
   "queues": {
-    "observation_queue": "waiting",
+    "observation_queue": "running",
     "queue": "complete"
   },
   "recommendation": null,
-  "status": "awaiting_final_validation",
+  "status": "executing",
   "uploads": false,
   "weights_published": false
 }
