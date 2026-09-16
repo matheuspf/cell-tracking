@@ -643,24 +643,24 @@
       "calibrated": false,
       "calibration_sha256": null,
       "claim": "Source-only head; inherited upstream exposure",
-      "completed_updates": 71,
-      "execution_phase": "running",
-      "final_recorded_loss": 0.1680674484523479,
+      "completed_updates": 178,
+      "execution_phase": "complete",
+      "final_recorded_loss": 0.4010757303531136,
       "first_recorded_loss": 0.20553169411141425,
       "frozen_package_sha256": null,
-      "full_fit_wall_seconds": null,
+      "full_fit_wall_seconds": 2636.791825979999,
       "locked_updates": 178,
-      "measured_update_lease_seconds": 517.3170901510093,
-      "model_sha256": null,
+      "measured_update_lease_seconds": 2634.560552355986,
+      "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
       "positive_biological_event_groups_in_fit_pool": null,
-      "reason": "Incomplete directional training; see execution phase and continuation state",
+      "reason": null,
       "recipe_sha256": "6d64f7864f987873312089f4e89cc60b1335b02d6d236d4389fe4632c20da6fd",
       "seed": 20260915,
       "source": "6bba",
-      "source_groups_visited": null,
-      "status": "not run",
+      "source_groups_visited": 3625,
+      "status": "measured",
       "target": "44b6",
-      "unique_optimizer_steps": 71
+      "unique_optimizer_steps": 178
     },
     {
       "arm": "O10_swap",
@@ -914,11 +914,25 @@
       "status": "measured"
     },
     {
+      "common_updates": 89,
+      "exact_recorded_losses": false,
+      "history_sha256": [
+        "c60f07ac81272f9dd68295ee008192029d71b5c11db02a95ee6eb5412012f413",
+        "d988f28a0a20458b936c41b8e8e660920f57e644022622e4c125f972cd5a8ee3"
+      ],
       "left": "D20_temporal",
-      "reason": "Both declared common training prefixes have not completed",
+      "max_abs_recorded_loss_difference": {
+        "consistency": 4.283684518213704e-12,
+        "contrastive": 1.955777406692505e-08,
+        "decision": 0.0,
+        "identity": 1.5730620361864567e-08,
+        "metric_risk": 0.0,
+        "total": 1.6705598682165146e-08
+      },
       "right": "O10_swap",
+      "scope": "Observed losses while training objectives and trainable blocks are identical; no later weight-equality or advantage claim",
       "source": "6bba",
-      "status": "not run"
+      "status": "measured"
     }
   ],
   "matched_primary_updates": 178,
