@@ -368,6 +368,8 @@ def continuation(status):
         'Read REPORT.md and STATUS.json first. This file is generated from the current execution receipts.', '',
         '## Current state', '',
         f"State: {status['status']}. Production default: P0. No new target fitting or threshold selection is authorized.", '',
+        f"Active stage: {status['active_stage'] or 'none'}. Completed division matrices: {status['complete_division_clip_matrices']}/199.",
+        'Completed point predictions per arm: '+', '.join(f'{a}={n}/199' for a,n in status['complete_point_clip_predictions'].items())+'.', '',
         'Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.',
         'Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.', '',
         '```sh', "ps -eo pid,ppid,etime,rss,args | rg 'pipeline_error_training|train_native'",
@@ -454,6 +456,8 @@ def run(complete=False):
         experiments=table,queues=queues,recommendation=recommended['candidate'],production_default='P0',
         active_stage=active.get('job') if stage_running else None,
         complete_division_clip_matrices=len(list((WORK/'final_inference').glob('*/complete.json'))),
+        complete_point_clip_predictions={p.name:len(list(p.glob('*/complete.json')))
+            for p in sorted((WORK/'final_point_inference').glob('*')) if p.is_dir()},
         clean_transfer=dict(status='blocked',reason=clean['reason'],
             readiness_sha256=sha(RESULTS/'clean_upstream_readiness.json')),
         uploads=False,weights_published=False,merged=False)
