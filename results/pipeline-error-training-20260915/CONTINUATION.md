@@ -46,7 +46,6 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 - O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
 - C10: not run — Required execution or validation is incomplete
 - V10: not run — Required execution or validation is incomplete
-- A10_replication: not run — 2/2 directional fits complete; all-199 target score unavailable
 
 ## Host restart recovery
 

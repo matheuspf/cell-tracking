@@ -55,14 +55,19 @@
       "returncode": 0,
       "seconds": 120.14431384799991,
       "status": "measured"
+    },
+    {
+      "job": "score-A10_replication",
+      "log_sha256": "7281157e1eab704511da1ead9b4b18c24c4b27feebf2b4ee3786279ead61b76f",
+      "returncode": 0,
+      "seconds": 118.34249243899922,
+      "status": "measured"
     }
   ],
-  "pending": [
-    "A10_replication"
-  ],
+  "pending": [],
   "schedule_sha256": "9b21d64692b125c6a4fc3a69a99e5cfe0d23ba71d4970118f67bd0594edfcfdb",
   "status": "measured",
   "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4",
   "target_results_used_for_model_or_threshold_selection": false,
-  "updated": "2026-09-16T13:05:31.285389+00:00"
+  "updated": "2026-09-16T13:21:14.822936+00:00"
 }

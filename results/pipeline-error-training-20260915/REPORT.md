@@ -27,6 +27,8 @@ Complete all-199 results, with embryos ordered 44b6 / 6bba:
 
 - **A10**: pooled 0.934939378710; embryos 0.932236698 (+0.000509442) / 0.935278190 (-0.000006001). Edge TP/FP/FN 123190/5005/5693; division TP/FP/FN 29/92/122; predicted nodes 4108943.
   Relative to P0: edge TP recovered/lost 18/0, edge FP removed/introduced 0/9; division TP recovered/lost 0/0, division FP removed/introduced 0/0.
+- **A10_replication**: pooled 0.934938660898; embryos 0.932187977 (+0.000460720) / 0.935286369 (+0.000002178). Edge TP/FP/FN 123189/5004/5694; division TP/FP/FN 29/92/122; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 17/0, edge FP removed/introduced 0/8; division TP recovered/lost 0/0, division FP removed/introduced 0/0.
 - **D10_adapted**: pooled 0.918152447085; embryos 0.918298579 (-0.013428677) / 0.918262675 (-0.017021516). Edge TP/FP/FN 122934/5990/5949; division TP/FP/FN 38/850/113; predicted nodes 4108943.
   Relative to P0: edge TP recovered/lost 22/260, edge FP removed/introduced 18/1012; division TP recovered/lost 9/0, division FP removed/introduced 0/758.
 - **D10_adapted_replacement**: pooled 0.918184567596; embryos 0.918497058 (-0.013230198) / 0.918276236 (-0.017007955). Edge TP/FP/FN 122936/5988/5947; division TP/FP/FN 38/849/113; predicted nodes 4108943.
@@ -89,7 +91,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 20.031 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 20.176 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.
