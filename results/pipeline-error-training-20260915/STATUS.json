@@ -1,7 +1,7 @@
 {
   "active_stage": "point_predictions",
   "clean_transfer": {
-    "readiness_sha256": "acb032dbd7625aa1943cf52b499fa5fcc1109053489c5c47a06d2a3767e08c90",
+    "readiness_sha256": "524bb30e920d782401e0898f4eab705817c224c32a19c948eb69ef8af8ade160",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
@@ -9,9 +9,9 @@
   "complete_point_clip_predictions": {
     "A10": 199,
     "A10_replication": 199,
-    "O10_swap": 78
+    "O10_swap": 110
   },
-  "created": "2026-09-16T15:41:22.277612+00:00",
+  "created": "2026-09-16T16:27:27.110245+00:00",
   "experiments": [
     {
       "clips": null,
