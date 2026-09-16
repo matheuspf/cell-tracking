@@ -42,7 +42,6 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 ## Pending or unsuccessful registered experiments
 
 - D10_random: not run — Organoid family did not qualify in both source directions; conditional control was not authorized
-- A10: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_swap: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
 - C10: not run — Required execution or validation is incomplete

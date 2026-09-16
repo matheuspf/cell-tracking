@@ -21,10 +21,12 @@ Both embryos and all recovered/lost TP and removed/introduced FP counts are repo
 
 No candidate has passed every frozen recommendation gate; P0 is retained. A higher descriptive score alone does not establish a recommendation.
 
-Highest completed new-model pooled result: **D20_no_pretrain 0.919262753299** (P0 delta -0.015602233114; C4_m6 delta -0.015915616958).
+Highest completed new-model pooled result: **A10 0.934939378710** (P0 delta +0.000074392296; C4_m6 delta -0.000238991547).
 
 Complete all-199 results, with embryos ordered 44b6 / 6bba:
 
+- **A10**: pooled 0.934939378710; embryos 0.932236698 (+0.000509442) / 0.935278190 (-0.000006001). Edge TP/FP/FN 123190/5005/5693; division TP/FP/FN 29/92/122; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 18/0, edge FP removed/introduced 0/9; division TP recovered/lost 0/0, division FP removed/introduced 0/0.
 - **D10_adapted**: pooled 0.918152447085; embryos 0.918298579 (-0.013428677) / 0.918262675 (-0.017021516). Edge TP/FP/FN 122934/5990/5949; division TP/FP/FN 38/850/113; predicted nodes 4108943.
   Relative to P0: edge TP recovered/lost 22/260, edge FP removed/introduced 18/1012; division TP recovered/lost 9/0, division FP removed/introduced 0/758.
 - **D10_adapted_replacement**: pooled 0.918184567596; embryos 0.918497058 (-0.013230198) / 0.918276236 (-0.017007955). Edge TP/FP/FN 122936/5988/5947; division TP/FP/FN 38/849/113; predicted nodes 4108943.
@@ -87,7 +89,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 20.003 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 20.031 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.

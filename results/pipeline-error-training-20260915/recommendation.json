@@ -6,7 +6,18 @@
       "hard_correctness_pass": false,
       "metric_gate_pass": false,
       "recommended": false,
-      "seed_results": []
+      "seed_results": [
+        {
+          "delta": {
+            "44b6": 0.0005094418996604011,
+            "6bba": -6.001268991417952e-06,
+            "pooled": 7.439229637629108e-05
+          },
+          "passes": false,
+          "score": 0.9349393787095099,
+          "seed": 20260915
+        }
+      ]
     }
   ],
   "candidate": null,

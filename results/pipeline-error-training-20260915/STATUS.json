@@ -1,12 +1,12 @@
 {
   "active_stage": "point_predictions",
   "clean_transfer": {
-    "readiness_sha256": "2b398cb3bb2c32274298d0d3cd3ed0cb997950269405a8c36ecbb9acc740c719",
+    "readiness_sha256": "e9301518895da999cd98b711eaa6b326521af5d45a1772c90be9fd87be999a59",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
   "complete_division_clip_matrices": 199,
-  "created": "2026-09-16T13:02:21.906985+00:00",
+  "created": "2026-09-16T13:07:40.932160+00:00",
   "experiments": [
     {
       "clips": null,
@@ -72,11 +72,11 @@
       "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "A10",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9349393787095099,
+      "status": "measured"
     },
     {
       "clips": null,
