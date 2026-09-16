@@ -5,9 +5,10 @@ from pathlib import Path
 import numpy as np
 
 from .common import RESULTS, WORK, inputs, read_json, save_arrays, sha, verified_evidence, verified_graph
-from .crops import Images, compact_view, prediction_tracklet
+from .crops import compact_view, prediction_tracklet
 from .fast_crops import sample_native
 from .feasibility import records
+from .training_images import FrameStatistics, TrainingImages
 
 
 class SourceDataset:
@@ -21,6 +22,7 @@ class SourceDataset:
                      split[r['dataset']]['partition'] == partition}
         self.graphs = OrderedDict()
         self.image_cache = OrderedDict()
+        self.frame_statistics = FrameStatistics()
         self.crop_cache = OrderedDict()
         self.cache_bytes = sum(p.stat().st_size for p in (WORK / 'crop_cache').rglob('*.npz'))
         self.fingerprint = sha(RESULTS / 'input_manifest.json')[:16] + sha(Path(__file__).with_name('crops.py'))[:16]
@@ -65,7 +67,7 @@ class SourceDataset:
 
     def images(self, name):
         if name not in self.image_cache:
-            self.image_cache[name] = Images(self.rows[name]['image_path'])
+            self.image_cache[name] = TrainingImages(self.rows[name]['image_path'],self.frame_statistics)
             while len(self.image_cache) > 2:
                 self.image_cache.popitem(last=False)
         self.image_cache.move_to_end(name)

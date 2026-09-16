@@ -85,6 +85,12 @@ only when node IDs, order and coordinates match exactly. They rebuild all graph
 features. `native_query_reuse_parity` verifies that path against the previously
 executed real changed-point fixture with CUDA hidden; ordinary cache loading
 still verifies both upstream weights, native code and all image chunks.
+Remaining training fits reuse the exact 1%/99% statistics of immutable frames
+across reader eviction. Only up to 12,800 scalar records are retained; the two
+image readers and their nine-frame buffers keep their original limits. The
+48-crop source proof exercises cold pixel extraction at both clip boundaries
+and the middle. Its sequential timings include proof overhead and filesystem
+warming, so they are not a controlled training-speed comparison.
 
 ## Validation and results
 

@@ -67,7 +67,8 @@ def run(run_tests=False):
               'resume_validation.json','observation_unknown_validation.json','C4_trace_validation.json',
               'cpu_geometry_parity_small.json','cpu_geometry_parity_crowded.json','training_cache_parity.json',
               'frame_crop_parity.json','organoid_crop_parity.json','compact_crop_parity.json',
-              'shared_embedding_parity.json','encoder_compute_profile.json','native_query_reuse_parity.json']
+              'shared_embedding_parity.json','encoder_compute_profile.json','native_query_reuse_parity.json',
+              'training_frame_statistics_parity.json']
     contracts={name:(optional(RESULTS/name) or {}).get('status','not run') for name in required}
     hard=bool(frozen and tested and tested['status']=='measured' and actual_baseline_hashes and baseline['status']=='measured'
         and zero['status']=='measured' and fresh.get('status')=='measured' and all(v=='measured' for v in contracts.values()))

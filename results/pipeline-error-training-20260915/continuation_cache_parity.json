@@ -1,0 +1,58 @@
+{
+  "complete_graphs": {
+    "A10": {
+      "exact": true,
+      "graph_hash": "b33dc27a5458e7b478932ab800a157fee298478c8d984e129bb69919e8ae9bd6"
+    },
+    "D20_temporal": {
+      "exact": true,
+      "graph_hash": "9d6d59edb6956816465f738e8bb7e9c07b197ab778decdb18ea760c89cfa12a6"
+    }
+  },
+  "dataset": "44b6_d754aa59",
+  "embeddings_and_masks": [
+    {
+      "arm": "D20_temporal",
+      "exact": true,
+      "independent_sha256": "ed42fd03d62a2e7a9263f7fddaf92b8f329fff1c72a8ab59e404cffcc05588f8",
+      "shared_sha256": "ed42fd03d62a2e7a9263f7fddaf92b8f329fff1c72a8ab59e404cffcc05588f8"
+    },
+    {
+      "arm": "A10",
+      "exact": true,
+      "independent_sha256": "7960d5b5d78fe18f65d494ba20c5e566a48ba71959f7f2d1127fe604c0f952a9",
+      "shared_sha256": "7960d5b5d78fe18f65d494ba20c5e566a48ba71959f7f2d1127fe604c0f952a9"
+    }
+  ],
+  "frames": 100,
+  "guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "cached_operational_inputs": true,
+    "explicit_source_model": "44b6",
+    "fresh_end_to_end": false,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {}
+  },
+  "implementation_sha256": {
+    "cache_reuse": "88d50ea10a7d7af87beea26dba3865f5d532e73cf3b035e5b91893e4a1b1616d",
+    "final_predictions": "3f62383866d29e6e7f2154385eed005f4a6f1cf14da6506ae7c0008921602546",
+    "matrix_entry": "4016a514fdc39d8db2e0acbd62004ef23a2653263c2d36392815c29249f56195",
+    "point_predictions": "2cb54ed4d0ea7573844b56441b5dcef3fc365552507a4df6a568a85cbbd9362a",
+    "shared_embeddings": "3e0f3119b28468be9cf72c74d75767708550179e61b4c700d3cf2f2dcbeee971",
+    "staged_infer": "04998e70640169a40b59cd6f2b1100036afaf8b890f030ed2e5dea9e3196912c"
+  },
+  "independent_heads_and_decoders": true,
+  "models": {
+    "A10": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+    "D20_temporal": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676"
+  },
+  "no_embedding_averaging": true,
+  "no_target_metrics_read": true,
+  "node_count_per_model": 5607,
+  "seconds": 15.443908025001292,
+  "source": "44b6",
+  "status": "measured",
+  "training_recipe_changed": false
+}

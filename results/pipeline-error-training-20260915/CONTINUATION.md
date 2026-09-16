@@ -42,7 +42,7 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 - D20_compact: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_temporal: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_no_pretrain: not run — 2/2 directional fits complete; all-199 target score unavailable
-- A10: not run — 1/2 directional fits complete; all-199 target score unavailable
+- A10: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_swap: not run — 0/2 directional fits complete; all-199 target score unavailable
 - O10_restore: not run — 0/2 directional fits complete; all-199 target score unavailable
 - R10: not run — Required execution or validation is incomplete

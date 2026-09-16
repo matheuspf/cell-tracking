@@ -2,7 +2,7 @@ P0 retained
 
 # Pipeline error training — September 15, 2026
 
-Execution status: **executing**. 11 directional fits have completed the locked 178 updates.
+Execution status: **executing**. 12 directional fits have completed the locked 178 updates.
 The adopted production default remains P0. The recommendation is recorded separately in recommendation.json.
 
 ## Exact controls and evidence
@@ -59,12 +59,12 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 9.207 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 9.644 hours of 48; detailed memory/runtime evidence is in resource.json.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference
 
-Tests: **measured** — 52 passed in 6.56s.
+Tests: **measured** — 54 passed in 5.46s.
 
 The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran from both renamed 100-frame images (specimen_alder: 168.987 s, specimen_birch: 283.788 s). Startup guards denied annotations, historical prediction caches and network access; both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. A recommended candidate also requires its own cold-image proof.
 

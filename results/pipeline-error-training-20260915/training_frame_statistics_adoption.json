@@ -1,0 +1,16 @@
+{
+  "active_fit_not_restarted": "A10/6bba/20260915 retains its already imported dataset implementation",
+  "adopted": "2026-09-16T01:21:55.286803+00:00",
+  "dataset_sha256": "d830a2cc2678df488ce3367c666429d7bd414a43925c641183a1f59043b8208e",
+  "existing_crop_cache_fingerprints_unchanged": true,
+  "frames_per_reader": 9,
+  "normalization_sampling_augmentation_and_updates_unchanged": true,
+  "previous_dataset_sha256": "dcc04c013be4c1ebd7a1ecfbc1ef3d08fee50097097a8ca1b233e6602030ef87",
+  "proof_sha256": "01d75b53939ba081f501e8da705c6d9d8b622373f2ddbcbf039e067fe54e3403",
+  "raw_image_readers": 2,
+  "scalar_statistic_entry_limit": 12800,
+  "status": "measured",
+  "target_results_used": false,
+  "timing_scope": "Sequential parity timings include asymmetric hash/check overhead and filesystem warming; no controlled training speedup is claimed.",
+  "training_images_sha256": "0607ae4ed01df9f06e1f1015d2403227d5ddd5676f17475a15ad5d0b5888d4aa"
+}
