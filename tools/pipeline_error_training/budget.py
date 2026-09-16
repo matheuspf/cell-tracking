@@ -109,13 +109,16 @@ def report():
     with state() as data:
         total = hours(data)
         transferred = transfer_settled()
+        interrupted = [r for r in data['completed'] if r.get('status')=='interrupted_upper_bound']
         return dict(measured_gpu_lease_hours=total, total_hours=sum(total.values()),
             original_reservations_hours=CAPS,limits_hours=effective_caps(total,transferred),
             unused_first_seed_reservation_transfer_enabled=transferred,
             combined_first_seed_and_final_hours=32. if transferred else None,
             dependent_phase_limits_not_additive=transferred,
             active_leases=list(data['active'].values()), completed_intervals=len(data['completed']),
-            accounting='GPU lease wall time, including CPU work under lease; conservative pre-ledger resource-wall charges are identified separately.',
+            interrupted_upper_bound_hours=sum(r['seconds'] for r in interrupted)/3600,
+            interrupted_upper_bound_intervals=len(interrupted),
+            accounting='Charged GPU lease wall time, including CPU work under lease. Conservative pre-ledger resource-wall charges and interrupted upper bounds are identified separately. An interrupted lease charged through the next host boot can include downtime; its exact end was not observed.',
             charge_other_programs=False)
 
 

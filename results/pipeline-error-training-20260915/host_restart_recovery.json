@@ -1,0 +1,52 @@
+{
+  "closed_previous_boot_leases": [
+    {
+      "accounting": "Host restart confirmed. Lease end was not observed; charged until the current boot time as a conservative upper bound, including possible downtime. This is not measured GPU kernel time.",
+      "arguments": [
+        "/home/mpf/code/kaggle/cell-tracking/tools/pipeline_error_training/matrix_entry.py",
+        "/home/mpf/code/kaggle/cell-tracking/work/pipeline-error-training-20260915/final_inference/6bba_74686d6a/job.json"
+      ],
+      "boot_time_epoch": 1789557047.0,
+      "category": "final_inference_and_package",
+      "ended_epoch": 1789557047.0,
+      "pid": 1138688,
+      "seconds": 9779.183780193329,
+      "started_epoch": 1789547267.8162198,
+      "status": "interrupted_upper_bound",
+      "token": "4ec425c943564245b7129884e0490945"
+    }
+  ],
+  "completed_clips_preserved": 129,
+  "conservative_interrupted_budget_charge_hours": 2.7164399389425915,
+  "created": "2026-09-16T11:16:54.937117+00:00",
+  "current_boot_UTC": "2026-09-16T11:10:47+00:00",
+  "exact_interruption_time_unknown": true,
+  "frozen_models_and_nomination_reverified": true,
+  "invalid_partial_embeddings_removed_after_backup": [],
+  "other_studies_modified": false,
+  "partial_predictions": [
+    {
+      "dataset": "6bba_705ec2c9",
+      "job_sha256": "b5e2b48e0e2e9e8abb8a2d0d52a2e1eea3c14de5e12f2f5d0edd7d70e98f606c",
+      "preserved": "invalid/host_restart_20260916/partial_predictions/6bba_705ec2c9"
+    },
+    {
+      "dataset": "6bba_74686d6a",
+      "job_sha256": "e2d3e9ae9e2ff5535704c96db682f39bf3f2165c5a42e5225423bac5067076fb",
+      "preserved": "invalid/host_restart_20260916/partial_predictions/6bba_74686d6a"
+    },
+    {
+      "dataset": "6bba_767a1e17",
+      "job_sha256": "1b63ef29be3b5cfee2e72dc5a36699982ea66a71af6dde889370f561d69d5a28",
+      "preserved": "invalid/host_restart_20260916/partial_predictions/6bba_767a1e17"
+    },
+    {
+      "dataset": "6bba_76db78c1",
+      "job_sha256": "ec7a8d9b1bb9eb2c09af5e4778ffd54e8eeae98720e1cf1533a628ad421c0521",
+      "preserved": "invalid/host_restart_20260916/partial_predictions/6bba_76db78c1"
+    }
+  ],
+  "reason": "Host restarted after the interrupted all-199 inference run",
+  "status": "measured",
+  "training_resumed": false
+}

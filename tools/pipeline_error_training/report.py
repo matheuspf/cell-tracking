@@ -388,6 +388,16 @@ def continuation(status):
         '## Pending or unsuccessful registered experiments', '']
     lines.extend(f"- {r['experiment']}: {r['status']} — {r['reason']}" for r in pending)
     if not pending:lines.append('All registered experiments have complete measured receipts.')
+    restart = optional(RESULTS/'host_restart_recovery.json')
+    if restart:
+        lines += ['', '## Host restart recovery', '',
+            f"The host restarted at {restart['current_boot_UTC']}; the exact study interruption time is unknown. "
+            f"All {restart['completed_clips_preserved']} completed clip matrices and the frozen models were verified before resuming. "
+            'Incomplete outputs and the previous ledger remain under invalid/host_restart_20260916/. '
+            f"GPU accounting conservatively includes {restart['conservative_interrupted_budget_charge_hours']:.3f} hours "
+            'from the unclosed lease through the new boot, including possible downtime. '
+            'This is an upper bound, not observed active execution. Training and other studies were not resumed. '
+            'See host_restart_recovery.json.']
     retired = optional(RESULTS/'training_crop_retirement.json')
     if retired:
         lines += ['', '## Completed-fit crop caches', '',
@@ -518,6 +528,9 @@ anchors are retained. These are fixed expansion weights, not proven randomized r
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
 Cumulative charged GPU lease time is {resource['gpu_budget']['total_hours']:.3f} hours of 48; detailed memory/runtime evidence is in resource.json.
+This includes {resource['gpu_budget']['interrupted_upper_bound_hours']:.3f} hours conservatively charged for an interrupted
+lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
+see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.
 No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No weights were published or defaults changed.
 
 ## Executable validation and fresh inference

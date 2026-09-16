@@ -51,6 +51,10 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 - D10_adapted_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_temporal_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 
+## Host restart recovery
+
+The host restarted at 2026-09-16T11:10:47+00:00; the exact study interruption time is unknown. All 129 completed clip matrices and the frozen models were verified before resuming. Incomplete outputs and the previous ledger remain under invalid/host_restart_20260916/. GPU accounting conservatively includes 2.716 hours from the unclosed lease through the new boot, including possible downtime. This is an upper bound, not observed active execution. Training and other studies were not resumed. See host_restart_recovery.json.
+
 ## Completed-fit crop caches
 
 The frozen fits' regenerable training crops (23.45 GiB) were retired to reserve space for inference. All 32 model/optimizer/RNG state files were hash-verified before and after. The data loaders rebuild missing crops on demand from pinned images. See training_crop_retirement.json and work/pipeline-error-training-20260915/maintenance/training_crop_retirement/manifest.json.
