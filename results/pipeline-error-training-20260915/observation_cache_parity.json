@@ -1,0 +1,39 @@
+{
+  "arm": "O10_restore",
+  "cold_full_native_arrays_exact_if_reused": false,
+  "cold_reference_replay": true,
+  "complete_graph_exact": true,
+  "dataset": "44b6_d754aa59",
+  "fresh_upstream_pipeline_claim": false,
+  "graph_hash": "9abaccbd86323c99158c3bac0df9678559046fc70e4acbde2c7ee1cb5c471043",
+  "guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "cached_operational_inputs": true,
+    "explicit_source_model": "44b6",
+    "fresh_end_to_end": false,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {}
+  },
+  "model_and_image_specific_embedding_parity": [
+    {
+      "cold_sha256": "5b491ce80223ad86f3749a8f4f653f86929979ef013a3e0dcbd553527f37577f",
+      "exact": true,
+      "name": "P0.npz",
+      "reference_sha256": "5b491ce80223ad86f3749a8f4f653f86929979ef013a3e0dcbd553527f37577f"
+    },
+    {
+      "cold_sha256": "3689d394f0d83558a7f6f08f9857155a8f3bd5ea028aed9ee567dcad62b4e443",
+      "exact": true,
+      "name": "raw.npz",
+      "reference_sha256": "3689d394f0d83558a7f6f08f9857155a8f3bd5ea028aed9ee567dcad62b4e443"
+    }
+  ],
+  "native_query_reused_in_reference": false,
+  "new_target_metrics_read": false,
+  "seconds": 31.309733588997915,
+  "source": "44b6",
+  "source_model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+  "status": "measured"
+}
