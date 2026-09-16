@@ -91,7 +91,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 21.806 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 22.363 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.
@@ -102,6 +102,10 @@ No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No wei
 Tests: **measured** — 54 passed in 5.46s.
 
 The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran from both renamed 100-frame images (specimen_alder: 168.987 s, specimen_birch: 283.788 s). Startup guards denied annotations, historical prediction caches and network access; both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. A recommended candidate also requires its own cold-image proof.
+
+**A10** also completed its own [cold-image pipeline proof](fresh_candidate_A10.json) on both renamed 100-frame images with the frozen source models. Both candidate graphs exactly matched the scored graphs ([parity evidence](fresh_candidate_A10_replay_parity.json)). These correctness checks do not change the metric recommendation gates.
+
+Candidate fresh inference used 337.756 seconds under the GPU lease and 888.284 seconds elapsed, including shared-GPU waits ([timing evidence](fresh_candidate_timing.json)). Lease wall time is not GPU kernel time.
 
 Identical observation-policy coordinate queries can reuse the verified full-ensemble neural output. A CUDA-disabled replay rebuilt all graph feature arrays exactly at the real changed-coordinate fixture; changed node IDs or coordinates reject reuse. Each ordinary query loader still verifies checkpoints, code and image chunks. This operational cache reuse is separate from the cold-image proof.
 

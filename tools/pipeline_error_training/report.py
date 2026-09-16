@@ -348,6 +348,21 @@ def proof_text():
             'A recommended candidate also requires its own cold-image proof.')
     else:
         lines.append(f"Fresh-image pipeline proof: {fresh.get('status','not run')}.")
+    candidates = optional(RESULTS/'fresh_candidate_validation.json') or {}
+    for arm in candidates.get('experiments', []):
+        candidate = optional(RESULTS/f'fresh_candidate_{arm}.json') or {}
+        parity = optional(RESULTS/f'fresh_candidate_{arm}_replay_parity.json') or {}
+        if candidate.get('status')=='measured':
+            lines += ['', f'**{arm}** also completed its own [cold-image pipeline proof](fresh_candidate_{arm}.json) '
+                'on both renamed 100-frame images with the frozen source models. '
+                + (f'Both candidate graphs exactly matched the scored graphs ([parity evidence](fresh_candidate_{arm}_replay_parity.json)). '
+                   if parity.get('status')=='measured' else '')
+                + 'These correctness checks do not change the metric recommendation gates.']
+    timing = optional(RESULTS/'fresh_candidate_timing.json') or {}
+    if timing.get('status')=='measured':
+        lines += ['', f"Candidate fresh inference used {timing['gpu_lease_wall_seconds']:.3f} seconds under the GPU lease "
+            f"and {timing['elapsed_wall_seconds']:.3f} seconds elapsed, including shared-GPU waits "
+            '([timing evidence](fresh_candidate_timing.json)). Lease wall time is not GPU kernel time.']
     reused = optional(RESULTS/'native_query_reuse_parity.json') or {}
     if reused.get('status')=='measured':
         lines += ['', 'Identical observation-policy coordinate queries can reuse the verified full-ensemble neural output. '

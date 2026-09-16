@@ -1,0 +1,14 @@
+{
+  "arm": "A10",
+  "clips": 2,
+  "created": "2026-09-16T15:41:21.673926+00:00",
+  "elapsed_wall_seconds": 888.2839477800007,
+  "frames_per_clip": 100,
+  "gpu_lease_wall_seconds": 337.7555773258209,
+  "lease_intervals": 6,
+  "note": "Elapsed wall time includes waiting for the shared GPU lease; lease wall time includes CPU work and is not GPU kernel time. Other programs were running. This is not a Kaggle runtime benchmark.",
+  "peak_all_study_rss_gib": 3.8975372314453125,
+  "peak_total_gpu_gib": 3.0224609375,
+  "proof_sha256": "75f6e2a14085260e92ec1d7baefabc99a3beb4113a43a1e49d92b3bcd9a668f8",
+  "status": "measured"
+}

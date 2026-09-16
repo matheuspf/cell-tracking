@@ -1,0 +1,24 @@
+{
+  "arm": "A10",
+  "clips": [
+    {
+      "cold_sha256": "ced0c81f2d84c434081933fd2eb0f4c6fa0d431a689d4f1fbe72ffbbea74eff2",
+      "dataset": "44b6_d754aa59",
+      "exact_nodes_and_edges": true,
+      "scored_sha256": "ced0c81f2d84c434081933fd2eb0f4c6fa0d431a689d4f1fbe72ffbbea74eff2",
+      "unfamiliar_name": "specimen_alder"
+    },
+    {
+      "cold_sha256": "d9cada077ba1afcf9f829dd590c3c59edc1bf98c7b4ed7d08cb8e79e70831972",
+      "dataset": "6bba_bb9f20c3",
+      "exact_nodes_and_edges": true,
+      "scored_sha256": "d9cada077ba1afcf9f829dd590c3c59edc1bf98c7b4ed7d08cb8e79e70831972",
+      "unfamiliar_name": "specimen_birch"
+    }
+  ],
+  "created": "2026-09-16T15:40:23.257855+00:00",
+  "new_target_fitting": false,
+  "reason": null,
+  "status": "measured",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4"
+}
