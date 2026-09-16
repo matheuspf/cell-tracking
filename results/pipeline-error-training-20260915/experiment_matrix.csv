@@ -10,9 +10,9 @@ D20_temporal,measured,0.9192266438365844,199,
 D20_no_pretrain,measured,0.9192627532991191,199,
 A10,measured,0.9349393787095099,199,
 O10_swap,measured,0.9344153386443166,199,
-O10_restore,not run,,,2/2 directional fits complete; all-199 target score unavailable
+O10_restore,measured,0.9348649864131336,199,
 R10,measured,,,
-C10,not run,,,Required execution or validation is incomplete
+C10,not run,,,Both independent component families did not source-qualify
 V10,not run,,,Required execution or validation is incomplete
 A10_replication,measured,0.9349386608981092,199,
 D10_adapted_replacement,measured,0.9181845675964755,199,

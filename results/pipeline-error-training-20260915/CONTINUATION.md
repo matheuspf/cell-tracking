@@ -6,8 +6,8 @@ Read REPORT.md and STATUS.json first. This file is generated from the current ex
 
 State: executing. Production default: P0. No new target fitting or threshold selection is authorized.
 
-Active stage: point_predictions. Completed division matrices: 199/199.
-Completed point predictions per arm: A10=199/199, A10_replication=199/199, O10_restore=80/199, O10_swap=199/199.
+Active stage: stress_suite. Completed division matrices: 199/199.
+Completed point predictions per arm: A10=199/199, A10_replication=199/199, O10_restore=199/199, O10_swap=199/199.
 
 Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.
 Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.
@@ -45,8 +45,7 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 ## Pending or unsuccessful registered experiments
 
 - D10_random: not run — Organoid family did not qualify in both source directions; conditional control was not authorized
-- O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
-- C10: not run — Required execution or validation is incomplete
+- C10: not run — Both independent component families did not source-qualify
 - V10: not run — Required execution or validation is incomplete
 
 ## Observation monitor retry

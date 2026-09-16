@@ -1,0 +1,18 @@
+{
+  "all_point_inventory_status": "measured",
+  "all_prediction_bytes_unchanged": true,
+  "before_manifest_sha256": "caefc870951fd4e910b1dae3a5b9209851012f6ad1c2e3bc0222d4a640c291e1",
+  "created": "2026-09-16T18:59:22.506074+00:00",
+  "original_attempt_sha256": "be1a42f10cf43fa390f3562de40080f6e8a78bf94f4e26af5a6400c85bbfffa5",
+  "prediction_graphs": 796,
+  "revalidated_stage": {
+    "job": "point_predictions",
+    "log_sha256": "8cdb6b849c2d642b6145be8d8f86cbc2d2b15711f0e92410376cf5ebe46c08dc",
+    "returncode": 0,
+    "seconds": 27.99403264400098,
+    "status": "measured"
+  },
+  "scientific_recipe_changed": false,
+  "status": "measured",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4"
+}

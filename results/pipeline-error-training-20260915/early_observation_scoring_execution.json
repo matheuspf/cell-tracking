@@ -6,14 +6,19 @@
       "returncode": 0,
       "seconds": 114.87837809600023,
       "status": "measured"
+    },
+    {
+      "job": "score-O10_restore",
+      "log_sha256": "432117e97f6775873e925d5b483d67a99657b91a9a156ca8c6053f3591d3806e",
+      "returncode": 0,
+      "seconds": 152.62700726800176,
+      "status": "measured"
     }
   ],
-  "pending": [
-    "O10_restore"
-  ],
+  "pending": [],
   "schedule_sha256": "d130940fa9c6ac84b19b0e0ca21aea1e7f9ad365d642f62480dd3ba71b2c9c25",
   "status": "measured",
   "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4",
   "target_results_used_for_model_or_threshold_selection": false,
-  "updated": "2026-09-16T18:45:34.799131+00:00"
+  "updated": "2026-09-16T19:01:34.651206+00:00"
 }

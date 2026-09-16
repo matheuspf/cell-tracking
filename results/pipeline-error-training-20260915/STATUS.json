@@ -1,7 +1,7 @@
 {
-  "active_stage": "point_predictions",
+  "active_stage": "stress_suite",
   "clean_transfer": {
-    "readiness_sha256": "c9615a63992043afa57ca47cdbdaf5ef67246642ae2f68dc7770a3e42b801f96",
+    "readiness_sha256": "49c761a6218c6e853b1969243b050adac9249c8aaff1fb8410a416ffea74fe5e",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
@@ -9,10 +9,10 @@
   "complete_point_clip_predictions": {
     "A10": 199,
     "A10_replication": 199,
-    "O10_restore": 80,
+    "O10_restore": 199,
     "O10_swap": 199
   },
-  "created": "2026-09-16T18:47:20.121550+00:00",
+  "created": "2026-09-16T19:02:59.810484+00:00",
   "experiments": [
     {
       "clips": null,
@@ -92,11 +92,11 @@
       "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "O10_restore",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9348649864131336,
+      "status": "measured"
     },
     {
       "clips": null,
@@ -108,7 +108,7 @@
     {
       "clips": null,
       "experiment": "C10",
-      "reason": "Required execution or validation is incomplete",
+      "reason": "Both independent component families did not source-qualify",
       "score": null,
       "status": "not run"
     },

@@ -829,6 +829,79 @@
         }
       }
     },
+    "O10_restore": {
+      "44b6": {
+        "centers": {
+          "conflict": 13,
+          "crowded": 6094,
+          "matched": 10873,
+          "missing": 38,
+          "offset": 2964,
+          "proposal_only": 178,
+          "recovered": 37
+        },
+        "stages": {
+          "division_fn:division_no_fork": 17,
+          "division_fn:division_observation": 2,
+          "division_fp:division_extra": 22,
+          "edge_endpoint:assignment": 18,
+          "edge_endpoint:proposal_gap": 64,
+          "edge_endpoint:selection": 214,
+          "edge_fp:competing": 700,
+          "edge_fp:unmatched": 365,
+          "edge_fp:wrong_identity": 22,
+          "edge_link:association": 661
+        }
+      },
+      "6bba": {
+        "centers": {
+          "conflict": 34,
+          "crowded": 10265,
+          "matched": 79577,
+          "missing": 632,
+          "offset": 20814,
+          "proposal_only": 1587,
+          "recovered": 212
+        },
+        "stages": {
+          "division_fn:division_no_fork": 81,
+          "division_fn:division_observation": 22,
+          "division_fp:division_cross": 5,
+          "division_fp:division_extra": 65,
+          "edge_endpoint:assignment": 43,
+          "edge_endpoint:proposal_gap": 945,
+          "edge_endpoint:selection": 1756,
+          "edge_fp:competing": 1774,
+          "edge_fp:unmatched": 2096,
+          "edge_fp:wrong_identity": 39,
+          "edge_link:association": 2010
+        }
+      },
+      "pooled": {
+        "centers": {
+          "conflict": 47,
+          "crowded": 16359,
+          "matched": 90450,
+          "missing": 670,
+          "offset": 23778,
+          "proposal_only": 1765,
+          "recovered": 249
+        },
+        "stages": {
+          "division_fn:division_no_fork": 98,
+          "division_fn:division_observation": 24,
+          "division_fp:division_cross": 5,
+          "division_fp:division_extra": 87,
+          "edge_endpoint:assignment": 61,
+          "edge_endpoint:proposal_gap": 1009,
+          "edge_endpoint:selection": 1970,
+          "edge_fp:competing": 2474,
+          "edge_fp:unmatched": 2461,
+          "edge_fp:wrong_identity": 61,
+          "edge_link:association": 2671
+        }
+      }
+    },
     "O10_swap": {
       "44b6": {
         "centers": {

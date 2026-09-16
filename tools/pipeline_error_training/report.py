@@ -311,6 +311,10 @@ def outcome_text(recommended):
                 f"edge FP removed/introduced {c['fp_edges_removed']}/{c['fp_edges_introduced']}; "
                 f"division TP recovered/lost {c['tp_divisions_recovered']}/{c['tp_divisions_lost']}, "
                 f"division FP removed/introduced {c['fp_divisions_removed']}/{c['fp_divisions_introduced']}.")
+    restoration = optional(RESULTS/'restoration_graph_identity.json') or {}
+    if restoration.get('exact_P0_graphs')==199:
+        lines += ['', 'O10_restore reproduced the exact P0 nodes and edges on all 199 clips '
+            '([graph identity check](restoration_graph_identity.json)). It made no graph edits.']
     return '\n'.join(lines)
 
 
