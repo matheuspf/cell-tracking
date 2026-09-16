@@ -1,0 +1,90 @@
+{
+  "conditional_random_control": false,
+  "jobs": [
+    {
+      "arm": "D10_adapted_replacement",
+      "label": "fixed_decoder_ablation",
+      "returncode": 0,
+      "seed": 20260915,
+      "source": "44b6",
+      "status": "measured"
+    },
+    {
+      "arm": "D10_adapted_replacement",
+      "label": "fixed_decoder_ablation",
+      "returncode": 0,
+      "seed": 20260915,
+      "source": "6bba",
+      "status": "measured"
+    },
+    {
+      "arm": "D20_temporal_replacement",
+      "label": "fixed_decoder_ablation",
+      "returncode": 0,
+      "seed": 20260915,
+      "source": "44b6",
+      "status": "measured"
+    },
+    {
+      "arm": "D20_temporal_replacement",
+      "label": "fixed_decoder_ablation",
+      "returncode": 0,
+      "seed": 20260915,
+      "source": "6bba",
+      "status": "measured"
+    },
+    {
+      "arm": "A10",
+      "jobs": [
+        {
+          "log_sha256": "8ae616dbe8cd83951d00159f9d87cdb90793e9ff4af5c5d292fd315068a0d57d",
+          "returncode": 0,
+          "seconds": 1188.237404829997,
+          "stage": "train",
+          "status": "measured"
+        },
+        {
+          "log_sha256": "276a33a5546bb38b1b67982e74d58efa26477a70f7f5bc805e2a9bb830f284cb",
+          "returncode": 0,
+          "seconds": 167.67346165700292,
+          "stage": "calibrate",
+          "status": "measured"
+        }
+      ],
+      "label": "replication",
+      "seed": 314159,
+      "source": "44b6"
+    },
+    {
+      "arm": "A10",
+      "jobs": [
+        {
+          "log_sha256": "7021ec69e82b94b0d4f334623d40b9ea339ca4afa46f590cc41c61eb4ee54586",
+          "returncode": 0,
+          "seconds": 1507.1502502530057,
+          "stage": "train",
+          "status": "measured"
+        },
+        {
+          "log_sha256": "2c70a1d38fd3a3f4eac3d034bf4bfc0f1843a3c1895f3f84be3b0fb8e901746f",
+          "returncode": 0,
+          "seconds": 204.52542530900246,
+          "stage": "calibrate",
+          "status": "measured"
+        }
+      ],
+      "label": "replication",
+      "seed": 314159,
+      "source": "6bba"
+    }
+  ],
+  "learning_mechanism_claim": "A second-seed advantage over a newly trained matched control is not established by nominee-only replication.",
+  "matched_controls_replicated": false,
+  "model_ensembling": false,
+  "nomination_sha256": "a8c705d7279c17e7748bfe9d0110f28c080fc456da655e209b0b9a75395939cf",
+  "primary_seed_retained": 20260915,
+  "reason": null,
+  "replication_seed": 314159,
+  "status": "measured",
+  "target_scores_used": false
+}

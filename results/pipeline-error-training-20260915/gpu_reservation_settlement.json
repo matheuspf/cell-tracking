@@ -1,0 +1,28 @@
+{
+  "allocation_basis": "study.json distinguishes limits.measured_gpu_hours from gpu_hour_reservation; PLAN.md retains the replication reservation.",
+  "combined_first_seed_and_final_hours": 32.0,
+  "created": "2026-09-16T04:57:25.494587+00:00",
+  "first_seed_individual_cap_hours": 24.0,
+  "first_seed_unused_hours_at_settlement": 12.748066842769164,
+  "measured_hours_at_settlement": {
+    "final_inference_and_package": 0.0,
+    "first_seed_training": 11.251933157230836,
+    "preflight_and_pilots": 0.5909951908459556,
+    "replication": 0.8199997957547517
+  },
+  "model_or_threshold_selection_changed": false,
+  "new_target_metrics_read": false,
+  "original_reservations_hours": {
+    "final_inference_and_package": 8.0,
+    "first_seed_training": 24.0,
+    "preflight_and_pilots": 4.0,
+    "replication": 12.0
+  },
+  "preflight_reservation_hours": 4.0,
+  "replication_reservation_hours": 12.0,
+  "rule": "After all source jobs, unused first-seed reservation may cover final inference; the combined first-seed/final pool is 32 hours. Any later same-recipe repair consumes that same pool.",
+  "status": "measured",
+  "study_sha256": "ff5e99e24b77585baf4847cf7fdb77d91bfa04d4c15b84946ad5ebc907bb8158",
+  "total_cap_hours": 48.0,
+  "training_updates_changed": false
+}

@@ -38,16 +38,18 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 
 - D10_frozen: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D10_adapted: not run — 2/2 directional fits complete; all-199 target score unavailable
-- D10_random: not run — 0/2 directional fits complete; all-199 target score unavailable
+- D10_random: not run — Organoid family did not qualify in both source directions; conditional control was not authorized
 - D20_compact: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_temporal: not run — 2/2 directional fits complete; all-199 target score unavailable
 - D20_no_pretrain: not run — 2/2 directional fits complete; all-199 target score unavailable
 - A10: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_swap: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
-- R10: not run — Required execution or validation is incomplete
 - C10: not run — Required execution or validation is incomplete
 - V10: not run — Required execution or validation is incomplete
+- A10_replication: not run — 2/2 directional fits complete; all-199 target score unavailable
+- D10_adapted_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
+- D20_temporal_replacement: not run — 2/2 directional fits complete; all-199 target score unavailable
 
 ## Artifact locations and restrictions
 

@@ -5,7 +5,7 @@ adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,
 0.9229308300345328,D00,199,122,92,0.11934156378600823,29,5711,4996,0.9200247985120893,123172,pooled,130836,199,199,0.982494434312724,4108943,0.9348649864131336,measured,0.0,-0.00031338384352019855,0.0029060315224435085,,
 ,D10_frozen,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D10_adapted,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
-,D10_random,,,,,,,,,,pooled,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_random,,,,,,,,,,pooled,,,,,,,not run,,,,Organoid family did not qualify in both source directions; conditional control was not authorized,20260915
 ,D20_compact,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D20_temporal,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D20_no_pretrain,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
@@ -13,3 +13,6 @@ adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,
 ,O10_swap,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,O10_restore,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,C10,,,,,,,,,,pooled,,,,,,,not run,,,,Required execution or validation is incomplete,20260915
+,A10_replication,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,314159
+,D10_adapted_replacement,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal_replacement,,,,,,,,,,pooled,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915

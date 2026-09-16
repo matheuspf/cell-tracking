@@ -11,8 +11,8 @@ adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,
 ,D10_frozen,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D10_adapted,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D10_adapted,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
-,D10_random,,,,,,,,,,44b6,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
-,D10_random,,,,,,,,,,6bba,,,,,,,not run,,,,0/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_random,,,,,,,,,,44b6,,,,,,,not run,,,,Organoid family did not qualify in both source directions; conditional control was not authorized,20260915
+,D10_random,,,,,,,,,,6bba,,,,,,,not run,,,,Organoid family did not qualify in both source directions; conditional control was not authorized,20260915
 ,D20_compact,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D20_compact,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,D20_temporal,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
@@ -27,3 +27,9 @@ adj_edge_jaccard,arm,clips,division_fn,division_fp,division_jaccard,division_tp,
 ,O10_restore,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
 ,C10,,,,,,,,,,44b6,,,,,,,not run,,,,Required execution or validation is incomplete,20260915
 ,C10,,,,,,,,,,6bba,,,,,,,not run,,,,Required execution or validation is incomplete,20260915
+,A10_replication,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,314159
+,A10_replication,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,314159
+,D10_adapted_replacement,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D10_adapted_replacement,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal_replacement,,,,,,,,,,44b6,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915
+,D20_temporal_replacement,,,,,,,,,,6bba,,,,,,,not run,,,,2/2 directional fits complete; all-199 target score unavailable,20260915

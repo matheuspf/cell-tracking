@@ -1,10 +1,10 @@
 {
   "clean_transfer": {
-    "readiness_sha256": "b4d040182036405dca409632dba6e32a515340be7612e7c2971618b57a84ef48",
+    "readiness_sha256": "6b4492f52004497c3b0981aead8eef0c62057919661c553684038e01ae85b27c",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
-  "created": "2026-09-16T04:30:45.281966+00:00",
+  "created": "2026-09-16T04:58:37.171844+00:00",
   "experiments": [
     {
       "clips": null,
@@ -44,7 +44,7 @@
     {
       "clips": null,
       "experiment": "D10_random",
-      "reason": "0/2 directional fits complete; all-199 target score unavailable",
+      "reason": "Organoid family did not qualify in both source directions; conditional control was not authorized",
       "score": null,
       "status": "not run"
     },
@@ -93,9 +93,9 @@
     {
       "clips": null,
       "experiment": "R10",
-      "reason": "Required execution or validation is incomplete",
+      "reason": null,
       "score": null,
-      "status": "not run"
+      "status": "measured"
     },
     {
       "clips": null,
@@ -108,6 +108,27 @@
       "clips": null,
       "experiment": "V10",
       "reason": "Required execution or validation is incomplete",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "A10_replication",
+      "reason": "2/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D10_adapted_replacement",
+      "reason": "2/2 directional fits complete; all-199 target score unavailable",
+      "score": null,
+      "status": "not run"
+    },
+    {
+      "clips": null,
+      "experiment": "D20_temporal_replacement",
+      "reason": "2/2 directional fits complete; all-199 target score unavailable",
       "score": null,
       "status": "not run"
     }
