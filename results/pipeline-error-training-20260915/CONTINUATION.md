@@ -7,7 +7,7 @@ Read REPORT.md and STATUS.json first. This file is generated from the current ex
 State: executing. Production default: P0. No new target fitting or threshold selection is authorized.
 
 Active stage: point_predictions. Completed division matrices: 199/199.
-Completed point predictions per arm: A10=199/199, A10_replication=199/199, O10_swap=150/199.
+Completed point predictions per arm: A10=199/199, A10_replication=199/199, O10_restore=80/199, O10_swap=199/199.
 
 Inspect actual processes before launching any resumable queue; active.json can refer to a completed child.
 Do not kill or resume a different study. Historical native 400-epoch fits remain untouched.
@@ -45,10 +45,15 @@ and rerun the same stage with unchanged scientific weights, calibration, bank an
 ## Pending or unsuccessful registered experiments
 
 - D10_random: not run — Organoid family did not qualify in both source directions; conditional control was not authorized
-- O10_swap: not run — 2/2 directional fits complete; all-199 target score unavailable
 - O10_restore: not run — 2/2 directional fits complete; all-199 target score unavailable
 - C10: not run — Required execution or validation is incomplete
 - V10: not run — Required execution or validation is incomplete
+
+## Observation monitor retry
+
+The final O10_swap clip failed once while the monitor launched nvidia-smi. Its entire attempt is preserved under invalid/monitor_spawn_20260916/. The unchanged job passed on retry with identical graph bytes and a clean resource receipt; all 199 swap predictions were then scored. See observation_monitor_retry.json.
+
+The original point process still retains its failed first-attempt record. After the current finish queue exits, archive finish_queue/progress.json, finish_queue/point_predictions.json, final_point_inference/status.json and resources/final-point-lanes.json under the retry archive. Rerun `$STUDY_PY -m pipeline_error_training.finish_queue`; it validates the completed point inventory and reuses completed GPU/scoring stages. Record point_queue_reconciliation.json before the final complete report.
 
 ## Host restart recovery
 

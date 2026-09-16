@@ -43,6 +43,8 @@ Complete all-199 results, with embryos ordered 44b6 / 6bba:
   Relative to P0: edge TP recovered/lost 45/77, edge FP removed/introduced 19/1073; division TP recovered/lost 16/0, division FP removed/introduced 0/960.
 - **D20_temporal_replacement**: pooled 0.919134189858; embryos 0.919484793 (-0.012242464) / 0.919237362 (-0.016046829). Edge TP/FP/FN 123139/6042/5744; division TP/FP/FN 43/1043/108; predicted nodes 4108943.
   Relative to P0: edge TP recovered/lost 44/77, edge FP removed/introduced 20/1066; division TP recovered/lost 15/1, division FP removed/introduced 2/953.
+- **O10_swap**: pooled 0.934415338644; embryos 0.931542280 (-0.000184977) / 0.934785336 (-0.000498855). Edge TP/FP/FN 123145/5032/5738; division TP/FP/FN 29/92/122; predicted nodes 4108943.
+  Relative to P0: edge TP recovered/lost 3/30, edge FP removed/introduced 26/62; division TP recovered/lost 0/0, division FP removed/introduced 0/0.
 
 ## Source-only branching
 
@@ -91,7 +93,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 24.038 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 25.235 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.
@@ -108,6 +110,8 @@ The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen r
 Candidate fresh inference used 337.756 seconds under the GPU lease and 888.284 seconds elapsed, including shared-GPU waits ([timing evidence](fresh_candidate_timing.json)). Lease wall time is not GPU kernel time.
 
 Identical observation-policy coordinate queries can reuse the verified full-ensemble neural output. A CUDA-disabled replay rebuilt all graph feature arrays exactly at the real changed-coordinate fixture; changed node IDs or coordinates reject reuse. Each ordinary query loader still verifies checkpoints, code and image chunks. This operational cache reuse is separate from the cold-image proof.
+
+One observation worker failed when the background monitor could not launch `nvidia-smi` (EFAULT). The identical frozen job passed on retry and produced identical prediction bytes; the failed attempt remains archived ([retry evidence](observation_monitor_retry.json)). Subsequent monitor launches receive an explicit environment snapshot; sampling errors still fail the job ([launch hardening](resource_monitor_subprocess_fix.json)). The exact OS failure cause was not reproduced.
 
 [Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), [actual changed-coordinate feature proof](native_refresh_validation.json), [identical native-query reuse proof](native_query_reuse_parity.json), [indexed observation-action proof](observation_edge_parity.json), [resumption proof](resume_validation.json) and [resource measurements](resource.json).
 

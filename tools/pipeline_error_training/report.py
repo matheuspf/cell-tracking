@@ -369,6 +369,13 @@ def proof_text():
             'A CUDA-disabled replay rebuilt all graph feature arrays exactly at the real changed-coordinate fixture; '
             'changed node IDs or coordinates reject reuse. Each ordinary query loader still verifies checkpoints, code and image chunks. '
             'This operational cache reuse is separate from the cold-image proof.']
+    retry = optional(RESULTS/'observation_monitor_retry.json') or {}
+    if retry.get('status')=='measured':
+        lines += ['', 'One observation worker failed when the background monitor could not launch `nvidia-smi` '
+            '(EFAULT). The identical frozen job passed on retry and produced identical prediction bytes; '
+            'the failed attempt remains archived ([retry evidence](observation_monitor_retry.json)). '
+            'Subsequent monitor launches receive an explicit environment snapshot; sampling errors still fail the job '
+            '([launch hardening](resource_monitor_subprocess_fix.json)). The exact OS failure cause was not reproduced.']
     lines += ['', '[Correctness evidence](validation.json), [fresh-image proof](fresh_image_validation.json), '
               '[actual changed-coordinate feature proof](native_refresh_validation.json), '
               '[identical native-query reuse proof](native_query_reuse_parity.json), '
@@ -409,6 +416,20 @@ def continuation(status):
         '## Pending or unsuccessful registered experiments', '']
     lines.extend(f"- {r['experiment']}: {r['status']} — {r['reason']}" for r in pending)
     if not pending:lines.append('All registered experiments have complete measured receipts.')
+    retry = optional(RESULTS/'observation_monitor_retry.json')
+    if retry:
+        reconciled = optional(RESULTS/'point_queue_reconciliation.json') or {}
+        lines += ['', '## Observation monitor retry', '',
+            'The final O10_swap clip failed once while the monitor launched nvidia-smi. Its entire attempt is preserved '
+            'under invalid/monitor_spawn_20260916/. The unchanged job passed on retry with identical graph bytes '
+            'and a clean resource receipt; all 199 swap predictions were then scored. See observation_monitor_retry.json.', '',
+            ('The final point-queue receipts were revalidated after the original queue completed. '
+             'See point_queue_reconciliation.json.' if reconciled.get('status')=='measured' else
+             'The original point process still retains its failed first-attempt record. After the current finish queue exits, '
+             'archive finish_queue/progress.json, finish_queue/point_predictions.json, final_point_inference/status.json '
+             'and resources/final-point-lanes.json under the retry archive. Rerun '
+             '`$STUDY_PY -m pipeline_error_training.finish_queue`; it validates the completed point inventory and reuses '
+             'completed GPU/scoring stages. Record point_queue_reconciliation.json before the final complete report.')]
     restart = optional(RESULTS/'host_restart_recovery.json')
     if restart:
         lines += ['', '## Host restart recovery', '',

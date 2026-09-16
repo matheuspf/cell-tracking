@@ -1,7 +1,7 @@
 {
   "active_stage": "point_predictions",
   "clean_transfer": {
-    "readiness_sha256": "7d51688132641ede524010c189cb98114cbc53b4f3ba2a604049c7aab8c0cf41",
+    "readiness_sha256": "c9615a63992043afa57ca47cdbdaf5ef67246642ae2f68dc7770a3e42b801f96",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
@@ -9,9 +9,10 @@
   "complete_point_clip_predictions": {
     "A10": 199,
     "A10_replication": 199,
-    "O10_swap": 150
+    "O10_restore": 80,
+    "O10_swap": 199
   },
-  "created": "2026-09-16T17:26:43.218474+00:00",
+  "created": "2026-09-16T18:47:20.121550+00:00",
   "experiments": [
     {
       "clips": null,
@@ -84,11 +85,11 @@
       "status": "measured"
     },
     {
-      "clips": null,
+      "clips": 199,
       "experiment": "O10_swap",
-      "reason": "2/2 directional fits complete; all-199 target score unavailable",
-      "score": null,
-      "status": "not run"
+      "reason": null,
+      "score": 0.9344153386443166,
+      "status": "measured"
     },
     {
       "clips": null,

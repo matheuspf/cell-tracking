@@ -941,6 +941,7 @@
     "invalid/directory_fd_guard_attempt2",
     "invalid/empty_source_calibration",
     "invalid/host_restart_20260916",
+    "invalid/monitor_spawn_20260916",
     "invalid/observation_before_preuse_hash_check",
     "invalid/observation_edge_budget_omission",
     "invalid/observation_localization_ties",

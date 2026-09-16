@@ -1,0 +1,19 @@
+{
+  "jobs": [
+    {
+      "job": "score-O10_swap",
+      "log_sha256": "a16e7b1e5db13c969cb74331b3f0180f422dda44179c9a80c00c45af31a56950",
+      "returncode": 0,
+      "seconds": 114.87837809600023,
+      "status": "measured"
+    }
+  ],
+  "pending": [
+    "O10_restore"
+  ],
+  "schedule_sha256": "d130940fa9c6ac84b19b0e0ca21aea1e7f9ad365d642f62480dd3ba71b2c9c25",
+  "status": "measured",
+  "target_freeze_sha256": "621508700f1166d29c86c4d5d5b32bccc8415dc44429057a6b47f6a733848af4",
+  "target_results_used_for_model_or_threshold_selection": false,
+  "updated": "2026-09-16T18:45:34.799131+00:00"
+}
