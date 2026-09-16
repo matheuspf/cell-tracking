@@ -2,7 +2,7 @@ P0 retained
 
 # Pipeline error training — September 15, 2026
 
-Execution status: **executing**. 16 directional fits have completed the locked 178 updates.
+Execution status: **complete**. 16 directional fits have completed the locked 178 updates.
 The adopted production default remains P0. The recommendation is recorded separately in recommendation.json.
 
 ## Exact controls and evidence
@@ -63,6 +63,14 @@ These are the predeclared complete source calibration clips, not the all-199 tar
 
 D10_random was not run because the Organoid family did not qualify in both source directions. No pretrained-advantage claim is made.
 
+## Generalization diagnostics
+
+All **42 fixed source stress cases** completed. Paired source-score changes ranged from -0.003984574 to +0.002818187. Effects were mixed; these source representatives do not establish independent biological generalization.
+
+[Paired full scores](stress_scores.csv), [supported losses](stress_losses.csv), and [per-case provenance](stress_validation.json). Losses are raw model losses before calibration; the event-head-use flag distinguishes the unused auxiliary decision losses of A10.
+
+[Error strata](diagnostic_strata.csv) cover depth, intensity, local contrast, density, spatial/time boundaries, close-cell competition and event support, using frozen source/image thresholds ([validation](strata_validation.json)).
+
 ## Interpretation
 
 These modules use source-only direct fitting and calibration on the exposed P0 proposal pipeline.
@@ -97,7 +105,7 @@ ordinary anchors use one deterministic temporal residue out of nine and receive 
 anchors are retained. These are fixed expansion weights, not proven randomized row propensities or a complete
 source-field census. [The executed sampling audit](calibration_sampling_audit.json) records both raw and expanded
 prevalence. These sampling choices limit conclusions about whole-field false-fork rejection.
-Cumulative charged GPU lease time is 25.477 hours of 48; detailed memory/runtime evidence is in resource.json.
+Cumulative charged GPU lease time is 25.997 hours of 48; detailed memory/runtime evidence is in resource.json.
 This includes 2.716 hours conservatively charged for an interrupted
 lease through the next host boot. Its exact end was not observed, and the charge can include downtime;
 see host_restart_recovery.json. Completed outputs and frozen model hashes were verified before resuming.
@@ -105,7 +113,7 @@ No measured Kaggle 12-hour runtime or leaderboard improvement is claimed. No wei
 
 ## Executable validation and fresh inference
 
-Tests: **measured** — 54 passed in 5.46s.
+Tests: **measured** — 61 passed in 4.60s.
 
 The complete primary/secondary/harmonic/DeepCenter/P0 pipeline plus D10_frozen ran from both renamed 100-frame images (specimen_alder: 168.987 s, specimen_birch: 283.788 s). Startup guards denied annotations, historical prediction caches and network access; both reconstructed P0 graphs and CSV/GEFF roundtrips were exact. These two runs are not a measured Kaggle 12-hour bound. A recommended candidate also requires its own cold-image proof.
 

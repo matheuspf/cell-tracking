@@ -1,7 +1,7 @@
 {
-  "active_stage": "stress_suite",
+  "active_stage": null,
   "clean_transfer": {
-    "readiness_sha256": "4811286764e8e5bf0f42e6193c548247a9edc1a5498fe6899bfb73a5ceb8c54b",
+    "readiness_sha256": "23b141b27747aeaa5dc7a4439fe54b12b4abfb40e01674f13ea543db7ad52ba4",
     "reason": "Both fixed final source-only upstream checkpoints are required; intermediate snapshots are excluded",
     "status": "blocked"
   },
@@ -12,8 +12,8 @@
     "O10_restore": 199,
     "O10_swap": 199
   },
-  "complete_stress_cases": 9,
-  "created": "2026-09-16T19:32:48.618777+00:00",
+  "complete_stress_cases": 42,
+  "created": "2026-09-16T21:11:03.556091+00:00",
   "expected_stress_cases": 42,
   "experiments": [
     {
@@ -117,9 +117,9 @@
     {
       "clips": null,
       "experiment": "V10",
-      "reason": "Required execution or validation is incomplete",
+      "reason": null,
       "score": null,
-      "status": "not run"
+      "status": "measured"
     },
     {
       "clips": 199,
@@ -150,7 +150,7 @@
     "queue": "complete"
   },
   "recommendation": null,
-  "status": "executing",
+  "status": "complete",
   "uploads": false,
   "weights_published": false
 }

@@ -3,7 +3,7 @@
     {
       "candidate": "A10",
       "candidate_fresh_validation": "measured",
-      "hard_correctness_pass": false,
+      "hard_correctness_pass": true,
       "metric_gate_pass": false,
       "recommended": false,
       "seed_results": [

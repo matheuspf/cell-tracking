@@ -388,6 +388,33 @@ def proof_text():
     return '\n'.join(lines)
 
 
+def diagnostic_text():
+    stress = optional(RESULTS/'stress_validation.json') or {}
+    if stress.get('status')!='measured':
+        return f"Fixed source stress diagnostics: **{stress.get('status','not run')}**."
+    losses = []
+    for job in stress['jobs']:
+        raw = job['supported_losses']
+        losses.append(dict(arm=job['arm'], source=job['source'], dataset=job['dataset'],
+            seed=raw['seed'], status=raw['status'], event_head_used=job['arm'].startswith('D'),
+            raw_losses_before_calibration=True, **{k:v for k,v in raw.items()
+                if k.startswith(('ordinary_', 'stressed_', 'supported_'))}))
+    write_csv(RESULTS/'stress_losses.csv', losses)
+    rows = csv_rows(RESULTS/'stress_scores.csv')
+    delta = [float(r['paired_score_change']) for r in rows]
+    lines = [f"All **{len(stress['jobs'])} fixed source stress cases** completed. "
+        f"Paired source-score changes ranged from {min(delta):+.9f} to {max(delta):+.9f}. "
+        'Effects were mixed; these source representatives do not establish independent biological generalization.', '',
+        '[Paired full scores](stress_scores.csv), [supported losses](stress_losses.csv), '
+        'and [per-case provenance](stress_validation.json). Losses are raw model losses before calibration; '
+        'the event-head-use flag distinguishes the unused auxiliary decision losses of A10.']
+    if (optional(RESULTS/'strata_validation.json') or {}).get('status')=='measured':
+        lines += ['', '[Error strata](diagnostic_strata.csv) cover depth, intensity, local contrast, density, '
+            'spatial/time boundaries, close-cell competition and event support, using frozen source/image thresholds '
+            '([validation](strata_validation.json)).']
+    return '\n'.join(lines)
+
+
 def continuation(status):
     pending=[r for r in status['experiments'] if r['status']!='measured']
     lines=['# Continuation — pipeline error training', '',
@@ -547,6 +574,10 @@ Both embryos and all recovered/lost TP and removed/introduced FP counts are repo
 ## Source-only branching
 
 {source_decision_text()}
+
+## Generalization diagnostics
+
+{diagnostic_text()}
 
 ## Interpretation
 

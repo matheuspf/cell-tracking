@@ -1,0 +1,23 @@
+{
+  "arms": [
+    "A10",
+    "D10_adapted_replacement",
+    "D10_frozen",
+    "D20_temporal_replacement",
+    "P0",
+    "D20_compact",
+    "D20_temporal",
+    "D00",
+    "O10_restore",
+    "O10_swap",
+    "C4_m6",
+    "D10_adapted",
+    "D20_no_pretrain",
+    "A10_replication"
+  ],
+  "image_features_at": "Actual matched or evaluated predicted observation; unavailable centers have an explicit missing-observation bucket.",
+  "no_target_threshold_selection": true,
+  "source_only_thresholds": true,
+  "status": "measured",
+  "strata_are_descriptive_not_independent_tests": true
+}

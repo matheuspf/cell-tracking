@@ -1,0 +1,1910 @@
+{
+  "diagnostic_lock_sha256": "935ef2c479e2883effe9e8bf390a9ee563022248d0848b48d3480219bed86180",
+  "jobs": [
+    {
+      "arm": "D10_frozen",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+      "prediction_sha256": "a862b7ac2aa624a066ff97529852efac4acab940ff2f1acfa3908a329c2eff8b",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.066808501879374
+        },
+        "ordinary_grouped_pair_nll": 0.034961991012096405,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 1.8511572281519573
+        },
+        "stressed_grouped_pair_nll": 0.03863297775387764,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "D10_frozen",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+      "prediction_sha256": "10681076669dc2ff980af4cc669121d443675760c674d1dc41920400e14ac642",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.477217197418213
+        },
+        "ordinary_grouped_pair_nll": 0.0030052517540752888,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 1.5670177936553955
+        },
+        "stressed_grouped_pair_nll": 0.004155006259679794,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "D10_frozen",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+      "prediction_sha256": "5109ce3ca40947f2a045e5f8bba2c4d83db87b11a540dd0a72090355473fe8b2",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "b61a0fddcbf708fc9f84ff3d75afd6837dca3cd95f365e00467f77f992a675af",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 4.552606264750163
+        },
+        "ordinary_grouped_pair_nll": 0.019749341532588005,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 3.927253087361654
+        },
+        "stressed_grouped_pair_nll": 0.024420319125056267,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "D10_frozen",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+      "prediction_sha256": "b4e143555c1ebf57ab8a69571504d590af67f1ed4b3350b6f9fe698ac14b9152",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.9041272218410787
+        },
+        "ordinary_grouped_pair_nll": 0.010676397942006588,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.6251159539589515
+        },
+        "stressed_grouped_pair_nll": 0.014821539632976055,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "D10_frozen",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+      "prediction_sha256": "de44ae02ce3acec05696dfd9d02a6aa9fcfbc0ff1b474897272ce9c4611ee3eb",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.350619561704142
+        },
+        "ordinary_grouped_pair_nll": 0.036329202353954315,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.169408932328224
+        },
+        "stressed_grouped_pair_nll": 0.03880913928151131,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "D10_frozen",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+      "prediction_sha256": "4dbad323d2ee6747e12daa23c516802afcae5c4ce3a273d82a4347ec20b5f68c",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_frozen",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "0d66531601b541abddf7ec9233bedc32c070dd6097bf93d7ebb31a814225e958",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.514737150498799
+        },
+        "ordinary_grouped_pair_nll": 0.019243968650698662,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.9905349873006344
+        },
+        "stressed_grouped_pair_nll": 0.020760243758559227,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+      "prediction_sha256": "c79cb0f3a17c6af093eaa8b5d533b54fc806e9bf4b71720be19c3fffe00abfbe",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.8565498987833657
+        },
+        "ordinary_grouped_pair_nll": 0.02855241484940052,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.4846036434173584
+        },
+        "stressed_grouped_pair_nll": 0.03580804914236069,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+      "prediction_sha256": "b0b3c6629913b5fbeb09a3cfae3afed82b566a67cb446e189200d0b38c5e4278",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 3.4949398040771484
+        },
+        "ordinary_grouped_pair_nll": 0.0021407129243016243,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.6392946243286133
+        },
+        "stressed_grouped_pair_nll": 0.0031495951116085052,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+      "prediction_sha256": "b5a4073230e7c9852e07e9d3eebdea4c999c059610fbea7b14628faa21faab3c",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "83295f18ccc22f02e0abed211ec54d65773b33f9fa858bb0009e8401935e21e6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 5.657420476277669
+        },
+        "ordinary_grouped_pair_nll": 0.01476385910063982,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 4.921504259109497
+        },
+        "stressed_grouped_pair_nll": 0.020066680386662483,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+      "prediction_sha256": "4f55638f2de812366b1f2cf1a25d410830ad4e1a7e7d1646a2f59d686269ab3e",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 5.079607560084416
+        },
+        "ordinary_grouped_pair_nll": 0.008190487511456013,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 4.106286828334515
+        },
+        "stressed_grouped_pair_nll": 0.015200032852590084,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+      "prediction_sha256": "353e3206fc5f2f4789ec7a5dac5a340a076484fe2a91dd919189c67f096c36c9",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 3.2149887404271533
+        },
+        "ordinary_grouped_pair_nll": 0.034996502101421356,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.5178924767034396
+        },
+        "stressed_grouped_pair_nll": 0.039506442844867706,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "D10_adapted",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+      "prediction_sha256": "43a93e23053b8aa0a4357078a80cfafa6b61d0f37a9e59fc17178d70e5458753",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D10_adapted",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "07b7d738dc6ed26bc8d41bdcb951948296a6b9f79472565856cd36dbdd76f283",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 3.33063767850399
+        },
+        "ordinary_grouped_pair_nll": 0.018611887469887733,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.4572646554027284
+        },
+        "stressed_grouped_pair_nll": 0.020650725811719894,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+      "prediction_sha256": "1d70be171810ec681e24c1cfcd31da9cf8c6caae7e9ad62116d25c6b6a7b577f",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.071084896723429
+        },
+        "ordinary_grouped_pair_nll": 0.034038763493299484,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 1.6910686492919922
+        },
+        "stressed_grouped_pair_nll": 0.04940527305006981,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+      "prediction_sha256": "374957526972ff0954183c6111b3df162b9d02ba082b04eef10adc8ab4647a9f",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 0.9495668411254883
+        },
+        "ordinary_grouped_pair_nll": 0.005116799846291542,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 0.6604983806610107
+        },
+        "stressed_grouped_pair_nll": 0.006938070058822632,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+      "prediction_sha256": "b40a4f4f62c251aafd1c7b7d75cfc9bb4fb2d7237a568b96f12c238f638ff9bb",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "71ff94aaddd3cefcbbe746cdee3d110ed7411920b108df03d20295dcb4fc5505",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.7247681617736816
+        },
+        "ordinary_grouped_pair_nll": 0.03237387537956238,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.208146254221598
+        },
+        "stressed_grouped_pair_nll": 0.04898412898182869,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+      "prediction_sha256": "4b913c23c626b9df0c82e77a869b2fe597e29af2eae415679b82aa851abedbce",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 2.761568234517024
+        },
+        "ordinary_grouped_pair_nll": 0.03980639576911926,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 2.441702072436993
+        },
+        "stressed_grouped_pair_nll": 0.05123737081885338,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+      "prediction_sha256": "34cbfe3d3b63715e005c524919968df7a4f0282733062df68c862f9687527349",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.7985887343862228
+        },
+        "ordinary_grouped_pair_nll": 0.058116961270570755,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.508698106078165
+        },
+        "stressed_grouped_pair_nll": 0.06928214430809021,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "D20_compact",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+      "prediction_sha256": "c05fdd7a1ab2ac0a2d718d69d50483b6c68ec1e0bc2f13a506ca4b7d7dedbbf5",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_compact",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "a196f840d68abcdb781383e6fa5cad57c5a878b12ac60bd1946fc561028544c4",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.217833111062646
+        },
+        "ordinary_grouped_pair_nll": 0.04683053866028786,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.0422251892409153
+        },
+        "stressed_grouped_pair_nll": 0.05680762231349945,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+      "prediction_sha256": "e15e0dda6131a205337c34c129ddd7a882e12fc6a4e0325dc4087fef1ccd3cad",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 1.961815317471822
+        },
+        "ordinary_grouped_pair_nll": 0.01584947109222412,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 1.9439843893051147
+        },
+        "stressed_grouped_pair_nll": 0.01589241996407509,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+      "prediction_sha256": "fa537f3d111b24bf10b2a1ab80770c464a16b1a2b70f2c1a7ff94916db0ecdcf",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.625032424926758
+        },
+        "ordinary_grouped_pair_nll": 0.0016208213055506349,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.632509708404541
+        },
+        "stressed_grouped_pair_nll": 0.0016043654177337885,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+      "prediction_sha256": "14b7fbcdb41f281044af1ee0f38bb0505ada49fb30dbc40d5a70547bac63e7e9",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "029461c98c97a41f71a3495d9aaab1f7c3bb5208f4a20516efe80897a1871676",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 3.8805373509724936
+        },
+        "ordinary_grouped_pair_nll": 0.008539116941392422,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 3.8735174338022866
+        },
+        "stressed_grouped_pair_nll": 0.008406209759414196,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+      "prediction_sha256": "0ef81fbdeefa9883d06089223b8a78a23e966b4bdef3ac4aabf1616b285e4b16",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.5821729119007406
+        },
+        "ordinary_grouped_pair_nll": 0.005631507374346256,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.5696373994533834
+        },
+        "stressed_grouped_pair_nll": 0.005715262144804001,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+      "prediction_sha256": "51db8341c84600f7aa4d9288d6fd33a8ff3bdcac9490dcd1f75903db1cdaaf51",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.183388934337667
+        },
+        "ordinary_grouped_pair_nll": 0.03642307221889496,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.1720175644648925
+        },
+        "stressed_grouped_pair_nll": 0.03635578975081444,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "D20_temporal",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+      "prediction_sha256": "a260eba0de61389f7971af0e741a6774a46abe014fb7b6b38c5e769709ea18f4",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_temporal",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "42dac20936ca804a7bedc49324f92957418b192694e7de4fd1c6dc1a7fec6ee7",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.845230566603797
+        },
+        "ordinary_grouped_pair_nll": 0.017321260645985603,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.8372067457863264
+        },
+        "stressed_grouped_pair_nll": 0.01709173433482647,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+      "prediction_sha256": "f8ab47f3df578cd928534a32245669eb9985af6df7f5f408fc123bb790a0a603",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 5.166418393452962
+        },
+        "ordinary_grouped_pair_nll": 0.035042427480220795,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 5.239131132761638
+        },
+        "stressed_grouped_pair_nll": 0.029179422184824944,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+      "prediction_sha256": "7bf39962a6775beafd4ab70ed8ec5ca4eaf55e380efcd4edec7591308cec2c77",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 7.820346832275391
+        },
+        "ordinary_grouped_pair_nll": 0.002491361927241087,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 8.140225410461426
+        },
+        "stressed_grouped_pair_nll": 0.002265267539769411,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+      "prediction_sha256": "ee446465bcc8d647af66704f0c803b7e202636f4afa9e1ce1666f32968d138b7",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "2ed2e62109c7d84c11273105bb3cd838950c0a37972891938f79138f6c4fcd2c",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 8.854341348012289
+        },
+        "ordinary_grouped_pair_nll": 0.021188244223594666,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 9.503024260203043
+        },
+        "stressed_grouped_pair_nll": 0.016530727967619896,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+      "prediction_sha256": "3c2ddad7b59ec0cd0a9cc5105e1568e2eb9bb3bf75681d0d3230a6c265e57776",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 7.294185198270357
+        },
+        "ordinary_grouped_pair_nll": 0.017958013340830803,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 7.252276163834792
+        },
+        "stressed_grouped_pair_nll": 0.018266160041093826,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+      "prediction_sha256": "7d670ba7a386ba8b8c00b2b9df32cd76bd11a991fbc820f9bb28007360cafed5",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 5.629288077354431
+        },
+        "ordinary_grouped_pair_nll": 0.04097677394747734,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 5.568194078547614
+        },
+        "stressed_grouped_pair_nll": 0.041370853781700134,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "D20_no_pretrain",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+      "prediction_sha256": "eea53fe84ef74c25cdeb187d9bad655d90b5b88ff580e081dd60c8ed08af2a26",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "D20_no_pretrain",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "790199a5edb03e7d1482692d4320b761d73843817ff436dad8145960dfbc9426",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 5.588907548359463
+        },
+        "ordinary_grouped_pair_nll": 0.023341769352555275,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 5.54966630254473
+        },
+        "stressed_grouped_pair_nll": 0.02340884506702423,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+      "prediction_sha256": "9b3f6a7ea2feea02ccea18e97d7db459bd8f27e076f0f4f4aac8514a3a0cea75",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.372823635737101
+        },
+        "ordinary_grouped_pair_nll": 0.013545554131269455,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 2.365026076634725
+        },
+        "stressed_grouped_pair_nll": 0.013798808678984642,
+        "supported_pairs": 266
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+      "prediction_sha256": "ced0c81f2d84c434081933fd2eb0f4c6fa0d431a689d4f1fbe72ffbbea74eff2",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+        "ordinary_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.4487991333007812
+        },
+        "ordinary_grouped_pair_nll": 0.0009457886917516589,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 1,
+          "loss": 2.4320383071899414
+        },
+        "stressed_grouped_pair_nll": 0.0009534769924357533,
+        "supported_pairs": 69
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+      "prediction_sha256": "a8dd46a53dca0323dc8a91cf45f884e39ce7af7a100a5c29545c998add57de65",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "4b830dddacc03afdcbc80d5e53e068eafcf6389578df27ae7392f90e9389aef2",
+        "ordinary_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 3.744527498881022
+        },
+        "ordinary_grouped_pair_nll": 0.005468721967190504,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 3,
+          "loss": 3.728352944056193
+        },
+        "stressed_grouped_pair_nll": 0.005569095257669687,
+        "supported_pairs": 107
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+      "prediction_sha256": "2bcedae0d7b280ec2a3a587a483b50dbd54d6802c351de0012eeb346450cc7ea",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.8882462611565223
+        },
+        "ordinary_grouped_pair_nll": 0.012204817496240139,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 13,
+          "loss": 3.877466862018292
+        },
+        "stressed_grouped_pair_nll": 0.012387283146381378,
+        "supported_pairs": 661
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+      "prediction_sha256": "73a6e87b0d562b2fdda030ebae306239313b26cc8ad34e7c462bc976d6038257",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.5125224898968423
+        },
+        "ordinary_grouped_pair_nll": 0.036598674952983856,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 2.503941159961479
+        },
+        "stressed_grouped_pair_nll": 0.03679116070270538,
+        "supported_pairs": 605
+      }
+    },
+    {
+      "arm": "A10",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {}
+      },
+      "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+      "prediction_sha256": "d9cada077ba1afcf9f829dd590c3c59edc1bf98c7b4ed7d08cb8e79e70831972",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "A10",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "7222c8a833eb9cdf3b69f8b44f64fa19de6192ee1acd8a97a9afec0e39720df6",
+        "ordinary_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.8320582040718623
+        },
+        "ordinary_grouped_pair_nll": 0.017970828339457512,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_decision_loss": {
+          "groups": 28,
+          "loss": 1.8261551106614726
+        },
+        "stressed_grouped_pair_nll": 0.01796972192823887,
+        "supported_pairs": 1879
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "44b6_5f15d135",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+      "prediction_sha256": "1ac072e9262d5a0c08747da340ab16c64f5a301a9f49e06d52951515415be405",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "44b6_5f15d135",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+        "ordinary_grouped_selection_loss": 0.8598191142082214,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.8602826595306396,
+        "supported_rows": 156
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "44b6_d754aa59",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+      "prediction_sha256": "8f6cf7ca497cb959a632136233c229a7812801a68a9fa218ad4698f8445b56af",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "44b6_d754aa59",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+        "ordinary_grouped_selection_loss": 0.9376578330993652,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.9387590885162354,
+        "supported_rows": 49
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "44b6_e31261b4",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "44b6",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+      "prediction_sha256": "4a02068ba7aee52569649300b6162259dd0c4130bec8ca09695456534b25d67e",
+      "source": "44b6",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "44b6_e31261b4",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "03fa747dae2458d8468489afab6559f945b7eaf24abe20b5b0ed82d9ba961e56",
+        "ordinary_grouped_selection_loss": 0.7553824782371521,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "44b6",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.7558451294898987,
+        "supported_rows": 71
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "6bba_4ffd3da3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+      "prediction_sha256": "e27f8edcd36e28a9c0800d1fe3b5fd9fef2a41e6569cfd4c050acab0972aad15",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "6bba_4ffd3da3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+        "ordinary_grouped_selection_loss": 0.7642765045166016,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.7649322748184204,
+        "supported_rows": 333
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "6bba_767a1e17",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+      "prediction_sha256": "62fbdee3c1fefbfccf73d0254d3434ea7b4da45f07bd83ab24c29a6bdb7ac745",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "6bba_767a1e17",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+        "ordinary_grouped_selection_loss": 0.8022827506065369,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.8033313155174255,
+        "supported_rows": 412
+      }
+    },
+    {
+      "arm": "O10_swap",
+      "dataset": "6bba_bb9f20c3",
+      "guard": {
+        "blocked_network": 0,
+        "blocked_paths": [],
+        "blocked_reads": 0,
+        "cached_operational_inputs": true,
+        "explicit_source_model": "6bba",
+        "fresh_end_to_end": false,
+        "installed_before_numerical": true,
+        "runtime_array_sha256": {
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+          "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+        }
+      },
+      "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+      "prediction_sha256": "c07606adcedeadbb3ebff96229e5c0e221a42fdca3073ff1060c4ea4648886a0",
+      "source": "6bba",
+      "status": "measured",
+      "supported_losses": {
+        "arm": "O10_swap",
+        "dataset": "6bba_bb9f20c3",
+        "guard": {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {}
+        },
+        "model_sha256": "622657a63c4a755c9adb139510cb404f910df148b24f478443bb34b4b05350a1",
+        "ordinary_grouped_selection_loss": 0.7802081108093262,
+        "raw_model_losses_before_calibration": true,
+        "seed": 20260915,
+        "source": "6bba",
+        "source_only": true,
+        "status": "measured",
+        "stressed_grouped_selection_loss": 0.7807886004447937,
+        "supported_rows": 1001
+      }
+    }
+  ],
+  "model_or_threshold_selection_from_stress": false,
+  "no_repeated_stress_optimization": true,
+  "status": "measured"
+}

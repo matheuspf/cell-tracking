@@ -1,0 +1,29 @@
+{
+  "active_study_module_processes": [],
+  "all_prediction_bytes_unchanged": true,
+  "all_stage_receipts_measured": true,
+  "archived_files_verified": 9,
+  "before_inventory_manifest_sha256": "caefc870951fd4e910b1dae3a5b9209851012f6ad1c2e3bc0222d4a640c291e1",
+  "created": "2026-09-16T21:10:47.828600+00:00",
+  "finish_queue_status": "complete",
+  "new_fitting": false,
+  "original_first_pass_archive_manifest_sha256": "364b710f099a0df1e09b15d3d643498961eea0797624742055e3b71ee550f99b",
+  "original_first_pass_retained": true,
+  "point_inventory_revalidation_sha256": "f5549098b546a7c0f451994c392b029998608ee1c35079918d1d91a3b842f198",
+  "point_stage_receipt": {
+    "job": "point_predictions",
+    "log_sha256": "8cdb6b849c2d642b6145be8d8f86cbc2d2b15711f0e92410376cf5ebe46c08dc",
+    "returncode": 0,
+    "seconds": 27.99403264400098,
+    "status": "measured"
+  },
+  "point_stage_receipt_sha256": "f598fa3276b3bea9bc72373fd5c21d1f681332a1240596e4461b43d22a8565f2",
+  "prediction_graphs_verified": 796,
+  "reason": "The unchanged successful retry was revalidated. The completed queue now records the successful point stage; original failed attempt and first-pass receipts remain archived.",
+  "reconciled_finish_queue_progress_sha256": "d03cfb8242ebdf7c99484f47a0a736abccd8ba9a1287b403c6afc37ac3f79959",
+  "scientific_recipe_changed": false,
+  "status": "measured",
+  "tests_sha256": "aa3ded43d52479d798896e41923ff4bd3975c7bc730ed8db72b398403bb0ba4e",
+  "validation_sha256": "9ec477f187134551d30d3c4967c087913665701883bed7bd2828884befd6843c",
+  "weights_or_calibration_changed": false
+}
