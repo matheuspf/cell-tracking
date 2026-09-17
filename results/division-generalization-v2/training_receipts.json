@@ -451,6 +451,97 @@
       "wall_seconds": 2694.524680647999
     },
     {
+      "arm": "J_mined",
+      "checkpoint_resume_parity": true,
+      "checkpoint_seconds": 0.34482309699706093,
+      "common_prefix": {
+        "independent_experiment": false,
+        "model_optimizer_rng_data_order_shared": true,
+        "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/6bba/314159/checkpoint-2048.pt",
+        "sha256": "cbe9fba0d7478fa12559422a37e6600c2db653c9e7f7e176af9639a11a94a120",
+        "shared_updates": 2048
+      },
+      "compute_seconds": 1372.2885950809996,
+      "counterfactual_label_parity": true,
+      "exposure": {
+        "anchor_visits_summary": {
+          "draws": 131072,
+          "maximum": 464,
+          "minimum": 1,
+          "unique": 9473
+        },
+        "anchors": 10090,
+        "coarse_outside_policy": "Zero spatial query with explicit validity and physical coordinate; no clamping",
+        "effective_anchor_sample_size": 9595.0,
+        "group_visits_summary": {
+          "draws": 131072,
+          "maximum": 481,
+          "minimum": 3,
+          "unique": 2264
+        },
+        "groups": 2265,
+        "inclusion_weights": [
+          16.0
+        ],
+        "negative_only_groups": 2189,
+        "partition": "fit",
+        "positive_groups": 74,
+        "random_supported_anchors": 9595,
+        "random_supported_groups": 2255,
+        "risk_scope": "Within supported biological-group sampling design; not a biological prevalence estimate",
+        "sampling_independent_of_gt_components": true,
+        "scene_coverage": {
+          "inside_coarse": 206301,
+          "inside_fine": 159026,
+          "missing_temporal_frames": 622,
+          "queries": 206749
+        },
+        "source": "6bba",
+        "unknown_as_negative_count": 0
+      },
+      "finite_gradient_checks": true,
+      "full_source_screen": false,
+      "invocation_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/6bba/314159/invocations/4096-265e1d4eca22ce79.json",
+          "sha256": "265e1d4eca22ce79d06f95d8c777b951be55ed4a5c228b1a43820b08985ad827"
+        }
+      ],
+      "invocation_totals": {
+        "checkpoint_seconds": 0.34482309699706093,
+        "compute_seconds": 1372.2885950809996,
+        "lease_seconds": 1385.8791548049976,
+        "wait_seconds": 0.7358238529959635,
+        "wall_seconds": 1942.7570227140004
+      },
+      "joint_optimizer_updates": 4096,
+      "lease_seconds": 1385.8791548049976,
+      "literal_zero_path_test": true,
+      "model_parameters": 490804,
+      "model_sha256": "b73a03f4c6828f26e2094983d449c006f7a00b209f9c80b7aa0f258234aa6812",
+      "negative_only_groups_seen": 2189,
+      "new_target_used_for_training": false,
+      "positive_groups_seen": 74,
+      "prefix_sha256": "cbe9fba0d7478fa12559422a37e6600c2db653c9e7f7e176af9639a11a94a120",
+      "random_background_stream": true,
+      "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/6bba/314159/training_receipt.json",
+      "receipt_sha256": "265e1d4eca22ce79d06f95d8c777b951be55ed4a5c228b1a43820b08985ad827",
+      "required_updates": 4096,
+      "seed": 314159,
+      "source": "6bba",
+      "source_screen_receipts": [],
+      "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "a737ecb020bc5f0a1d91cc1703be00d685cbfdb24482d23598ed0cb97aecfb96",
+        "history.jsonl": "2a92067d85e52ae0d785c2179d08462774f6fd2a9e30f07b4fd71e8f84ad1ca0",
+        "mining-2048.json": "a2e1dbf4d861d756dfaf7991e71fa08f8e4f9d27b1e6f9b6e6034d2296596f23",
+        "mining-3072.json": "26855a6bd51653291c1dbe111ba923c345b1d3d241ad9b68bc7ea4539eb15fbf"
+      },
+      "unknown_as_negative_count": 0,
+      "wait_seconds": 0.7358238529959635,
+      "wall_seconds": 1942.7570227140004
+    },
+    {
       "arm": "J_uniform",
       "checkpoint_resume_parity": true,
       "checkpoint_seconds": 0.1880431469908217,

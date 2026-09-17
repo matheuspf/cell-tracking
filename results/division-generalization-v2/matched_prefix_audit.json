@@ -24,8 +24,16 @@
       "same_prefix_receipt": true,
       "seed": 20260916,
       "source": "6bba"
+    },
+    {
+      "checkpoint_sha256": "cbe9fba0d7478fa12559422a37e6600c2db653c9e7f7e176af9639a11a94a120",
+      "initial_mining_byte_exact": true,
+      "initial_mining_sha256": "a2e1dbf4d861d756dfaf7991e71fa08f8e4f9d27b1e6f9b6e6034d2296596f23",
+      "same_prefix_receipt": true,
+      "seed": 314159,
+      "source": "6bba"
     }
   ],
   "shared_prefix_not_independent": true,
-  "status": "partial"
+  "status": "measured"
 }
