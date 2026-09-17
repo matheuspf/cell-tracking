@@ -99,8 +99,11 @@ def run(args=None):
             source_scores.append(dict(arm=r['arm'],source=r['source'],seed=r['seed'],step=r['step'],application=app,
                 score=score['score'],delta=score['delta'],lost_supported_edges=score['lost_supported_edges'],clips=score['clips'],
                 division_tp=score['division_tp'],division_fp=score['division_fp'],division_fn=score['division_fn']))
-        calibrations.append(dict(arm=r['arm'],seed=r['seed'],step=r['step'],
-            **{k:v for k,v in r['calibration'].items() if k!='rows'}))
+    for path in sorted((WORK/'screens').glob('*/*/*/*/calibration.json')):
+        r=read_json(path)
+        calibrations.append(dict(arm=path.parts[-5],seed=int(path.parts[-3]),step=int(path.parts[-2]),
+            **{k:v for k,v in r.items() if k!='rows'},
+            calibration_sha256=sha(path),full_source_graph_screen_complete=(path.parent/'summary.json').exists()))
     write_json(RESULTS/'training_receipts.json',dict(fits=fits,actual_receipts_required=True))
     write_csv(RESULTS/'training_curves.csv',curves)
     if (RESULTS/'diagnostic_panel_composition.json').exists():
@@ -126,6 +129,7 @@ def run(args=None):
         independent_workers_overlap=True,wall_times_must_not_be_summed_into_total_elapsed=True,
         reason=None if runtime else 'Production optimizer histories are not complete yet'))
     write_json(RESULTS/'calibration_audit.json',dict(status='measured' if calibrations else 'pending',fits=calibrations,
+        full_source_graph_screens_are_separate=True,
         reason=None if calibrations else 'Adequate training and full source screens have not completed'))
     ledger=WORK/'resources/leases.jsonl';events=[]
     if ledger.exists():events=[json.loads(line) for line in ledger.read_text().splitlines()]

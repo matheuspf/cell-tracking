@@ -3,6 +3,7 @@
     {
       "arm": "G30",
       "boundary_reached": false,
+      "calibration_sha256": "4c6a4f55f6029f779d1e55d247432b28e682bfcda1d0120465112ae4aadc7464",
       "decision_units": 183,
       "finite_separation_bounds": [
         [
@@ -14,6 +15,7 @@
           30
         ]
       ],
+      "full_source_graph_screen_complete": true,
       "intercept": -2.563210088590652,
       "intercept_penalized": false,
       "negative_groups": 15,
@@ -33,6 +35,7 @@
     {
       "arm": "G30",
       "boundary_reached": false,
+      "calibration_sha256": "0812dd312977d349820dfc93608029957dbb4afe647ac8cf4ff1fd1143d09085",
       "decision_units": 606,
       "finite_separation_bounds": [
         [
@@ -44,6 +47,7 @@
           30
         ]
       ],
+      "full_source_graph_screen_complete": true,
       "intercept": -2.7254700411010107,
       "intercept_penalized": false,
       "negative_groups": 21,
@@ -59,8 +63,174 @@
       "target_used": false,
       "temperature": 3.7097868399602896,
       "threshold": 0.0
+    },
+    {
+      "arm": "J_mined",
+      "boundary_reached": false,
+      "calibration_sha256": "c46c6442d144a2a7d29961b170ec800ffa468333696db118be1903d48e395c59",
+      "decision_units": 190,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.828562935720924,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 5.6912489978147445,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "2612168ef7fda603d51f0b675ec280041ad0ab66b4e15eee4640c787f62fe71a",
+      "decision_units": 196,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.1694745672219016,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 5.747243412250762,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "1b2c6d4c4f69be71545b2419b0b4e621f665aedfd09dcead1955eaecc586ccab",
+      "decision_units": 195,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.2179880154567797,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 4.1399871644992965,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "4e927dc2a8890d71666ad8ca0798c1770e2e39a6922993aec7c64ca96ef5e1a8",
+      "decision_units": 611,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -2.265023197678404,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 10,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "6bba",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 4.482202167730908,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "7fb0c1e15ae0c8d4babe2adaa07e00871f7319f1bccbbea4da70b5713215ff51",
+      "decision_units": 623,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -2.205948658459418,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 10,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "6bba",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 5.20230566366907,
+      "threshold": 0.0
     }
   ],
+  "full_source_graph_screens_are_separate": true,
   "reason": null,
   "status": "measured"
 }

@@ -1,12 +1,12 @@
 {
-  "exclusive_lease_seconds": 12122.085918855046,
+  "exclusive_lease_seconds": 12702.330748826025,
   "lease_seconds_by_stage": {
-    "calibration": 35.53164812200703,
+    "calibration": 70.84397353400709,
     "frozen_matrix": 60.61669346999406,
     "inference": 3401.9511733740073,
     "scene_batching": 2.120725056003721,
-    "small_head_oof": 41.25413952799863,
-    "source_mining": 704.834495915049,
+    "small_head_oof": 541.9399528739959,
+    "source_mining": 749.0811871280312,
     "source_profile": 20.245540058996994,
     "train": 7855.531503330989
   },
@@ -14,14 +14,14 @@
     {
       "event": "begin",
       "purpose": "small_head_oof/train/44b6",
-      "token": "4082715-1789619893146512166",
-      "utc": "2026-09-17T04:38:13.151050+00:00",
-      "wait_seconds": 2.074525381998683
+      "token": "4082715-1789620474562613571",
+      "utc": "2026-09-17T04:47:54.566844+00:00",
+      "wait_seconds": 0.8122023750038352
     }
   ],
   "peak_process_tree_rss_gib": 11.509746551513672,
   "peak_total_gpu_gib": 3.3916015625,
   "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
-  "study_disk_gib": 9.35438400413841,
-  "wait_seconds": 446.7516366820346
+  "study_disk_gib": 9.360843535512686,
+  "wait_seconds": 1060.244765051044
 }
