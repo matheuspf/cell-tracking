@@ -1,0 +1,78 @@
+{
+  "overfit_fixture": [
+    {
+      "actions": 337,
+      "arrays_sha256": "83bf6ec6beddeb7423aaf9d97c6f75a89471461f1b5fd8e2ecaf0c5a74850da8",
+      "key": "44b6_12dfb391:29045",
+      "positive_division_delta_actions": 6,
+      "positive_utility_actions": 6
+    },
+    {
+      "actions": 446,
+      "arrays_sha256": "fd07cfd6a31ed16c56f4252fc3eaa72e3fd828b4b3f221288a2fc713ea280352",
+      "key": "44b6_0113de3b:5749",
+      "positive_division_delta_actions": 0,
+      "positive_utility_actions": 0
+    },
+    {
+      "actions": 229,
+      "arrays_sha256": "2307765b8727bf32c08a195cace427f87808e6066fab8ebd6a2d61369fc8548b",
+      "key": "44b6_0113de3b:6008",
+      "positive_division_delta_actions": 0,
+      "positive_utility_actions": 0
+    },
+    {
+      "actions": 350,
+      "arrays_sha256": "2239683ad18822c217b92676aa580b61894f27769eede6a25e0a2f06cb8bcb04",
+      "key": "44b6_0113de3b:6958",
+      "positive_division_delta_actions": 0,
+      "positive_utility_actions": 0
+    }
+  ],
+  "overfit_profile_sha256": "ef95141d24eef06765a21910c3ccfffa94e11380b74acb1fa5e6404599c540a4",
+  "panels": [
+    {
+      "anchors": 32,
+      "biological_positive_anchors": 1,
+      "categories_not_mutually_exclusive": true,
+      "panel_sha256": "4457ad18f7f96f03cfd7af9b36d36bd1897c35d4c587dc6274491c0a10fd38a5",
+      "partition": "calibration",
+      "source": "44b6",
+      "supported_without_positive_utility": 30,
+      "utility_positive_anchors": 2
+    },
+    {
+      "anchors": 32,
+      "biological_positive_anchors": 0,
+      "categories_not_mutually_exclusive": true,
+      "panel_sha256": "4457ad18f7f96f03cfd7af9b36d36bd1897c35d4c587dc6274491c0a10fd38a5",
+      "partition": "fit",
+      "source": "44b6",
+      "supported_without_positive_utility": 30,
+      "utility_positive_anchors": 2
+    },
+    {
+      "anchors": 32,
+      "biological_positive_anchors": 0,
+      "categories_not_mutually_exclusive": true,
+      "panel_sha256": "6e37ad061681d333dedea8703623b24aa2e2fe6388052ce3e071763bff38ef03",
+      "partition": "calibration",
+      "source": "6bba",
+      "supported_without_positive_utility": 32,
+      "utility_positive_anchors": 0
+    },
+    {
+      "anchors": 32,
+      "biological_positive_anchors": 0,
+      "categories_not_mutually_exclusive": true,
+      "panel_sha256": "6e37ad061681d333dedea8703623b24aa2e2fe6388052ce3e071763bff38ef03",
+      "partition": "fit",
+      "source": "6bba",
+      "supported_without_positive_utility": 29,
+      "utility_positive_anchors": 3
+    }
+  ],
+  "panels_and_extension_rule_unchanged": true,
+  "scope": "Fixed hashed whole-group diagnostic panels; full source graph screens remain the selection criterion",
+  "status": "measured"
+}

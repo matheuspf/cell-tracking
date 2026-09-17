@@ -222,6 +222,10 @@ def run(args=None):
     report+=['',f'{status["completed_directional_fits"]}/10 directional fits have completed their required updates. '
         'Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. '
         'The shared prefix is counted once in compute and does not make independent experiments.','',
+        'The fixed diagnostic panels contain 32 hashed groups each. The 6bba held panel has no positive-utility anchors, '
+        'so its loss measures supported rejection and cannot establish division recovery. The 44b6 held panel has two '
+        'positive-utility anchors. Full source graph screens govern qualification. The panels and extension rule remain '
+        'as originally locked. [Panel composition](diagnostic_panel_composition.json).','',
         'The new module keeps native evidence inside learned relative complete-action scores. It uses fixed-seed probability '
         'sampling, separate positive exposure, masked unknown alternatives, negative-only groups, complete lost-link utility, '
         'and one two-scale raw scene shared across candidate pairs. The 490,804-parameter encoder/head uses ordered attention.','',

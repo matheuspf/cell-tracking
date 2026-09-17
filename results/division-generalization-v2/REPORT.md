@@ -16,6 +16,8 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 
 4/10 directional fits have completed their required updates. Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. The shared prefix is counted once in compute and does not make independent experiments.
 
+The fixed diagnostic panels contain 32 hashed groups each. The 6bba held panel has no positive-utility anchors, so its loss measures supported rejection and cannot establish division recovery. The 44b6 held panel has two positive-utility anchors. Full source graph screens govern qualification. The panels and extension rule remain as originally locked. [Panel composition](diagnostic_panel_composition.json).
+
 The new module keeps native evidence inside learned relative complete-action scores. It uses fixed-seed probability sampling, separate positive exposure, masked unknown alternatives, negative-only groups, complete lost-link utility, and one two-scale raw scene shared across candidate pairs. The 490,804-parameter encoder/head uses ordered attention.
 
 Both inherited baselines retain all 4,108,943 observations. All graph hashes and baseline metric receipts were verified, with fresh ordinary/crowded replays in both embryos and independent official aggregation. P0 and C4_m6 remain unchanged.
@@ -24,7 +26,7 @@ This is exploratory source-only direct fitting on exposed P0 observations. Reuse
 
 [Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).
 
-Measured exclusive GPU leases: 2.835 h; waits: 77.1 s. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Measured exclusive GPU leases: 2.936 h; waits: 78.4 s. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 

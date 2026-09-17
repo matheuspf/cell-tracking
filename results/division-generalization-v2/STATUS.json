@@ -25,16 +25,6 @@
       ],
       "pid": 3890123,
       "started": 1789617725.61
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2",
-        "report"
-      ],
-      "pid": 3897735,
-      "started": 1789617808.98
     }
   ],
   "completed_directional_fits": 4,
@@ -49,5 +39,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T04:03:30.144400+00:00"
+  "updated": "2026-09-17T04:10:21.357481+00:00"
 }
