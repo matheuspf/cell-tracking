@@ -1,0 +1,13 @@
+{
+  "status": "plan_helpers_tested",
+  "python": "3.13.5",
+  "tests_passed": 12,
+  "plan_check": true,
+  "files_sha256": {
+    "contracts.py": "d14eb3c63d11cf84d449768478e9aad8445eb87a0d49d328bf036321116c5fed",
+    "test_contracts.py": "acebdbc8c76acf282ec7efa0c5456e521c66b9f43bee96fbe97124881084c239",
+    "study.json": "d987748f7b359f8dad8b4b42f0be9bf2b5a56156b6033795932228c69b78cfa0"
+  },
+  "scope": "Only stdlib handover helpers and JSON contracts tested. No microscopy, training, model, scorer, or fresh-inference execution in planning environment.",
+  "source_repository_revision": "ab861b5d8c1a37bd920f610b88f552dfc5b5dbb6"
+}
