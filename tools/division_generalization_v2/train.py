@@ -80,7 +80,9 @@ def train_step(model,optimizer,dataset,step,seed,arm,device,amp,microbatch=4):
     started=time.monotonic();loader=forward=backward=transfer=0.
     optimizer.zero_grad(set_to_none=True)
     samples=dataset.samples(step,seed,arm)
+    samples.sort(key=lambda s:(dataset.anchors[s['key']]['dataset'],dataset.anchors[s['key']]['time'],s['key']))
     totals=Counter()
+    loader_parts=Counter()
     # G30 is CPU-vectorized within each decision group. The image arm encodes
     # multiple scenes at once and shares each encoding across every action.
     for start in range(0,32,microbatch):
@@ -89,6 +91,7 @@ def train_step(model,optimizer,dataset,step,seed,arm,device,amp,microbatch=4):
         batches=[];scenes=[]
         for sample in chunk:
             b,s=dataset.batch(sample,device,training=True)
+            loader_parts.update(dataset.last_batch_timing)
             batches.append(b)
             if s is not None:scenes.append(s)
         scene=torch.stack(scenes) if scenes else None
@@ -120,6 +123,7 @@ def train_step(model,optimizer,dataset,step,seed,arm,device,amp,microbatch=4):
     return dict(step=step+1,lr=LR*lr_factor(step),gradient_norm=float(norm),
         loader_transfer_seconds=loader,encoder_head_seconds=forward,backward_seconds=backward,
         optimizer_seconds=time.monotonic()-ts,compute_seconds=time.monotonic()-started,
+        **loader_parts,
         **totals)
 
 
@@ -230,6 +234,11 @@ def run(args):
         model_sha256=sha(folder/'resume.pt'),compute_seconds=compute,lease_seconds=lease_time,
         wait_seconds=wait,checkpoint_seconds=checkpoint_time,wall_seconds=time.monotonic()-started,
         exposure=dataset.audit(),new_target_used_for_training=False,unknown_as_negative_count=0,
+        positive_groups_seen=len(set(dataset.visits)&set(dataset.positive_keys)),
+        negative_only_groups_seen=len(set(dataset.visits)&set(dataset.ordinary_keys)),
+        literal_zero_path_test=validation['literal_zero_path_test'],
+        counterfactual_label_parity=parity['status']=='measured',
+        checkpoint_resume_parity=profile['checkpoint_resume_exact'],random_background_stream=True,
         full_source_screen=False,finite_gradient_checks=True)
     write_json(folder/'training_receipt.json',receipt)
     write_json(folder/'progress.json',receipt)

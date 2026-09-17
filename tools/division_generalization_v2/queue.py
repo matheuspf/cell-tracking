@@ -65,6 +65,8 @@ def run(args=None):
             image_audit()
         from .dataset import sampling_audit
         sampling_audit()
+        from .diagnostics import lock_strata
+        lock_strata()
         from .validation import run as validate
         validate()
         if not (RESULTS/'profile.json').exists():call('profile','--source','44b6')
@@ -95,6 +97,8 @@ def run(args=None):
         freeze(None,None)
         from .target import predict_all,evaluate_all
         predict_all();evaluate_all()
+        from .diagnostics import run as diagnostics
+        diagnostics()
         from .fresh import run as fresh
         fresh()
         write_json(WORK/'queue/complete.json',dict(status='complete',finished=now()))

@@ -2,6 +2,7 @@
 from collections import Counter, OrderedDict, defaultdict
 import gzip
 import json
+import time
 import numpy as np
 import torch
 
@@ -99,26 +100,45 @@ class SourceDataset:
         return result
 
     def batch(self,sample,device,training=False):
+        started=time.monotonic()
         key=sample['key'];a=self.anchors[key]
         arrays=self.arrays(key)
-        batch={k:torch.as_tensor(v,device=device) for k,v in arrays.items()}
-        scene=None
+        raw=None
         if self.image:
             raw=self.scenes.get(a['dataset'],a['anchor'],a['position'],a['time'])
+        loaded=time.monotonic()
+        batch={k:torch.as_tensor(v,device=device) for k,v in arrays.items()}
+        scene=None
+        if raw is not None:
             scene=torch.as_tensor(raw,device=device,dtype=torch.float32)/255.
+        if device=='cuda':torch.cuda.synchronize()
+        transferred=time.monotonic()
+        if scene is not None:
             if training:
                 scene,batch['query_voxels']=augment(scene,batch['query_voxels'],sample['augmentation_seed'])
+        if device=='cuda':torch.cuda.synchronize()
+        self.last_batch_timing=dict(loader_seconds=loaded-started,transfer_seconds=transferred-loaded,
+                                    augmentation_seconds=time.monotonic()-transferred)
         return batch,scene
 
     def audit(self):
         inverse=np.array([1/self.anchors[k]['random_probability'] for k in self.anchors
                           if self.anchors[k]['random_included']],np.float64)
+        coverage=Counter()
+        shapes={r['dataset']:r['image_shape'] for r in self.rows}
+        for key,a in self.anchors.items():
+            q=self.arrays(key)['query_voxels']
+            coverage['queries']+=len(q)
+            coverage['inside_fine']+=int((np.abs(q)<=np.array([7.5,31.5,31.5])).all(1).sum())
+            coverage['inside_coarse']+=int((np.abs(q)<=np.array([15.,63.,63.])).all(1).sum())
+            coverage['missing_temporal_frames']+=sum(not 0<=a['time']+dt<shapes[a['dataset']][0] for dt in range(-3,4))
         return dict(source=self.source,partition=self.partition,anchors=len(self.anchors),
             groups=len(self.groups),positive_groups=len(self.positive_groups),
             negative_only_groups=len(self.ordinary),random_supported_groups=len(self.random_groups),
             random_supported_anchors=len(inverse),inclusion_weights=sorted(set(inverse.tolist())),
             effective_anchor_sample_size=float(inverse.sum()**2/(inverse@inverse)) if len(inverse) else 0.,
             unknown_as_negative_count=0,group_visits=dict(self.visits),anchor_visits=dict(self.anchor_visits),
+            scene_coverage=dict(coverage),coarse_outside_policy='Zero spatial query with explicit validity and physical coordinate; no clamping',
             sampling_independent_of_gt_components=True,
             risk_scope='Within supported biological-group sampling design; not a biological prevalence estimate')
 
@@ -127,5 +147,15 @@ def sampling_audit():
     result={}
     for source in ('44b6','6bba'):
         result[source]={p:SourceDataset(source,p,image=False).audit() for p in ('fit','calibration')}
+        manifest=read_json(WORK/'source'/source/'manifest.json')
+        counts=Counter()
+        for row in manifest['clips']:counts.update(row['counts'])
+        result[source]['enumeration']=dict(counts)
+        result[source]['candidate_coverage']=dict(
+            supported_compatible_events=sum(r['covered_events'] for r in manifest['clips']),
+            annotated_events=sum(r['annotated_events'] for r in manifest['clips']),
+            source_only=True,annotation_shortlisting_at_inference=False)
+        result[source]['unknown_masks']=dict(actions=counts['unknown_actions'],
+            unknown_only_anchors=counts['unknown_only_anchors'],unknown_as_negative_count=0)
     write_json(RESULTS/'sampling_audit.json',result)
     return result

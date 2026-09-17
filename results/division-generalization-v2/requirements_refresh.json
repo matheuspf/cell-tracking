@@ -1,0 +1,12 @@
+{
+  "changed_pages": 0,
+  "code_requirements_sha256": "44b68d258026fe633f228de6361b644e2b60875cade8c51d98a7d151b9ca016c",
+  "command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools /home/mpf/.conda/envs/cell-tracking/bin/python -m kaggle_extract pages",
+  "gpu_runtime_hours": 12,
+  "internet_disabled": true,
+  "log_sha256": "041811c5067bee8846025e096d83316ae680a84d9af23ac270da4d8faee6d47a",
+  "public_external_models_allowed": true,
+  "refreshed": "2026-09-17T01:15:42.050724+00:00",
+  "rules_sha256": "ad314fb83eec7892630c38cbca68c8048eb60dfba44468d3b74cb830725cf624",
+  "submission_or_publication": false
+}

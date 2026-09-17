@@ -1,22 +1,35 @@
 """Predict both directions before starting a separate annotation-owning evaluator."""
 import numpy as np
+import hashlib
 from .common import (WORK,RESULTS,PRIOR_WORK,DATA,inputs,read_json,write_json,write_csv,
                      load_graph,sha,verified_graph)
-from .screen import prediction_job,launch
+from .screen import prediction_job,launch,run_matrix
 
 
 def predict_all():
     freeze=read_json(RESULTS/'target_freeze.json')
-    for arm in freeze['qualified_exports']:
-        for seed in ((20260916,) if arm=='G30' else (20260916,314159)):
-            root=WORK/'target'/arm/str(seed)
-            for i,row in enumerate(inputs(),1):
-                source='44b6' if row['embryo']=='6bba' else '6bba'
+    arms=[(arm,seed) for arm in freeze['qualified_exports']
+          for seed in ((20260916,) if arm=='G30' else (20260916,314159))]
+    for i,row in enumerate(inputs() if arms else [],1):
+        source='44b6' if row['embryo']=='6bba' else '6bba'
+        specs={};destinations={}
+        for arm,seed in arms:
                 selected=freeze['selected'][f'{arm}/{source}/{seed}']['selected']
                 checkpoint=WORK/'training'/arm/source/str(seed)/f'checkpoint-{selected["step"]}.pt'
-                job=prediction_job(row,source,checkpoint,root/'predictions'/row['dataset'],selected['calibration'])
-                launch(job,root/'jobs'/(row['dataset']+'.json'))
-                print(f'Frozen target prediction {arm}/{seed}: {i}/199',flush=True)
+                key=f'{arm}-{seed}'
+                specs[key]=dict(checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),calibration=selected['calibration'])
+                destinations[key]=WORK/'target'/arm/str(seed)/'predictions'/row['dataset']
+        output=WORK/'target_matrix'/row['dataset']
+        job=dict(row={k:row[k] for k in ('dataset','image_path','image_shape','physical_scale','metadata_sha256')},
+            source=source,output=str(output),packages=specs,graph_path=row['baselines']['P0']['path'],
+            graph_sha256=row['baselines']['P0']['sha256'],native_path=row['evidence']['path'],native_sha256=row['evidence']['sha256'])
+        run_matrix(job,WORK/'target_matrix/jobs'/(row['dataset']+'.json'))
+        for key,dest in destinations.items():
+            dest.parent.mkdir(parents=True,exist_ok=True)
+            if not dest.exists():dest.symlink_to((output/key).resolve(),target_is_directory=True)
+        print(f'Frozen target matrix: {i}/199, {len(arms)} packages',flush=True)
+    for arm,seed in arms:
+            root=WORK/'target'/arm/str(seed)
             write_json(root/'both_directions_predicted.json',dict(clips=199,seed=seed,arm=arm,
                 freeze_sha256=sha(RESULTS/'target_freeze.json'),target_labels_opened=False),immutable=True)
     write_json(RESULTS/'all_target_predictions_complete.json',dict(arms=freeze['qualified_exports'],
@@ -46,7 +59,7 @@ def evaluate_all():
                 score,matches,tp=evaluate_graph(row['dataset'],graph['nodes'],graph['edges'],gn,ge,
                     row['physical_scale'],row['estimated_total'])
                 score.update(arm=arm,seed=seed,embryo=row['embryo'],application=app,
-                    prediction_sha256=sha(path),unchanged_node_hash=sha(row['baselines']['P0']['path']))
+                    prediction_sha256=sha(path),unchanged_node_hash=hashlib.sha256(np.ascontiguousarray(graph['nodes']).tobytes()).hexdigest())
                 write_json(root/'evaluation'/(row['dataset']+'.json'),score);scores.append(score)
                 with np.load(PRIOR_WORK/'evaluation/P0'/(row['dataset']+'.npz')) as f:
                     old_tp=set(map(tuple,f['tp_edges']))
@@ -63,6 +76,10 @@ def evaluate_all():
                 lost={k for k,v in oldd.scores.items() if v and not newd.scores[k]}
                 detail=dict(dataset=row['dataset'],source=source,arm=arm,seed=seed,embryo=row['embryo'],
                     recovered_edges=sorted(tp-old_tp),lost_edges=sorted(old_tp-tp),fp_added=sorted(fp-oldfp),fp_removed=sorted(oldfp-fp),
+                    recovered_gt_edges=sorted((matches[a],matches[b]) for a,b in tp-old_tp),
+                    lost_gt_edges=sorted((matches[a],matches[b]) for a,b in old_tp-tp),
+                    recovered_gt_divisions=[int(gn[k,0]) for k in sorted(recovered)],
+                    lost_gt_divisions=[int(gn[k,0]) for k in sorted(lost)],
                     recovered_divisions=sorted(recovered),lost_divisions=sorted(lost),
                     division_fp_added=sorted(newd.fp_forks-oldd.fp_forks),division_fp_removed=sorted(oldd.fp_forks-newd.fp_forks))
                 write_json(root/'errors'/(row['dataset']+'.json'),detail)
