@@ -1,0 +1,114 @@
+{
+  "archive": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/recovery/20260917-power-loss",
+  "completed_training_receipts": [
+    {
+      "arm": "G30",
+      "checkpoint_sha256": "8368a9445b2654ca2a82a2388bdcce569f35d9a690de504d68a6dc8d8666cf3f",
+      "receipt_sha256": "b5ea353c15b71d540494d06382837b8c8eb1363927d60f0049bdf4e8bf7e643c",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "G30",
+      "checkpoint_sha256": "aeebffcc2ec7c7f1e9bb10bdf78db47e2c1fa3e14bf37300be528f4f87b2625e",
+      "receipt_sha256": "7407dcb61c6aee8eeab435cd1c30c4f8b8323369a46219c3c0ab0caded653d97",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "prefix",
+      "checkpoint_sha256": "6656a4c613ce415a725c5101ff7fda1f273cae5e294431ca8a333ed93dfb0e9e",
+      "receipt_sha256": "7044c057bedfac020230bbf9aa32f1eaeb85ed5a044c0ce2fff6f2a3ea3bf5f8",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 2048
+    },
+    {
+      "arm": "prefix",
+      "checkpoint_sha256": "392d5c4951db0e32cdf2f3f40bf8b7c537e51e726937c4e7a6e98fcff9e94c8b",
+      "receipt_sha256": "d0e628a25f8e07bcc84d441af257c2598732cc6ba70b1bc5e6e2e7072e2eb255",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 2048
+    },
+    {
+      "arm": "J_uniform",
+      "checkpoint_sha256": "1284d7c20975b36d7cd801b05bc932efd88b1d1e574ef0f3cc7af7306dba750a",
+      "receipt_sha256": "8c68642fd73f2b208fd6491eb71e9a8ccdd73ef5917c0e7325e359ce4128bcd5",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "checkpoint_sha256": "72c1d01183325b2da75defe7be8a3fad71c0e8e9367d0bc992ed4ac7cbdfa082",
+      "receipt_sha256": "a0d7cd05a86f42b52f7002b94fa00203daf4b2e6826401a871ad06c339c5d429",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "J_mined",
+      "checkpoint_sha256": "3a95c7f0a470295bd609154f105e3a035429ad8064421c09799245ff7b3079d7",
+      "receipt_sha256": "a44573eaef0317e7e025e0c50ecb5c1771c5b6a66e1ecbd249fa573be1e4be4a",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "J_mined",
+      "checkpoint_sha256": "d69725fd36422c2d503a68cc5463b13a8697c1d5c31484bfae7a3a26eaf3bf74",
+      "receipt_sha256": "58b7a5d46d089986e78ba5921773456222f732b647f52ec699c4eb84bb1aef89",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    }
+  ],
+  "current_boot_utc": "2026-09-17T10:33:39+00:00",
+  "frozen_scientific_code_unchanged": true,
+  "history": {
+    "diagnostics.jsonl": {
+      "archived_sha256": "c4cfd77a729bf66a7c7abcd1aca22bf404b4ab66ed795ff251f7d9650ef85c94",
+      "before_rows": 7,
+      "current_sha256": "c4cfd77a729bf66a7c7abcd1aca22bf404b4ab66ed795ff251f7d9650ef85c94",
+      "last_before_step": 768,
+      "preserved_rows": 7,
+      "replay_rows": 0
+    },
+    "history.jsonl": {
+      "archived_sha256": "18a298ec4e9d07ec1be2e2e3e6a40522ea7d643ff128029f03635837b772b3e4",
+      "before_rows": 854,
+      "current_sha256": "bd80c8cfb77bc4684c37a6bb4ad7a23e1401591ec934d1c35afbe374a6ccd316",
+      "last_before_step": 854,
+      "preserved_rows": 768,
+      "replay_rows": 86
+    }
+  },
+  "lease_reconciliation": {
+    "accounting": "conservative crash estimate to final previous-boot journal timestamp; not measured monotonic duration",
+    "event": "end",
+    "evidence": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/recovery/20260917-power-loss/last-journal-event.json",
+    "exception": "Host poweroff terminated worker before lease release",
+    "lease_seconds": 10.065863,
+    "purpose": "train/prefix/44b6/314159",
+    "reconciled_utc": "2026-09-17T10:56:20.708104+00:00",
+    "token": "78519-1789622192288738936",
+    "utc": "2026-09-17T05:16:42.359997+00:00",
+    "wait_seconds": 0.012451804999727756
+  },
+  "model_optimizer_rng_data_order_present": true,
+  "no_downtime_charged_as_gpu_use": true,
+  "previous_boot_id": "ede148a6b8004d5f81c3515115839702",
+  "previous_boot_last_journal_utc": "2026-09-17T05:16:42.359997+00:00",
+  "recorded": "2026-09-17T10:56:20.757611+00:00",
+  "resume_arm": "prefix",
+  "resume_checkpoint_sha256": "5120d781fd8088ce320c6e1de454db9fbdda5bcc9d2ffab46894264541ed87b6",
+  "resume_seed": 314159,
+  "resume_source": "44b6",
+  "resume_step": 768,
+  "retained_all_previous_lease_cost": true,
+  "scientific_settings_changed": false,
+  "status": "ready_to_resume"
+}
