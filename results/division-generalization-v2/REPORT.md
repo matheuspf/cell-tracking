@@ -10,15 +10,17 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 | P0 | 6bba | 0.935284191137 | +0.000000000000 | +0.000096471603 | 104303 / 3909 / 4754 | 22 / 70 / 103 | 0.923313209 / 0.924002140 | 2136193 / 110868 | e04e9b22cbe2 | verified |
 | C4_m6 | 44b6 | 0.933704553481 | +0.001977297067 | +0.000000000000 | 18866 / 1086 / 960 | 8 / 22 / 18 | 0.902161438 / 0.917037887 | 1972750 / 19968 | b93a5b8da8ce | verified |
 | C4_m6 | 6bba | 0.935187719534 | -0.000096471603 | +0.000000000000 | 104267 / 3882 / 4790 | 22 / 70 / 103 | 0.923215187 / 0.923905668 | 2136193 / 110868 | e04e9b22cbe2 | verified |
-| G30 | pooled + both embryos | null | null | null | null | null | null | null | null | target export/scoring pending |
-| J_uniform | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
-| J_mined | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
+| G30 / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | target export/scoring pending |
+| J_uniform / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
+| J_uniform / 314159 | pooled + both embryos | null | null | null | null | null | null | null | null | source-qualified seed; family export not qualified |
+| J_mined / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
+| J_mined / 314159 | pooled + both embryos | null | null | null | null | null | null | null | null | source-qualified seed; family export not qualified |
 
 Source-frozen nominee: **none qualified in both source directions**. Qualified complete exports: G30. The [frozen source decisions](target_freeze.json) record each direction and seed's selected checkpoint, application, calibration and source score before target predictions.
 
-J_mined, seed 20260916, source 44b6: best full-source score 0.917403321546, Δ source P0 -0.008179731767. This completed fit failed source qualification; its missing target score is intentional.
+J_mined, seed 20260916, source 44b6: best full-source score 0.917403321546, Δ source P0 -0.008179731767. At that checkpoint, division TP / FP / FN were 2 / 9 / 2, with 2 previously correct edges lost. This completed fit failed source qualification; its missing target score is intentional.
 
-J_uniform, seed 20260916, source 44b6: best full-source score 0.921574522740, Δ source P0 -0.004008530573. This completed fit failed source qualification; its missing target score is intentional.
+J_uniform, seed 20260916, source 44b6: best full-source score 0.921574522740, Δ source P0 -0.004008530573. At that checkpoint, division TP / FP / FN were 2 / 7 / 2, with 1 previously correct edges lost. This completed fit failed source qualification; its missing target score is intentional.
 
 - [44b6 / 20260916 duration decision](extension-44b6-20260916.json): stopped both arms at 4,096 updates.
 - [44b6 / 314159 duration decision](extension-44b6-314159.json): stopped both arms at 4,096 updates.

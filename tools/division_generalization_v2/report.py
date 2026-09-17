@@ -260,10 +260,16 @@ def run(args=None):
     for arm in ('G30','J_uniform','J_mined'):
         if not any(r['arm']==arm for r in measured):
             freeze_path=RESULTS/'target_freeze.json'
-            reason=('source qualification pending' if not freeze_path.exists() else
-                'target export/scoring pending' if arm in read_json(freeze_path)['qualified_exports'] else
-                'source failed; target export not qualified')
-            report.append(f'| {arm} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
+            frozen=read_json(freeze_path) if freeze_path.exists() else None
+            for seed in ((20260916,) if arm=='G30' else (20260916,314159)):
+                directions=[frozen['selected'].get(f'{arm}/{source}/{seed}',{})
+                    for source in ('44b6','6bba')] if frozen else []
+                reason=('source qualification pending' if not frozen else
+                    'target export/scoring pending' if arm in frozen['qualified_exports'] else
+                    'source-qualified seed; family export not qualified' if all(
+                        r.get('status')=='qualified' for r in directions) else
+                    'source failed; target export not qualified')
+                report.append(f'| {arm} / {seed} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
     if (RESULTS/'target_freeze.json').exists():
         freeze=read_json(RESULTS/'target_freeze.json')
         nominee=freeze['nominee'] or 'none qualified in both source directions'
@@ -278,6 +284,9 @@ def run(args=None):
             best=max(scores,key=lambda r:r['score'])
             report+=['',f'{selected["arm"]}, seed {selected["seed"]}, source {selected["source"]}: '
                 f'best full-source score {best["score"]:.12f}, Δ source P0 {best["delta"]:+.12f}. '
+                f'At that checkpoint, division TP / FP / FN were {best["division_tp"]} / '
+                f'{best["division_fp"]} / {best["division_fn"]}, with '
+                f'{best["lost_supported_edges"]} previously correct edges lost. '
                 'This completed fit failed source qualification; its missing target score is intentional.']
         report.append('')
         for source in ('44b6','6bba'):
