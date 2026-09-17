@@ -138,6 +138,14 @@ def run(args=None):
         open_leases=[e for e in events if e['event']=='begin' and e['token'] not in {x['token'] for x in events if x['event']=='end'}],
         scope='Full exclusive lease intervals, including loader and CPU work; not kernel time',
         study_disk_gib=sum(p.stat().st_size for p in WORK.rglob('*') if p.is_file())/2**30)
+    resource['crash_estimated_lease_seconds']=sum(e.get('lease_seconds',0.) for e in events
+        if e['event']=='end' and e.get('reconciled_utc'))
+    resource['measured_closed_lease_seconds']=(resource['exclusive_lease_seconds']-
+        resource['crash_estimated_lease_seconds'])
+    recovery=RESULTS/'crash_recovery_20260917.json'
+    if recovery.exists():
+        resource['crash_recovery_receipt_sha256']=sha(recovery)
+        resource['crash_downtime_charged']=False
     resource['lease_seconds_by_stage']={stage:sum(e.get('lease_seconds',0.) for e in events
         if e['event']=='end' and e['purpose'].split('/')[0]==stage)
         for stage in sorted({e['purpose'].split('/')[0] for e in events})}
@@ -259,7 +267,9 @@ def run(args=None):
         '[source curve plot](training_event_curves.png), '
         '[complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), '
         '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).','',
-        f'Measured exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
+        f'Accounted exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
+        f'This includes {resource["crash_estimated_lease_seconds"]:.3f} s estimated for an interrupted lease; '
+        'host downtime is excluded. '
         'Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, '
         'augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.','',
         'An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as '

@@ -28,7 +28,7 @@ This is exploratory source-only direct fitting on exposed P0 observations. Reuse
 
 [Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [source curve plot](training_event_curves.png), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).
 
-Measured exclusive GPU leases: 3.923 h; waits: 2063.8 s. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Accounted exclusive GPU leases: 4.018 h; waits: 2064.0 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 

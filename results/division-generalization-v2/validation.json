@@ -45,20 +45,14 @@
       }
     }
   ],
-  "calibration_runtime_parity_sha256": "13035d439c776d4995adebbf638352b238964e4449f46b8fb819f815a9e283cc",
   "complete_counterfactual_replays": 395,
   "corrected_image_validation_sha256": "c950f90691b468705b27617fff413f30a9f3df3f56a8cdedbeb3f682f9e7345d",
   "fresh_image_proof": "pending",
   "literal_zero_path_test": true,
   "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
   "optimized_matrix_parity_sha256": "0b54d001f927e1eb96a0cce1eaf12eb683486941dbcb2d7c2f521589d4bda3fa",
-  "post_calibration_runtime_tests": {
-    "log_sha256": "0b26390422cfb74b678dc8595bfdf4e830175f6ed4d3dbd3eca29ae8ec045c5b",
-    "passed": 42,
-    "time": "2026-09-17T04:41:12.603006+00:00"
-  },
-  "pytest_log_sha256": "c36d3c3af20975670eb61781932b776baa782c8bd6ba8abbc14f6a86c488c30f",
-  "seconds": 7.051803334004944,
+  "pytest_log_sha256": "b413b333874d37512e24abc8370cc146d9532104b008569f1f2543ee6cbd218f",
+  "seconds": 7.819661634000113,
   "status": "measured",
   "target_comparisons": "pending",
   "unit_tests_count": 42,
