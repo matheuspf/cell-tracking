@@ -1,6 +1,7 @@
 """Result evidence aggregation, with missing gates explicitly incomplete."""
 import gzip
 import json
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -56,8 +57,14 @@ def run(args=None):
         sampling='Up to two seeded edits per source clip with supported sampled actions; no fabricated cases in clips without support',
         all_source_preparation_complete=all_prepared))
     result=dict(status='measured',unit_tests_passed=True,pytest_log_sha256=sha(testlog),
+        unit_tests_count=int(re.search(r'(?m)^(\d+) passed',testlog.read_text()).group(1)),
         actual_zero_scorer_fixtures=fixtures,literal_zero_path_test=True,
         complete_counterfactual_replays=len(parities),seconds=time.monotonic()-started,
         fresh_image_proof='pending',target_comparisons='pending')
+    for name,field in [('corrected_image_validation.json','corrected_image_validation_sha256'),
+                       ('matrix_parity.json','matrix_parity_sha256'),
+                       ('fast_matrix_parity.json','optimized_matrix_parity_sha256'),
+                       ('vectorized_feature_parity.json','vectorized_feature_parity_sha256')]:
+        if (RESULTS/name).exists():result[field]=sha(RESULTS/name)
     write_json(RESULTS/'validation.json',result)
     return result

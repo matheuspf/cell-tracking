@@ -148,6 +148,14 @@ def run(args=None):
     complete=(WORK/'queue/complete.json').exists()
     target=read_json(RESULTS/'target_evaluation.json') if (RESULTS/'target_evaluation.json').exists() else None
     baseline=read_json(RESULTS/'baseline_validation.json') if (RESULTS/'baseline_validation.json').exists() else None
+    if (RESULTS/'validation.json').exists():
+        validation=read_json(RESULTS/'validation.json')
+        validation['target_comparisons']='complete' if target and target['status']=='complete' else 'pending'
+        if target:validation['target_evaluation_sha256']=sha(RESULTS/'target_evaluation.json')
+        if (RESULTS/'fresh_image_validation.json').exists():
+            validation['fresh_image_proof']=read_json(RESULTS/'fresh_image_validation.json')['status']
+            validation['fresh_image_validation_sha256']=sha(RESULTS/'fresh_image_validation.json')
+        write_json(RESULTS/'validation.json',validation)
     status=dict(study='division-generalization-v2',updated=now(),status='complete' if complete else 'incomplete_resumable',
         production_default='P0',target_met=False,new_target_scores=target,
         completed_directional_fits=len([r for r in fits if r['status']=='complete' and r['arm']!='prefix']),
