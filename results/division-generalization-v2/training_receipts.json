@@ -427,7 +427,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "invocation_receipts": [
         {
           "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/6bba/20260916/invocations/4096-a44573eaef0317e7.json",
@@ -456,7 +456,16 @@
       "required_updates": 4096,
       "seed": 20260916,
       "source": "6bba",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/20260916/3072/summary.json",
+          "sha256": "3c63e748e5b6d922d596aa57b1457b1ab3ca654365cba01fff361f600558ddb7"
+        },
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/20260916/4096/summary.json",
+          "sha256": "a9941767a5adc0339fbef06f741606620d4a3c08a2f6640ac91e8b5fbb1191f2"
+        }
+      ],
       "status": "complete",
       "training_log_hashes": {
         "diagnostics.jsonl": "8b3a4f78bc55dac430b8818e986f37b7a0c82f6956ec8e818932f6753074e799",
@@ -518,7 +527,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "invocation_receipts": [
         {
           "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/6bba/314159/invocations/4096-265e1d4eca22ce79.json",
@@ -547,7 +556,16 @@
       "required_updates": 4096,
       "seed": 314159,
       "source": "6bba",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/3072/summary.json",
+          "sha256": "d6ad2776a745960f365f03bdc5e9f1ad3933e3a4160bc50fac9da819919ab853"
+        },
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/4096/summary.json",
+          "sha256": "0c507be2d5a3c38bf743eede124ec21bf5bf7e21fca1b579fc2eafe902a62a19"
+        }
+      ],
       "status": "complete",
       "training_log_hashes": {
         "diagnostics.jsonl": "a737ecb020bc5f0a1d91cc1703be00d685cbfdb24482d23598ed0cb97aecfb96",
@@ -809,7 +827,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "invocation_receipts": [
         {
           "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/6bba/20260916/invocations/4096-8c68642fd73f2b20.json",
@@ -838,7 +856,16 @@
       "required_updates": 4096,
       "seed": 20260916,
       "source": "6bba",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/20260916/3072/summary.json",
+          "sha256": "8f429df10676c40c2d59218208f49193f87fb0998eb7b4bc53e7713a8aecf509"
+        },
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/20260916/4096/summary.json",
+          "sha256": "928159a6b6b8e2e10ac16c27a013ef1f5bf5d62df24d6bb3b2d964b0a80ba978"
+        }
+      ],
       "status": "complete",
       "training_log_hashes": {
         "diagnostics.jsonl": "fd413e1a5832c249eb983fd4739b4a486f54e27b783c5b592eff50446d8f5625",
@@ -900,7 +927,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "invocation_receipts": [
         {
           "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/6bba/314159/invocations/4096-808433518020198d.json",
@@ -929,7 +956,16 @@
       "required_updates": 4096,
       "seed": 314159,
       "source": "6bba",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/314159/3072/summary.json",
+          "sha256": "23fadb8c8d9113f0c580a794d2e3b45fd6931d0cfeb065a7a371fa9035d36f11"
+        },
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/314159/4096/summary.json",
+          "sha256": "d2fcbe23342eb57b7855650e24511f576fbe42f3bfa5e29e1244a5b68e0777b5"
+        }
+      ],
       "status": "complete",
       "training_log_hashes": {
         "diagnostics.jsonl": "2679efa128730de5f0ecf24ba54f26428003a722dbce437fb74b46b574e1f3aa",

@@ -1,0 +1,514 @@
+{
+  "no_favorable_embryo_selection": true,
+  "nominee": null,
+  "primary_seed": 20260916,
+  "qualified_exports": [
+    "G30"
+  ],
+  "replication_seed": 314159,
+  "selected": {
+    "G30/44b6/20260916": {
+      "arm": "G30",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.563210088590652,
+            "status": "held_source_fitted",
+            "temperature": 5.58703418188461
+          },
+          "checkpoint_sha256": "e7d1bb76f3a64578386f1f5e21d10fd541b81e1943d77710d27d95548aea02a2",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/summary.json",
+          "summary_sha256": "eb1a02ac13903cd72db75f3e4031cd79bfe68340a4099076f29e4f6a4d92655d"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.563210088590652,
+            "status": "held_source_fitted",
+            "temperature": 5.58703418188461
+          },
+          "checkpoint_sha256": "e7d1bb76f3a64578386f1f5e21d10fd541b81e1943d77710d27d95548aea02a2",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/summary.json",
+          "summary_sha256": "eb1a02ac13903cd72db75f3e4031cd79bfe68340a4099076f29e4f6a4d92655d"
+        }
+      ],
+      "seed": 20260916,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.563210088590652,
+          "status": "held_source_fitted",
+          "temperature": 5.58703418188461
+        },
+        "checkpoint_sha256": "e7d1bb76f3a64578386f1f5e21d10fd541b81e1943d77710d27d95548aea02a2",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.925583053312909,
+        "step": 4096,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/summary.json",
+        "summary_sha256": "eb1a02ac13903cd72db75f3e4031cd79bfe68340a4099076f29e4f6a4d92655d"
+      },
+      "source": "44b6",
+      "status": "qualified"
+    },
+    "G30/6bba/20260916": {
+      "arm": "G30",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.7254700411010107,
+            "status": "held_source_fitted",
+            "temperature": 3.7097868399602896
+          },
+          "checkpoint_sha256": "495e48980b8220c1b0d04e0024414c506f62d6c19ebf23ae54cae32846a9461d",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/summary.json",
+          "summary_sha256": "5024f8f9a2e299b85d1cf8f7e44ea1b89df5f750a6642355534de9878be02aab"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.7254700411010107,
+            "status": "held_source_fitted",
+            "temperature": 3.7097868399602896
+          },
+          "checkpoint_sha256": "495e48980b8220c1b0d04e0024414c506f62d6c19ebf23ae54cae32846a9461d",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/summary.json",
+          "summary_sha256": "5024f8f9a2e299b85d1cf8f7e44ea1b89df5f750a6642355534de9878be02aab"
+        }
+      ],
+      "seed": 20260916,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.7254700411010107,
+          "status": "held_source_fitted",
+          "temperature": 3.7097868399602896
+        },
+        "checkpoint_sha256": "495e48980b8220c1b0d04e0024414c506f62d6c19ebf23ae54cae32846a9461d",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.9398739377416004,
+        "step": 4096,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/summary.json",
+        "summary_sha256": "5024f8f9a2e299b85d1cf8f7e44ea1b89df5f750a6642355534de9878be02aab"
+      },
+      "source": "6bba",
+      "status": "qualified"
+    },
+    "J_mined/44b6/20260916": {
+      "arm": "J_mined",
+      "eligible": [],
+      "fallback": "P0",
+      "seed": 20260916,
+      "source": "44b6",
+      "status": "source_failed"
+    },
+    "J_mined/44b6/314159": {
+      "arm": "J_mined",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -1.8305621633698854,
+            "status": "held_source_fitted",
+            "temperature": 10.243531292986805
+          },
+          "checkpoint_sha256": "4facd08657a75c44405ceda24390b26e252cbba49f13dab6d8f2dcc45dedd8ce",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/44b6/314159/3072/summary.json",
+          "summary_sha256": "04b307898425b0470554ab70ea82ece54f2259e22ba51b33d05b3ac4a579047a"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -1.8305621633698854,
+            "status": "held_source_fitted",
+            "temperature": 10.243531292986805
+          },
+          "checkpoint_sha256": "4facd08657a75c44405ceda24390b26e252cbba49f13dab6d8f2dcc45dedd8ce",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/44b6/314159/3072/summary.json",
+          "summary_sha256": "04b307898425b0470554ab70ea82ece54f2259e22ba51b33d05b3ac4a579047a"
+        },
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -1.9704365736525888,
+            "status": "held_source_fitted",
+            "temperature": 8.804455655074127
+          },
+          "checkpoint_sha256": "c2a0de7195be21445106ddc87815c662212eb3315e3e4196c94103a627ebc50b",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/44b6/314159/4096/summary.json",
+          "summary_sha256": "4fc175d75fce5964c125e80d371c7a57b086592461f8a37bc4101a5388df98fb"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -1.9704365736525888,
+            "status": "held_source_fitted",
+            "temperature": 8.804455655074127
+          },
+          "checkpoint_sha256": "c2a0de7195be21445106ddc87815c662212eb3315e3e4196c94103a627ebc50b",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/44b6/314159/4096/summary.json",
+          "summary_sha256": "4fc175d75fce5964c125e80d371c7a57b086592461f8a37bc4101a5388df98fb"
+        }
+      ],
+      "seed": 314159,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -1.8305621633698854,
+          "status": "held_source_fitted",
+          "temperature": 10.243531292986805
+        },
+        "checkpoint_sha256": "4facd08657a75c44405ceda24390b26e252cbba49f13dab6d8f2dcc45dedd8ce",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.925583053312909,
+        "step": 3072,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/44b6/314159/3072/summary.json",
+        "summary_sha256": "04b307898425b0470554ab70ea82ece54f2259e22ba51b33d05b3ac4a579047a"
+      },
+      "source": "44b6",
+      "status": "qualified"
+    },
+    "J_mined/6bba/20260916": {
+      "arm": "J_mined",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.3981568439449656,
+            "status": "held_source_fitted",
+            "temperature": 5.968397490913012
+          },
+          "checkpoint_sha256": "514006ac23f6846312b536c7daf40b8331b6b151f4d21bc34739f33dd7a6e541",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/20260916/4096/summary.json",
+          "summary_sha256": "a9941767a5adc0339fbef06f741606620d4a3c08a2f6640ac91e8b5fbb1191f2"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.3981568439449656,
+            "status": "held_source_fitted",
+            "temperature": 5.968397490913012
+          },
+          "checkpoint_sha256": "514006ac23f6846312b536c7daf40b8331b6b151f4d21bc34739f33dd7a6e541",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/20260916/4096/summary.json",
+          "summary_sha256": "a9941767a5adc0339fbef06f741606620d4a3c08a2f6640ac91e8b5fbb1191f2"
+        }
+      ],
+      "seed": 20260916,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.3981568439449656,
+          "status": "held_source_fitted",
+          "temperature": 5.968397490913012
+        },
+        "checkpoint_sha256": "514006ac23f6846312b536c7daf40b8331b6b151f4d21bc34739f33dd7a6e541",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.9398739377416004,
+        "step": 4096,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/20260916/4096/summary.json",
+        "summary_sha256": "a9941767a5adc0339fbef06f741606620d4a3c08a2f6640ac91e8b5fbb1191f2"
+      },
+      "source": "6bba",
+      "status": "qualified"
+    },
+    "J_mined/6bba/314159": {
+      "arm": "J_mined",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.1971780836914934,
+            "status": "held_source_fitted",
+            "temperature": 5.513558506517238
+          },
+          "checkpoint_sha256": "b6a9bef30bf9308bf8e132c47bc923da16f3e9f1076e5ab67c97f961c14e3842",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/3072/summary.json",
+          "summary_sha256": "d6ad2776a745960f365f03bdc5e9f1ad3933e3a4160bc50fac9da819919ab853"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.1971780836914934,
+            "status": "held_source_fitted",
+            "temperature": 5.513558506517238
+          },
+          "checkpoint_sha256": "b6a9bef30bf9308bf8e132c47bc923da16f3e9f1076e5ab67c97f961c14e3842",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/3072/summary.json",
+          "summary_sha256": "d6ad2776a745960f365f03bdc5e9f1ad3933e3a4160bc50fac9da819919ab853"
+        },
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.0874428482865133,
+            "status": "held_source_fitted",
+            "temperature": 5.708846004259573
+          },
+          "checkpoint_sha256": "b343199d5ee320c923feee2ce05d4e85ec8216da54df070102b68f0895821f71",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/4096/summary.json",
+          "summary_sha256": "0c507be2d5a3c38bf743eede124ec21bf5bf7e21fca1b579fc2eafe902a62a19"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.0874428482865133,
+            "status": "held_source_fitted",
+            "temperature": 5.708846004259573
+          },
+          "checkpoint_sha256": "b343199d5ee320c923feee2ce05d4e85ec8216da54df070102b68f0895821f71",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/4096/summary.json",
+          "summary_sha256": "0c507be2d5a3c38bf743eede124ec21bf5bf7e21fca1b579fc2eafe902a62a19"
+        }
+      ],
+      "seed": 314159,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.1971780836914934,
+          "status": "held_source_fitted",
+          "temperature": 5.513558506517238
+        },
+        "checkpoint_sha256": "b6a9bef30bf9308bf8e132c47bc923da16f3e9f1076e5ab67c97f961c14e3842",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.9398739377416004,
+        "step": 3072,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_mined/6bba/314159/3072/summary.json",
+        "summary_sha256": "d6ad2776a745960f365f03bdc5e9f1ad3933e3a4160bc50fac9da819919ab853"
+      },
+      "source": "6bba",
+      "status": "qualified"
+    },
+    "J_uniform/44b6/20260916": {
+      "arm": "J_uniform",
+      "eligible": [],
+      "fallback": "P0",
+      "seed": 20260916,
+      "source": "44b6",
+      "status": "source_failed"
+    },
+    "J_uniform/44b6/314159": {
+      "arm": "J_uniform",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -1.678561841446573,
+            "status": "held_source_fitted",
+            "temperature": 10.66183023778841
+          },
+          "checkpoint_sha256": "d1bb33277e19ff7ef71708509ea40e2eeab9a506862a96023c3878b023a9e51a",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/44b6/314159/3072/summary.json",
+          "summary_sha256": "e04b1853bbd5394beeed1572063f0f547ec9c7375ec956ac3025ec688b0cd2af"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -1.678561841446573,
+            "status": "held_source_fitted",
+            "temperature": 10.66183023778841
+          },
+          "checkpoint_sha256": "d1bb33277e19ff7ef71708509ea40e2eeab9a506862a96023c3878b023a9e51a",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.925583053312909,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/44b6/314159/3072/summary.json",
+          "summary_sha256": "e04b1853bbd5394beeed1572063f0f547ec9c7375ec956ac3025ec688b0cd2af"
+        }
+      ],
+      "seed": 314159,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -1.678561841446573,
+          "status": "held_source_fitted",
+          "temperature": 10.66183023778841
+        },
+        "checkpoint_sha256": "d1bb33277e19ff7ef71708509ea40e2eeab9a506862a96023c3878b023a9e51a",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.925583053312909,
+        "step": 3072,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/44b6/314159/3072/summary.json",
+        "summary_sha256": "e04b1853bbd5394beeed1572063f0f547ec9c7375ec956ac3025ec688b0cd2af"
+      },
+      "source": "44b6",
+      "status": "qualified"
+    },
+    "J_uniform/6bba/20260916": {
+      "arm": "J_uniform",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.265023197678404,
+            "status": "held_source_fitted",
+            "temperature": 4.482202167730908
+          },
+          "checkpoint_sha256": "fca08ff9638b1115efd55f98122731de6f41b2b7e5bb8ecf7c1dad537cffd127",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/20260916/3072/summary.json",
+          "summary_sha256": "8f429df10676c40c2d59218208f49193f87fb0998eb7b4bc53e7713a8aecf509"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.265023197678404,
+            "status": "held_source_fitted",
+            "temperature": 4.482202167730908
+          },
+          "checkpoint_sha256": "fca08ff9638b1115efd55f98122731de6f41b2b7e5bb8ecf7c1dad537cffd127",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 3072,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/20260916/3072/summary.json",
+          "summary_sha256": "8f429df10676c40c2d59218208f49193f87fb0998eb7b4bc53e7713a8aecf509"
+        }
+      ],
+      "seed": 20260916,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.265023197678404,
+          "status": "held_source_fitted",
+          "temperature": 4.482202167730908
+        },
+        "checkpoint_sha256": "fca08ff9638b1115efd55f98122731de6f41b2b7e5bb8ecf7c1dad537cffd127",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.9398739377416004,
+        "step": 3072,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/20260916/3072/summary.json",
+        "summary_sha256": "8f429df10676c40c2d59218208f49193f87fb0998eb7b4bc53e7713a8aecf509"
+      },
+      "source": "6bba",
+      "status": "qualified"
+    },
+    "J_uniform/6bba/314159": {
+      "arm": "J_uniform",
+      "eligible": [
+        {
+          "application": "protected",
+          "calibration": {
+            "intercept": -2.414208314497202,
+            "status": "held_source_fitted",
+            "temperature": 6.240716286888795
+          },
+          "checkpoint_sha256": "4788965c2ee87cdc92ea3a3610f6af90cc67c4844205892d34e346fd51b8397b",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/314159/4096/summary.json",
+          "summary_sha256": "d2fcbe23342eb57b7855650e24511f576fbe42f3bfa5e29e1244a5b68e0777b5"
+        },
+        {
+          "application": "replacement",
+          "calibration": {
+            "intercept": -2.414208314497202,
+            "status": "held_source_fitted",
+            "temperature": 6.240716286888795
+          },
+          "checkpoint_sha256": "4788965c2ee87cdc92ea3a3610f6af90cc67c4844205892d34e346fd51b8397b",
+          "delta": 0.0,
+          "lost_supported_edges": 0,
+          "score": 0.9398739377416004,
+          "step": 4096,
+          "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/314159/4096/summary.json",
+          "summary_sha256": "d2fcbe23342eb57b7855650e24511f576fbe42f3bfa5e29e1244a5b68e0777b5"
+        }
+      ],
+      "seed": 314159,
+      "selected": {
+        "application": "protected",
+        "calibration": {
+          "intercept": -2.414208314497202,
+          "status": "held_source_fitted",
+          "temperature": 6.240716286888795
+        },
+        "checkpoint_sha256": "4788965c2ee87cdc92ea3a3610f6af90cc67c4844205892d34e346fd51b8397b",
+        "delta": 0.0,
+        "lost_supported_edges": 0,
+        "score": 0.9398739377416004,
+        "step": 4096,
+        "summary": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/J_uniform/6bba/314159/4096/summary.json",
+        "summary_sha256": "d2fcbe23342eb57b7855650e24511f576fbe42f3bfa5e29e1244a5b68e0777b5"
+      },
+      "source": "6bba",
+      "status": "qualified"
+    }
+  },
+  "shared_prefix_not_independent": true,
+  "status": "frozen_before_target_predictions",
+  "target_results_read": false
+}

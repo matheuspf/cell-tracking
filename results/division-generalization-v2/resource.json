@@ -2,10 +2,10 @@
   "crash_downtime_charged": false,
   "crash_estimated_lease_seconds": 10.065863,
   "crash_recovery_receipt_sha256": "32688bb3c85232e23098c8d1443fd0cedda4e50c085c89c48a625f9ba55b1134",
-  "exclusive_lease_seconds": 34343.20036261805,
+  "exclusive_lease_seconds": 44767.86331460004,
   "lease_seconds_by_stage": {
     "calibration": 242.9090885590108,
-    "frozen_matrix": 11059.670874382016,
+    "frozen_matrix": 21484.333826364003,
     "inference": 3401.9511733740073,
     "model_vmap_benchmark": 2.1405855610009894,
     "scene_batching": 2.120725056003721,
@@ -14,19 +14,11 @@
     "source_profile": 20.245540058996994,
     "train": 15104.649588974995
   },
-  "measured_closed_lease_seconds": 34333.13449961805,
-  "open_leases": [
-    {
-      "event": "begin",
-      "purpose": "frozen_matrix/6bba_283bf9f1",
-      "token": "427905-1789663320619948222",
-      "utc": "2026-09-17T16:42:00.632143+00:00",
-      "wait_seconds": 0.015172267998423195
-    }
-  ],
+  "measured_closed_lease_seconds": 44757.79745160004,
+  "open_leases": [],
   "peak_process_tree_rss_gib": 11.509746551513672,
-  "peak_total_gpu_gib": 3.943359375,
-  "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
-  "study_disk_gib": 9.909994088113308,
-  "wait_seconds": 7717.733248660024
+  "peak_total_gpu_gib": 5.8955078125,
+  "scope": "Full exclusive study-lock intervals, including loader and CPU work; other applications can share the device, so these are not dedicated GPU kernel times",
+  "study_disk_gib": 10.152289574034512,
+  "wait_seconds": 7723.7586441150415
 }

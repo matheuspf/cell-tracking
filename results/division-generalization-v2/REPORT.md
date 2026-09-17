@@ -14,6 +14,16 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 | J_uniform | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
 | J_mined | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
 
+Source-frozen nominee: **none qualified in both source directions**. Qualified complete exports: G30. The [frozen source decisions](target_freeze.json) record each direction and seed's selected checkpoint, application, calibration and source score before target predictions.
+
+J_mined, seed 20260916, source 44b6: best full-source score 0.917403321546, Δ source P0 -0.008179731767. This completed fit failed source qualification; its missing target score is intentional.
+
+J_uniform, seed 20260916, source 44b6: best full-source score 0.921574522740, Δ source P0 -0.004008530573. This completed fit failed source qualification; its missing target score is intentional.
+[44b6 / 20260916 duration decision](extension-44b6-20260916.json): stopped both arms at 4,096 updates.
+[44b6 / 314159 duration decision](extension-44b6-314159.json): stopped both arms at 4,096 updates.
+[6bba / 20260916 duration decision](extension-6bba-20260916.json): stopped both arms at 4,096 updates.
+[6bba / 314159 duration decision](extension-6bba-314159.json): stopped both arms at 4,096 updates.
+
 10/10 directional fits have completed their required updates. Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. The shared prefix is counted once in compute and does not make independent experiments.
 
 The fixed diagnostic panels contain 32 hashed groups each. The 6bba held panel has no positive-utility anchors, so its loss measures supported rejection and cannot establish division recovery. The 44b6 held panel has two positive-utility anchors. Full source graph screens govern qualification. The panels and extension rule remain as originally locked. [Panel composition](diagnostic_panel_composition.json).
@@ -28,7 +38,7 @@ This is exploratory source-only direct fitting on exposed P0 observations. Reuse
 
 [Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [source curve plot](training_event_curves.png), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json), [error transitions](error_transitions.csv), [stage diagnostics](stage_attribution.json), [replication decision](replication.json).
 
-Accounted exclusive GPU leases: 9.540 h; waits: 7717.7 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Accounted exclusive study-lock leases: 12.436 h; waits: 7723.8 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing; unrelated applications also used the device. [Concurrent workload evidence](runtime_cpu_contention.json). [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 
