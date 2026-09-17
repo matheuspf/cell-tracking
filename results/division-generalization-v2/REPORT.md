@@ -24,9 +24,9 @@ Both inherited baselines retain all 4,108,943 observations. All graph hashes and
 
 This is exploratory source-only direct fitting on exposed P0 observations. Reused whole-clip source splits union exact frame overlaps, but missing global acquisition offsets prevent independent inner-validation certification. Neither a local score nor a new raw-scene encoder establishes clean OOF or hidden leaderboard performance.
 
-[Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).
+[Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [source curve plot](training_event_curves.png), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).
 
-Measured exclusive GPU leases: 2.936 h; waits: 78.4 s. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Measured exclusive GPU leases: 3.037 h; waits: 80.6 s. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 

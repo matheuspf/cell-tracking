@@ -99,6 +99,9 @@ def run(args=None):
             **{k:v for k,v in r['calibration'].items() if k!='rows'}))
     write_json(RESULTS/'training_receipts.json',dict(fits=fits,actual_receipts_required=True))
     write_csv(RESULTS/'training_curves.csv',curves)
+    if (RESULTS/'diagnostic_panel_composition.json').exists():
+        from .plot_curves import render
+        render(curves)
     write_csv(RESULTS/'source_scores.csv',source_scores)
     inference=[]
     for kind,paths in [('source_matrix',(WORK/'frozen_matrix').glob('*/*/*/complete.json')),
@@ -236,6 +239,7 @@ def run(args=None):
         'frame overlaps, but missing global acquisition offsets prevent independent inner-validation certification. '
         'Neither a local score nor a new raw-scene encoder establishes clean OOF or hidden leaderboard performance.','',
         '[Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), '
+        '[source curve plot](training_event_curves.png), '
         '[complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), '
         '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).','',
         f'Measured exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
