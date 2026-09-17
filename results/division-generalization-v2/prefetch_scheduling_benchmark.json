@@ -1,0 +1,315 @@
+{
+  "adopted_change": false,
+  "checkpoints": "Primary 44b6 uniform/mined at 4096; fixed diagnostic calibration only",
+  "fixture_anchors": 256,
+  "reason": "One/two/four readers have similar observed throughput; synchronous preparation is slower overall. Retain the proven four-reader implementation.",
+  "script_sha256": "2aed70e80eb41d02ea142008dec5c82e25b918eb451a23095697509ce58b869e",
+  "sequential_checks": [
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 9.408985510999628,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.854817529056163,
+          "J_uniform_model_seconds": 1.1593180540730827,
+          "bank_features_worker_seconds": 2.536488638994342,
+          "lease_seconds": 6.222966264998831,
+          "loader_worker_seconds": 1.1753399371009436,
+          "transfer_seconds": 0.1911924459709553,
+          "wait_seconds": 0.014015091997862328
+        },
+        "worker_times_overlap": true
+      },
+      "run": 0,
+      "workers": 0
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 9.624310207997041,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9002672429924132,
+          "J_uniform_model_seconds": 2.675413282966474,
+          "bank_features_worker_seconds": 3.0282053320115665,
+          "lease_seconds": 5.036043205000169,
+          "loader_worker_seconds": 1.888605475993245,
+          "transfer_seconds": 1.0905408500184421,
+          "wait_seconds": 1.165343255001062
+        },
+        "worker_times_overlap": true
+      },
+      "run": 1,
+      "workers": 4
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 8.989103469997644,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.8550849239254603,
+          "J_uniform_model_seconds": 0.9136783410431235,
+          "bank_features_worker_seconds": 2.623871196017717,
+          "lease_seconds": 5.743323426999268,
+          "loader_worker_seconds": 0.989753618981922,
+          "transfer_seconds": 0.20229752298473613,
+          "wait_seconds": 0.02078906899987487
+        },
+        "worker_times_overlap": true
+      },
+      "run": 2,
+      "workers": 0
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 9.560560718004126,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9461983290166245,
+          "J_uniform_model_seconds": 2.9272890229840414,
+          "bank_features_worker_seconds": 3.2127798769797664,
+          "lease_seconds": 5.293825031003507,
+          "loader_worker_seconds": 2.0454159249784425,
+          "transfer_seconds": 1.0596673299514805,
+          "wait_seconds": 0.7432183559940313
+        },
+        "worker_times_overlap": true
+      },
+      "run": 3,
+      "workers": 4
+    }
+  ],
+  "sequential_script_sha256": "bccec77e9239afb8c04c709eb71e1d31d9531e3c7971ebb23877ce51207cc85f",
+  "source": "44b6",
+  "status": "measured",
+  "target_used": false,
+  "thread_checks": [
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 8.856104006998066,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.8550984880421311,
+          "J_uniform_model_seconds": 3.0320859589846805,
+          "bank_features_worker_seconds": 2.9814328569409554,
+          "lease_seconds": 5.545979499001987,
+          "loader_worker_seconds": 2.6526504960565944,
+          "transfer_seconds": 0.9403538499973365,
+          "wait_seconds": 0.017309030001342762
+        },
+        "worker_times_overlap": true
+      },
+      "run": 0,
+      "workers": 4
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 13.399881493998691,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9978917609332711,
+          "J_uniform_model_seconds": 2.67984592893481,
+          "bank_features_worker_seconds": 2.9358655930118402,
+          "lease_seconds": 5.04326137300086,
+          "loader_worker_seconds": 1.1951833080966026,
+          "transfer_seconds": 1.0992826290093944,
+          "wait_seconds": 4.960870354996587
+        },
+        "worker_times_overlap": true
+      },
+      "run": 1,
+      "workers": 1
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 8.624919268004305,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9692106419533957,
+          "J_uniform_model_seconds": 2.8827446740106097,
+          "bank_features_worker_seconds": 2.9944426330548595,
+          "lease_seconds": 5.145159744999546,
+          "loader_worker_seconds": 1.4537605239020195,
+          "transfer_seconds": 1.005225531036558,
+          "wait_seconds": 0.012954297002579551
+        },
+        "worker_times_overlap": true
+      },
+      "run": 2,
+      "workers": 2
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 8.760213356996246,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.8732386580231832,
+          "J_uniform_model_seconds": 2.5335809500247706,
+          "bank_features_worker_seconds": 2.996502718022384,
+          "lease_seconds": 4.957273307998548,
+          "loader_worker_seconds": 1.8094723070244072,
+          "transfer_seconds": 1.2335400440424564,
+          "wait_seconds": 0.26237096099794144
+        },
+        "worker_times_overlap": true
+      },
+      "run": 3,
+      "workers": 4
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 9.081392269006756,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9429244290004135,
+          "J_uniform_model_seconds": 2.731459884038486,
+          "bank_features_worker_seconds": 2.9569132479300606,
+          "lease_seconds": 5.06416977099434,
+          "loader_worker_seconds": 1.4098176960033015,
+          "transfer_seconds": 1.0929047479803558,
+          "wait_seconds": 0.39696808499866165
+        },
+        "worker_times_overlap": true
+      },
+      "run": 4,
+      "workers": 2
+    },
+    {
+      "exact_maxima_and_graphs": true,
+      "receipt": {
+        "counts": {
+          "actions": 80688,
+          "anchors": 256
+        },
+        "cpu_prefetch_workers": 4,
+        "packages": [
+          "J_uniform",
+          "J_mined"
+        ],
+        "partial_fixture": true,
+        "pending_anchors_max": 8,
+        "seconds": 8.632833284005756,
+        "stable_original_anchor_order": true,
+        "timings": {
+          "J_mined_model_seconds": 0.9443597090357798,
+          "J_uniform_model_seconds": 2.746949114043673,
+          "bank_features_worker_seconds": 2.9068253150908276,
+          "lease_seconds": 4.94628444800037,
+          "loader_worker_seconds": 1.1009404780488694,
+          "transfer_seconds": 0.9622436359786661,
+          "wait_seconds": 0.013742918999923859
+        },
+        "worker_times_overlap": true
+      },
+      "run": 5,
+      "workers": 1
+    }
+  ]
+}

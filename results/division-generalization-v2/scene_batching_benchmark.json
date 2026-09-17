@@ -1,0 +1,98 @@
+{
+  "adopted": false,
+  "checks": [
+    {
+      "anchors": 32,
+      "batch_size": 1,
+      "checkpoint_sha256": "1d62812b267c86c3610816268ddcb64255450e22df7157ba853a42bd7b8170d3",
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "lease_seconds": 0.5175904660063679,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.3710205899988068,
+      "warm_model_seconds": 0.10194372700061649
+    },
+    {
+      "anchors": 32,
+      "batch_size": 2,
+      "checkpoint_sha256": "1d62812b267c86c3610816268ddcb64255450e22df7157ba853a42bd7b8170d3",
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "lease_seconds": 0.13338991199998418,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.09521973800292471,
+      "warm_model_seconds": 0.0873927740030922
+    },
+    {
+      "anchors": 32,
+      "batch_size": 4,
+      "checkpoint_sha256": "1d62812b267c86c3610816268ddcb64255450e22df7157ba853a42bd7b8170d3",
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "lease_seconds": 0.14474959400104126,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.1022105969968834,
+      "warm_model_seconds": 0.08420417500019539
+    },
+    {
+      "anchors": 32,
+      "batch_size": 8,
+      "checkpoint_sha256": "1d62812b267c86c3610816268ddcb64255450e22df7157ba853a42bd7b8170d3",
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "lease_seconds": 0.19326642599480692,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.09565753799688537,
+      "warm_model_seconds": 0.07112765200145077
+    },
+    {
+      "anchors": 30,
+      "batch_size": 1,
+      "checkpoint_sha256": "57d61db4a38f0db4db5869380a1be25ce2b208ced6ac4360a24b35007c8d4a05",
+      "dataset": "6bba_767a1e17",
+      "exact": true,
+      "lease_seconds": 0.13307729200460017,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.0991324370043003,
+      "warm_model_seconds": 0.09534325200365856
+    },
+    {
+      "anchors": 30,
+      "batch_size": 2,
+      "checkpoint_sha256": "57d61db4a38f0db4db5869380a1be25ce2b208ced6ac4360a24b35007c8d4a05",
+      "dataset": "6bba_767a1e17",
+      "exact": true,
+      "lease_seconds": 0.11986495099699823,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.08920879499783041,
+      "warm_model_seconds": 0.08248846799688181
+    },
+    {
+      "anchors": 30,
+      "batch_size": 4,
+      "checkpoint_sha256": "57d61db4a38f0db4db5869380a1be25ce2b208ced6ac4360a24b35007c8d4a05",
+      "dataset": "6bba_767a1e17",
+      "exact": true,
+      "lease_seconds": 0.1277721840015147,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.09513598198827822,
+      "warm_model_seconds": 0.08217398398846854
+    },
+    {
+      "anchors": 30,
+      "batch_size": 8,
+      "checkpoint_sha256": "57d61db4a38f0db4db5869380a1be25ce2b208ced6ac4360a24b35007c8d4a05",
+      "dataset": "6bba_767a1e17",
+      "exact": true,
+      "lease_seconds": 0.13039394299994456,
+      "maximum_absolute_difference": 0.0,
+      "model_seconds": 0.09304998200241243,
+      "warm_model_seconds": 0.06778778500301996
+    }
+  ],
+  "own_source_checkpoint_routing": true,
+  "reason": "Exact source-fixture outputs, but scene batching gives only a small model-time reduction; retain the already-validated per-anchor model call.",
+  "scientific_settings_changed": false,
+  "script_sha256": "36252afa0f6548f083a720a91386b59e9198bcbce9b210f02e78f94c271010f3",
+  "status": "measured"
+}
