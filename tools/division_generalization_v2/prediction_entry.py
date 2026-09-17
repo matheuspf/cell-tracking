@@ -1,11 +1,13 @@
 """Install annotation/cache/network denial before importing numerical modules."""
 import atexit
 import json
+import os
 from pathlib import Path
 import sys
 
 
 def main():
+    os.environ['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
     job=json.loads(Path(sys.argv[1]).read_text())
     output=Path(job['output']);output.mkdir(parents=True,exist_ok=True)
     from pipeline_error_training.guard import install
@@ -16,6 +18,8 @@ def main():
     cpu_budget(16)
     import torch
     torch.set_num_threads(1);torch.set_num_interop_threads(1)
+    torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+    torch.use_deterministic_algorithms(True)
     from .common import sha,load_graph,write_json,code_hashes
     from .infer import load_checkpoint,predict
     from .resources import Monitor

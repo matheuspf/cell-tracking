@@ -37,6 +37,14 @@ preserved under `invalid/feature_lattice_alignment` and contributes no scientifi
 score. G30's unchanged nonimage code and outputs have a measured hash-compatibility
 receipt; old image checkpoints are rejected.
 
+Frozen matrix inference shares raw scene loading and bank enumeration, with four
+bounded CPU prefetch workers. `fast_features.py` groups descriptor reductions by
+length and caches only immutable native node features; it is byte-identical to
+the training reference on 1,024 measured anchors. Two nonzero image models also
+match reference maxima and final decoded graphs exactly. Integer scene crops
+retain exact reference pixels. Source matrix execution checks these proofs and
+their implementation hashes before proceeding.
+
 Source preparation uses a fixed seed Bernoulli 1/16 sample of prediction-only
 anchors, independently of annotation component IDs. Separate positive exposure
 does not estimate prevalence. Complete-action labels record exact official count

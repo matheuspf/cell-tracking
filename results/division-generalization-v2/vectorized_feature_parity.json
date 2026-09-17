@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "actions": 70311,
+      "all_arrays_byte_exact": true,
+      "anchors": 256,
+      "dataset": "44b6_e31261b4",
+      "reference_seconds": 4.026656038033252,
+      "vectorized_seconds": 0.9416211149873561
+    },
+    {
+      "actions": 2638,
+      "all_arrays_byte_exact": true,
+      "anchors": 256,
+      "dataset": "44b6_95029e92",
+      "reference_seconds": 0.11671579099493101,
+      "vectorized_seconds": 0.04954492504475638
+    },
+    {
+      "actions": 65223,
+      "all_arrays_byte_exact": true,
+      "anchors": 256,
+      "dataset": "6bba_767a1e17",
+      "reference_seconds": 2.90900131194212,
+      "vectorized_seconds": 1.018688066942559
+    },
+    {
+      "actions": 1602,
+      "all_arrays_byte_exact": true,
+      "anchors": 256,
+      "dataset": "6bba_2540cd90",
+      "reference_seconds": 0.10821004803437972,
+      "vectorized_seconds": 0.0490523879925604
+    }
+  ],
+  "reference_sha256": "3604c116fde74268de3674b93e30a10eb1be25efaf3f1b0e7f974cb586677a71",
+  "status": "measured",
+  "training_implementation_unchanged": true,
+  "vectorized_sha256": "ca41a2e73085d6468c880f566da80dd9c83e4b0304fde8ba019ec902bbd08e76"
+}

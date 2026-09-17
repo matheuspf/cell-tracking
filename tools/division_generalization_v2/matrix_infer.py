@@ -9,7 +9,7 @@ import torch
 from strong_tracker_v3.decode import Action,BoundedActionComponents
 from pipeline_error_training.actions import fork_support
 from .actions import EventBank,canonical_actions,close_resources
-from .features import build
+from .fast_features import build,prepare as prepare_frozen_features
 from .fast_scenes import InferenceScenes as Scenes
 from .resources import Lease
 from .infer import decode
@@ -26,6 +26,7 @@ def prepared_anchors(bank,row,need_images,max_anchors):
     if parents:canonical_actions(bank,parents[0],replace=True)
     if '_pair_index' not in bank.native:
         bank.native['_pair_index']={tuple(map(int,p)):k for k,p in enumerate(bank.native['pairs'])}
+    prepare_frozen_features(bank)
     def prepare(parent):
         ts=time.monotonic();records,rejected=canonical_actions(bank,parent,replace=True)
         arrays=build(bank,parent,records) if records else None

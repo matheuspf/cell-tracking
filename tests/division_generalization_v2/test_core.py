@@ -54,6 +54,18 @@ def test_reused_frozen_alternatives_match_fresh_bank_and_keep_counters_local():
                 np.testing.assert_array_equal(a,b)
 
 
+def test_vectorized_inference_descriptors_match_reference_bytes():
+    from division_generalization_v2.fast_features import build as fast
+    nodes,edges,bank,_,_=packed()
+    for parent in sorted(bank.expanded):
+        rows,_=canonical_actions(bank,parent)
+        expected=build(bank,parent,rows);actual=fast(bank,parent,rows)
+        for name in expected:
+            assert expected[name].shape==actual[name].shape
+            assert expected[name].dtype==actual[name].dtype
+            assert expected[name].tobytes()==actual[name].tobytes(),name
+
+
 def test_unknown_loss_zero_and_negative_only_rejection_gradient():
     _,_,_,rows,b=packed()
     n=len(rows)

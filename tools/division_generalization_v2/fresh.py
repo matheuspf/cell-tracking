@@ -39,15 +39,23 @@ def run():
             '--v1',str(ROOT/'annotation-selection-v1'),'--v2',str(ROOT/'strong-tracker-v2')]
         started=time.monotonic();stages=[]
         for stage,receipt in [('baseline','inference_receipt.json'),('point-head','P0_receipt.json')]:
+            timing_path=output/(stage+'.timing.json')
             if not (output/receipt).exists():
-                with Monitor(output/(stage+'.resources.json')),Lease('fresh/'+stage,required_gib=12.):
+                stage_started=time.monotonic()
+                empty_pipeline_cache=not (output/'fresh').exists()
+                with Monitor(output/(stage+'.resources.json')),Lease('fresh/'+stage,required_gib=12.) as lease:
                     with (output/(stage+'.log')).open('a') as f:
                         result=subprocess.run([*command,'--stage',stage],stdout=f,stderr=subprocess.STDOUT)
+                write_json(timing_path,dict(wall_seconds=time.monotonic()-stage_started,
+                    lease_seconds=lease.seconds,wait_seconds=lease.wait_seconds,
+                    returncode=result.returncode,empty_pipeline_cache_at_start=empty_pipeline_cache,
+                    OS_page_cache_flushed=False,command=[*command,'--stage',stage]))
                 if result.returncode:raise RuntimeError(f'Fresh {stage} failed; preserved log {output}')
-            stages.append(dict(stage=stage,receipt_sha256=sha(output/receipt)))
+            stages.append(dict(stage=stage,receipt_sha256=sha(output/receipt),
+                timing=read_json(timing_path),timing_sha256=sha(timing_path)))
         baseline=load_graph(output/'P0.npz');expected=verified_graph(row)
         for k in ('nodes','edges'):np.testing.assert_array_equal(baseline[k],expected[k])
-        module=baseline
+        module=baseline;module_trace=None
         if arm:
             selected=freeze['selected'][f'{arm}/{source}/20260916']['selected']
             checkpoint=WORK/'training'/arm/source/'20260916'/f'checkpoint-{selected["step"]}.pt'
@@ -59,6 +67,7 @@ def run():
                 native_path=str(output/'current_evidence.npz'),native_sha256=sha(output/'current_evidence.npz'),
                 calibration=selected['calibration'])
             launch(job,root/'module_job.json')
+            module_trace=read_json(output/'event/trace.json')
             module=load_graph(output/'event'/selected['application']/(renamed+'.npz'))
             scored=load_graph(WORK/'target'/arm/'20260916'/'predictions'/dataset/selected['application']/(dataset+'.npz'))
             for k in ('nodes','edges'):np.testing.assert_array_equal(module[k],scored[k])
@@ -72,8 +81,14 @@ def run():
             raise ValueError('Fresh startup denial proof failed')
         proof.append(dict(dataset=dataset,renamed=renamed,source=source,arm=arm or 'P0',
             seconds=time.monotonic()-started,exact_P0=True,exact_scored_candidate=True,
-            graph_hash=graph_hash(module['nodes'],module['edges']),csv=csv,geff=geff,guards=guards,stages=stages))
+            graph_hash=graph_hash(module['nodes'],module['edges']),csv=csv,geff=geff,guards=guards,stages=stages,
+            module_timing=None if module_trace is None else dict(seconds=module_trace['seconds'],**module_trace['timings']),
+            pipeline_stage_service_seconds=sum(s['timing']['lease_seconds'] for s in stages)+(
+                module_trace['seconds']-module_trace['timings'].get('lease_wait_seconds',0.) if module_trace else 0.),
+            cold_scope='Empty pipeline artifact caches before baseline; operating-system page cache is uncontrolled',
+            all_stage_timings_persisted_across_resume=True))
     result=dict(status='measured',clips=proof,full_image_reconstruction=True,
+        cold_pipeline_artifacts=all(p['stages'][0]['timing']['empty_pipeline_cache_at_start'] for p in proof),
         deny_annotation_old_cache_network_from_startup=True,Kaggle_runtime_guarantee=False)
     write_json(RESULTS/'fresh_image_validation.json',result)
     return result

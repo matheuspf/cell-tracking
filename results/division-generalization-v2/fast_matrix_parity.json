@@ -1,0 +1,20 @@
+{
+  "anchors": 32,
+  "checks": [
+    {
+      "exact_graphs": true,
+      "exact_maxima": true,
+      "model_seed": 33
+    },
+    {
+      "exact_graphs": true,
+      "exact_maxima": true,
+      "model_seed": 44
+    }
+  ],
+  "dataset": "44b6_e31261b4",
+  "fast_features_sha256": "ca41a2e73085d6468c880f566da80dd9c83e4b0304fde8ba019ec902bbd08e76",
+  "matrix_sha256": "6e42259044e45ad733d59672540c1c915b674ed6337a5bb3420f2f7658adb4b8",
+  "model_sha256": "abd2d8c85575bad21ec62c1ff32394a6d68ab9280bf8366cccd6d137220a20cd",
+  "status": "measured"
+}

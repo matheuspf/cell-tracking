@@ -22,7 +22,7 @@ def completion_gates(complete,arm,target,fresh,gates,fits,freeze,image_gate,matr
         ten_adequate_directional_fits=len(directional)==10 and all(
             r['status']=='complete' and r['joint_optimizer_updates']>=4096 for r in directional),
         all_full_source_screens=bool(directional) and all(r['full_source_screen'] for r in directional),
-        fresh_nominated_module=fresh.get('status')=='measured' and len(fresh.get('clips',[]))==2 and all(
+        fresh_nominated_module=fresh.get('status')=='measured' and fresh.get('cold_pipeline_artifacts') is True and len(fresh.get('clips',[]))==2 and all(
             r['arm']==arm and r['exact_P0'] and r['exact_scored_candidate'] for r in fresh.get('clips',[])),
         active_zero_and_tests=bool(gates.get('literal_zero_path_test') and gates.get('unit_tests_passed')),
         current_image_zero=image_gate.get('model_code_sha256')==model_hash and len(image_gate.get('clips',[]))==2 and all(

@@ -96,7 +96,8 @@ def test_recommendation_requires_matched_target_controls_and_current_fresh_model
     model_hash=sha(Path(model.__file__))
     target=dict(pooled=[dict(arm=a,seed=s,clips=199) for a in ('J_uniform','J_mined')
                        for s in (20260916,314159)])
-    fresh=dict(status='measured',clips=[dict(arm='J_mined',exact_P0=True,exact_scored_candidate=True)]*2)
+    fresh=dict(status='measured',cold_pipeline_artifacts=True,
+               clips=[dict(arm='J_mined',exact_P0=True,exact_scored_candidate=True)]*2)
     gates=dict(literal_zero_path_test=True,unit_tests_passed=True)
     fits=[dict(arm='J_mined',status='complete',joint_optimizer_updates=4096,full_source_screen=True)]*10
     freeze=dict(qualified_exports=['J_uniform','J_mined'])

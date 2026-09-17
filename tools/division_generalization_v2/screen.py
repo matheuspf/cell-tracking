@@ -91,6 +91,11 @@ def prepare_source_matrix(source):
     """Evaluate initial frozen checkpoints together to share raw I/O and bank work."""
     if not read_json(RESULTS/'matrix_parity.json').get('image_models_exact'):
         raise ValueError('Frozen image matrix must match single-checkpoint inference before full screens')
+    speed=read_json(RESULTS/'fast_matrix_parity.json')
+    if speed['fast_features_sha256']!=sha(Path(__file__).with_name('fast_features.py')) or \
+            speed['matrix_sha256']!=sha(Path(__file__).with_name('matrix_infer.py')) or \
+            not all(r['exact_maxima'] and r['exact_graphs'] for r in speed['checks']):
+        raise ValueError('Optimized frozen inference requires exact current reference parity')
     from .infer import load_checkpoint
     from .dataset import SourceDataset
     from .calibration import run as calibrate

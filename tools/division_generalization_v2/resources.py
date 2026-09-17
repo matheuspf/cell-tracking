@@ -29,11 +29,11 @@ class Lease:
         self.handle = GPU_LOCK.open('a+')
         wait = time.monotonic()
         while True:
-            try:
-                fcntl.flock(self.handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            except BlockingIOError:
-                time.sleep(.2)
-                continue
+            # Let the kernel queue a waiter. Polling every 200 ms can miss the
+            # short release between training blocks and starve validation or
+            # another cooperating job despite nominal 30-second leases.
+            fcntl.flock(self.handle, fcntl.LOCK_EX)
+            for monitor in ACTIVE_MONITORS:monitor.check()
             if gpu_snapshot()['total_gib'] + self.required < 20:
                 break
             fcntl.flock(self.handle, fcntl.LOCK_UN)

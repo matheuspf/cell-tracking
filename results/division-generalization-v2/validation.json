@@ -50,10 +50,12 @@
   "fresh_image_proof": "pending",
   "literal_zero_path_test": true,
   "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
-  "pytest_log_sha256": "45131de32896f210b8db9a9ed716a8c35a597e81600f09d84b1e3d50cbe83514",
+  "optimized_matrix_parity_sha256": "0b54d001f927e1eb96a0cce1eaf12eb683486941dbcb2d7c2f521589d4bda3fa",
+  "pytest_log_sha256": "9d064a1ab568873270c1258ac490394e1f0f80c05e7e5c487ef60b77627e7e55",
   "seconds": 12.206182434005314,
   "status": "measured",
   "target_comparisons": "pending",
-  "unit_tests_count": 39,
-  "unit_tests_passed": true
+  "unit_tests_count": 40,
+  "unit_tests_passed": true,
+  "vectorized_feature_parity_sha256": "f81065ddd794deed7e9a82640f3e97286954cdf568e77256ceba634ceb8ba05e"
 }
