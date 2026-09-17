@@ -2,7 +2,7 @@
 import numpy as np
 import hashlib
 from .common import (WORK,RESULTS,PRIOR_WORK,DATA,inputs,read_json,write_json,write_csv,
-                     load_graph,sha,verified_graph)
+                     load_graph,sha,verified_graph,digest)
 from .screen import prediction_job,launch,run_matrix
 
 
@@ -88,7 +88,10 @@ def evaluate_all():
                 rs=[r for r in scores if embryo=='pooled' or r['embryo']==embryo]
                 a=aggregate(rs,[r['dataset'] for r in rs]);a.update(a.pop('counts'))
                 a.update(arm=arm,seed=seed,embryo=embryo,clips=len(rs),status='measured',
-                    target_met=a['score']>=.95,matched_nodes=sum(r['matched_nodes'] for r in rs))
+                    target_met=a['score']>=.95,matched_nodes=sum(r['matched_nodes'] for r in rs),
+                    node_identity_sha256=digest([(r['dataset'],r['unchanged_node_hash'],int(r['num_pred_nodes'])) for r in rs]))
+                if a['node_identity_sha256']!=read_json(RESULTS/'node_identity.json')['corpora'][embryo]:
+                    raise ValueError('Full target node corpus hash drift')
                 (summaries if embryo=='pooled' else per_embryo).append(a)
     baseline=read_json(RESULTS/'baseline_validation.json')
     write_csv(RESULTS/'scores.csv',[*baseline['pooled'],*summaries])

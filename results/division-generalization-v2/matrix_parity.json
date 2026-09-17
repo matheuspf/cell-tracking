@@ -1,6 +1,39 @@
 {
-  "cpu_two_model_exact": true,
-  "image_matrix_parity": "pending real GPU fixture",
-  "model_gain_and_full_graph": true,
-  "shared_raw_scene_only": true
+  "checks": [
+    {
+      "counts": {
+        "actions": 8949,
+        "anchors": 32,
+        "anchors_preferring_edit": 14,
+        "positive_gains": 645,
+        "protected_rejection": 111,
+        "raw_positive_gains": 645
+      },
+      "exact_decoded_edges": true,
+      "exact_maxima": true,
+      "model_seed": 33
+    },
+    {
+      "counts": {
+        "actions": 8949,
+        "anchors": 32,
+        "anchors_preferring_edit": 22,
+        "positive_gains": 2787,
+        "protected_rejection": 265,
+        "raw_positive_gains": 2787
+      },
+      "exact_decoded_edges": true,
+      "exact_maxima": true,
+      "model_seed": 44
+    }
+  ],
+  "cpu_matrix_exact": true,
+  "dataset": "44b6_e31261b4",
+  "fast_crop_sha256": "2b6a80d469ca9b1e17bea016acc6da38eeb055ee602391b991e3a6f27ad05a4e",
+  "image_models_exact": true,
+  "model_code_sha256": "abd2d8c85575bad21ec62c1ff32394a6d68ab9280bf8366cccd6d137220a20cd",
+  "partial_correctness_fixture": true,
+  "raw_scenes_exact": true,
+  "seconds": 20.476949615003832,
+  "status": "measured"
 }

@@ -1,0 +1,48 @@
+{
+  "G30_unaffected": true,
+  "affected_arms": [
+    "prefix/44b6/20260916",
+    "J_uniform/44b6/20260916"
+  ],
+  "corrected_gates": {
+    "corrected_image_validation.json": "c950f90691b468705b27617fff413f30a9f3df3f56a8cdedbeb3f682f9e7345d",
+    "matrix_parity.json": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
+    "profile_provenance.json": "fbe4304144b439231a478e87c1979be55655e63b4307ea9f42f06e987ab98a77"
+  },
+  "excluded_training": [
+    {
+      "arm": "J_uniform",
+      "compute_seconds": 659.8471591838897,
+      "joint_optimizer_updates": 3024,
+      "lease_seconds": 665.2648985299966,
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/invalid/feature_lattice_alignment/training/J_uniform/44b6/20260916/training_receipt.json",
+      "seed": 20260916,
+      "sha256": "e0bd8d69c032862d75427feb4c22892eedd35e0907c802aedfbadc2bc3b4ad92",
+      "source": "44b6",
+      "wait_seconds": 0.3526167169911787,
+      "wall_seconds": 778.8458269609982
+    },
+    {
+      "arm": "prefix",
+      "compute_seconds": 1564.6707470393449,
+      "joint_optimizer_updates": 2048,
+      "lease_seconds": 1598.0379499929986,
+      "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/invalid/feature_lattice_alignment/training/prefix/44b6/20260916/training_receipt.json",
+      "seed": 20260916,
+      "sha256": "ebd5406702ba636c54254c8f14599d2e31b392b500b3e027110b1a819d83dbab",
+      "source": "44b6",
+      "wait_seconds": 0.8761051009860239,
+      "wall_seconds": 1599.4061085970025
+    }
+  ],
+  "leases_retained_in_total": true,
+  "new_target_metrics_read": false,
+  "next_action": "Cooperative checkpoint, archive image attempts, correct sampler and repeat image correctness/profile gates before all full fits",
+  "queue_pid": 2928769,
+  "reason": "Spatial point queries used crop-normalized coordinates directly on stride-4/8/8 feature maps, shifting parent sampling from its physical crop location. Correct explicit convolution-lattice transform required.",
+  "reason_receipt_sha256": "b55910461d9525c02b6ab1e84f640da1104bbc6499dbf50ab8ee12d1fff955df",
+  "status": "implementation_invalid_not_architecture_failure",
+  "time": "2026-09-17T02:26:28.623967+00:00",
+  "training_inputs_and_labels_unchanged": true,
+  "training_pid": 3264324
+}

@@ -1,9 +1,26 @@
 """Hash all baseline graphs; independently aggregate and freshly replay four clips."""
 import time
+import hashlib
 import numpy as np
 
 from .common import (RESULTS, PRIOR_RESULTS, PRIOR_WORK, OFFICIAL, DATA, STUDY,
                      read_json, write_json, write_csv, sha, verified_graph, inputs)
+
+
+def node_identities():
+    from .common import digest
+    rows=[]
+    for row in inputs():
+        p0=verified_graph(row,'P0')['nodes'];c4=verified_graph(row,'C4_m6')['nodes']
+        np.testing.assert_array_equal(p0,c4)
+        before=hashlib.sha256(np.ascontiguousarray(p0).tobytes()).hexdigest()
+        assert before==hashlib.sha256(np.ascontiguousarray(c4).tobytes()).hexdigest()
+        rows.append(dict(dataset=row['dataset'],embryo=row['embryo'],nodes=len(p0),sha256=before))
+    corpora={scope:digest([(r['dataset'],r['sha256'],r['nodes']) for r in rows if scope=='pooled' or r['embryo']==scope])
+             for scope in ('pooled','44b6','6bba')}
+    result=dict(status='measured',P0_C4_exact_nodes=True,rows=rows,corpora=corpora)
+    write_json(RESULTS/'node_identity.json',result,immutable=True)
+    return result
 
 
 def run():

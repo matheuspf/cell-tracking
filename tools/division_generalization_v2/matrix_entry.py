@@ -19,7 +19,7 @@ def main():
     cpu_budget(16)
     import torch
     torch.set_num_threads(1);torch.set_num_interop_threads(1)
-    from .common import load_graph,sha
+    from .common import load_graph,sha,write_json,code_hashes
     from .infer import load_checkpoint
     from .matrix_infer import predict_matrix
     from .resources import Monitor
@@ -31,6 +31,7 @@ def main():
         model,recipe=load_checkpoint(p['checkpoint'])
         if recipe['source']!=job['source']:raise ValueError('Explicit matrix source mismatch')
         packages[key]=(model,recipe,p['calibration'])
+    write_json(output/'runtime_code.json',code_hashes())
     with Monitor(output/'resources.json'):
         predict_matrix(job['row'],load_graph(job['graph_path']),load_graph(job['native_path']),packages,output)
 

@@ -1,0 +1,22 @@
+{
+  "receipts": [
+    {
+      "actions": 16946,
+      "anchors": 64,
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "fresh_constructor_seconds": 1.5109600570358452,
+      "shared_constructor_seconds": 0.9579975690503488
+    },
+    {
+      "actions": 8961,
+      "anchors": 64,
+      "dataset": "6bba_61dd1e0d",
+      "exact": true,
+      "fresh_constructor_seconds": 0.5628204090025974,
+      "shared_constructor_seconds": 0.4300143760119681
+    }
+  ],
+  "status": "measured",
+  "training_inputs_unchanged": true
+}

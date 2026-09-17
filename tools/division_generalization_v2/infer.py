@@ -11,17 +11,24 @@ from pipeline_error_training.serialization import export_csv,export_geff
 from .actions import EventBank,canonical_actions,close_resources
 from .features import build
 from .model import ActionModel
-from .scenes import Scenes
+from .fast_scenes import InferenceScenes as Scenes
 from .resources import Lease
-from .common import save_graph,write_json,graph_hash,sha,adjacency
+from .common import save_graph,write_json,read_json,graph_hash,sha,adjacency,RESULTS
 
 
 def load_checkpoint(path):
     from pathlib import Path
     saved=torch.load(path,map_location='cpu',weights_only=False)
     for filename,key in [('model.py','model_code_sha256'),('features.py','features_code_sha256'),('scenes.py','scenes_code_sha256')]:
-        if saved['recipe'].get(key)!=sha(Path(__file__).with_name(filename)):
-            raise ValueError('Checkpoint architecture/input implementation drift: '+filename)
+        actual=sha(Path(__file__).with_name(filename))
+        if saved['recipe'].get(key)!=actual:
+            compatibility=RESULTS/'model_code_compatibility.json'
+            allowed=False
+            if filename=='model.py' and not saved['recipe']['image'] and compatibility.exists():
+                c=read_json(compatibility)
+                allowed=(c['status']=='measured' and c['old_model_sha256']==saved['recipe'].get(key)
+                    and c['new_model_sha256']==actual and c['G30_exact_outputs'])
+            if not allowed:raise ValueError('Checkpoint architecture/input implementation drift: '+filename)
     model=ActionModel(image=saved['recipe']['image'])
     model.load_state_dict(saved['model']);model.eval()
     return model,saved['recipe']
@@ -67,7 +74,7 @@ def predict(row,graph,native,model,recipe,destination=None,*,calibration=None,li
     scene_reader=Scenes([row],persist=False)
     protected=fork_support(graph['nodes'],graph['edges'])
     collectors={a:BoundedActionComponents() for a in applications}
-    counts=Counter();timings=Counter();maxima=[]
+    counts=Counter();timings=Counter();maxima=[];score_summary=dict(raw_min=None,raw_max=None)
     device='cuda' if model.image else 'cpu';amp=bool(model.image and recipe.get('amp',False))
     calibration=calibration or dict(temperature=1.,intercept=0.,status='calibration_unestablished')
     if literal_zero and (calibration['temperature']!=1 or calibration['intercept']!=0):
@@ -95,12 +102,16 @@ def predict(row,graph,native,model,recipe,destination=None,*,calibration=None,li
                 timings['scene_and_model_seconds']+=time.monotonic()-ts
                 if literal_zero and np.count_nonzero(gains):
                     raise ValueError('Literal-zero fixture received a nonzero model score')
+                counts['raw_positive_gains']+=int((gains>1e-9).sum())
+                score_summary['raw_min']=min(float(gains.min()),score_summary['raw_min']) if score_summary['raw_min'] is not None else float(gains.min())
+                score_summary['raw_max']=max(float(gains.max()),score_summary['raw_max']) if score_summary['raw_max'] is not None else float(gains.max())
                 gains=gains/calibration['temperature']+calibration['intercept']
                 gains=np.where([d.kind=='keep' for d,_ in records],0.,gains)
                 if not np.isfinite(gains).all():raise ValueError('Nonfinite learned action gain')
                 counts['actions']+=len(records)
                 counts['positive_gains']+=int((gains>1e-9).sum())
                 best=int(np.argmax(gains))
+                counts['anchors_preferring_edit']+=int(records[best][0].kind!='keep')
                 maxima.append(dict(parent=parent,key=records[best][0].key,gain=float(gains[best]),
                                    kind=records[best][0].kind))
                 for (d,_),gain in zip(records,gains):
@@ -126,8 +137,9 @@ def predict(row,graph,native,model,recipe,destination=None,*,calibration=None,li
             save_graph(path,graph['nodes'],edges)
             write_json(path.with_suffix('.json'),dict(dataset=row['dataset'],application=application,
                 graph_hash=graph_hash(graph['nodes'],edges),counts=dict(counts),timings=dict(timings),
+                score_summary=score_summary,
                 seconds=time.monotonic()-started,ledger=ledger,calibration=calibration,
                 source=recipe.get('source'),literal_zero_active_path=literal_zero,disable_switch=disable,
                 bank_sha256=bank.hash,partial_fixture=max_anchors is not None))
     return outputs,dict(counts=dict(counts),timings=dict(timings),seconds=time.monotonic()-started,
-                        maxima=maxima,bank_sha256=bank.hash)
+                        maxima=maxima,bank_sha256=bank.hash,score_summary=score_summary)

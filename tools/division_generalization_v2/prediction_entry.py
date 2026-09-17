@@ -16,13 +16,14 @@ def main():
     cpu_budget(16)
     import torch
     torch.set_num_threads(1);torch.set_num_interop_threads(1)
-    from .common import sha,load_graph,write_json
+    from .common import sha,load_graph,write_json,code_hashes
     from .infer import load_checkpoint,predict
     from .resources import Monitor
     for key,field in [('checkpoint','checkpoint_sha256'),('graph_path','graph_sha256'),('native_path','native_sha256')]:
         if sha(job[key])!=job[field]:raise ValueError('Prediction input hash drift')
     model,recipe=load_checkpoint(job['checkpoint'])
     if recipe['source']!=job['source']:raise ValueError('Explicit model source mismatch')
+    write_json(output/'runtime_code.json',code_hashes())
     with Monitor(output/'resources.json'):
         _,trace=predict(job['row'],load_graph(job['graph_path']),load_graph(job['native_path']),model,recipe,
             output,calibration=job['calibration'])

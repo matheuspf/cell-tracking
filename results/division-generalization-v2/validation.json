@@ -11,16 +11,15 @@
       "disable_exact": true,
       "full_clip": true,
       "geff": {
-        "edges": 4682,
-        "exact_roundtrip": true,
-        "nodes": 4791,
-        "stable_id_attribute": "study_node_id"
+        "previously_exported": true
       },
       "literal_zero_exact": true,
       "trace": {
         "actions": 8388,
         "anchors": 844,
-        "positive_gains": 0
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 0
       }
     },
     {
@@ -34,25 +33,27 @@
       "disable_exact": true,
       "full_clip": true,
       "geff": {
-        "edges": 3416,
-        "exact_roundtrip": true,
-        "nodes": 3480,
-        "stable_id_attribute": "study_node_id"
+        "previously_exported": true
       },
       "literal_zero_exact": true,
       "trace": {
         "actions": 2809,
         "anchors": 417,
-        "positive_gains": 0
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 0
       }
     }
   ],
-  "complete_counterfactual_replays": 0,
+  "complete_counterfactual_replays": 395,
+  "corrected_image_validation_sha256": "c950f90691b468705b27617fff413f30a9f3df3f56a8cdedbeb3f682f9e7345d",
   "fresh_image_proof": "pending",
   "literal_zero_path_test": true,
-  "pytest_log_sha256": "57cd7ff068f2f62ddb19375cc18c22f12b9f1388ecaa81156dc3a0d44ee0d6a4",
-  "seconds": 15.25974206400133,
+  "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
+  "pytest_log_sha256": "45131de32896f210b8db9a9ed716a8c35a597e81600f09d84b1e3d50cbe83514",
+  "seconds": 12.206182434005314,
   "status": "measured",
   "target_comparisons": "pending",
+  "unit_tests_count": 39,
   "unit_tests_passed": true
 }

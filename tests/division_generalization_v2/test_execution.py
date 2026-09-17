@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 from division_generalization_v2.dataset import SourceDataset
-from division_generalization_v2.mining import supported_false
+from division_generalization_v2.mining import supported_false,conflict_representatives
 from division_generalization_v2.calibration import fit
 from division_generalization_v2.contracts import lr_factor
 
@@ -50,6 +50,15 @@ def test_mining_never_calls_unknown_a_negative():
     assert supported_false(batch).tolist()==[False,True,True,False]
 
 
+def test_miner_caps_transitive_conflicts_and_namespaces_clip_nodes():
+    def row(key,gain,resources,dataset='clip'):
+        return dict(key=key,gain=gain,resources=[('node',n) for n in resources],dataset=dataset)
+    ranked=dict(a=[row('a',1.,[1])],b=[row('b',3.,[1,2])],c=[row('c',2.,[2])],
+                d=[row('d',4.,[1],dataset='other')])
+    chosen,n=conflict_representatives(ranked)
+    assert n==4 and [r['key'] for r in chosen]==['d','b']
+
+
 def test_low_support_calibration_is_explicit_identity_not_resubstitution():
     result=fit([dict(group='one',gain=4.,target=1,weight=16.),
                 dict(group='two',gain=-2.,target=0,weight=16.)])
@@ -63,3 +72,41 @@ def test_calibration_finite_with_separation_and_unpenalized_intercept():
     assert r['status']=='held_source_fitted'
     assert not r['intercept_penalized']
     assert np.isfinite([r['temperature'],r['intercept']]).all()
+
+
+def test_small_head_oof_keeps_overlap_groups_intact_and_resets_pools():
+    from division_generalization_v2.head_oof import fold_of,subset
+    d=sample_dataset()
+    for key,a in d.anchors.items():
+        a.update(random_included=True,positive=a['group'].startswith('p'))
+    chosen=['p0:0','p0:1','n0:0']
+    a=subset(d,chosen)
+    assert set(a.anchors)==set(chosen)
+    assert a.positive_keys==['p0'] and a.ordinary_keys==['n0']
+    assert not a.visits and not a.anchor_visits
+    assert fold_of('44b6','shared_clip_group')==fold_of('44b6','shared_clip_group')
+    assert {fold_of('44b6',str(i)) for i in range(50)}=={0,1,2}
+
+
+def test_recommendation_requires_matched_target_controls_and_current_fresh_model():
+    from pathlib import Path
+    from division_generalization_v2.common import sha
+    from division_generalization_v2 import model
+    from division_generalization_v2.report import completion_gates
+    model_hash=sha(Path(model.__file__))
+    target=dict(pooled=[dict(arm=a,seed=s,clips=199) for a in ('J_uniform','J_mined')
+                       for s in (20260916,314159)])
+    fresh=dict(status='measured',clips=[dict(arm='J_mined',exact_P0=True,exact_scored_candidate=True)]*2)
+    gates=dict(literal_zero_path_test=True,unit_tests_passed=True)
+    fits=[dict(arm='J_mined',status='complete',joint_optimizer_updates=4096,full_source_screen=True)]*10
+    freeze=dict(qualified_exports=['J_uniform','J_mined'])
+    image=dict(model_code_sha256=model_hash,clips=[dict(full_clip=True,exact_active_zero=True)]*2)
+    matrix=dict(model_code_sha256=model_hash,image_models_exact=True)
+    def check():return completion_gates(True,'J_mined',target,fresh,gates,fits,freeze,image,matrix)
+    assert all(check().values())
+    target['pooled']=[r for r in target['pooled'] if r['arm']=='J_mined']
+    assert not check()['matched_image_controls_complete']
+    fresh['clips'][0]['arm']='P0'
+    assert not check()['fresh_nominated_module']
+    image['model_code_sha256']='obsolete'
+    assert not check()['current_image_zero']

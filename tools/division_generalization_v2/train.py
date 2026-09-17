@@ -147,6 +147,13 @@ def run(args):
         raise ValueError('Production training requires representative audited groups')
     if parity['status']!='measured':raise ValueError('Complete-action full scorer parity not established')
     amp=bool(image and profile['amp_enabled'])
+    if image:
+        image_gate=read_json(RESULTS/'corrected_image_validation.json')
+        model_hash=sha(Path(__file__).with_name('model.py'))
+        if image_gate['model_code_sha256']!=model_hash or not all(r['full_clip'] and r['exact_active_zero'] for r in image_gate['clips']):
+            raise ValueError('Current image implementation needs full active zero validation')
+        if read_json(RESULTS/'profile_provenance.json')['model_code_sha256']!=model_hash:
+            raise ValueError('Image implementation changed after the measured source profile')
     dataset=SourceDataset(source,image=image)
     held=SourceDataset(source,'calibration',image=image)
     if not dataset.positive_keys or not dataset.ordinary_keys:
@@ -160,6 +167,8 @@ def run(args):
                 training_code_sha256=sha(Path(__file__)),
                 features_code_sha256=sha(Path(__file__).with_name('features.py')),
                 dataset_code_sha256=sha(Path(__file__).with_name('dataset.py')),
+                actions_code_sha256=sha(Path(__file__).with_name('actions.py')),
+                mining_code_sha256=sha(Path(__file__).with_name('mining.py')),
                 scenes_code_sha256=sha(Path(__file__).with_name('scenes.py')))
     write_json(folder/'recipe.json',recipe,immutable=True)
     model=ActionModel(image=image)
@@ -174,7 +183,7 @@ def run(args):
         saved=torch.load(prefix,map_location='cpu',weights_only=False)
         if saved['step']!=PREFIX or saved['recipe']['source']!=source or saved['recipe']['seed']!=seed:
             raise ValueError('Common prefix provenance mismatch')
-        for key in ('model_code_sha256','training_code_sha256','features_code_sha256','dataset_code_sha256','scenes_code_sha256','prepared_manifest_sha256'):
+        for key in ('model_code_sha256','training_code_sha256','features_code_sha256','dataset_code_sha256','scenes_code_sha256','actions_code_sha256','mining_code_sha256','prepared_manifest_sha256'):
             if recipe[key]!=saved['recipe'][key]:raise ValueError('Prefix implementation/input drift')
         step=restore(saved,model,optimizer,dataset);prefix_sha=sha(prefix)
         write_json(folder/'common_prefix.json',dict(path=str(prefix),sha256=prefix_sha,

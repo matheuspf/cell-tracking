@@ -1,0 +1,37 @@
+{
+  "decision_units": 1244,
+  "folds": [
+    {
+      "fold": 0,
+      "head_updates": 3,
+      "held_overlap_groups": 26,
+      "model_sha256": "8b69f2f1c1b2b2af83464e6c0e9c1f64177904e527e56c7fba0c0e70fb0c7f52",
+      "overlap": [],
+      "seconds": 1.97833479300607,
+      "train_overlap_groups": 45
+    },
+    {
+      "fold": 1,
+      "head_updates": 3,
+      "held_overlap_groups": 20,
+      "model_sha256": "fafa1333432551ac59ddbf7aae67915f0654cac342b7ec2765e7f7c525eca43b",
+      "overlap": [],
+      "seconds": 2.45503578500211,
+      "train_overlap_groups": 51
+    },
+    {
+      "fold": 2,
+      "head_updates": 3,
+      "held_overlap_groups": 25,
+      "model_sha256": "26fd00ee0a4a16647a29cfb5ed98c7cc0241e05dec9015ec947c321466d445c2",
+      "overlap": [],
+      "seconds": 3.281111846001295,
+      "train_overlap_groups": 46
+    }
+  ],
+  "production_updates_unchanged": 4096,
+  "scientific_calibration_result": false,
+  "source": "44b6",
+  "status": "measured",
+  "validation_only": true
+}

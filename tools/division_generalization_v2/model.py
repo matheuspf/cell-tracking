@@ -39,6 +39,20 @@ def mlp(*sizes):
     return nn.Sequential(*layers)
 
 
+def query_grids(q):
+    """Separate raw-mask and CNN-lattice coordinates, in normalized XYZ order.
+
+    Same-padded odd convolutions place feature centers at raw indices 4*j in Z
+    and 8*j in Y/X. The crop center is raw index (7.5,31.5,31.5), so its feature
+    coordinate is (1.875,3.9375,3.9375), rather than the feature-array midpoint.
+    """
+    center=q.new_tensor([7.5,31.5,31.5])
+    stride=q.new_tensor([4.,8.,8.]);last=q.new_tensor([3.,7.,7.])
+    raw=torch.stack([(q/center/f).flip(-1) for f in (1.,2.)])
+    feature=torch.stack([(2*((q/f+center)/stride)/last-1).flip(-1) for f in (1.,2.)])
+    return raw,feature
+
+
 class SceneEncoder(nn.Module):
     def __init__(self):
         super().__init__()
@@ -63,13 +77,13 @@ class SceneEncoder(nn.Module):
         result=[]
         for k,(q,qt) in enumerate(zip(queries,times)):
             count=len(q)
-            radius=q.new_tensor([7.5,31.5,31.5])
-            grid=torch.stack([(q/radius/f).flip(-1) for f in (1.,2.)])
-            grid=grid[None].expand(7,-1,-1,-1).reshape(14,1,count,1,3)
+            raw_grid,feature_grid=query_grids(q)
+            raw_grid=raw_grid[None].expand(7,-1,-1,-1).reshape(14,1,count,1,3)
+            feature_grid=feature_grid[None].expand(7,-1,-1,-1).reshape(14,1,count,1,3)
             # Sampling retains spatial maps; outside coordinates are zero, never
             # clamped onto a different cell. Validity is queried independently.
-            z=sample_maps(maps[k].reshape(14,64,4,8,8),grid.float())
-            valid=F.grid_sample(scene[k,:,:,1:2].reshape(14,1,16,64,64).float(),grid.float(),
+            z=sample_maps(maps[k].reshape(14,64,4,8,8),feature_grid.float())
+            valid=F.grid_sample(scene[k,:,:,1:2].reshape(14,1,16,64,64).float(),raw_grid.float(),
                                 align_corners=True,padding_mode='zeros')[:,0,0,:,0]
             z=z.reshape(7,2,64,count).permute(3,0,1,2)
             valid=valid.reshape(7,2,count).permute(2,0,1)

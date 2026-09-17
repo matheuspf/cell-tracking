@@ -6,7 +6,7 @@ import torch
 from tests.pipeline_error_training.test_contracts import fixture
 from division_generalization_v2.actions import EventBank,canonical_actions,apply_decisions
 from division_generalization_v2.features import build
-from division_generalization_v2.model import ActionModel,loss,sample_maps
+from division_generalization_v2.model import ActionModel,loss,sample_maps,query_grids
 from division_generalization_v2.contracts import lr_factor
 from division_generalization_v2.labels import Counterfactual,COUNT_KEYS,SourceUtility
 
@@ -31,6 +31,27 @@ def test_zero_score_active_decoder_and_native_logit_does_not_force_fork():
     assert receipt.get('accepted_actions',0)==0
     assert sum(d.kind=='keep' for d,_ in rows)==1
     assert len({d.key for d,_ in rows})==len(rows)
+
+
+def test_reused_frozen_alternatives_match_fresh_bank_and_keep_counters_local():
+    from pipeline_error_training.actions import Alternatives as OriginalAlternatives
+    nodes,edges,native=fixture()
+    shared=EventBank(nodes,edges,native,[1.,1.,1.])
+    for replace in (True,False,True):
+        for parent in sorted(shared.expanded):
+            fresh=EventBank(nodes,edges,native,[1.,1.,1.])
+            actual,rejected=canonical_actions(shared,parent,replace)
+            original=OriginalAlternatives(fresh,replace=replace)
+            expected=[];seen=set()
+            for event,features,_ in fresh.iter_parent(parent):
+                for decision in original.event(event):
+                    key=(decision.remove,decision.add)
+                    if key not in seen:seen.add(key);expected.append((decision,features))
+            expected.sort(key=lambda x:(x[0].kind!='keep',tuple(sorted(x[0].remove)),tuple(sorted(x[0].add))))
+            assert rejected==dict(original.rejections)
+            assert [d for d,_ in actual]==[d for d,_ in expected]
+            for (_,a),(_,b) in zip(actual,expected):
+                np.testing.assert_array_equal(a,b)
 
 
 def test_unknown_loss_zero_and_negative_only_rejection_gradient():
@@ -72,6 +93,18 @@ def test_interpolation_outside_mask_and_gradient():
     expected.sum().backward();torch.testing.assert_close(a,maps.grad,rtol=1e-5,atol=1e-6)
     far=torch.full_like(grid,5.)
     assert torch.count_nonzero(sample_maps(maps,far))==0
+
+
+def test_queries_follow_the_convolution_lattice_in_physical_crop_coordinates():
+    z,y,x=torch.meshgrid(torch.arange(4)*4.,torch.arange(8)*8.,torch.arange(8)*8.,indexing='ij')
+    maps=torch.stack((z,y,x))[None].repeat(2,1,1,1,1)
+    q=torch.tensor([[0.,0.,0.],[2.,8.,-8.],[-2.,-8.,8.]])
+    raw,feature=query_grids(q)
+    actual=sample_maps(maps,feature[:,None,:,None]).permute(0,2,1)
+    expected=torch.stack((q,q/2))+q.new_tensor([7.5,31.5,31.5])
+    torch.testing.assert_close(actual,expected,atol=2e-5,rtol=0)
+    assert torch.count_nonzero(raw[:,0])==0
+    assert torch.count_nonzero(feature[:,0])==6
 
 
 def test_complete_counterfactual_loss_and_global_fork_assignment():
@@ -133,3 +166,15 @@ def test_no_trainable_feature_cache_across_forwards():
     two=model([b],scene)[0]['gain']
     assert model.encoder.forward_calls==2
     assert not torch.equal(one,two)
+
+
+def test_integer_scene_fast_path_is_pixel_exact_including_boundaries():
+    from division_generalization_v2.scenes import crop
+    from division_generalization_v2.fast_scenes import integer_crop
+    class Images:
+        frame=np.random.default_rng(9).integers(0,65536,(24,96,96),dtype=np.uint16).astype(np.float32)
+        quantiles={t:(17.125,58001.7) for t in range(3)}
+        def raw(self,t):return self.frame if 0<=t<3 else None
+    for center in ([12,48,48],[0,0,0],[23,95,95],[-3,12,100],[12.25,47.5,40.2]):
+        for t in (0,1,2):
+            np.testing.assert_array_equal(integer_crop(Images(),t,center),crop(Images(),t,center))

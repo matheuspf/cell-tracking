@@ -1,0 +1,24 @@
+{
+  "frame_decode_and_quantiles_excluded_from_timing": true,
+  "inference_module_sha256": "2b6a80d469ca9b1e17bea016acc6da38eeb055ee602391b991e3a6f27ad05a4e",
+  "receipts": [
+    {
+      "dataset": "44b6_e31261b4",
+      "exact_uint8_pixels_and_masks": true,
+      "includes_boundaries_missing_frames_and_fractional_fallback": true,
+      "optimized_crop_seconds": 0.609924517943,
+      "original_crop_seconds": 3.2233793020204757,
+      "scenes": 68
+    },
+    {
+      "dataset": "6bba_61dd1e0d",
+      "exact_uint8_pixels_and_masks": true,
+      "includes_boundaries_missing_frames_and_fractional_fallback": true,
+      "optimized_crop_seconds": 0.5460367390260217,
+      "original_crop_seconds": 2.761266593966866,
+      "scenes": 68
+    }
+  ],
+  "status": "measured",
+  "training_cache_inputs_unchanged": true
+}

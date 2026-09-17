@@ -1,0 +1,25 @@
+{
+  "all_study_anchors": 1922971,
+  "dataset": "44b6_e31261b4",
+  "literal_zero_full_graph_exact": true,
+  "nodes": 66901,
+  "projection_scope": "Linear anchor-count estimate from one crowded clip; frozen matrix shares scene I/O and graph state and needs separate measured timings",
+  "raw_receipt_sha256": "157e10ea78f77ecdba4f7c7fe140fe2e3c1c8a37178438ac5d7bb5591820f2e9",
+  "status": "measured",
+  "trace": {
+    "bank_sha256": "9d95f4215c3b9a2e41e5e60613d22d0159158ad0d91cdd658eee5c800e93fa22",
+    "counts": {
+      "actions": 9392743,
+      "anchors": 35191,
+      "positive_gains": 0
+    },
+    "seconds": 3372.718341849999,
+    "timings": {
+      "bank_seconds": 1310.4906124706467,
+      "lease_seconds": 3367.919005095995,
+      "lease_wait_seconds": 2.0491804130506353,
+      "scene_and_model_seconds": 2050.8494848801565
+    }
+  },
+  "unoptimized_single_model_projection_hours": 51.19395712402504
+}

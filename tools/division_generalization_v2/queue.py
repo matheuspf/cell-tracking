@@ -48,6 +48,9 @@ def run(args=None):
     write_json(WORK/'queue/owner.json',dict(pid=os.getpid(),started=now()))
     try:
         if not (RESULTS/'baseline_validation.json').exists():call('baselines')
+        if not (RESULTS/'node_identity.json').exists():
+            from .baselines import node_identities
+            node_identities()
         # Existing independent preparers may finish before this queue starts.
         for source in ('44b6','6bba'):
             while True:

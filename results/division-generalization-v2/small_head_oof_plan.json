@@ -1,0 +1,16 @@
+{
+  "augmentation": false,
+  "effective_batch": 32,
+  "encoder_exposure": "Not clean OOF; only the small head is out of fit, upstream P0 remains exposed",
+  "fallback": "Fixed zero boundary with calibration_unestablished if a fold lacks either supported class or OOF support remains too small",
+  "fold_assignment": "SHA256 of source overlap group, modulo three",
+  "fold_seed": 20260916,
+  "folds": 3,
+  "head_updates": 4096,
+  "image_encoder": "Frozen at the source checkpoint; may have seen inner fold labels in joint fitting",
+  "no_target_access": true,
+  "optimizer": "Same AdamW, schedule, losses and representative mixture as the main fit",
+  "small_head": "Same complete-action MLP, keep, score, risk and identity heads, reset from zero-output initialization",
+  "trainable_encoder_cache": false,
+  "trigger": "Fewer than five positive or negative max-selected held-source overlap groups"
+}

@@ -1,0 +1,22 @@
+{
+  "all_families_and_persisted_keys_unchanged": true,
+  "receipts": [
+    {
+      "actions": 32881,
+      "anchors": 128,
+      "dataset": "44b6_e31261b4",
+      "exact": true,
+      "optimized_seconds": 0.9489394370248192,
+      "original_seconds": 3.825527207016421
+    },
+    {
+      "actions": 21361,
+      "anchors": 128,
+      "dataset": "6bba_61dd1e0d",
+      "exact": true,
+      "optimized_seconds": 0.5586142210086109,
+      "original_seconds": 1.5004098309655092
+    }
+  ],
+  "status": "measured"
+}

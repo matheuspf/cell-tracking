@@ -12,6 +12,7 @@ import psutil
 from pipeline_error_training.resources import gpu_snapshot, process_snapshot
 from .common import WORK, GPU_LOCK, append_json, now, read_json, write_json
 
+ACTIVE_MONITORS=[]
 
 def check_disk():
     if shutil.disk_usage(WORK).free < 20*2**30:
@@ -24,6 +25,7 @@ class Lease:
         self.purpose, self.required = purpose, required_gib
 
     def __enter__(self):
+        for monitor in ACTIVE_MONITORS:monitor.check()
         self.handle = GPU_LOCK.open('a+')
         wait = time.monotonic()
         while True:
@@ -85,6 +87,15 @@ class Monitor:
                 if any(a.startswith('division_generalization_v2') for a in (p.info['cmdline'] or [])):
                     processes[p.pid]=p
                     processes.update({q.pid:q for q in p.children(recursive=True)})
+        # Short fixture/calibration helpers may be launched from stdin. Register
+        # their PID and creation time so the total includes them without relying
+        # on command-name matching or trusting stale PID files.
+        for path in (WORK/'resources/workers').glob('*.json'):
+            with contextlib.suppress(psutil.NoSuchProcess,psutil.AccessDenied,FileNotFoundError):
+                marker=read_json(path);p=psutil.Process(marker['pid'])
+                if p.create_time()==marker['created']:
+                    processes[p.pid]=p
+                    processes.update({q.pid:q for q in p.children(recursive=True)})
         for p in processes.values():
             with contextlib.suppress(psutil.NoSuchProcess):
                 rss += p.memory_info().rss
@@ -117,18 +128,24 @@ class Monitor:
                 self.error = str(exc)
 
     def __enter__(self):
+        process=psutil.Process()
+        write_json(WORK/'resources/workers'/(str(process.pid)+'.json'),
+            dict(pid=process.pid,created=process.create_time(),command=process.cmdline()))
         self.sample()
         self.check()
         self.thread = threading.Thread(target=self.loop, daemon=True)
         self.thread.start()
+        ACTIVE_MONITORS.append(self)
         return self
 
     def __exit__(self, *exc):
         self.stop.set()
         self.thread.join()
+        ACTIVE_MONITORS.remove(self)
         write_json(self.path, dict(peak_total_gpu_gib=self.peak_gpu,
             peak_process_tree_rss_gib=self.peak_rss, samples=self.samples,
             includes_all_visible_study_workers=True,
             wall_seconds=time.monotonic()-self.started, error=self.error,
             study_disk_gib=self.cache_bytes/2**30,
             cuda_kernel_time_is_not_wall_time=True))
+        if exc[0] is None:self.check()

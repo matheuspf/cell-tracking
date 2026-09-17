@@ -1,0 +1,53 @@
+{
+  "reason": null,
+  "training": [
+    {
+      "arm": "G30",
+      "checkpoint_seconds": 0.16949132299487246,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 1,
+      "includes_common_prefix": true,
+      "last_step": 4096,
+      "maximum_gradient_norm": 35.857322692871094,
+      "recorded_updates": 4096,
+      "seed": 20260916,
+      "source": "44b6",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 0.024959886774013285,
+        "backward_seconds": 55.823403889917245,
+        "compute_seconds": 240.7074391303031,
+        "encoder_head_seconds": 68.00837139099895,
+        "loader_seconds": 102.13625629209855,
+        "loader_transfer_seconds": 106.6100186876356,
+        "optimizer_seconds": 2.7138241911525256,
+        "transfer_seconds": 3.1129404937673826
+      },
+      "wall_seconds": 245.3880962819967
+    },
+    {
+      "arm": "G30",
+      "checkpoint_seconds": 0.32971572200767696,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 1,
+      "includes_common_prefix": true,
+      "last_step": 4096,
+      "maximum_gradient_norm": 36.041969299316406,
+      "recorded_updates": 4096,
+      "seed": 20260916,
+      "source": "6bba",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 0.02673732055700384,
+        "backward_seconds": 45.23012850896339,
+        "compute_seconds": 252.19351390028896,
+        "encoder_head_seconds": 61.764245585145545,
+        "loader_seconds": 124.55429055459535,
+        "loader_transfer_seconds": 129.65746744030912,
+        "optimizer_seconds": 2.8662862560886424,
+        "transfer_seconds": 3.5021311477030395
+      },
+      "wall_seconds": 257.2065165849999
+    }
+  ]
+}

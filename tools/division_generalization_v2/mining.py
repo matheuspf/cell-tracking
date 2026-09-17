@@ -38,6 +38,26 @@ def supported_false(batch):
     return batch['supported'].bool() & (batch['utility']<=1e-12) & ~batch['keep']
 
 
+def conflict_representatives(ranked):
+    """One hard anchor per biological group and connected resource conflict."""
+    candidates=[max(values,key=lambda x:(x['gain'],x['key'])) for values in ranked.values()]
+    parent=list(range(len(candidates)));owners={}
+    def find(i):
+        while parent[i]!=i:
+            parent[i]=parent[parent[i]];i=parent[i]
+        return i
+    for i,row in enumerate(candidates):
+        for resource in row['resources']:
+            key=(row['dataset'],*resource)
+            if key in owners:parent[find(i)]=find(owners[key])
+            else:owners[key]=i
+    components=defaultdict(list)
+    for i,row in enumerate(candidates):components[find(i)].append(row)
+    selected=[max(rows,key=lambda r:(r['gain'],r['key'])) for rows in components.values()]
+    selected.sort(key=lambda r:(-r['gain'],r['key']))
+    return selected,len(candidates)
+
+
 @torch.no_grad()
 def refresh(model,dataset,device,amp,path):
     if path.exists():
@@ -52,33 +72,36 @@ def refresh(model,dataset,device,amp,path):
             records={a['anchor']:a for a in json.load(f)}
         collector=BoundedActionComponents();lookup={}
         for key,gains,false,unidentified in scored_anchors(model,dataset,keys,device,amp):
+            a=records[dataset.anchors[key]['anchor']]
             if false.any():
-                score=float(gains[false].max())
-                ranked[dataset.anchors[key]['group']].append((score,key))
+                indices=np.flatnonzero(false);i=indices[np.argmax(gains[indices])]
+                d=close_resources(from_record(dict(decision=a['decisions'][i])),pred,succ)
+                ranked[dataset.anchors[key]['group']].append(dict(gain=float(gains[i]),key=key,
+                    dataset=name,action_key=d.key,resources=sorted(d.resources)))
             if unidentified.any() and gains[unidentified].max()>0:
                 unknown.append(dict(key=key,max_gain=float(gains[unidentified].max()),label='unknown_not_negative'))
-            a=records[dataset.anchors[key]['anchor']]
             for i in np.flatnonzero(gains>1e-9):
                 d=from_record(dict(decision=a['decisions'][i]))
                 if d.kind=='keep':continue
                 d=close_resources(d,pred,succ)
-                lookup[d.key]=(key,bool(false[i]),float(gains[i]),d.kind)
+                lookup[d.key]=(key,bool(false[i]),float(gains[i]),d.kind,sorted(d.resources))
                 collector.add(Action(d.key,float(gains[i]),set(d.remove),set(d.add),set(d.resources),
                                      [dict(event=d.event),*d.owners],d.kind))
         _,ledger=decode(graph['nodes'],graph['edges'],collector)
         for edit in ledger['edits']:
-            key,false,gain,kind=lookup[edit['key']]
+            key,false,gain,kind,resources=lookup[edit['key']]
             if false and kind=='division':
                 post.append(dict(key=key,gain=gain,kind=kind))
-                ranked[dataset.anchors[key]['group']].append((gain,key))
+                ranked[dataset.anchors[key]['group']].append(dict(gain=gain,key=key,
+                    dataset=name,action_key=edit['key'],resources=resources))
     # Exactly one representative per source lineage/conflict group per refresh.
-    representatives=[max(values,key=lambda x:(x[0],x[1])) for _,values in sorted(ranked.items())]
-    representatives.sort(key=lambda x:(-x[0],x[1]))
-    keys=[key for _,key in representatives]
+    representatives,biological_groups=conflict_representatives(ranked)
+    keys=[r['key'] for r in representatives]
     write_json(path,dict(source=dataset.source,partition=dataset.partition,replay_keys=keys,
-        pre_decoder_group_representatives=[dict(key=k,gain=v) for v,k in representatives],
+        pre_decoder_group_representatives=representatives,
         selected_supported_false_forks=post,unknown_high_scores=unknown,
-        unknown_as_negative_count=0,one_per_biological_group=True,
+        unknown_as_negative_count=0,one_per_biological_group=True,one_per_resource_conflict_component=True,
+        biological_groups_before_conflict_cap=biological_groups,conflict_components=len(keys),
         scope='Full complete actions on prepared source probability sample plus positive stream; actual bounded decoder',
         target_used=False))
     model.train()

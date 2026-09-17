@@ -1,0 +1,27 @@
+{
+  "sampling_unchanged": true,
+  "sources": {
+    "44b6": {
+      "all_eligible_seen_in_completed_G30": true,
+      "eligible_groups": 258,
+      "eligible_negative_only_groups": 242,
+      "excluded_groups": [],
+      "exclusion_reason": "Nonrandom, negative-only extras from annotation-role neighborhoods are outside both the representative design and the positive exposure stream",
+      "positive_groups": 16,
+      "prepared_manifest_sha256": "308762b51d4780f67d42bd45f01099e33c51f1e57f5814976ed69b1aa227a845"
+    },
+    "6bba": {
+      "all_eligible_seen_in_completed_G30": true,
+      "eligible_groups": 2263,
+      "eligible_negative_only_groups": 2189,
+      "excluded_groups": [
+        "6bba_786893ac:1151",
+        "6bba_e16ffc58:6"
+      ],
+      "exclusion_reason": "Nonrandom, negative-only extras from annotation-role neighborhoods are outside both the representative design and the positive exposure stream",
+      "positive_groups": 74,
+      "prepared_manifest_sha256": "a751fa729c94784af0f57e3b494591a9b6f18e180cb5abe4e9f266b5c84cf242"
+    }
+  },
+  "status": "measured"
+}

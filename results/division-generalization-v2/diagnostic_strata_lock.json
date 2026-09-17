@@ -1,0 +1,49 @@
+{
+  "sources": {
+    "44b6": {
+      "boundary_definition": "within 3 frames of a temporal edge or 16 um of a spatial edge",
+      "count": 3337,
+      "depth": [
+        0.34375,
+        0.703125
+      ],
+      "frozen_native_intensity": [
+        0.4702876806259155,
+        0.6963547468185425
+      ],
+      "frozen_native_response": [
+        0.05463514104485512,
+        0.11636481434106827
+      ],
+      "labels_used": false,
+      "partition": "fit",
+      "predicted_density10": [
+        1.0,
+        3.0
+      ]
+    },
+    "6bba": {
+      "boundary_definition": "within 3 frames of a temporal edge or 16 um of a spatial edge",
+      "count": 9595,
+      "depth": [
+        0.21875,
+        0.71875
+      ],
+      "frozen_native_intensity": [
+        0.42795468866825104,
+        0.6825180947780609
+      ],
+      "frozen_native_response": [
+        0.03926455043256283,
+        0.11833973228931427
+      ],
+      "labels_used": false,
+      "partition": "fit",
+      "predicted_density10": [
+        0.0,
+        2.0
+      ]
+    }
+  },
+  "target_results_read": false
+}

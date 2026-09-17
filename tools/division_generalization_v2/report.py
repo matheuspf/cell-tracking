@@ -7,12 +7,58 @@ import psutil
 from .common import WORK,RESULTS,REPO,read_json,write_json,write_csv,sha,now
 
 
+def completion_gates(complete,arm,target,fresh,gates,fits,freeze,image_gate,matrix_gate):
+    """Completion is measured separately from whether a score happens to win."""
+    by_key={(r['arm'],r['seed']):r for r in target['pooled']}
+    expected={(a,s) for a in freeze['qualified_exports']
+              for s in ((20260916,) if a=='G30' else (20260916,314159))}
+    matched={(a,s) for a in ('J_uniform','J_mined') for s in (20260916,314159)}
+    directional=[r for r in fits if r['arm']!='prefix']
+    model_hash=sha(Path(__file__).with_name('model.py'))
+    return dict(
+        queue_complete=bool(complete),
+        all_qualified_exports_complete=set(by_key)==expected and all(r['clips']==199 for r in by_key.values()),
+        matched_image_controls_complete=matched<=set(by_key),
+        ten_adequate_directional_fits=len(directional)==10 and all(
+            r['status']=='complete' and r['joint_optimizer_updates']>=4096 for r in directional),
+        all_full_source_screens=bool(directional) and all(r['full_source_screen'] for r in directional),
+        fresh_nominated_module=fresh.get('status')=='measured' and len(fresh.get('clips',[]))==2 and all(
+            r['arm']==arm and r['exact_P0'] and r['exact_scored_candidate'] for r in fresh.get('clips',[])),
+        active_zero_and_tests=bool(gates.get('literal_zero_path_test') and gates.get('unit_tests_passed')),
+        current_image_zero=image_gate.get('model_code_sha256')==model_hash and len(image_gate.get('clips',[]))==2 and all(
+            r['full_clip'] and r['exact_active_zero'] for r in image_gate.get('clips',[])),
+        current_matrix_parity=matrix_gate.get('model_code_sha256')==model_hash and bool(matrix_gate.get('image_models_exact')))
+
+
 def run(args=None):
     RESULTS.mkdir(parents=True,exist_ok=True)
-    fits=[];curves=[];source_scores=[];calibrations=[]
+    fits=[];curves=[];source_scores=[];calibrations=[];runtime=[]
     for path in sorted((WORK/'training').glob('*/*/*/training_receipt.json')):
-        row=read_json(path);fits.append(dict(row,receipt_sha256=sha(path)))
+        row=read_json(path)
+        screens=list((WORK/'screens'/row['arm']/row['source']/str(row['seed'])).glob('*/summary.json'))
+        exposure=dict(row['exposure'])
+        for field in ('group_visits','anchor_visits'):
+            visits=exposure.pop(field,{})
+            exposure[field+'_summary']=dict(unique=len(visits),draws=sum(visits.values()),
+                minimum=min(visits.values(),default=0),maximum=max(visits.values(),default=0))
+        fits.append(dict(row,exposure=exposure,receipt_path=str(path),receipt_sha256=sha(path),
+            full_source_screen=bool(screens) and all(read_json(p)['full_source_screen'] for p in screens),
+            source_screen_receipts=[dict(path=str(p),sha256=sha(p)) for p in sorted(screens)]))
         folder=path.parent
+        history=folder/'history.jsonl'
+        if history.exists():
+            updates=[json.loads(line) for line in history.read_text().splitlines()]
+            fields=('loader_seconds','transfer_seconds','augmentation_seconds','loader_transfer_seconds',
+                    'encoder_head_seconds','backward_seconds','optimizer_seconds','compute_seconds')
+            runtime.append(dict(arm=row['arm'],source=row['source'],seed=row['seed'],
+                recorded_updates=len(updates),first_step=min(r['step'] for r in updates),
+                last_step=max(r['step'] for r in updates),
+                totals={k:sum(r.get(k,0.) for r in updates) for k in fields},
+                maximum_gradient_norm=max(r['gradient_norm'] for r in updates),
+                checkpoint_seconds=row['checkpoint_seconds'],wall_seconds=row['wall_seconds'],
+                includes_common_prefix=row['arm'] not in ('J_uniform','J_mined'),
+                cuda_kernel_profiler_seconds=None,
+                timing_scope='Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time'))
         if (folder/'diagnostics.jsonl').exists():
             for line in (folder/'diagnostics.jsonl').read_text().splitlines():
                 d=json.loads(line)
@@ -24,10 +70,13 @@ def run(args=None):
             source_scores.append(dict(arm=r['arm'],source=r['source'],seed=r['seed'],step=r['step'],application=app,
                 score=score['score'],delta=score['delta'],lost_supported_edges=score['lost_supported_edges'],clips=score['clips'],
                 division_tp=score['division_tp'],division_fp=score['division_fp'],division_fn=score['division_fn']))
-        calibrations.append({k:v for k,v in r['calibration'].items() if k!='rows'})
+        calibrations.append(dict(arm=r['arm'],seed=r['seed'],step=r['step'],
+            **{k:v for k,v in r['calibration'].items() if k!='rows'}))
     write_json(RESULTS/'training_receipts.json',dict(fits=fits,actual_receipts_required=True))
     write_csv(RESULTS/'training_curves.csv',curves)
     write_csv(RESULTS/'source_scores.csv',source_scores)
+    write_json(RESULTS/'runtime_breakdown.json',dict(training=runtime,
+        reason=None if runtime else 'Production optimizer histories are not complete yet'))
     write_json(RESULTS/'calibration_audit.json',dict(status='measured' if calibrations else 'pending',fits=calibrations,
         reason=None if calibrations else 'Adequate training and full source screens have not completed'))
     ledger=WORK/'resources/leases.jsonl';events=[]
@@ -71,13 +120,27 @@ def run(args=None):
         pooled=[r for r in target['pooled'] if r['arm']==arm]
         embryos=[r for r in target['embryos'] if r['arm']==arm]
         bp={r['embryo']:r['score'] for r in baseline['embryos'] if r['arm']=='P0'}
-        ready=len(pooled)==2 and len(embryos)==4 and (RESULTS/'fresh_image_validation.json').exists()
+        fresh=read_json(RESULTS/'fresh_image_validation.json') if (RESULTS/'fresh_image_validation.json').exists() else {}
+        gates=read_json(RESULTS/'validation.json')
+        checks=completion_gates(complete,arm,target,fresh,gates,fits,freeze,
+            read_json(RESULTS/'corrected_image_validation.json'),read_json(RESULTS/'matrix_parity.json'))
+        ready=all(checks.values()) and len(pooled)==2 and len(embryos)==4
         if ready and all(r['score']>.934864986413134 for r in pooled) and all(r['score']>=bp[r['embryo']] for r in embryos) \
                 and next(r['score'] for r in pooled if r['seed']==20260916)>.935178370257:
             recommendation=arm
         replication.update(recommended=bool(recommendation),nominee=arm,
             target_met_by_seed={str(r['seed']):r['score']>=.95 for r in pooled},
             robust_target_met=bool(recommendation and all(r['score']>=.95 for r in pooled)))
+        by_key={(r['arm'],r['seed']):r['score'] for r in target['pooled']}
+        mining={str(seed):by_key['J_mined',seed]-by_key['J_uniform',seed]
+            for seed in (20260916,314159) if ('J_mined',seed) in by_key and ('J_uniform',seed) in by_key}
+        by_embryo={(r['arm'],r['seed'],r['embryo']):r['score'] for r in target['embryos']}
+        mining_embryos={f'{seed}/{embryo}':by_embryo['J_mined',seed,embryo]-by_embryo['J_uniform',seed,embryo]
+            for seed in (20260916,314159) for embryo in ('44b6','6bba')
+            if ('J_mined',seed,embryo) in by_embryo and ('J_uniform',seed,embryo) in by_embryo}
+        replication.update(correctness_and_completion_gates=bool(ready),completion_checks=checks,
+            mining_delta_by_seed=mining,mining_delta_by_seed_and_embryo=mining_embryos,
+            replicated_mining_advantage=len(mining)==2 and all(v>0 for v in mining.values()))
         status['target_met']=replication['robust_target_met'];write_json(RESULTS/'STATUS.json',status)
     write_json(RESULTS/'replication.json',replication)
     if not (RESULTS/'stage_attribution.json').exists():
@@ -86,15 +149,23 @@ def run(args=None):
     if not (RESULTS/'error_transitions.csv').exists():write_csv(RESULTS/'error_transitions.csv',[])
     report=[f'Candidate recommended: {recommendation}' if recommendation else 'P0 retained','',
         f'Execution: **{status["status"]}**. Requested replicated score ≥0.95: **{"achieved" if status["target_met"] else "not established"}**.','',
-        '| Arm | Pooled score | Delta vs P0 | Delta vs C4_m6 | Status |',
-        '|---|---:|---:|---:|---|']
-    measured=(baseline['pooled'] if baseline else [])+(target['pooled'] if target else [])
+        '| Arm / seed | Scope | Score | Δ P0 | Δ C4_m6 | Edge TP / FP / FN | Division TP / FP / FN | Edge raw / adjusted | Selected / matched nodes | Node hash | Status |',
+        '|---|---|---:|---:|---:|---|---|---|---|---|---|']
+    measured=((baseline['pooled']+baseline['embryos']) if baseline else [])+((target['pooled']+target['embryos']) if target else [])
+    refs={(r['arm'],r['embryo']):r['score'] for r in (baseline['pooled']+baseline['embryos'] if baseline else [])}
+    node_ids=read_json(RESULTS/'node_identity.json')['corpora'] if (RESULTS/'node_identity.json').exists() else {}
     for r in measured:
-        report.append(f'| {r["arm"]}{" / "+str(r["seed"]) if "seed" in r else ""} | {r["score"]:.12f} | {r["score"]-.934864986413134:+.12f} | {r["score"]-.935178370257:+.12f} | {r["status"]} |')
+        scope=r['embryo']
+        edges=' / '.join(str(r['edge_'+k]) for k in ('tp','fp','fn'))
+        divisions=' / '.join(str(r['division_'+k]) for k in ('tp','fp','fn'))
+        report.append(f'| {r["arm"]}{" / "+str(r["seed"]) if "seed" in r else ""} | {scope} | {r["score"]:.12f} | '
+            f'{r["score"]-refs["P0",scope]:+.12f} | {r["score"]-refs["C4_m6",scope]:+.12f} | {edges} | {divisions} | '
+            f'{r["edge_jaccard"]:.9f} / {r["adj_edge_jaccard"]:.9f} | {r["num_pred_nodes"]} / {r["matched_nodes"]} | '
+            f'{r.get("node_identity_sha256",node_ids.get(scope,"pending"))[:12]} | {r["status"]} |')
     for arm in ('G30','J_uniform','J_mined'):
         if not any(r['arm']==arm for r in measured):
             reason='source qualification pending' if not target else 'source failed; target export not qualified'
-            report.append(f'| {arm} | null | null | null | {reason} |')
+            report.append(f'| {arm} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
     report+=['',f'{status["completed_directional_fits"]}/10 directional fits have completed their required updates. '
         'Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. '
         'The shared prefix is counted once in compute and does not make independent experiments.','',
@@ -111,7 +182,13 @@ def run(args=None):
         '[complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), '
         '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).','',
         f'Measured exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
-        'Full lease intervals include preprocessing. Kernel time, inference and checkpoint overhead remain separately recorded.','',
+        'Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, '
+        'augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.','',
+        'An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as '
+        'implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their '
+        'GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. '
+        '[Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), '
+        '[control compatibility](model_code_compatibility.json).','',
         'No production promotion, merge, Kaggle submission, weight publication or leaderboard claim has been made.']
     (RESULTS/'REPORT.md').write_text('\n'.join(report)+'\n')
     continuation=f'''Read REPORT.md and STATUS.json. Status: {status['status']}.

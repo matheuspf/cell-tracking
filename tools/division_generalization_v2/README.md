@@ -31,6 +31,11 @@ scales, shared 16/32/64-channel convolutions, spatial query sampling and two
 128-wide four-head temporal attention layers. Complete-action heads consume
 native evidence as features. All output differences initialize to literal zero.
 G30 uses only frozen native image/association/geometry features.
+Point queries use the actual stride-4/8/8 convolution lattice; raw validity masks
+use their separate voxel coordinates. The original misaligned image attempt is
+preserved under `invalid/feature_lattice_alignment` and contributes no scientific
+score. G30's unchanged nonimage code and outputs have a measured hash-compatibility
+receipt; old image checkpoints are rejected.
 
 Source preparation uses a fixed seed Bernoulli 1/16 sample of prediction-only
 anchors, independently of annotation component IDs. Separate positive exposure
@@ -48,6 +53,11 @@ Raw scenes may be cached. Trainable encoder representations are never reused
 across optimizer updates. See the execution lock for source-only selection and
 the single conditional 8192-update continuation.
 
+`prewarm --source 44b6 --shard 0 --shards 2` prepares raw scenes by clip/frame;
+run shard 1 for that source and both shards for 6bba for the four-worker layout
+measured here. Per-process atomic writes allow a training reader to share these
+immutable raw caches. They do not contain trainable representations.
+
 Correctness checks:
 
 ```sh
@@ -63,3 +73,15 @@ prediction-only job descriptions. Both directions and seeds are predicted before
 new target metrics are opened. Fresh proof reconstructs original P0 from renamed
 complete image clips and compares exact persisted candidate graphs and CSV/GEFF
 round trips. These local 4090 timings do not guarantee the Kaggle runtime.
+
+If max-selected held-source edits have fewer than five overlap groups in either
+class, `small_head_oof_plan.json` fixes a three-fold fallback. Each fold resets and
+refits the same small action heads for 4,096 updates, holding whole overlap groups
+out. Image point tokens come from an explicitly frozen source encoder. Its label
+exposure remains disclosed; only the head is out of fit. Failed fold feasibility
+or insufficient OOF support leaves calibration unestablished at the fixed zero
+boundary. These head fits never count toward the main joint-update floor.
+
+Frozen inference matrices reuse immutable graph state and prefetch up to eight
+raw scenes with four CPU workers. Original anchor order is preserved. Distinct
+checkpoint encoders always run separately; no trainable feature maps are shared.

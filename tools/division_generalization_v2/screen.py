@@ -47,7 +47,7 @@ def screen(source,arm,seed,step):
     if final.exists():return read_json(final)
     model,recipe=load_checkpoint(checkpoint)
     dataset=SourceDataset(source,'calibration',image=model.image)
-    calibration=calibrate(model,dataset,root/'calibration.json',recipe['amp'])
+    calibration=calibrate(model,dataset,root/'calibration.json',recipe['amp'],sha(checkpoint))
     scores={a:[] for a in ('protected','replacement')};baselines=[];lost={a:0 for a in scores}
     rows=inputs(source,'calibration')
     for i,row in enumerate(rows,1):
@@ -73,7 +73,9 @@ def screen(source,arm,seed,step):
     names=[r['dataset'] for r in rows]
     baseline=aggregate(baselines,names)
     summaries={app:dict(aggregate(rs,names),lost_supported_edges=lost[app],clips=len(rs)) for app,rs in scores.items()}
-    for app,a in summaries.items():a['delta']=a['score']-baseline['score']
+    for app,a in summaries.items():
+        a.update(a.pop('counts'))
+        a['delta']=a['score']-baseline['score']
     result=dict(source=source,arm=arm,seed=seed,step=step,status='measured',baseline=baseline,
         applications=summaries,per_clip=scores,calibration=calibration,
         checkpoint_sha256=sha(checkpoint),full_source_screen=True,target_used=False)
@@ -87,22 +89,30 @@ def run(args):
 
 def prepare_source_matrix(source):
     """Evaluate initial frozen checkpoints together to share raw I/O and bank work."""
+    if not read_json(RESULTS/'matrix_parity.json').get('image_models_exact'):
+        raise ValueError('Frozen image matrix must match single-checkpoint inference before full screens')
     from .infer import load_checkpoint
     from .dataset import SourceDataset
     from .calibration import run as calibrate
     specs={}
+    specification=WORK/'frozen_matrix'/source/'source_initial/specification.json'
+    frozen_specs=read_json(specification) if specification.exists() else None
     for arm in ('G30','J_uniform','J_mined'):
         for seed in ((20260916,) if arm=='G30' else (20260916,314159)):
             for step in ((4096,) if arm=='G30' else (3072,4096)):
                 key=f'{arm}-{seed}-{step}'
                 root=WORK/'screens'/arm/source/str(seed)/str(step)
+                if frozen_specs is not None and key not in frozen_specs:continue
+                if frozen_specs is None and (root/'summary.json').exists():continue
                 checkpoint=WORK/'training'/arm/source/str(seed)/f'checkpoint-{step}.pt'
                 model,recipe=load_checkpoint(checkpoint)
                 data=SourceDataset(source,'calibration',image=model.image)
-                cal=calibrate(model,data,root/'calibration.json',recipe['amp'])
+                cal=calibrate(model,data,root/'calibration.json',recipe['amp'],sha(checkpoint))
                 specs[key]=dict(checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),
                     calibration={k:cal[k] for k in ('status','temperature','intercept')},root=str(root))
                 del model,data
+    write_json(specification,specs,immutable=True)
+    if not specs:return
     for row in inputs(source,'calibration'):
         output=WORK/'frozen_matrix'/source/'source_initial'/row['dataset']
         job=dict(row={k:row[k] for k in ('dataset','image_path','image_shape','physical_scale','metadata_sha256')},
@@ -117,8 +127,15 @@ def prepare_source_matrix(source):
 
 def run_matrix(job,path):
     output=Path(job['output'])
-    if (output/'complete.json').exists():return
-    write_json(path,job,immutable=True)
-    with path.with_suffix('.log').open('a') as f:
-        p=subprocess.run([sys.executable,'-m','division_generalization_v2.matrix_entry',str(path)],stdout=f,stderr=subprocess.STDOUT)
-    if p.returncode:raise RuntimeError('Frozen matrix failed: '+str(path.with_suffix('.log')))
+    if not (output/'complete.json').exists():
+        write_json(path,job,immutable=True)
+        with path.with_suffix('.log').open('a') as f:
+            p=subprocess.run([sys.executable,'-m','division_generalization_v2.matrix_entry',str(path)],stdout=f,stderr=subprocess.STDOUT)
+        if p.returncode:raise RuntimeError('Frozen matrix failed: '+str(path.with_suffix('.log')))
+    complete=read_json(output/'complete.json')
+    if complete['partial_fixture'] or set(complete['packages'])!=set(job['packages']):
+        raise RuntimeError('Incomplete frozen matrix cannot be a scored full clip')
+    for key in job['packages']:
+        guard=read_json(output/key/'guard.json')
+        if guard['blocked_reads'] or guard['blocked_network'] or not guard['installed_before_numerical']:
+            raise RuntimeError('Matrix startup guard failed: '+key)

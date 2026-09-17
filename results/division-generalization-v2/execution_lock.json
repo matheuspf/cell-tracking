@@ -14,13 +14,13 @@
   },
   "source_profile": {
     "amp_enabled": true,
-    "amp_gradient_cosine": 0.999993085861206,
-    "amp_loss_relative_error": 7.971950073625387e-06,
+    "amp_gradient_cosine": 0.9999935030937195,
+    "amp_loss_relative_error": 1.15142699890827e-06,
     "bf16": {
-      "backward_seconds": 0.06962114199995995,
+      "backward_seconds": 0.04730801400000928,
       "finite": true,
-      "forward_seconds": 0.23013603999424959,
-      "loss": 5.383336067199707
+      "forward_seconds": 0.13392889000533614,
+      "loss": 5.383646488189697
     },
     "checkpoint_resume_exact": true,
     "context_frames": [
@@ -33,10 +33,10 @@
       3
     ],
     "fp32": {
-      "backward_seconds": 0.16877875700447476,
+      "backward_seconds": 0.10214067199558485,
       "finite": true,
-      "forward_seconds": 0.4228241859964328,
-      "loss": 5.383293151855469
+      "forward_seconds": 0.31670005199703155,
+      "loss": 5.383652687072754
     },
     "keys": [
       "44b6_12dfb391:29045",
@@ -44,37 +44,37 @@
       "44b6_0113de3b:6008",
       "44b6_0113de3b:6958"
     ],
-    "lease_seconds": 11.45790239499911,
-    "lease_wait_seconds": 0.02245392099575838,
+    "lease_seconds": 8.787637663997884,
+    "lease_wait_seconds": 0.01558333800494438,
     "microbatch_groups": 4,
     "overfit_curve": [
       {
         "step": 1,
-        "total": 5.1791486740112305
+        "total": 5.178603649139404
       },
       {
         "step": 16,
-        "total": 3.0268750190734863
+        "total": 3.0235538482666016
       },
       {
         "step": 32,
-        "total": 1.1234768629074097
+        "total": 0.9424403309822083
       },
       {
         "step": 64,
-        "total": 0.012648866511881351
+        "total": 0.01209772378206253
       },
       {
         "step": 96,
-        "total": 0.009524649009108543
+        "total": 0.009424188174307346
       }
     ],
     "source": "44b6",
     "status": "measured",
     "timings": {
-      "cold_loader_seconds": 1.5672552050018567,
-      "warm_fixture_update_seconds": 0.0631891400208436,
-      "warm_loader_seconds": 0.0037777429970446974
+      "cold_loader_seconds": 0.045361557000433095,
+      "warm_fixture_update_seconds": 0.05352166343755016,
+      "warm_loader_seconds": 0.0034775759995682165
     },
     "trainable_embedding_cache": false,
     "trainable_parameters": 490804

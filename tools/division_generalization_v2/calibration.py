@@ -15,9 +15,9 @@ def fit(rows):
     result=dict(status='calibration_unestablished',temperature=1.,intercept=0.,
         decision_units=len(rows),positive_groups=len(good_groups),negative_groups=len(bad_groups),
         scope='Sparse-supported max-selected source edits, not biological prevalence',
-        intercept_penalized=False,threshold=0.)
+        intercept_penalized=False,threshold=0.,source_groups_independently_certified=False)
     if len(good_groups)<5 or len(bad_groups)<5:
-        result['reason']='Fewer than five independent source overlap groups in one class; fixed zero relative gains retained'
+        result['reason']='Fewer than five distinct source overlap groups in one class; fixed zero relative gains retained'
         return result
     x=np.asarray([r['gain'] for r in rows]);y=np.asarray([r['target'] for r in rows])
     w=np.asarray([r['weight'] for r in rows],float);w/=w.sum()
@@ -40,7 +40,7 @@ def fit(rows):
 
 
 @torch.no_grad()
-def run(model,dataset,path,amp):
+def run(model,dataset,path,amp,checkpoint_sha256=None):
     if path.exists():return read_json(path)
     device='cuda' if model.image else 'cpu'
     split=read_json(RESULTS/'split_manifest.json')['directions'][dataset.source]
@@ -72,5 +72,11 @@ def run(model,dataset,path,amp):
             if model.image:torch.cuda.empty_cache()
     result=fit(rows)
     result.update(source=dataset.source,partition=dataset.partition,rows=rows,post_maximization=True,target_used=False)
+    if result['status']=='calibration_unestablished' and checkpoint_sha256 is not None:
+        from .head_oof import run as small_head_oof
+        original={k:v for k,v in result.items() if k!='rows'}
+        with torch.enable_grad():
+            result=small_head_oof(model,dataset,path.parent/'small_head_oof',amp,checkpoint_sha256)
+        result['original_held_source_support']=original
     write_json(path,result)
     return result

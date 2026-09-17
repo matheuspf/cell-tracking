@@ -1,0 +1,23 @@
+{
+  "G30_exact_outputs": true,
+  "image_checkpoints_accepted": false,
+  "models": [
+    {
+      "checkpoint_sha256": "e7d1bb76f3a64578386f1f5e21d10fd541b81e1943d77710d27d95548aea02a2",
+      "source": "44b6"
+    },
+    {
+      "checkpoint_sha256": "495e48980b8220c1b0d04e0024414c506f62d6c19ebf23ae54cae32846a9461d",
+      "source": "6bba"
+    }
+  ],
+  "new_model_sha256": "abd2d8c85575bad21ec62c1ff32394a6d68ab9280bf8366cccd6d137220a20cd",
+  "old_model_sha256": "e962344f58c9c47e358929cd9eed523289f9234ea97d9b2ec8ba42bd18db97b0",
+  "reason": "Only image feature-lattice sampling changed; G30 never constructs or calls the image encoder",
+  "status": "measured",
+  "unchanged_AST": [
+    "ActionModel",
+    "mlp",
+    "loss"
+  ]
+}
