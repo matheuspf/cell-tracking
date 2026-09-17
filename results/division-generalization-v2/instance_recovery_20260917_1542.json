@@ -1,0 +1,140 @@
+{
+  "calibrations": 18,
+  "completed_source_clips": 10,
+  "completed_target_clips": 0,
+  "host_boot_utc": 1789641219.0,
+  "lease_reconciliation_required": false,
+  "new_worker_launched": false,
+  "reason": "Original queue and current inference worker remained live and progress advanced across the chat interruption",
+  "recorded": "2026-09-17T15:43:14.937648+00:00",
+  "status": "original_queue_survived",
+  "training_receipts": [
+    {
+      "arm": "G30",
+      "receipt_sha256": "b5ea353c15b71d540494d06382837b8c8eb1363927d60f0049bdf4e8bf7e643c",
+      "seed": 20260916,
+      "source": "6bba",
+      "updates": 4096
+    },
+    {
+      "arm": "G30",
+      "receipt_sha256": "7407dcb61c6aee8eeab435cd1c30c4f8b8323369a46219c3c0ab0caded653d97",
+      "seed": 20260916,
+      "source": "44b6",
+      "updates": 4096
+    },
+    {
+      "arm": "prefix",
+      "receipt_sha256": "546fe1403f7a32b2a0a435c830caabf3fb25647189c1f9012abd3faff6733d19",
+      "seed": 314159,
+      "source": "6bba",
+      "updates": 2048
+    },
+    {
+      "arm": "prefix",
+      "receipt_sha256": "7044c057bedfac020230bbf9aa32f1eaeb85ed5a044c0ce2fff6f2a3ea3bf5f8",
+      "seed": 20260916,
+      "source": "6bba",
+      "updates": 2048
+    },
+    {
+      "arm": "prefix",
+      "receipt_sha256": "e90df92a5e08307dd6687dbb0a9ba4418fa4d1a609b7ced000f7b876b3b6dd48",
+      "seed": 314159,
+      "source": "44b6",
+      "updates": 2048
+    },
+    {
+      "arm": "prefix",
+      "receipt_sha256": "d0e628a25f8e07bcc84d441af257c2598732cc6ba70b1bc5e6e2e7072e2eb255",
+      "seed": 20260916,
+      "source": "44b6",
+      "updates": 2048
+    },
+    {
+      "arm": "J_uniform",
+      "receipt_sha256": "808433518020198daadaf917e42882442fa4856d9727dd5390deb0ad66408d0f",
+      "seed": 314159,
+      "source": "6bba",
+      "updates": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "receipt_sha256": "8c68642fd73f2b208fd6491eb71e9a8ccdd73ef5917c0e7325e359ce4128bcd5",
+      "seed": 20260916,
+      "source": "6bba",
+      "updates": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "receipt_sha256": "740fcb61759fad830c4e889dc0ed1fdd02fc0a02f5c3523a3e22786d46531320",
+      "seed": 314159,
+      "source": "44b6",
+      "updates": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "receipt_sha256": "a0d7cd05a86f42b52f7002b94fa00203daf4b2e6826401a871ad06c339c5d429",
+      "seed": 20260916,
+      "source": "44b6",
+      "updates": 4096
+    },
+    {
+      "arm": "J_mined",
+      "receipt_sha256": "265e1d4eca22ce79d06f95d8c777b951be55ed4a5c228b1a43820b08985ad827",
+      "seed": 314159,
+      "source": "6bba",
+      "updates": 4096
+    },
+    {
+      "arm": "J_mined",
+      "receipt_sha256": "a44573eaef0317e7e025e0c50ecb5c1771c5b6a66e1ecbd249fa573be1e4be4a",
+      "seed": 20260916,
+      "source": "6bba",
+      "updates": 4096
+    },
+    {
+      "arm": "J_mined",
+      "receipt_sha256": "9c35e48955fc32307dcbed10d6aded46aa50b1cca054b3bfa80384b468676498",
+      "seed": 314159,
+      "source": "44b6",
+      "updates": 4096
+    },
+    {
+      "arm": "J_mined",
+      "receipt_sha256": "58b7a5d46d089986e78ba5921773456222f732b647f52ec699c4eb84bb1aef89",
+      "seed": 20260916,
+      "source": "44b6",
+      "updates": 4096
+    }
+  ],
+  "workers": [
+    {
+      "command": [
+        "queue"
+      ],
+      "module": "division_generalization_v2",
+      "pid": 15784,
+      "started": 1789642590.06
+    },
+    {
+      "command": [
+        "source-matrix",
+        "--source",
+        "44b6"
+      ],
+      "module": "division_generalization_v2",
+      "pid": 242652,
+      "started": 1789654322.12
+    },
+    {
+      "anchors": 3200,
+      "dataset": "44b6_b2c44266",
+      "module": "division_generalization_v2.matrix_entry",
+      "pid": 348846,
+      "seconds": 148.75954374199864,
+      "started": 1789659637.02,
+      "total_anchors": 17538
+    }
+  ]
+}

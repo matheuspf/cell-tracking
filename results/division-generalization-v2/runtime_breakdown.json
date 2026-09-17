@@ -63,6 +63,310 @@
     },
     {
       "counts": {
+        "actions": 1696348,
+        "anchors": 7570
+      },
+      "dataset": "44b6_0db75fae",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_0db75fae/complete.json",
+      "seconds": 579.6041312779998,
+      "sha256": "b69fc0455b7fc46e64450162ca281b7092e5d7787fa3d42c53e1734210abac51",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 125.3612031780267,
+        "J_mined-20260916-4096_model_seconds": 62.1052423941037,
+        "J_mined-314159-3072_model_seconds": 54.41486606900071,
+        "J_mined-314159-4096_model_seconds": 53.851261933057685,
+        "J_uniform-20260916-3072_model_seconds": 53.673769099925266,
+        "J_uniform-20260916-4096_model_seconds": 53.68848808601979,
+        "J_uniform-314159-3072_model_seconds": 53.74472581582813,
+        "J_uniform-314159-4096_model_seconds": 53.75932740201824,
+        "bank_features_worker_seconds": 120.05223585999192,
+        "lease_seconds": 573.5483276849973,
+        "loader_worker_seconds": 117.94415774788467,
+        "transfer_seconds": 51.44273378206344,
+        "wait_seconds": 0.31678556299812044
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2807823,
+        "anchors": 11894
+      },
+      "dataset": "44b6_24264f12",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_24264f12/complete.json",
+      "seconds": 816.03649185,
+      "sha256": "ffe4284adff21a280aa2b80bd7d49b9c235cf76723161669f6bf86a3933d5ab7",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 187.86139791090136,
+        "J_mined-20260916-4096_model_seconds": 86.37070598914761,
+        "J_mined-314159-3072_model_seconds": 75.31116621295223,
+        "J_mined-314159-4096_model_seconds": 74.9822596160393,
+        "J_uniform-20260916-3072_model_seconds": 75.59827265396052,
+        "J_uniform-20260916-4096_model_seconds": 75.34096632516594,
+        "J_uniform-314159-3072_model_seconds": 75.03056625785393,
+        "J_uniform-314159-4096_model_seconds": 74.60542483794052,
+        "bank_features_worker_seconds": 177.98827681596413,
+        "lease_seconds": 810.3498236639989,
+        "loader_worker_seconds": 154.20377432207533,
+        "transfer_seconds": 68.9377256668522,
+        "wait_seconds": 0.42254502499963564
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 343029,
+        "anchors": 2724
+      },
+      "dataset": "44b6_341df25f",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_341df25f/complete.json",
+      "seconds": 104.78683505400113,
+      "sha256": "a6f0ac38f3eb3df893765f97c29e18f1900947abb3449cb3b2f4821f4b81b690",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 19.05429446004564,
+        "J_mined-20260916-4096_model_seconds": 11.514736769016963,
+        "J_mined-314159-3072_model_seconds": 10.296724093990633,
+        "J_mined-314159-4096_model_seconds": 10.48573866399056,
+        "J_uniform-20260916-3072_model_seconds": 10.152171839003131,
+        "J_uniform-20260916-4096_model_seconds": 10.010912954967353,
+        "J_uniform-314159-3072_model_seconds": 10.001438507955754,
+        "J_uniform-314159-4096_model_seconds": 10.133875681980498,
+        "bank_features_worker_seconds": 15.609139936972497,
+        "lease_seconds": 103.4986933049986,
+        "loader_worker_seconds": 33.02238517902515,
+        "transfer_seconds": 9.135636307057212,
+        "wait_seconds": 0.05719004600177868
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2589694,
+        "anchors": 12006
+      },
+      "dataset": "44b6_5f15d135",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_5f15d135/complete.json",
+      "seconds": 771.1979992059987,
+      "sha256": "962d567eabc9708e0a1f9852c06e2b7590f65f97c57170451f9df4f384d3dd30",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 162.80838366206444,
+        "J_mined-20260916-4096_model_seconds": 81.71846520484905,
+        "J_mined-314159-3072_model_seconds": 72.44788470887943,
+        "J_mined-314159-4096_model_seconds": 71.61138843706067,
+        "J_uniform-20260916-3072_model_seconds": 72.0540728870983,
+        "J_uniform-20260916-4096_model_seconds": 71.82915646213041,
+        "J_uniform-314159-3072_model_seconds": 71.70918375099609,
+        "J_uniform-314159-4096_model_seconds": 71.53748336003991,
+        "bank_features_worker_seconds": 160.3835563169996,
+        "lease_seconds": 764.3651821880012,
+        "loader_worker_seconds": 159.172120205978,
+        "transfer_seconds": 73.03995397300605,
+        "wait_seconds": 0.3866579940022348
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 471029,
+        "anchors": 3329
+      },
+      "dataset": "44b6_81c256f0",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_81c256f0/complete.json",
+      "seconds": 228.22237911600132,
+      "sha256": "c7807c27d6d8a9f691086c2b3ccf746e760ec5c47503933341e2455d250d3add",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 40.83919150496149,
+        "J_mined-20260916-4096_model_seconds": 25.50931557700096,
+        "J_mined-314159-3072_model_seconds": 22.481215032157706,
+        "J_mined-314159-4096_model_seconds": 22.42397992293445,
+        "J_uniform-20260916-3072_model_seconds": 22.261266420073298,
+        "J_uniform-20260916-4096_model_seconds": 22.2275633450663,
+        "J_uniform-314159-3072_model_seconds": 22.236439421034447,
+        "J_uniform-314159-4096_model_seconds": 22.20499907991143,
+        "bank_features_worker_seconds": 35.57833157514142,
+        "lease_seconds": 225.0920256180052,
+        "loader_worker_seconds": 60.221546528107865,
+        "transfer_seconds": 19.75245765600448,
+        "wait_seconds": 0.1258427339980699
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 3462128,
+        "anchors": 13634
+      },
+      "dataset": "44b6_8f5ab931",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_8f5ab931/complete.json",
+      "seconds": 798.0634801800006,
+      "sha256": "4124fcd6cae93343623673f5d05f2447aac873962dc52ff4bcbbb20df8692a94",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 189.5898908416748,
+        "J_mined-20260916-4096_model_seconds": 82.61079081995194,
+        "J_mined-314159-3072_model_seconds": 72.79912107108612,
+        "J_mined-314159-4096_model_seconds": 72.14657684510166,
+        "J_uniform-20260916-3072_model_seconds": 72.08682991314345,
+        "J_uniform-20260916-4096_model_seconds": 72.2836797004311,
+        "J_uniform-314159-3072_model_seconds": 72.01178201408766,
+        "J_uniform-314159-4096_model_seconds": 71.5760752369606,
+        "bank_features_worker_seconds": 185.66132691275925,
+        "lease_seconds": 792.9027608100041,
+        "loader_worker_seconds": 148.65348126093886,
+        "transfer_seconds": 71.4811880091329,
+        "wait_seconds": 0.40404454299641657
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 5733212,
+        "anchors": 21829
+      },
+      "dataset": "44b6_949adeb1",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_949adeb1/complete.json",
+      "seconds": 964.2919536890004,
+      "sha256": "439437f3069300994e3283a91941c8ed9ae626b5f8237aef2a6a678463ac48ed",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 235.56633098793463,
+        "J_mined-20260916-4096_model_seconds": 97.03153732213468,
+        "J_mined-314159-3072_model_seconds": 86.10998052384457,
+        "J_mined-314159-4096_model_seconds": 86.06547128795137,
+        "J_uniform-20260916-3072_model_seconds": 85.92788956730146,
+        "J_uniform-20260916-4096_model_seconds": 85.3846844232794,
+        "J_uniform-314159-3072_model_seconds": 84.70299313780924,
+        "J_uniform-314159-4096_model_seconds": 84.58882821648876,
+        "bank_features_worker_seconds": 235.52478838124807,
+        "lease_seconds": 956.5582719749946,
+        "loader_worker_seconds": 171.93735706482767,
+        "transfer_seconds": 91.15153324986386,
+        "wait_seconds": 0.4444499960045505
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 217093,
+        "anchors": 3002
+      },
+      "dataset": "44b6_996155de",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_996155de/complete.json",
+      "seconds": 103.59330002899878,
+      "sha256": "9de2d0615e59f72c03b51f8f45dfcf446c49b61e1e5e00d4d49a2a84c5793f37",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 16.49901743299415,
+        "J_mined-20260916-4096_model_seconds": 11.648556725947856,
+        "J_mined-314159-3072_model_seconds": 10.664949565933057,
+        "J_mined-314159-4096_model_seconds": 10.827066498964996,
+        "J_uniform-20260916-3072_model_seconds": 10.619874203912332,
+        "J_uniform-20260916-4096_model_seconds": 10.550766222007951,
+        "J_uniform-314159-3072_model_seconds": 10.63223516095968,
+        "J_uniform-314159-4096_model_seconds": 10.600058503016044,
+        "bank_features_worker_seconds": 10.939649625932361,
+        "lease_seconds": 102.16440723999767,
+        "loader_worker_seconds": 32.671439244018984,
+        "transfer_seconds": 7.718770611096261,
+        "wait_seconds": 0.057065657994826324
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
         "actions": 9392743,
         "anchors": 35191
       },
