@@ -1,0 +1,115 @@
+{
+  "checkpoint_interval": 128,
+  "microbatch_groups": 4,
+  "model": "Shared two-scale scene Conv3D 16/32/64; spatial query; two ordered 128-wide four-head attention layers",
+  "new_target_model_results_read": false,
+  "precision": "BF16 autocast with FP32 reductions",
+  "resources": {
+    "cache_gib": 80,
+    "cpu_threads": 16,
+    "disk_floor_gib": 20,
+    "gpu_total_gib": 20,
+    "lease_hours": 72,
+    "rss_gib": 50
+  },
+  "source_profile": {
+    "amp_enabled": true,
+    "amp_gradient_cosine": 0.999993085861206,
+    "amp_loss_relative_error": 7.971950073625387e-06,
+    "bf16": {
+      "backward_seconds": 0.06962114199995995,
+      "finite": true,
+      "forward_seconds": 0.23013603999424959,
+      "loss": 5.383336067199707
+    },
+    "checkpoint_resume_exact": true,
+    "context_frames": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "fp32": {
+      "backward_seconds": 0.16877875700447476,
+      "finite": true,
+      "forward_seconds": 0.4228241859964328,
+      "loss": 5.383293151855469
+    },
+    "keys": [
+      "44b6_12dfb391:29045",
+      "44b6_0113de3b:5749",
+      "44b6_0113de3b:6008",
+      "44b6_0113de3b:6958"
+    ],
+    "lease_seconds": 11.45790239499911,
+    "lease_wait_seconds": 0.02245392099575838,
+    "microbatch_groups": 4,
+    "overfit_curve": [
+      {
+        "step": 1,
+        "total": 5.1791486740112305
+      },
+      {
+        "step": 16,
+        "total": 3.0268750190734863
+      },
+      {
+        "step": 32,
+        "total": 1.1234768629074097
+      },
+      {
+        "step": 64,
+        "total": 0.012648866511881351
+      },
+      {
+        "step": 96,
+        "total": 0.009524649009108543
+      }
+    ],
+    "source": "44b6",
+    "status": "measured",
+    "timings": {
+      "cold_loader_seconds": 1.5672552050018567,
+      "warm_fixture_update_seconds": 0.0631891400208436,
+      "warm_loader_seconds": 0.0037777429970446974
+    },
+    "trainable_embedding_cache": false,
+    "trainable_parameters": 490804
+  },
+  "training": {
+    "automatic_budget_shrink": false,
+    "branch_updates": 2048,
+    "calibration": "Decision-unit held source; >=5 positive overlap groups and >=5 negative overlap groups, otherwise unestablished zero gain",
+    "common_prefix_updates": 2048,
+    "confuser_slots": 8,
+    "decay_start": 3277,
+    "decision_boundary": 0.0,
+    "effective_batch_groups": 32,
+    "extension": "Both branches: held loss improves >=1% at 4096 vs 3072 and full source score does not regress",
+    "gradient_clip": 1.0,
+    "joint_updates": 4096,
+    "keep_on_ties": true,
+    "learning_rate": 0.0003,
+    "lr_floor_ratio": 0.1,
+    "max_changed_edge_fraction": 0.02,
+    "mining_refresh_updates": [
+      2048,
+      3072
+    ],
+    "normalization": "Per-frame fixed 1/99 quantiles; no fitted target statistics",
+    "optional_max_joint_updates": 8192,
+    "positive_slots": 8,
+    "random_anchor_probability": 0.0625,
+    "random_anchor_seed": 20260916,
+    "random_supported_slots": 16,
+    "sampling": "Bernoulli anchors independent of labels; source positive augmentation is a separate nonpopulation stream",
+    "selection": "Best nonregressing full source calibration score, then fewer lost supported edges, then earlier update",
+    "unknown_as_negative": false,
+    "warmup_updates": 128,
+    "weight_decay": 0.0001
+  },
+  "training_floor_unchanged": true
+}

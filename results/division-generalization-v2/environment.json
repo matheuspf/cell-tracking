@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.3",
+    "polars": "1.42.0",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cu128",
+    "tracksdata": "0.1.0rc6.dev3+g980c2d30a",
+    "zarr": "3.2.1"
+  },
+  "python": "3.12.14",
+  "runtime": "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+  "shared_environment_modified": false
+}

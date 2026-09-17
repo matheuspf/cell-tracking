@@ -1,0 +1,11 @@
+{
+  "independent_experiments": false,
+  "paired_shared_prefix": true,
+  "reason": "Recommendation requires all complete graphs, both seeds and fresh gates",
+  "recommended": false,
+  "seeds": [
+    20260916,
+    314159
+  ],
+  "status": "pending"
+}

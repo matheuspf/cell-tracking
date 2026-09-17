@@ -1,0 +1,67 @@
+{
+  "amp_enabled": true,
+  "amp_gradient_cosine": 0.999993085861206,
+  "amp_loss_relative_error": 7.971950073625387e-06,
+  "bf16": {
+    "backward_seconds": 0.06962114199995995,
+    "finite": true,
+    "forward_seconds": 0.23013603999424959,
+    "loss": 5.383336067199707
+  },
+  "checkpoint_resume_exact": true,
+  "context_frames": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "fp32": {
+    "backward_seconds": 0.16877875700447476,
+    "finite": true,
+    "forward_seconds": 0.4228241859964328,
+    "loss": 5.383293151855469
+  },
+  "keys": [
+    "44b6_12dfb391:29045",
+    "44b6_0113de3b:5749",
+    "44b6_0113de3b:6008",
+    "44b6_0113de3b:6958"
+  ],
+  "lease_seconds": 11.45790239499911,
+  "lease_wait_seconds": 0.02245392099575838,
+  "microbatch_groups": 4,
+  "overfit_curve": [
+    {
+      "step": 1,
+      "total": 5.1791486740112305
+    },
+    {
+      "step": 16,
+      "total": 3.0268750190734863
+    },
+    {
+      "step": 32,
+      "total": 1.1234768629074097
+    },
+    {
+      "step": 64,
+      "total": 0.012648866511881351
+    },
+    {
+      "step": 96,
+      "total": 0.009524649009108543
+    }
+  ],
+  "source": "44b6",
+  "status": "measured",
+  "timings": {
+    "cold_loader_seconds": 1.5672552050018567,
+    "warm_fixture_update_seconds": 0.0631891400208436,
+    "warm_loader_seconds": 0.0037777429970446974
+  },
+  "trainable_embedding_cache": false,
+  "trainable_parameters": 490804
+}

@@ -1,0 +1,17 @@
+{
+  "exclusive_lease_seconds": 762.9772321450146,
+  "open_leases": [
+    {
+      "event": "begin",
+      "purpose": "inference/44b6_e31261b4",
+      "token": "2771845-1789606905728342604",
+      "utc": "2026-09-17T01:01:45.728658+00:00",
+      "wait_seconds": 0.023930307994305622
+    }
+  ],
+  "peak_process_tree_rss_gib": 2.430622100830078,
+  "peak_total_gpu_gib": 3.732421875,
+  "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
+  "study_disk_gib": 0.2576834633946419,
+  "wait_seconds": 0.5738760500025819
+}

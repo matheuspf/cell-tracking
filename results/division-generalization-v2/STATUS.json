@@ -1,0 +1,51 @@
+{
+  "active_processes": [
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
+        "prepare",
+        "--source",
+        "44b6"
+      ],
+      "pid": 2657752,
+      "started": 1789604958.48
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
+        "prepare",
+        "--source",
+        "6bba"
+      ],
+      "pid": 2657753,
+      "started": 1789604958.5
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
+        "queue"
+      ],
+      "pid": 2793634,
+      "started": 1789606378.24
+    }
+  ],
+  "completed_directional_fits": 0,
+  "new_target_scores": null,
+  "prepared_clips": {
+    "44b6": 50,
+    "6bba": 79
+  },
+  "production_default": "P0",
+  "reason": "Full training, full source screens, frozen target comparison and fresh proof remain required",
+  "required_directional_fits": 10,
+  "status": "incomplete_resumable",
+  "study": "division-generalization-v2",
+  "target_met": false,
+  "updated": "2026-09-17T01:01:49.042634+00:00"
+}

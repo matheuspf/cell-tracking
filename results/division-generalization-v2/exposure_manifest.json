@@ -1,0 +1,74 @@
+{
+  "global_acquisition_offsets_available": false,
+  "image_encoder": "Random initialization; upstream P0 observations remain exposed",
+  "inherited": {
+    "E_hgb_44b6": {
+      "path": "/kaggle/working/cell-tracking/strong-tracker-v2/models/44b6/E_hgb.joblib",
+      "sha256": "031a85764d514148a2283b5bc529f7bc4623dd0d9189ff7a02d3fc20bad8911f"
+    },
+    "E_hgb_6bba": {
+      "path": "/kaggle/working/cell-tracking/strong-tracker-v2/models/6bba/E_hgb.joblib",
+      "sha256": "7eb9cf059b31d7d932254ba985a6e3c0c58a3743a3991fa8130a71dbc7d60afe"
+    },
+    "G_C4_44b6": {
+      "exposure": [
+        "released simulator calibrated on Biohub 44b6",
+        "incumbent detections from public neural checkpoints",
+        "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+      ],
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/G_C4_44b6.pt",
+      "sha256": "04806c9ac8aa22806826c61208ff9b130c04b5dec9fe5da962d8900f0ae19d64"
+    },
+    "G_C4_6bba": {
+      "exposure": [
+        "released simulator calibrated on Biohub 44b6",
+        "incumbent detections from public neural checkpoints",
+        "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+      ],
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/G_C4_6bba.pt",
+      "sha256": "c7bb92bf3c900e70581a144a2609a179c0a82228f12c227c5aa94d34ae4297f6"
+    },
+    "I_C4_44b6": {
+      "exposure": [
+        "released simulator calibrated on Biohub 44b6",
+        "incumbent detections from public neural checkpoints",
+        "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+      ],
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_44b6.pt",
+      "sha256": "f9c6dc3b98ea7a49f6241dced85f062e0480533a9943f5aa0ba086dd202b968f"
+    },
+    "I_C4_6bba": {
+      "exposure": [
+        "released simulator calibrated on Biohub 44b6",
+        "incumbent detections from public neural checkpoints",
+        "historical v2 E teachers and v3 graph processing retain inherited target exposure"
+      ],
+      "path": "/kaggle/working/cell-tracking/multidata-training-v4/models/I_C4_6bba.pt",
+      "sha256": "b35dc33e98cc20702e8cb5978b0b5a99bcf167e2d7c4504dc132fd0b7c2e8beb"
+    },
+    "P0_44b6": {
+      "path": "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_44b6.json",
+      "sha256": "938b9f1d4510cc992fbbc3ded648fd63cce8456da2cfa3dbd3f14fad6a80b18d"
+    },
+    "P0_6bba": {
+      "path": "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_6bba.json",
+      "sha256": "2ab4d37bc184aa8bed8ddaa5d45ae364b59e794a0d9029143460d7e120978199"
+    },
+    "deepcenter": {
+      "path": "/kaggle/input/biohub-deepcenter-unet3d-center-prior-v1/weights/full_frame_center/best.pt",
+      "sha256": "8040999a92f6b7bbd98fa8cf458141e045c0f9ad7c936bdb3b18e1f7edafe2a0"
+    },
+    "primary": {
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/tracking_repo/weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "12f6881ee3620a831697ca098ff8f48e687a24225f4e048b538deec3562fe771"
+    },
+    "secondary": {
+      "path": "/kaggle/working/cell-tracking/annotation-selection-v1/public_harmonic_full/secondary_seed_weights/unet_transformer/split_0/edge_predictor_best.pth",
+      "sha256": "9bac2fa0dadc4a6fc1899e0caf187f4b553e0a7cd90ba1261a68b35ffe9e305f"
+    }
+  },
+  "no_new_external_data": true,
+  "prior_model_manifest_sha256": "028125a357c6dbd28aff2d6395f6183c40bda06d700f2f00af176256abef6777",
+  "scope": "Source-only direct fitting on exposed P0; exploratory inner split; not clean OOF",
+  "source_groups_independent": false
+}

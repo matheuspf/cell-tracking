@@ -1,0 +1,58 @@
+{
+  "actual_zero_scorer_fixtures": [
+    {
+      "csv": {
+        "edges": 4682,
+        "exact_roundtrip": true,
+        "nodes": 4791,
+        "rows": 9473
+      },
+      "dataset": "44b6_95029e92",
+      "disable_exact": true,
+      "full_clip": true,
+      "geff": {
+        "edges": 4682,
+        "exact_roundtrip": true,
+        "nodes": 4791,
+        "stable_id_attribute": "study_node_id"
+      },
+      "literal_zero_exact": true,
+      "trace": {
+        "actions": 8388,
+        "anchors": 844,
+        "positive_gains": 0
+      }
+    },
+    {
+      "csv": {
+        "edges": 3416,
+        "exact_roundtrip": true,
+        "nodes": 3480,
+        "rows": 6896
+      },
+      "dataset": "6bba_2540cd90",
+      "disable_exact": true,
+      "full_clip": true,
+      "geff": {
+        "edges": 3416,
+        "exact_roundtrip": true,
+        "nodes": 3480,
+        "stable_id_attribute": "study_node_id"
+      },
+      "literal_zero_exact": true,
+      "trace": {
+        "actions": 2809,
+        "anchors": 417,
+        "positive_gains": 0
+      }
+    }
+  ],
+  "complete_counterfactual_replays": 0,
+  "fresh_image_proof": "pending",
+  "literal_zero_path_test": true,
+  "pytest_log_sha256": "57cd7ff068f2f62ddb19375cc18c22f12b9f1388ecaa81156dc3a0d44ee0d6a4",
+  "seconds": 15.25974206400133,
+  "status": "measured",
+  "target_comparisons": "pending",
+  "unit_tests_passed": true
+}
