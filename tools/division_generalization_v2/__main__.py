@@ -6,7 +6,7 @@ import os
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['baselines', 'prepare', 'prewarm', 'validate', 'profile', 'train', 'screen', 'source-matrix', 'queue', 'report'])
+    parser.add_argument('command', choices=['baselines', 'prepare', 'prewarm', 'validate', 'profile', 'train', 'screen', 'source-matrix', 'queue', 'report', 'status'])
     parser.add_argument('--source', choices=['44b6', '6bba'])
     parser.add_argument('--arm', choices=['G30', 'prefix', 'J_uniform', 'J_mined'], default='G30')
     parser.add_argument('--seed', type=int, default=20260916)

@@ -51,20 +51,20 @@
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2.prediction_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/jobs/44b6_b2c44266.json"
+        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/jobs/44b6_ddf577ad.json"
       ],
-      "pid": 3422047,
-      "started": 1789612812.43
+      "pid": 3534901,
+      "started": 1789613952.15
     },
     {
       "command": [
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2.prediction_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/jobs/6bba_b1ae37b9.json"
+        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/jobs/6bba_fe670320.json"
       ],
-      "pid": 3424715,
-      "started": 1789612841.2
+      "pid": 3572378,
+      "started": 1789614339.36
     },
     {
       "command": [
@@ -75,12 +75,22 @@
         "--source",
         "44b6",
         "--arm",
-        "prefix",
+        "J_uniform",
         "--seed",
         "20260916"
       ],
-      "pid": 3429012,
-      "started": 1789612884.01
+      "pid": 3572717,
+      "started": 1789614342.55
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
+        "report"
+      ],
+      "pid": 3575293,
+      "started": 1789614369.68
     }
   ],
   "completed_directional_fits": 2,
@@ -95,5 +105,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T02:41:59.272396+00:00"
+  "updated": "2026-09-17T03:06:11.020438+00:00"
 }

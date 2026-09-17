@@ -25,6 +25,8 @@ Stages can be resumed individually using `baselines`, `prepare --source 44b6`,
 Inspect actual processes before starting a queue; it holds its own worker lock
 and cooperates with the inherited GPU lock. A `--stop-at` training boundary is an
 interruption of the immutable fit budget, never a smaller scientific experiment.
+`$STUDY_PY -m division_generalization_v2 status` reads live workers and their
+current update/anchor progress without treating old PID or progress files as live.
 
 The main model uses stationary t−3…t+3 native 16×64×64 scenes at two physical
 scales, shared 16/32/64-channel convolutions, spatial query sampling and two
