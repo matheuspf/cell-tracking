@@ -62,6 +62,9 @@ further joint updates. Mining refreshes at 2048 and 3072 retain the random strea
 Raw scenes may be cached. Trainable encoder representations are never reused
 across optimizer updates. See the execution lock for source-only selection and
 the single conditional 8192-update continuation.
+If that source rule qualifies, both matched arms complete 8192 updates before
+a shared two-model source matrix is evaluated. Immutable per-invocation receipts
+retain earlier training costs, including costs before a resumed continuation.
 
 `prewarm --source 44b6 --shard 0 --shards 2` prepares raw scenes by clip/frame;
 run shard 1 for that source and both shards for 6bba for the four-worker layout

@@ -87,7 +87,16 @@ def run(args):
     return screen(args.source,args.arm,args.seed,args.stop_at or 4096)
 
 
-def prepare_source_matrix(source):
+def matrix_members(extension_seed=None):
+    if extension_seed is not None:
+        if extension_seed not in (20260916,314159):raise ValueError('Unregistered extension seed')
+        return [(arm,extension_seed,8192) for arm in ('J_uniform','J_mined')]
+    return [(arm,seed,step) for arm in ('G30','J_uniform','J_mined')
+            for seed in ((20260916,) if arm=='G30' else (20260916,314159))
+            for step in ((4096,) if arm=='G30' else (3072,4096))]
+
+
+def prepare_source_matrix(source,extension_seed=None):
     """Evaluate initial frozen checkpoints together to share raw I/O and bank work."""
     if not read_json(RESULTS/'matrix_parity.json').get('image_models_exact'):
         raise ValueError('Frozen image matrix must match single-checkpoint inference before full screens')
@@ -100,30 +109,31 @@ def prepare_source_matrix(source):
     from .dataset import SourceDataset
     from .calibration import run as calibrate
     specs={}
-    specification=WORK/'frozen_matrix'/source/'source_initial/specification.json'
+    tag='source_initial' if extension_seed is None else f'extension-{extension_seed}'
+    if extension_seed is not None and not read_json(RESULTS/f'extension-{source}-{extension_seed}.json')['extend']:
+        raise ValueError('Paired extension requires the recorded source-only qualification rule')
+    specification=WORK/'frozen_matrix'/source/tag/'specification.json'
     frozen_specs=read_json(specification) if specification.exists() else None
-    for arm in ('G30','J_uniform','J_mined'):
-        for seed in ((20260916,) if arm=='G30' else (20260916,314159)):
-            for step in ((4096,) if arm=='G30' else (3072,4096)):
-                key=f'{arm}-{seed}-{step}'
-                root=WORK/'screens'/arm/source/str(seed)/str(step)
-                if frozen_specs is not None and key not in frozen_specs:continue
-                if frozen_specs is None and (root/'summary.json').exists():continue
-                checkpoint=WORK/'training'/arm/source/str(seed)/f'checkpoint-{step}.pt'
-                model,recipe=load_checkpoint(checkpoint)
-                data=SourceDataset(source,'calibration',image=model.image)
-                cal=calibrate(model,data,root/'calibration.json',recipe['amp'],sha(checkpoint))
-                specs[key]=dict(checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),
-                    calibration={k:cal[k] for k in ('status','temperature','intercept')},root=str(root))
-                del model,data
+    for arm,seed,step in matrix_members(extension_seed):
+        key=f'{arm}-{seed}-{step}'
+        root=WORK/'screens'/arm/source/str(seed)/str(step)
+        if frozen_specs is not None and key not in frozen_specs:continue
+        if frozen_specs is None and (root/'summary.json').exists():continue
+        checkpoint=WORK/'training'/arm/source/str(seed)/f'checkpoint-{step}.pt'
+        model,recipe=load_checkpoint(checkpoint)
+        data=SourceDataset(source,'calibration',image=model.image)
+        cal=calibrate(model,data,root/'calibration.json',recipe['amp'],sha(checkpoint))
+        specs[key]=dict(checkpoint=str(checkpoint),checkpoint_sha256=sha(checkpoint),
+            calibration={k:cal[k] for k in ('status','temperature','intercept')},root=str(root))
+        del model,data
     write_json(specification,specs,immutable=True)
     if not specs:return
     for row in inputs(source,'calibration'):
-        output=WORK/'frozen_matrix'/source/'source_initial'/row['dataset']
+        output=WORK/'frozen_matrix'/source/tag/row['dataset']
         job=dict(row={k:row[k] for k in ('dataset','image_path','image_shape','physical_scale','metadata_sha256')},
             source=source,output=str(output),packages=specs,graph_path=row['baselines']['P0']['path'],
             graph_sha256=row['baselines']['P0']['sha256'],native_path=row['evidence']['path'],native_sha256=row['evidence']['sha256'])
-        run_matrix(job,WORK/'frozen_matrix'/source/'jobs'/(row['dataset']+'.json'))
+        run_matrix(job,WORK/'frozen_matrix'/source/'jobs'/tag/(row['dataset']+'.json'))
         for key,spec in specs.items():
             destination=Path(spec['root'])/'predictions'/row['dataset']
             destination.parent.mkdir(parents=True,exist_ok=True)

@@ -35,6 +35,15 @@ def run(args=None):
     fits=[];curves=[];source_scores=[];calibrations=[];runtime=[]
     for path in sorted((WORK/'training').glob('*/*/*/training_receipt.json')):
         row=read_json(path)
+        invocation_paths=list((path.parent/'invocations').glob('*.json'))
+        invocations={sha(p):(p,read_json(p)) for p in invocation_paths}
+        invocations.setdefault(sha(path),(path,row))
+        invocation_totals={k:sum(r.get(k,0.) for _,r in invocations.values()) for k in
+            ('compute_seconds','lease_seconds','wait_seconds','checkpoint_seconds','wall_seconds')}
+        prefix=path.parent/'common_prefix.json'
+        prefix_receipt=read_json(prefix) if prefix.exists() else None
+        if prefix_receipt and sha(prefix_receipt['path'])!=prefix_receipt['sha256']:
+            raise ValueError('Shared prefix artifact drift')
         screens=list((WORK/'screens'/row['arm']/row['source']/str(row['seed'])).glob('*/summary.json'))
         exposure=dict(row['exposure'])
         for field in ('group_visits','anchor_visits'):
@@ -42,6 +51,8 @@ def run(args=None):
             exposure[field+'_summary']=dict(unique=len(visits),draws=sum(visits.values()),
                 minimum=min(visits.values(),default=0),maximum=max(visits.values(),default=0))
         fits.append(dict(row,exposure=exposure,receipt_path=str(path),receipt_sha256=sha(path),
+            common_prefix=prefix_receipt,invocation_totals=invocation_totals,
+            invocation_receipts=[dict(path=str(p),sha256=key) for key,(p,_) in invocations.items()],
             full_source_screen=bool(screens) and all(read_json(p)['full_source_screen'] for p in screens),
             source_screen_receipts=[dict(path=str(p),sha256=sha(p)) for p in sorted(screens)]))
         folder=path.parent
@@ -55,7 +66,8 @@ def run(args=None):
                 last_step=max(r['step'] for r in updates),
                 totals={k:sum(r.get(k,0.) for r in updates) for k in fields},
                 maximum_gradient_norm=max(r['gradient_norm'] for r in updates),
-                checkpoint_seconds=row['checkpoint_seconds'],wall_seconds=row['wall_seconds'],
+                checkpoint_seconds=invocation_totals['checkpoint_seconds'],wall_seconds=invocation_totals['wall_seconds'],
+                measured_invocations=len(invocations),
                 includes_common_prefix=row['arm'] not in ('J_uniform','J_mined'),
                 cuda_kernel_profiler_seconds=None,
                 timing_scope='Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time'))
@@ -75,7 +87,23 @@ def run(args=None):
     write_json(RESULTS/'training_receipts.json',dict(fits=fits,actual_receipts_required=True))
     write_csv(RESULTS/'training_curves.csv',curves)
     write_csv(RESULTS/'source_scores.csv',source_scores)
-    write_json(RESULTS/'runtime_breakdown.json',dict(training=runtime,
+    inference=[]
+    for kind,paths in [('source_matrix',(WORK/'frozen_matrix').glob('*/*/*/complete.json')),
+                       ('target_matrix',(WORK/'target_matrix').glob('*/complete.json'))]:
+        for path in sorted(paths):
+            r=read_json(path)
+            inference.append(dict(kind=kind,dataset=path.parent.name,receipt=str(path),sha256=sha(path),
+                seconds=r['seconds'],timings=r['timings'],counts=r['counts'],packages=r['packages'],
+                worker_times_overlap=r['worker_times_overlap'],shared_work_counted_once=True))
+    for output in sorted((WORK/'screens').glob('*/*/*/*/predictions/*')):
+        if output.is_symlink():continue
+        path=output/'protected'/(output.name+'.json')
+        if not path.exists():continue
+        r=read_json(path)
+        inference.append(dict(kind='single_source',dataset=output.name,receipt=str(path),sha256=sha(path),
+            seconds=r['seconds'],timings=r['timings'],counts=r['counts']))
+    write_json(RESULTS/'runtime_breakdown.json',dict(training=runtime,inference=inference,
+        independent_workers_overlap=True,wall_times_must_not_be_summed_into_total_elapsed=True,
         reason=None if runtime else 'Production optimizer histories are not complete yet'))
     write_json(RESULTS/'calibration_audit.json',dict(status='measured' if calibrations else 'pending',fits=calibrations,
         reason=None if calibrations else 'Adequate training and full source screens have not completed'))
@@ -86,6 +114,9 @@ def run(args=None):
         open_leases=[e for e in events if e['event']=='begin' and e['token'] not in {x['token'] for x in events if x['event']=='end'}],
         scope='Full exclusive lease intervals, including loader and CPU work; not kernel time',
         study_disk_gib=sum(p.stat().st_size for p in WORK.rglob('*') if p.is_file())/2**30)
+    resource['lease_seconds_by_stage']={stage:sum(e.get('lease_seconds',0.) for e in events
+        if e['event']=='end' and e['purpose'].split('/')[0]==stage)
+        for stage in sorted({e['purpose'].split('/')[0] for e in events})}
     monitors=[]
     for p in WORK.rglob('*.json'):
         if p.name=='resources.json' or p.name.endswith('.resources.json'):

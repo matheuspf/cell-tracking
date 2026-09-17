@@ -111,3 +111,28 @@ def test_recommendation_requires_matched_target_controls_and_current_fresh_model
     assert not check()['fresh_nominated_module']
     image['model_code_sha256']='obsolete'
     assert not check()['current_image_zero']
+
+
+def test_extension_matrix_is_matched_and_never_substitutes_another_seed():
+    from division_generalization_v2.screen import matrix_members
+    for seed in (20260916,314159):
+        rows=matrix_members(seed)
+        assert {a for a,_,_ in rows}=={'J_uniform','J_mined'}
+        assert {s for _,s,_ in rows}=={seed}
+        assert {step for _,_,step in rows}=={8192}
+    assert len(matrix_members())==9
+
+
+def test_queue_stops_after_a_cooperative_incomplete_training_boundary(tmp_path,monkeypatch):
+    import pytest
+    from division_generalization_v2 import queue
+    from division_generalization_v2.common import write_json
+    monkeypatch.setattr(queue,'WORK',tmp_path)
+    folder=tmp_path/'training/prefix/44b6/20260916'
+    def interrupted(*args):
+        r=dict(status='incomplete_resumable',joint_optimizer_updates=128)
+        write_json(folder/'progress.json',r);write_json(folder/'training_receipt.json',r)
+    monkeypatch.setattr(queue,'call',interrupted)
+    with pytest.raises(RuntimeError,match='below required boundary'):
+        queue.train('44b6','prefix',20260916)
+    assert len(list((folder/'invocations').glob('*.json')))==1

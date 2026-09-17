@@ -2,6 +2,7 @@
 import fcntl
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import time
@@ -25,14 +26,28 @@ def call(command,*arguments):
     if result:raise RuntimeError(f'Preserved failed stage: {log}')
 
 
+def preserve_invocation(folder):
+    path=folder/'training_receipt.json'
+    if path.exists():
+        r=read_json(path)
+        destination=folder/'invocations'/f'{r["joint_optimizer_updates"]}-{sha(path)[:16]}.json'
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        if not destination.exists():shutil.copy2(path,destination)
+
+
 def train(source,arm,seed,stop=None):
     folder=WORK/'training'/arm/source/str(seed)
+    preserve_invocation(folder)
     expected=stop or (2048 if arm=='prefix' else 4096)
     if (folder/'progress.json').exists() and read_json(folder/'progress.json').get('joint_optimizer_updates',0)>=expected:
         return
     args=['--source',source,'--arm',arm,'--seed',seed]
     if stop:args+=['--stop-at',stop]
     call('train',*args)
+    preserve_invocation(folder)
+    progress=read_json(folder/'progress.json')
+    if progress['joint_optimizer_updates']<expected or progress['status']!='complete':
+        raise RuntimeError(f'Training checkpointed below required boundary: {folder}; resume this stage')
 
 
 def source_screens(source,arm,seed,steps):
@@ -96,7 +111,9 @@ def run(args=None):
                 extended=extension(source,seed)
                 if extended['extend']:
                     for arm in ('J_uniform','J_mined'):
-                        train(source,arm,seed,8192);source_screens(source,arm,seed,(8192,))
+                        train(source,arm,seed,8192)
+                    call('source-matrix','--source',source,'--seed',seed,'--stop-at',8192)
+                    for arm in ('J_uniform','J_mined'):source_screens(source,arm,seed,(8192,))
         freeze(None,None)
         from .target import predict_all,evaluate_all
         predict_all();evaluate_all()

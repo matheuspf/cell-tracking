@@ -1,4 +1,669 @@
 {
+  "independent_workers_overlap": true,
+  "inference": [
+    {
+      "counts": {
+        "actions": 2357166,
+        "anchors": 13504,
+        "positive_gains": 0
+      },
+      "dataset": "44b6_0b24845f",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_0b24845f/protected/44b6_0b24845f.json",
+      "seconds": 245.06807400399703,
+      "sha256": "e2cd8b5a25c078f12267e1f62578315f613e4e637a0afbb4410fe11bf884f299",
+      "timings": {
+        "bank_seconds": 104.64547582576051,
+        "scene_and_model_seconds": 138.18492676004826
+      }
+    },
+    {
+      "counts": {
+        "actions": 1696348,
+        "anchors": 7570,
+        "positive_gains": 0
+      },
+      "dataset": "44b6_0db75fae",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_0db75fae/protected/44b6_0db75fae.json",
+      "seconds": 179.06601071300247,
+      "sha256": "733610e90d4d71a6233dea516832735f1a6d689ab6d4c932d456e1ec109a1837",
+      "timings": {
+        "bank_seconds": 80.73199777528498,
+        "scene_and_model_seconds": 96.52896472642897
+      }
+    },
+    {
+      "counts": {
+        "actions": 2807823,
+        "anchors": 11894,
+        "positive_gains": 0
+      },
+      "dataset": "44b6_24264f12",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_24264f12/protected/44b6_24264f12.json",
+      "seconds": 292.86707829999796,
+      "sha256": "09a59518738230d34d67f542d1e613b503abc4338b00e2e97f687ed939bdbcff",
+      "timings": {
+        "bank_seconds": 130.2135284362812,
+        "scene_and_model_seconds": 160.12491778808908
+      }
+    },
+    {
+      "counts": {
+        "actions": 343029,
+        "anchors": 2724,
+        "positive_gains": 0
+      },
+      "dataset": "44b6_341df25f",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_341df25f/protected/44b6_341df25f.json",
+      "seconds": 36.58595899200009,
+      "sha256": "ba3524e4788e7a89ecdaae1dbcfe78985b6b49e6fb5badef1b113d0b56100734",
+      "timings": {
+        "bank_seconds": 15.694825882761506,
+        "scene_and_model_seconds": 20.28200849989662
+      }
+    },
+    {
+      "counts": {
+        "actions": 2589694,
+        "anchors": 12006,
+        "positive_gains": 0
+      },
+      "dataset": "44b6_5f15d135",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_5f15d135/protected/44b6_5f15d135.json",
+      "seconds": 274.5304503439984,
+      "sha256": "4c6470c952dad814fba484dbd29837626c502f95ba64b52c551d5d3c8e6779d9",
+      "timings": {
+        "bank_seconds": 120.6401381084579,
+        "scene_and_model_seconds": 151.36417932951736
+      }
+    },
+    {
+      "counts": {
+        "actions": 471029,
+        "anchors": 3329,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 177
+      },
+      "dataset": "44b6_81c256f0",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_81c256f0/protected/44b6_81c256f0.json",
+      "seconds": 52.41018388500379,
+      "sha256": "104459860d56181638539ecb16f09105c316a7d08c798a64417a150fbe020333",
+      "timings": {
+        "bank_seconds": 22.597586424075416,
+        "scene_and_model_seconds": 28.956885477942706
+      }
+    },
+    {
+      "counts": {
+        "actions": 3462128,
+        "anchors": 13634,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 1059
+      },
+      "dataset": "44b6_8f5ab931",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_8f5ab931/protected/44b6_8f5ab931.json",
+      "seconds": 367.15643095799896,
+      "sha256": "e122a6cc1d14c3578108f761d9a2f8c26928624c0e6ab0fe01278107da785558",
+      "timings": {
+        "bank_seconds": 163.37970636603131,
+        "scene_and_model_seconds": 200.3373397569303
+      }
+    },
+    {
+      "counts": {
+        "actions": 5733212,
+        "anchors": 21829,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 2466
+      },
+      "dataset": "44b6_949adeb1",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_949adeb1/protected/44b6_949adeb1.json",
+      "seconds": 590.139286863996,
+      "sha256": "f90ffb28b918019cd44e61efab32c98805cd67a8ab79c5dcf5c2f751e5e8d95e",
+      "timings": {
+        "bank_seconds": 253.60147406968463,
+        "scene_and_model_seconds": 331.25279358177795
+      }
+    },
+    {
+      "counts": {
+        "actions": 217093,
+        "anchors": 3002,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 460
+      },
+      "dataset": "44b6_996155de",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_996155de/protected/44b6_996155de.json",
+      "seconds": 24.581950383006188,
+      "sha256": "4a7f748425ce9f1b4cc23316fd0f80016505751e8a8368973132a72cedd55e49",
+      "timings": {
+        "bank_seconds": 9.702881998768135,
+        "scene_and_model_seconds": 14.260974750002788
+      }
+    },
+    {
+      "counts": {
+        "actions": 3819100,
+        "anchors": 17538,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 1327
+      },
+      "dataset": "44b6_b2c44266",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_b2c44266/protected/44b6_b2c44266.json",
+      "seconds": 418.2608963899984,
+      "sha256": "d974e4f718f40b2bbbcf7fea7528b03bb84f0c96eb2ccd3be2b744813c039ace",
+      "timings": {
+        "bank_seconds": 176.5613518328173,
+        "scene_and_model_seconds": 237.42001777386758
+      }
+    },
+    {
+      "counts": {
+        "actions": 4921702,
+        "anchors": 19555,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 4039
+      },
+      "dataset": "44b6_cf8fed6b",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_cf8fed6b/protected/44b6_cf8fed6b.json",
+      "seconds": 530.4640277699946,
+      "sha256": "63dc25c54380c55719c7d7651d4b8162154dd91b08a63361ef0e9c3407ef42f4",
+      "timings": {
+        "bank_seconds": 227.20995511756337,
+        "scene_and_model_seconds": 298.7348637612231
+      }
+    },
+    {
+      "counts": {
+        "actions": 57118,
+        "anchors": 1640,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 84
+      },
+      "dataset": "44b6_d754aa59",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_d754aa59/protected/44b6_d754aa59.json",
+      "seconds": 6.274641868003528,
+      "sha256": "f690f7cde15b8ab9c72a1cea5758a59f6f92091a93be0b6048fc65e1f929e512",
+      "timings": {
+        "bank_seconds": 2.332928585798072,
+        "scene_and_model_seconds": 3.5664731769284117
+      }
+    },
+    {
+      "counts": {
+        "actions": 1487847,
+        "anchors": 6995,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 649
+      },
+      "dataset": "44b6_db3c847b",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_db3c847b/protected/44b6_db3c847b.json",
+      "seconds": 160.1381685419983,
+      "sha256": "b122c2560b97e1b775a528cc28056646d8ddccf21f8ea66ecf8c474a34bdd639",
+      "timings": {
+        "bank_seconds": 71.24258750889567,
+        "scene_and_model_seconds": 87.1377923061591
+      }
+    },
+    {
+      "counts": {
+        "actions": 4610030,
+        "anchors": 18753,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 1830
+      },
+      "dataset": "44b6_ddf577ad",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_ddf577ad/protected/44b6_ddf577ad.json",
+      "seconds": 508.34393233899755,
+      "sha256": "98fb62c35b08cd6cde6ce1eeb7c0465d63a8b29684ed689722cddfae8fb34db2",
+      "timings": {
+        "bank_seconds": 219.38909755273198,
+        "scene_and_model_seconds": 284.1824613142744
+      }
+    },
+    {
+      "counts": {
+        "actions": 9392743,
+        "anchors": 35191,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 3566
+      },
+      "dataset": "44b6_e31261b4",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_e31261b4/protected/44b6_e31261b4.json",
+      "seconds": 708.7888806789997,
+      "sha256": "7d517c8817b1a9db3a562e0ef9cdc54770c1065a7d40f4e02b0838f0abe587b8",
+      "timings": {
+        "bank_seconds": 282.22316386741295,
+        "scene_and_model_seconds": 420.5744246571412
+      }
+    },
+    {
+      "counts": {
+        "actions": 1902058,
+        "anchors": 8731,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 2285
+      },
+      "dataset": "44b6_f28707c6",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/predictions/44b6_f28707c6/protected/44b6_f28707c6.json",
+      "seconds": 119.75200231499912,
+      "sha256": "229d4b13aa9b0e3ee95f856035f00d9628cc57564419b08a364b9784a8707a3e",
+      "timings": {
+        "bank_seconds": 54.3167042031273,
+        "scene_and_model_seconds": 64.10279872662795
+      }
+    },
+    {
+      "counts": {
+        "actions": 188706,
+        "anchors": 2587,
+        "positive_gains": 0
+      },
+      "dataset": "6bba_12665c0e",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_12665c0e/protected/6bba_12665c0e.json",
+      "seconds": 22.3195405890001,
+      "sha256": "5070c8360aef4e3066e30232de47650e86707496d6ecd6f4b6eaf06af9034b28",
+      "timings": {
+        "bank_seconds": 9.510448743087181,
+        "scene_and_model_seconds": 12.21266662090784
+      }
+    },
+    {
+      "counts": {
+        "actions": 2809,
+        "anchors": 417,
+        "positive_gains": 1
+      },
+      "dataset": "6bba_2540cd90",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_2540cd90/protected/6bba_2540cd90.json",
+      "seconds": 0.500454806999187,
+      "sha256": "ff4ff48e89d90bc974bf066df55c6dd7039746d1b96728264471db27d30e54bb",
+      "timings": {
+        "bank_seconds": 0.1566635630442761,
+        "scene_and_model_seconds": 0.22947683604434133
+      }
+    },
+    {
+      "counts": {
+        "actions": 1359255,
+        "anchors": 9192,
+        "positive_gains": 0
+      },
+      "dataset": "6bba_283bf9f1",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_283bf9f1/protected/6bba_283bf9f1.json",
+      "seconds": 148.88845163000224,
+      "sha256": "d160f0db6401cb7f0898de1a4c07600fa5b6fd2ce5fcebe8ded9bcb6c3864f1b",
+      "timings": {
+        "bank_seconds": 64.48794165631989,
+        "scene_and_model_seconds": 82.432148333246
+      }
+    },
+    {
+      "counts": {
+        "actions": 2281801,
+        "anchors": 10210,
+        "positive_gains": 1
+      },
+      "dataset": "6bba_337b1b3a",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_337b1b3a/protected/6bba_337b1b3a.json",
+      "seconds": 237.3925417329956,
+      "sha256": "d1a83850ca149b85b6f06d4071393c7955c13e19ac19061c397f4c4adb12766e",
+      "timings": {
+        "bank_seconds": 102.00748521010246,
+        "scene_and_model_seconds": 132.63883479336073
+      }
+    },
+    {
+      "counts": {
+        "actions": 3474103,
+        "anchors": 14598,
+        "positive_gains": 0
+      },
+      "dataset": "6bba_474be664",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_474be664/protected/6bba_474be664.json",
+      "seconds": 363.88606049299415,
+      "sha256": "101d66caaa2bc305ade1be532731bf5bba9090785ec7f0d799bcf9a18fdb6253",
+      "timings": {
+        "bank_seconds": 157.5396976644697,
+        "scene_and_model_seconds": 203.43082161651546
+      }
+    },
+    {
+      "counts": {
+        "actions": 1502075,
+        "anchors": 8488,
+        "positive_gains": 0
+      },
+      "dataset": "6bba_4ffd3da3",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_4ffd3da3/protected/6bba_4ffd3da3.json",
+      "seconds": 161.49053178900067,
+      "sha256": "7e11b4700dc7d64e4dc56c64b1f07271635fc5088e152078e849db1e00b5354c",
+      "timings": {
+        "bank_seconds": 69.98046808548679,
+        "scene_and_model_seconds": 89.53142372365983
+      }
+    },
+    {
+      "counts": {
+        "actions": 2707801,
+        "anchors": 12953,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 2522
+      },
+      "dataset": "6bba_74686d6a",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_74686d6a/protected/6bba_74686d6a.json",
+      "seconds": 296.4838582609955,
+      "sha256": "3e05ac7c62395f8c9aeb6901a44355e3548cf9673789eb4ad114a208091ae780",
+      "timings": {
+        "bank_seconds": 124.72603597518173,
+        "scene_and_model_seconds": 168.24243190968264
+      }
+    },
+    {
+      "counts": {
+        "actions": 7290491,
+        "anchors": 29633,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 10079
+      },
+      "dataset": "6bba_767a1e17",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_767a1e17/protected/6bba_767a1e17.json",
+      "seconds": 759.8971993800005,
+      "sha256": "7201fbd2ad93545f8eb9934e1d4b0e0bb8e61cc0a767727adc42e19af5563b8c",
+      "timings": {
+        "bank_seconds": 319.43931461321336,
+        "scene_and_model_seconds": 433.84786345871544
+      }
+    },
+    {
+      "counts": {
+        "actions": 276123,
+        "anchors": 3368,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 341
+      },
+      "dataset": "6bba_80d12824",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_80d12824/protected/6bba_80d12824.json",
+      "seconds": 32.36204138700123,
+      "sha256": "c0cb44f7a139cd549bbf55e9b91eacb569111df97d6a19242992de62f3df90cf",
+      "timings": {
+        "bank_seconds": 13.975591275142506,
+        "scene_and_model_seconds": 17.705002685928775
+      }
+    },
+    {
+      "counts": {
+        "actions": 310540,
+        "anchors": 2981,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 378
+      },
+      "dataset": "6bba_825bd1c6",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_825bd1c6/protected/6bba_825bd1c6.json",
+      "seconds": 34.27157902700128,
+      "sha256": "1c7cc861912386b50f534cdf8bda4a4d0266ba9dc778ec1b3e1054080024a028",
+      "timings": {
+        "bank_seconds": 14.28955397210666,
+        "scene_and_model_seconds": 19.399696302243683
+      }
+    },
+    {
+      "counts": {
+        "actions": 20208,
+        "anchors": 1537,
+        "anchors_preferring_edit": 1,
+        "positive_gains": 1,
+        "raw_positive_gains": 118
+      },
+      "dataset": "6bba_971fa5e0",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_971fa5e0/protected/6bba_971fa5e0.json",
+      "seconds": 2.951660538004944,
+      "sha256": "5e4c0002835aeea440dbf9676f7dbb0dd002c41b08f7e3b728e216a3e6729992",
+      "timings": {
+        "bank_seconds": 0.9264545816622558,
+        "scene_and_model_seconds": 1.7590704081012518
+      }
+    },
+    {
+      "counts": {
+        "actions": 72840,
+        "anchors": 1822,
+        "anchors_preferring_edit": 2,
+        "positive_gains": 2,
+        "raw_positive_gains": 219
+      },
+      "dataset": "6bba_ae82a791",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_ae82a791/protected/6bba_ae82a791.json",
+      "seconds": 8.963405183996656,
+      "sha256": "aa9342da58e5d1af219a0074678d557ad16a67ef0cbf7f3703ef6d7b034cdc64",
+      "timings": {
+        "bank_seconds": 3.207114794073277,
+        "scene_and_model_seconds": 5.290938950878626
+      }
+    },
+    {
+      "counts": {
+        "actions": 2593085,
+        "anchors": 9999,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 1651
+      },
+      "dataset": "6bba_b1ae37b9",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_b1ae37b9/protected/6bba_b1ae37b9.json",
+      "seconds": 279.0836195369993,
+      "sha256": "c36d980f1d3e387d45f99c0f38b197aaaedb7902ab6bbb6d5f5190a68467a0d0",
+      "timings": {
+        "bank_seconds": 125.28413704385457,
+        "scene_and_model_seconds": 151.03949142981583
+      }
+    },
+    {
+      "counts": {
+        "actions": 17715,
+        "anchors": 1109,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 117
+      },
+      "dataset": "6bba_b204cac7",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_b204cac7/protected/6bba_b204cac7.json",
+      "seconds": 2.3499986049937434,
+      "sha256": "296a80894e3439fdc8c9bfb3cd6591a2f25d81045cf884f9bd44e9006006ec00",
+      "timings": {
+        "bank_seconds": 0.7401877889278694,
+        "scene_and_model_seconds": 1.3299815870050224
+      }
+    },
+    {
+      "counts": {
+        "actions": 1668130,
+        "anchors": 7638,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 884
+      },
+      "dataset": "6bba_bb9f20c3",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_bb9f20c3/protected/6bba_bb9f20c3.json",
+      "seconds": 188.37939896700118,
+      "sha256": "265bf229c7b268f5d9834e03fdada00c4c6b8f014c615b9cf3913d04dbf87bba",
+      "timings": {
+        "bank_seconds": 83.54651702294359,
+        "scene_and_model_seconds": 102.49975276659097
+      }
+    },
+    {
+      "counts": {
+        "actions": 2870381,
+        "anchors": 12391,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 1665
+      },
+      "dataset": "6bba_c328f2fd",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_c328f2fd/protected/6bba_c328f2fd.json",
+      "seconds": 313.9839753819979,
+      "sha256": "cc9575afe97f4b3df577dba88fedb806edf9a04ff676655419eb3a46987ab65d",
+      "timings": {
+        "bank_seconds": 134.58501581713062,
+        "scene_and_model_seconds": 176.28860241414077
+      }
+    },
+    {
+      "counts": {
+        "actions": 3415954,
+        "anchors": 14920,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 3830
+      },
+      "dataset": "6bba_c73a1d11",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_c73a1d11/protected/6bba_c73a1d11.json",
+      "seconds": 363.93961328699515,
+      "sha256": "14958c48295dc23530e4f669577cd4190dd598637af9f3f6a62c84b53d5bb603",
+      "timings": {
+        "bank_seconds": 160.9358517488654,
+        "scene_and_model_seconds": 199.8931630159277
+      }
+    },
+    {
+      "counts": {
+        "actions": 2516135,
+        "anchors": 12929,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 769
+      },
+      "dataset": "6bba_cf35214c",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_cf35214c/protected/6bba_cf35214c.json",
+      "seconds": 279.83488612799556,
+      "sha256": "c8d5ec9038ef77335cfa155c09577305464ae8a644ddd1fc907c989a42189b79",
+      "timings": {
+        "bank_seconds": 116.20103553080116,
+        "scene_and_model_seconds": 160.33479936838557
+      }
+    },
+    {
+      "counts": {
+        "actions": 66907,
+        "anchors": 2083,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 308
+      },
+      "dataset": "6bba_d6ecebbb",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_d6ecebbb/protected/6bba_d6ecebbb.json",
+      "seconds": 8.09305080100603,
+      "sha256": "12693eadd9bd0cd26884e80e49eb00433dfd4cdaf5c19c51ae1b3c8e302a21a9",
+      "timings": {
+        "bank_seconds": 3.0104914751282195,
+        "scene_and_model_seconds": 4.722279497014824
+      }
+    },
+    {
+      "counts": {
+        "actions": 66392,
+        "anchors": 1768,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 112
+      },
+      "dataset": "6bba_e5e44988",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_e5e44988/protected/6bba_e5e44988.json",
+      "seconds": 7.849538550995931,
+      "sha256": "0e331f776a77b602814169449513b87c6cb207eacae31555cdf8ab78e85fe02e",
+      "timings": {
+        "bank_seconds": 3.1521701431047404,
+        "scene_and_model_seconds": 4.414160553882539
+      }
+    },
+    {
+      "counts": {
+        "actions": 22317,
+        "anchors": 1256,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 208
+      },
+      "dataset": "6bba_fbc898dc",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_fbc898dc/protected/6bba_fbc898dc.json",
+      "seconds": 1.8270106249983655,
+      "sha256": "e3cd06937b82070e475045356e238d59607b99ad7b6e7f78b11582161c6a9921",
+      "timings": {
+        "bank_seconds": 0.6229790610086638,
+        "scene_and_model_seconds": 1.0150910040320014
+      }
+    },
+    {
+      "counts": {
+        "actions": 626954,
+        "anchors": 4192,
+        "anchors_preferring_edit": 0,
+        "positive_gains": 0,
+        "raw_positive_gains": 881
+      },
+      "dataset": "6bba_fe670320",
+      "kind": "single_source",
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/predictions/6bba_fe670320/protected/6bba_fe670320.json",
+      "seconds": 67.87871059799363,
+      "sha256": "940c850b6c33a33a84dd10e1d635ededae701f7798d3e31590d3b549c9d951fe",
+      "timings": {
+        "bank_seconds": 29.801687215156562,
+        "scene_and_model_seconds": 37.18349815210968
+      }
+    }
+  ],
   "reason": null,
   "training": [
     {
@@ -9,6 +674,7 @@
       "includes_common_prefix": true,
       "last_step": 4096,
       "maximum_gradient_norm": 35.857322692871094,
+      "measured_invocations": 1,
       "recorded_updates": 4096,
       "seed": 20260916,
       "source": "44b6",
@@ -33,6 +699,7 @@
       "includes_common_prefix": true,
       "last_step": 4096,
       "maximum_gradient_norm": 36.041969299316406,
+      "measured_invocations": 1,
       "recorded_updates": 4096,
       "seed": 20260916,
       "source": "6bba",
@@ -50,6 +717,31 @@
       "wall_seconds": 257.2065165849999
     },
     {
+      "arm": "J_uniform",
+      "checkpoint_seconds": 0.1880431469908217,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 2049,
+      "includes_common_prefix": false,
+      "last_step": 4096,
+      "maximum_gradient_norm": 22.96999168395996,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 20260916,
+      "source": "44b6",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 49.01596435202373,
+        "backward_seconds": 319.91959900711663,
+        "compute_seconds": 949.3000854610436,
+        "encoder_head_seconds": 285.0282057698496,
+        "loader_seconds": 237.5693160177616,
+        "loader_transfer_seconds": 338.42820048250724,
+        "optimizer_seconds": 2.3910731957366806,
+        "transfer_seconds": 49.78791780733445
+      },
+      "wall_seconds": 1160.1475576899975
+    },
+    {
       "arm": "prefix",
       "checkpoint_seconds": 0.28146555199782597,
       "cuda_kernel_profiler_seconds": null,
@@ -57,6 +749,7 @@
       "includes_common_prefix": true,
       "last_step": 2048,
       "maximum_gradient_norm": 47.8831672668457,
+      "measured_invocations": 1,
       "recorded_updates": 2048,
       "seed": 20260916,
       "source": "44b6",
@@ -73,5 +766,6 @@
       },
       "wall_seconds": 1433.625221850998
     }
-  ]
+  ],
+  "wall_times_must_not_be_summed_into_total_elapsed": true
 }
