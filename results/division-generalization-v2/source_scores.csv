@@ -1,1 +1,5 @@
-
+arm,source,seed,step,application,score,delta,lost_supported_edges,clips,division_tp,division_fp,division_fn
+G30,44b6,20260916,4096,protected,0.925583053312909,0.0,0,16,2,5,2
+G30,44b6,20260916,4096,replacement,0.925583053312909,0.0,0,16,2,5,2
+G30,6bba,20260916,4096,protected,0.9398739377416004,0.0,0,22,3,15,18
+G30,6bba,20260916,4096,replacement,0.9398739377416004,0.0,0,22,3,15,18

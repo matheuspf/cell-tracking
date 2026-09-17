@@ -1,5 +1,66 @@
 {
-  "fits": [],
-  "reason": "Adequate training and full source screens have not completed",
-  "status": "pending"
+  "fits": [
+    {
+      "arm": "G30",
+      "boundary_reached": false,
+      "decision_units": 183,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "intercept": -2.563210088590652,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "44b6",
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 5.58703418188461,
+      "threshold": 0.0
+    },
+    {
+      "arm": "G30",
+      "boundary_reached": false,
+      "decision_units": 606,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "intercept": -2.7254700411010107,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 13,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "6bba",
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 3.7097868399602896,
+      "threshold": 0.0
+    }
+  ],
+  "reason": null,
+  "status": "measured"
 }

@@ -5,66 +5,10 @@
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2",
-        "screen",
-        "--source",
-        "44b6",
-        "--arm",
-        "G30",
-        "--seed",
-        "20260916",
-        "--stop-at",
-        "4096"
-      ],
-      "pid": 3214323,
-      "started": 1789610685.65
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2",
-        "screen",
-        "--source",
-        "6bba",
-        "--arm",
-        "G30",
-        "--seed",
-        "20260916",
-        "--stop-at",
-        "4096"
-      ],
-      "pid": 3214324,
-      "started": 1789610685.67
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2",
         "queue"
       ],
       "pid": 3414936,
       "started": 1789612741.8
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2.prediction_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/jobs/44b6_ddf577ad.json"
-      ],
-      "pid": 3534901,
-      "started": 1789613952.15
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2.prediction_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/jobs/6bba_fe670320.json"
-      ],
-      "pid": 3572378,
-      "started": 1789614339.36
     },
     {
       "command": [
@@ -89,8 +33,8 @@
         "division_generalization_v2",
         "report"
       ],
-      "pid": 3575293,
-      "started": 1789614369.68
+      "pid": 3669065,
+      "started": 1789615339.41
     }
   ],
   "completed_directional_fits": 2,
@@ -105,5 +49,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T03:06:11.020438+00:00"
+  "updated": "2026-09-17T03:22:20.538563+00:00"
 }

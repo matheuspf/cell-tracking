@@ -44,7 +44,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "joint_optimizer_updates": 4096,
       "lease_seconds": 0.0,
       "literal_zero_path_test": true,
@@ -60,7 +60,12 @@
       "required_updates": 4096,
       "seed": 20260916,
       "source": "44b6",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/44b6/20260916/4096/summary.json",
+          "sha256": "eb1a02ac13903cd72db75f3e4031cd79bfe68340a4099076f29e4f6a4d92655d"
+        }
+      ],
       "status": "complete",
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.0,
@@ -109,7 +114,7 @@
         "unknown_as_negative_count": 0
       },
       "finite_gradient_checks": true,
-      "full_source_screen": false,
+      "full_source_screen": true,
       "joint_optimizer_updates": 4096,
       "lease_seconds": 0.0,
       "literal_zero_path_test": true,
@@ -125,7 +130,12 @@
       "required_updates": 4096,
       "seed": 20260916,
       "source": "6bba",
-      "source_screen_receipts": [],
+      "source_screen_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/screens/G30/6bba/20260916/4096/summary.json",
+          "sha256": "5024f8f9a2e299b85d1cf8f7e44ea1b89df5f750a6642355534de9878be02aab"
+        }
+      ],
       "status": "complete",
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.0,
