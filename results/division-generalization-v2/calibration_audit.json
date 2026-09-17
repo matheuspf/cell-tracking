@@ -183,6 +183,72 @@
     {
       "arm": "J_mined",
       "boundary_reached": false,
+      "calibration_sha256": "e6b34e427465471e516a0aaca9e549406711fb0043ed5a82af8a3af4dfef1726",
+      "decision_units": 207,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.8305621633698854,
+      "intercept_penalized": false,
+      "negative_groups": 14,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 10.243531292986805,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_mined",
+      "boundary_reached": false,
+      "calibration_sha256": "7980c4c0aa54c930e1c67ad78bda2ae8b26e92d339ae8ea26bdc965b4d701b67",
+      "decision_units": 210,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.9704365736525888,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 5,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 8.804455655074127,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_mined",
+      "boundary_reached": false,
       "calibration_sha256": "505d9ce159f3a3631d09b549f31157447c14db62b8cb937efd0c8b989e41ccc2",
       "decision_units": 624,
       "finite_separation_bounds": [
@@ -343,6 +409,89 @@
       "step": 3072,
       "target_used": false,
       "temperature": 10.66183023778841,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "attempted_grouped_oof": true,
+      "boundary_reached": false,
+      "calibration_scope": "Only small heads are grouped out of fit; reused acquisition groups remain exploratory",
+      "calibration_sha256": "c0e0c3df56fff3becbbe3af1dd32956316fd97ef811db6be3af7d1638bfbc68c",
+      "checkpoint_sha256": "42241e31357a745ef549ddce682f4b6a7d0644f2a89c3c5ed451717bf2c53f51",
+      "decision_units": 1300,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "fold_receipts": [
+        {
+          "fold": 0,
+          "head_updates": 4096,
+          "held_overlap_groups": 26,
+          "model_sha256": "e3696a797a46b17c1bd1d3c60f20ebfdc1e44a9d7f06275f554b514bd54aad8c",
+          "overlap": [],
+          "seconds": 635.1554757709996,
+          "train_overlap_groups": 45
+        },
+        {
+          "fold": 1,
+          "head_updates": 4096,
+          "held_overlap_groups": 20,
+          "model_sha256": "76f62ed59e656918caad7d7cd27bdd818432cdd607b29521d0a37888e83ac151",
+          "overlap": [],
+          "seconds": 573.0155402760001,
+          "train_overlap_groups": 51
+        },
+        {
+          "fold": 2,
+          "head_updates": 4096,
+          "held_overlap_groups": 25,
+          "model_sha256": "d383328665e76679320ff79ac6926e0daee201cd9bf4007069e249d7ee45908a",
+          "overlap": [],
+          "seconds": 1394.3935172390002,
+          "train_overlap_groups": 46
+        }
+      ],
+      "full_source_graph_screen_complete": false,
+      "image_encoder_exposure": "Frozen original source encoder includes original source-fit labels; not clean image OOF",
+      "intercept": -1.1799726775793384,
+      "intercept_penalized": false,
+      "negative_groups": 69,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "original_held_source_support": {
+        "decision_units": 199,
+        "intercept": 0.0,
+        "intercept_penalized": false,
+        "negative_groups": 15,
+        "partition": "calibration",
+        "positive_groups": 4,
+        "post_maximization": true,
+        "reason": "Fewer than five distinct source overlap groups in one class; fixed zero relative gains retained",
+        "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+        "source": "44b6",
+        "source_groups_independently_certified": false,
+        "status": "calibration_unestablished",
+        "target_used": false,
+        "temperature": 1.0,
+        "threshold": 0.0
+      },
+      "partition": "grouped_small_head_oof",
+      "positive_groups": 39,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "grouped_small_head_oof_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 4.242490265634092,
       "threshold": 0.0
     },
     {

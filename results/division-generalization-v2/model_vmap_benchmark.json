@@ -1,0 +1,25 @@
+{
+  "all_gains_exact": false,
+  "anchors": 32,
+  "dataset": "44b6_e31261b4",
+  "guard": {
+    "blocked_network": 0,
+    "blocked_paths": [],
+    "blocked_reads": 0,
+    "installed_before_numerical": true,
+    "runtime_array_sha256": {}
+  },
+  "maximum_absolute_gain_difference": 0.19925308227539062,
+  "models": 8,
+  "new_target_predictions_generated": false,
+  "production_inference_changed": false,
+  "reason": "Batched model outputs differ from the fixed inference implementation",
+  "result_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/validation/model_vmap/result.json",
+  "result_sha256": "01deacc1195486fa3c36827446c9cbbe056467ed90e8b21da00ea3586c3e2074",
+  "script_sha256": "dc3cdb9cd7f4005d2d83dd5b24495b030fa85cc8f861ef1f158d6d6f23c44d40",
+  "source": "44b6",
+  "status": "rejected_not_adopted",
+  "training_changed": false,
+  "warm_mapped_seconds": 0.29979695600013656,
+  "warm_reference_seconds": 1.1641314070038788
+}
