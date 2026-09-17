@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "anchor_range": [
+        10000,
+        10256
+      ],
+      "checks": [
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 12.200304375000087,
+          "model_seconds": 9.986268319982628,
+          "receipt_sha256": "f0b61231d98363300cce825f45dc0a6a6078f78ebbc2d566ca105d0521048e51",
+          "run": 0,
+          "wait_seconds": 27.764752896000573,
+          "workers": 4
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 10.761575589000131,
+          "model_seconds": 9.154977186003634,
+          "receipt_sha256": "ab3b35eb48d9ca4b5494b9348ef972675d34e5d38af39053c042090257d52fca",
+          "run": 1,
+          "wait_seconds": 19.347268167999573,
+          "workers": 1
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 10.75665038399984,
+          "model_seconds": 9.372288499993374,
+          "receipt_sha256": "13dcce65f0f2bd009d7aafdbd6d8e9162a19b40da5fc2479962a4fcbe56275ba",
+          "run": 2,
+          "wait_seconds": 20.6760351060002,
+          "workers": 1
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 17.23507708499983,
+          "model_seconds": 14.909543664010926,
+          "receipt_sha256": "eb5c69452e6ab2070c45bb1b0560707140f8298efc6ac06f005c5d3f00fa9d99",
+          "run": 3,
+          "wait_seconds": 20.246964494000167,
+          "workers": 4
+        }
+      ],
+      "models": 8,
+      "result_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/validation/eight_model_prefetch/result.json",
+      "result_sha256": "f3fe919467e6210f1b24dd43c7cdfe599df1141f5f708b90b2fef24612ee5c76",
+      "script_sha256": "72eb8980f76d01d514d532769e0237f4966f6cb235c20e3ccbd43e0bee6c5026",
+      "source": "44b6"
+    },
+    {
+      "anchor_range": [
+        10000,
+        10256
+      ],
+      "checks": [
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 11.965628777001257,
+          "model_seconds": 8.787738721006463,
+          "receipt_sha256": "d840485b1daf4652cd5839385eafeda186334486538389667bcecb66fb547075",
+          "run": 0,
+          "wait_seconds": 26.38119689999985,
+          "workers": 4
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 11.228975011999864,
+          "model_seconds": 9.15053768000871,
+          "receipt_sha256": "3a790d2ba7642ce715b1146fc6899174985d0098483a8c4b9e5f8ef261cadb47",
+          "run": 1,
+          "wait_seconds": 23.19931598599942,
+          "workers": 1
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 12.369724166999731,
+          "model_seconds": 10.166410751973672,
+          "receipt_sha256": "3c4b26d823ac8db4af64d65385c7b0860adf0f32dd89aae5bd37cdfc02e15cd2",
+          "run": 2,
+          "wait_seconds": 19.385961614001644,
+          "workers": 1
+        },
+        {
+          "counts": {
+            "actions": 59476,
+            "anchors": 256
+          },
+          "exact_maxima_and_graphs": true,
+          "lease_seconds": 11.66655916200034,
+          "model_seconds": 9.406173270988802,
+          "receipt_sha256": "4beba4bc3556bdfbf88b784f391ee771dc17acbbe70af90fea12448dcb0fb45e",
+          "run": 3,
+          "wait_seconds": 22.671758285001488,
+          "workers": 4
+        }
+      ],
+      "models": 4,
+      "result_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/validation/four_model_prefetch/result.json",
+      "result_sha256": "ac073dc2707a57210ee13bf8857488977a8942dbb90a555620f5b596fc83759c",
+      "script_sha256": "881f183ef18de791289f6f85453442dfc5f86fbf93bc3b997784123d669c75ca",
+      "source": "44b6"
+    }
+  ],
+  "chosen_workers": 4,
+  "new_target_used": false,
+  "numerical_outputs_exact": true,
+  "reason": "Eight-model timings favored one reader in this small fixture, but the four-model comparison showed no consistent gain; retain the previously validated schedule under variable concurrent CPU load",
+  "scheduling_changed": false,
+  "status": "measured",
+  "timing_limitations": "Small middle-of-clip fixture; per-run frame-cache warmup and concurrent CPU load limit full-clip extrapolation"
+}

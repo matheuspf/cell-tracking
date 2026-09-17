@@ -7,7 +7,8 @@ import sys
 
 
 def main():
-    os.environ['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
+    os.environ.update(CUBLAS_WORKSPACE_CONFIG=':4096:8',
+                      ZARR_ASYNC__CONCURRENCY='2',ZARR_THREADING__MAX_WORKERS='2')
     job=json.loads(Path(sys.argv[1]).read_text());output=Path(job['output']);output.mkdir(parents=True,exist_ok=True)
     from pipeline_error_training.guard import install
     guard=install(fresh_root=output,allowed_models=[job['graph_path'],job['native_path'],*[p['checkpoint'] for p in job['packages'].values()]],

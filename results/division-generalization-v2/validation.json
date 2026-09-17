@@ -47,6 +47,12 @@
   ],
   "complete_counterfactual_replays": 395,
   "corrected_image_validation_sha256": "c950f90691b468705b27617fff413f30a9f3df3f56a8cdedbeb3f682f9e7345d",
+  "entry_io_limits_unit_check": {
+    "log_sha256": "040910f9f3a809881fb87fb6c12eb5b9925b13c8129eb9d566532804def837e7",
+    "passed": true,
+    "settings_receipt_sha256": "36407723a1dfe72161ded7e2eca33f0f061d38e7acf8b4cd292d1e0cb2067655",
+    "tests": 42
+  },
   "fresh_image_proof": "pending",
   "literal_zero_path_test": true,
   "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
