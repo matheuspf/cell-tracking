@@ -346,6 +346,39 @@
       "threshold": 0.0
     },
     {
+      "arm": "J_mined",
+      "boundary_reached": false,
+      "calibration_sha256": "007f617001fe2b3e9a7eac7c5928317b5aa5c694ed591fbe16842ff4f9122068",
+      "decision_units": 633,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -2.0874428482865133,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 13,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "6bba",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 5.708846004259573,
+      "threshold": 0.0
+    },
+    {
       "arm": "J_uniform",
       "boundary_reached": false,
       "calibration_sha256": "2612168ef7fda603d51f0b675ec280041ad0ab66b4e15eee4640c787f62fe71a",

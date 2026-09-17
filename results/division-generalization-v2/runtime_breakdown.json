@@ -25,6 +25,44 @@
   "inference": [
     {
       "counts": {
+        "actions": 2357166,
+        "anchors": 13504
+      },
+      "dataset": "44b6_0b24845f",
+      "kind": "source_matrix",
+      "packages": [
+        "J_mined-20260916-3072",
+        "J_mined-20260916-4096",
+        "J_mined-314159-3072",
+        "J_mined-314159-4096",
+        "J_uniform-20260916-3072",
+        "J_uniform-20260916-4096",
+        "J_uniform-314159-3072",
+        "J_uniform-314159-4096"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_0b24845f/complete.json",
+      "seconds": 885.8923626209998,
+      "sha256": "30e09d8316b227b5da750795389ddc29777506cc490f10fc11030aa08319f3dc",
+      "shared_work_counted_once": true,
+      "timings": {
+        "J_mined-20260916-3072_model_seconds": 167.31484926188205,
+        "J_mined-20260916-4096_model_seconds": 94.55318917714067,
+        "J_mined-314159-3072_model_seconds": 83.88270985797317,
+        "J_mined-314159-4096_model_seconds": 83.08127901593434,
+        "J_uniform-20260916-3072_model_seconds": 83.58455725011845,
+        "J_uniform-20260916-4096_model_seconds": 83.34521707699423,
+        "J_uniform-314159-3072_model_seconds": 82.58925120509775,
+        "J_uniform-314159-4096_model_seconds": 82.67861271200309,
+        "bank_features_worker_seconds": 155.50804588703613,
+        "lease_seconds": 853.7886690209998,
+        "loader_worker_seconds": 183.73635909905352,
+        "transfer_seconds": 76.68338278197734,
+        "wait_seconds": 25.877004056997976
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
         "actions": 9392743,
         "anchors": 35191
       },
