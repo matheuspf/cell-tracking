@@ -231,6 +231,8 @@ def run(args=None):
         if not any(r['arm']==arm for r in measured):
             reason='source qualification pending' if not target else 'source failed; target export not qualified'
             report.append(f'| {arm} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
+    calibration_counts={name:sum(r['status']==name for r in calibrations) for name in
+        ('held_source_fitted','grouped_small_head_oof_fitted','calibration_unestablished')}
     report+=['',f'{status["completed_directional_fits"]}/10 directional fits have completed their required updates. '
         'Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. '
         'The shared prefix is counted once in compute and does not make independent experiments.','',
@@ -238,6 +240,12 @@ def run(args=None):
         'so its loss measures supported rejection and cannot establish division recovery. The 44b6 held panel has two '
         'positive-utility anchors. Full source graph screens govern qualification. The panels and extension rule remain '
         'as originally locked. [Panel composition](diagnostic_panel_composition.json).','',
+        f'Completed checkpoint calibrations: {calibration_counts["held_source_fitted"]} direct held-source fits, '
+        f'{calibration_counts["grouped_small_head_oof_fitted"]} grouped small-head fallbacks, and '
+        f'{calibration_counts["calibration_unestablished"]} unestablished. The fallback fits three heads for 4,096 updates '
+        'each on frozen features, holding complete overlap groups out. Those updates do not count toward the joint-training '
+        'floor. Only the heads are out of fit: the frozen source encoder retains its original label exposure. '
+        '[Calibration audit](calibration_audit.json).','',
         'The new module keeps native evidence inside learned relative complete-action scores. It uses fixed-seed probability '
         'sampling, separate positive exposure, masked unknown alternatives, negative-only groups, complete lost-link utility, '
         'and one two-scale raw scene shared across candidate pairs. The 490,804-parameter encoder/head uses ordered attention.','',
