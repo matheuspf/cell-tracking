@@ -98,6 +98,89 @@
       "threshold": 0.0
     },
     {
+      "arm": "J_mined",
+      "attempted_grouped_oof": true,
+      "boundary_reached": false,
+      "calibration_scope": "Only small heads are grouped out of fit; reused acquisition groups remain exploratory",
+      "calibration_sha256": "90c8268994020f0e95e3e31e8d1c697bf0f305c8aeb95740ce9711e39914f2cd",
+      "checkpoint_sha256": "9b39fed14fe2611611dc4ce8ac5e832e6da57c4ebbeb2ee275e16a550e145bdf",
+      "decision_units": 1275,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "fold_receipts": [
+        {
+          "fold": 0,
+          "head_updates": 4096,
+          "held_overlap_groups": 26,
+          "model_sha256": "f950ac6f6a40242a5b132f680b4ef9df106e157fdf2d349b4b5859b1c4b9c387",
+          "overlap": [],
+          "seconds": 496.6356113660004,
+          "train_overlap_groups": 45
+        },
+        {
+          "fold": 1,
+          "head_updates": 4096,
+          "held_overlap_groups": 20,
+          "model_sha256": "0ed6c9fc32cfc066e38ff3db224a749bd152793467d5223774b4bef6d9bc1643",
+          "overlap": [],
+          "seconds": 461.6287881840035,
+          "train_overlap_groups": 51
+        },
+        {
+          "fold": 2,
+          "head_updates": 4096,
+          "held_overlap_groups": 25,
+          "model_sha256": "f0a196d65d53e0c4413b9ca2eae92e3c54ec1f6257d446531c63705528049a32",
+          "overlap": [],
+          "seconds": 579.7209161110004,
+          "train_overlap_groups": 46
+        }
+      ],
+      "full_source_graph_screen_complete": false,
+      "image_encoder_exposure": "Frozen original source encoder includes original source-fit labels; not clean image OOF",
+      "intercept": -0.9128589620677405,
+      "intercept_penalized": false,
+      "negative_groups": 67,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "original_held_source_support": {
+        "decision_units": 201,
+        "intercept": 0.0,
+        "intercept_penalized": false,
+        "negative_groups": 14,
+        "partition": "calibration",
+        "positive_groups": 4,
+        "post_maximization": true,
+        "reason": "Fewer than five distinct source overlap groups in one class; fixed zero relative gains retained",
+        "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+        "source": "44b6",
+        "source_groups_independently_certified": false,
+        "status": "calibration_unestablished",
+        "target_used": false,
+        "temperature": 1.0,
+        "threshold": 0.0
+      },
+      "partition": "grouped_small_head_oof",
+      "positive_groups": 40,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 20260916,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "grouped_small_head_oof_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 3.823781735370308,
+      "threshold": 0.0
+    },
+    {
       "arm": "J_uniform",
       "boundary_reached": false,
       "calibration_sha256": "2612168ef7fda603d51f0b675ec280041ad0ab66b4e15eee4640c787f62fe71a",

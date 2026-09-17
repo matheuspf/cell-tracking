@@ -5,6 +5,24 @@
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2",
+        "calibrate",
+        "--source",
+        "6bba",
+        "--arm",
+        "J_mined",
+        "--seed",
+        "20260916",
+        "--stop-at",
+        "3072"
+      ],
+      "pid": 47962,
+      "started": 1789621469.48
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
         "queue"
       ],
       "pid": 3790482,
@@ -39,5 +57,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T04:48:02.083449+00:00"
+  "updated": "2026-09-17T05:04:33.044009+00:00"
 }

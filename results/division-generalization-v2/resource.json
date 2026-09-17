@@ -1,27 +1,27 @@
 {
-  "exclusive_lease_seconds": 12702.330748826025,
+  "exclusive_lease_seconds": 13685.019894780024,
   "lease_seconds_by_stage": {
     "calibration": 70.84397353400709,
     "frozen_matrix": 60.61669346999406,
     "inference": 3401.9511733740073,
     "scene_batching": 2.120725056003721,
-    "small_head_oof": 541.9399528739959,
-    "source_mining": 749.0811871280312,
+    "small_head_oof": 1301.7502946269888,
+    "source_mining": 824.5672143650372,
     "source_profile": 20.245540058996994,
-    "train": 7855.531503330989
+    "train": 8002.924280294988
   },
   "open_leases": [
     {
       "event": "begin",
-      "purpose": "small_head_oof/train/44b6",
-      "token": "4082715-1789620474562613571",
-      "utc": "2026-09-17T04:47:54.566844+00:00",
-      "wait_seconds": 0.8122023750038352
+      "purpose": "train/J_mined/6bba/20260916",
+      "token": "4014715-1789621459469586245",
+      "utc": "2026-09-17T05:04:19.474738+00:00",
+      "wait_seconds": 0.014372757003002334
     }
   ],
   "peak_process_tree_rss_gib": 11.509746551513672,
   "peak_total_gpu_gib": 3.3916015625,
   "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
-  "study_disk_gib": 9.360843535512686,
-  "wait_seconds": 1060.244765051044
+  "study_disk_gib": 9.36662949807942,
+  "wait_seconds": 1994.4801004520705
 }
