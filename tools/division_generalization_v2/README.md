@@ -22,6 +22,9 @@ are committed; graphs, raw scenes, weights, optimizer/RNG states and logs are no
 Stages can be resumed individually using `baselines`, `prepare --source 44b6`,
 `validate`, `profile --source 44b6`, `train --source 44b6 --arm prefix --seed 20260916`,
 `screen --source 44b6 --arm J_uniform --seed 20260916 --stop-at 4096`, and `report`.
+`calibrate` accepts the same source/arm/seed/checkpoint arguments and prepares
+only the source calibration; the later full source screen reuses that result.
+Run it only for completed checkpoints and avoid duplicate workers for one output.
 Inspect actual processes before starting a queue; it holds its own worker lock
 and cooperates with the inherited GPU lock. A `--stop-at` training boundary is an
 interruption of the immutable fit budget, never a smaller scientific experiment.

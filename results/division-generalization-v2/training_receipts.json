@@ -81,6 +81,10 @@
         }
       ],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "ad90530d476347484fd8c1f5668d6b415602c61393c9b8d25e965363ea1ec4c5",
+        "history.jsonl": "0984a71ccfd467fcdeda402629d08bd6a92034e8ba0f7abf9b514806f9db1c47"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.0,
       "wall_seconds": 245.3880962819967
@@ -165,6 +169,10 @@
         }
       ],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "78bb477fd3f9284ad589ccdadfb7b95d75a9be00091922db4e10c47700afb836",
+        "history.jsonl": "df7670dd4abcb7a5a06335c5c90e15445f80df76df9bee7fbb9d8f41d30b6501"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.0,
       "wall_seconds": 257.2065165849999
@@ -250,6 +258,12 @@
       "source": "44b6",
       "source_screen_receipts": [],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "35435edf9d80d4d77212af413e7ce3d3a25c5d841e12a6a2c08809ba855ce4cf",
+        "history.jsonl": "d30412c5fdc7911e87cfd52c5b670b823bbd8ba52096f45a1bb683b9c3f070ea",
+        "mining-2048.json": "6eeafb46924850729df8c75ea7551ad4dea599f90cece58bcbf56873ee841dd8",
+        "mining-3072.json": "aecef11eb2303a03ec8059ca041f29bc3b417c1a7bfa9b7af0f2d1e4b61b2f92"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.48470609498326667,
       "wall_seconds": 1018.7220697540033
@@ -335,6 +349,12 @@
       "source": "44b6",
       "source_screen_receipts": [],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "c8482995460c4b09a2d992269acc7b4b2d8576dd475465fc85a5f09a7623cde1",
+        "history.jsonl": "72b296b85a3758d806a3e45a35ff5f7938eb2956c909af892259c2720e700304",
+        "mining-2048.json": "6eeafb46924850729df8c75ea7551ad4dea599f90cece58bcbf56873ee841dd8",
+        "mining-3072.json": "166d865f7107a5d66c87f435392bba0d8b114ee2a500e904218619750c364709"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.5173195990064414,
       "wall_seconds": 1160.1475576899975
@@ -420,6 +440,12 @@
       "source": "6bba",
       "source_screen_receipts": [],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "fd413e1a5832c249eb983fd4739b4a486f54e27b783c5b592eff50446d8f5625",
+        "history.jsonl": "1bfd8b0c105d4f7291859dbd855148bed2ce341acbe5e9feca37790fb07d559f",
+        "mining-2048.json": "aaaf1f2b230b86aaaf1e9820871afb168eac1f400dc252a27113dd7e47ecfbac",
+        "mining-3072.json": "0ed38573d668bfd59d57f085dfd94c1e48f3543b54fd3d9b5fe604121a651286"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 2.0545795649886713,
       "wall_seconds": 1295.4582859670045
@@ -499,6 +525,10 @@
       "source": "44b6",
       "source_screen_receipts": [],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "51fda096065609d7b5ec82a5a0f36eeb7b64d538188de54a28ee47893b12269d",
+        "history.jsonl": "6582de83e2b4ada4a889206f06929650022ba0e346c913e837a596a4f3d2543b"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 7.572115351984394,
       "wall_seconds": 1433.625221850998
@@ -578,6 +608,10 @@
       "source": "6bba",
       "source_screen_receipts": [],
       "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "329f6aa7186f1f91451583b257a5203c9f5732ceb10128e1c165b4762d52b39d",
+        "history.jsonl": "22ea59abd72205c8535c076a96b8ffa802259afcc5f3a94d95dcc79b6b5fe7f5"
+      },
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.5913431420049164,
       "wall_seconds": 939.6011358579999

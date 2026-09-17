@@ -42,6 +42,11 @@ def fit(rows):
 @torch.no_grad()
 def run(model,dataset,path,amp,checkpoint_sha256=None):
     if path.exists():return read_json(path)
+    # Match the training and frozen prediction runtime, including small-head
+    # fallback fitting when invoked from a standalone source-screen process.
+    torch.backends.cuda.matmul.allow_tf32=False
+    torch.backends.cudnn.allow_tf32=False
+    torch.use_deterministic_algorithms(True)
     device='cuda' if model.image else 'cpu'
     split=read_json(RESULTS/'split_manifest.json')['directions'][dataset.source]
     rows=[];keys=iter(sorted(k for k,a in dataset.anchors.items() if a['random_included']))

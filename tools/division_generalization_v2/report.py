@@ -1,6 +1,7 @@
 """Concise honest receipts, curves and resumable commands; no invented results."""
 import csv
 import json
+import os
 from pathlib import Path
 import psutil
 
@@ -65,6 +66,9 @@ def run(args=None):
                 minimum=min(visits.values(),default=0),maximum=max(visits.values(),default=0))
         fits.append(dict(row,exposure=exposure,receipt_path=str(path),receipt_sha256=sha(path),
             common_prefix=prefix_receipt,invocation_totals=invocation_totals,
+            training_log_hashes={name:sha(path.parent/name) for name in
+                ('history.jsonl','diagnostics.jsonl','mining-2048.json','mining-3072.json')
+                if (path.parent/name).exists()},
             invocation_receipts=[dict(path=str(p),sha256=key) for key,(p,_) in invocations.items()],
             full_source_screen=bool(screens) and all(read_json(p)['full_source_screen'] for p in screens),
             source_screen_receipts=[dict(path=str(p),sha256=sha(p)) for p in sorted(screens)]))
@@ -144,8 +148,9 @@ def run(args=None):
     active=[]
     for p in psutil.process_iter(['cmdline','create_time']):
         try:
+            if p.pid == os.getpid():continue
             cmd=p.info['cmdline'] or []
-            if any(x in ('division_generalization_v2','division_generalization_v2.prediction_entry') for x in cmd):
+            if any(x.startswith('division_generalization_v2') for x in cmd):
                 active.append(dict(pid=p.pid,command=cmd,started=p.info['create_time']))
         except (psutil.NoSuchProcess,psutil.AccessDenied):pass
     complete=(WORK/'queue/complete.json').exists()
