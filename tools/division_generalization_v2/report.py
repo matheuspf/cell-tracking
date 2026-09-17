@@ -228,6 +228,13 @@ def run(args=None):
         replication.update(correctness_and_completion_gates=bool(ready),completion_checks=checks,
             mining_delta_by_seed=mining,mining_delta_by_seed_and_embryo=mining_embryos,
             replicated_mining_advantage=len(mining)==2 and all(v>0 for v in mining.values()))
+        if arm is None:
+            replication.update(status='source_qualification_failed',
+                reason='Neither image family qualified in both primary source directions; no replicated image target export was eligible. P0 is retained.')
+        elif arm not in freeze['qualified_exports']:
+            replication['reason']='The primary-source nominee failed qualification in its replication; no complete replicated target export was eligible.'
+        elif complete:
+            replication['reason']='All recommendation gates passed' if recommendation else 'The measured nominee did not pass all recommendation gates; see completion_checks and full scores.'
         status['target_met']=replication['robust_target_met'];write_json(RESULTS/'STATUS.json',status)
     write_json(RESULTS/'replication.json',replication)
     if not (RESULTS/'stage_attribution.json').exists():
@@ -261,6 +268,14 @@ def run(args=None):
         report+=['',f'Source-frozen nominee: **{nominee}**. Qualified complete exports: {exports}. '
             'The [frozen source decisions](target_freeze.json) record each direction and seed\'s selected '
             'checkpoint, application, calibration and source score before target predictions.']
+        for selected in freeze['selected'].values():
+            if selected['status']!='source_failed':continue
+            scores=[r for r in source_scores if (r['arm'],r['source'],r['seed'])==
+                    (selected['arm'],selected['source'],selected['seed'])]
+            best=max(scores,key=lambda r:r['score'])
+            report+=['',f'{selected["arm"]}, seed {selected["seed"]}, source {selected["source"]}: '
+                f'best full-source score {best["score"]:.12f}, Δ source P0 {best["delta"]:+.12f}. '
+                'This completed fit failed source qualification; its missing target score is intentional.']
         for source in ('44b6','6bba'):
             for seed in (20260916,314159):
                 path=RESULTS/f'extension-{source}-{seed}.json'
@@ -294,7 +309,9 @@ def run(args=None):
         '[Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), '
         '[source curve plot](training_event_curves.png), '
         '[complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), '
-        '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).','',
+        '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json), '
+        '[error transitions](error_transitions.csv), [stage diagnostics](stage_attribution.json), '
+        '[replication decision](replication.json).','',
         f'Accounted exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
         f'This includes {resource["crash_estimated_lease_seconds"]:.3f} s estimated for an interrupted lease; '
         'host downtime is excluded. '
