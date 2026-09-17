@@ -33,6 +33,19 @@ def completion_gates(complete,arm,target,fresh,gates,fits,freeze,image_gate,matr
 def run(args=None):
     RESULTS.mkdir(parents=True,exist_ok=True)
     fits=[];curves=[];source_scores=[];calibrations=[];runtime=[]
+    prefix_pairs=[]
+    for source in ('44b6','6bba'):
+        for seed in (20260916,314159):
+            roots=[WORK/'training'/arm/source/str(seed) for arm in ('J_uniform','J_mined')]
+            if not all((p/'common_prefix.json').exists() and (p/'mining-2048.json').exists() for p in roots):continue
+            same_prefix=read_json(roots[0]/'common_prefix.json')==read_json(roots[1]/'common_prefix.json')
+            same_mining=sha(roots[0]/'mining-2048.json')==sha(roots[1]/'mining-2048.json')
+            if not same_prefix or not same_mining:raise ValueError('Matched branches did not share the same starting state')
+            prefix_pairs.append(dict(source=source,seed=seed,same_prefix_receipt=True,initial_mining_byte_exact=True,
+                checkpoint_sha256=read_json(roots[0]/'common_prefix.json')['sha256'],
+                initial_mining_sha256=sha(roots[0]/'mining-2048.json')))
+    write_json(RESULTS/'matched_prefix_audit.json',dict(status='measured' if len(prefix_pairs)==4 else 'partial',
+        expected_source_seed_pairs=4,pairs=prefix_pairs,shared_prefix_not_independent=True))
     for path in sorted((WORK/'training').glob('*/*/*/training_receipt.json')):
         row=read_json(path)
         invocation_paths=list((path.parent/'invocations').glob('*.json'))
@@ -155,6 +168,7 @@ def run(args=None):
         gates=read_json(RESULTS/'validation.json')
         checks=completion_gates(complete,arm,target,fresh,gates,fits,freeze,
             read_json(RESULTS/'corrected_image_validation.json'),read_json(RESULTS/'matrix_parity.json'))
+        checks['matched_prefix_and_initial_mining']=len(prefix_pairs)==4
         ready=all(checks.values()) and len(pooled)==2 and len(embryos)==4
         if ready and all(r['score']>.934864986413134 for r in pooled) and all(r['score']>=bp[r['embryo']] for r in embryos) \
                 and next(r['score'] for r in pooled if r['seed']==20260916)>.935178370257:

@@ -1,0 +1,15 @@
+{
+  "expected_source_seed_pairs": 4,
+  "pairs": [
+    {
+      "checkpoint_sha256": "5149dc5690bac03250a52ff61e28c98ee6a1a71705fc43853826c5a7827529c8",
+      "initial_mining_byte_exact": true,
+      "initial_mining_sha256": "6eeafb46924850729df8c75ea7551ad4dea599f90cece58bcbf56873ee841dd8",
+      "same_prefix_receipt": true,
+      "seed": 20260916,
+      "source": "44b6"
+    }
+  ],
+  "shared_prefix_not_independent": true,
+  "status": "partial"
+}
