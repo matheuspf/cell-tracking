@@ -34,6 +34,20 @@ def completion_gates(complete,arm,target,fresh,gates,fits,freeze,image_gate,matr
 def run(args=None):
     RESULTS.mkdir(parents=True,exist_ok=True)
     fits=[];curves=[];source_scores=[];calibrations=[];runtime=[]
+    crash_replays=[]
+    timing_fields=('loader_seconds','transfer_seconds','augmentation_seconds','loader_transfer_seconds',
+                   'encoder_head_seconds','backward_seconds','optimizer_seconds','compute_seconds')
+    for path in sorted(RESULTS.glob('crash_recovery_*.json')):
+        recovery=read_json(path)
+        source,arm,seed=(recovery['resume_source'],recovery['resume_arm'],recovery['resume_seed'])
+        history=Path(recovery['archive'])/f'training-{arm}-{source}-{seed}'/'history.jsonl'
+        discarded=[json.loads(line) for line in history.read_text().splitlines()
+                   if json.loads(line)['step']>recovery['resume_step']]
+        crash_replays.append(dict(source=source,arm=arm,seed=seed,updates=len(discarded),
+            archived_history_sha256=sha(history),recovery_receipt_sha256=sha(path),
+            totals={k:sum(r.get(k,0.) for r in discarded) for k in timing_fields},
+            scope='Executed before poweroff, then replayed from the saved checkpoint; additional to retained history timings',
+            interrupted_invocation_wall_and_checkpoint_times_complete=False))
     prefix_pairs=[]
     for source in ('44b6','6bba'):
         for seed in (20260916,314159):
@@ -76,15 +90,15 @@ def run(args=None):
         history=folder/'history.jsonl'
         if history.exists():
             updates=[json.loads(line) for line in history.read_text().splitlines()]
-            fields=('loader_seconds','transfer_seconds','augmentation_seconds','loader_transfer_seconds',
-                    'encoder_head_seconds','backward_seconds','optimizer_seconds','compute_seconds')
             runtime.append(dict(arm=row['arm'],source=row['source'],seed=row['seed'],
                 recorded_updates=len(updates),first_step=min(r['step'] for r in updates),
                 last_step=max(r['step'] for r in updates),
-                totals={k:sum(r.get(k,0.) for r in updates) for k in fields},
+                totals={k:sum(r.get(k,0.) for r in updates) for k in timing_fields},
                 maximum_gradient_norm=max(r['gradient_norm'] for r in updates),
                 checkpoint_seconds=invocation_totals['checkpoint_seconds'],wall_seconds=invocation_totals['wall_seconds'],
                 measured_invocations=len(invocations),
+                crash_interrupted_invocation=any((r['source'],r['arm'],r['seed'])==
+                    (row['source'],row['arm'],row['seed']) for r in crash_replays),
                 includes_common_prefix=row['arm'] not in ('J_uniform','J_mined'),
                 cuda_kernel_profiler_seconds=None,
                 timing_scope='Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time'))
@@ -125,7 +139,7 @@ def run(args=None):
         r=read_json(path)
         inference.append(dict(kind='single_source',dataset=output.name,receipt=str(path),sha256=sha(path),
             seconds=r['seconds'],timings=r['timings'],counts=r['counts']))
-    write_json(RESULTS/'runtime_breakdown.json',dict(training=runtime,inference=inference,
+    write_json(RESULTS/'runtime_breakdown.json',dict(training=runtime,inference=inference,crash_replays=crash_replays,
         independent_workers_overlap=True,wall_times_must_not_be_summed_into_total_elapsed=True,
         reason=None if runtime else 'Production optimizer histories are not complete yet'))
     write_json(RESULTS/'calibration_audit.json',dict(status='measured' if calibrations else 'pending',fits=calibrations,

@@ -627,6 +627,89 @@
     {
       "arm": "prefix",
       "checkpoint_resume_parity": true,
+      "checkpoint_seconds": 0.11032773099987025,
+      "common_prefix": null,
+      "compute_seconds": 565.0640327200003,
+      "counterfactual_label_parity": true,
+      "exposure": {
+        "anchor_visits_summary": {
+          "draws": 65536,
+          "maximum": 1024,
+          "minimum": 1,
+          "unique": 3345
+        },
+        "anchors": 3465,
+        "coarse_outside_policy": "Zero spatial query with explicit validity and physical coordinate; no clamping",
+        "effective_anchor_sample_size": 3337.0,
+        "group_visits_summary": {
+          "draws": 65536,
+          "maximum": 1151,
+          "minimum": 194,
+          "unique": 258
+        },
+        "groups": 258,
+        "inclusion_weights": [
+          16.0
+        ],
+        "negative_only_groups": 242,
+        "partition": "fit",
+        "positive_groups": 16,
+        "random_supported_anchors": 3337,
+        "random_supported_groups": 258,
+        "risk_scope": "Within supported biological-group sampling design; not a biological prevalence estimate",
+        "sampling_independent_of_gt_components": true,
+        "scene_coverage": {
+          "inside_coarse": 78008,
+          "inside_fine": 63404,
+          "missing_temporal_frames": 221,
+          "queries": 78075
+        },
+        "source": "44b6",
+        "unknown_as_negative_count": 0
+      },
+      "finite_gradient_checks": true,
+      "full_source_screen": false,
+      "invocation_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/44b6/314159/invocations/2048-e90df92a5e08307d.json",
+          "sha256": "e90df92a5e08307dd6687dbb0a9ba4418fa4d1a609b7ced000f7b876b3b6dd48"
+        }
+      ],
+      "invocation_totals": {
+        "checkpoint_seconds": 0.11032773099987025,
+        "compute_seconds": 565.0640327200003,
+        "lease_seconds": 570.7848472609992,
+        "wait_seconds": 0.28829834199996185,
+        "wall_seconds": 571.5955428
+      },
+      "joint_optimizer_updates": 2048,
+      "lease_seconds": 570.7848472609992,
+      "literal_zero_path_test": true,
+      "model_parameters": 490804,
+      "model_sha256": "62f8d3669a72263ea8d7cdd4b3e383c2e2b03290364d7ef4ced636e3d988049f",
+      "negative_only_groups_seen": 242,
+      "new_target_used_for_training": false,
+      "positive_groups_seen": 16,
+      "prefix_sha256": null,
+      "random_background_stream": true,
+      "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/44b6/314159/training_receipt.json",
+      "receipt_sha256": "e90df92a5e08307dd6687dbb0a9ba4418fa4d1a609b7ced000f7b876b3b6dd48",
+      "required_updates": 2048,
+      "seed": 314159,
+      "source": "44b6",
+      "source_screen_receipts": [],
+      "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "ea344d0d5cb3f9d3b25c73e5e6d3eac9b437ee91233d9627f337d7f8e1b940a1",
+        "history.jsonl": "60f0a9fa6eeb6843ab231c36c563860d2aed1abc3b17bb2252c508db611d36e6"
+      },
+      "unknown_as_negative_count": 0,
+      "wait_seconds": 0.28829834199996185,
+      "wall_seconds": 571.5955428
+    },
+    {
+      "arm": "prefix",
+      "checkpoint_resume_parity": true,
       "checkpoint_seconds": 0.21742544199514668,
       "common_prefix": null,
       "compute_seconds": 929.3657272441196,

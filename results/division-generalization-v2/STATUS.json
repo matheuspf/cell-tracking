@@ -19,12 +19,12 @@
         "--source",
         "44b6",
         "--arm",
-        "prefix",
+        "J_uniform",
         "--seed",
         "314159"
       ],
-      "pid": 16511,
-      "started": 1789642700.25
+      "pid": 20745,
+      "started": 1789643291.04
     }
   ],
   "completed_directional_fits": 6,
@@ -39,5 +39,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T11:00:00.606142+00:00"
+  "updated": "2026-09-17T11:10:04.967591+00:00"
 }
