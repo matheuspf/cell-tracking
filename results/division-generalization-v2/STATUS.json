@@ -7,8 +7,8 @@
         "division_generalization_v2",
         "queue"
       ],
-      "pid": 3414936,
-      "started": 1789612741.8
+      "pid": 3790482,
+      "started": 1789616634.98
     },
     {
       "command": [
@@ -17,14 +17,14 @@
         "division_generalization_v2",
         "train",
         "--source",
-        "44b6",
+        "6bba",
         "--arm",
-        "J_mined",
+        "J_uniform",
         "--seed",
         "20260916"
       ],
-      "pid": 3687355,
-      "started": 1789615527.58
+      "pid": 3890123,
+      "started": 1789617725.61
     },
     {
       "command": [
@@ -33,11 +33,11 @@
         "division_generalization_v2",
         "report"
       ],
-      "pid": 3742032,
-      "started": 1789616108.35
+      "pid": 3897735,
+      "started": 1789617808.98
     }
   ],
-  "completed_directional_fits": 3,
+  "completed_directional_fits": 4,
   "new_target_scores": null,
   "prepared_clips": {
     "44b6": 71,
@@ -49,5 +49,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T03:35:09.498955+00:00"
+  "updated": "2026-09-17T04:03:30.144400+00:00"
 }

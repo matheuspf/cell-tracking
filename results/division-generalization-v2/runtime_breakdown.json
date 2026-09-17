@@ -717,6 +717,31 @@
       "wall_seconds": 257.2065165849999
     },
     {
+      "arm": "J_mined",
+      "checkpoint_seconds": 0.18377062000217848,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 2049,
+      "includes_common_prefix": false,
+      "last_step": 4096,
+      "maximum_gradient_norm": 20.995553970336914,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 20260916,
+      "source": "44b6",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 42.09135010586033,
+        "backward_seconds": 292.66510307203134,
+        "compute_seconds": 859.2621714932393,
+        "encoder_head_seconds": 256.0356480192422,
+        "loader_seconds": 217.5571772456169,
+        "loader_transfer_seconds": 305.5157786142372,
+        "optimizer_seconds": 2.1701015078724595,
+        "transfer_seconds": 44.21274753274338
+      },
+      "wall_seconds": 1018.7220697540033
+    },
+    {
       "arm": "J_uniform",
       "checkpoint_seconds": 0.1880431469908217,
       "cuda_kernel_profiler_seconds": null,
@@ -765,6 +790,31 @@
         "transfer_seconds": 68.96533731568343
       },
       "wall_seconds": 1433.625221850998
+    },
+    {
+      "arm": "prefix",
+      "checkpoint_seconds": 0.21742544199514668,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 1,
+      "includes_common_prefix": true,
+      "last_step": 2048,
+      "maximum_gradient_norm": 39.068359375,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 20260916,
+      "source": "6bba",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 42.47187210267293,
+        "backward_seconds": 293.50829521447304,
+        "compute_seconds": 929.3657272441196,
+        "encoder_head_seconds": 257.441240268774,
+        "loader_seconds": 283.4152055641607,
+        "loader_transfer_seconds": 371.9749589698549,
+        "optimizer_seconds": 2.11364480399061,
+        "transfer_seconds": 44.38962502554932
+      },
+      "wall_seconds": 939.6011358579999
     }
   ],
   "wall_times_must_not_be_summed_into_total_elapsed": true

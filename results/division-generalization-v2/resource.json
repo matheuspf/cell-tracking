@@ -1,24 +1,24 @@
 {
-  "exclusive_lease_seconds": 8787.320973719034,
+  "exclusive_lease_seconds": 10207.23141868203,
   "lease_seconds_by_stage": {
     "frozen_matrix": 7.618407397996634,
     "inference": 3401.9511733740073,
-    "source_mining": 275.3584735770419,
+    "source_mining": 324.0198787190311,
     "source_profile": 20.245540058996994,
-    "train": 5082.147379310991
+    "train": 6453.396419131997
   },
   "open_leases": [
     {
       "event": "begin",
-      "purpose": "source_mining/44b6",
-      "token": "3687355-1789616107873776606",
-      "utc": "2026-09-17T03:35:07.875998+00:00",
-      "wait_seconds": 0.013429377999273129
+      "purpose": "source_mining/6bba",
+      "token": "3890123-1789617809322446902",
+      "utc": "2026-09-17T04:03:29.324872+00:00",
+      "wait_seconds": 0.012798558003851213
     }
   ],
   "peak_process_tree_rss_gib": 11.509746551513672,
   "peak_total_gpu_gib": 3.3916015625,
   "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
-  "study_disk_gib": 9.226727719418705,
-  "wait_seconds": 75.66380085802666
+  "study_disk_gib": 9.247199491597712,
+  "wait_seconds": 77.12171242901968
 }
