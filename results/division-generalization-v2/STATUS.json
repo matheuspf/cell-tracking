@@ -17,20 +17,20 @@
         "division_generalization_v2",
         "source-matrix",
         "--source",
-        "44b6"
+        "6bba"
       ],
-      "pid": 242652,
-      "started": 1789654322.12
+      "pid": 423142,
+      "started": 1789662882.97
     },
     {
       "command": [
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2.matrix_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/jobs/source_initial/44b6_b2c44266.json"
+        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/6bba/jobs/source_initial/6bba_283bf9f1.json"
       ],
-      "pid": 348846,
-      "started": 1789659637.02
+      "pid": 427905,
+      "started": 1789663044.7
     }
   ],
   "completed_directional_fits": 10,
@@ -45,5 +45,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T15:43:17.183961+00:00"
+  "updated": "2026-09-17T16:39:54.842129+00:00"
 }

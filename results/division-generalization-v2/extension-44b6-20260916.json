@@ -1,0 +1,25 @@
+{
+  "branches": {
+    "J_mined": {
+      "eligible": false,
+      "loss_3072": 0.6440897065211431,
+      "loss_4096": 0.44344265741621225,
+      "relative_improvement": 0.311520347357615,
+      "score_3072": 0.9174033215455286,
+      "score_4096": 0.9133125550418592
+    },
+    "J_uniform": {
+      "eligible": false,
+      "loss_3072": 0.4583396046146557,
+      "loss_4096": 0.2681816298524762,
+      "relative_improvement": 0.41488444997471446,
+      "score_3072": 0.9215745227396485,
+      "score_4096": 0.9161173026399675
+    }
+  },
+  "extend": false,
+  "same_extended_budget_for_both": true,
+  "seed": 20260916,
+  "source": "44b6",
+  "target_used": false
+}
