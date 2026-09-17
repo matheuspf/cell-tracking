@@ -1,0 +1,14 @@
+{
+  "changed_complete_graph_rejected": true,
+  "command": "python -m pytest -q tests/division_generalization_v2 tests/pipeline_error_training",
+  "existing_geff_reopened_and_compared": true,
+  "fresh_code_sha256": "fc8528d4ed08f7f9229f24cbad40c806286f5a41ac263851020e7d3df67a7c67",
+  "full_fresh_resume_verification": "pending_initial_replay_completion",
+  "passed": 84,
+  "recorded": "2026-09-17T19:49:01.668631+00:00",
+  "seconds": 6.73,
+  "status": "tests_passed",
+  "test_code_sha256": "9f4659a50e3082650bbabfa9e82623335f5a379f02ba268327a484dd19a0f555",
+  "warning": "Existing test converts a requires-grad tensor to float; nonfatal",
+  "warnings": 1
+}

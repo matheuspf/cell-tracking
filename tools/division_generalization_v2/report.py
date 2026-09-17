@@ -259,7 +259,10 @@ def run(args=None):
             f'{r.get("node_identity_sha256",node_ids.get(scope,"pending"))[:12]} | {r["status"]} |')
     for arm in ('G30','J_uniform','J_mined'):
         if not any(r['arm']==arm for r in measured):
-            reason='source qualification pending' if not target else 'source failed; target export not qualified'
+            freeze_path=RESULTS/'target_freeze.json'
+            reason=('source qualification pending' if not freeze_path.exists() else
+                'target export/scoring pending' if arm in read_json(freeze_path)['qualified_exports'] else
+                'source failed; target export not qualified')
             report.append(f'| {arm} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
     if (RESULTS/'target_freeze.json').exists():
         freeze=read_json(RESULTS/'target_freeze.json')
@@ -276,12 +279,13 @@ def run(args=None):
             report+=['',f'{selected["arm"]}, seed {selected["seed"]}, source {selected["source"]}: '
                 f'best full-source score {best["score"]:.12f}, Δ source P0 {best["delta"]:+.12f}. '
                 'This completed fit failed source qualification; its missing target score is intentional.']
+        report.append('')
         for source in ('44b6','6bba'):
             for seed in (20260916,314159):
                 path=RESULTS/f'extension-{source}-{seed}.json'
                 if path.exists():
                     decision='extended both arms to 8,192 updates' if read_json(path)['extend'] else 'stopped both arms at 4,096 updates'
-                    report.append(f'[{source} / {seed} duration decision]({path.name}): {decision}.')
+                    report.append(f'- [{source} / {seed} duration decision]({path.name}): {decision}.')
     calibration_counts={name:sum(r['status']==name for r in calibrations) for name in
         ('held_source_fitted','grouped_small_head_oof_fitted','calibration_unestablished')}
     report+=['',f'{status["completed_directional_fits"]}/10 directional fits have completed their required updates. '

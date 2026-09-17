@@ -136,3 +136,18 @@ def test_queue_stops_after_a_cooperative_incomplete_training_boundary(tmp_path,m
     with pytest.raises(RuntimeError,match='below required boundary'):
         queue.train('44b6','prefix',20260916)
     assert len(list((folder/'invocations').glob('*.json')))==1
+
+
+def test_existing_fresh_geff_is_reverified_against_complete_graph(tmp_path):
+    import pytest
+    from pipeline_error_training.serialization import export_geff
+    from division_generalization_v2.fresh import verify_existing_geff
+    nodes=np.array([[31,0,2,3,4],[17,1,3,4,5]],dtype=np.int64)
+    edges=np.array([[31,17]],dtype=np.int64)
+    path=tmp_path/'candidate.geff'
+    export_geff(path,nodes,edges)
+    receipt=verify_existing_geff(path,nodes,edges)
+    assert receipt['exact_roundtrip'] and receipt['existing_export_reverified']
+    changed=nodes.copy();changed[1,2]+=1
+    with pytest.raises(ValueError,match='differs from the complete scored graph'):
+        verify_existing_geff(path,changed,edges)

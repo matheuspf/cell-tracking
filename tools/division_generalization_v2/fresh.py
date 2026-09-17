@@ -13,6 +13,21 @@ from .screen import launch
 BASE=ROOT/'image-native-tracking-v5/inference_package_validation/base'
 
 
+def verify_existing_geff(path,nodes,edges):
+    """Re-read persisted exports on resume instead of assuming a directory is valid."""
+    import tracksdata as td
+    restored,_=td.graph.IndexedRXGraph.from_geff(str(path))
+    table=restored.node_attrs().sort('study_row')
+    lookup={int(i):int(j) for i,j in table.select('node_id','study_node_id').iter_rows()}
+    nn=table.select('study_node_id','t','z','y','x').to_numpy().astype(np.int64)
+    ee=np.array([(lookup[int(a)],lookup[int(b)]) for a,b in
+        restored.edge_attrs().sort('study_edge_row').select('source_id','target_id').iter_rows()],np.int64).reshape(-1,2)
+    if graph_hash(nn,ee)!=graph_hash(nodes,edges):
+        raise ValueError('Existing fresh GEFF differs from the complete scored graph')
+    return dict(nodes=len(nn),edges=len(ee),exact_roundtrip=True,
+                stable_id_attribute='study_node_id',existing_export_reverified=True)
+
+
 def run():
     manifest=read_json(BASE/'manifest.json')
     for collection in ('code','package_files'):
@@ -74,20 +89,24 @@ def run():
         from pipeline_error_training.serialization import export_csv,export_geff
         csv=export_csv(output/'candidate.csv',renamed,module['nodes'],module['edges'])
         geffpath=output/'fresh/candidate.geff'
-        geff=export_geff(geffpath,module['nodes'],module['edges']) if not geffpath.exists() else dict(previously_exported=True)
+        geff=(export_geff(geffpath,module['nodes'],module['edges']) if not geffpath.exists()
+              else verify_existing_geff(geffpath,module['nodes'],module['edges']))
         guards=[read_json(p) for p in (output/'startup_audits').glob('*.json')]
         if arm:guards.append(read_json(output/'event/guard.json'))
         if not guards or any(g['blocked_reads'] or g['blocked_network'] or not g['installed_before_numerical'] for g in guards):
             raise ValueError('Fresh startup denial proof failed')
         proof.append(dict(dataset=dataset,renamed=renamed,source=source,arm=arm or 'P0',
-            seconds=time.monotonic()-started,exact_P0=True,exact_scored_candidate=True,
+            verification_invocation_wall_seconds=time.monotonic()-started,exact_P0=True,exact_scored_candidate=True,
             graph_hash=graph_hash(module['nodes'],module['edges']),csv=csv,geff=geff,guards=guards,stages=stages,
             module_timing=None if module_trace is None else dict(seconds=module_trace['seconds'],**module_trace['timings']),
             pipeline_stage_service_seconds=sum(s['timing']['lease_seconds'] for s in stages)+(
                 module_trace['seconds']-module_trace['timings'].get('lease_wait_seconds',0.) if module_trace else 0.),
+            pipeline_stage_wall_seconds=sum(s['timing']['wall_seconds'] for s in stages)+(
+                module_trace['seconds'] if module_trace else 0.),
             cold_scope='Empty pipeline artifact caches before baseline; operating-system page cache is uncontrolled',
             all_stage_timings_persisted_across_resume=True))
     result=dict(status='measured',clips=proof,full_image_reconstruction=True,
+        freeze_sha256=sha(RESULTS/'target_freeze.json'),
         cold_pipeline_artifacts=all(p['stages'][0]['timing']['empty_pipeline_cache_at_start'] for p in proof),
         deny_annotation_old_cache_network_from_startup=True,Kaggle_runtime_guarantee=False)
     write_json(RESULTS/'fresh_image_validation.json',result)
