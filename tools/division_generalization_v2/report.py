@@ -150,7 +150,7 @@ def run(args=None):
     resource=dict(exclusive_lease_seconds=sum(e.get('lease_seconds',0.) for e in events if e['event']=='end'),
         wait_seconds=sum(e.get('wait_seconds',0.) for e in events if e['event']=='end'),
         open_leases=[e for e in events if e['event']=='begin' and e['token'] not in {x['token'] for x in events if x['event']=='end'}],
-        scope='Full exclusive lease intervals, including loader and CPU work; not kernel time',
+        scope='Full exclusive study-lock intervals, including loader and CPU work; other applications can share the device, so these are not dedicated GPU kernel times',
         study_disk_gib=sum(p.stat().st_size for p in WORK.rglob('*') if p.is_file())/2**30)
     resource['crash_estimated_lease_seconds']=sum(e.get('lease_seconds',0.) for e in events
         if e['event']=='end' and e.get('reconciled_utc'))
@@ -312,10 +312,11 @@ def run(args=None):
         '[sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json), '
         '[error transitions](error_transitions.csv), [stage diagnostics](stage_attribution.json), '
         '[replication decision](replication.json).','',
-        f'Accounted exclusive GPU leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
+        f'Accounted exclusive study-lock leases: {resource["exclusive_lease_seconds"]/3600:.3f} h; waits: {resource["wait_seconds"]:.1f} s. '
         f'This includes {resource["crash_estimated_lease_seconds"]:.3f} s estimated for an interrupted lease; '
         'host downtime is excluded. '
-        'Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, '
+        'Full lease intervals include preprocessing; unrelated applications also used the device. '
+        '[Concurrent workload evidence](runtime_cpu_contention.json). [Operation wall timings](runtime_breakdown.json) separate loading, transfers, '
         'augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.','',
         'An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as '
         'implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their '

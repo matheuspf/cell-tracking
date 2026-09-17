@@ -5,6 +5,19 @@
     22,
     32
   ],
+  "later_gpu_contention": {
+    "current_source_complete": 31,
+    "gpu_compute_apps": [
+      "4449, /usr/bin/coolercontrol, 170",
+      "667220, /mnt/ssd/data/steam/steamapps/common/BeamNG.drive/BinLinux/BeamNG.drive.x64 -forcecloud on, 1452",
+      "695160, /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python, 612",
+      "704836, /home/mpf/code/kaggle/kaggriculture/.venv/bin/python, 682"
+    ],
+    "lease_wall_intervals_not_pure_dedicated_gpu_compute": true,
+    "other_workloads_modified": false,
+    "recorded": "2026-09-17T18:19:46.821081+00:00",
+    "study_lock_does_not_exclude_uncoordinated_device_users": true
+  },
   "other_allowed_cpus": [
     0,
     1,
