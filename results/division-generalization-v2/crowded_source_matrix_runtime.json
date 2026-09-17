@@ -1,0 +1,195 @@
+{
+  "counts": {
+    "actions": 9392743,
+    "anchors": 35191
+  },
+  "dataset": "44b6_e31261b4",
+  "full_clip": true,
+  "model_packages": 8,
+  "outputs": [
+    {
+      "accepted_actions": 119,
+      "application": "protected",
+      "changed_edges": 253,
+      "identical_P0_edges": false,
+      "package": "J_mined-20260916-3072",
+      "prediction_sha256": "b8191b0aa2d787af23ec5b48147b90a0a94a1c4c5d99338fd760049b19d26556",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 120,
+      "application": "replacement",
+      "changed_edges": 256,
+      "identical_P0_edges": false,
+      "package": "J_mined-20260916-3072",
+      "prediction_sha256": "41f59ebd62ebbe7a139d8a2f8f8834cc0856734721668b6377841b8108472cfd",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 426,
+      "application": "protected",
+      "changed_edges": 943,
+      "identical_P0_edges": false,
+      "package": "J_mined-20260916-4096",
+      "prediction_sha256": "dbb569e366904002a3b5c59328e2c20d53b72f10054d30146460d32bcd916f6e",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 451,
+      "application": "replacement",
+      "changed_edges": 982,
+      "identical_P0_edges": false,
+      "package": "J_mined-20260916-4096",
+      "prediction_sha256": "3c972e08b668ff37e643a5de8871e8f9127723a0a8ee5903d301340b586bd469",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 15,
+      "application": "protected",
+      "changed_edges": 26,
+      "identical_P0_edges": false,
+      "package": "J_mined-314159-3072",
+      "prediction_sha256": "e203f6e4fa5a87b3edce9ad7bbd37767a54e342074828beba3f34e2fdfea1379",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 16,
+      "application": "replacement",
+      "changed_edges": 29,
+      "identical_P0_edges": false,
+      "package": "J_mined-314159-3072",
+      "prediction_sha256": "0d12d619af0dc0b86235e22b462bbbcab13131b8ad504447450487de56d36231",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 22,
+      "application": "protected",
+      "changed_edges": 41,
+      "identical_P0_edges": false,
+      "package": "J_mined-314159-4096",
+      "prediction_sha256": "f83f6cc2b4088bc4c37dbd51930a296f011087fb110e450e1d8a03966a3dc1a8",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 23,
+      "application": "replacement",
+      "changed_edges": 43,
+      "identical_P0_edges": false,
+      "package": "J_mined-314159-4096",
+      "prediction_sha256": "e2e6ce917ddc6221652b8128e2a75f1def73fc87baeea4238dc0d0a61fd69963",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 73,
+      "application": "protected",
+      "changed_edges": 141,
+      "identical_P0_edges": false,
+      "package": "J_uniform-20260916-3072",
+      "prediction_sha256": "3d84f6a433f23f367280c245ab0a6d4d47fba05eeefa0a1e2ea2cca544729f8f",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 75,
+      "application": "replacement",
+      "changed_edges": 144,
+      "identical_P0_edges": false,
+      "package": "J_uniform-20260916-3072",
+      "prediction_sha256": "438e386ec652db6aa7f56377a9843dafd7ecbb4fe693133549a661ddb28d4102",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 200,
+      "application": "protected",
+      "changed_edges": 355,
+      "identical_P0_edges": false,
+      "package": "J_uniform-20260916-4096",
+      "prediction_sha256": "d1cad9d25ab1c496ef8851af618df1a627463513ee16c3b0a70933229d3cb2ba",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 221,
+      "application": "replacement",
+      "changed_edges": 385,
+      "identical_P0_edges": false,
+      "package": "J_uniform-20260916-4096",
+      "prediction_sha256": "a8ed8cbd985fa8ac0e86bbdf40e4da025b3e4d621c5d59b5649ab6f9a3c2b177",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 4,
+      "application": "protected",
+      "changed_edges": 8,
+      "identical_P0_edges": false,
+      "package": "J_uniform-314159-3072",
+      "prediction_sha256": "1ddeab7bc03588e8c1c9e4071ee1bcb7c57666b2079f8aa2fca6637659d52f0a",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 4,
+      "application": "replacement",
+      "changed_edges": 8,
+      "identical_P0_edges": false,
+      "package": "J_uniform-314159-3072",
+      "prediction_sha256": "1ddeab7bc03588e8c1c9e4071ee1bcb7c57666b2079f8aa2fca6637659d52f0a",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 215,
+      "application": "protected",
+      "changed_edges": 472,
+      "identical_P0_edges": false,
+      "package": "J_uniform-314159-4096",
+      "prediction_sha256": "75ecf86959f2461b49b1c10ed14cbaf6dbf12058a1e6d90bd5b62e156728aef1",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    },
+    {
+      "accepted_actions": 224,
+      "application": "replacement",
+      "changed_edges": 497,
+      "identical_P0_edges": false,
+      "package": "J_uniform-314159-4096",
+      "prediction_sha256": "54c046c201f348f2578661b55b7e6ec1851a2ce14509092988c133d6208959f7",
+      "solver_abstentions": 0,
+      "unchanged_nodes": true
+    }
+  ],
+  "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/frozen_matrix/44b6/source_initial/44b6_e31261b4/complete.json",
+  "receipt_sha256": "98d3d0c4255c655d21a683894fd53bc363a0593c7659d6ed4fb75479b4eb16ea",
+  "recorded": "2026-09-17T13:15:48.519649+00:00",
+  "single_clip_extrapolation_is_not_a_runtime_guarantee": true,
+  "source": "44b6",
+  "source_labels_used_for_this_runtime_check": false,
+  "source_qualification": "Pending complete calibration partition screens",
+  "status": "measured",
+  "timings": {
+    "J_mined-20260916-3072_model_seconds": 501.254881591919,
+    "J_mined-20260916-4096_model_seconds": 221.34283650324141,
+    "J_mined-314159-3072_model_seconds": 196.7673879551703,
+    "J_mined-314159-4096_model_seconds": 195.34336744708526,
+    "J_uniform-20260916-3072_model_seconds": 194.8270041911146,
+    "J_uniform-20260916-4096_model_seconds": 194.46884577496257,
+    "J_uniform-314159-3072_model_seconds": 193.6729534429187,
+    "J_uniform-314159-4096_model_seconds": 192.8995349358438,
+    "bank_features_worker_seconds": 496.9291790548896,
+    "lease_seconds": 2138.849358892994,
+    "loader_worker_seconds": 350.471506429325,
+    "transfer_seconds": 203.68152217711122,
+    "wait_seconds": 384.10530894699696
+  },
+  "wall_seconds": 2539.6416871929996
+}
