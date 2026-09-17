@@ -53,7 +53,8 @@
     "settings_receipt_sha256": "36407723a1dfe72161ded7e2eca33f0f061d38e7acf8b4cd292d1e0cb2067655",
     "tests": 42
   },
-  "fresh_image_proof": "pending",
+  "fresh_image_proof": "measured",
+  "fresh_image_validation_sha256": "9466352b1ee3b77eca0b39a1854920235695228d78bff5ce6425479ca15d94e0",
   "literal_zero_path_test": true,
   "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
   "optimized_matrix_parity_sha256": "0b54d001f927e1eb96a0cce1eaf12eb683486941dbcb2d7c2f521589d4bda3fa",

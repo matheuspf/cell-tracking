@@ -1,14 +1,22 @@
 {
   "changed_complete_graph_rejected": true,
   "command": "python -m pytest -q tests/division_generalization_v2 tests/pipeline_error_training",
+  "complete_graphs_unchanged": true,
   "existing_geff_reopened_and_compared": true,
   "fresh_code_sha256": "fc8528d4ed08f7f9229f24cbad40c806286f5a41ac263851020e7d3df67a7c67",
-  "full_fresh_resume_verification": "pending_initial_replay_completion",
+  "full_fresh_resume_verification": "measured",
+  "initial_proof_sha256": "52f8f6663e0461e23ebf32dc45af06f5a937e5b53a3462209395105ad99b3e84",
+  "original_cold_stage_timings_unchanged": true,
   "passed": 84,
+  "receipt_scope": "The explicitly verified resumed invocation is preserved here; subsequent queue verification may update invocation wall timing in the current proof",
   "recorded": "2026-09-17T19:49:01.668631+00:00",
+  "resumed_proof_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/validation/fresh_resumed_proof.json",
+  "resumed_proof_sha256": "9466352b1ee3b77eca0b39a1854920235695228d78bff5ce6425479ca15d94e0",
   "seconds": 6.73,
+  "source_frozen_fallback": "P0",
   "status": "tests_passed",
   "test_code_sha256": "9f4659a50e3082650bbabfa9e82623335f5a379f02ba268327a484dd19a0f555",
+  "verified_at": "2026-09-17T19:50:41.583595+00:00",
   "warning": "Existing test converts a requires-grad tensor to float; nonfatal",
   "warnings": 1
 }

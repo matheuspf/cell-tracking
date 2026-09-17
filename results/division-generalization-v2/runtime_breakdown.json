@@ -1469,6 +1469,72 @@
     },
     {
       "counts": {
+        "actions": 1689459,
+        "anchors": 7460
+      },
+      "dataset": "44b6_0113de3b",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/44b6_0113de3b/complete.json",
+      "seconds": 102.15708643499966,
+      "sha256": "5399b28454c9c3f5806687b685078903a107396ab496d4ec753c4e288b123e2c",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 78.83163414413139,
+        "bank_features_worker_seconds": 225.68228365282994,
+        "loader_worker_seconds": 0.0024890822387533262,
+        "transfer_seconds": 18.01163333808654
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2357166,
+        "anchors": 13504
+      },
+      "dataset": "44b6_0b24845f",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/44b6_0b24845f/complete.json",
+      "seconds": 125.8143938889989,
+      "sha256": "7fe352763ec94c9a3e2dd53b1ab98d22b84a624da5da88a1560ae9febfe0dbc9",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 96.27804614153138,
+        "bank_features_worker_seconds": 258.4405729597056,
+        "loader_worker_seconds": 0.0033956520492210984,
+        "transfer_seconds": 24.70801371811831
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2971252,
+        "anchors": 12682
+      },
+      "dataset": "44b6_0c582fdc",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/44b6_0c582fdc/complete.json",
+      "seconds": 149.96729957599746,
+      "sha256": "0ab409b968fd2a53b6ebad4ca16f7bf5288eed128b8f1ec2f1be9430e4951fbc",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 115.73916098594054,
+        "bank_features_worker_seconds": 347.8574472088294,
+        "loader_worker_seconds": 0.0027643546782201156,
+        "transfer_seconds": 28.96213450727373
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
         "actions": 2357166,
         "anchors": 13504,
         "positive_gains": 0

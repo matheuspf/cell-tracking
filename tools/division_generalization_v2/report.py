@@ -328,6 +328,17 @@ def run(args=None):
         '[Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), '
         '[control compatibility](model_code_compatibility.json).','',
         'No production promotion, merge, Kaggle submission, weight publication or leaderboard claim has been made.']
+    fresh_path=RESULTS/'fresh_image_validation.json'
+    if fresh_path.exists():
+        proof=read_json(fresh_path)
+        timings=', '.join(f'{r["renamed"]}: {r["pipeline_stage_wall_seconds"]:.1f} s'
+            for r in proof['clips'] if 'pipeline_stage_wall_seconds' in r)
+        tested=', '.join(sorted({r['arm'] for r in proof['clips']}))
+        report+=['',f'Fresh image reconstruction tested {tested} on two renamed complete clips. '
+            f'Persisted pipeline wall times: {timings}. Exact graph, CSV and GEFF checks are recorded in the '
+            '[fresh-image proof](fresh_image_validation.json); [resume checks](resume_export_checks.json) '
+            'revalidate saved exports and preserve original stage timings. Pipeline artifact caches were empty '
+            'before each baseline run; the operating-system page cache was uncontrolled.']
     (RESULTS/'REPORT.md').write_text('\n'.join(report)+'\n')
     if complete:
         continuation=f'''Read [REPORT.md](REPORT.md) and [STATUS.json](STATUS.json). Status: complete.

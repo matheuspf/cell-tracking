@@ -1,0 +1,262 @@
+{
+  "Kaggle_runtime_guarantee": false,
+  "clips": [
+    {
+      "all_stage_timings_persisted_across_resume": true,
+      "arm": "P0",
+      "cold_scope": "Empty pipeline artifact caches before baseline; operating-system page cache is uncontrolled",
+      "csv": {
+        "edges": 5401,
+        "exact_roundtrip": true,
+        "nodes": 5607,
+        "rows": 11008
+      },
+      "dataset": "44b6_d754aa59",
+      "exact_P0": true,
+      "exact_scored_candidate": true,
+      "geff": {
+        "edges": 5401,
+        "exact_roundtrip": true,
+        "existing_export_reverified": true,
+        "nodes": 5607,
+        "stable_id_attribute": "study_node_id"
+      },
+      "graph_hash": "9abaccbd86323c99158c3bac0df9678559046fc70e4acbde2c7ee1cb5c471043",
+      "guards": [
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "6bba",
+          "stage": "baseline"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "6bba",
+          "stage": "point-head"
+        }
+      ],
+      "module_timing": null,
+      "pipeline_stage_service_seconds": 160.8560350600019,
+      "pipeline_stage_wall_seconds": 161.74113734200364,
+      "renamed": "specimen_alder",
+      "source": "6bba",
+      "stages": [
+        {
+          "receipt_sha256": "a7b84add52bfbf98315367bf6d222a5e37657f93f27244d4625394469607ee19",
+          "stage": "baseline",
+          "timing": {
+            "OS_page_cache_flushed": false,
+            "command": [
+              "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+              "-m",
+              "pipeline_error_training.fresh_entry",
+              "--images",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_alder/images",
+              "--output",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_alder/output",
+              "--package",
+              "/kaggle/working/cell-tracking/image-native-tracking-v5/inference_package_validation/base",
+              "--source",
+              "6bba",
+              "--p0-model",
+              "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_6bba.json",
+              "--v1",
+              "/kaggle/working/cell-tracking/annotation-selection-v1",
+              "--v2",
+              "/kaggle/working/cell-tracking/strong-tracker-v2",
+              "--stage",
+              "baseline"
+            ],
+            "empty_pipeline_cache_at_start": true,
+            "lease_seconds": 103.98859969900514,
+            "returncode": 0,
+            "wait_seconds": 0.016003249998902902,
+            "wall_seconds": 104.45463321800344
+          },
+          "timing_sha256": "a66c56291eb7c58a85733f08b4585320b0d078d6c01b34c73fc1ddf856a87541"
+        },
+        {
+          "receipt_sha256": "6e756c7f39d196c6dc48df02e3c125c5cd95b1f3b88c5e22092d57b3ca1dbbfc",
+          "stage": "point-head",
+          "timing": {
+            "OS_page_cache_flushed": false,
+            "command": [
+              "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+              "-m",
+              "pipeline_error_training.fresh_entry",
+              "--images",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_alder/images",
+              "--output",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_alder/output",
+              "--package",
+              "/kaggle/working/cell-tracking/image-native-tracking-v5/inference_package_validation/base",
+              "--source",
+              "6bba",
+              "--p0-model",
+              "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_6bba.json",
+              "--v1",
+              "/kaggle/working/cell-tracking/annotation-selection-v1",
+              "--v2",
+              "/kaggle/working/cell-tracking/strong-tracker-v2",
+              "--stage",
+              "point-head"
+            ],
+            "empty_pipeline_cache_at_start": false,
+            "lease_seconds": 56.86743536099675,
+            "returncode": 0,
+            "wait_seconds": 0.014598508001654409,
+            "wall_seconds": 57.2865041240002
+          },
+          "timing_sha256": "b98827644452574e7606bd240ff89033cce903f41806aee4e55627627b6240be"
+        }
+      ],
+      "verification_invocation_wall_seconds": 3.743160601996351
+    },
+    {
+      "all_stage_timings_persisted_across_resume": true,
+      "arm": "P0",
+      "cold_scope": "Empty pipeline artifact caches before baseline; operating-system page cache is uncontrolled",
+      "csv": {
+        "edges": 22314,
+        "exact_roundtrip": true,
+        "nodes": 22931,
+        "rows": 45245
+      },
+      "dataset": "6bba_bb9f20c3",
+      "exact_P0": true,
+      "exact_scored_candidate": true,
+      "geff": {
+        "edges": 22314,
+        "exact_roundtrip": true,
+        "existing_export_reverified": true,
+        "nodes": 22931,
+        "stable_id_attribute": "study_node_id"
+      },
+      "graph_hash": "cc08a8933ffbfe261c1a103b2dc0d7173f365e032bbbfbba9cf9d2ad90607c72",
+      "guards": [
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "44b6",
+          "stage": "point-head"
+        },
+        {
+          "blocked_network": 0,
+          "blocked_paths": [],
+          "blocked_reads": 0,
+          "installed_before_numerical": true,
+          "runtime_array_sha256": {
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/ball_decompositions.npy": "4f9eb51f361fd7d7d22d342dec7bb98178a21aa9c944507f25898b8ca213e54d",
+            "/kaggle/envs/cell-tracking-notebooks/lib/python3.12/site-packages/skimage/morphology/disk_decompositions.npy": "769739e7b3d8c7061993682cdf45a0c048940952fb78e31b172d830f7e78e7ee"
+          },
+          "scope": "Python audit hooks, including cache and socket denial; not a Linux security namespace",
+          "source_model": "44b6",
+          "stage": "baseline"
+        }
+      ],
+      "module_timing": null,
+      "pipeline_stage_service_seconds": 183.63306484500208,
+      "pipeline_stage_wall_seconds": 184.48508852999657,
+      "renamed": "specimen_birch",
+      "source": "44b6",
+      "stages": [
+        {
+          "receipt_sha256": "30119bb37cc9c769af60b2f24a1b33f4a6eb4bfe47f8397008187f7cf8a6d372",
+          "stage": "baseline",
+          "timing": {
+            "OS_page_cache_flushed": false,
+            "command": [
+              "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+              "-m",
+              "pipeline_error_training.fresh_entry",
+              "--images",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_birch/images",
+              "--output",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_birch/output",
+              "--package",
+              "/kaggle/working/cell-tracking/image-native-tracking-v5/inference_package_validation/base",
+              "--source",
+              "44b6",
+              "--p0-model",
+              "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_44b6.json",
+              "--v1",
+              "/kaggle/working/cell-tracking/annotation-selection-v1",
+              "--v2",
+              "/kaggle/working/cell-tracking/strong-tracker-v2",
+              "--stage",
+              "baseline"
+            ],
+            "empty_pipeline_cache_at_start": true,
+            "lease_seconds": 117.6007578800054,
+            "returncode": 0,
+            "wait_seconds": 0.015128043000004254,
+            "wall_seconds": 118.02994504899834
+          },
+          "timing_sha256": "d4e7510d6d70cdc590b84b9d0272545f4aec9f89ec7ce8da14509ec6b2663f55"
+        },
+        {
+          "receipt_sha256": "5790569a06a0177e22e40feee9a9bd95d0ec9933d458d8b68df20ef8fb982408",
+          "stage": "point-head",
+          "timing": {
+            "OS_page_cache_flushed": false,
+            "command": [
+              "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+              "-m",
+              "pipeline_error_training.fresh_entry",
+              "--images",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_birch/images",
+              "--output",
+              "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/fresh/specimen_birch/output",
+              "--package",
+              "/kaggle/working/cell-tracking/image-native-tracking-v5/inference_package_validation/base",
+              "--source",
+              "44b6",
+              "--p0-model",
+              "/kaggle/working/cell-tracking/segmentation-tracking-v6-local/prior-v6/study/models/P0_44b6.json",
+              "--v1",
+              "/kaggle/working/cell-tracking/annotation-selection-v1",
+              "--v2",
+              "/kaggle/working/cell-tracking/strong-tracker-v2",
+              "--stage",
+              "point-head"
+            ],
+            "empty_pipeline_cache_at_start": false,
+            "lease_seconds": 66.03230696499668,
+            "returncode": 0,
+            "wait_seconds": 0.015920742000162136,
+            "wall_seconds": 66.45514348099823
+          },
+          "timing_sha256": "ed27122a417e556270f04bba5d837ab3d6b10d7e55eb651ccb548ae34164b643"
+        }
+      ],
+      "verification_invocation_wall_seconds": 0.37619546100177104
+    }
+  ],
+  "cold_pipeline_artifacts": true,
+  "deny_annotation_old_cache_network_from_startup": true,
+  "freeze_sha256": "44ea2aaa79ff1f2372a502bf97e038a32f38d8ff2c6b2d53485e61fce864a6d1",
+  "full_image_reconstruction": true,
+  "status": "measured"
+}

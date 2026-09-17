@@ -10,19 +10,20 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 | P0 | 6bba | 0.935284191137 | +0.000000000000 | +0.000096471603 | 104303 / 3909 / 4754 | 22 / 70 / 103 | 0.923313209 / 0.924002140 | 2136193 / 110868 | e04e9b22cbe2 | verified |
 | C4_m6 | 44b6 | 0.933704553481 | +0.001977297067 | +0.000000000000 | 18866 / 1086 / 960 | 8 / 22 / 18 | 0.902161438 / 0.917037887 | 1972750 / 19968 | b93a5b8da8ce | verified |
 | C4_m6 | 6bba | 0.935187719534 | -0.000096471603 | +0.000000000000 | 104267 / 3882 / 4790 | 22 / 70 / 103 | 0.923215187 / 0.923905668 | 2136193 / 110868 | e04e9b22cbe2 | verified |
-| G30 | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
-| J_uniform | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
-| J_mined | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
+| G30 | pooled + both embryos | null | null | null | null | null | null | null | null | target export/scoring pending |
+| J_uniform | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
+| J_mined | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
 
 Source-frozen nominee: **none qualified in both source directions**. Qualified complete exports: G30. The [frozen source decisions](target_freeze.json) record each direction and seed's selected checkpoint, application, calibration and source score before target predictions.
 
 J_mined, seed 20260916, source 44b6: best full-source score 0.917403321546, Δ source P0 -0.008179731767. This completed fit failed source qualification; its missing target score is intentional.
 
 J_uniform, seed 20260916, source 44b6: best full-source score 0.921574522740, Δ source P0 -0.004008530573. This completed fit failed source qualification; its missing target score is intentional.
-[44b6 / 20260916 duration decision](extension-44b6-20260916.json): stopped both arms at 4,096 updates.
-[44b6 / 314159 duration decision](extension-44b6-314159.json): stopped both arms at 4,096 updates.
-[6bba / 20260916 duration decision](extension-6bba-20260916.json): stopped both arms at 4,096 updates.
-[6bba / 314159 duration decision](extension-6bba-314159.json): stopped both arms at 4,096 updates.
+
+- [44b6 / 20260916 duration decision](extension-44b6-20260916.json): stopped both arms at 4,096 updates.
+- [44b6 / 314159 duration decision](extension-44b6-314159.json): stopped both arms at 4,096 updates.
+- [6bba / 20260916 duration decision](extension-6bba-20260916.json): stopped both arms at 4,096 updates.
+- [6bba / 314159 duration decision](extension-6bba-314159.json): stopped both arms at 4,096 updates.
 
 10/10 directional fits have completed their required updates. Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. The shared prefix is counted once in compute and does not make independent experiments.
 
@@ -38,8 +39,10 @@ This is exploratory source-only direct fitting on exposed P0 observations. Reuse
 
 [Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [source curve plot](training_event_curves.png), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json), [error transitions](error_transitions.csv), [stage diagnostics](stage_attribution.json), [replication decision](replication.json).
 
-Accounted exclusive study-lock leases: 12.436 h; waits: 7723.8 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing; unrelated applications also used the device. [Concurrent workload evidence](runtime_cpu_contention.json). [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Accounted exclusive study-lock leases: 12.531 h; waits: 7723.8 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing; unrelated applications also used the device. [Concurrent workload evidence](runtime_cpu_contention.json). [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 
 No production promotion, merge, Kaggle submission, weight publication or leaderboard claim has been made.
+
+Fresh image reconstruction tested P0 on two renamed complete clips. Persisted pipeline wall times: specimen_alder: 161.7 s, specimen_birch: 184.5 s. Exact graph, CSV and GEFF checks are recorded in the [fresh-image proof](fresh_image_validation.json); [resume checks](resume_export_checks.json) revalidate saved exports and preserve original stage timings. Pipeline artifact caches were empty before each baseline run; the operating-system page cache was uncontrolled.
