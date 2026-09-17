@@ -1,5 +1,5 @@
 {
-  "exclusive_lease_seconds": 13876.659368084038,
+  "exclusive_lease_seconds": 14020.460791212048,
   "lease_seconds_by_stage": {
     "calibration": 88.03695377401164,
     "frozen_matrix": 60.61669346999406,
@@ -8,20 +8,20 @@
     "small_head_oof": 1301.7502946269888,
     "source_mining": 824.5672143650372,
     "source_profile": 20.245540058996994,
-    "train": 8177.370773358998
+    "train": 8321.172196487008
   },
   "open_leases": [
     {
       "event": "begin",
-      "purpose": "train/J_mined/6bba/20260916",
-      "token": "4014715-1789621651245375462",
-      "utc": "2026-09-17T05:07:31.250639+00:00",
-      "wait_seconds": 0.012613071005034726
+      "purpose": "train/prefix/44b6/314159",
+      "token": "78519-1789621818444717127",
+      "utc": "2026-09-17T05:10:18.449867+00:00",
+      "wait_seconds": 0.013304222993610892
     }
   ],
   "peak_process_tree_rss_gib": 11.509746551513672,
   "peak_total_gpu_gib": 3.3916015625,
   "scope": "Full exclusive lease intervals, including loader and CPU work; not kernel time",
-  "study_disk_gib": 9.366946248337626,
-  "wait_seconds": 2021.4311335590683
+  "study_disk_gib": 9.374108897522092,
+  "wait_seconds": 2021.4996333440722
 }
