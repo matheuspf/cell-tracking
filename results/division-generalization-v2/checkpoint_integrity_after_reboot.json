@@ -1,0 +1,117 @@
+{
+  "active_mutable_checkpoints_excluded": true,
+  "all_resume_files_match_completed_receipts": true,
+  "checks": [
+    {
+      "arm": "G30",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "7407dcb61c6aee8eeab435cd1c30c4f8b8323369a46219c3c0ab0caded653d97",
+      "resume_sha256": "aeebffcc2ec7c7f1e9bb10bdf78db47e2c1fa3e14bf37300be528f4f87b2625e",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "G30",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "b5ea353c15b71d540494d06382837b8c8eb1363927d60f0049bdf4e8bf7e643c",
+      "resume_sha256": "8368a9445b2654ca2a82a2388bdcce569f35d9a690de504d68a6dc8d8666cf3f",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "J_mined",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "58b7a5d46d089986e78ba5921773456222f732b647f52ec699c4eb84bb1aef89",
+      "resume_sha256": "d69725fd36422c2d503a68cc5463b13a8697c1d5c31484bfae7a3a26eaf3bf74",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "J_mined",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "9c35e48955fc32307dcbed10d6aded46aa50b1cca054b3bfa80384b468676498",
+      "resume_sha256": "7f375b68f022cdd5ddefb919425f1f94ba57f44cc7dedc242563db7325b1c1b6",
+      "seed": 314159,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "J_mined",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "a44573eaef0317e7e025e0c50ecb5c1771c5b6a66e1ecbd249fa573be1e4be4a",
+      "resume_sha256": "3a95c7f0a470295bd609154f105e3a035429ad8064421c09799245ff7b3079d7",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "a0d7cd05a86f42b52f7002b94fa00203daf4b2e6826401a871ad06c339c5d429",
+      "resume_sha256": "72c1d01183325b2da75defe7be8a3fad71c0e8e9367d0bc992ed4ac7cbdfa082",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "740fcb61759fad830c4e889dc0ed1fdd02fc0a02f5c3523a3e22786d46531320",
+      "resume_sha256": "8ee817af0c0a0998ade32135743fd8751ae448b5f4c2a2524a31559f604ce38e",
+      "seed": 314159,
+      "source": "44b6",
+      "step": 4096
+    },
+    {
+      "arm": "J_uniform",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "8c68642fd73f2b208fd6491eb71e9a8ccdd73ef5917c0e7325e359ce4128bcd5",
+      "resume_sha256": "1284d7c20975b36d7cd801b05bc932efd88b1d1e574ef0f3cc7af7306dba750a",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 4096
+    },
+    {
+      "arm": "prefix",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "d0e628a25f8e07bcc84d441af257c2598732cc6ba70b1bc5e6e2e7072e2eb255",
+      "resume_sha256": "392d5c4951db0e32cdf2f3f40bf8b7c537e51e726937c4e7a6e98fcff9e94c8b",
+      "seed": 20260916,
+      "source": "44b6",
+      "step": 2048
+    },
+    {
+      "arm": "prefix",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "e90df92a5e08307dd6687dbb0a9ba4418fa4d1a609b7ced000f7b876b3b6dd48",
+      "resume_sha256": "62f8d3669a72263ea8d7cdd4b3e383c2e2b03290364d7ef4ced636e3d988049f",
+      "seed": 314159,
+      "source": "44b6",
+      "step": 2048
+    },
+    {
+      "arm": "prefix",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "7044c057bedfac020230bbf9aa32f1eaeb85ed5a044c0ce2fff6f2a3ea3bf5f8",
+      "resume_sha256": "6656a4c613ce415a725c5101ff7fda1f273cae5e294431ca8a333ed93dfb0e9e",
+      "seed": 20260916,
+      "source": "6bba",
+      "step": 2048
+    },
+    {
+      "arm": "prefix",
+      "matches_completed_receipt": true,
+      "receipt_sha256": "546fe1403f7a32b2a0a435c830caabf3fb25647189c1f9012abd3faff6733d19",
+      "resume_sha256": "2153cafac994d4bac382d7e447b0183d357ef28fa4cbbfd41aa5a590fc02a822",
+      "seed": 314159,
+      "source": "6bba",
+      "step": 2048
+    }
+  ],
+  "completed_receipts": 12,
+  "recorded": "2026-09-17T13:18:58.778143+00:00",
+  "status": "measured"
+}

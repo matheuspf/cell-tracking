@@ -19,15 +19,15 @@
         "--source",
         "6bba",
         "--arm",
-        "J_uniform",
+        "J_mined",
         "--seed",
         "314159"
       ],
-      "pid": 112516,
-      "started": 1789648236.48
+      "pid": 198101,
+      "started": 1789652323.48
     }
   ],
-  "completed_directional_fits": 8,
+  "completed_directional_fits": 9,
   "new_target_scores": null,
   "prepared_clips": {
     "44b6": 71,
@@ -39,5 +39,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T13:17:21.237856+00:00"
+  "updated": "2026-09-17T13:40:53.853151+00:00"
 }

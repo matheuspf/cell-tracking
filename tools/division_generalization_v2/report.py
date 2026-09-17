@@ -234,8 +234,9 @@ def run(args=None):
         write_json(RESULTS/'stage_attribution.json',dict(status='pending',value=None,
             reason='Requires complete frozen source and target inference ledgers'))
     if not (RESULTS/'error_transitions.csv').exists():write_csv(RESULTS/'error_transitions.csv',[])
+    target_outcome='achieved' if status['target_met'] else ('not achieved' if complete else 'not established')
     report=[f'Candidate recommended: {recommendation}' if recommendation else 'P0 retained','',
-        f'Execution: **{status["status"]}**. Requested replicated score ≥0.95: **{"achieved" if status["target_met"] else "not established"}**.','',
+        f'Execution: **{status["status"]}**. Requested replicated score ≥0.95: **{target_outcome}**.','',
         '| Arm / seed | Scope | Score | Δ P0 | Δ C4_m6 | Edge TP / FP / FN | Division TP / FP / FN | Edge raw / adjusted | Selected / matched nodes | Node hash | Status |',
         '|---|---|---:|---:|---:|---|---|---|---|---|---|']
     measured=((baseline['pooled']+baseline['embryos']) if baseline else [])+((target['pooled']+target['embryos']) if target else [])
@@ -253,6 +254,19 @@ def run(args=None):
         if not any(r['arm']==arm for r in measured):
             reason='source qualification pending' if not target else 'source failed; target export not qualified'
             report.append(f'| {arm} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
+    if (RESULTS/'target_freeze.json').exists():
+        freeze=read_json(RESULTS/'target_freeze.json')
+        nominee=freeze['nominee'] or 'none qualified in both source directions'
+        exports=', '.join(freeze['qualified_exports']) or 'none'
+        report+=['',f'Source-frozen nominee: **{nominee}**. Qualified complete exports: {exports}. '
+            'The [frozen source decisions](target_freeze.json) record each direction and seed\'s selected '
+            'checkpoint, application, calibration and source score before target predictions.']
+        for source in ('44b6','6bba'):
+            for seed in (20260916,314159):
+                path=RESULTS/f'extension-{source}-{seed}.json'
+                if path.exists():
+                    decision='extended both arms to 8,192 updates' if read_json(path)['extend'] else 'stopped both arms at 4,096 updates'
+                    report.append(f'[{source} / {seed} duration decision]({path.name}): {decision}.')
     calibration_counts={name:sum(r['status']==name for r in calibrations) for name in
         ('held_source_fitted','grouped_small_head_oof_fitted','calibration_unestablished')}
     report+=['',f'{status["completed_directional_fits"]}/10 directional fits have completed their required updates. '
@@ -293,7 +307,29 @@ def run(args=None):
         '[control compatibility](model_code_compatibility.json).','',
         'No production promotion, merge, Kaggle submission, weight publication or leaderboard claim has been made.']
     (RESULTS/'REPORT.md').write_text('\n'.join(report)+'\n')
-    continuation=f'''Read REPORT.md and STATUS.json. Status: {status['status']}.
+    if complete:
+        continuation=f'''Read [REPORT.md](REPORT.md) and [STATUS.json](STATUS.json). Status: complete.
+
+The execution queue finished. The report records whether the measured nominee passed all recommendation and replication gates; completing the study does not itself establish a score of ≥0.95. P0 remains the production default.
+
+Review [target_freeze.json](target_freeze.json) for the source-only checkpoint, application and family choices; [replication.json](replication.json) for completion and recommendation checks; and [fresh_image_validation.json](fresh_image_validation.json) for the renamed-image replays. Training, calibration, source screens, target scores, error transitions and resource receipts are linked from REPORT.md.
+
+Heavy artifacts remain under `work/division-generalization-v2`, a symlink to `/kaggle/working/cell-tracking/division-generalization-v2`. Input paths and hashes are recorded in input_manifest.json. Preserve those artifacts, the recovery archives and the original baselines. No completed training or inference needs to be rerun to inspect these results.
+
+To regenerate the concise report from existing receipts, run from `{REPO}`:
+
+```sh
+export PYTHONNOUSERSITE=1 PYTHONPATH=tools:.
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMEXPR_MAX_THREADS=1
+/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_generalization_v2 report
+```
+
+For a deliberate independent reconstruction, use the committed study configuration and verified inputs in a separate isolated work root. Preserve the 4,096 joint-update floor, paired prefixes, source-only decisions and startup access guards. The original execution, invalid attempts and crash costs remain part of this study's provenance.
+
+No production promotion, merge, Kaggle submission, weight publication or leaderboard claim was performed.
+'''
+    else:
+        continuation=f'''Read REPORT.md and STATUS.json. Status: {status['status']}.
 
 Run from `{REPO}` on the current branch. Inspect actual processes first; never resume an older study or launch duplicate workers.
 

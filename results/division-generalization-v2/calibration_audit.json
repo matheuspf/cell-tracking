@@ -559,6 +559,72 @@
       "target_used": false,
       "temperature": 5.20230566366907,
       "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "9ecf8e02adbda9e4d4c4aee06ef72ca4d2eb4c5fd59e94b514fe9932f3159638",
+      "decision_units": 603,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -2.3397653325007948,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 11,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "6bba",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 6.454280428431829,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
+      "calibration_sha256": "25a59dc0ea642e0262aa5da3cfb60c2bddc31e9d9fc413ed38dfe64166be86c0",
+      "decision_units": 639,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -2.414208314497202,
+      "intercept_penalized": false,
+      "negative_groups": 21,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 11,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "6bba",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 4096,
+      "target_used": false,
+      "temperature": 6.240716286888795,
+      "threshold": 0.0
     }
   ],
   "full_source_graph_screens_are_separate": true,

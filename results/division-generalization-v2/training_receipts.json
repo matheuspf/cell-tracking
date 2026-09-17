@@ -724,6 +724,97 @@
       "wall_seconds": 1295.4582859670045
     },
     {
+      "arm": "J_uniform",
+      "checkpoint_resume_parity": true,
+      "checkpoint_seconds": 0.33915257700027723,
+      "common_prefix": {
+        "independent_experiment": false,
+        "model_optimizer_rng_data_order_shared": true,
+        "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/6bba/314159/checkpoint-2048.pt",
+        "sha256": "cbe9fba0d7478fa12559422a37e6600c2db653c9e7f7e176af9639a11a94a120",
+        "shared_updates": 2048
+      },
+      "compute_seconds": 1323.086793128943,
+      "counterfactual_label_parity": true,
+      "exposure": {
+        "anchor_visits_summary": {
+          "draws": 131072,
+          "maximum": 456,
+          "minimum": 1,
+          "unique": 9500
+        },
+        "anchors": 10090,
+        "coarse_outside_policy": "Zero spatial query with explicit validity and physical coordinate; no clamping",
+        "effective_anchor_sample_size": 9595.0,
+        "group_visits_summary": {
+          "draws": 131072,
+          "maximum": 473,
+          "minimum": 43,
+          "unique": 2263
+        },
+        "groups": 2265,
+        "inclusion_weights": [
+          16.0
+        ],
+        "negative_only_groups": 2189,
+        "partition": "fit",
+        "positive_groups": 74,
+        "random_supported_anchors": 9595,
+        "random_supported_groups": 2255,
+        "risk_scope": "Within supported biological-group sampling design; not a biological prevalence estimate",
+        "sampling_independent_of_gt_components": true,
+        "scene_coverage": {
+          "inside_coarse": 206301,
+          "inside_fine": 159026,
+          "missing_temporal_frames": 622,
+          "queries": 206749
+        },
+        "source": "6bba",
+        "unknown_as_negative_count": 0
+      },
+      "finite_gradient_checks": true,
+      "full_source_screen": false,
+      "invocation_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/6bba/314159/invocations/4096-808433518020198d.json",
+          "sha256": "808433518020198daadaf917e42882442fa4856d9727dd5390deb0ad66408d0f"
+        }
+      ],
+      "invocation_totals": {
+        "checkpoint_seconds": 0.33915257700027723,
+        "compute_seconds": 1323.086793128943,
+        "lease_seconds": 1336.2005803569918,
+        "wait_seconds": 182.69594737499938,
+        "wall_seconds": 4039.4550149669994
+      },
+      "joint_optimizer_updates": 4096,
+      "lease_seconds": 1336.2005803569918,
+      "literal_zero_path_test": true,
+      "model_parameters": 490804,
+      "model_sha256": "0cc80826b911d195da8bdbb33d136430d213aaeb28da83781e858766c1bdd027",
+      "negative_only_groups_seen": 2189,
+      "new_target_used_for_training": false,
+      "positive_groups_seen": 74,
+      "prefix_sha256": "cbe9fba0d7478fa12559422a37e6600c2db653c9e7f7e176af9639a11a94a120",
+      "random_background_stream": true,
+      "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/6bba/314159/training_receipt.json",
+      "receipt_sha256": "808433518020198daadaf917e42882442fa4856d9727dd5390deb0ad66408d0f",
+      "required_updates": 4096,
+      "seed": 314159,
+      "source": "6bba",
+      "source_screen_receipts": [],
+      "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "2679efa128730de5f0ecf24ba54f26428003a722dbce437fb74b46b574e1f3aa",
+        "history.jsonl": "082c4ab2945bba32555b6829d5a0844950ed17384ec7d01210dd908e5ce28c71",
+        "mining-2048.json": "a2e1dbf4d861d756dfaf7991e71fa08f8e4f9d27b1e6f9b6e6034d2296596f23",
+        "mining-3072.json": "507e10c1a7f236196b8f344eed9e876594b6a9edc877c908bd44dda363636bf8"
+      },
+      "unknown_as_negative_count": 0,
+      "wait_seconds": 182.69594737499938,
+      "wall_seconds": 4039.4550149669994
+    },
+    {
       "arm": "prefix",
       "checkpoint_resume_parity": true,
       "checkpoint_seconds": 0.28146555199782597,

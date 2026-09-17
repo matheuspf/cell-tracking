@@ -14,11 +14,11 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 | J_uniform | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
 | J_mined | pooled + both embryos | null | null | null | null | null | null | null | null | source qualification pending |
 
-8/10 directional fits have completed their required updates. Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. The shared prefix is counted once in compute and does not make independent experiments.
+9/10 directional fits have completed their required updates. Each main arm requires 4,096 joint updates; uniform and mined arms share their first 2,048 updates per direction/seed. The shared prefix is counted once in compute and does not make independent experiments.
 
 The fixed diagnostic panels contain 32 hashed groups each. The 6bba held panel has no positive-utility anchors, so its loss measures supported rejection and cannot establish division recovery. The 44b6 held panel has two positive-utility anchors. Full source graph screens govern qualification. The panels and extension rule remain as originally locked. [Panel composition](diagnostic_panel_composition.json).
 
-Completed checkpoint calibrations: 12 direct held-source fits, 2 grouped small-head fallbacks, and 0 unestablished. The fallback fits three heads for 4,096 updates each on frozen features, holding complete overlap groups out. Those updates do not count toward the joint-training floor. Only the heads are out of fit: the frozen source encoder retains its original label exposure. [Calibration audit](calibration_audit.json).
+Completed checkpoint calibrations: 14 direct held-source fits, 2 grouped small-head fallbacks, and 0 unestablished. The fallback fits three heads for 4,096 updates each on frozen features, holding complete overlap groups out. Those updates do not count toward the joint-training floor. Only the heads are out of fit: the frozen source encoder retains its original label exposure. [Calibration audit](calibration_audit.json).
 
 The new module keeps native evidence inside learned relative complete-action scores. It uses fixed-seed probability sampling, separate positive exposure, masked unknown alternatives, negative-only groups, complete lost-link utility, and one two-scale raw scene shared across candidate pairs. The 490,804-parameter encoder/head uses ordered attention.
 
@@ -28,7 +28,7 @@ This is exploratory source-only direct fitting on exposed P0 observations. Reuse
 
 [Training receipts](training_receipts.json), [fixed source curves](training_curves.csv), [source curve plot](training_event_curves.png), [complete source screens](source_scores.csv), [per-embryo scores](per_embryo_scores.csv), [sampling audit](sampling_audit.json), [validation](validation.json), [resources](resource.json).
 
-Accounted exclusive GPU leases: 6.260 h; waits: 7601.0 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
+Accounted exclusive GPU leases: 6.615 h; waits: 7653.9 s. This includes 10.066 s estimated for an interrupted lease; host downtime is excluded. Full lease intervals include preprocessing. [Operation wall timings](runtime_breakdown.json) separate loading, transfers, augmentation, encoder/head, backward, optimizer and checkpoint work; pure CUDA kernel time is not measured.
 
 An early image implementation sampled CNN feature maps at shifted coordinates. Those image fits were archived as implementation-invalid and restarted from scratch; their updates do not count toward training adequacy, and their GPU leases remain in the cost ledger. The cached-feature controls are unaffected, verified by exact output parity. [Corrected image proof](corrected_image_validation.json), [profile provenance](profile_provenance.json), [control compatibility](model_code_compatibility.json).
 

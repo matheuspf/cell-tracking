@@ -935,6 +935,32 @@
       "wall_seconds": 1295.4582859670045
     },
     {
+      "arm": "J_uniform",
+      "checkpoint_seconds": 0.33915257700027723,
+      "crash_interrupted_invocation": false,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 2049,
+      "includes_common_prefix": false,
+      "last_step": 4096,
+      "maximum_gradient_norm": 20.700210571289062,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 314159,
+      "source": "6bba",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 63.90117314373674,
+        "backward_seconds": 428.19557158108,
+        "compute_seconds": 1323.086793128943,
+        "encoder_head_seconds": 378.27909630396607,
+        "loader_seconds": 377.4471529568327,
+        "loader_transfer_seconds": 506.3735514599339,
+        "optimizer_seconds": 3.035614457963675,
+        "transfer_seconds": 62.42855471337134
+      },
+      "wall_seconds": 4039.4550149669994
+    },
+    {
       "arm": "prefix",
       "checkpoint_seconds": 0.28146555199782597,
       "crash_interrupted_invocation": false,
