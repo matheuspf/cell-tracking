@@ -1,11 +1,11 @@
 {
-  "completed_anchors": 288978,
-  "completed_clips": 20,
-  "full_clip_wall_seconds": 3763.374603692988,
-  "linear_remaining_inference_hours": 5.910991839067446,
-  "observed_anchors_per_second": 76.78693471450511,
+  "completed_anchors": 960469,
+  "completed_clips": 72,
+  "full_clip_wall_seconds": 12157.254011328943,
+  "linear_remaining_inference_hours": 3.3841630438451684,
+  "observed_anchors_per_second": 79.0037782467135,
   "projection_scope": "Observed complete G30 target clips; remaining clip density and concurrent CPU load vary; excludes final scoring and diagnostic review",
-  "recorded": "2026-09-17T20:47:35.139132+00:00",
+  "recorded": "2026-09-17T23:11:08.597302+00:00",
   "target_labels_opened": false,
   "total_anchors": 1922971
 }
