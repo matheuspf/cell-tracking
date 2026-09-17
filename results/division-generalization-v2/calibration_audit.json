@@ -315,6 +315,39 @@
     {
       "arm": "J_uniform",
       "boundary_reached": false,
+      "calibration_sha256": "9212b8cf8141f861c768b3ad4e6f23b7935a04ed036efe3faa3531fd8327732f",
+      "decision_units": 191,
+      "finite_separation_bounds": [
+        [
+          -4,
+          4
+        ],
+        [
+          -30,
+          30
+        ]
+      ],
+      "full_source_graph_screen_complete": false,
+      "intercept": -1.678561841446573,
+      "intercept_penalized": false,
+      "negative_groups": 15,
+      "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "partition": "calibration",
+      "positive_groups": 6,
+      "post_maximization": true,
+      "scope": "Sparse-supported max-selected source edits, not biological prevalence",
+      "seed": 314159,
+      "source": "44b6",
+      "source_groups_independently_certified": false,
+      "status": "held_source_fitted",
+      "step": 3072,
+      "target_used": false,
+      "temperature": 10.66183023778841,
+      "threshold": 0.0
+    },
+    {
+      "arm": "J_uniform",
+      "boundary_reached": false,
       "calibration_sha256": "4e927dc2a8890d71666ad8ca0798c1770e2e39a6922993aec7c64ca96ef5e1a8",
       "decision_units": 611,
       "finite_separation_bounds": [

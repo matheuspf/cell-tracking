@@ -271,6 +271,97 @@
     {
       "arm": "J_mined",
       "checkpoint_resume_parity": true,
+      "checkpoint_seconds": 0.18185836100246888,
+      "common_prefix": {
+        "independent_experiment": false,
+        "model_optimizer_rng_data_order_shared": true,
+        "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/44b6/314159/checkpoint-2048.pt",
+        "sha256": "4ac61ac111cc50b56de639422313d40cccd3cba76cdba432575171097e2732f1",
+        "shared_updates": 2048
+      },
+      "compute_seconds": 923.8671255000004,
+      "counterfactual_label_parity": true,
+      "exposure": {
+        "anchor_visits_summary": {
+          "draws": 131072,
+          "maximum": 2112,
+          "minimum": 1,
+          "unique": 3378
+        },
+        "anchors": 3465,
+        "coarse_outside_policy": "Zero spatial query with explicit validity and physical coordinate; no clamping",
+        "effective_anchor_sample_size": 3337.0,
+        "group_visits_summary": {
+          "draws": 131072,
+          "maximum": 2367,
+          "minimum": 353,
+          "unique": 258
+        },
+        "groups": 258,
+        "inclusion_weights": [
+          16.0
+        ],
+        "negative_only_groups": 242,
+        "partition": "fit",
+        "positive_groups": 16,
+        "random_supported_anchors": 3337,
+        "random_supported_groups": 258,
+        "risk_scope": "Within supported biological-group sampling design; not a biological prevalence estimate",
+        "sampling_independent_of_gt_components": true,
+        "scene_coverage": {
+          "inside_coarse": 78008,
+          "inside_fine": 63404,
+          "missing_temporal_frames": 221,
+          "queries": 78075
+        },
+        "source": "44b6",
+        "unknown_as_negative_count": 0
+      },
+      "finite_gradient_checks": true,
+      "full_source_screen": false,
+      "invocation_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/44b6/314159/invocations/4096-9c35e48955fc3230.json",
+          "sha256": "9c35e48955fc32307dcbed10d6aded46aa50b1cca054b3bfa80384b468676498"
+        }
+      ],
+      "invocation_totals": {
+        "checkpoint_seconds": 0.18185836100246888,
+        "compute_seconds": 923.8671255000004,
+        "lease_seconds": 932.7574684670008,
+        "wait_seconds": 360.87159301299926,
+        "wall_seconds": 2129.607020439
+      },
+      "joint_optimizer_updates": 4096,
+      "lease_seconds": 932.7574684670008,
+      "literal_zero_path_test": true,
+      "model_parameters": 490804,
+      "model_sha256": "7f375b68f022cdd5ddefb919425f1f94ba57f44cc7dedc242563db7325b1c1b6",
+      "negative_only_groups_seen": 242,
+      "new_target_used_for_training": false,
+      "positive_groups_seen": 16,
+      "prefix_sha256": "4ac61ac111cc50b56de639422313d40cccd3cba76cdba432575171097e2732f1",
+      "random_background_stream": true,
+      "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_mined/44b6/314159/training_receipt.json",
+      "receipt_sha256": "9c35e48955fc32307dcbed10d6aded46aa50b1cca054b3bfa80384b468676498",
+      "required_updates": 4096,
+      "seed": 314159,
+      "source": "44b6",
+      "source_screen_receipts": [],
+      "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "89f3ff84402379f8e9736e52cc0f77505771d02753103772a6244a190bdfdfdd",
+        "history.jsonl": "d12ec60a9e99f3b65ff2e605578ce49354aff365ab0ffb76b66ce9677a995e56",
+        "mining-2048.json": "83b2f7fb53401eda081525277c9b82e8b2d21390093bbd3ce6e58e747b294999",
+        "mining-3072.json": "5520a3760aff09b60928805b91be26ac50bfe5f51e207915acb6da63f3c42fa7"
+      },
+      "unknown_as_negative_count": 0,
+      "wait_seconds": 360.87159301299926,
+      "wall_seconds": 2129.607020439
+    },
+    {
+      "arm": "J_mined",
+      "checkpoint_resume_parity": true,
       "checkpoint_seconds": 0.24520180000399705,
       "common_prefix": {
         "independent_experiment": false,
@@ -449,6 +540,97 @@
       "unknown_as_negative_count": 0,
       "wait_seconds": 0.5173195990064414,
       "wall_seconds": 1160.1475576899975
+    },
+    {
+      "arm": "J_uniform",
+      "checkpoint_resume_parity": true,
+      "checkpoint_seconds": 0.17629723599930003,
+      "common_prefix": {
+        "independent_experiment": false,
+        "model_optimizer_rng_data_order_shared": true,
+        "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/prefix/44b6/314159/checkpoint-2048.pt",
+        "sha256": "4ac61ac111cc50b56de639422313d40cccd3cba76cdba432575171097e2732f1",
+        "shared_updates": 2048
+      },
+      "compute_seconds": 890.6139213960018,
+      "counterfactual_label_parity": true,
+      "exposure": {
+        "anchor_visits_summary": {
+          "draws": 131072,
+          "maximum": 2048,
+          "minimum": 1,
+          "unique": 3374
+        },
+        "anchors": 3465,
+        "coarse_outside_policy": "Zero spatial query with explicit validity and physical coordinate; no clamping",
+        "effective_anchor_sample_size": 3337.0,
+        "group_visits_summary": {
+          "draws": 131072,
+          "maximum": 2303,
+          "minimum": 389,
+          "unique": 258
+        },
+        "groups": 258,
+        "inclusion_weights": [
+          16.0
+        ],
+        "negative_only_groups": 242,
+        "partition": "fit",
+        "positive_groups": 16,
+        "random_supported_anchors": 3337,
+        "random_supported_groups": 258,
+        "risk_scope": "Within supported biological-group sampling design; not a biological prevalence estimate",
+        "sampling_independent_of_gt_components": true,
+        "scene_coverage": {
+          "inside_coarse": 78008,
+          "inside_fine": 63404,
+          "missing_temporal_frames": 221,
+          "queries": 78075
+        },
+        "source": "44b6",
+        "unknown_as_negative_count": 0
+      },
+      "finite_gradient_checks": true,
+      "full_source_screen": false,
+      "invocation_receipts": [
+        {
+          "path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/44b6/314159/invocations/4096-740fcb61759fad83.json",
+          "sha256": "740fcb61759fad830c4e889dc0ed1fdd02fc0a02f5c3523a3e22786d46531320"
+        }
+      ],
+      "invocation_totals": {
+        "checkpoint_seconds": 0.17629723599930003,
+        "compute_seconds": 890.6139213960018,
+        "lease_seconds": 899.2777339810004,
+        "wait_seconds": 0.4841898340014268,
+        "wall_seconds": 1055.8041121710003
+      },
+      "joint_optimizer_updates": 4096,
+      "lease_seconds": 899.2777339810004,
+      "literal_zero_path_test": true,
+      "model_parameters": 490804,
+      "model_sha256": "8ee817af0c0a0998ade32135743fd8751ae448b5f4c2a2524a31559f604ce38e",
+      "negative_only_groups_seen": 242,
+      "new_target_used_for_training": false,
+      "positive_groups_seen": 16,
+      "prefix_sha256": "4ac61ac111cc50b56de639422313d40cccd3cba76cdba432575171097e2732f1",
+      "random_background_stream": true,
+      "receipt_path": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/training/J_uniform/44b6/314159/training_receipt.json",
+      "receipt_sha256": "740fcb61759fad830c4e889dc0ed1fdd02fc0a02f5c3523a3e22786d46531320",
+      "required_updates": 4096,
+      "seed": 314159,
+      "source": "44b6",
+      "source_screen_receipts": [],
+      "status": "complete",
+      "training_log_hashes": {
+        "diagnostics.jsonl": "585af86bfb59beb7ecc4e955d756c027852dd45035006fa77b739d9ac3707cf3",
+        "history.jsonl": "dfa8b5cd6256d964161ecd1c9f9a4b147d754d33d61aac8587d1e8f91e3fdcc8",
+        "mining-2048.json": "83b2f7fb53401eda081525277c9b82e8b2d21390093bbd3ce6e58e747b294999",
+        "mining-3072.json": "c2b90713a47f5ed53490370eae169e717358bd11ac846b3ed87cb1f40571d3b4"
+      },
+      "unknown_as_negative_count": 0,
+      "wait_seconds": 0.4841898340014268,
+      "wall_seconds": 1055.8041121710003
     },
     {
       "arm": "J_uniform",

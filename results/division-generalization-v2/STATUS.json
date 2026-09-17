@@ -15,19 +15,37 @@
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2",
-        "train",
+        "calibrate",
         "--source",
         "44b6",
         "--arm",
         "J_uniform",
         "--seed",
+        "314159",
+        "--stop-at",
+        "4096"
+      ],
+      "pid": 39771,
+      "started": 1789644627.85
+    },
+    {
+      "command": [
+        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
+        "-m",
+        "division_generalization_v2",
+        "train",
+        "--source",
+        "6bba",
+        "--arm",
+        "prefix",
+        "--seed",
         "314159"
       ],
-      "pid": 20745,
-      "started": 1789643291.04
+      "pid": 78363,
+      "started": 1789646513.78
     }
   ],
-  "completed_directional_fits": 6,
+  "completed_directional_fits": 8,
   "new_target_scores": null,
   "prepared_clips": {
     "44b6": 71,
@@ -39,5 +57,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T11:10:04.967591+00:00"
+  "updated": "2026-09-17T12:03:20.379624+00:00"
 }

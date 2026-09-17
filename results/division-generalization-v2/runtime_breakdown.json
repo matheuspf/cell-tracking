@@ -768,6 +768,32 @@
     },
     {
       "arm": "J_mined",
+      "checkpoint_seconds": 0.18185836100246888,
+      "crash_interrupted_invocation": false,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 2049,
+      "includes_common_prefix": false,
+      "last_step": 4096,
+      "maximum_gradient_norm": 22.812591552734375,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 314159,
+      "source": "44b6",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 46.70931021596607,
+        "backward_seconds": 312.1645894070434,
+        "compute_seconds": 923.8671255000004,
+        "encoder_head_seconds": 277.5134916380093,
+        "loader_seconds": 231.38506693205363,
+        "loader_transfer_seconds": 328.6562775880261,
+        "optimizer_seconds": 2.338579151999056,
+        "transfer_seconds": 48.679411242967035
+      },
+      "wall_seconds": 2129.607020439
+    },
+    {
+      "arm": "J_mined",
       "checkpoint_seconds": 0.24520180000399705,
       "crash_interrupted_invocation": false,
       "cuda_kernel_profiler_seconds": null,
@@ -817,6 +843,32 @@
         "transfer_seconds": 49.78791780733445
       },
       "wall_seconds": 1160.1475576899975
+    },
+    {
+      "arm": "J_uniform",
+      "checkpoint_seconds": 0.17629723599930003,
+      "crash_interrupted_invocation": false,
+      "cuda_kernel_profiler_seconds": null,
+      "first_step": 2049,
+      "includes_common_prefix": false,
+      "last_step": 4096,
+      "maximum_gradient_norm": 23.9920711517334,
+      "measured_invocations": 1,
+      "recorded_updates": 2048,
+      "seed": 314159,
+      "source": "44b6",
+      "timing_scope": "Synchronized operation wall times; encoder/head includes CPU dispatch, not pure kernel time",
+      "totals": {
+        "augmentation_seconds": 45.33163595594988,
+        "backward_seconds": 300.90979627902016,
+        "compute_seconds": 890.6139213960018,
+        "encoder_head_seconds": 268.86708476699005,
+        "loader_seconds": 221.17874129206348,
+        "loader_transfer_seconds": 315.42546751396776,
+        "optimizer_seconds": 2.233851015003438,
+        "transfer_seconds": 47.0861380899355
+      },
+      "wall_seconds": 1055.8041121710003
     },
     {
       "arm": "J_uniform",
