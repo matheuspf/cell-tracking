@@ -15,10 +15,10 @@
         "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
         "-m",
         "division_generalization_v2.matrix_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/jobs/6bba_1f58c2f6.json"
+        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/jobs/6bba_57b7cc1e.json"
       ],
-      "pid": 1284081,
-      "started": 1789687756.68
+      "pid": 1401328,
+      "started": 1789690442.26
     }
   ],
   "completed_directional_fits": 10,
@@ -33,5 +33,5 @@
   "status": "incomplete_resumable",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-17T23:32:33.859175+00:00"
+  "updated": "2026-09-18T00:19:54.048505+00:00"
 }

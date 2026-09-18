@@ -3339,6 +3339,600 @@
     },
     {
       "counts": {
+        "actions": 4652801,
+        "anchors": 18089
+      },
+      "dataset": "6bba_1f58c2f6",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_1f58c2f6/complete.json",
+      "seconds": 277.4462553810008,
+      "sha256": "78a99ff98b96befb415024bca97603ed5f7550c9ccb8d89a3be90561da18de2f",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 213.6344062347198,
+        "bank_features_worker_seconds": 667.2739216089321,
+        "loader_worker_seconds": 0.005245800348347984,
+        "transfer_seconds": 51.90529243723722
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2340281,
+        "anchors": 10904
+      },
+      "dataset": "6bba_207c6aaf",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_207c6aaf/complete.json",
+      "seconds": 141.3186448589986,
+      "sha256": "8e19df3e4ca3e867516b1c2cf0c7cf5d76cabe42d9b21a645a25ae317fbdc597",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 108.62206143490766,
+        "bank_features_worker_seconds": 313.7907872269643,
+        "loader_worker_seconds": 0.002831427540513687,
+        "transfer_seconds": 26.99026966014935
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 444931,
+        "anchors": 3554
+      },
+      "dataset": "6bba_20852818",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_20852818/complete.json",
+      "seconds": 31.390414588997373,
+      "sha256": "3afc36db1a3523f4c1d467d62075f108a3bfc4e527e03f8322ac3639d4930bf6",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 23.332594829909794,
+        "bank_features_worker_seconds": 62.804002412107366,
+        "loader_worker_seconds": 0.0008605679468018934,
+        "transfer_seconds": 6.377716581890127
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 379564,
+        "anchors": 3388
+      },
+      "dataset": "6bba_2312ac41",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_2312ac41/complete.json",
+      "seconds": 24.585345211002277,
+      "sha256": "484ba0809cbd51a814bf3d136b939ebd06eb9eeb3e394d24e442f1fc9d4248be",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 17.942731357099547,
+        "bank_features_worker_seconds": 44.2168833040414,
+        "loader_worker_seconds": 0.0007493211815017276,
+        "transfer_seconds": 5.348891298177477
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 27391,
+        "anchors": 1056
+      },
+      "dataset": "6bba_23af9eeb",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_23af9eeb/complete.json",
+      "seconds": 2.488594120994094,
+      "sha256": "a91cf494adfb29badece058703d5b4d12bede60a21251890f70810e9bffc8412",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 1.5070361209800467,
+        "bank_features_worker_seconds": 3.3529226019163616,
+        "loader_worker_seconds": 0.00022236104268813506,
+        "transfer_seconds": 0.6702541379563627
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2809,
+        "anchors": 417
+      },
+      "dataset": "6bba_2540cd90",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_2540cd90/complete.json",
+      "seconds": 0.38548460000311024,
+      "sha256": "b1b7118895fe24ae7f7879f5daf3183231c9ba12c4710ea4fb6559c76cd055e6",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 0.16747898702305974,
+        "bank_features_worker_seconds": 0.38135099098144565,
+        "loader_worker_seconds": 7.245092274388298e-05,
+        "transfer_seconds": 0.06650658405123977
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 40584,
+        "anchors": 1473
+      },
+      "dataset": "6bba_2646afc7",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_2646afc7/complete.json",
+      "seconds": 3.4615677209949354,
+      "sha256": "734753be874c85a2a80281ebb0a484f5f5eb50f3e5fc2e2dc3ae90f157161076",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 2.1072569889656734,
+        "bank_features_worker_seconds": 4.14015001890948,
+        "loader_worker_seconds": 0.0002969519773614593,
+        "transfer_seconds": 0.9925760840051225
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 136130,
+        "anchors": 2056
+      },
+      "dataset": "6bba_268e1230",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_268e1230/complete.json",
+      "seconds": 10.31356342700019,
+      "sha256": "f7d92b652ce43cf64307221cb83cb92b75458f982fd10f6d5c6357b5d4c4b2d0",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 7.597357037040638,
+        "bank_features_worker_seconds": 20.37609246410284,
+        "loader_worker_seconds": 0.0005062837735749781,
+        "transfer_seconds": 2.116470130975358
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 18416,
+        "anchors": 1403
+      },
+      "dataset": "6bba_2819ca14",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_2819ca14/complete.json",
+      "seconds": 1.8789276179959415,
+      "sha256": "9bc1695bda3d9ad1229683e5710788e35cc5083a98bb052db9d5bde36c1ceb6d",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 1.0805928699337528,
+        "bank_features_worker_seconds": 2.1259635299575166,
+        "loader_worker_seconds": 0.0002636111094034277,
+        "transfer_seconds": 0.48914703311311314
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 1359255,
+        "anchors": 9192
+      },
+      "dataset": "6bba_283bf9f1",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_283bf9f1/complete.json",
+      "seconds": 90.48681064200355,
+      "sha256": "49162822852aad08e7c9636b9b259074c6b82c9ce2f1dbbe31fb996af48d4624",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 67.12678922790656,
+        "bank_features_worker_seconds": 170.35601999913342,
+        "loader_worker_seconds": 0.002389481080172118,
+        "transfer_seconds": 19.330291859834688
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 345609,
+        "anchors": 3782
+      },
+      "dataset": "6bba_312f0dc3",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_312f0dc3/complete.json",
+      "seconds": 25.563446123000176,
+      "sha256": "0160ea80e3c1ff309c625ab39a18d5de6b7374020a3a844d59dde5ec6332c694",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 18.472460797980602,
+        "bank_features_worker_seconds": 43.661611612806155,
+        "loader_worker_seconds": 0.0010153959156014025,
+        "transfer_seconds": 5.634645374215324
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 6460287,
+        "anchors": 25808
+      },
+      "dataset": "6bba_32db13fc",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_32db13fc/complete.json",
+      "seconds": 408.70320617000107,
+      "sha256": "1597fcac758905cbaef6ce92da6c42795799744bf0d27b882af7321f2f3affb4",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 315.05033447625465,
+        "bank_features_worker_seconds": 970.0354775090746,
+        "loader_worker_seconds": 0.007867835389333777,
+        "transfer_seconds": 75.83083698384144
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 2281801,
+        "anchors": 10210
+      },
+      "dataset": "6bba_337b1b3a",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_337b1b3a/complete.json",
+      "seconds": 139.45738656900357,
+      "sha256": "97dad87f6fd0e3aeee153a7034a661ee3dd629b0ab692920a0afaa3272264f1d",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 107.30771202324104,
+        "bank_features_worker_seconds": 305.39681303620455,
+        "loader_worker_seconds": 0.0030221780398278497,
+        "transfer_seconds": 25.488204817811493
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 43391,
+        "anchors": 1466
+      },
+      "dataset": "6bba_372c8cb8",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_372c8cb8/complete.json",
+      "seconds": 4.016396734994487,
+      "sha256": "eafad3c6291aa3ab17d918d47e4ea43210592dd39521f20394d9b25c8ede1c64",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 2.45553120218392,
+        "bank_features_worker_seconds": 4.62200769631454,
+        "loader_worker_seconds": 0.00032036898483056575,
+        "transfer_seconds": 1.114144892890181
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 288978,
+        "anchors": 2358
+      },
+      "dataset": "6bba_3a1849c2",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_3a1849c2/complete.json",
+      "seconds": 18.772237179000513,
+      "sha256": "682ccac260d4c5766d17fc6b4f474a8512ad420c1e207ab89a111535c3b0a98f",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 13.582586279786483,
+        "bank_features_worker_seconds": 40.62324606497714,
+        "loader_worker_seconds": 0.0005528357942239381,
+        "transfer_seconds": 4.212349031200574
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 8731330,
+        "anchors": 31812
+      },
+      "dataset": "6bba_3abfe10a",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_3abfe10a/complete.json",
+      "seconds": 538.5675285399993,
+      "sha256": "61d28735e775d81e41230bc9e9f41d30a55216f8fd9e89b634fc0bc689eeb5fa",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 420.5311986164743,
+        "bank_features_worker_seconds": 1308.900964386732,
+        "loader_worker_seconds": 0.009819522208999842,
+        "transfer_seconds": 93.91682098787714
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 41282,
+        "anchors": 1438
+      },
+      "dataset": "6bba_3c5691b6",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_3c5691b6/complete.json",
+      "seconds": 3.986026637001487,
+      "sha256": "612f3ad36d8fa974d2b40107e8c8a1a92803d637b6ca8a629d45c6dd506ee528",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 2.416547513916157,
+        "bank_features_worker_seconds": 4.243645067908801,
+        "loader_worker_seconds": 0.0003325141660752706,
+        "transfer_seconds": 1.164640441958909
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 3177864,
+        "anchors": 13583
+      },
+      "dataset": "6bba_3db54e20",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_3db54e20/complete.json",
+      "seconds": 209.0945644809981,
+      "sha256": "52f1a5aa374074a5665be14619a5c5aad8598f70522d37654b19e77c69a38e0d",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 163.2471930180327,
+        "bank_features_worker_seconds": 478.2260794888425,
+        "loader_worker_seconds": 0.0044665421155514196,
+        "transfer_seconds": 36.386615135859756
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 163859,
+        "anchors": 2560
+      },
+      "dataset": "6bba_3fda6b25",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_3fda6b25/complete.json",
+      "seconds": 10.734036050998839,
+      "sha256": "0e69336b25c4a4bf13fda2f2ec7f1691c50d87652a0ea642dc36cf044e32097e",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 7.308008115913253,
+        "bank_features_worker_seconds": 15.81994471300277,
+        "loader_worker_seconds": 0.000537488202098757,
+        "transfer_seconds": 2.7476249469982577
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 59563,
+        "anchors": 2009
+      },
+      "dataset": "6bba_43fea39d",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_43fea39d/complete.json",
+      "seconds": 4.352572941003018,
+      "sha256": "8eb33c0a5b144f883dbba90ff7170bc27fbc67c9f4ee33db8f8f1d5026102c4c",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 2.7250093800612376,
+        "bank_features_worker_seconds": 5.250862249056809,
+        "loader_worker_seconds": 0.0003604530284064822,
+        "transfer_seconds": 1.240840398160799
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 3474103,
+        "anchors": 14598
+      },
+      "dataset": "6bba_474be664",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_474be664/complete.json",
+      "seconds": 182.2540033080004,
+      "sha256": "319f17c01d103c98b830c06bb10102b88bcc44239f5aafa3afb956f938231e19",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 138.5526576917182,
+        "bank_features_worker_seconds": 428.352118357725,
+        "loader_worker_seconds": 0.003538383709383197,
+        "transfer_seconds": 35.8641285905469
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 1409187,
+        "anchors": 8269
+      },
+      "dataset": "6bba_48816121",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_48816121/complete.json",
+      "seconds": 79.13294688199676,
+      "sha256": "938b127d8d3c396676097ad500d120d0b3bfca1bfd18cb61380c74b52d9dc52a",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 58.847909444375546,
+        "bank_features_worker_seconds": 159.35954593950737,
+        "loader_worker_seconds": 0.0018023366428678855,
+        "transfer_seconds": 16.550334187159024
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 432073,
+        "anchors": 2774
+      },
+      "dataset": "6bba_4aa14c89",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_4aa14c89/complete.json",
+      "seconds": 24.580740097997477,
+      "sha256": "739d92d3a7cb17ae7636b77929cfcf4f93cc9aa4fba8d36d547a6977d8fcc811",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 18.553274570098438,
+        "bank_features_worker_seconds": 56.61654020418791,
+        "loader_worker_seconds": 0.0006275259365793318,
+        "transfer_seconds": 4.7294174609851325
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 22844,
+        "anchors": 1662
+      },
+      "dataset": "6bba_4f99ce20",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_4f99ce20/complete.json",
+      "seconds": 1.9012759050019667,
+      "sha256": "03168043ebd659f58405aa0dafd545cc68cfca695c60eb466350eb99be1f7f07",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 1.1491973040101584,
+        "bank_features_worker_seconds": 2.374053251798614,
+        "loader_worker_seconds": 0.0002808679564623162,
+        "transfer_seconds": 0.4901261790000717
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 1502075,
+        "anchors": 8488
+      },
+      "dataset": "6bba_4ffd3da3",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_4ffd3da3/complete.json",
+      "seconds": 84.29441257199505,
+      "sha256": "a180da66eed2ac09e16faac36eeafc8b88a262d8c051aca386449f133b59c18a",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 63.09853675886552,
+        "bank_features_worker_seconds": 173.40264197690703,
+        "loader_worker_seconds": 0.0018645773598109372,
+        "transfer_seconds": 17.42829634348891
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 9168,
+        "anchors": 899
+      },
+      "dataset": "6bba_55b7eebe",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_55b7eebe/complete.json",
+      "seconds": 0.9829624549965956,
+      "sha256": "0fb714cb97f4739e53d8515f663e515c152d7623fcc3ab86e88a58ae9959b4ad",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 0.500452982938441,
+        "bank_features_worker_seconds": 1.1167801150513696,
+        "loader_worker_seconds": 0.00016848200903041288,
+        "transfer_seconds": 0.26167036698461743
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
+        "actions": 5854836,
+        "anchors": 21592
+      },
+      "dataset": "6bba_55c70843",
+      "kind": "target_matrix",
+      "packages": [
+        "G30-20260916"
+      ],
+      "receipt": "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/6bba_55c70843/complete.json",
+      "seconds": 277.5269849670003,
+      "sha256": "b8de7e1c424eed2639c3e70b62fb4b442a61a1afd7a7374a2047cda733d49e9d",
+      "shared_work_counted_once": true,
+      "timings": {
+        "G30-20260916_model_seconds": 211.75687691518397,
+        "bank_features_worker_seconds": 685.2882165019037,
+        "loader_worker_seconds": 0.005151237019163091,
+        "transfer_seconds": 53.24837195730652
+      },
+      "worker_times_overlap": true
+    },
+    {
+      "counts": {
         "actions": 2357166,
         "anchors": 13504,
         "positive_gains": 0
