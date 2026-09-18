@@ -1,0 +1,16 @@
+{
+  "created": "2026-09-18",
+  "scope": "Planning checker only; no model, dataset, GPU runtime or score validation",
+  "python_version": "3.13.5",
+  "checker_self_tests": "passed",
+  "unittest_methods": 2,
+  "negative_contract_mutations_checked": 15,
+  "registry_sha256": "7e93349303ba5d407294096e198a208403790870309f5db3c0afd8c726b49388",
+  "checker_sha256": "3e396e0e2eacf9b32a6a9a672f594385e83fc76d761cb634d81e8e8b41071087",
+  "training_started": false,
+  "models_created": false,
+  "scores_measured": false,
+  "existing_studies_modified": false,
+  "live_kaggle_rules_body_verified": false,
+  "local_executor_must_validate_actual_dependencies_and_data": true
+}
