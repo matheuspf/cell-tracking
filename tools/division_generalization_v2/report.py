@@ -230,7 +230,10 @@ def run(args=None):
             replicated_mining_advantage=len(mining)==2 and all(v>0 for v in mining.values()))
         if arm is None:
             replication.update(status='source_qualification_failed',
-                reason='Neither image family qualified in both primary source directions; no replicated image target export was eligible. P0 is retained.')
+                reason='Neither image family qualified in both primary source directions; no replicated image target export was eligible. P0 is retained.',
+                inapplicable_recommendation_checks=dict(
+                    fresh_nominated_module='No image nominee qualified; see fresh_image_validation.json for the retained P0 fallback proof',
+                    matched_image_controls_complete='Both matched families completed training and source screens but were not eligible for replicated target export'))
         elif arm not in freeze['qualified_exports']:
             replication['reason']='The primary-source nominee failed qualification in its replication; no complete replicated target export was eligible.'
         elif complete:
@@ -270,6 +273,34 @@ def run(args=None):
                         r.get('status')=='qualified' for r in directions) else
                     'source failed; target export not qualified')
                 report.append(f'| {arm} / {seed} | pooled + both embryos | null | null | null | null | null | null | null | null | {reason} |')
+    delivery_path=RESULTS/'delivery_validation.json'
+    if delivery_path.exists():
+        delivery=read_json(delivery_path)
+        for summary in delivery['summaries']:
+            changes=summary['clips']-summary['exact_P0_edges']
+            report+=['',f'{summary["arm"]} made {summary["accepted_actions"]} accepted complete edits across '
+                f'{changes} clips; all {summary["exact_P0_nodes"]} node arrays remain exact. '
+                'The [identity ledger](error_identity_changes.json) separates all prediction-edge changes from '
+                'supported error transitions. Sparse annotations do not establish the biological correctness of unscored changes.']
+        if all(not any(s['transitions'].values()) for s in delivery['summaries']):
+            report+=['','No supported edges or official divisions were recovered or lost, and no scored false positives '
+                'were added or removed. The control therefore provides no measured improvement over P0.']
+        report+=['','[Delivery verification](delivery_validation.json) checks every scored graph, startup guard and '
+            'routing receipt. [Artifact hashes](target_artifact_manifest.json) cover all exported graphs and their '
+            'score, error, trace and guard records.']
+        final_suite=read_json(RESULTS/'validation.json').get('final_regression_suite')
+        if final_suite:
+            report+=['',f'The final regression suite passed {final_suite["passed"]} tests. '
+                'Its command and log hash are recorded in [validation](validation.json).']
+    diagnostic_path=RESULTS/'stage_attribution.json'
+    if diagnostic_path.exists():
+        diagnostic=read_json(diagnostic_path)
+        if diagnostic.get('status')=='measured':
+            report+=['',f'Post-freeze diagnostics contain {diagnostic["timing_cases"]} recovered/lost division timing cases '
+                f'and {diagnostic["raw_scene_cases"]} raw-scene panels. The [gallery manifest](diagnostic_gallery.json) '
+                'records a deterministic sample of final official false forks, labelled as added by the module or retained '
+                'from P0; full images remain under `work/division-generalization-v2/diagnostics/gallery/`. '
+                'These panels do not feed training or selection.']
     if (RESULTS/'target_freeze.json').exists():
         freeze=read_json(RESULTS/'target_freeze.json')
         nominee=freeze['nominee'] or 'none qualified in both source directions'
@@ -348,6 +379,14 @@ def run(args=None):
             '[fresh-image proof](fresh_image_validation.json); [resume checks](resume_export_checks.json) '
             'revalidate saved exports and preserve original stage timings. Pipeline artifact caches were empty '
             'before each baseline run; the operating-system page cache was uncontrolled.']
+    projection_path=RESULTS/'target_runtime_projection.json'
+    if projection_path.exists():
+        projection=read_json(projection_path)
+        if projection.get('status')=='measured_complete':
+            report+=['',f'The complete target matrix processed {projection["completed_anchors"]:,} anchors across '
+                f'{projection["completed_clips"]} clips in {projection["full_clip_wall_seconds"]/3600:.3f} summed worker-wall hours. '
+                'G30 inference ran on CPU. This excludes process startup, official scoring and diagnostic rendering. '
+                '[Measured inference receipt](target_runtime_projection.json).']
     (RESULTS/'REPORT.md').write_text('\n'.join(report)+'\n')
     if complete:
         continuation=f'''Read [REPORT.md](REPORT.md) and [STATUS.json](STATUS.json). Status: complete.
@@ -365,6 +404,8 @@ export PYTHONNOUSERSITE=1 PYTHONPATH=tools:.
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 NUMEXPR_MAX_THREADS=1
 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_generalization_v2 report
 ```
+
+To reverify every saved target graph and refresh its portable hashes and error identities, run `/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_generalization_v2.delivery` with the same environment settings. Raw-scene panels and their hashes are listed in diagnostic_gallery.json; the local gallery is `work/division-generalization-v2/diagnostics/gallery/index.html`.
 
 For a deliberate independent reconstruction, use the committed study configuration and verified inputs in a separate isolated work root. Preserve the 4,096 joint-update floor, paired prefixes, source-only decisions and startup access guards. The original execution, invalid attempts and crash costs remain part of this study's provenance.
 

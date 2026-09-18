@@ -1,0 +1,37 @@
+{
+  "all_startup_guards_verified": true,
+  "artifact_manifest_sha256": "8e77e84325160988f57bc5d81a63ccae0614f9fd433f9f43182661f8af697ded",
+  "changed_prediction_clips": 5,
+  "expected_target_graphs": 199,
+  "graph_content_and_scored_file_hashes_verified": true,
+  "recorded": "2026-09-18T02:20:07.389925+00:00",
+  "status": "verified",
+  "summaries": [
+    {
+      "accepted_actions": 6,
+      "arm": "G30",
+      "clips": 199,
+      "exact_P0_edges": 194,
+      "exact_P0_nodes": 199,
+      "seed": 20260916,
+      "transitions": {
+        "division_fp_added": 0,
+        "division_fp_removed": 0,
+        "fp_added": 0,
+        "fp_removed": 0,
+        "lost_divisions": 0,
+        "lost_edges": 0,
+        "lost_gt_divisions": 0,
+        "lost_gt_edges": 0,
+        "recovered_divisions": 0,
+        "recovered_edges": 0,
+        "recovered_gt_divisions": 0,
+        "recovered_gt_edges": 0
+      }
+    }
+  ],
+  "target_evaluation_sha256": "5ef26b3eeda89509496d22fe710f6c3b7ed1ab8a9d9d4d35929b4a4b725eea8e",
+  "target_scores_after_all_predictions": true,
+  "verification_code_sha256": "ab40f7435edd4a1569d6c29fe0ee9c1c5290ab63ae5c51c7827739d7a8ba4292",
+  "verified_target_graphs": 199
+}

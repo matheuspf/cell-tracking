@@ -1,0 +1,583 @@
+{
+  "cases": [
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_55c70843",
+      "image_path": "diagnostics/gallery/ea58bfeeb5354cb88667.png",
+      "image_sha256": "209f36d6791b03282e675b5f74aaf7fa9a096c2ce9c074eabe47a170a671a4d0",
+      "index": 27549,
+      "kind": "false_fork_sample",
+      "position": [
+        34,
+        156,
+        57
+      ],
+      "predicted_parent_id": 33783,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 33783,
+        "source": "44b6",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "middle"
+        },
+        "values": {
+          "depth": 0.53125,
+          "frozen_native_intensity": 0.5909512042999268,
+          "frozen_native_response": 0.10455725342035294,
+          "predicted_density10": 2.0
+        }
+      },
+      "t": 77
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_784a78c9",
+      "image_path": "diagnostics/gallery/4497d88003462a0ea403.png",
+      "image_sha256": "50e772ae6845265d2cba43a4178c23c11b91d2f0cad34918e8c168ce1cf6c3f0",
+      "index": 5313,
+      "kind": "false_fork_sample",
+      "position": [
+        49,
+        236,
+        75
+      ],
+      "predicted_parent_id": 5792,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 5792,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.765625,
+          "frozen_native_intensity": 0.48064324259757996,
+          "frozen_native_response": 0.1007605716586113,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 32
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_cff5865f",
+      "image_path": "diagnostics/gallery/8cd35a7ca4ed4532410f.png",
+      "image_sha256": "7264ef3f1380608f3de937e456689fc85c8a9cfa883c6fad0bb8443ec1943c75",
+      "index": 44440,
+      "kind": "false_fork_sample",
+      "position": [
+        14,
+        120,
+        220
+      ],
+      "predicted_parent_id": 46690,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 46690,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "low",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "middle"
+        },
+        "values": {
+          "depth": 0.21875,
+          "frozen_native_intensity": 0.5285235047340393,
+          "frozen_native_response": 0.07287853956222534,
+          "predicted_density10": 2.0
+        }
+      },
+      "t": 95
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_705ec2c9",
+      "image_path": "diagnostics/gallery/10cf32467cae8ba8c000.png",
+      "image_sha256": "cf96e829a0adb6f209cc1d3948cf594a3cd24048be4272072fe9076d78346bcc",
+      "index": 1228,
+      "kind": "false_fork_sample",
+      "position": [
+        56,
+        151,
+        15
+      ],
+      "predicted_parent_id": 1938,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 1938,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "high",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.875,
+          "frozen_native_intensity": 0.6211382150650024,
+          "frozen_native_response": 0.1176007017493248,
+          "predicted_density10": 1.0
+        }
+      },
+      "t": 20
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_b329af44",
+      "image_path": "diagnostics/gallery/5757953338cfbdf2b463.png",
+      "image_sha256": "93967108c76a2692d623e56c72561e21ae360d63995128b98357fd23887b844d",
+      "index": 17943,
+      "kind": "false_fork_sample",
+      "position": [
+        45,
+        157,
+        173
+      ],
+      "predicted_parent_id": 20675,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 20675,
+        "source": "44b6",
+        "strata": {
+          "boundary": false,
+          "depth": "high",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "middle",
+          "predicted_density10": "high"
+        },
+        "values": {
+          "depth": 0.703125,
+          "frozen_native_intensity": 0.7085811495780945,
+          "frozen_native_response": 0.0930350050330162,
+          "predicted_density10": 3.0
+        }
+      },
+      "t": 24
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "44b6_1574802b",
+      "image_path": "diagnostics/gallery/64ae6857d4dd804d0369.png",
+      "image_sha256": "e997bb04bae09416a6f66da1aee47b44319613317dcd502ea35428936badee48",
+      "index": 13261,
+      "kind": "false_fork_sample",
+      "position": [
+        24,
+        131,
+        104
+      ],
+      "predicted_parent_id": 14896,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 14896,
+        "source": "6bba",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.375,
+          "frozen_native_intensity": 0.7361048460006714,
+          "frozen_native_response": 0.17455671727657318,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 55
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_3a1849c2",
+      "image_path": "diagnostics/gallery/013b2c01fbd80a0ea8aa.png",
+      "image_sha256": "b5b2c739f0f1ea73bfe3f026b3d59d4b3837d6b059b56a0b5df4a95803ddebee",
+      "index": 5164,
+      "kind": "false_fork_sample",
+      "position": [
+        54,
+        16,
+        91
+      ],
+      "predicted_parent_id": 6655,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 6655,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "middle"
+        },
+        "values": {
+          "depth": 0.84375,
+          "frozen_native_intensity": 1.3106918334960938,
+          "frozen_native_response": 0.336218923330307,
+          "predicted_density10": 2.0
+        }
+      },
+      "t": 82
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_f17befbc",
+      "image_path": "diagnostics/gallery/f889b462ed55500ba905.png",
+      "image_sha256": "979a08d61c8f8d6a6f3acfc0d18e7f9ef751ee667fa51f164f438897c7fd6cae",
+      "index": 668,
+      "kind": "false_fork_sample",
+      "position": [
+        29,
+        252,
+        111
+      ],
+      "predicted_parent_id": 838,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 838,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "middle",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.453125,
+          "frozen_native_intensity": 0.47574570775032043,
+          "frozen_native_response": 0.11345271021127701,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 4
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_32db13fc",
+      "image_path": "diagnostics/gallery/ef45d9d6f6d0a2eae374.png",
+      "image_sha256": "55efe401211a7cb2ec6be7180e1f0f920c4a775ec79439f95af38c33a760d36d",
+      "index": 3841,
+      "kind": "false_fork_sample",
+      "position": [
+        25,
+        120,
+        99
+      ],
+      "predicted_parent_id": 5125,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 5125,
+        "source": "44b6",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "middle"
+        },
+        "values": {
+          "depth": 0.390625,
+          "frozen_native_intensity": 0.6012606620788574,
+          "frozen_native_response": 0.06866955757141113,
+          "predicted_density10": 2.0
+        }
+      },
+      "t": 6
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_cdcfe533",
+      "image_path": "diagnostics/gallery/974a7194d13bdb5afd73.png",
+      "image_sha256": "a9520088a8fbbaa27b9db6ac682b49567d6a9685149532761a57d7fcdd87f870",
+      "index": 25961,
+      "kind": "false_fork_sample",
+      "position": [
+        18,
+        237,
+        161
+      ],
+      "predicted_parent_id": 27121,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 27121,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "low",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "middle"
+        },
+        "values": {
+          "depth": 0.28125,
+          "frozen_native_intensity": 0.7889181971549988,
+          "frozen_native_response": 0.19690698385238647,
+          "predicted_density10": 2.0
+        }
+      },
+      "t": 91
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "44b6_1d530831",
+      "image_path": "diagnostics/gallery/3dff79d997eb6da8d663.png",
+      "image_sha256": "de5328614d7f12ff9d810e1038ecb5b2314cdeaa5666de1760feb0eb828b0385",
+      "index": 14960,
+      "kind": "false_fork_sample",
+      "position": [
+        42,
+        184,
+        64
+      ],
+      "predicted_parent_id": 16823,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 16823,
+        "source": "6bba",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "high"
+        },
+        "values": {
+          "depth": 0.65625,
+          "frozen_native_intensity": 0.5909889340400696,
+          "frozen_native_response": 0.06133197247982025,
+          "predicted_density10": 4.0
+        }
+      },
+      "t": 47
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "44b6_9be80b04",
+      "image_path": "diagnostics/gallery/46f63480d7d72050cedf.png",
+      "image_sha256": "37ab226a249cc5a881b84d418684fa969d43bf8d228f8ba793377f4d2b33477d",
+      "index": 21595,
+      "kind": "false_fork_sample",
+      "position": [
+        33,
+        113,
+        143
+      ],
+      "predicted_parent_id": 27443,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 27443,
+        "source": "6bba",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "high"
+        },
+        "values": {
+          "depth": 0.515625,
+          "frozen_native_intensity": 0.7193605899810791,
+          "frozen_native_response": 0.1212753877043724,
+          "predicted_density10": 5.0
+        }
+      },
+      "t": 83
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_96833384",
+      "image_path": "diagnostics/gallery/16e00dba003cf018d361.png",
+      "image_sha256": "894ae8b8ab0fb6a7f6a410edcdfc1176b1edd0660a0ae80130ee4d948fec2f90",
+      "index": 2453,
+      "kind": "false_fork_sample",
+      "position": [
+        58,
+        79,
+        95
+      ],
+      "predicted_parent_id": 2800,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 2800,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.90625,
+          "frozen_native_intensity": 0.9796162843704224,
+          "frozen_native_response": 0.21247003972530365,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 50
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_12665c0e",
+      "image_path": "diagnostics/gallery/0a398dc1e1faf15962ea.png",
+      "image_sha256": "4454c7576502fb0eb4e16740dab532bead2ff3a1ddbd4f1e0bcd7c60c9391aef",
+      "index": 1815,
+      "kind": "false_fork_sample",
+      "position": [
+        24,
+        44,
+        131
+      ],
+      "predicted_parent_id": 2050,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 2050,
+        "source": "44b6",
+        "strata": {
+          "boundary": false,
+          "depth": "middle",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.375,
+          "frozen_native_intensity": 0.7510735988616943,
+          "frozen_native_response": 0.2205919772386551,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 12
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "44b6_8f5ab931",
+      "image_path": "diagnostics/gallery/9afef663ab154cf7009b.png",
+      "image_sha256": "03bab835ad8f04f59b3c93ba54c2818d6440c30e7753fb1a0e4e044fee5aeaf6",
+      "index": 19179,
+      "kind": "false_fork_sample",
+      "position": [
+        59,
+        224,
+        247
+      ],
+      "predicted_parent_id": 21995,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 21995,
+        "source": "6bba",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "high",
+          "frozen_native_response": "high",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.921875,
+          "frozen_native_intensity": 0.98505699634552,
+          "frozen_native_response": 0.14816024899482727,
+          "predicted_density10": 0.0
+        }
+      },
+      "t": 65
+    },
+    {
+      "added_by_module": false,
+      "annotation_centered_diagnostic": false,
+      "arm": "G30",
+      "dataset": "6bba_4ffd3da3",
+      "image_path": "diagnostics/gallery/6ecc78b1077651715ca6.png",
+      "image_sha256": "1bad380db823c6d5265cb2cb29c2ea234b09ff434f511ebab276f1e4e4d20d45",
+      "index": 1723,
+      "kind": "false_fork_sample",
+      "position": [
+        55,
+        69,
+        185
+      ],
+      "predicted_parent_id": 2145,
+      "seed": 20260916,
+      "source_fixed_strata": {
+        "native_assignment": "Nearest same-frame predicted point within 7 um; diagnosis only",
+        "nearest_predicted_id": 2145,
+        "source": "44b6",
+        "strata": {
+          "boundary": true,
+          "depth": "high",
+          "frozen_native_intensity": "middle",
+          "frozen_native_response": "middle",
+          "predicted_density10": "low"
+        },
+        "values": {
+          "depth": 0.859375,
+          "frozen_native_intensity": 0.6802030205726624,
+          "frozen_native_response": 0.09873141348361969,
+          "predicted_density10": 1.0
+        }
+      },
+      "t": 8
+    }
+  ],
+  "post_freeze_only": true,
+  "status": "measured",
+  "work_root": "work/division-generalization-v2"
+}

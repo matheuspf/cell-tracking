@@ -125,7 +125,7 @@
           "timing_sha256": "b98827644452574e7606bd240ff89033cce903f41806aee4e55627627b6240be"
         }
       ],
-      "verification_invocation_wall_seconds": 3.743160601996351
+      "verification_invocation_wall_seconds": 0.10157602300023427
     },
     {
       "all_stage_timings_persisted_across_resume": true,
@@ -251,7 +251,7 @@
           "timing_sha256": "ed27122a417e556270f04bba5d837ab3d6b10d7e55eb651ccb548ae34164b643"
         }
       ],
-      "verification_invocation_wall_seconds": 0.37619546100177104
+      "verification_invocation_wall_seconds": 0.2929222419988946
     }
   ],
   "cold_pipeline_artifacts": true,

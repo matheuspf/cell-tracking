@@ -1,0 +1,103 @@
+{
+  "categories_overlap": true,
+  "changes": [],
+  "empty_reason": "No recovered/lost supported edges or divisions and no added/removed official false positives",
+  "full_per_clip_identities": "See the hashed error artifacts in target_artifact_manifest.json",
+  "raw_change_scope": "Complete prediction edge identities; scored error transitions are separate and sparse annotations do not establish biological correctness",
+  "raw_prediction_graph_changes": [
+    {
+      "arm": "G30",
+      "dataset": "44b6_2f31fc2f",
+      "prediction_edges_added": [
+        [
+          6933,
+          7188
+        ]
+      ],
+      "prediction_edges_removed": [
+        [
+          6914,
+          7188
+        ]
+      ],
+      "seed": 20260916
+    },
+    {
+      "arm": "G30",
+      "dataset": "44b6_33b596bf",
+      "prediction_edges_added": [
+        [
+          4760,
+          5096
+        ]
+      ],
+      "prediction_edges_removed": [],
+      "seed": 20260916
+    },
+    {
+      "arm": "G30",
+      "dataset": "44b6_341df25f",
+      "prediction_edges_added": [
+        [
+          1431,
+          1528
+        ]
+      ],
+      "prediction_edges_removed": [],
+      "seed": 20260916
+    },
+    {
+      "arm": "G30",
+      "dataset": "44b6_808952d6",
+      "prediction_edges_added": [
+        [
+          2976,
+          3160
+        ]
+      ],
+      "prediction_edges_removed": [],
+      "seed": 20260916
+    },
+    {
+      "arm": "G30",
+      "dataset": "44b6_f28707c6",
+      "prediction_edges_added": [
+        [
+          16023,
+          16256
+        ],
+        [
+          16050,
+          16291
+        ]
+      ],
+      "prediction_edges_removed": [],
+      "seed": 20260916
+    }
+  ],
+  "status": "measured",
+  "summaries": [
+    {
+      "accepted_actions": 6,
+      "arm": "G30",
+      "clips": 199,
+      "exact_P0_edges": 194,
+      "exact_P0_nodes": 199,
+      "seed": 20260916,
+      "transitions": {
+        "division_fp_added": 0,
+        "division_fp_removed": 0,
+        "fp_added": 0,
+        "fp_removed": 0,
+        "lost_divisions": 0,
+        "lost_edges": 0,
+        "lost_gt_divisions": 0,
+        "lost_gt_edges": 0,
+        "recovered_divisions": 0,
+        "recovered_edges": 0,
+        "recovered_gt_divisions": 0,
+        "recovered_gt_edges": 0
+      }
+    }
+  ]
+}

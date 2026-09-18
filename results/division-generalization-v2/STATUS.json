@@ -1,37 +1,99 @@
 {
-  "active_processes": [
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2",
-        "queue"
-      ],
-      "pid": 15784,
-      "started": 1789642590.06
-    },
-    {
-      "command": [
-        "/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python",
-        "-m",
-        "division_generalization_v2.matrix_entry",
-        "/home/mpf/code/kaggle/cell-tracking/work/division-generalization-v2/target_matrix/jobs/6bba_c328f2fd.json"
-      ],
-      "pid": 1566459,
-      "started": 1789694380.96
-    }
-  ],
+  "active_processes": [],
   "completed_directional_fits": 10,
-  "new_target_scores": null,
+  "new_target_scores": {
+    "embryos": [
+      {
+        "adj_edge_jaccard": 0.9171439230800242,
+        "arm": "G30",
+        "clips": 71,
+        "division_fn": 19,
+        "division_fp": 22,
+        "division_jaccard": 0.14583333333333334,
+        "division_tp": 7,
+        "edge_fn": 957,
+        "edge_fp": 1087,
+        "edge_jaccard": 0.9022617510639315,
+        "edge_tp": 18869,
+        "embryo": "44b6",
+        "matched_nodes": 19968,
+        "n": 71,
+        "n_adj": 71,
+        "node_identity_sha256": "b93a5b8da8ce7db38247014018bb04b904372888eb33d0a2059297e3cd225394",
+        "node_recall": 0.9877569341470968,
+        "num_pred_nodes": 1972750,
+        "score": 0.9317272564133575,
+        "seed": 20260916,
+        "status": "measured",
+        "target_met": false
+      },
+      {
+        "adj_edge_jaccard": 0.9240021398546523,
+        "arm": "G30",
+        "clips": 128,
+        "division_fn": 103,
+        "division_fp": 70,
+        "division_jaccard": 0.11282051282051282,
+        "division_tp": 22,
+        "edge_fn": 4754,
+        "edge_fp": 3909,
+        "edge_jaccard": 0.9233132092842095,
+        "edge_tp": 104303,
+        "embryo": "6bba",
+        "matched_nodes": 110868,
+        "n": 128,
+        "n_adj": 128,
+        "node_identity_sha256": "e04e9b22cbe21b5b09902dd8bfef65bf64ee017ea75f57e085d442da2822d883",
+        "node_recall": 0.9795753914358454,
+        "num_pred_nodes": 2136193,
+        "score": 0.9352841911367036,
+        "seed": 20260916,
+        "status": "measured",
+        "target_met": false
+      }
+    ],
+    "exported_arms": [
+      "G30"
+    ],
+    "full_graphs": true,
+    "independent_aggregation": true,
+    "pooled": [
+      {
+        "adj_edge_jaccard": 0.9229308300345328,
+        "arm": "G30",
+        "clips": 199,
+        "division_fn": 122,
+        "division_fp": 92,
+        "division_jaccard": 0.11934156378600823,
+        "division_tp": 29,
+        "edge_fn": 5711,
+        "edge_fp": 4996,
+        "edge_jaccard": 0.9200247985120893,
+        "edge_tp": 123172,
+        "embryo": "pooled",
+        "matched_nodes": 130836,
+        "n": 199,
+        "n_adj": 199,
+        "node_identity_sha256": "16b1adc6abdd5f25eec7f519d078ff3f9d9f7b4104784e3614bb2f000961210d",
+        "node_recall": 0.982494434312724,
+        "num_pred_nodes": 4108943,
+        "score": 0.9348649864131336,
+        "seed": 20260916,
+        "status": "measured",
+        "target_met": false
+      }
+    ],
+    "status": "complete"
+  },
   "prepared_clips": {
     "44b6": 71,
     "6bba": 128
   },
   "production_default": "P0",
-  "reason": "Full training, full source screens, frozen target comparison and fresh proof remain required",
+  "reason": null,
   "required_directional_fits": 10,
-  "status": "incomplete_resumable",
+  "status": "complete",
   "study": "division-generalization-v2",
   "target_met": false,
-  "updated": "2026-09-18T01:19:52.832662+00:00"
+  "updated": "2026-09-18T02:21:56.019822+00:00"
 }

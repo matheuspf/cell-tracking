@@ -1,11 +1,34 @@
 {
+  "completion_checks": {
+    "active_zero_and_tests": true,
+    "all_full_source_screens": true,
+    "all_qualified_exports_complete": true,
+    "current_image_zero": true,
+    "current_matrix_parity": true,
+    "fresh_nominated_module": false,
+    "matched_image_controls_complete": false,
+    "matched_prefix_and_initial_mining": true,
+    "queue_complete": true,
+    "ten_adequate_directional_fits": true
+  },
+  "correctness_and_completion_gates": false,
+  "inapplicable_recommendation_checks": {
+    "fresh_nominated_module": "No image nominee qualified; see fresh_image_validation.json for the retained P0 fallback proof",
+    "matched_image_controls_complete": "Both matched families completed training and source screens but were not eligible for replicated target export"
+  },
   "independent_experiments": false,
+  "mining_delta_by_seed": {},
+  "mining_delta_by_seed_and_embryo": {},
+  "nominee": null,
   "paired_shared_prefix": true,
-  "reason": "Recommendation requires all complete graphs, both seeds and fresh gates",
+  "reason": "Neither image family qualified in both primary source directions; no replicated image target export was eligible. P0 is retained.",
   "recommended": false,
+  "replicated_mining_advantage": false,
+  "robust_target_met": false,
   "seeds": [
     20260916,
     314159
   ],
-  "status": "pending"
+  "status": "source_qualification_failed",
+  "target_met_by_seed": {}
 }

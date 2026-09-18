@@ -53,15 +53,25 @@
     "settings_receipt_sha256": "36407723a1dfe72161ded7e2eca33f0f061d38e7acf8b4cd292d1e0cb2067655",
     "tests": 42
   },
+  "final_regression_suite": {
+    "command": "python -m pytest -q tests/division_generalization_v2 tests/pipeline_error_training",
+    "log_path": "work/division-generalization-v2/validation/final-pytest.log",
+    "log_sha256": "540f73b087d4c7a293bd4dc7fcbd0cda11f6952529e3488ff28310a9a54eb2cb",
+    "passed": 84,
+    "recorded": "2026-09-18T02:20:06.000804+00:00",
+    "seconds": 5.89,
+    "warnings": 1
+  },
   "fresh_image_proof": "measured",
-  "fresh_image_validation_sha256": "9466352b1ee3b77eca0b39a1854920235695228d78bff5ce6425479ca15d94e0",
+  "fresh_image_validation_sha256": "2e3d1439840dde9a65fba7f0fc00f03822540917dd1667907a571b8a1b21b99f",
   "literal_zero_path_test": true,
   "matrix_parity_sha256": "fec34b6a48c9d88bef8fb8ad57e20327fd1f62b48ad895fb673410575b62dee8",
   "optimized_matrix_parity_sha256": "0b54d001f927e1eb96a0cce1eaf12eb683486941dbcb2d7c2f521589d4bda3fa",
   "pytest_log_sha256": "b413b333874d37512e24abc8370cc146d9532104b008569f1f2543ee6cbd218f",
   "seconds": 7.819661634000113,
   "status": "measured",
-  "target_comparisons": "pending",
+  "target_comparisons": "complete",
+  "target_evaluation_sha256": "5ef26b3eeda89509496d22fe710f6c3b7ed1ab8a9d9d4d35929b4a4b725eea8e",
   "unit_tests_count": 42,
   "unit_tests_passed": true,
   "vectorized_feature_parity_sha256": "f81065ddd794deed7e9a82640f3e97286954cdf568e77256ceba634ceb8ba05e"

@@ -1,0 +1,24 @@
+{
+  "cases": 16,
+  "contact_sheets": [
+    {
+      "path": "diagnostics/contact-sheet-1.png",
+      "sha256": "00b8dd0ba4d9d448a76af993c324c384193a7977108ab18efd5163958ba654af"
+    },
+    {
+      "path": "diagnostics/contact-sheet-2.png",
+      "sha256": "43b93e4503e592d9dad796b355c1d8bcf292571d8e6f5f1b68097648102f6490"
+    }
+  ],
+  "gallery_manifest_sha256": "bcfb6e97f4d4ae06696a8aa2f17b01ef911bc0608fc2e3af0662cc6156bbf9e9",
+  "observations": [
+    "All 16 cases display two spatial scales and seven consecutive image frames with the predicted parent center marked.",
+    "The sampled official false forks are retained from P0; none was added by G30.",
+    "Several views contain crowded or saturated projections or spatial boundary padding; the panels alone do not establish biological correctness."
+  ],
+  "recorded": "2026-09-18T02:20:06.002827+00:00",
+  "source_choices_changed": false,
+  "status": "reviewed",
+  "target_refitting_performed": false,
+  "training_curve_plot_sha256": "b1c68e59e634738a9a0aaba49186cc2099097967767330e84f8953e8d5e81f36"
+}

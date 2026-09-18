@@ -101,3 +101,11 @@ boundary. These head fits never count toward the main joint-update floor.
 Frozen inference matrices reuse immutable graph state and prefetch up to eight
 raw scenes with four CPU workers. Original anchor order is preserved. Distinct
 checkpoint encoders always run separately; no trainable feature maps are shared.
+
+After the queue completes, `$STUDY_PY -m division_generalization_v2.delivery`
+reopens all target graphs, verifies scored file hashes, source routing, startup
+guards, node preservation and the prediction-before-scoring barrier, and writes
+portable artifact hashes plus exact scored and unscored edge-change identities.
+Post-freeze raw-scene diagnostics sample final official false forks, including
+those retained from P0 when the module adds none. These cases are explicitly
+labelled and never feed training or selection.

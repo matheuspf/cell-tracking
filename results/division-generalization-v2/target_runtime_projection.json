@@ -1,11 +1,12 @@
 {
-  "completed_anchors": 1654655,
-  "completed_clips": 167,
-  "full_clip_wall_seconds": 19660.299099445896,
-  "linear_remaining_inference_hours": 0.8855778282694924,
-  "observed_anchors_per_second": 84.16224959907322,
-  "projection_scope": "Observed complete G30 target clips; remaining clip density and concurrent CPU load vary; excludes final scoring and diagnostic review",
-  "recorded": "2026-09-18T01:19:50.111760+00:00",
-  "target_labels_opened": false,
+  "completed_anchors": 1922971,
+  "completed_clips": 199,
+  "full_clip_wall_seconds": 22415.81480605589,
+  "linear_remaining_inference_hours": 0.0,
+  "observed_anchors_per_second": 85.7863529226021,
+  "projection_scope": "Completed matrix-worker wall times; excludes per-process startup, scoring and diagnostic review",
+  "recorded": "2026-09-18T02:20:07.389708+00:00",
+  "status": "measured_complete",
+  "target_labels_opened": true,
   "total_anchors": 1922971
 }

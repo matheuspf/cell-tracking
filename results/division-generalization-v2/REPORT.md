@@ -1,6 +1,6 @@
 P0 retained
 
-Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not established**.
+Execution: **complete**. Requested replicated score ≥0.95: **not achieved**.
 
 | Arm / seed | Scope | Score | Δ P0 | Δ C4_m6 | Edge TP / FP / FN | Division TP / FP / FN | Edge raw / adjusted | Selected / matched nodes | Node hash | Status |
 |---|---|---:|---:|---:|---|---|---|---|---|---|
@@ -10,11 +10,23 @@ Execution: **incomplete_resumable**. Requested replicated score ≥0.95: **not e
 | P0 | 6bba | 0.935284191137 | +0.000000000000 | +0.000096471603 | 104303 / 3909 / 4754 | 22 / 70 / 103 | 0.923313209 / 0.924002140 | 2136193 / 110868 | e04e9b22cbe2 | verified |
 | C4_m6 | 44b6 | 0.933704553481 | +0.001977297067 | +0.000000000000 | 18866 / 1086 / 960 | 8 / 22 / 18 | 0.902161438 / 0.917037887 | 1972750 / 19968 | b93a5b8da8ce | verified |
 | C4_m6 | 6bba | 0.935187719534 | -0.000096471603 | +0.000000000000 | 104267 / 3882 / 4790 | 22 / 70 / 103 | 0.923215187 / 0.923905668 | 2136193 / 110868 | e04e9b22cbe2 | verified |
-| G30 / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | target export/scoring pending |
+| G30 / 20260916 | pooled | 0.934864986413 | +0.000000000000 | -0.000313383844 | 123172 / 4996 / 5711 | 29 / 92 / 122 | 0.920024799 / 0.922930830 | 4108943 / 130836 | 16b1adc6abdd | measured |
+| G30 / 20260916 | 44b6 | 0.931727256413 | +0.000000000000 | -0.001977297067 | 18869 / 1087 / 957 | 7 / 22 / 19 | 0.902261751 / 0.917143923 | 1972750 / 19968 | b93a5b8da8ce | measured |
+| G30 / 20260916 | 6bba | 0.935284191137 | +0.000000000000 | +0.000096471603 | 104303 / 3909 / 4754 | 22 / 70 / 103 | 0.923313209 / 0.924002140 | 2136193 / 110868 | e04e9b22cbe2 | measured |
 | J_uniform / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
 | J_uniform / 314159 | pooled + both embryos | null | null | null | null | null | null | null | null | source-qualified seed; family export not qualified |
 | J_mined / 20260916 | pooled + both embryos | null | null | null | null | null | null | null | null | source failed; target export not qualified |
 | J_mined / 314159 | pooled + both embryos | null | null | null | null | null | null | null | null | source-qualified seed; family export not qualified |
+
+G30 made 6 accepted complete edits across 5 clips; all 199 node arrays remain exact. The [identity ledger](error_identity_changes.json) separates all prediction-edge changes from supported error transitions. Sparse annotations do not establish the biological correctness of unscored changes.
+
+No supported edges or official divisions were recovered or lost, and no scored false positives were added or removed. The control therefore provides no measured improvement over P0.
+
+[Delivery verification](delivery_validation.json) checks every scored graph, startup guard and routing receipt. [Artifact hashes](target_artifact_manifest.json) cover all exported graphs and their score, error, trace and guard records.
+
+The final regression suite passed 84 tests. Its command and log hash are recorded in [validation](validation.json).
+
+Post-freeze diagnostics contain 0 recovered/lost division timing cases and 16 raw-scene panels. The [gallery manifest](diagnostic_gallery.json) records a deterministic sample of final official false forks, labelled as added by the module or retained from P0; full images remain under `work/division-generalization-v2/diagnostics/gallery/`. These panels do not feed training or selection.
 
 Source-frozen nominee: **none qualified in both source directions**. Qualified complete exports: G30. The [frozen source decisions](target_freeze.json) record each direction and seed's selected checkpoint, application, calibration and source score before target predictions.
 
@@ -48,3 +60,5 @@ An early image implementation sampled CNN feature maps at shifted coordinates. T
 No production promotion, merge, Kaggle submission, weight publication or leaderboard claim has been made.
 
 Fresh image reconstruction tested P0 on two renamed complete clips. Persisted pipeline wall times: specimen_alder: 161.7 s, specimen_birch: 184.5 s. Exact graph, CSV and GEFF checks are recorded in the [fresh-image proof](fresh_image_validation.json); [resume checks](resume_export_checks.json) revalidate saved exports and preserve original stage timings. Pipeline artifact caches were empty before each baseline run; the operating-system page cache was uncontrolled.
+
+The complete target matrix processed 1,922,971 anchors across 199 clips in 6.227 summed worker-wall hours. G30 inference ran on CPU. This excludes process startup, official scoring and diagnostic rendering. [Measured inference receipt](target_runtime_projection.json).

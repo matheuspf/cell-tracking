@@ -99,10 +99,12 @@ def case_strata(case,row,graph,native,lock):
 
 def run():
     from center_comparison.pipeline import read_gt
+    from annotation_selection.metric_adapter import make_graph
+    from tracking_cellmot import division_metrics as dm
     from .labels import Counterfactual
     freeze=read_json(RESULTS/'target_freeze.json')
     rows={r['dataset']:r for r in inputs()}
-    cases=[];timings=[];stages=[];owner_errors=[];action_details=[]
+    cases=[];timings=[];stages=[];owner_errors=[];action_details=[];false_samples=[]
     lock=read_json(RESULTS/'diagnostic_strata_lock.json')
     for arm in freeze['qualified_exports']:
         for seed in ((20260916,) if arm=='G30' else (20260916,314159)):
@@ -166,34 +168,54 @@ def run():
                                 timing='unmatched' if shown_offset is None else 'early' if shown_offset<0 else 'late' if shown_offset>0 else 'on_time'))
                             cases.append(dict(arm=arm,seed=seed,dataset=row['dataset'],kind=kind,index=event,
                                 gt_event_id=int(gn[event,0]),t=int(gn[event,1]),position=gn[event,2:].tolist(),annotation_centered_diagnostic=True))
-                for p in error['division_fp_added']:
+                current_false=[]
+                if score['division_fp']:
+                    gn,ge=read_gt(DATA,row['dataset'],row['physical_scale'])
+                    pg,_=make_graph(graph['nodes'],graph['edges']);gt,_=make_graph(gn,ge)
+                    current_false=sorted(dm.score_divisions(pg,gt,tuple(row['physical_scale']),7.).fp_forks)
+                    if len(current_false)!=score['division_fp']:
+                        raise ValueError('Diagnostic false forks differ from the full official score')
+                for p in current_false:
                     false.append(dict(arm=arm,seed=seed,dataset=row['dataset'],kind='false_fork_sample',index=p,
                         predicted_parent_id=int(graph['nodes'][p,0]),
+                        added_by_module=p in error['division_fp_added'],
                         t=int(graph['nodes'][p,1]),position=graph['nodes'][p,2:].tolist(),annotation_centered_diagnostic=False))
-            cases.extend(sorted(false,key=lambda r:digest([r['dataset'],r['index']]))[:16])
-    gallery=WORK/'diagnostics/gallery';entries=[]
+            sample=sorted(false,key=lambda r:digest([r['dataset'],r['index']]))[:16]
+            cases.extend(sample)
+            false_samples.append(dict(arm=arm,seed=seed,population=len(false),sample=len(sample),
+                added_by_module=sum(r['added_by_module'] for r in sample),
+                rule='First 16 by SHA256 of dataset and predicted parent row; all final official false forks'))
+    gallery=WORK/'diagnostics/gallery';entries=[];gallery_manifest=[]
     case_rows=[]
     for case in cases:
         row=rows[case['dataset']];graph=verified_graph(row);native=verified_evidence(row)
         case['source_fixed_strata']=case_strata(case,row,graph,native,lock)
         case_rows.append(dict(arm=case['arm'],seed=case['seed'],dataset=case['dataset'],kind=case['kind'],
-            index=case['index'],**case['source_fixed_strata']['strata']))
+            index=case['index'],added_by_module=case.get('added_by_module'),**case['source_fixed_strata']['strata']))
         key=digest(case)[:20];path=gallery/(key+'.png')
         identity=case.get('gt_event_id',case.get('predicted_parent_id'))
         label=f'{case["arm"]} seed {case["seed"]} · {case["dataset"]} · {case["kind"]} ID {identity}'
+        if case['kind']=='false_fork_sample':
+            label+=' · '+('added by module' if case['added_by_module'] else 'retained from P0')
         render_scene(rows[case['dataset']],case['t'],case['position'],path,label)
+        gallery_manifest.append(dict(case,image_path=str(path.relative_to(WORK)),image_sha256=sha(path)))
         entries.append(f'<figure><figcaption>{html.escape(label)}</figcaption><img loading="lazy" width="1200" src="{key}.png"></figure>')
     gallery.mkdir(parents=True,exist_ok=True)
     (gallery/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>Frozen division error review</title>'
         '<style>body{font:16px sans-serif;background:#fafafa;color:#222;max-width:1240px;margin:30px auto}figure{margin:30px 0}img{max-width:100%}</style>'
-        '<h1>Post-freeze division errors</h1><p>Every recovered and lost division; a fixed hash sample of added false forks. Diagnostic panels never feed fitting.</p>'+''.join(entries))
+        '<h1>Post-freeze division errors</h1><p>Every recovered and lost division; a fixed hash sample of final false forks, explicitly labelled as added or retained from P0. Diagnostic panels never feed fitting.</p>'+''.join(entries))
     write_json(WORK/'diagnostics/cases.json',cases)
     write_json(WORK/'diagnostics/selected_action_stages.json',action_details)
     write_json(WORK/'diagnostics/competing_owner_errors.json',owner_errors)
     write_csv(RESULTS/'diagnostic_case_strata.csv',case_rows)
-    write_csv(RESULTS/'split_timing.csv',timings)
+    if timings:write_csv(RESULTS/'split_timing.csv',timings)
+    else:(RESULTS/'split_timing.csv').write_text('arm,seed,dataset,kind,gt_event_id,predicted_parent_id,previous_parent_id,split_frame_offset,previous_split_frame_offset,timing\n')
+    write_json(RESULTS/'diagnostic_gallery.json',dict(status='measured',cases=gallery_manifest,
+        work_root='work/division-generalization-v2',post_freeze_only=True))
     write_json(RESULTS/'stage_attribution.json',dict(status='measured',stages=stages,
         raw_scene_cases=len(cases),gallery=str(gallery/'index.html'),timing_cases=len(timings),
+        false_fork_sampling=false_samples,
+        no_changed_divisions_reason=None if timings else 'No recovered or lost official divisions; timing transitions are empty',
         competing_owner_supported_loss_actions=len(owner_errors),selected_action_records=len(action_details),
         selected_action_records_sha256=sha(WORK/'diagnostics/selected_action_stages.json'),
         competing_owner_errors_sha256=sha(WORK/'diagnostics/competing_owner_errors.json'),
