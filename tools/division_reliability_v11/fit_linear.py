@@ -39,8 +39,9 @@ def run(source,seed):
         with np.load(bank/clip/'training.npz') as d:
             parent=normalize(d['parent_x'],*normalization['values']['parent'])
             action=normalize(d['action_x'],*normalization['values']['action'])
+            risks=d['risks']
             for i,(a,b) in enumerate(zip(d['offset'][:-1],d['offset'][1:])):
-                y=d['risks'][a:b];px.append(parent[i]);ax.append(action[a:b]);ys.append(y);weights.append(event_weights.get((clip,i),1.))
+                y=risks[a:b];px.append(parent[i]);ax.append(action[a:b]);ys.append(y);weights.append(event_weights.get((clip,i),1.))
                 census['positive_groups' if (y==1).any() else 'negative_groups']+=1
     if not census['positive_groups']:raise Blocked('No positive source action group; C01/C11 head training blocked')
     fitted=fit(np.stack(px),ax,ys,weights,[True]*len(ys))

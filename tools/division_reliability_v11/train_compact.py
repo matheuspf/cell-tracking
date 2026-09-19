@@ -131,7 +131,9 @@ def run(source,seed,*,resume=True,defer_mining=False):
                     write(folder/'progress.json',result);return result
                 else:hard=mine(model.eval(),groups,normalizer,source,seed,mining,resources)
                 mined=True;model.train();save()
+            input_started=time.monotonic()
             samples,selection=groups.batch(rng,step+1,horizon,hard)
+            input_seconds=time.monotonic()-input_started
             lr=learning_rate(step+1,horizon,3e-4,200)
             with resources.lease(2*2**30) as lease:
                 model.cuda().train()
@@ -145,7 +147,8 @@ def run(source,seed,*,resume=True,defer_mining=False):
                         if isinstance(v,torch.Tensor):state[k]=v.cpu()
                 torch.cuda.empty_cache()
             step+=1
-            row.update(step=step,selection=selection,gpu_lease_seconds=lease['seconds'],unique_group_visits=len(groups.visits))
+            row.update(step=step,selection=selection,gpu_lease_seconds=lease['seconds'],unique_group_visits=len(groups.visits),
+                observation_cache_bytes=groups.cache_bytes,observation_cache_clips=len(groups.loaded),io_seconds=input_seconds)
             import json
             with (folder/'history.jsonl').open('a') as f:f.write(json.dumps(row)+'\n')
             write(folder/'progress.json',dict(status='running',step=step,horizon=horizon,mined=mined,pid=os.getpid(),updated_utc=now()))

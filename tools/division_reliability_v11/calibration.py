@@ -4,6 +4,20 @@ from scipy.optimize import minimize
 from scipy.special import expit
 
 
+def reliability(logits,labels):
+    """Descriptive supported-parent calibration, never a biological prevalence."""
+    x=np.asarray(logits,np.float64);y=np.asarray(labels,int);known=y>=0;x=x[known];y=y[known]
+    if not len(y):return dict(known_groups=0,brier=None,log_loss=None,bins=[])
+    p=expit(x);edges=[0.,.01,.1,.5,.9,.99,1.];bins=[]
+    for i,(a,b) in enumerate(zip(edges[:-1],edges[1:])):
+        take=(p>=a)&((p<=b) if i==len(edges)-2 else (p<b));n=int(take.sum())
+        bins.append(dict(lower=a,upper=b,n=n,positive=int(y[take].sum()),
+            mean_probability=float(p[take].mean()) if n else None,observed_rate=float(y[take].mean()) if n else None))
+    return dict(known_groups=len(y),positive=int(y.sum()),negative=int((y==0).sum()),
+        brier=float(np.mean((p-y)**2)),log_loss=float(np.mean(np.logaddexp(0,x)-y*x)),bins=bins,
+        scope='Supported deployed parent census only; sparse metric-risk labels are not dense biological truth')
+
+
 def fit_occurrence(logits,labels,distinct_positive_events):
     x=np.asarray(logits,dtype=np.float64);y=np.asarray(labels,dtype=int)
     supported=y>=0;x=x[supported];y=y[supported]

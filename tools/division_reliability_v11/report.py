@@ -51,18 +51,23 @@ def training():
                         'resume':checkpoint(folder),'history_summary':{}}
                 hp=folder/'history.jsonl'
                 if hp.exists():
-                    count=0;sums=Counter();first=last=None;fallback=supervised=proposal=0;visits=set()
+                    count=0;sums=Counter();first=last=None;fallback=supervised=proposal=hard_fallback=0;visits=set();cache_peak=0;probabilities=[]
                     with hp.open() as f:
                         for line in f:
                             r=json.loads(line);count+=1;first=first or r;last=r
                             sums['gpu_lease_seconds']+=r.get('gpu_lease_seconds',0);sums['input_seconds']+=r.get('io_seconds',0)
                             for g in r.get('groups',[]):
                                 fallback+=int(g['fallback']);supervised+=g['supervised'];proposal+=g['proposal']
-                            for g in r.get('selection',[]):visits.add((g['slot'],g['clip'],g['key']))
+                            for g in r.get('selection',[]):
+                                visits.add((g['slot'],g['clip'],g['key']));hard_fallback+=int(g.get('hard_fallback',False))
+                                probabilities.append(g['selection_probability'])
+                            cache_peak=max(cache_peak,r.get('observation_cache_bytes',0))
                     keys=('step','loss','detection','association','losses','lr','denominators')
                     result['history_summary']=dict(recorded_updates=count,first={k:first[k] for k in keys if k in first},
                         last={k:last[k] for k in keys if k in last},totals=dict(sums),supervised_incoming_groups=supervised,
                         proposal_incoming_groups=proposal,query_fallback_batches=fallback,unique_group_visits=len(visits),
+                        uniform_hard_slot_fallback_groups=hard_fallback,observation_cache_peak_bytes=cache_peak,
+                        group_selection_probability_range=[min(probabilities),max(probabilities)] if probabilities else None,
                         history_sha256=sha(hp),full_history_committed=False)
                 cell[kind]=result
             linear=WORK/'fits'/source/str(seed)/'linear/model.json'
@@ -199,6 +204,11 @@ def diagnostics(details):
         for stage,value in d.get('stage_counts',{}).items():funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage=stage,count=value,status='measured'))
         for stage,value in d.get('deployment_census',{}).get('census',{}).items():
             funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage='deployment_'+stage,count=value,status='measured_lower_bound' if 'lower_bound' in stage else 'measured'))
+        for stage,value in d.get('selected_action_local_risk',{}).items():
+            funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage='selected_local_'+stage,count=value,status='measured'))
+        for stage,value in d.get('solver',{}).items():
+            if isinstance(value,(int,float)) and not isinstance(value,bool) and not stage.startswith('max_'):
+                funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage='solver_'+stage,count=value,status='measured'))
         det=d.get('detection',{})
         for stage in ('gt_nodes','matched_nodes_7um','matched_nodes_3um','gt_edges_missing_endpoint','gt_edges_endpoints_present_link_missing','gt_edges_in_clean_candidate_union'):
             if stage in det:funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage=stage,count=det[stage],status='measured'))

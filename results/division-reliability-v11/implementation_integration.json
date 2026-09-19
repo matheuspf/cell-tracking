@@ -102,6 +102,43 @@
     }
   },
   "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+  "followup_before_head_fits": {
+    "cache_scope": "Immutable source observation arrays only; trainable embeddings recomputed for every accumulated group",
+    "changes": [
+      "Supported-census occurrence reliability bins and conditional ranking diagnostics",
+      "Post-freeze accepted-action risk attribution and solver abstention counts",
+      "Bounded observation cache and one-time linear-fit array decompression",
+      "Input/cache telemetry and sampler fallback summaries"
+    ],
+    "files": {
+      "calibrate.py": "c38cc0afe733c5cb00682bd2972139a349a764afba537b07218409e8d636cd40",
+      "calibration.py": "87da2999c21b49448a451daec5118563e26f987d3ca996c770a7f270803736c3",
+      "diagnostics.py": "5dcc3f8184eeeb4ac8b1879a276c00281173fc4c2c2a57c6eb94f8f629398736",
+      "event_training.py": "6d1ed78e67a908ae1608bfdf5e96812fa175f416a653e0530a217fa338fa8407",
+      "fit_linear.py": "1166220b95fe32cf2b6ca13dedfb4a638f97a991072aabb8244c2cfff34cc0d3",
+      "report.py": "9f3be36245fc14987b69c2f7eb51c5d02ca7e1bc66d609b6aad375fa4b820e10",
+      "test_execution.py": "dbf3db3280e07645d547c19a7f78151143af9289c42529d296dcadd84bb142c2",
+      "train_compact.py": "8fd0b2b7f8aa7c9208af61a8d44cd38b70d8074624188e149758a81da79d6775"
+    },
+    "measured_pilot_array_bytes": {
+      "44b6_12dfb391": 12720357,
+      "6bba_05db0fb1": 19475415
+    },
+    "numerical_objectives_and_sampling_unchanged": true,
+    "observation_array_cache_limit_bytes": 8589934592,
+    "prior_implementation_commit": "f645275",
+    "production_head_fits_started": 0,
+    "recorded_utc": "2026-09-19T22:49:00.010512+00:00",
+    "target_scores_opened": false,
+    "tests": {
+      "count": 16,
+      "exit_code": 0,
+      "finished_utc": "2026-09-19T22:47:07.309209+00:00",
+      "source_resume_proof": "see pilot receipts",
+      "status": "unit_tests_passed",
+      "tests_are_not_model_results": true
+    }
+  },
   "integration_scope": [
     "Fresh-process stage orchestration, bounded CPU concurrency and duplicate-owner checks",
     "Immutable midpoint mining jobs and source-calibration score caching with full legal denominators and exact utility parity",

@@ -10,8 +10,9 @@ from .models import supported_losses
 
 
 class Groups:
-    def __init__(self,root,clips,normalizer=None):
+    def __init__(self,root,clips,normalizer=None,*,max_cache_bytes=8*2**30):
         self.root=root;self.clips=clips;self.normalizer=normalizer;self.loaded=OrderedDict()
+        self.max_cache_bytes=max_cache_bytes;self.cache_bytes=0
         self.positive={};self.negative={};self.identity={};self.receipts={};self.visits=Counter()
         for clip in clips:
             r=read(root/clip/'receipt.json');self.receipts[clip]=r
@@ -33,7 +34,11 @@ class Groups:
     def load(self,clip):
         if clip not in self.loaded:
             with np.load(self.root/clip/'training.npz') as f:self.loaded[clip]={k:f[k] for k in f.files}
-            while len(self.loaded)>4:self.loaded.popitem(last=False)
+            self.cache_bytes+=sum(a.nbytes for a in self.loaded[clip].values())
+            # Only immutable source observation arrays are cached. Every
+            # trainable encoder activation is recomputed with gradients.
+            while len(self.loaded)>1 and self.cache_bytes>self.max_cache_bytes:
+                _,old=self.loaded.popitem(last=False);self.cache_bytes-=sum(a.nbytes for a in old.values())
         self.loaded.move_to_end(clip);return self.loaded[clip]
 
     def group(self,kind,clip,key):

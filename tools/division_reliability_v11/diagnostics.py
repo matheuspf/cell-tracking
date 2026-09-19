@@ -144,12 +144,25 @@ def target_details(source,seed,arm,clip,nodes,edges,events):
         tail.append(dict(parent=int(p),raw_gain=gain,raw_occurrence_logit=occ,group_target=y,
                          highest_raw_gain_action_risk=risks[top],alternatives=len(risks),
                          conditional_top_action_risk=risks[int(np.argmax(cond))]))
+    selected=Counter();index={int(n[0]):i for i,n in enumerate(bn)}
+    for edit in trace['solver']['edits']:
+        parent=int(edit['event'][0]);g=groups[parent][0] if parent in groups else bank.parent(parent)
+        added={tuple(index[int(x)] for x in edge) for edge in edit['added']}
+        removed={tuple(index[int(x)] for x in edge) for edge in edit['removed']}
+        candidates=[d for d in g['forks'] if d.add==added and d.remove==removed]
+        if len(candidates)!=1:raise Blocked('Accepted edit does not identify one canonical frozen action')
+        decision=candidates[0];risk=lab.decision(decision)['metric_fork_target']
+        selected[{1:'supported_compatible',0:'supported_incorrect',-1:'unknown'}[risk]]+=1
+        selected['introduced_interior_births']+=int(sum(bn[j,1]>0 for j in decision.births))
+        selected['introduced_interior_terminations']+=int(sum(bn[j,1]<99 for j in decision.terminations))
     recovered=set(events['recovered_gt_events'])
     for e in funnel['events']:
         eid=e['event_id'];e.update(conditional_top1=eid in rank1,conditional_top1_supported_only=eid in rank1_known,
             positive_raw_gain=eid in raw_positive,positive_calibrated_margin_gain=eid in calibrated_positive,
             actually_recovered=eid in recovered)
     result.update(raw_tail=tail,disabled_policy=cal['disabled_policy'],solver=trace['solver'],
+        selected_action_local_risk=dict(selected),
+        selected_risk_scope='Each accepted complete edit against C00 in isolation; full joint graph outcomes are scored independently',
         stage_counts=dict(legal_events=len(legal_events),conditional_top1=len(rank1),conditional_top1_supported_only=len(rank1_known),
             positive_raw_gain=len(raw_positive),positive_calibrated_margin_gain=len(calibrated_positive),actually_recovered=len(recovered)))
     return result

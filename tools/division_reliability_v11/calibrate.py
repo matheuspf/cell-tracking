@@ -31,7 +31,7 @@ def run(source,seed,arm):
     from .models import CompactPolicy
     from .policy import score_bank
     from .actions import Bank,utilities,apply_decisions
-    from .calibration import fit_occurrence,select_margin
+    from .calibration import fit_occurrence,select_margin,reliability
     from .evaluation import score,finite
     from .graphs import export_csv,read_csv
     from .provenance import digest
@@ -46,22 +46,34 @@ def run(source,seed,arm):
         head_hash=sha(fit/'compact/final.pt')
     else:linear=read(fit/'linear/model.json')['parameters'];head_hash=sha(fit/'linear/model.json')
     normalizer=read(fit/'linear/normalizer.json')['values'];xs=[];ys=[];positive_events=set();parents={};base_rows=[];base_events={}
+    from collections import Counter
+    census=Counter();ranks=Counter()
     for clip in clips:
         prediction=WORK/'predictions/C00'/source/str(seed)/clip;dest=folder/clip;dest.mkdir(exist_ok=True)
         with np.load(prediction/'graph.npz') as f:nodes,edges,scores,confidence=(f[k] for k in ('nodes','edges','edge_scores','confidence'))
         base,events=score(clip,nodes,edges,DATA/'train'/f'{clip}.geff');base_rows.append(base);base_events[clip]=events
         bank=Bank(nodes,edges,scores,100)
         bank_receipt=read(bank_root/clip/'receipt.json')
+        census.update(bank_receipt['census'])
         if bank_receipt['graph_sha256']!=sha(prediction/'graph.npz') or bank_receipt['training_sha256']!=sha(bank_root/clip/'training.npz'):
             raise Blocked('Calibration label bank differs from its frozen C00 observations')
         with np.load(bank_root/clip/'training.npz') as f:
             offsets=f['offset'];risks=f['risks']
             known={p:1 if (risks[a:b]==1).any() else 0 for p,a,b in zip(bank_receipt['group_parents'],offsets[:-1],offsets[1:])}
+            labels_by_parent={p:risks[a:b] for p,a,b in zip(bank_receipt['group_parents'],offsets[:-1],offsets[1:])}
         positive_events.update(bank_receipt['positive_events'])
         compute(bank,confidence,DATA/'train'/f'{clip}.zarr',normalizer,resources,model,linear,dest,arm,signature(prediction,fit,arm))
         with np.load(dest/'logits.npz') as f:
-            for p,a in zip(f['parents'],f['occurrence']):
+            conditional=f['conditional']
+            for p,a,start,end in zip(f['parents'],f['occurrence'],f['offset'][:-1],f['offset'][1:]):
                 if p in known:xs.append(float(a));ys.append(known[p])
+                if known.get(p)==1:
+                    y=labels_by_parent[p];b=conditional[start:end]
+                    if len(b)!=len(y):raise Blocked('Calibration conditional diagnostic ordering differs')
+                    best=b[y==1].max();ranks['positive_groups']+=1
+                    ranks['top1_all_legal']+=int(best>=b.max()-1e-12)
+                    ranks['top1_supported_only']+=int(best>=b[y>=0].max()-1e-12)
+                    ranks['legal_actions_in_positive_groups']+=len(y);ranks['unknown_actions_in_positive_groups']+=int((y<0).sum())
         parents[clip]=dict(raw_images=sha(WORK/'decoded_inventory'/f'{clip}.json'),
             raw_labels=digest({str(p.relative_to(DATA)):sha(p) for p in (DATA/'train'/f'{clip}.geff').rglob('*') if p.is_file()}))
     calibrated=fit_occurrence(xs,ys,len(positive_events));baseline=aggregate(base_rows,clips)
@@ -102,5 +114,8 @@ def run(source,seed,arm):
     result=dict(status='calibrated',arm=arm,source=source,seed=seed,guard=guard,**calibrated,**selection,
         baseline=finite(baseline),trials=trials,known_parent_groups=len(xs),negative_groups=sum(y==0 for y in ys),
         distinct_positive_events=len(positive_events),parent_manifests=parents,head_sha256=head_hash,finished_utc=now(),
+        raw_occurrence_reliability=reliability(xs,ys),
+        calibrated_occurrence_reliability=reliability(np.asarray(xs)/calibrated['temperature']+calibrated['intercept'],ys),
+        full_parent_census=dict(census),conditional_rank=dict(ranks),
         implementation_sha256={n:sha(Path(__file__).with_name(n)) for n in ('calibrate.py','calibration_cache.py','calibration.py','policy.py','actions.py','features.py','models.py')})
     write(folder/'calibration.json',result,immutable=True);resources.close();return result
