@@ -21,6 +21,11 @@ def worker(stage,source=None,seed=None,arm=None,clip=None,part=None):
     if stage=='train-compact':args.append('--defer-mining')
     name='-'.join(str(x) for x in (stage,source,seed,arm,part,clip) if x is not None)
     folder=FOLDER/'jobs';folder.mkdir(parents=True,exist_ok=True);log=folder/(name+'.log')
+    previous=folder/(name+'.json')
+    if previous.exists():
+        old=read(previous)
+        if old.get('status') in ('failed','blocked','running'):
+            write(folder/'history'/f'{name}-{time.time_ns()}.json',old,immutable=True)
     tick=time.monotonic()
     with log.open('a') as stream:
         process=subprocess.Popen(args,cwd=REPO,stdout=stream,stderr=subprocess.STDOUT)

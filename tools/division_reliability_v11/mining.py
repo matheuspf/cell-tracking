@@ -92,7 +92,12 @@ def run(source,seed,clip):
 
 def finish(source,seed):
     folder=WORK/'fits'/source/str(seed)/'compact/mining';sig=read(folder/'signature.json')
-    if (folder/'receipt.json').exists():return read(folder/'receipt.json')
+    if sig['source']!=source or sig['seed']!=seed or sig['mining_code_sha256']!=sha(Path(__file__)):
+        raise Blocked('Midpoint mining identity changed')
+    if (folder/'receipt.json').exists():
+        old=read(folder/'receipt.json')
+        if old['signature']!=sig:raise Blocked('Merged mining pool belongs to another snapshot')
+        return old
     pool={};summary={}
     for clip in sig['source_bank_receipts']:
         r=read(folder/clip/'receipt.json')

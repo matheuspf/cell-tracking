@@ -19,7 +19,8 @@ def mine(model,groups,normalizer,source,seed,folder,resources):
     if not (folder/'frozen_checkpoint.pt').exists():shutil.copy2(folder.parent/'resume.pt',folder/'frozen_checkpoint.pt')
     signature=dict(checkpoint_sha256=sha(folder/'frozen_checkpoint.pt'),
                    source_bank_receipts={n:sha(groups.root/n/'receipt.json') for n in groups.clips},
-                   policy_code_sha256=sha(Path(__file__).with_name('policy.py')))
+                   policy_code_sha256=sha(Path(__file__).with_name('policy.py')),
+                   normalizer_sha256=sha(folder.parents[1]/'linear/normalizer.json'))
     write(folder/'signature.json',signature,immutable=True)
     pool={};summary={}
     for clip in groups.clips:
@@ -123,6 +124,8 @@ def run(source,seed,*,resume=True,defer_mining=False):
                 if (mining/'receipt.json').exists():
                     receipt=read(mining/'receipt.json')
                     if sha(mining/'frozen_checkpoint.pt')!=receipt['signature']['checkpoint_sha256']:raise Blocked('Mining snapshot integrity failure')
+                    if digest(receipt['signature']['source_bank_receipts'])!=bank_identity or receipt['signature']['normalizer_sha256']!=sha(linear/'normalizer.json'):
+                        raise Blocked('Mining source observation/normalizer ancestry differs from the resumed fit')
                     frozen=torch.load(mining/'frozen_checkpoint.pt',map_location='cpu',weights_only=True)
                     if not all(torch.equal(v,frozen['model'][k]) for k,v in model.state_dict().items()):raise Blocked('Mining used different model parameters')
                     hard=receipt['pool']

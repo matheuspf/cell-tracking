@@ -155,6 +155,28 @@
   ],
   "production_head_fits_started": 0,
   "recorded_utc": "2026-09-19T22:38:56.036928+00:00",
+  "resume_integrity_followup": {
+    "changes": [
+      "Midpoint source-bank and normalizer hashes checked on training resume",
+      "Merged mining identity checked on reuse",
+      "Failed worker receipts archived before retry"
+    ],
+    "files": {
+      "controller.py": "e55cc8a58c20a989ee326538fe823e4ee6ea4be680e748812930e8ff8dee88b6",
+      "mining.py": "0ae9b2904f576584a97733ef97c37f37a45bd21239482d993a60dd9b21a414cf",
+      "train_compact.py": "0a18a39543bac79c881fb2ff82b0eaabf84869e962b1ff08be8869038eaffc9e"
+    },
+    "production_head_fits_started": 0,
+    "recorded_utc": "2026-09-19T22:51:15.560027+00:00",
+    "target_scores_opened": false,
+    "validation": {
+      "changed_identity_rejected": true,
+      "complete_clip_merge_and_resume": true,
+      "finished_utc": "2026-09-19T22:50:22.725978+00:00",
+      "status": "passed",
+      "synthetic_contract_only": true
+    }
+  },
   "scientific_recipe_unchanged": true,
   "source_fit_cell_44b6_20260918_is_active": true,
   "status": "integrated_before_production_head_fitting",
