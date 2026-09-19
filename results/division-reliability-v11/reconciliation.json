@@ -1,0 +1,206 @@
+{
+  "P0_modified": false,
+  "active_jobs": [],
+  "branch": "handover/division-reliability-v11-ready",
+  "created_utc": "2026-09-19T19:09:11.944587+00:00",
+  "head": "3acdb07ba1e0e3a457ff70e6b0bcdbceff33786c",
+  "inherited_compute_scope": "Historical receipt accounting retained separately; no new v11 lease charged yet.",
+  "inherited_resource_receipt_count": 289,
+  "local_v10_code_commits": [],
+  "preservation_manifest": {
+    "files": 107,
+    "path": "work/division-reliability-v11/preservation/v10-artifacts.json",
+    "sha256": "d05565da2455013b97e4c277905d684acb1c3cf899c0440050d9c1469140bcb7"
+  },
+  "preserved_user_files": {
+    "files": {
+      "results/public946-minimal-generalization-v1/experiment_matrix.csv": {
+        "bytes": 1749,
+        "copy": "work/division-reliability-v11/preservation/user-files/experiment_matrix.csv",
+        "sha256": "53b754c9982a4fcd3b8ee0b3ebe687ea7a6f1e2d494c7c1ffea7e2647cd9cb95"
+      },
+      "results/public946-minimal-generalization-v1/per_embryo_scores.csv": {
+        "bytes": 416,
+        "copy": "work/division-reliability-v11/preservation/user-files/per_embryo_scores.csv",
+        "sha256": "6749423ab93208459dec208571e27979463e97b31123dac5b067d7cb63836034"
+      }
+    },
+    "note": "Initial git diff omitted the pre-existing CRLF-only worktree changes. Original files were untouched; byte-for-byte copies were subsequently preserved.",
+    "preserved_utc": "2026-09-19T22:35:43.159259+00:00"
+  },
+  "prior_target_exposure": "Both embryos used in historical research. v10 interruption receipts state target_scores_opened=false; absent code/lock limits independent verification.",
+  "remote_planning_base": "08061f0a224387594dd3e915462bafb5d5928fb2",
+  "upstream_reused_cells": [],
+  "v10_cells": [
+    {
+      "checkpoint": "final.pt",
+      "checkpoint_path": "work/clean-validation-division-v10/fits/clean/44b6/20260918/upstream",
+      "checkpoint_sha256": "7365819c9756e5d42af2458454322bba318c5fb8d5bf2e70c111bc0808c974bb",
+      "missing_code": [
+        "data.py",
+        "schedule.py",
+        "train_upstream.py",
+        "upstream.py"
+      ],
+      "parent_hashes": [
+        "a7b73982e5a017f69851c4ed5e6d18b85a083f88cca7c459066b286219eef5ff"
+      ],
+      "planned_updates": 16000,
+      "progress": {
+        "planned_updates": 16000,
+        "status": "complete",
+        "step": 16000,
+        "updated_utc": "2026-09-18T22:32:49.714027+00:00"
+      },
+      "reason": "Matching trainer source and recursive parent manifest not present; receipts alone do not prove eligibility.",
+      "recipe_sha256": "ec830bfdb3dec5138faf7bc93efd44ff5e042aaac3aa04cc09545be571860b50",
+      "reuse_qualified": false,
+      "seed": 20260918,
+      "source": "44b6"
+    },
+    {
+      "checkpoint": "final.pt",
+      "checkpoint_path": "work/clean-validation-division-v10/fits/clean/44b6/314159/upstream",
+      "checkpoint_sha256": "726a2e02f0df381afa51a52d18c8ecdbc52d6cc93181819f956758e868a574f3",
+      "missing_code": [
+        "data.py",
+        "schedule.py",
+        "train_upstream.py",
+        "upstream.py"
+      ],
+      "parent_hashes": [
+        "a7b73982e5a017f69851c4ed5e6d18b85a083f88cca7c459066b286219eef5ff"
+      ],
+      "planned_updates": 16000,
+      "progress": {
+        "planned_updates": 16000,
+        "status": "complete",
+        "step": 16000,
+        "updated_utc": "2026-09-19T02:36:02.635068+00:00"
+      },
+      "reason": "Matching trainer source and recursive parent manifest not present; receipts alone do not prove eligibility.",
+      "recipe_sha256": "245ead706a71494c9717f49715dd5eb3c0f6f043968b1f76ad57ea1cefb511e4",
+      "reuse_qualified": false,
+      "seed": 314159,
+      "source": "44b6"
+    },
+    {
+      "checkpoint": "resume.pt",
+      "checkpoint_path": "work/clean-validation-division-v10/fits/clean/6bba/20260918/upstream",
+      "checkpoint_sha256": "3992720a778c729dd5bd53f0851d44e567ff368d8b8d9e7b9b61cc3c35546bbd",
+      "missing_code": [
+        "data.py",
+        "schedule.py",
+        "train_upstream.py",
+        "upstream.py"
+      ],
+      "parent_hashes": [
+        "a7b73982e5a017f69851c4ed5e6d18b85a083f88cca7c459066b286219eef5ff"
+      ],
+      "planned_updates": 16000,
+      "progress": {
+        "durable_checkpoint_step": 7200,
+        "interruption_receipt": "interruptions/20260919-user-stop/receipt.json",
+        "last_logged_optimizer_step": 7245,
+        "latest": {
+          "association": 0.0005266598309390247,
+          "background_voxels": 240808,
+          "collisions": 0,
+          "detection": 0.6058704853057861,
+          "gradient_norm": 0.43073344230651855,
+          "lr": 6.056253076590748e-05,
+          "matched_mixture_groups_per_pool": 68,
+          "matched_proposals": 137,
+          "positive_voxels": 4268,
+          "proposals": 1057,
+          "real_images": 16,
+          "sample_indices": [
+            57912,
+            57913,
+            57914,
+            57915,
+            57916,
+            57917,
+            57918,
+            57919
+          ],
+          "seconds": 0.9758553579999898,
+          "step": 7240,
+          "supervised_center_groups": 70,
+          "supported_proposal_groups": 68,
+          "total": 0.6063971519470215
+        },
+        "planned_updates": 16000,
+        "status": "stopped_by_user",
+        "step": 7240,
+        "stopped_utc": "2026-09-19T12:57:37.910239+00:00",
+        "target_results_read": false,
+        "updated_utc": "2026-09-19T12:57:37.910239+00:00"
+      },
+      "reason": "Matching trainer source and recursive parent manifest not present; receipts alone do not prove eligibility.",
+      "recipe_sha256": "61cce86643bb2488790f3d0b198a9443a447171d600bf460c3162cebbd1e8a83",
+      "reuse_qualified": false,
+      "seed": 20260918,
+      "source": "6bba"
+    },
+    {
+      "checkpoint": "resume.pt",
+      "checkpoint_path": "work/clean-validation-division-v10/fits/clean/6bba/314159/upstream",
+      "checkpoint_sha256": "ebcc0c92e10fa2f5edf3a218f0db6d91d8154085581e9e214f972f6dfe56d85c",
+      "missing_code": [
+        "data.py",
+        "schedule.py",
+        "train_upstream.py",
+        "upstream.py"
+      ],
+      "parent_hashes": [
+        "a7b73982e5a017f69851c4ed5e6d18b85a083f88cca7c459066b286219eef5ff"
+      ],
+      "planned_updates": 16000,
+      "progress": {
+        "durable_checkpoint_step": 200,
+        "interruption_receipt": "interruptions/20260919-user-stop/receipt.json",
+        "last_logged_optimizer_step": 240,
+        "latest": {
+          "association": 0.4307519197463989,
+          "background_voxels": 242471,
+          "collisions": 0,
+          "detection": 0.5645809769630432,
+          "gradient_norm": 0.6313222050666809,
+          "lr": 4.8e-05,
+          "no_supported_group_pairs": 1,
+          "positive_voxels": 3549,
+          "real_images": 16,
+          "sample_indices": [
+            1912,
+            1913,
+            1914,
+            1915,
+            1916,
+            1917,
+            1918,
+            1919
+          ],
+          "seconds": 0.5881014090000463,
+          "step": 240,
+          "supervised_center_groups": 55,
+          "supervised_only_fallback_pairs": 7,
+          "total": 0.9953328967094421
+        },
+        "planned_updates": 16000,
+        "status": "stopped_by_user",
+        "step": 240,
+        "stopped_utc": "2026-09-19T12:57:37.910239+00:00",
+        "target_results_read": false,
+        "updated_utc": "2026-09-19T12:57:37.910239+00:00"
+      },
+      "reason": "Matching trainer source and recursive parent manifest not present; receipts alone do not prove eligibility.",
+      "recipe_sha256": "63157c45e4f62e998a0610b8068a2460b88066db6aef58905586a6eed299d9c2",
+      "reuse_qualified": false,
+      "seed": 314159,
+      "source": "6bba"
+    }
+  ],
+  "v11_target_scores_opened": false,
+  "worktrees": "worktree <repo>\nHEAD 3acdb07ba1e0e3a457ff70e6b0bcdbceff33786c\nbranch refs/heads/handover/division-reliability-v11-ready"
+}

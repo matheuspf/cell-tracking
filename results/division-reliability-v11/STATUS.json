@@ -1,0 +1,46 @@
+{
+  "P0_modified": false,
+  "all_four_cells_complete": false,
+  "artifacts": {
+    "exposure": "exposure_manifest.json",
+    "predictions": "prediction_manifest.json",
+    "resources": "resource.json",
+    "training": "training_summary.json"
+  },
+  "blocked_stages": [],
+  "clean_provenance_passed": false,
+  "cold_inference_passed": false,
+  "compact_completed_cells": 0,
+  "compact_promotion_gate_passed": false,
+  "completed_score_rows": 0,
+  "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+  "next_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 report",
+  "pooled_095_milestone_reached": false,
+  "required_score_rows": 1194,
+  "resume_command_when_no_existing_owner": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 run --workers 3",
+  "resume_proof": "Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.",
+  "scored": false,
+  "status": "running",
+  "strong_095_milestone_reached": false,
+  "submitted_to_kaggle": false,
+  "target_freeze_passed": false,
+  "trained": false,
+  "updated_utc": "2026-09-19T22:37:56.975813+00:00",
+  "upstream_completed_cells": 0,
+  "upstream_reused_cells": [],
+  "verified_active_processes": [
+    {
+      "pid": 499698,
+      "role": "pipeline/controller_pid"
+    },
+    {
+      "pid": 417788,
+      "role": "upstream/controller_pid"
+    },
+    {
+      "pid": 417791,
+      "role": "upstream/worker_pid"
+    }
+  ],
+  "weights_published": false
+}

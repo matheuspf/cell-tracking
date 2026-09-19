@@ -1,0 +1,138 @@
+{
+  "allocation_hours": {
+    "event_mining": 18,
+    "inference_cold": 16,
+    "pilot": 4,
+    "upstream": 34
+  },
+  "allocation_rule": "Keep initial allocations; no qualified upstream reuse releases capacity.",
+  "candidates": [
+    {
+      "E": 4000,
+      "U": 24000,
+      "event_mining_hours": 3.3425464523239308,
+      "feasible": false,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 58.09030928833636
+    },
+    {
+      "E": 2000,
+      "U": 24000,
+      "event_mining_hours": 2.0143217634342783,
+      "feasible": false,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 58.09030928833636
+    },
+    {
+      "E": 4000,
+      "U": 16000,
+      "event_mining_hours": 3.3425464523239308,
+      "feasible": false,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 38.72687285889091
+    },
+    {
+      "E": 2000,
+      "U": 16000,
+      "event_mining_hours": 2.0143217634342783,
+      "feasible": false,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 38.72687285889091
+    },
+    {
+      "E": 4000,
+      "U": 8000,
+      "event_mining_hours": 3.3425464523239308,
+      "feasible": true,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 19.363436429445454
+    },
+    {
+      "E": 2000,
+      "U": 8000,
+      "event_mining_hours": 2.0143217634342783,
+      "feasible": true,
+      "inference_cold_hours": 10.64899651861452,
+      "upstream_hours": 19.363436429445454
+    }
+  ],
+  "caveat": "Throughput projection from real source fixtures; model density can change. Runtime accounting enforces the ceilings.",
+  "measurement": [
+    {
+      "history_sha256": "91bce47c90732869701e6078be1f70902b9e23b44bd42f1ad8e3f98288a5c010",
+      "maximum_gpu_lease_seconds": 1.6227136210000026,
+      "mean_gpu_lease_seconds": 1.343488352249733,
+      "mean_input_seconds": 0.006133577299988246,
+      "seed": 20260918,
+      "source": "44b6",
+      "updates": 20
+    },
+    {
+      "history_sha256": "986fbb51d6ba68fed1be56007a76f22351cefbdab67f0119c747984e436fee0a",
+      "maximum_gpu_lease_seconds": 1.9124937489996228,
+      "mean_gpu_lease_seconds": 1.349417021199588,
+      "mean_input_seconds": 0.0070769458501672485,
+      "seed": 314159,
+      "source": "44b6",
+      "updates": 20
+    },
+    {
+      "history_sha256": "008d2f71cb17a7f884228010cdc412c8ab239479106e9c7ec7b3d4205b906a2b",
+      "maximum_gpu_lease_seconds": 1.521315627000149,
+      "mean_gpu_lease_seconds": 1.3066685573501673,
+      "mean_input_seconds": 0.010581836399796884,
+      "seed": 20260918,
+      "source": "6bba",
+      "updates": 20
+    },
+    {
+      "history_sha256": "f11252f1c182c789911f05b7c977642d1544d2bd032e32cbe96875d83f78fc12",
+      "maximum_gpu_lease_seconds": 2.263788772001135,
+      "mean_gpu_lease_seconds": 1.7427092786500906,
+      "mean_input_seconds": 1.5343276872999922,
+      "seed": 314159,
+      "source": "6bba",
+      "updates": 20
+    }
+  ],
+  "multiplier": 1.25,
+  "population": {
+    "cold_clips": 24,
+    "source_calibration_clips": 62,
+    "source_fit_clips": 336,
+    "target_clips": 398
+  },
+  "rates_seconds": {
+    "c00_clip": 34.044976300009694,
+    "compact_policy_clip": 5.880832067525362,
+    "event_update": 0.478160888000275,
+    "upstream_update": 1.7427092786500906
+  },
+  "selected": {
+    "E": 4000,
+    "U": 8000,
+    "event_mining_hours": 3.3425464523239308,
+    "feasible": true,
+    "inference_cold_hours": 10.64899651861452,
+    "upstream_hours": 19.363436429445454
+  },
+  "source_inference": [
+    {
+      "clip": "44b6_12dfb391",
+      "frames": 100,
+      "gpu_lease_seconds": 34.044976300009694,
+      "nodes": 331998,
+      "source": "44b6",
+      "wall_seconds": 49.89520378999987
+    },
+    {
+      "clip": "6bba_05db0fb1",
+      "frames": 100,
+      "gpu_lease_seconds": 23.079787024001234,
+      "nodes": 278060,
+      "source": "6bba",
+      "wall_seconds": 38.17874639599995
+    }
+  ],
+  "status": "passed"
+}

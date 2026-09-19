@@ -1,0 +1,100 @@
+{
+  "association_labels": {
+    "positive": 70,
+    "supported_negative": 804,
+    "unknown": 16
+  },
+  "background_voxels": 264178,
+  "batch": 8,
+  "charged_gpu_lease_seconds": 2.5506630299996687,
+  "data_seconds": 1.511461519000477,
+  "finished_utc": "2026-09-19T19:19:07.180178+00:00",
+  "first_step": {
+    "association": 0.6749717593193054,
+    "detection": 0.6874553561210632,
+    "gradient_norm": 2.285306692123413,
+    "host_available_bytes": 48545103872,
+    "loss": 1.3624271154403687,
+    "lr": 2.5e-07,
+    "peak_reserved_bytes": 8963227648,
+    "rss_bytes": 2536734720,
+    "seconds": 1.022820760000286,
+    "step": 1,
+    "total_device_used_bytes": 11321344000
+  },
+  "full_pilot_receipt_path": "work/division-reliability-v11/preservation/v11-initial-public-pilots/pilot-6bba-20260918.json",
+  "full_pilot_receipt_sha256": "11af18d412102b18bf6e00e8db1d225b5c3936ff6755e4f6229968cac07582c3",
+  "guard": {
+    "denied": 0,
+    "installed_before_numerical": true,
+    "network_denied": 0,
+    "subprocess_denied": 0
+  },
+  "initialization": "random entire encoder/detector/association",
+  "last_step": {
+    "association": 0.6748057007789612,
+    "detection": 0.6872363090515137,
+    "gradient_norm": 2.225313901901245,
+    "host_available_bytes": 48476418048,
+    "loss": 1.36204195022583,
+    "lr": 5e-07,
+    "peak_reserved_bytes": 8973713408,
+    "rss_bytes": 2549063680,
+    "seconds": 0.7290376599994488,
+    "step": 2,
+    "total_device_used_bytes": 11331829760
+  },
+  "peak_reserved_bytes": 8973713408,
+  "positive_voxels": 4331,
+  "production_updates": 0,
+  "real_source_pairs": [
+    [
+      "6bba_cff5865f",
+      95
+    ],
+    [
+      "6bba_e5e44988",
+      8
+    ],
+    [
+      "6bba_d1acb6ff",
+      88
+    ],
+    [
+      "6bba_2312ac41",
+      92
+    ],
+    [
+      "6bba_789f8168",
+      96
+    ],
+    [
+      "6bba_87289e13",
+      97
+    ],
+    [
+      "6bba_df673a83",
+      95
+    ],
+    [
+      "6bba_5c824876",
+      26
+    ]
+  ],
+  "resume": {
+    "checkpoint_sha256": "50d32ba221352967632fdb2c6364ec2b2c5e6ce998532bc71cb54437b29060ef",
+    "exact_loss": true,
+    "exact_weights": true,
+    "maximum_parameter_difference": 0.0,
+    "replayed_step": 2,
+    "unequal_tensors": []
+  },
+  "seed": 20260918,
+  "source": "6bba",
+  "started_utc": "2026-09-19T19:18:57.152222+00:00",
+  "status": "real_optimizer_resume_passed",
+  "step_count": 3,
+  "target_labels_read": false,
+  "unknown_detection_gradient_max": 0.0,
+  "wall_seconds": 10.02795564400003
+}

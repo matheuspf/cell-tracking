@@ -1,0 +1,62 @@
+{
+  "interruption_after": 10,
+  "production_training": false,
+  "proofs": [
+    {
+      "checkpoint_hashes": {
+        "continuous": "4d9da63a0c263eadc282e185c20aa4331a779cc01bc89b95ae80a96947e3e0bf",
+        "resumed": "c2a21d993b38280f74be0cf0db9bf6746e7b8bef1d04f8014ba1682c8d6c7710"
+      },
+      "checks": {
+        "cpu_rng": true,
+        "cuda_rng": true,
+        "loss_sampling_exact": true,
+        "model": true,
+        "optimizer": true,
+        "python_rng": true,
+        "sampler": true
+      },
+      "seed": 20260918,
+      "source": "44b6",
+      "updates": 20
+    },
+    {
+      "checkpoint_hashes": {
+        "continuous": "fd7fc47ec89a05023b0ac7c1af6d87cf2b1eab7f42ca5846b74e452ab603bca6",
+        "resumed": "031447b3178860c337f42e0e484760db7ae08ec031bf018d1219e9be99425029"
+      },
+      "checks": {
+        "cpu_rng": true,
+        "cuda_rng": true,
+        "loss_sampling_exact": true,
+        "model": true,
+        "optimizer": true,
+        "python_rng": true,
+        "sampler": true
+      },
+      "seed": 314159,
+      "source": "44b6",
+      "updates": 20
+    },
+    {
+      "checkpoint_hashes": {
+        "continuous": "9b55b21012ec710b39ce05200a6a4d504700a40bdcdf71514ea7de6d578e6c49",
+        "resumed": "7bdcc8c3659f3432492c21c80abce3cff18369ccdeb79d844d093aba3dd47153"
+      },
+      "checks": {
+        "cpu_rng": true,
+        "cuda_rng": true,
+        "loss_sampling_exact": true,
+        "model": true,
+        "optimizer": true,
+        "python_rng": true,
+        "sampler": true
+      },
+      "seed": 314159,
+      "source": "6bba",
+      "updates": 20
+    }
+  ],
+  "status": "passed",
+  "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
+}

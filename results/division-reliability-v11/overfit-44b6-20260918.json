@@ -1,0 +1,103 @@
+{
+  "association_labels": {
+    "positive": 72,
+    "supported_negative": 504,
+    "unknown": 0
+  },
+  "background_voxels": 283104,
+  "batch": 8,
+  "charged_gpu_lease_seconds": 604.5146004319995,
+  "data_seconds": 1.091378392000479,
+  "final_checkpoint_sha256": "f1bfb4d71e47d9ad45e2cf6c72a6a2701b2566e021940c3e3a7f4c1012678ff4",
+  "finished_utc": "2026-09-19T19:52:07.199873+00:00",
+  "first_step": {
+    "association": 0.6859792470932007,
+    "detection": 0.6781993508338928,
+    "gradient_norm": 1.8903368711471558,
+    "host_available_bytes": 45020663808,
+    "loss": 1.3641786575317383,
+    "lr": 2e-06,
+    "peak_reserved_bytes": 8963227648,
+    "rss_bytes": 2508324864,
+    "seconds": 1.0949833040003796,
+    "step": 1,
+    "total_device_used_bytes": 10549329920
+  },
+  "full_pilot_receipt_path": "work/division-reliability-v11/preservation/v11-initial-public-pilots/overfit-44b6-20260918.json",
+  "full_pilot_receipt_sha256": "a6a72c61c2a5554d930d1427dc658674ec41f62133bf75babf3e0f4a3c9710ce",
+  "guard": {
+    "denied": 0,
+    "installed_before_numerical": true,
+    "network_denied": 0,
+    "subprocess_denied": 0
+  },
+  "initialization": "random entire encoder/detector/association",
+  "last_step": {
+    "association": 0.04781227558851242,
+    "detection": 0.5759600400924683,
+    "gradient_norm": 0.5385971069335938,
+    "host_available_bytes": 44782718976,
+    "loss": 0.6237723231315613,
+    "lr": 1e-06,
+    "peak_reserved_bytes": 8973713408,
+    "rss_bytes": 2553200640,
+    "seconds": 0.5882257670000399,
+    "step": 1000,
+    "total_device_used_bytes": 11683168256
+  },
+  "overfit_horizon": 1000,
+  "overfit_sampling": "same source-fit division pair repeated eight times; diagnostic only",
+  "peak_reserved_bytes": 8973713408,
+  "positive_voxels": 4136,
+  "production_updates": 0,
+  "real_source_pairs": [
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ],
+    [
+      "44b6_12dfb391",
+      66
+    ]
+  ],
+  "resume": {
+    "checkpoint_sha256": "644a0a8ad4a6101f2e416cd5f118a2ef5cdb8f6f87ca1da00b1c4e87b4ab0883",
+    "exact_loss": true,
+    "exact_weights": true,
+    "maximum_parameter_difference": 0.0,
+    "replayed_step": 2,
+    "unequal_tensors": []
+  },
+  "seed": 20260918,
+  "source": "44b6",
+  "started_utc": "2026-09-19T19:41:53.077619+00:00",
+  "status": "overfit_complete",
+  "step_count": 1001,
+  "target_labels_read": false,
+  "unknown_detection_gradient_max": 0.0,
+  "wall_seconds": 614.1222524640007
+}

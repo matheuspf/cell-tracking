@@ -1,0 +1,314 @@
+"""Sanitized completion accounting; missing matrix entries remain explicit nulls."""
+from pathlib import Path
+from collections import Counter,defaultdict
+import csv,json,os,shutil,sys
+from .common import REPO,WORK,RESULTS,OLD,Blocked,read,write,sha,now
+from .populations import clips
+
+FIELDS=['arm','source','target','seed','dataset','status','missing_reason','clips_expected','clips_scored','frames',
+        'edge_tp','edge_fp','edge_fn','division_tp','division_fp','division_fn','num_pred_nodes','estimated_total',
+        'matched_nodes','edge_weight','adjusted_edge_contribution','edge_jaccard','adj_edge_jaccard','division_jaccard',
+        'score','delta_C00','delta_C01','disabled_policy','accepted_actions','changed_edges','introduced_division_fp',
+        'newly_recovered_division_tp','lost_division_tp','metric_revision']
+
+
+def public(value):
+    if isinstance(value,dict):return {k:public(v) for k,v in value.items()}
+    if isinstance(value,list):return [public(v) for v in value]
+    if isinstance(value,str):return value.replace(str(REPO),'<repo>').replace(str(Path.home()),'<home>')
+    return value
+
+
+def alive(pid):
+    try:
+        path=Path('/proc')/str(pid)
+        return 'division_reliability_v11' in (path/'cmdline').read_bytes().decode() and (path/'stat').read_text().split()[2]!='Z'
+    except (OSError,UnicodeError):return False
+
+
+def checkpoint(folder):
+    path=folder/'resume.pt'
+    if not path.exists():return None
+    import torch
+    state=torch.load(path,map_location='cpu',weights_only=True)
+    result=dict(path=str(path.relative_to(REPO)),sha256=sha(path),durable_step=state['step'],source=state['source'],seed=state['seed'],
+                lock_identity=state['lock_identity'],scheduler=state.get('scheduler'),optimizer_present='optimizer' in state,
+                sampler_and_rng_present=all(k in state for k in ('sampler','cpu_rng','cuda_rng')))
+    del state
+    return result
+
+
+def training():
+    cells=[]
+    for source in ('44b6','6bba'):
+        for seed in (20260918,314159):
+            cell=dict(source=source,target='6bba' if source=='44b6' else '44b6',seed=seed)
+            for kind in ('upstream','compact'):
+                folder=WORK/'fits'/source/str(seed)/kind
+                p=folder/'final.json';progress=read(folder/'progress.json') if (folder/'progress.json').exists() else dict(status='pending')
+                result=read(p) if p.exists() else progress
+                result={**result,'process_verified_alive':alive(progress.get('pid')),
+                        'resume':checkpoint(folder),'history_summary':{}}
+                hp=folder/'history.jsonl'
+                if hp.exists():
+                    count=0;sums=Counter();first=last=None;fallback=supervised=proposal=0;visits=set()
+                    with hp.open() as f:
+                        for line in f:
+                            r=json.loads(line);count+=1;first=first or r;last=r
+                            sums['gpu_lease_seconds']+=r.get('gpu_lease_seconds',0);sums['input_seconds']+=r.get('io_seconds',0)
+                            for g in r.get('groups',[]):
+                                fallback+=int(g['fallback']);supervised+=g['supervised'];proposal+=g['proposal']
+                            for g in r.get('selection',[]):visits.add((g['slot'],g['clip'],g['key']))
+                    keys=('step','loss','detection','association','losses','lr','denominators')
+                    result['history_summary']=dict(recorded_updates=count,first={k:first[k] for k in keys if k in first},
+                        last={k:last[k] for k in keys if k in last},totals=dict(sums),supervised_incoming_groups=supervised,
+                        proposal_incoming_groups=proposal,query_fallback_batches=fallback,unique_group_visits=len(visits),
+                        history_sha256=sha(hp),full_history_committed=False)
+                cell[kind]=result
+            linear=WORK/'fits'/source/str(seed)/'linear/model.json'
+            if linear.exists():
+                r=read(linear);cell['linear']=dict(status=r['status'],census=r['census'],diagnostics=r['parameters']['diagnostics'],sha256=sha(linear))
+            else:cell['linear']=dict(status='pending')
+            cells.append(cell)
+    value=dict(cells=cells,upstream_reused_cells=[],retained_final_only=True,all_components_random_initialization=True)
+    write(RESULTS/'training_summary.json',public(value));return value
+
+
+def resources():
+    root=WORK/'resources';rows=[]
+    if (root/'gpu-leases.jsonl').exists():
+        with (root/'gpu-leases.jsonl').open() as f:rows=[json.loads(line) for line in f if line.strip()]
+    prior=read(root/'prior_accounting.json');by_stage=Counter();status=Counter()
+    for r in rows:by_stage[r['stage']]+=r['seconds'];status[r['status']]+=1
+    upper=prior['conservative_gpu_lease_seconds'];total=sum(by_stage.values())+upper
+    maxima={k:max((r.get(k,0) for r in rows),default=0) for k in ('total_device_peak_bytes','rss_peak_bytes','peak_reserved_bytes','peak_allocated_bytes')}
+    minima={k:min((r[k] for r in rows if k in r),default=None) for k in ('device_free_min_bytes','host_available_min_bytes')}
+    inherited=read(WORK/'preservation/inherited_compute.json')
+    cpu=[read(p) for p in (WORK/'controller/jobs').glob('*.resources.json')]
+    value=dict(new_study_gpu_lease_hours=total/3600,new_study_measured_journal_hours=sum(by_stage.values())/3600,
+        pre_journal_conservative_charge_hours=upper/3600,pre_journal_accounting=prior,
+        hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
+        maximum_lease_seconds=max((r['seconds'] for r in rows),default=0),sampled_maxima=maxima,sampled_minima=minima,
+        current_durable_free_bytes=shutil.disk_usage(WORK).free,inherited_lifetime=inherited,
+        cpu_job_resource_samples=len(cpu),study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
+        study_host_available_min_bytes=min((r.get('host_available_min_bytes',r['host_available_bytes']) for r in cpu),default=None),
+        inherited_hours=inherited['charged_seconds']/3600,lifetime_v10_plus_v11_conservative_hours=(inherited['charged_seconds']+total)/3600,
+        limits=read(RESULTS/'execution_lock.json')['limits'],reserve_hours=16,
+        accounting_note='Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.',
+        hardware=dict(gpu='NVIDIA RTX 4090',gpu_memory_gib=24,cpu='AMD Ryzen 9 7950X3D'),updated_utc=now())
+    write(RESULTS/'resource.json',public(value));return value
+
+
+def score_rows():
+    from annotation_selection.metric_adapter import aggregate
+    from .evaluation import finite
+    per_clip=[];directions=[];pooled=[];details={};calibrations=[]
+    blockers=[read(p) for p in (WORK/'blocked_cells').glob('*.json')]
+    revision=read(RESULTS/'execution_lock.json')['metric_revision']
+    for source in ('44b6','6bba'):
+        target='6bba' if source=='44b6' else '44b6'
+        for seed in (20260918,314159):
+            for arm in ('C00','C01','C11'):
+                expected=clips(source,'target');rows=[];disabled=False
+                causes=[b['stage']+': '+b['reason'] for b in blockers if b['source']==source and b['seed']==seed and arm in b['arms']]
+                missing='; '.join(causes) if causes else 'complete frozen prediction and official score pending'
+                calpath=WORK/'fits'/source/str(seed)/'calibration'/arm/'calibration.json'
+                if calpath.exists():
+                    cal=read(calpath);disabled=cal['disabled_policy'];calibrations.append({k:v for k,v in cal.items() if k not in ('parent_manifests',)})
+                for clip in expected:
+                    path=WORK/'evaluation'/source/str(seed)/arm/clip/'receipt.json'
+                    result=dict(arm=arm,source=source,target=target,seed=seed,dataset=clip,status='blocked' if causes else 'pending',missing_reason=missing,
+                                clips_expected=1,clips_scored=0,frames=None,disabled_policy=disabled,metric_revision=revision)
+                    if path.exists():
+                        r=read(path);details[source,seed,arm,clip]=r;metrics=r['metrics'];rows.append(metrics)
+                        single=finite(aggregate([metrics],[clip]));w=sum(metrics[k] for k in ('edge_tp','edge_fp','edge_fn'))
+                        result.update(metrics);result.update(status='scored',missing_reason=None,clips_scored=1,frames=r['frames'],
+                            score=single['score'],division_jaccard=single['division_jaccard'],edge_weight=w,
+                            adjusted_edge_contribution=w*metrics['adj_edge_jaccard'] if w else 0.)
+                        prediction=read(WORK/'predictions'/arm/source/str(seed)/clip/'receipt.json')
+                        result.update(accepted_actions=prediction.get('accepted_actions',0),changed_edges=prediction.get('changed_edges',0))
+                    per_clip.append(result)
+                base=dict(arm=arm,source=source,target=target,seed=seed,status='blocked' if causes else 'pending',missing_reason=missing,
+                          clips_expected=len(expected),clips_scored=len(rows),frames=None,disabled_policy=disabled,metric_revision=revision)
+                if len(rows)==len(expected):
+                    summary=finite(aggregate(rows,expected));base.update(summary);base.update(summary['counts']);base.pop('counts',None)
+                    base.update(status='scored',missing_reason=None,frames=100*len(expected),estimated_total=sum(r['estimated_total'] for r in rows),
+                                matched_nodes=sum(r['matched_nodes'] for r in rows))
+                    w=sum(base[k] for k in ('edge_tp','edge_fp','edge_fn'));base['edge_weight']=w;base['adjusted_edge_contribution']=w*base['adj_edge_jaccard']
+                directions.append(base)
+    for seed in (20260918,314159):
+        for arm in ('C00','C01','C11'):
+            selected=[r for r in per_clip if r['arm']==arm and r['seed']==seed];known=[r for r in selected if r['status']=='scored']
+            row=dict(arm=arm,source='pooled',target='pooled',seed=seed,status='pending',missing_reason='incomplete direction/seed matrix',
+                clips_expected=len(selected),clips_scored=len(known),frames=None,disabled_policy=any(r['disabled_policy'] for r in selected),metric_revision=revision)
+            if any(r['status']=='blocked' for r in selected):
+                row.update(status='blocked',missing_reason='; '.join(sorted({r['missing_reason'] for r in selected if r['status']=='blocked'})))
+            if len(known)==len(selected):
+                summary=finite(aggregate(known,[r['dataset'] for r in selected]));row.update(summary);row.update(summary['counts']);row.pop('counts',None)
+                row.update(status='scored',missing_reason=None,frames=100*len(known),estimated_total=sum(r['estimated_total'] for r in known),
+                           matched_nodes=sum(r['matched_nodes'] for r in known))
+                w=sum(row[k] for k in ('edge_tp','edge_fp','edge_fn'));row['edge_weight']=w;row['adjusted_edge_contribution']=w*row['adj_edge_jaccard']
+            pooled.append(row)
+    for group in (per_clip,directions,pooled):
+        lookup={(r.get('dataset'),r['source'],r['seed'],r['arm']):r for r in group}
+        for r in group:
+            for arm in ('C00','C01'):
+                baseline=lookup.get((r.get('dataset'),r['source'],r['seed'],arm))
+                r['delta_'+arm]=r.get('score')-baseline['score'] if r.get('score') is not None and baseline and baseline.get('score') is not None else None
+    for r in per_clip:
+        key=r['source'],r['seed'],r['arm'],r['dataset'];bkey=r['source'],r['seed'],'C00',r['dataset']
+        if key in details and bkey in details:
+            a,b=details[key]['events'],details[bkey]['events']
+            r.update(introduced_division_fp=len(set(a['fp_predicted_forks'])-set(b['fp_predicted_forks'])),
+                newly_recovered_division_tp=len(set(a['recovered_gt_events'])-set(b['recovered_gt_events'])),
+                lost_division_tp=len(set(b['recovered_gt_events'])-set(a['recovered_gt_events'])))
+    for group in (directions,pooled):
+        for r in group:
+            ss=[x for x in per_clip if x['arm']==r['arm'] and x['seed']==r['seed'] and (r['source']=='pooled' or x['source']==r['source'])]
+            if r['status']=='scored':
+                for k in ('accepted_actions','changed_edges','introduced_division_fp','newly_recovered_division_tp','lost_division_tp'):
+                    r[k]=sum(x.get(k,0) for x in ss)
+    for name,rows in [('scores.csv',pooled),('per_embryo_scores.csv',directions),('per_clip_scores.csv',per_clip)]:
+        with (RESULTS/name).open('w',newline='') as f:
+            writer=csv.DictWriter(f,fieldnames=FIELDS,extrasaction='ignore');writer.writeheader();writer.writerows(rows)
+    write(RESULTS/'calibration.json',public(dict(status='complete' if len(calibrations)==8 else 'partial',cells=calibrations)))
+    return pooled,directions,per_clip,details
+
+
+def diagnostics(details):
+    source=[];pilots=[];funnel=[]
+    for s in ('44b6','6bba'):
+        for seed in (20260918,314159):
+            p=WORK/'source_diagnostics'/s/str(seed)/'summary.json'
+            if p.exists():
+                r=read(p);clean={k:v for k,v in r.items() if k!='per_clip'};clean['clips']={}
+                for n,d in r['per_clip'].items():
+                    clean['clips'][n]={k:v for k,v in d.items() if k!='funnel'}
+                    if 'funnel' in d:clean['clips'][n]['funnel']={k:v for k,v in d['funnel'].items() if k!='events'}
+                source.append(clean)
+        for p in (WORK/'source_evaluation'/s/'20260918').glob('*/receipt.json'):
+            r=read(p);r={k:v for k,v in r.items() if k not in ('positive_witness','negative_witness')}
+            raw=read(p)
+            for k in ('positive_witness','negative_witness'):
+                if raw.get(k):r[k]=dict(risk=raw[k]['risk'],official_score=raw[k]['official_score'],label_guided_not_model=True,
+                    solver_and_global_edit_cap_applied=False,limitation='Local legal oracle only; tiny baseline graphs have zero allowed edits under the global 2% cap.')
+            pilots.append(r)
+    for (s,seed,arm,clip),r in details.items():
+        d=r.get('diagnostics',{});counts=d.get('funnel',{}).get('stages',{})
+        for stage,value in counts.items():funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage=stage,count=value,status='measured'))
+        for stage,value in d.get('stage_counts',{}).items():funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage=stage,count=value,status='measured'))
+        for stage,value in d.get('deployment_census',{}).get('census',{}).items():
+            funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage='deployment_'+stage,count=value,status='measured_lower_bound' if 'lower_bound' in stage else 'measured'))
+        det=d.get('detection',{})
+        for stage in ('gt_nodes','matched_nodes_7um','matched_nodes_3um','gt_edges_missing_endpoint','gt_edges_endpoints_present_link_missing','gt_edges_in_clean_candidate_union'):
+            if stage in det:funnel.append(dict(source=s,seed=seed,arm=arm,dataset=clip,stage=stage,count=det[stage],status='measured'))
+    if not funnel:funnel=[dict(status='pending',stage='target attribution requires complete frozen predictions and scoring',count=None)]
+    with (RESULTS/'error_funnel.csv').open('w',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=['source','seed','arm','dataset','stage','count','status']);writer.writeheader();writer.writerows(funnel)
+    tails=Counter()
+    for key,r in details.items():
+        for item in r.get('diagnostics',{}).get('raw_tail',[]):
+            tails[f'{key[0]}/{key[1]}/{key[2]}/occurrence_target_{item["group_target"]}']+=1
+            tails[f'{key[0]}/{key[1]}/{key[2]}/highest_action_risk_{item["highest_raw_gain_action_risk"]}']+=1
+    masks=[read(p) for p in (WORK/'mask_audit').glob('*/receipt.json')]
+    value=dict(status='complete' if len(source)==4 else 'partial',source_cells=source,engineering_pilots=pilots,
+        source_mask_audits=[{k:v for k,v in m.items() if k!='per_clip'} for m in masks],
+        raw_selected_target_tail_counts=dict(tails),target_tail_definition='Top 50 parent groups per full clip by uncalibrated complete-fork gain; unknown support stays unknown.',
+        endpoint_action_groups_overlap=True,pilot_collapse_disclosed=True,biological_nondivision_identified=False,
+        background_caveat='Low-intensity/low-variance background is a fixed heuristic. Sparse annotations cannot certify that unannotated background voxels contain no cells.')
+    write(RESULTS/'source_diagnostics.json',public(value));return value
+
+
+def run():
+    RESULTS.mkdir(parents=True,exist_ok=True)
+    lock=read(RESULTS/'execution_lock.json');tr=training();res=resources();pooled,directional,per_clip,details=score_rows();diag=diagnostics(details)
+    packages={};clean=True
+    from .provenance import unseal
+    from .stage_provenance import validate_stages
+    for s in ('44b6','6bba'):
+        for seed in (20260918,314159):
+            for arm in ('C00','C01','C11'):
+                p=WORK/'packages'/s/str(seed)/arm
+                if (p/'manifest.json').exists():
+                    value=unseal(p);validate_stages(value['ancestry'],value['root_artifact'],s)
+                    packages[f'{s}/{seed}/{arm}']=dict(path=str(p.relative_to(REPO)),identity=value['identity'],files=value['files'],ancestry=value['ancestry'])
+    freeze=read(WORK/'freeze/public_summary.json') if (WORK/'freeze/public_summary.json').exists() else dict(status='pending',reason='Every retained model and complete target prediction must be frozen before target scoring')
+    write(RESULTS/'prediction_manifest.json',freeze)
+    cold=read(WORK/'cold/receipt.json') if (WORK/'cold/receipt.json').exists() else dict(status='pending')
+    checks=read(WORK/'checks/runtime.json') if (WORK/'checks/runtime.json').exists() else dict(status='unrecorded',count=None)
+    validation=dict(status='complete' if cold['status']=='passed' else 'partial',runtime_tests=checks,planning_contract_tests=37,
+        tests_are_not_model_results=True,production_resume=read(RESULTS/'production_resume.json'),
+        crop_parity=read(RESULTS/'crop_parity.json'),cold=cold,
+        read_guard_limit='Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.')
+    if (WORK/'cold_source_proof/receipt.json').exists():validation['source_cold_proof']=read(WORK/'cold_source_proof/receipt.json')
+    write(RESULTS/'validation.json',public(validation))
+    write(RESULTS/'exposure_manifest.json',dict(exposure_class='source_isolated_reused_embryos',
+        pristine_independent_generalization=False,seeds_are_not_new_animals=True,source_calibration_acquisition_independence_proven=False,
+        historical_target_inspection=read(RESULTS/'reconciliation.json')['prior_target_exposure'],
+        v11_target_metric_receipts=len(details),target_metrics_opened=bool(details),prediction_freeze_identity=freeze.get('identity'),
+        qualified_packages=packages,unqualified_v10_weights_loaded=False,new_external_data_used=False))
+    trained=all(c['upstream']['status']=='trained' and c['compact']['status']=='trained' and c['linear']['status']=='fitted' for c in tr['cells'])
+    scored=all(r['status']=='scored' for r in pooled+directional)
+    frozen=freeze['status']=='frozen';cold_pass=cold['status']=='passed';provenance=len(packages)==12
+    complete=trained and scored and frozen and cold_pass and provenance
+    active=[]
+    for p in (WORK/'controller').glob('*.json'):
+        r=read(p)
+        for key in ('controller_pid','worker_pid'):
+            if alive(r.get(key)):active.append(dict(role=p.stem+'/'+key,pid=r[key]))
+    blocked=[]
+    for p in (WORK/'controller/jobs').glob('*.json'):
+        r=read(p)
+        if r.get('status') in ('failed','blocked'):blocked.append({k:r.get(k) for k in ('stage','source','seed','arm','clip','status','exit_code','log_sha256')})
+    for p in (WORK/'blocked_cells').glob('*.json'):blocked.append(read(p))
+    command='PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11'
+    milestone=all(r['status']=='scored' and r['score']>=.95 for r in pooled if r['arm']=='C11')
+    strong=all(r['status']=='scored' and r['score']>=.95 for r in directional if r['arm']=='C11')
+    base_by_cell={(r['source'],r['seed']):r for r in directional if r['arm']=='C00'}
+    beneficial=any(r['status']=='scored' and base_by_cell[r['source'],r['seed']]['status']=='scored' and r.get('accepted_actions',0)>0 and
+        (r.get('newly_recovered_division_tp',0)>0 or r['edge_tp']>base_by_cell[r['source'],r['seed']]['edge_tp'] or
+         r['edge_fp']<base_by_cell[r['source'],r['seed']]['edge_fp']) for r in directional if r['arm']=='C11')
+    promising=complete and all(r['delta_C01']>=.002 for r in pooled if r['arm']=='C11') and all(r['delta_C01']>=-.001 and r['delta_C00']>=-.001 for r in directional if r['arm']=='C11') and beneficial
+    status=dict(status='complete' if complete else 'running' if active else 'blocked' if blocked else 'partial',updated_utc=now(),
+        trained=trained,scored=scored,clean_provenance_passed=provenance,target_freeze_passed=frozen,all_four_cells_complete=complete,
+        cold_inference_passed=cold_pass,upstream_reused_cells=[],blocked_stages=blocked,verified_active_processes=active,
+        upstream_completed_cells=sum(c['upstream']['status']=='trained' for c in tr['cells']),compact_completed_cells=sum(c['compact']['status']=='trained' for c in tr['cells']),
+        completed_score_rows=sum(r['status']=='scored' for r in per_clip),required_score_rows=len(per_clip),
+        pooled_095_milestone_reached=milestone,strong_095_milestone_reached=strong,compact_promotion_gate_passed=promising,
+        execution_lock_identity=lock['identity'],next_command=command+(' report' if active or complete else ' run --workers 3'),
+        resume_command_when_no_existing_owner=command+' run --workers 3',
+        resume_proof='Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.',
+        artifacts=dict(training='training_summary.json',predictions='prediction_manifest.json',resources='resource.json',exposure='exposure_manifest.json'),
+        P0_modified=False,submitted_to_kaggle=False,weights_published=False)
+    write(RESULTS/'STATUS.json',public(status))
+    lines=[f'# Division reliability v11 — {status["status"]}',
+        '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
+        '',f'The immutable schedule is U={lock["upstream_updates"]:,} and E={lock["event_updates"]:,} for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.',
+        '', 'The local v10 work was preserved. Neither completed nor partial v10 weights qualified for reuse because the matching trainer source and recursive ancestry were unavailable. Every retained v11 neural component starts randomly. P0 and the two pre-existing user-modified public946 reports remain unchanged.',
+        '', 'Both embryos have historical research exposure. The claim is source_isolated_reused_embryos, not pristine independent generalization. Multiple seeds do not add embryos; calibration clips are not proven acquisition-independent. The original grouped split was retained. One persisted division event occurs in two source44 fit clips and receives one event unit across both.',
+        '', 'C01/C11 independently edit their own C00 graph. Unknown legal forks remain in deployment denominators and do not become negative biological labels. Source safety and no-op outcomes are reported separately. CSV coordinates and IDs, full populations, official empty-division behavior and the pinned scorer are used; clip scores are never averaged.',
+        '', 'The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.',
+        '',f'New v11 GPU lease accounting: {res["new_study_gpu_lease_hours"]:.4f} hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: {res["inherited_hours"]:.4f} hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.',
+        '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Label-guided witness edits bypassed the global 2% cap and are local legal diagnostics only, not achievable policy scores. Runtime tests and planning contracts are not evidence of trained accuracy.',
+        '']
+    available=[r for r in pooled if r['status']=='scored']
+    if available:
+        for r in available:
+            deltas=', '.join(f'Δ{a} {r["delta_"+a]:+.6f}' for a in ('C00','C01') if r.get('delta_'+a) is not None)
+            lines.append(f'- Seed {r["seed"]}, {r["arm"]}: pooled score {r["score"]:.6f}; {deltas}.')
+    for r in directional:
+        if r['status']=='scored':
+            deltas=', '.join(f'Δ{a} {r["delta_"+a]:+.6f}' for a in ('C00','C01') if r.get('delta_'+a) is not None)
+            lines.append(f'- Source {r["source"]} → target {r["target"]}, seed {r["seed"]}, {r["arm"]}: {r["score"]:.6f}; {deltas}; {r["clips_scored"]} complete clips.')
+    if scored:
+        lines += ['',f'The pooled 0.95 milestone is {"reached" if milestone else "not reached"}; the per-embryo/both-seed milestone is {"reached" if strong else "not reached"}. The compact promotion gate is {"passed" if promising else "not passed"}. These are local measurements, not a public/private leaderboard guarantee.']
+    else:lines += ['Comparisons for unfinished arms/populations remain unmeasured. Available complete-population scores are retained; missing comparisons are blank with a reason in the three score CSVs. No 0.95 milestone is claimed from an incomplete matrix.']
+    lines += ['',f'Global target freeze: {frozen}. Complete cold validation: {cold_pass}. Clean provenance for all twelve packages: {provenance}.',
+        '', 'Resume from the repository root after verifying no existing controller owns the study:', '', '```sh',command+' run --workers 3','```',
+        '', 'While a controller is active, use the same command with `report` in place of `run --workers 3` to refresh STATUS. Cell owner locks prevent duplicate training. Durable checkpoint paths, SHA-256 hashes, exact saved update counts, and optimizer/RNG availability are in training_summary.json. Each stage uses atomic output receipts and can be invoked individually with `--source`, `--seed`, and the relevant arm/clip/partition.',
+        '', 'The resume proof is a fresh-process 10+10 versus uninterrupted 20-update comparison across source cells, including the transition into proposal queries. Compact mixed-objective replay is also bit exact. A CUDA lazy-initialization RNG reset found during testing was repaired before the lock; failed attempts remain private. Max-pool backward carries a PyTorch determinism warning, so claims of exactness are limited to the tested executions and cold results.',
+        '', 'Current next decision: '+('Review measured C01/C11 deltas, cold validation and error attribution before proposing any new experiment. P0 stays unchanged.' if complete else 'Finish the locked matrix using the existing owners/checkpoints; do not select a new model from partial source or target outcomes.'),
+        '', 'No merge, Kaggle submission, weight publication, all-data refit or unrelated handover study was launched.']
+    if blocked:lines += ['',f'{len(blocked)} unresolved stage failure/blocker receipt(s) are listed in STATUS.json; missing metrics have not been replaced by C00 or P0 values.']
+    (RESULTS/'REPORT_BACK.md').write_text('\n'.join(lines)+'\n')
+    return status

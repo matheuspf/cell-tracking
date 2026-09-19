@@ -1,0 +1,175 @@
+{
+  "changes": {
+    "__main__.py": {
+      "current": "2eed78a2cadf58810d1fad9c3788dfdd52e2d34af2881db8c46482b02b9f700e",
+      "lock_snapshot": "f2feedd1ad3451053bb803f302ddba7452e990abbdf1803f091b41fd6906bda5"
+    },
+    "calibrate.py": {
+      "current": "82d85a6bc9de93b33ff0bfd7aeefd3584f277fa98661ac0bbb92530fab7b6962",
+      "lock_snapshot": "b3c0f0ac8953f6484efa9bb2fc0b7ce5e61de92a251d9717d4e61aa0e0c0e78a"
+    },
+    "calibration_cache.py": {
+      "current": "646cc3b086e604700a070e85d3aec0f93c7b46960f68f03fc1d5c1a4e890aed9",
+      "lock_snapshot": null
+    },
+    "cold.py": {
+      "current": "f7b62a1b4d8f0b6ed8cdd74bdbbc3ada8c2831781a9afcb9f578e98bbb6cd4dc",
+      "lock_snapshot": null
+    },
+    "controller.py": {
+      "current": "efb8cdac19cb52a263c4005f658516fa7651773b88f1cee5c2430433fb3e3901",
+      "lock_snapshot": null
+    },
+    "dataset.py": {
+      "current": "4dcb8771d59763f03d4324407d65594f4c6779423737d40bc532f27d2d3b3e27",
+      "lock_snapshot": "53006f95a0277e5b98cc8e668dd9b2a8da53434cf3c29a5b962f1a3884980685"
+    },
+    "diagnostics.py": {
+      "current": "278d3b8a22095c3cc86c32c70eed0cc1bf6f9376b0877536ee6d5814e43a0c1b",
+      "lock_snapshot": null
+    },
+    "evaluation.py": {
+      "current": "bb70f1037afa0581ab82121417ea3ccd23c90733552e467c5ac042d83dbde765",
+      "lock_snapshot": "79324364ea38ef0714ffc8b4a06315f035ca85552e7e19d3e0086ef3157468fa"
+    },
+    "fit_linear.py": {
+      "current": "dffd1dc457ef614b32b586060889a49a7caaa4a79944127efb58505baf74b7c2",
+      "lock_snapshot": "e376e48137b20bfdda5c7013dcec3b5fb74f524fe841da2b40fc20ea7afb64d5"
+    },
+    "freeze.py": {
+      "current": "19c334095ad3306afa4e84a37dddcd11131ba78599c14d75db0c6f6adcbdcc54",
+      "lock_snapshot": "e4e617980e65a20960c099a1bff9a0b2e206894e55fb9bfae625603db73362cc"
+    },
+    "inference.py": {
+      "current": "e13fe2102021a587324a8159db4b7ec2e183ed3f2ef19b6bb2858d25ba4113e2",
+      "lock_snapshot": "fc85bdc662738deb58dd6a84cf6dc123d95c79f7021488b19a217faf10754cff"
+    },
+    "mask_audit.py": {
+      "current": "4a4e06ddaa8928ee76a5f5a5db0dd9beb4c55b4738eb4fc94ba1d6a6e9e1d3de",
+      "lock_snapshot": null
+    },
+    "mining.py": {
+      "current": "353517472117428d1cb4e6e72ee700d5e962411670f85417213f862ff6afa691",
+      "lock_snapshot": null
+    },
+    "packaging.py": {
+      "current": "7b9d37e373ad4617c0d85dcc7f4569140f1a2070e655df3cc22451430705d704",
+      "lock_snapshot": "72b8f357a477e5ca5a01114f78a926d6424b63885acd73c8360bcb15ee2d6e67"
+    },
+    "policy.py": {
+      "current": "b3a6b1d59c3b68b593df2ad5584feddd39d694a7421c5112dc1208f770365397",
+      "lock_snapshot": "a40f7405acb0752e8247486668033b54a2b4dfd78fe9f205073ede368b0cfd39"
+    },
+    "policy_proof.py": {
+      "current": "2663c3d4725963a3543d2c44f7933094663280ca74037b6500eb70796ca707e0",
+      "lock_snapshot": null
+    },
+    "populations.py": {
+      "current": "21ca09aba9d25d7063771a2f1a9c79bf114ef1eedf09ce0b443ddfe21be46333",
+      "lock_snapshot": null
+    },
+    "readiness.py": {
+      "current": "a906c54d27c58a815c05311426abc1179b687e6e72cc68b729d92a3bd19f02fc",
+      "lock_snapshot": "c72d45ca142efceb36ff26753abd9896baeee865f2c37b3ed8328aba8b8960c5"
+    },
+    "reconcile.py": {
+      "current": "42baf675401923d593e4e9ec51ac57ae270efde462be14b40ebab1c5b3dfa23d",
+      "lock_snapshot": "232866f9676b87555a1792b111f3bbf860258ea8dd720cfd9720bca1223cab87"
+    },
+    "report.py": {
+      "current": "f69471a36f9b8f20ad2a2c719ccb666cbc57cd7959663a7f582d2df49f7a1620",
+      "lock_snapshot": null
+    },
+    "retention.py": {
+      "current": "fd02cbe4983b42f894351ce14766734c9c7aaba8bfecbbe7f853a5ba30580ec2",
+      "lock_snapshot": null
+    },
+    "stage_provenance.py": {
+      "current": "9ff7350adae59be92788417b6d59cef3ba6393ff9485735256f6ec6ab79d18e9",
+      "lock_snapshot": null
+    },
+    "test_execution.py": {
+      "current": "e29d07eadb052c40e924d5e304e7d7e8d1a99ec1c4bcae57334fb6d989812271",
+      "lock_snapshot": "d6588c07b45c24e69fdb3a77c1c5bda8e4ed715a1edd3e5728ca65ba64de0369"
+    },
+    "train_compact.py": {
+      "current": "95a25e87c93f837bbde59494deeebc8da07778a7b13a68cb736061d4739c4834",
+      "lock_snapshot": "22ea38329c74bb8dd2ae49553bfd87648d79d8f292d9ac4cc9b61af0cd214df9"
+    },
+    "upstream_queue.py": {
+      "current": "a677e81c74d606b06cfa3b9d5a271a80d7f362a317829502e3eb1c880a88def9",
+      "lock_snapshot": null
+    }
+  },
+  "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+  "integration_scope": [
+    "Fresh-process stage orchestration, bounded CPU concurrency and duplicate-owner checks",
+    "Immutable midpoint mining jobs and source-calibration score caching with full legal denominators and exact utility parity",
+    "Recursive provenance of source banks, normalization, midpoint mining and calibration caches",
+    "Global retention/freeze, post-freeze attribution and renamed complete cold validation",
+    "Complete mask diagnostics and sanitized report generation",
+    "Nonfinite score rejection, all-frame input validation on inference resume, and explicit blocker accounting"
+  ],
+  "numerical_models_and_sampling_unchanged": [
+    "Upstream model/loss/query sampler/schedule",
+    "C01 fixed L2 objective",
+    "C11 model/mixed objective/event-unit sampler/augmentation",
+    "Legal action enumeration and deployment utility"
+  ],
+  "production_head_fits_started": 0,
+  "recorded_utc": "2026-09-19T22:38:56.036928+00:00",
+  "scientific_recipe_unchanged": true,
+  "source_fit_cell_44b6_20260918_is_active": true,
+  "status": "integrated_before_production_head_fitting",
+  "target_scores_opened": false,
+  "upstream_core_unchanged": true,
+  "validation": {
+    "duplicate_owner": {
+      "exit_code": 2,
+      "finished_utc": "2026-09-19T22:37:53.544735+00:00",
+      "new_worker_launched": false,
+      "status": "passed",
+      "verified_live_controller": 499698
+    },
+    "runtime": {
+      "count": 16,
+      "exit_code": 0,
+      "finished_utc": "2026-09-19T22:34:02.392182+00:00",
+      "source_resume_proof": "see pilot receipts",
+      "status": "unit_tests_passed",
+      "tests_are_not_model_results": true
+    },
+    "source_cold_proof": {
+      "accounting": "Charged conservatively to inference/cold allocation, not exempted",
+      "compared_csv_rows": 278060,
+      "complete_frames": 100,
+      "csv_exact_after_dataset_rename": true,
+      "edges": 0,
+      "gpu_lease_seconds": 40.922982356982175,
+      "graph_exact": true,
+      "guards": [
+        {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
+        {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        }
+      ],
+      "inference_implementation_sha256": "0b9552502d00baf2fd5a904fcc9ae5b5f63d463ecd58469eaeba777f43169197",
+      "nodes": 278060,
+      "original_csv_sha256": "745ec4a13b212ff4c5931070e8697ace3dc6c969db7eb5c3959faa695e1dc855",
+      "raw_frame_hashes_exact": true,
+      "renamed_csv_sha256": "d4506154c4a3f32f2a025d165d0b82090d7376daab03fc6028e99900bc556ce9",
+      "source_only": true,
+      "status": "passed",
+      "target_cold_proof": false
+    },
+    "source_cold_resume_input_check": true
+  }
+}

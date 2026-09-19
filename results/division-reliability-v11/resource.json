@@ -1,0 +1,228 @@
+{
+  "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
+  "cpu_job_resource_samples": 0,
+  "current_durable_free_bytes": 212636172288,
+  "hardware": {
+    "cpu": "AMD Ryzen 9 7950X3D",
+    "gpu": "NVIDIA RTX 4090",
+    "gpu_memory_gib": 24
+  },
+  "hours_by_stage": {
+    "cold": 0.005678152065273328,
+    "inference": 0.005689343033888387,
+    "pilot": 0.045588012047780166,
+    "upstream": 0.9384241343280413
+  },
+  "inherited_hours": 19.307391920998594,
+  "inherited_lifetime": {
+    "by_label": {
+      "engineering-FP32-encoder-parity/44b6": 0.6491233550004836,
+      "engineering-cold/44b6": 10.287414777001686,
+      "engineering-event-resume/clean/44b6/N": 2.7201793800013547,
+      "engineering-event-resume/clean/6bba/N": 1.2831410710023192,
+      "engineering-event-resume/operational/44b6/N": 8.952801862000342,
+      "engineering-event-resume/operational/44b6/R": 9.08871329700196,
+      "engineering-event-resume/operational/6bba/N": 13.90385822999815,
+      "engineering-event-resume/operational/6bba/R": 13.68825740900138,
+      "engineering-mining/clean/44b6/N": 31.866216147998784,
+      "engineering-mining/clean/6bba/N": 6.598976435001532,
+      "engineering-mining/operational/44b6/N": 40.217497857000126,
+      "engineering-mining/operational/44b6/R": 39.8197393670016,
+      "engineering-mining/operational/6bba/N": 59.832788441002776,
+      "engineering-mining/operational/6bba/R": 63.34451816099681,
+      "engineering-overfit/44b6": 62.88325295699906,
+      "engineering-overfit/6bba": 65.96698891700362,
+      "event-census/clean/44b6/20260918/44b6_0b24845f": 0.35164936799992574,
+      "event-census/clean/44b6/20260918/44b6_0db75fae": 0.3656982030006475,
+      "event-census/clean/44b6/20260918/44b6_12dfb391": 0.42139668600066216,
+      "event-census/clean/6bba/20260918/6bba_062c8d37": 0.3744336839990865,
+      "event-census/clean/6bba/20260918/6bba_57b7cc1e": 0.4241385330024059,
+      "event-census/clean/6bba/20260918/6bba_ab78413d": 0.3753239770012442,
+      "event-census/operational/44b6/20260918/44b6_12dfb391": 11.239252657996985,
+      "event-census/operational/6bba/20260918/6bba_05db0fb1": 20.805758187998435,
+      "events/clean/44b6/20260918/N": 31.98747700899912,
+      "events/clean/6bba/20260918/N": 8.338399415002641,
+      "events/operational/44b6/20260918/N": 30.397647275000054,
+      "events/operational/44b6/20260918/R": 30.763137689998985,
+      "events/operational/6bba/20260918/N": 38.53777465600069,
+      "events/operational/6bba/20260918/R": 36.2316862589978,
+      "interruption-upper-bound/6bba/20260918": 30313.280971,
+      "interruption-upper-bound/6bba/314159": 0.607512,
+      "pilot/44b6/20260918": 1342.6133923089983,
+      "pilot/6bba/20260918": 1410.2238751699988,
+      "predict/44b6/20260918/44b6_0b24845f": 5.66404058000262,
+      "predict/44b6/20260918/44b6_0db75fae": 17.64627597999788,
+      "predict/44b6/20260918/44b6_12dfb391": 24.2869601420025,
+      "predict/6bba/20260918/6bba_05db0fb1": 16.8784658700024,
+      "predict/6bba/20260918/6bba_062c8d37": 5.874042501000076,
+      "predict/6bba/20260918/6bba_57b7cc1e": 6.179531529000087,
+      "predict/6bba/20260918/6bba_ab78413d": 14.916846924003039,
+      "profile-head-parity/clean/44b6/N": 4.100707346002309,
+      "profile-head-parity/clean/6bba/N": 3.020026892001624,
+      "profile-head-parity/operational/44b6/N": 7.755210657000134,
+      "profile-head-parity/operational/44b6/R": 7.555288507999649,
+      "profile-head-parity/operational/6bba/N": 12.64539908200095,
+      "profile-head-parity/operational/6bba/R": 13.039381914000842,
+      "upstream/44b6/20260918": 14598.436119279966,
+      "upstream/44b6/314159": 14587.77255534997,
+      "upstream/6bba/20260918": 6321.154641303986,
+      "upstream/6bba/314159": 151.2424299920001
+    },
+    "charged_seconds": 69506.61091559494,
+    "receipts": 289,
+    "scope": "Canonical historical resource receipts including interruption supplemental bounds; not v11 compute",
+    "status_counts": {
+      "complete": 275,
+      "conservative_upper_bound": 3,
+      "failed": 8,
+      "leased": 3
+    }
+  },
+  "lease_count": 4820,
+  "lease_status_counts": {
+    "complete": 4820
+  },
+  "lifetime_v10_plus_v11_conservative_hours": 20.969040990266357,
+  "limits": {
+    "checkpoint_every_minutes": 5,
+    "checkpoint_every_updates": 250,
+    "device_free_min_gib": 2,
+    "durable_free_min_gib": 10,
+    "gpu_lease_hours": 72,
+    "host_available_min_gib": 10,
+    "inference_reserve_hours": 16,
+    "initial_allocations_hours": {
+      "event_mining": 18,
+      "inference_cold": 16,
+      "pilot": 4,
+      "upstream": 34
+    },
+    "lease_seconds_max": 60,
+    "projection_multiplier": 1.25,
+    "study_rss_limit_gib": 44,
+    "total_device_limit_gib": 20
+  },
+  "maximum_lease_seconds": 1.9124937489996228,
+  "new_study_gpu_lease_hours": 1.6616490692677661,
+  "new_study_measured_journal_hours": 0.9953796414749831,
+  "pre_journal_accounting": {
+    "conservative_gpu_lease_seconds": 2398.569940054019,
+    "records": [
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/44b6/20260918/receipt.json",
+        "seconds": 7.455832082999223
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/44b6/20260918/attempts/1789845408794506241.json",
+        "seconds": 7.8047759680002855
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/44b6/20260918/attempts/1789845349447135794.json",
+        "seconds": 5.5399263559993415
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/44b6/20260918/attempts/1789845322733018027.json",
+        "seconds": 4.565873802000169
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/44b6/20260918/attempts/1789845476824301788.json",
+        "seconds": 7.357679087000179
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "pilot/6bba/20260918/receipt.json",
+        "seconds": 10.02795564400003
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "overfit/44b6/20260918/receipt.json",
+        "seconds": 614.1222524640007
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "overfit/44b6/20260918/attempts/1789846906687635398/receipt.json",
+        "seconds": 177.10686803299996
+      },
+      {
+        "accounting": "wall upper bound",
+        "path": "overfit/6bba/20260918/receipt.json",
+        "seconds": 163.87281055600033
+      },
+      {
+        "accounting": "measured GPU lease",
+        "path": "source_inference/44b6/20260918/44b6_0113de3b/receipt.json",
+        "seconds": 3.3431089940004313
+      },
+      {
+        "accounting": "measured GPU lease",
+        "path": "source_inference-overfit/44b6/20260918/44b6_12dfb391/receipt.json",
+        "seconds": 34.044976300009694
+      },
+      {
+        "accounting": "measured GPU lease",
+        "path": "source_inference-overfit/6bba/20260918/6bba_05db0fb1/receipt.json",
+        "seconds": 23.079787024001234
+      },
+      {
+        "accounting": "measured GPU lease",
+        "path": "event_profile/44b6/20260918/receipt.json",
+        "seconds": 1.4519737309992706
+      },
+      {
+        "accounting": "measured GPU lease",
+        "path": "event_profile/6bba/20260918/receipt.json",
+        "seconds": 1.057395823000661
+      },
+      {
+        "accounting": "measured update GPU leases",
+        "path": "resume_proof/6bba/314159/resumed/history.jsonl",
+        "seconds": 35.044335843000226
+      },
+      {
+        "accounting": "measured update GPU leases",
+        "path": "resume_proof/6bba/314159/continuous/history.jsonl",
+        "seconds": 34.854185573001814
+      },
+      {
+        "accounting": "measured update GPU leases",
+        "path": "resume_proof/6bba/314159/attempts/1789848129861014307/history.jsonl",
+        "seconds": 1.1980856840000342
+      },
+      {
+        "accounting": "measured update GPU leases",
+        "path": "resume_proof/6bba/314159/attempts/1789848437928319986/resumed/history.jsonl",
+        "seconds": 35.29334729900347
+      },
+      {
+        "accounting": "measured update GPU leases",
+        "path": "resume_proof/6bba/314159/attempts/1789848437928319986/continuous/history.jsonl",
+        "seconds": 31.348769790001825
+      },
+      {
+        "accounting": "conservative upper allowance",
+        "path": "unreceipted engineering overhead reserve",
+        "seconds": 1200
+      }
+    ]
+  },
+  "pre_journal_conservative_charge_hours": 0.666269427792783,
+  "reserve_hours": 16,
+  "sampled_maxima": {
+    "peak_allocated_bytes": 7324696064,
+    "peak_reserved_bytes": 8980004864,
+    "rss_peak_bytes": 19219484672,
+    "total_device_peak_bytes": 10555424768
+  },
+  "sampled_minima": {
+    "device_free_min_bytes": 14757855232,
+    "host_available_min_bytes": 48869744640
+  },
+  "study_cpu_rss_peak_bytes": null,
+  "study_host_available_min_bytes": null,
+  "updated_utc": "2026-09-19T22:37:54.293754+00:00"
+}

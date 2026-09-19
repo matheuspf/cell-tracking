@@ -1,0 +1,165 @@
+{
+  "cold": {
+    "status": "pending"
+  },
+  "crop_parity": {
+    "sources": [
+      {
+        "checks": [
+          {
+            "masks_exact": true,
+            "node_id": 207,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 3551,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 214066,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 217552,
+            "pixels_exact": true
+          }
+        ],
+        "source": "44b6"
+      },
+      {
+        "checks": [
+          {
+            "masks_exact": true,
+            "node_id": 2057,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 5238,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 75129,
+            "pixels_exact": true
+          },
+          {
+            "masks_exact": true,
+            "node_id": 78416,
+            "pixels_exact": true
+          }
+        ],
+        "source": "6bba"
+      }
+    ],
+    "status": "passed"
+  },
+  "planning_contract_tests": 37,
+  "production_resume": {
+    "interruption_after": 10,
+    "production_training": false,
+    "proofs": [
+      {
+        "checkpoint_hashes": {
+          "continuous": "4d9da63a0c263eadc282e185c20aa4331a779cc01bc89b95ae80a96947e3e0bf",
+          "resumed": "c2a21d993b38280f74be0cf0db9bf6746e7b8bef1d04f8014ba1682c8d6c7710"
+        },
+        "checks": {
+          "cpu_rng": true,
+          "cuda_rng": true,
+          "loss_sampling_exact": true,
+          "model": true,
+          "optimizer": true,
+          "python_rng": true,
+          "sampler": true
+        },
+        "seed": 20260918,
+        "source": "44b6",
+        "updates": 20
+      },
+      {
+        "checkpoint_hashes": {
+          "continuous": "fd7fc47ec89a05023b0ac7c1af6d87cf2b1eab7f42ca5846b74e452ab603bca6",
+          "resumed": "031447b3178860c337f42e0e484760db7ae08ec031bf018d1219e9be99425029"
+        },
+        "checks": {
+          "cpu_rng": true,
+          "cuda_rng": true,
+          "loss_sampling_exact": true,
+          "model": true,
+          "optimizer": true,
+          "python_rng": true,
+          "sampler": true
+        },
+        "seed": 314159,
+        "source": "44b6",
+        "updates": 20
+      },
+      {
+        "checkpoint_hashes": {
+          "continuous": "9b55b21012ec710b39ce05200a6a4d504700a40bdcdf71514ea7de6d578e6c49",
+          "resumed": "7bdcc8c3659f3432492c21c80abce3cff18369ccdeb79d844d093aba3dd47153"
+        },
+        "checks": {
+          "cpu_rng": true,
+          "cuda_rng": true,
+          "loss_sampling_exact": true,
+          "model": true,
+          "optimizer": true,
+          "python_rng": true,
+          "sampler": true
+        },
+        "seed": 314159,
+        "source": "6bba",
+        "updates": 20
+      }
+    ],
+    "status": "passed",
+    "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
+  },
+  "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
+  "runtime_tests": {
+    "count": 16,
+    "exit_code": 0,
+    "finished_utc": "2026-09-19T22:34:02.392182+00:00",
+    "source_resume_proof": "see pilot receipts",
+    "status": "unit_tests_passed",
+    "tests_are_not_model_results": true
+  },
+  "source_cold_proof": {
+    "accounting": "Charged conservatively to inference/cold allocation, not exempted",
+    "compared_csv_rows": 278060,
+    "complete_frames": 100,
+    "csv_exact_after_dataset_rename": true,
+    "edges": 0,
+    "gpu_lease_seconds": 40.922982356982175,
+    "graph_exact": true,
+    "guards": [
+      {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      }
+    ],
+    "inference_implementation_sha256": "0b9552502d00baf2fd5a904fcc9ae5b5f63d463ecd58469eaeba777f43169197",
+    "nodes": 278060,
+    "original_csv_sha256": "745ec4a13b212ff4c5931070e8697ace3dc6c969db7eb5c3959faa695e1dc855",
+    "raw_frame_hashes_exact": true,
+    "renamed_csv_sha256": "d4506154c4a3f32f2a025d165d0b82090d7376daab03fc6028e99900bc556ce9",
+    "source_only": true,
+    "status": "passed",
+    "target_cold_proof": false
+  },
+  "status": "partial",
+  "tests_are_not_model_results": true
+}

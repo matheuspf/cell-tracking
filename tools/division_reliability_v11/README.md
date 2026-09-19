@@ -1,0 +1,71 @@
+# Local v11 execution
+
+Run only on `handover/division-reliability-v11-ready`. The scientific contract is
+`handover/division-reliability-v11/study.json`; `results/division-reliability-v11/execution_lock.json`
+records the measured selection of U=8000 and E=4000. Historical v10 checkpoints
+are preserved and excluded from model ancestry.
+
+From the repository root, use the already prepared environment:
+
+```sh
+export PYTHONNOUSERSITE=1
+export PYTHONPATH=tools:.
+export CUBLAS_WORKSPACE_CONFIG=:4096:8
+study_python=/kaggle/envs/cell-tracking-annotation-selection-v1/bin/python
+"$study_python" -m division_reliability_v11 report
+```
+
+`report` checks process identities through `/proc`, reads durable checkpoint
+state, and refreshes sanitized results. Its timestamps alone do not prove that
+training is running. Private stage logs, checkpoints, complete predictions and
+telemetry are under `work/division-reliability-v11/`.
+
+When no existing pipeline controller is running, resume the dependency queue:
+
+```sh
+"$study_python" -m division_reliability_v11 run --workers 3
+```
+
+The queue joins an existing upstream worker when one owns the study. Cell locks
+and a controller lock reject duplicate execution. An optional upstream-only
+queue is already in use for this execution; do not start another copy. If it
+stops, the pipeline can resume remaining upstream cells itself.
+
+Each upstream update is random full-source sampling. Durable state contains the
+optimizer, learning-rate step, Python/NumPy/CPU/CUDA RNG, and sampler state.
+Checkpoints occur every 250 updates or five minutes and at phase boundaries.
+On restart, uncommitted history rows are archived before replay. Final weights
+are retained only after the registered horizon. Fresh-process 10+10 versus 20
+update proofs and compact mixed-objective replay are recorded in the results.
+
+C11 pauses at its registered midpoint. Independent source-fit mining workers
+read one immutable midpoint snapshot; their completed clip receipts can be
+reused only with identical parents. The merged pool is consumed once on resume.
+Source-calibration score caches likewise retain complete legal denominators and
+verify their parent hashes. A fitted head cannot read calibration data.
+
+Target prediction stays locked until every registered cell is a retained package
+or has an explicit scientific blocker. All retained target predictions freeze
+together before target labels are opened. Missing arms remain null; a calibrated
+disabled policy remains a separately labeled measured no-op. Cold validation
+uses renamed complete clips, starts from images, and forbids the C00 cache.
+
+Useful checks and explicit stage entry points:
+
+```sh
+"$study_python" -m division_reliability_v11 validate
+"$study_python" handover/division-reliability-v11/check_plan.py
+"$study_python" -m division_reliability_v11 --help
+```
+
+The CLI's `--updates` option is for diagnostic overfit only. Production horizons
+come from the immutable lock. Do not rerun diagnostic pilots over their existing
+receipt directories, change the locked upstream core, or select a new recipe
+from target outcomes. Preserve failed receipts when repairing an implementation
+error with the same scientific recipe.
+
+The runtime is `/kaggle/envs/cell-tracking-annotation-selection-v1`, because the
+inspection-only Conda environment lacks the required training dependencies.
+Dependency versions, the architecture source hashes, original references and
+the pinned official scorer are recorded in the lock. This is local execution;
+compatibility with a future Kaggle notebook runtime is not yet established.

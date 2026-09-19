@@ -1,0 +1,55 @@
+{
+  "sources": [
+    {
+      "checks": [
+        {
+          "masks_exact": true,
+          "node_id": 207,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 3551,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 214066,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 217552,
+          "pixels_exact": true
+        }
+      ],
+      "source": "44b6"
+    },
+    {
+      "checks": [
+        {
+          "masks_exact": true,
+          "node_id": 2057,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 5238,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 75129,
+          "pixels_exact": true
+        },
+        {
+          "masks_exact": true,
+          "node_id": 78416,
+          "pixels_exact": true
+        }
+      ],
+      "source": "6bba"
+    }
+  ],
+  "status": "passed"
+}
