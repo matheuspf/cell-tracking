@@ -15,7 +15,7 @@
       "source": "44b6",
       "target": "6bba",
       "upstream": {
-        "charged_gpu_lease_seconds": 3378.3268835809486,
+        "charged_gpu_lease_seconds": 5471.174132388869,
         "history_summary": {
           "first": {
             "association": 0.6772076487541199,
@@ -25,44 +25,47 @@
             "step": 1
           },
           "full_history_committed": false,
-          "history_sha256": "4f1cb77adf9e05728af7e7938c7766a8e9faa0b557294c9c57a46e472275ada6",
+          "group_selection_probability_range": null,
+          "history_sha256": "2b1dc1a879b7ef8c995bfa8e17b79c6de84d2043ca9318992e56cfb9498ae5a4",
           "last": {
-            "association": 0.0036643650382757187,
-            "detection": 0.6341749429702759,
-            "loss": 0.6378393173217773,
-            "lr": 5.745435282942146e-05,
-            "step": 3859
+            "association": 0.03186428174376488,
+            "detection": 0.6205111145973206,
+            "loss": 0.6523754000663757,
+            "lr": 1.7322317724835073e-05,
+            "step": 5977
           },
-          "proposal_incoming_groups": 64328,
-          "query_fallback_batches": 10029,
-          "recorded_updates": 3859,
-          "supervised_incoming_groups": 84866,
+          "observation_cache_peak_bytes": 0,
+          "proposal_incoming_groups": 112404,
+          "query_fallback_batches": 11911,
+          "recorded_updates": 5977,
+          "supervised_incoming_groups": 133149,
           "totals": {
-            "gpu_lease_seconds": 3378.3268835809486,
-            "input_seconds": 18.27262505409999
+            "gpu_lease_seconds": 5471.174132388869,
+            "input_seconds": 28.759631509115934
           },
+          "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
         },
         "horizon": 8000,
         "pid": 417791,
         "process_verified_alive": true,
         "resume": {
-          "durable_step": 3800,
+          "durable_step": 5789,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/20260918/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 3800
+            "one_based_step": 5789
           },
           "seed": 20260918,
-          "sha256": "48c26d31d98cd18369351c5e2ac9e5dd36111df92635b8c67159dc841853cba5",
+          "sha256": "6eff1d91c2db82f3dafafbdb15772b94e03485311c8e02b0a65ae96a79a54df2",
           "source": "44b6"
         },
         "status": "running",
-        "step": 3859,
-        "updated_utc": "2026-09-19T22:37:53.356861+00:00"
+        "step": 5977,
+        "updated_utc": "2026-09-19T23:18:41.470743+00:00"
       }
     },
     {

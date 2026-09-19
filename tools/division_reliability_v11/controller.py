@@ -1,6 +1,7 @@
 """Resumable study dependency queue. Every data/model worker is a fresh process."""
 from pathlib import Path
 import concurrent.futures as futures
+from collections import deque
 import fcntl,os,subprocess,sys,time,threading
 from .common import REPO,WORK,RESULTS,Blocked,read,write,sha,now
 from .populations import clips
@@ -32,7 +33,7 @@ def worker(stage,source=None,seed=None,arm=None,clip=None,part=None):
         write(folder/(name+'.json'),dict(status='running',stage=stage,source=source,seed=seed,arm=arm,clip=clip,part=part,
             pid=process.pid,started_utc=now(),command=args))
         import psutil
-        violation=None;peak_rss=0;minimum_available=None;minimum_free=None
+        violation=None;peak_rss=0;worker_peak_rss=0;minimum_available=None;minimum_free=None
         while process.poll() is None:
             members=[]
             for p in psutil.process_iter(['pid','cmdline','memory_info']):
@@ -42,10 +43,13 @@ def worker(stage,source=None,seed=None,arm=None,clip=None,part=None):
             available=psutil.virtual_memory().available
             free=__import__('shutil').disk_usage(WORK).free
             peak_rss=max(peak_rss,sum(members))
+            try:worker_peak_rss=max(worker_peak_rss,psutil.Process(process.pid).memory_info().rss)
+            except psutil.NoSuchProcess:pass
             minimum_available=available if minimum_available is None else min(minimum_available,available)
             minimum_free=free if minimum_free is None else min(minimum_free,free)
             sample=dict(study_rss_bytes=sum(members),host_available_bytes=available,durable_free_bytes=free,
-                study_rss_peak_bytes=peak_rss,host_available_min_bytes=minimum_available,durable_free_min_bytes=minimum_free,utc=now())
+                study_rss_peak_bytes=peak_rss,worker_rss_peak_bytes=worker_peak_rss,
+                host_available_min_bytes=minimum_available,durable_free_min_bytes=minimum_free,utc=now())
             write(folder/(name+'.resources.json'),sample)
             if sum(members)>44*2**30 or available<10*2**30 or free<12*2**30:
                 violation=sample;process.terminate();break
@@ -61,14 +65,26 @@ def worker(stage,source=None,seed=None,arm=None,clip=None,part=None):
 
 
 def batch(jobs,workers):
-    if (FOLDER/'options.json').exists():workers=read(FOLDER/'options.json').get('workers',workers)
-    if workers not in (1,2,3):raise Blocked('CPU concurrency exceeds measured worker envelope')
-    with futures.ThreadPoolExecutor(max_workers=workers) as pool:
-        pending=[pool.submit(worker,**j) for j in jobs]
-        errors=[]
-        for job in pending:
-            try:job.result()
-            except Exception as exc:errors.append(str(exc))
+    queue=deque(jobs);active=set();errors=[]
+    if not queue:return
+    stage=queue[0]['stage'];arm=queue[0].get('arm')
+    def concurrency():
+        options=read(FOLDER/'options.json') if (FOLDER/'options.json').exists() else {}
+        overrides=options.get('workers_by_stage',{})
+        limit=overrides.get(stage+':'+str(arm),overrides.get(stage,options.get('workers',workers)))
+        if not isinstance(limit,int) or not 1<=limit<=8:raise Blocked('CPU worker limit must be in [1,8] and supported by measured memory headroom')
+        return limit
+    # Start with three workers. Operator changes use measured per-worker RAM;
+    # the registered aggregate memory/disk floors remain enforced per process.
+    with futures.ThreadPoolExecutor(max_workers=8) as pool:
+        while queue or active:
+            limit=concurrency()
+            while queue and len(active)<limit:active.add(pool.submit(worker,**queue.popleft()))
+            done,active=futures.wait(active,timeout=1,return_when=futures.FIRST_COMPLETED)
+            for job in done:
+                try:job.result()
+                except Exception as exc:errors.append(str(exc))
+            if errors:queue.clear()  # Finish owned workers; leave unstarted clips for resume.
         if errors:raise Blocked('; '.join(errors))
 
 
@@ -87,7 +103,7 @@ def await_upstream(source,seed):
 def run(*,workers=2):
     from .readiness import require_production
     require_production('run')
-    if workers not in (1,2,3):raise Blocked('Use one to three bounded CPU workers')
+    if not 1<=workers<=8:raise Blocked('Use one to eight bounded CPU workers; increases require measured memory headroom')
     FOLDER.mkdir(parents=True,exist_ok=True)
     owner=(FOLDER/'pipeline-owner.lock').open('a+')
     try:fcntl.flock(owner,fcntl.LOCK_EX|fcntl.LOCK_NB)

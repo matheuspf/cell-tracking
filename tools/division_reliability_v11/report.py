@@ -26,6 +26,25 @@ def alive(pid):
     except (OSError,UnicodeError):return False
 
 
+def aggregate_rows(rows,expected):
+    """Restore undefined numerical values after JSON's explicit null encoding."""
+    from annotation_selection.metric_adapter import aggregate
+    fixed=[{**r,'gt_node_recall':float('nan') if r.get('gt_node_recall') is None else r['gt_node_recall']} for r in rows]
+    return aggregate(fixed,expected)
+
+
+def clip_summary(metrics,clip):
+    from .evaluation import finite
+    if sum(metrics[k] for k in ('edge_tp','edge_fp','edge_fn')):
+        return finite(aggregate_rows([metrics],[clip]))
+    from annotation_selection.metric_adapter import official
+    import warnings
+    raw=official.per_sample_metrics(official.EvaluationResult(*(int(metrics[k]) for k in official.COUNT_COLUMNS)),
+        float(metrics['estimated_total']),float('nan') if metrics.get('gt_node_recall') is None else metrics['gt_node_recall'])
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore');return finite(official.summarise([raw]))
+
+
 def checkpoint(folder):
     path=folder/'resume.pt'
     if not path.exists():return None
@@ -105,7 +124,6 @@ def resources():
 
 
 def score_rows():
-    from annotation_selection.metric_adapter import aggregate
     from .evaluation import finite
     per_clip=[];directions=[];pooled=[];details={};calibrations=[]
     blockers=[read(p) for p in (WORK/'blocked_cells').glob('*.json')]
@@ -114,7 +132,7 @@ def score_rows():
         target='6bba' if source=='44b6' else '44b6'
         for seed in (20260918,314159):
             for arm in ('C00','C01','C11'):
-                expected=clips(source,'target');rows=[];disabled=False
+                expected=clips(source,'target');rows=[];disabled=False if arm=='C00' else None
                 causes=[b['stage']+': '+b['reason'] for b in blockers if b['source']==source and b['seed']==seed and arm in b['arms']]
                 missing='; '.join(causes) if causes else 'complete frozen prediction and official score pending'
                 calpath=WORK/'fits'/source/str(seed)/'calibration'/arm/'calibration.json'
@@ -126,17 +144,18 @@ def score_rows():
                                 clips_expected=1,clips_scored=0,frames=None,disabled_policy=disabled,metric_revision=revision)
                     if path.exists():
                         r=read(path);details[source,seed,arm,clip]=r;metrics=r['metrics'];rows.append(metrics)
-                        single=finite(aggregate([metrics],[clip]));w=sum(metrics[k] for k in ('edge_tp','edge_fp','edge_fn'))
+                        single=clip_summary(metrics,clip);w=sum(metrics[k] for k in ('edge_tp','edge_fp','edge_fn'))
                         result.update(metrics);result.update(status='scored',missing_reason=None,clips_scored=1,frames=r['frames'],
                             score=single['score'],division_jaccard=single['division_jaccard'],edge_weight=w,
                             adjusted_edge_contribution=w*metrics['adj_edge_jaccard'] if w else 0.)
+                        if not w:result['missing_reason']='Official per-clip combined score is undefined: no evaluable edge denominator; counts remain in the full population'
                         prediction=read(WORK/'predictions'/arm/source/str(seed)/clip/'receipt.json')
                         result.update(accepted_actions=prediction.get('accepted_actions',0),changed_edges=prediction.get('changed_edges',0))
                     per_clip.append(result)
                 base=dict(arm=arm,source=source,target=target,seed=seed,status='blocked' if causes else 'pending',missing_reason=missing,
                           clips_expected=len(expected),clips_scored=len(rows),frames=None,disabled_policy=disabled,metric_revision=revision)
                 if len(rows)==len(expected):
-                    summary=finite(aggregate(rows,expected));base.update(summary);base.update(summary['counts']);base.pop('counts',None)
+                    summary=finite(aggregate_rows(rows,expected));base.update(summary);base.update(summary['counts']);base.pop('counts',None)
                     base.update(status='scored',missing_reason=None,frames=100*len(expected),estimated_total=sum(r['estimated_total'] for r in rows),
                                 matched_nodes=sum(r['matched_nodes'] for r in rows))
                     w=sum(base[k] for k in ('edge_tp','edge_fp','edge_fn'));base['edge_weight']=w;base['adjusted_edge_contribution']=w*base['adj_edge_jaccard']
@@ -145,11 +164,12 @@ def score_rows():
         for arm in ('C00','C01','C11'):
             selected=[r for r in per_clip if r['arm']==arm and r['seed']==seed];known=[r for r in selected if r['status']=='scored']
             row=dict(arm=arm,source='pooled',target='pooled',seed=seed,status='pending',missing_reason='incomplete direction/seed matrix',
-                clips_expected=len(selected),clips_scored=len(known),frames=None,disabled_policy=any(r['disabled_policy'] for r in selected),metric_revision=revision)
+                clips_expected=len(selected),clips_scored=len(known),frames=None,
+                disabled_policy=None if any(r['disabled_policy'] is None for r in selected) else any(r['disabled_policy'] for r in selected),metric_revision=revision)
             if any(r['status']=='blocked' for r in selected):
                 row.update(status='blocked',missing_reason='; '.join(sorted({r['missing_reason'] for r in selected if r['status']=='blocked'})))
             if len(known)==len(selected):
-                summary=finite(aggregate(known,[r['dataset'] for r in selected]));row.update(summary);row.update(summary['counts']);row.pop('counts',None)
+                summary=finite(aggregate_rows(known,[r['dataset'] for r in selected]));row.update(summary);row.update(summary['counts']);row.pop('counts',None)
                 row.update(status='scored',missing_reason=None,frames=100*len(known),estimated_total=sum(r['estimated_total'] for r in known),
                            matched_nodes=sum(r['matched_nodes'] for r in known))
                 w=sum(row[k] for k in ('edge_tp','edge_fp','edge_fn'));row['edge_weight']=w;row['adjusted_edge_contribution']=w*row['adj_edge_jaccard']
@@ -251,6 +271,11 @@ def run():
         crop_parity=read(RESULTS/'crop_parity.json'),cold=cold,
         read_guard_limit='Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.')
     if (WORK/'cold_source_proof/receipt.json').exists():validation['source_cold_proof']=read(WORK/'cold_source_proof/receipt.json')
+    if (WORK/'checks/empty_graph/receipt.json').exists():
+        proof=read(WORK/'checks/empty_graph/receipt.json')
+        validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
+    if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
+    if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     write(RESULTS/'validation.json',public(validation))
     write(RESULTS/'exposure_manifest.json',dict(exposure_class='source_isolated_reused_embryos',
         pristine_independent_generalization=False,seeds_are_not_new_animals=True,source_calibration_acquisition_independence_proven=False,

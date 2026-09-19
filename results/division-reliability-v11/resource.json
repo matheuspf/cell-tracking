@@ -1,7 +1,7 @@
 {
   "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
   "cpu_job_resource_samples": 0,
-  "current_durable_free_bytes": 212636172288,
+  "current_durable_free_bytes": 212395458560,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -11,7 +11,7 @@
     "cold": 0.005678152065273328,
     "inference": 0.005689343033888387,
     "pilot": 0.045588012047780166,
-    "upstream": 0.9384241343280413
+    "upstream": 1.5197705923302414
   },
   "inherited_hours": 19.307391920998594,
   "inherited_lifetime": {
@@ -78,11 +78,11 @@
       "leased": 3
     }
   },
-  "lease_count": 4820,
+  "lease_count": 6938,
   "lease_status_counts": {
-    "complete": 4820
+    "complete": 6938
   },
-  "lifetime_v10_plus_v11_conservative_hours": 20.969040990266357,
+  "lifetime_v10_plus_v11_conservative_hours": 21.550387448268562,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -103,8 +103,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 1.9124937489996228,
-  "new_study_gpu_lease_hours": 1.6616490692677661,
-  "new_study_measured_journal_hours": 0.9953796414749831,
+  "new_study_gpu_lease_hours": 2.2429955272699664,
+  "new_study_measured_journal_hours": 1.5767260994771832,
   "pre_journal_accounting": {
     "conservative_gpu_lease_seconds": 2398.569940054019,
     "records": [
@@ -216,13 +216,13 @@
     "peak_allocated_bytes": 7324696064,
     "peak_reserved_bytes": 8980004864,
     "rss_peak_bytes": 19219484672,
-    "total_device_peak_bytes": 10555424768
+    "total_device_peak_bytes": 11086987264
   },
   "sampled_minima": {
-    "device_free_min_bytes": 14757855232,
+    "device_free_min_bytes": 14226292736,
     "host_available_min_bytes": 48869744640
   },
   "study_cpu_rss_peak_bytes": null,
   "study_host_available_min_bytes": null,
-  "updated_utc": "2026-09-19T22:37:54.293754+00:00"
+  "updated_utc": "2026-09-19T23:18:42.632956+00:00"
 }

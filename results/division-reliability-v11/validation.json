@@ -57,6 +57,65 @@
     ],
     "status": "passed"
   },
+  "mining_merge_contract": {
+    "changed_identity_rejected": true,
+    "complete_clip_merge_and_resume": true,
+    "finished_utc": "2026-09-19T22:50:22.725978+00:00",
+    "status": "passed",
+    "synthetic_contract_only": true
+  },
+  "official_empty_graph_control": {
+    "aggregate": {
+      "adj_edge_jaccard": 0.0,
+      "counts": {
+        "division_fn": 3,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 1183,
+        "edge_fp": 0,
+        "edge_tp": 0,
+        "num_pred_nodes": 0
+      },
+      "division_fn": 3,
+      "division_fp": 0,
+      "division_jaccard": 0.0,
+      "division_tp": 0,
+      "edge_jaccard": 0.0,
+      "n": 1,
+      "n_adj": 1,
+      "node_recall": 0.0,
+      "score": 0.0
+    },
+    "control_not_model_result": true,
+    "finished_utc": "2026-09-19T22:59:14.432345+00:00",
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "metrics": {
+      "adj_edge_jaccard": 0.0,
+      "dataset": "6bba_05db0fb1",
+      "division_fn": 3,
+      "division_fp": 0,
+      "division_tp": 0,
+      "edge_fn": 1183,
+      "edge_fp": 0,
+      "edge_jaccard": 0.0,
+      "edge_tp": 0,
+      "estimated_total": 69800,
+      "graph_hash": "9a475dcc999f7ef1a3d4ec2e73daa57bf3188b27f22eb47d262a70bb1038673d",
+      "gt_node_recall": 0.0,
+      "matched_nodes": 0,
+      "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+      "node_recall": 0.0,
+      "num_pred_nodes": 0,
+      "total_node_ratio": -1.0
+    },
+    "source_only": true,
+    "status": "passed"
+  },
   "planning_contract_tests": 37,
   "production_resume": {
     "interruption_after": 10,
@@ -122,9 +181,9 @@
   },
   "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
   "runtime_tests": {
-    "count": 16,
+    "count": 17,
     "exit_code": 0,
-    "finished_utc": "2026-09-19T22:34:02.392182+00:00",
+    "finished_utc": "2026-09-19T23:17:53.324936+00:00",
     "source_resume_proof": "see pilot receipts",
     "status": "unit_tests_passed",
     "tests_are_not_model_results": true
@@ -161,5 +220,14 @@
     "target_cold_proof": false
   },
   "status": "partial",
+  "target_access_gate": {
+    "annotation_open_attempts": 0,
+    "evaluation_without_freeze_rejected": true,
+    "expected_denial_control": true,
+    "finished_utc": "2026-09-19T23:04:10.941506+00:00",
+    "status": "passed",
+    "target_scores_opened": false,
+    "unresolved_matrix_freeze_rejected": true
+  },
   "tests_are_not_model_results": true
 }

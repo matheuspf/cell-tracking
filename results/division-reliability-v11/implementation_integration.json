@@ -155,6 +155,50 @@
   ],
   "production_head_fits_started": 0,
   "recorded_utc": "2026-09-19T22:38:56.036928+00:00",
+  "report_and_dispatch_followup": {
+    "changes": [
+      "Official undefined per-clip scores retained as null with complete population counts",
+      "Unknown disabled-policy flags remain null before calibration",
+      "Independent job dispatch can adapt to measured CPU memory headroom; initially three workers",
+      "Failed stages stop new dispatch while existing owned workers finish"
+    ],
+    "dispatcher": {
+      "contract_only": true,
+      "every_job_dispatched_once": true,
+      "finished_utc": "2026-09-19T23:24:02.129552+00:00",
+      "stage_worker_override_tested": true,
+      "status": "passed"
+    },
+    "files": {
+      "controller.py": "1014453233e6e0bd16f44582f142d17fae70f05a4f6c7047ece23d3ea6d52bd6",
+      "report.py": "141d89d0e4cd6e0629f0a363f9a431a6eecb3cf3378e9cf21622b5299526cc2f",
+      "test_execution.py": "1f9bcb77aa0645e0a708ce4044c9936c1bcdf51cee35717b4b40c746b20237a4"
+    },
+    "increases_require_measured_memory_headroom": true,
+    "initial_cpu_workers": 3,
+    "maximum_configurable_cpu_workers": 8,
+    "numerical_recipe_unchanged": true,
+    "production_head_fits_started": 0,
+    "recorded_utc": "2026-09-19T23:25:10.787437+00:00",
+    "target_gate": {
+      "annotation_open_attempts": 0,
+      "evaluation_without_freeze_rejected": true,
+      "expected_denial_control": true,
+      "finished_utc": "2026-09-19T23:04:10.941506+00:00",
+      "status": "passed",
+      "target_scores_opened": false,
+      "unresolved_matrix_freeze_rejected": true
+    },
+    "target_scores_opened": false,
+    "tests": {
+      "count": 17,
+      "exit_code": 0,
+      "finished_utc": "2026-09-19T23:17:53.324936+00:00",
+      "source_resume_proof": "see pilot receipts",
+      "status": "unit_tests_passed",
+      "tests_are_not_model_results": true
+    }
+  },
   "resume_integrity_followup": {
     "changes": [
       "Midpoint source-bank and normalizer hashes checked on training resume",

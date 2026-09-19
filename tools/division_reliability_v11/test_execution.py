@@ -229,5 +229,19 @@ class GraphTests(unittest.TestCase):
         self.assertEqual(select_margin(rows)['margin'],8)
         self.assertTrue(select_margin([{**rows[0],'combined_delta':-.01}])['disabled_policy'])
 
+    def test_official_empty_denominators_and_complete_population(self):
+        from .report import clip_summary,aggregate_rows
+        row=dict(dataset='control',edge_tp=0,edge_fp=0,edge_fn=0,division_tp=0,division_fp=0,division_fn=0,
+            num_pred_nodes=0,estimated_total=100,gt_node_recall=None)
+        self.assertIsNone(clip_summary(row,'control')['score'])
+        self.assertIsNone(clip_summary(row,'control')['division_jaccard'])
+        supported={**row,'dataset':'supported','edge_tp':3,'gt_node_recall':1.}
+        scored=clip_summary(supported,'supported')
+        self.assertIsNone(scored['division_jaccard'])
+        self.assertEqual(scored['score'],scored['adj_edge_jaccard'])
+        pooled=aggregate_rows([row,supported],['control','supported'])
+        self.assertEqual(pooled['n'],2);self.assertEqual(pooled['n_adj'],1)
+        with self.assertRaises(ValueError):aggregate_rows([supported],['control','supported'])
+
 
 if __name__=='__main__':unittest.main()

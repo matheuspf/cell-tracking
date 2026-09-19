@@ -31,6 +31,13 @@ and a controller lock reject duplicate execution. An optional upstream-only
 queue is already in use for this execution; do not start another copy. If it
 stops, the pipeline can resume remaining upstream cells itself.
 
+The initial CPU concurrency is three. `controller/options.json` in the private
+work directory can set `workers` or `workers_by_stage` (for example,
+`prepare-actions` or `predict:C01`). Increases up to eight require measured
+per-worker memory headroom; the 44 GiB study RSS limit, 10 GiB available-host
+floor and durable-space floor continue to apply. Changes affect newly dispatched
+jobs and never terminate existing workers. GPU work still shares one lease lock.
+
 Each upstream update is random full-source sampling. Durable state contains the
 optimizer, learning-rate step, Python/NumPy/CPU/CUDA RNG, and sampler state.
 Checkpoints occur every 250 updates or five minutes and at phase boundaries.
