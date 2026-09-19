@@ -1,0 +1,120 @@
+{
+  "id": "division-reliability-v11",
+  "created": "2026-09-19",
+  "status": "planned_not_executed",
+  "branch": "handover/division-reliability-v11",
+  "base_commit": "08061f0a224387594dd3e915462bafb5d5928fb2",
+  "latest_measured_commit": "ab861b5d8c1a37bd920f610b88f552dfc5b5dbb6",
+  "v10_results_observed_remotely": false,
+  "directions": [
+    {
+      "source": "44b6",
+      "target": "6bba"
+    },
+    {
+      "source": "6bba",
+      "target": "44b6"
+    }
+  ],
+  "seeds": [
+    20260918,
+    314159
+  ],
+  "arms": [
+    "C00",
+    "C01",
+    "C11"
+  ],
+  "primary_comparison": [
+    "C11",
+    "C01"
+  ],
+  "max_new_neural_fits": 8,
+  "target_selection": false,
+  "operational_neural_matrix": false,
+  "automatic_production_adoption": false,
+  "inference_requires_explicit_package": true,
+  "raw_data_or_weights_committed": false,
+  "upstream_update_options": [
+    24000,
+    16000,
+    8000
+  ],
+  "event_update_options": [
+    4000,
+    2000
+  ],
+  "event_identity_prefix_fraction": 0.1,
+  "event_groups_per_update": 32,
+  "event_joint_group_mix": {
+    "identity": 16,
+    "positive": 8,
+    "uniform_supported_negative": 4,
+    "hard_supported_negative": 4
+  },
+  "negative_mining_fraction": 0.5,
+  "occurrence_negative_rule": "all_legal_forks_supported_zero",
+  "margin_options": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "insufficient_calibration_margin": 6,
+  "calibration_min_distinct_positive_events": 2,
+  "calibration_min_negative_groups": 100,
+  "conditional_denominator": "all_unique_legal_deployment_forks",
+  "complete_action_edit_cap": 0.02,
+  "interior_birth_cost": 2.0,
+  "interior_termination_cost": 2.0,
+  "source_safety": {
+    "combined_delta_min": 0.0,
+    "adjusted_edge_delta_min": -0.001,
+    "introduced_fp_rule": "max(2,2*newly_recovered_division_tp)"
+  },
+  "promotion": {
+    "pooled_delta_C11_C01_each_seed_min": 0.002,
+    "each_direction_delta_min": -0.001,
+    "pooled_milestone": 0.95,
+    "strong_milestone": "both_target_embryos_and_both_seeds_at_least_0.95"
+  },
+  "budget": {
+    "gpu_lease_hours": 72,
+    "inference_reserve_hours": 16,
+    "initial_allocations_hours": {
+      "pilot": 4,
+      "upstream": 34,
+      "event_mining": 18,
+      "inference_cold": 16
+    },
+    "projection_multiplier": 1.25,
+    "total_device_limit_gib": 20,
+    "device_free_min_gib": 2,
+    "study_rss_limit_gib": 44,
+    "host_available_min_gib": 10,
+    "durable_free_min_gib": 10,
+    "lease_seconds_max": 60,
+    "checkpoint_every_updates": 250,
+    "checkpoint_every_minutes": 5
+  },
+  "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+  "expected_clip_counts": {
+    "44b6": 71,
+    "6bba": 128
+  },
+  "results_root": "results/division-reliability-v11",
+  "work_root": "work/division-reliability-v11",
+  "report_back": "results/division-reliability-v11/REPORT_BACK.md",
+  "handover_files": [
+    "CODEX_PROMPT.md",
+    "REVIEW.md",
+    "PLAN.md",
+    "IMPLEMENTATION.md",
+    "VALIDATION_REPORTING.md",
+    "study.json",
+    "contracts.py",
+    "test_contracts.py",
+    "check_plan.py"
+  ],
+  "parent_unique_action_cap": 4096
+}

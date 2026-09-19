@@ -1,0 +1,26 @@
+{
+  "status": "planning_contracts_passed",
+  "files": {
+    "CODEX_PROMPT.md": "ba5f35e0a16c9a2bbcf1f7e37fb4f9020dfa8406ac43d941003807e264ad9877",
+    "REVIEW.md": "d0da93d79be675a143095274325699164093c26fa87886ff37c692ba54b35078",
+    "PLAN.md": "2cf19820349ba75e179904d44c876f054e517c7aecd3dfa2bcd22cb6287d5cdb",
+    "IMPLEMENTATION.md": "edf01a038c2f1daa051cd4507862f6e51fb982f97de3453693089db1a30ce727",
+    "VALIDATION_REPORTING.md": "c6e6812c779cc35265dee311d0e26f0b00d2ab7b61a2d322ee457dd82550c099",
+    "study.json": "c5195b1e3f33d5aeee777c58a85b0014e8793a0fc76a85d7872c6fb5e7a1e0fc",
+    "contracts.py": "146a0e0333af0a969cef63a3f8f2b04e2fbf60df54ef0806bb18f291a503895f",
+    "test_contracts.py": "cf47afc714709de9be1c042677214bd9a94a270ed448d179c354d0c13bd963f7",
+    "check_plan.py": "8dd5b646a3874bb5bba4921be7769c841a012bdd3c9d44a218c76dcf89e91339",
+    "DIVISION_RELIABILITY_V11_START_HERE.md": "238572041f9b1b7fbbb60ee82185aa72fc14d25e6dc623b360b65c5327300f7c"
+  },
+  "model_training_executed": false,
+  "official_scores_recomputed": false,
+  "runtime_or_data_isolation_validated": false,
+  "tests": {
+    "command": "python -m unittest discover -s handover/division-reliability-v11 -p 'test_*.py' -v",
+    "passed": 37,
+    "failed": 0,
+    "scope": "stdlib reference contracts only",
+    "python_version": "3.13.5",
+    "compilation_passed": true
+  }
+}
