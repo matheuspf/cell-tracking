@@ -67,6 +67,19 @@ are reused after parent verification, and original job/resource receipts are
 archived before the normal queue reuses them. It refuses a cell the live normal
 queue has already reached. Inspect `controller/source-prefetch/` for its state.
 
+After that later cell's source preparation is complete, its C01 fit and C11
+prefix can also overlap the earlier cell:
+
+```sh
+"$study_python" -m division_reliability_v11.head_prefetch --source 44b6 --seed 314159
+```
+
+This uses the same ownership barrier and ordinary guarded fitting workers. It
+stops at C11's durable midpoint, before mining. The main queue then reuses the
+completed C01 fit and resumes the same C11 checkpoint. It refuses an active
+worker or a cell the main queue has reached. Check measured aggregate memory
+headroom before starting an additional fit; horizons and sampling stay locked.
+
 Each upstream update is random full-source sampling. Durable state contains the
 optimizer, learning-rate step, Python/NumPy/CPU/CUDA RNG, and sampler state.
 Checkpoints occur every 250 updates or five minutes and at phase boundaries.

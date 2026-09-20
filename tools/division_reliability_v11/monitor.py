@@ -50,7 +50,12 @@ def run():
     for path in (WORK/'controller/source-prefetch').glob('*/*/progress.json'):
         r=optional(path)
         if r:prepared.append({**r,'process_verified_alive':alive(r.get('pid'))})
+    heads=[]
+    for path in (WORK/'controller/head-prefetch').glob('*/*/progress.json'):
+        r=optional(path)
+        if r:heads.append({**r,'process_verified_alive':alive(r.get('pid'))})
     return dict(utc=now(),pipeline=optional(WORK/'controller/pipeline.json'),jobs=dict(jobs),fits=fits,running_jobs=running,source_preparation=prepared,
+        head_preparation=heads,
         sampled_study_rss_peak_gib=max((r['study_rss_peak_bytes']/2**30 for r in resources),default=None),
         sampled_host_available_min_gib=min((r['host_available_min_bytes']/2**30 for r in resources),default=None))
 

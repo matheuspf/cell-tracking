@@ -387,6 +387,7 @@ def run():
         validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
+    if (WORK/'checks/head_prefetch.json').exists():validation['head_preparation_ownership']=read(WORK/'checks/head_prefetch.json')
     if (WORK/'checks/resource_timing_reconciliation.json').exists():validation['resource_timing_reconciliation']=read(WORK/'checks/resource_timing_reconciliation.json')
     if (WORK/'checks/receipt_preservation.json').exists():validation['resource_receipt_preservation']=read(WORK/'checks/receipt_preservation.json')
     if (WORK/'checks/controller_archive_reuse.json').exists():validation['controller_archive_reuse']=read(WORK/'checks/controller_archive_reuse.json')
@@ -417,6 +418,9 @@ def run():
     for p in (WORK/'controller/source-prefetch').glob('*/*/progress.json'):
         r=read(p)
         if alive(r.get('pid')):active.append(dict(role='source-prefetch/'+r['source']+'/'+str(r['seed']),pid=r['pid']))
+    for p in (WORK/'controller/head-prefetch').glob('*/*/progress.json'):
+        r=read(p)
+        if alive(r.get('pid')):active.append(dict(role='head-prefetch/'+r['source']+'/'+str(r['seed']),pid=r['pid']))
     blocked=[]
     for p in (WORK/'controller/jobs').glob('*.json'):
         r=read(p)
