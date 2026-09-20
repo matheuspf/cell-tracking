@@ -3,7 +3,6 @@
   "cells": [
     {
       "compact": {
-        "durable_step": 2000,
         "history_summary": {
           "first": {
             "denominators": {
@@ -26,7 +25,7 @@
             1.2400486099055083e-05,
             0.05263157894736842
           ],
-          "history_sha256": "0249fcb58b88bf4c2ed91d0b37f0e5595ccc83407211d249c6f826a5172fa467",
+          "history_sha256": "e691dbe613a4df4c44b2a207b652f0e21b36b39607cb5d88a8712cfc637c18ab",
           "last": {
             "denominators": {
               "consistency": 32,
@@ -35,50 +34,50 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 0.0001174815159146192,
-              "identity": 0.004185574993698538,
-              "occurrence": 0.1706124625634402,
-              "ranking": 0.15946656465530396
+              "consistency": 0.00013995332845073705,
+              "identity": 0.0012795314313507333,
+              "occurrence": 0.3536855233833194,
+              "ranking": 0.08460402488708496
             },
-            "lr": 0.00016284561214811367,
-            "step": 2000
+            "lr": 0.0001337262199419357,
+            "step": 2236
           },
           "observation_cache_peak_bytes": 815597464,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 2000,
+          "recorded_updates": 2236,
           "supervised_incoming_groups": 0,
           "totals": {
-            "gpu_lease_seconds": 369.3610526419907,
-            "input_seconds": 8.804855630933162
+            "gpu_lease_seconds": 415.4199524029573,
+            "input_seconds": 11.098700277903845
           },
           "uniform_hard_slot_fallback_groups": 6400,
-          "unique_group_visits": 22812
+          "unique_group_visits": 24247
         },
         "horizon": 4000,
-        "process_verified_alive": false,
+        "mined": true,
+        "pid": 2151729,
+        "process_verified_alive": true,
         "resume": {
-          "bytes": 3800835,
-          "durable_step": 2000,
-          "file_creation_to_last_write_seconds": 0.012000241,
+          "bytes": 3876099,
+          "durable_step": 2217,
+          "file_creation_to_last_write_seconds": 0.011653347,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/20260918/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 2000
+            "step": 2217
           },
           "seed": 20260918,
-          "sha256": "c8da03e23f7426d76784b6dbc799b6cafc9edeb69a096594fb50009792770a90",
+          "sha256": "cd8556d9b51f84f0a18817800f5e187ea355d81ef15d645d191f239cc42c4919",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "seed": 20260918,
-        "source": "44b6",
-        "status": "waiting_for_mining",
-        "step": 2000,
-        "updated_utc": "2026-09-20T03:23:45.669651+00:00"
+        "status": "running",
+        "step": 2236,
+        "updated_utc": "2026-09-20T05:48:45.161703+00:00"
       },
       "linear": {
         "census": {
@@ -263,7 +262,7 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "charged_gpu_lease_seconds": 4764.827424910036,
+        "charged_gpu_lease_seconds": 8367.964862722816,
         "history_summary": {
           "first": {
             "association": 0.6719422340393066,
@@ -274,22 +273,22 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "be9826697a919a914a4c8f0ec76bf6ee6304a2a142e61290e4cc4c04ca21ad69",
+          "history_sha256": "53c81186b814ff03098213ea84451a5499da72e47c31c00cc17e1c367d9a1e9b",
           "last": {
-            "association": 0.0028133539017289877,
-            "detection": 0.6082286238670349,
-            "loss": 0.6110419631004333,
-            "lr": 4.455999769810811e-05,
-            "step": 4491
+            "association": 0.0015285087283700705,
+            "detection": 0.6082622408866882,
+            "loss": 0.6097907423973083,
+            "lr": 1.7980971842500422e-06,
+            "step": 7565
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 244691,
-          "query_fallback_batches": 7045,
-          "recorded_updates": 4491,
-          "supervised_incoming_groups": 300712,
+          "proposal_incoming_groups": 455272,
+          "query_fallback_batches": 7573,
+          "recorded_updates": 7565,
+          "supervised_incoming_groups": 511309,
           "totals": {
-            "gpu_lease_seconds": 4764.827424910036,
-            "input_seconds": 50.04504615010228
+            "gpu_lease_seconds": 8367.964862722816,
+            "input_seconds": 78.97769750752923
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
@@ -299,24 +298,24 @@
         "process_verified_alive": true,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 4458,
-          "file_creation_to_last_write_seconds": 0.014340642,
+          "durable_step": 7483,
+          "file_creation_to_last_write_seconds": 0.014253985,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/20260918/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 4458
+            "one_based_step": 7483
           },
           "seed": 20260918,
-          "sha256": "5fcf8d11da2e082d1efeda7f6b88f6fa1fd42cf5f5385020dcaa7f159a9d2f4a",
+          "sha256": "e116c1f38c383b065bcbbd2083f00b5e685295507e22f5cc21d63225b62624e6",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 4491,
-        "updated_utc": "2026-09-20T04:37:29.441117+00:00"
+        "step": 7565,
+        "updated_utc": "2026-09-20T05:48:46.295272+00:00"
       }
     },
     {

@@ -394,6 +394,7 @@ def run():
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
+    validation['complete_mining_and_resume_audits']=[read(p) for p in sorted((WORK/'checks/mining_complete').glob('*/*/receipt.json'))]
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')

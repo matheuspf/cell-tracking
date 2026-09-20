@@ -1,0 +1,32 @@
+{
+  "all_selected_groups_verified_supported_negative": true,
+  "complete_source_fit_clips": 61,
+  "complete_supported_negative_pool": 17007,
+  "complete_unique_forks": 697469647,
+  "enumerated_parent_groups": 2641073,
+  "final_model_result": false,
+  "first_post_mining_update": 2001,
+  "frozen_checkpoint_sha256": "ed6954e33f0daa0bbb4f57bbcc95a6adc3f7af6dd84474594abcb65b1a22a588",
+  "guard": {
+    "denied": 0,
+    "installed_before_numerical": true,
+    "network_denied": 0,
+    "subprocess_denied": 0
+  },
+  "last_post_mining_update": 2147,
+  "merged_mining_receipt_sha256": "237f2a494a445b888ff0f923d0e4144a485e7d2ae256f0097fccfd1e51877f4e",
+  "mining_passes": 1,
+  "observed_hard_slots_verified_against_merged_pool": true,
+  "post_mining_resume_observed": true,
+  "post_mining_updates_observed": 147,
+  "registered_mixed_denominators_exact": true,
+  "sampled_embedding_parity_max_absolute_difference": 4.172325134277344e-07,
+  "sampled_embedding_parity_tolerance": 1e-05,
+  "seed": 20260918,
+  "selected_supported_negative_groups": 11337,
+  "source": "44b6",
+  "status": "passed",
+  "target_metrics_opened": false,
+  "unknown_used_as_negative": false,
+  "utc": "2026-09-20T05:44:45.033774+00:00"
+}

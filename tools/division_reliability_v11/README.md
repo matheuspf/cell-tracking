@@ -93,6 +93,17 @@ reused only with identical parents. The merged pool is consumed once on resume.
 Source-calibration score caches likewise retain complete legal denominators and
 verify their parent hashes. A fitted head cannot read calibration data.
 
+After a real mining pass and resumed updates, inspect its full source pool:
+
+```sh
+"$study_python" -m division_reliability_v11.mining_audit --source 44b6 --seed 20260918
+```
+
+This verifies every selected negative group's sparse support, the unchanged
+midpoint and bank hashes, all clip receipts, and recorded hard-slot draws and
+their selection probabilities. It preserves the first observed resume snapshot;
+reruns recheck the current artifacts while retaining that original timestamp.
+
 The CLI automatically sets `NVIDIA_TF32_OVERRIDE=0` before numerical imports for
 C11 mining, calibration, prediction and cold inference. A trained midpoint
 encoder exposed a TF32 singleton-reference discrepancy in the original parity
