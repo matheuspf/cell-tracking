@@ -228,15 +228,22 @@
     },
     {
       "compact": {
-        "durable_step": 2000,
+        "event_supervised_updates": 3600,
+        "finished_utc": "2026-09-20T20:15:47.602961+00:00",
+        "guard": {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
         "history_summary": {
-          "actual_event_supervised_updates": 1600,
+          "actual_event_supervised_updates": 3600,
           "actual_identity_only_supervised_updates": 400,
           "eligible_group_denominator_totals": {
-            "consistency": 64000,
-            "identity": 38400,
-            "occurrence": 25600,
-            "ranking": 12800
+            "consistency": 128000,
+            "identity": 70400,
+            "occurrence": 57600,
+            "ranking": 28800
           },
           "first": {
             "denominators": {
@@ -259,7 +266,7 @@
             1.2409873295193656e-05,
             0.05
           ],
-          "history_sha256": "fe4e7b4c8d34813a022d0323a04a13463c511380b112cda07213142bcbcad9fe",
+          "history_sha256": "f4477cca7cc95c090e70173ff8fd73eca3b89cf4120a8562f1a79fb3448cc6c6",
           "identity_prefix_scope": "Identity supervision with the separately logged label-free image consistency term.",
           "last": {
             "denominators": {
@@ -269,70 +276,81 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 0.006622811495617498,
-              "identity": 0.00029362073996708205,
-              "occurrence": 0.07544520264491439,
-              "ranking": 0.0065676383674144745
+              "consistency": 0.008625324313470628,
+              "identity": 0.0002839666595093604,
+              "occurrence": 0.029105653418810107,
+              "ranking": 0.010635580867528915
             },
-            "lr": 0.00016284561214811367,
-            "step": 2000
+            "lr": 1e-06,
+            "step": 4000
           },
           "objective_updates": {
-            "consistency": 2000,
-            "identity": 2000,
-            "occurrence": 1600,
-            "ranking": 1600
+            "consistency": 4000,
+            "identity": 4000,
+            "occurrence": 3600,
+            "ranking": 3600
           },
           "observation_cache_peak_bytes": 882399934,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 2000,
+          "recorded_updates": 4000,
           "sampled_slot_totals": {
-            "hard": 6400,
-            "identity": 38400,
-            "negative": 6400,
-            "positive": 12800
+            "hard": 14400,
+            "identity": 70400,
+            "negative": 14400,
+            "positive": 28800
           },
           "supervised_incoming_groups": 0,
           "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
-            "gpu_lease_seconds": 340.7092595939248,
-            "input_seconds": 8.980013295120443
+            "gpu_lease_seconds": 776.232046666948,
+            "input_seconds": 20.982666330093707
           },
           "uniform_hard_slot_fallback_groups": 6400,
-          "unique_group_visits": 22986,
+          "unique_group_visits": 31954,
           "unique_group_visits_scope": "Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots."
         },
-        "horizon": 4000,
+        "implementation_sha256": {
+          "actions.py": "3d70aa94dbf88c519e0aa7e74df6ff59c256dda222dcfe6ab2c2703d2315b554",
+          "event_training.py": "6d1ed78e67a908ae1608bfdf5e96812fa175f416a653e0530a217fa338fa8407",
+          "features.py": "dfd1753d9b53beca32bbebdd877dea4bbcddbbd0d24ffe65d9fd6c7bcdd50577",
+          "mining.py": "0ae9b2904f576584a97733ef97c37f37a45bd21239482d993a60dd9b21a414cf",
+          "models.py": "ff078c40815d5f1e9f76b06d898232bb2ab83b1344fa8be7cc3bb4299d6c769b",
+          "policy.py": "b3a6b1d59c3b68b593df2ad5584feddd39d694a7421c5112dc1208f770365397",
+          "train_compact.py": "0a18a39543bac79c881fb2ff82b0eaabf84869e962b1ff08be8869038eaffc9e"
+        },
         "interrupted_update_attempts": {
           "archived_segments": 0,
           "recorded_gpu_lease_seconds": 0,
           "recorded_updates": 0,
           "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
+        "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+        "mining_passes": 1,
         "process_verified_alive": false,
         "resume": {
-          "bytes": 3807363,
-          "durable_step": 2000,
-          "file_creation_to_last_write_seconds": 0.010800961,
+          "bytes": 4160579,
+          "durable_step": 4000,
+          "file_creation_to_last_write_seconds": 0.017702712,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 2000
+            "step": 4000
           },
           "seed": 314159,
-          "sha256": "71a0b99a72053e0e73c4d9af674491a9fbff542521422989afe168d9a4f13b8f",
+          "sha256": "bc24c77f354543b44e7268a4a6b66c8c5fe250c74f3732c77aa0e29647da9b02",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "seed": 314159,
         "source": "44b6",
-        "status": "waiting_for_mining",
-        "step": 2000,
-        "updated_utc": "2026-09-20T15:59:27.781503+00:00"
+        "status": "trained",
+        "unique_group_visits": 31954,
+        "updates": 4000,
+        "weights_sha256": "4e3033cb4faf8a38fd1ba34df5f7b73989971b54565bed92bf53a8db5d26072d"
       },
       "linear": {
         "census": {

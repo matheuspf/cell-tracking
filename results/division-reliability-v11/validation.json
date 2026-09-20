@@ -458,6 +458,38 @@
       "target_metrics_opened": false,
       "unknown_used_as_negative": false,
       "utc": "2026-09-20T05:44:45.033774+00:00"
+    },
+    {
+      "all_selected_groups_verified_supported_negative": true,
+      "complete_source_fit_clips": 61,
+      "complete_supported_negative_pool": 17206,
+      "complete_unique_forks": 982546635,
+      "enumerated_parent_groups": 3465035,
+      "final_model_result": false,
+      "first_post_mining_update": 2001,
+      "frozen_checkpoint_sha256": "71a0b99a72053e0e73c4d9af674491a9fbff542521422989afe168d9a4f13b8f",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "last_post_mining_update": 2100,
+      "merged_mining_receipt_sha256": "f9258754ad85d5805a45a3869969c924d6b6728b448908ba7affe70f540a979e",
+      "mining_passes": 1,
+      "observed_hard_slots_verified_against_merged_pool": true,
+      "post_mining_resume_observed": true,
+      "post_mining_updates_observed": 100,
+      "registered_mixed_denominators_exact": true,
+      "sampled_embedding_parity_max_absolute_difference": 5.960464477539062e-07,
+      "sampled_embedding_parity_tolerance": 1e-05,
+      "seed": 314159,
+      "selected_supported_negative_groups": 11455,
+      "source": "44b6",
+      "status": "passed",
+      "target_metrics_opened": false,
+      "unknown_used_as_negative": false,
+      "utc": "2026-09-20T18:55:40.166580+00:00"
     }
   ],
   "controller_archive_reuse": {
@@ -851,6 +883,51 @@
       },
       "scope": "Complete actual source training and retained artifacts; no accuracy claim",
       "seed": 20260918,
+      "source": "44b6",
+      "status": "passed",
+      "updates": 4000
+    },
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "audit_implementation_sha256": "89e9233b8b08e2b09f1ac63eb218ed9202a886610167e7c65b184cca293a0e74",
+      "denominator_totals": {
+        "consistency": 128000,
+        "identity": 70400,
+        "occurrence": 57600,
+        "ranking": 28800
+      },
+      "event_supervised_updates": 3600,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T20:17:16.760193+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "hard_slot_fallback_totals": {
+        "after_mining": 0,
+        "before_mining": 6400
+      },
+      "identity_supervised_prefix_updates": 400,
+      "mining_passes": 1,
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "5bfaefddb1ff8de68f6d0366a1fc4c82be53a6e149e9acd685f25fea1080f2e0",
+        "final.pt": "4e3033cb4faf8a38fd1ba34df5f7b73989971b54565bed92bf53a8db5d26072d",
+        "history.jsonl": "f4477cca7cc95c090e70173ff8fd73eca3b89cf4120a8562f1a79fb3448cc6c6",
+        "mining/receipt.json": "f9258754ad85d5805a45a3869969c924d6b6728b448908ba7affe70f540a979e",
+        "resume.pt": "bc24c77f354543b44e7268a4a6b66c8c5fe250c74f3732c77aa0e29647da9b02"
+      },
+      "retained_model_equals_final_resume": true,
+      "sampled_slot_totals": {
+        "hard": 14400,
+        "identity": 70400,
+        "negative": 14400,
+        "positive": 28800
+      },
+      "scope": "Complete actual source training and retained artifacts; no accuracy claim",
+      "seed": 314159,
       "source": "44b6",
       "status": "passed",
       "updates": 4000
