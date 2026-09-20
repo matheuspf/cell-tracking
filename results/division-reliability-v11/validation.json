@@ -477,6 +477,18 @@
     "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
   },
   "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
+  "resource_timing_reconciliation": {
+    "completed_compact_prefix_lease_count": 2000,
+    "completed_upstream_lease_counts": [
+      8000,
+      8000
+    ],
+    "lease_windows_are_not_full_process_wall_times": true,
+    "original_first_cell_source_prediction_receipts": 71,
+    "recorded_utc": "2026-09-20T04:03:16.891936+00:00",
+    "source_only": true,
+    "status": "passed"
+  },
   "retained_source_positive_witness_control": {
     "finished_utc": "2026-09-20T00:21:44.396475+00:00",
     "fit_clips_inspected": 1,

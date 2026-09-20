@@ -142,6 +142,30 @@ def resources():
         bank_times[key].append(r['wall_seconds'])
     bank_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),median_seconds=median(v),
         p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v)) for k,v in sorted(bank_times.items())}
+    prediction_times=defaultdict(list)
+    for p in (WORK/'predictions').glob('*/*/*/*/receipt.json'):
+        r=read(p)
+        if r.get('status')!='predicted_unscored':continue
+        label='/'.join(p.relative_to(WORK/'predictions').parts[:3])
+        prediction_times[label].append(r['wall_seconds'])
+    prediction_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),median_seconds=median(v),
+        p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v)) for k,v in sorted(prediction_times.items())}
+    # Stable prediction receipts and the append-only lease journal survive a
+    # controller's verified-cache reuse. Do not mistake the short reuse process
+    # for the original optimizer or image-to-graph execution.
+    from datetime import datetime
+    locked=read(RESULTS/'execution_lock.json')['locked_utc'];optimizer_rows=defaultdict(list)
+    for r in rows:
+        if r['stage'] in ('upstream','event_mining') and not r.get('operation') and 'finished_utc' in r and r['started_utc']>=locked:
+            optimizer_rows[(r['stage'],r['source'],r['seed'],r['pid'])].append(r)
+    optimizer_windows=[]
+    for (stage,source,seed,pid),group in sorted(optimizer_rows.items()):
+        start=min(r['started_utc'] for r in group);end=max(r['finished_utc'] for r in group)
+        optimizer_windows.append(dict(stage=stage,source=source,seed=seed,pid=pid,
+            recorded_optimizer_leases=len(group),lease_status_counts=dict(Counter(r['status'] for r in group)),
+            first_lease_started_utc=start,last_lease_finished_utc=end,
+            observed_elapsed_seconds=(datetime.fromisoformat(end)-datetime.fromisoformat(start)).total_seconds(),
+            gpu_lease_seconds=sum(r['seconds'] for r in group),process_verified_alive=alive(pid)))
     value=dict(new_study_gpu_lease_hours=total/3600,new_study_measured_journal_hours=sum(by_stage.values())/3600,
         pre_journal_conservative_charge_hours=upper/3600,pre_journal_accounting=prior,
         hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
@@ -150,6 +174,11 @@ def resources():
         cpu_job_resource_samples=len(cpu),study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
         completed_job_wall_time=job_summary,
         original_source_bank_wall_time=bank_summary,
+        original_prediction_wall_time=prediction_summary,
+        optimizer_execution_windows=optimizer_windows,
+        optimizer_window_scope='First recorded optimizer lease through last closed optimizer lease in each production process. Includes inter-lease waiting; excludes startup, final serialization and time outside that interval. Active runs are partial. Lease counts include failures/replays and are not durable update counts.',
+        prediction_timing_scope='One original retained prediction receipt per clip/arm, excluding verified-cache reuse. Source and target populations share each arm/source/seed key. Concurrent durations overlap; sums are not campaign duration.',
+        controller_receipt_coverage_note='Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.',
         source_bank_timing_scope='One original preparation per completed clip, excluding verified-cache reuse. Includes enumeration, crops, labels and full source scoring; sums overlap for concurrent clips.',
         job_wall_time_scope='Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.',
         study_host_available_min_bytes=min((r.get('host_available_min_bytes',r['host_available_bytes']) for r in cpu),default=None),
@@ -356,6 +385,7 @@ def run():
         validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
+    if (WORK/'checks/resource_timing_reconciliation.json').exists():validation['resource_timing_reconciliation']=read(WORK/'checks/resource_timing_reconciliation.json')
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
@@ -417,6 +447,7 @@ def run():
         '', 'C01/C11 independently edit their own C00 graph. Their comparison tests practical model-family value, not the isolated causal effect of factorization or one loss. Unknown legal forks remain in deployment denominators and do not become negative biological labels. Source safety and no-op outcomes are reported separately. CSV coordinates and IDs, full populations, official empty-division behavior and the pinned scorer are used; clip scores are never averaged.',
         '', 'The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.',
         '',f'New v11 GPU lease accounting: {res["new_study_gpu_lease_hours"]:.4f} hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: {res["inherited_hours"]:.4f} hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.',
+        '', 'Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.',
         '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Early pilot witnesses bypassed the global 2% cap. Later witnesses on retained C00 graphs use the registered solver and cap. Both kinds use labels to choose diagnostic edits and are not learned policies or achievable score bounds. Runtime tests and planning contracts are not evidence of trained accuracy.',
         '']
     if (RESULTS/'compact_precision_repair.json').exists():
