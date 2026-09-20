@@ -214,14 +214,15 @@
     },
     {
       "compact": {
+        "durable_step": 2000,
         "history_summary": {
-          "actual_event_supervised_updates": 816,
+          "actual_event_supervised_updates": 1600,
           "actual_identity_only_supervised_updates": 400,
           "eligible_group_denominator_totals": {
-            "consistency": 38912,
-            "identity": 25856,
-            "occurrence": 13056,
-            "ranking": 6528
+            "consistency": 64000,
+            "identity": 38400,
+            "occurrence": 25600,
+            "ranking": 12800
           },
           "first": {
             "denominators": {
@@ -244,7 +245,7 @@
             1.2409873295193656e-05,
             0.05
           ],
-          "history_sha256": "1b208e56bcf11e02549c34aad43e218c73b2b36f7d96683e722a4b86e1775eb6",
+          "history_sha256": "fe4e7b4c8d34813a022d0323a04a13463c511380b112cda07213142bcbcad9fe",
           "identity_prefix_scope": "Identity supervision with the separately logged label-free image consistency term.",
           "last": {
             "denominators": {
@@ -254,63 +255,63 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 0.003709960010382929,
-              "identity": 0.03512662288160939,
-              "occurrence": 0.2940330794081092,
-              "ranking": 0.0544351190328598
+              "consistency": 0.006622811495617498,
+              "identity": 0.00029362073996708205,
+              "occurrence": 0.07544520264491439,
+              "ranking": 0.0065676383674144745
             },
-            "lr": 0.00025028984841569875,
-            "step": 1216
+            "lr": 0.00016284561214811367,
+            "step": 2000
           },
           "objective_updates": {
-            "consistency": 1216,
-            "identity": 1216,
-            "occurrence": 816,
-            "ranking": 816
+            "consistency": 2000,
+            "identity": 2000,
+            "occurrence": 1600,
+            "ranking": 1600
           },
           "observation_cache_peak_bytes": 882399934,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 1216,
+          "recorded_updates": 2000,
           "sampled_slot_totals": {
-            "hard": 3264,
-            "identity": 25856,
-            "negative": 3264,
-            "positive": 6528
+            "hard": 6400,
+            "identity": 38400,
+            "negative": 6400,
+            "positive": 12800
           },
           "supervised_incoming_groups": 0,
           "totals": {
-            "gpu_lease_seconds": 204.0368434619886,
-            "input_seconds": 5.324464215096668
+            "gpu_lease_seconds": 340.7092595939248,
+            "input_seconds": 8.980013295120443
           },
-          "uniform_hard_slot_fallback_groups": 3264,
-          "unique_group_visits": 17017,
+          "uniform_hard_slot_fallback_groups": 6400,
+          "unique_group_visits": 22986,
           "unique_group_visits_scope": "Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots."
         },
         "horizon": 4000,
-        "mined": false,
-        "pid": 2316112,
-        "process_verified_alive": true,
+        "process_verified_alive": false,
         "resume": {
-          "bytes": 3562883,
-          "durable_step": 1139,
-          "file_creation_to_last_write_seconds": 0.008599223,
+          "bytes": 3807363,
+          "durable_step": 2000,
+          "file_creation_to_last_write_seconds": 0.010000219,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 1139
+            "step": 2000
           },
           "seed": 314159,
-          "sha256": "b4ecbba4218092ef83ab7002813dfdd8f0cf02a14e5fcffef8b92feb91bff27d",
+          "sha256": "d39daa420cfc844d4b870930cf0e6a9af026759a421263111dbde22674b9dd17",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "status": "running",
-        "step": 1216,
-        "updated_utc": "2026-09-20T07:11:47.520248+00:00"
+        "seed": 314159,
+        "source": "44b6",
+        "status": "waiting_for_mining",
+        "step": 2000,
+        "updated_utc": "2026-09-20T07:47:18.855089+00:00"
       },
       "linear": {
         "census": {
@@ -495,7 +496,7 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "charged_gpu_lease_seconds": 3195.914947087069,
+        "charged_gpu_lease_seconds": 5040.144735698188,
         "history_summary": {
           "first": {
             "association": 0.7250267267227173,
@@ -506,22 +507,22 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "bcb3e917ad92aa01bc39714e441bd0a07216de9c3fcf9376fc2ea76091d0d51b",
+          "history_sha256": "6fc5669e4d26d29c2fa804938d58b2f6941ec9645351fd85739a259071cbab03",
           "last": {
-            "association": 0.010307196527719498,
-            "detection": 0.616491973400116,
-            "loss": 0.6267991662025452,
-            "lr": 6.919680381133518e-05,
-            "step": 3263
+            "association": 0.00920037180185318,
+            "detection": 0.6137741804122925,
+            "loss": 0.6229745745658875,
+            "lr": 3.4408024629860603e-05,
+            "step": 5001
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 159286,
-          "query_fallback_batches": 6915,
-          "recorded_updates": 3263,
-          "supervised_incoming_groups": 215376,
+          "proposal_incoming_groups": 275777,
+          "query_fallback_batches": 7243,
+          "recorded_updates": 5001,
+          "supervised_incoming_groups": 331914,
           "totals": {
-            "gpu_lease_seconds": 3195.914947087069,
-            "input_seconds": 27.77805110508052
+            "gpu_lease_seconds": 5040.144735698188,
+            "input_seconds": 42.42686398898513
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
@@ -531,24 +532,24 @@
         "process_verified_alive": true,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 3073,
-          "file_creation_to_last_write_seconds": 0.014003982,
+          "durable_step": 4817,
+          "file_creation_to_last_write_seconds": 0.013070603,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 3073
+            "one_based_step": 4817
           },
           "seed": 314159,
-          "sha256": "e56ecaa2a0d387fcebe197e84d5aa319760c64af378d0e998b28505cf0725a33",
+          "sha256": "346c40c1fb91cf1458ad8d449df158001872af9f7712b8372f99ae337c0b41d3",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 3263,
-        "updated_utc": "2026-09-20T07:11:47.197787+00:00"
+        "step": 5001,
+        "updated_utc": "2026-09-20T07:51:16.535455+00:00"
       }
     }
   ],

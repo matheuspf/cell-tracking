@@ -27,17 +27,13 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T07:11:48.633338+00:00",
+  "updated_utc": "2026-09-20T07:51:18.013219+00:00",
   "upstream_completed_cells": 3,
   "upstream_reused_cells": [],
   "verified_active_processes": [
     {
       "pid": 1515377,
       "role": "pipeline/controller_pid"
-    },
-    {
-      "pid": 1817138,
-      "role": "head-prefetch-wait/controller_pid"
     },
     {
       "pid": 417788,
@@ -58,10 +54,6 @@
     {
       "pid": 1297641,
       "role": "source-prefetch/6bba/20260918"
-    },
-    {
-      "pid": 1817138,
-      "role": "head-prefetch/44b6/314159"
     }
   ],
   "weights_published": false

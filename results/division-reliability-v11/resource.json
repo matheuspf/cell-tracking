@@ -12,6 +12,17 @@
       },
       "sum_seconds": 326.1637313490028
     },
+    "calibrate/C11": {
+      "executions": 1,
+      "maximum_seconds": 346.51106672100286,
+      "median_seconds": 346.51106672100286,
+      "minimum_seconds": 346.51106672100286,
+      "p95_seconds": 346.51106672100286,
+      "status_counts": {
+        "complete": 1
+      },
+      "sum_seconds": 346.51106672100286
+    },
     "calibration-predict/C01": {
       "executions": 20,
       "maximum_seconds": 978.9900511670021,
@@ -22,6 +33,17 @@
         "complete": 20
       },
       "sum_seconds": 5235.719348248007
+    },
+    "calibration-predict/C11": {
+      "executions": 10,
+      "maximum_seconds": 1073.7013936449948,
+      "median_seconds": 524.1733961655009,
+      "minimum_seconds": 184.74831886599713,
+      "p95_seconds": 1073.7013936449948,
+      "status_counts": {
+        "complete": 10
+      },
+      "sum_seconds": 5615.261552984994
     },
     "fit-linear": {
       "executions": 3,
@@ -69,15 +91,15 @@
       "sum_seconds": 1.0180469839979196
     },
     "package/C00": {
-      "executions": 1,
+      "executions": 2,
       "maximum_seconds": 1.0311359129991615,
-      "median_seconds": 1.0311359129991615,
-      "minimum_seconds": 1.0311359129991615,
+      "median_seconds": 1.0237355280005431,
+      "minimum_seconds": 1.0163351430019247,
       "p95_seconds": 1.0311359129991615,
       "status_counts": {
-        "complete": 1
+        "complete": 2
       },
-      "sum_seconds": 1.0311359129991615
+      "sum_seconds": 2.0474710560010863
     },
     "package/C01": {
       "executions": 2,
@@ -89,6 +111,17 @@
         "complete": 2
       },
       "sum_seconds": 2.0359557229930942
+    },
+    "package/C11": {
+      "executions": 1,
+      "maximum_seconds": 1.0159844790032366,
+      "median_seconds": 1.0159844790032366,
+      "minimum_seconds": 1.0159844790032366,
+      "p95_seconds": 1.0159844790032366,
+      "status_counts": {
+        "complete": 1
+      },
+      "sum_seconds": 1.0159844790032366
     },
     "predict/C00/calibration": {
       "executions": 20,
@@ -102,15 +135,15 @@
       "sum_seconds": 3022.834200444995
     },
     "predict/C00/fit": {
-      "executions": 173,
+      "executions": 258,
       "maximum_seconds": 314.4771287659969,
-      "median_seconds": 276.6712802020047,
-      "minimum_seconds": 3.0578785079997033,
-      "p95_seconds": 306.73554677599896,
+      "median_seconds": 183.5470817275018,
+      "minimum_seconds": 3.0445569779985817,
+      "p95_seconds": 304.4971164189992,
       "status_counts": {
-        "complete": 173
+        "complete": 258
       },
-      "sum_seconds": 31181.888768203986
+      "sum_seconds": 37976.342847272004
     },
     "prepare-actions/calibration": {
       "executions": 20,
@@ -124,15 +157,15 @@
       "sum_seconds": 4029.640905365006
     },
     "prepare-actions/fit": {
-      "executions": 145,
+      "executions": 151,
       "maximum_seconds": 697.3771959009973,
-      "median_seconds": 168.42275284900097,
-      "minimum_seconds": 1.0189764540045871,
+      "median_seconds": 155.95635777500138,
+      "minimum_seconds": 1.0163982150043012,
       "p95_seconds": 538.4848969009981,
       "status_counts": {
-        "complete": 145
+        "complete": 151
       },
-      "sum_seconds": 26966.336287227983
+      "sum_seconds": 26972.681645671983
     },
     "report": {
       "executions": 1,
@@ -157,21 +190,21 @@
       "sum_seconds": 120.24113555000076
     },
     "train-compact": {
-      "executions": 2,
-      "maximum_seconds": 5381.532455732995,
-      "median_seconds": 2695.8681255514966,
+      "executions": 3,
+      "maximum_seconds": 5649.757518372004,
+      "median_seconds": 5381.532455732995,
       "minimum_seconds": 10.20379536999826,
-      "p95_seconds": 5381.532455732995,
+      "p95_seconds": 5649.757518372004,
       "status_counts": {
-        "complete": 2
+        "complete": 3
       },
-      "sum_seconds": 5391.736251102993
+      "sum_seconds": 11041.493769474997
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
-  "cpu_job_resource_receipt_files": 1038,
-  "cpu_job_resource_samples": 465,
-  "current_durable_free_bytes": 201502142464,
+  "cpu_job_resource_receipt_files": 1174,
+  "cpu_job_resource_samples": 569,
+  "current_durable_free_bytes": 200248889344,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -179,10 +212,10 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 0.3642057482063713,
-    "inference": 0.490706015784596,
+    "event_mining": 0.40217030824302025,
+    "inference": 0.5799426336668866,
     "pilot": 0.045588012047780166,
-    "upstream": 7.899089407739124
+    "upstream": 8.411375460131103
   },
   "inherited_hours": 19.307391920998594,
   "inherited_lifetime": {
@@ -250,12 +283,12 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 75379,
+  "lease_count": 83591,
   "lease_status_counts": {
-    "complete": 75376,
+    "complete": 83588,
     "failed": 3
   },
-  "lifetime_v10_plus_v11_conservative_hours": 28.781357748373395,
+  "lifetime_v10_plus_v11_conservative_hours": 29.420844978684315,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -276,20 +309,20 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 3.075348024998675,
-  "new_study_gpu_lease_hours": 9.473965827374803,
-  "new_study_measured_journal_hours": 8.80769639958202,
+  "new_study_gpu_lease_hours": 10.113453057685721,
+  "new_study_measured_journal_hours": 9.447183629892939,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T06:13:22.283744+00:00",
-      "gpu_lease_seconds": 204.0368434619886,
-      "last_lease_finished_utc": "2026-09-20T07:11:47.501003+00:00",
+      "gpu_lease_seconds": 340.7092595939248,
+      "last_lease_finished_utc": "2026-09-20T07:47:18.809454+00:00",
       "lease_status_counts": {
-        "complete": 1216
+        "complete": 2000
       },
-      "observed_elapsed_seconds": 3505.217259,
+      "observed_elapsed_seconds": 5636.52571,
       "pid": 2316112,
-      "process_verified_alive": true,
-      "recorded_optimizer_leases": 1216,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 2000,
       "seed": 314159,
       "source": "44b6",
       "stage": "event_mining"
@@ -356,15 +389,15 @@
     },
     {
       "first_lease_started_utc": "2026-09-20T05:59:30.212593+00:00",
-      "gpu_lease_seconds": 3195.914947087069,
-      "last_lease_finished_utc": "2026-09-20T07:11:47.192045+00:00",
+      "gpu_lease_seconds": 5040.144735698188,
+      "last_lease_finished_utc": "2026-09-20T07:51:16.529407+00:00",
       "lease_status_counts": {
-        "complete": 3263
+        "complete": 5001
       },
-      "observed_elapsed_seconds": 4336.979452,
+      "observed_elapsed_seconds": 6706.316814,
       "pid": 2253280,
       "process_verified_alive": true,
-      "recorded_optimizer_leases": 3263,
+      "recorded_optimizer_leases": 5001,
       "seed": 314159,
       "source": "6bba",
       "stage": "upstream"
@@ -402,11 +435,11 @@
       "sum_seconds": 18785.190865835008
     },
     "C00/6bba/20260918": {
-      "completed_clips": 51,
+      "completed_clips": 75,
       "maximum_seconds": 312.3059863660019,
-      "median_seconds": 299.3464964090017,
-      "p95_seconds": 311.1437899399971,
-      "sum_seconds": 14951.84951042301
+      "median_seconds": 280.2272148100019,
+      "p95_seconds": 310.57827674099826,
+      "sum_seconds": 21506.09448704803
     }
   },
   "original_source_bank_wall_time": {
@@ -550,7 +583,7 @@
   "sampled_maxima": {
     "peak_allocated_bytes": 7324746240,
     "peak_reserved_bytes": 8980004864,
-    "rss_peak_bytes": 36672036864,
+    "rss_peak_bytes": 38418751488,
     "total_device_peak_bytes": 15348072448
   },
   "sampled_minima": {
@@ -558,7 +591,7 @@
     "host_available_min_bytes": 32764567552
   },
   "source_bank_timing_scope": "One original preparation per completed clip, excluding verified-cache reuse. Includes enumeration, crops, labels and full source scoring; sums overlap for concurrent clips.",
-  "study_cpu_rss_peak_bytes": 36770664448,
+  "study_cpu_rss_peak_bytes": 38490300416,
   "study_host_available_min_bytes": 32729440256,
   "timing_scope": {
     "checkpoint": "Latest closed-file creation-to-last-write samples in training_summary.json; early overwritten checkpoints are not retrospectively timed",
@@ -566,5 +599,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-20T07:11:48.501720+00:00"
+  "updated_utc": "2026-09-20T07:51:17.857700+00:00"
 }
