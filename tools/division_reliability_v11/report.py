@@ -83,14 +83,21 @@ def training():
                 hp=folder/'history.jsonl'
                 if hp.exists():
                     count=0;sums=Counter();first=last=None;fallback=supervised=proposal=hard_fallback=0;visits=set();cache_peak=0;probabilities=[]
+                    objective_updates=Counter();denominator_totals=Counter();slot_totals=Counter();event_updates=identity_only_updates=0
                     with hp.open() as f:
                         for line in f:
                             r=json.loads(line);count+=1;first=first or r;last=r
                             sums['gpu_lease_seconds']+=r.get('gpu_lease_seconds',0);sums['input_seconds']+=r.get('io_seconds',0)
+                            denominators=r.get('denominators',{})
+                            denominator_totals.update(denominators)
+                            objective_updates.update(k for k,v in denominators.items() if v>0)
+                            event_updates+=int(any(denominators.get(k,0)>0 for k in ('occurrence','ranking')))
+                            identity_only_updates+=int(denominators.get('identity',0)>0 and not any(denominators.get(k,0)>0 for k in ('occurrence','ranking')))
                             for g in r.get('groups',[]):
                                 fallback+=int(g['fallback']);supervised+=g['supervised'];proposal+=g['proposal']
                             for g in r.get('selection',[]):
                                 visits.add((g['slot'],g['clip'],g['key']));hard_fallback+=int(g.get('hard_fallback',False))
+                                slot_totals[g['slot']]+=1
                                 probabilities.append(g['selection_probability'])
                             cache_peak=max(cache_peak,r.get('observation_cache_bytes',0))
                     keys=('step','loss','detection','association','losses','lr','denominators')
@@ -100,6 +107,13 @@ def training():
                         uniform_hard_slot_fallback_groups=hard_fallback,observation_cache_peak_bytes=cache_peak,
                         group_selection_probability_range=[min(probabilities),max(probabilities)] if probabilities else None,
                         history_sha256=sha(hp),full_history_committed=False)
+                    if kind=='compact':
+                        result['history_summary'].update(
+                            unique_group_visits_scope='Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots.',
+                            objective_updates=dict(objective_updates),eligible_group_denominator_totals=dict(denominator_totals),
+                            sampled_slot_totals=dict(slot_totals),actual_event_supervised_updates=event_updates,
+                            actual_identity_only_supervised_updates=identity_only_updates,
+                            identity_prefix_scope='Identity supervision with the separately logged label-free image consistency term.')
                 cell[kind]=result
             linear=WORK/'fits'/source/str(seed)/'linear/model.json'
             if linear.exists():
