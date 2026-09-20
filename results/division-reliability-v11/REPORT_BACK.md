@@ -1,6 +1,8 @@
-# Division reliability v11 — running
+# Division reliability v11 — blocked
 
-Actual status at 2026-09-20T22:35:28.706082+00:00: 4/4 C00 fits, 2/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-20T23:17:47.271339+00:00: 4/4 C00 fits, 4/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+
+The host-memory guard stopped 6bba/20260918 C11 at recorded update 321 when available RAM reached 9.950 GiB, below the registered 10 GiB floor. The durable checkpoint is update 294; 27 updates require replay. Recovery status: waiting_for_memory; interruption-specific replay check: pending_memory_admission. All closed GPU leases remain charged, and no unclosed lease required an extra charge. host_memory_interruption.json contains preservation hashes, the resource trigger and recovery evidence. Restart admission requires at least 18.5 GiB of idle available host RAM for 60 seconds, plus no existing owner. This is a measured restart buffer; the active-worker floor remains 10 GiB. Completion ETA is unresolved while memory blocks training.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -12,7 +14,7 @@ C01/C11 independently edit their own C00 graph. Their comparison tests practical
 
 The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.
 
-New v11 GPU lease accounting: 11.8495 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
+New v11 GPU lease accounting: 11.8678 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
 
 Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.
 
@@ -46,3 +48,5 @@ The resume proof is a fresh-process 10+10 versus uninterrupted 20-update compari
 Current next decision: Finish the locked matrix using the existing owners/checkpoints; do not select a new model from partial source or target outcomes.
 
 No merge, Kaggle submission, weight publication, all-data refit or unrelated handover study was launched.
+
+1 unresolved stage failure/blocker receipt(s) are listed in STATUS.json; missing metrics have not been replaced by C00 or P0 values.

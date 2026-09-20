@@ -5,40 +5,59 @@
     "exposure": "exposure_manifest.json",
     "interpretation": "interpretation.json",
     "predictions": "prediction_manifest.json",
+    "resource_interruption": "host_memory_interruption.json",
     "resources": "resource.json",
     "training": "training_summary.json"
   },
-  "blocked_stages": [],
+  "blocked_stages": [
+    {
+      "arm": null,
+      "clip": null,
+      "exit_code": -15,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resource_violation": {
+        "durable_free_bytes": 185674973184,
+        "durable_free_min_bytes": 185671479296,
+        "host_available_bytes": 10683490304,
+        "host_available_min_bytes": 10683490304,
+        "study_rss_bytes": 5451399168,
+        "study_rss_peak_bytes": 5451399168,
+        "utc": "2026-09-20T23:04:52.052146+00:00",
+        "worker_rss_peak_bytes": 5388050432
+      },
+      "seed": 20260918,
+      "source": "6bba",
+      "stage": "train-compact",
+      "status": "failed"
+    }
+  ],
   "clean_provenance_passed": false,
   "cold_inference_passed": false,
   "compact_completed_cells": 2,
   "compact_promotion_gate_passed": false,
   "completed_score_rows": 0,
   "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
-  "linear_completed_cells": 2,
+  "linear_completed_cells": 4,
   "next_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 report",
   "pooled_095_milestone_reached": false,
   "required_score_rows": 1194,
+  "resource_resume_precondition": {
+    "existing_owner_must_be_absent": true,
+    "minimum_idle_host_available_gib": 18.5,
+    "scope": "Conservative restart admission for one compact trainer, using the measured 5.018 GiB process peak, a 25% margin, controller overhead and spare headroom. The registered active-worker host floor remains 10 GiB.",
+    "stable_seconds": 60
+  },
   "resume_command_when_no_existing_owner": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 run --workers 3",
   "resume_proof": "Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.",
   "scored": false,
-  "status": "running",
+  "status": "blocked",
   "strong_095_milestone_reached": false,
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T22:35:28.706082+00:00",
+  "updated_utc": "2026-09-20T23:17:47.271339+00:00",
   "upstream_completed_cells": 4,
   "upstream_reused_cells": [],
-  "verified_active_processes": [
-    {
-      "pid": 1225560,
-      "role": "source6-head-overlap/controller_pid"
-    },
-    {
-      "pid": 22068,
-      "role": "pipeline/controller_pid"
-    }
-  ],
+  "verified_active_processes": [],
   "weights_published": false
 }

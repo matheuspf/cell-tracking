@@ -6,6 +6,8 @@
     "Target graph cost comparable to measured source passes",
     "No new implementation or resource failure"
   ],
+  "current_completion_eta": null,
+  "estimate_scope": "The previous 96\u2013144 hour range assumes approximately two graph workers and excludes resource waits. Current memory can support fewer workers; no completion time is asserted while training is blocked.",
   "estimated_utc": "2026-09-20T22:19:51.541445+00:00",
   "forecast_worker_counts": {
     "C00_prediction": 4,
@@ -49,7 +51,8 @@
     96,
     144
   ],
-  "status": "estimate_not_completion",
+  "resource_wait_started_utc": "2026-09-20T23:04:52.372179+00:00",
+  "status": "blocked_waiting_for_memory",
   "supersedes": "runtime_estimate_20260920_1601.json",
   "target_scores_opened": false
 }

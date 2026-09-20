@@ -1,0 +1,200 @@
+{
+  "all_compared_fields_exact": null,
+  "checkpoint": {
+    "all_state_present": true,
+    "bank_identity": "40a21090fc63d355c9eb8647df9d8eff7fe2933031c194ff03a6a78c0c86db2e",
+    "checkpoint_sha256": "958a846921661f2e05f8a7634ba4d0f047eac3198081dddf832caa85831097a3",
+    "durable_step": 294,
+    "history_sha256": "8c614e1ec04f2105a7e2efc4653799a1478916636374cf6c0b0cee1ca631a8b5",
+    "last_recorded_step": 321,
+    "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+    "mined": false,
+    "observed_utc": "2026-09-20T23:06:40.363764+00:00",
+    "seed": 20260918,
+    "source": "6bba",
+    "state_fields": [
+      "bank_identity",
+      "cpu_rng",
+      "cuda_rng",
+      "hard",
+      "lock_identity",
+      "mined",
+      "model",
+      "optimizer",
+      "python_rng",
+      "sampler",
+      "scaler",
+      "scheduler",
+      "seed",
+      "source",
+      "step",
+      "visits"
+    ],
+    "status": "durable_checkpoint_verified",
+    "updates_to_replay": 27
+  },
+  "current_available_gib": 12.901893615722656,
+  "durable_checkpoint_update": 294,
+  "frozen_reference_files_unchanged": true,
+  "interrupted_utc": "2026-09-20T23:04:52.372179+00:00",
+  "last_recorded_update": 321,
+  "observed_utc": "2026-09-20T23:17:44.480489+00:00",
+  "preservation": {
+    "host_available_gib": 14.064449310302734,
+    "observed_utc": "2026-09-20T23:05:45.401443+00:00",
+    "records": [
+      {
+        "bytes": 2270325,
+        "path": "fits/6bba/20260918/compact/resume.pt",
+        "sha256": "958a846921661f2e05f8a7634ba4d0f047eac3198081dddf832caa85831097a3"
+      },
+      {
+        "bytes": 2633454,
+        "path": "fits/6bba/20260918/compact/history.jsonl",
+        "sha256": "8c614e1ec04f2105a7e2efc4653799a1478916636374cf6c0b0cee1ca631a8b5"
+      },
+      {
+        "bytes": 149,
+        "path": "fits/6bba/20260918/compact/progress.json",
+        "sha256": "f103b32f9e7f0e3c5d9f35d4de6cfc0e5d589477e39813ad538b654ff66a0bd6"
+      },
+      {
+        "bytes": 715,
+        "path": "controller/jobs/train-compact-6bba-20260918.json",
+        "sha256": "fcf862863a13a4e3de155f0452435766e7f05c0dd224b639cedcdf240f759c1d"
+      },
+      {
+        "bytes": 320,
+        "path": "controller/jobs/train-compact-6bba-20260918.resources.json",
+        "sha256": "08cbd6ccccd8c013c1590e6f70f112b7720c1d2f343b244be131b32948a3b572"
+      },
+      {
+        "bytes": 0,
+        "path": "controller/jobs/train-compact-6bba-20260918.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 222,
+        "path": "controller/pipeline.json",
+        "sha256": "7afbecffc8219fb7c32d89aa1ce6bfca97149423ce2e6424cba6014167091040"
+      },
+      {
+        "bytes": 243,
+        "path": "controller/options.json",
+        "sha256": "0ea35c59274e3b9c9b8d0392298bb9ef9377194612a7c637b4cd33596102990f"
+      },
+      {
+        "bytes": 285,
+        "path": "controller/source6-head-overlap.json",
+        "sha256": "413f2bfe8bcd340939f832c374682c3a8a5e7090df7932d6a663166701fbe6c6"
+      }
+    ],
+    "seed": 20260918,
+    "source": "6bba",
+    "status": "preserved_after_host_memory_guard",
+    "training_worker_verified_exited": true
+  },
+  "preservation_check": {
+    "P0_changed": false,
+    "frozen_core_unchanged": {
+      "common.py": true,
+      "data.py": true,
+      "deterministic.py": true,
+      "graphs.py": true,
+      "guard.py": true,
+      "preprocess.py": true,
+      "provenance.py": true,
+      "resources.py": true,
+      "train_upstream.py": true,
+      "upstream.py": true
+    },
+    "observed_utc": "2026-09-20T23:09:47.805575+00:00",
+    "status": "passed",
+    "user_report_hashes": {
+      "results/public946-minimal-generalization-v1/experiment_matrix.csv": "53b754c9982a4fcd3b8ee0b3ebe687ea7a6f1e2d494c7c1ffea7e2647cd9cb95",
+      "results/public946-minimal-generalization-v1/per_embryo_scores.csv": "6749423ab93208459dec208571e27979463e97b31123dac5b067d7cb63836034"
+    },
+    "v10_artifacts_checked": 107,
+    "v10_changed": []
+  },
+  "previous_resume_proofs": "production_resume.json and validation.json retain the already executed upstream and mixed compact fresh-process proofs. The new 27-update interruption replay has not yet run.",
+  "replay_status": "pending_memory_admission",
+  "replayed_updates_compared": 0,
+  "resource_reconciliation": {
+    "additional_conservative_charge_seconds": 0.0,
+    "charged_seconds": 65.882457631953,
+    "closed_leases": 321,
+    "closed_statuses": [
+      "complete"
+    ],
+    "observed_utc": "2026-09-20T23:08:42.173941+00:00",
+    "seed": 20260918,
+    "source": "6bba",
+    "status": "reconciled_no_unclosed_lease",
+    "unclosed_lease": false
+  },
+  "resume_admission": {
+    "existing_owner_must_be_absent": true,
+    "minimum_idle_host_available_gib": 18.5,
+    "scope": "Conservative restart admission for one compact trainer, using the measured 5.018 GiB process peak, a 25% margin, controller overhead and spare headroom. The registered active-worker host floor remains 10 GiB.",
+    "stable_seconds": 60
+  },
+  "resume_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 run --workers 3",
+  "scientific_changes": false,
+  "seed": 20260918,
+  "source": "6bba",
+  "source_only_independent_work": {
+    "admission": {
+      "additional_admission_buffer_gib": 0.25,
+      "host_available_before_gib": 15.473491668701172,
+      "host_floor_gib": 10,
+      "isolated_controller_allowance_gib": 0.25,
+      "measured_same_source_other_seed_peak_gib": 2.9810256958007812,
+      "no_other_v11_model_worker": true,
+      "observed_utc": "2026-09-20T23:11:39.028518+00:00",
+      "peak_multiplier": 1.25,
+      "projected_single_stage_gib": 3.9762821197509766,
+      "scope": "Independent source-only CPU C01 fit; no extra compact fit, calibration or target inference",
+      "seed": 314159,
+      "source": "6bba",
+      "status": "qualified",
+      "training_pipeline_stopped": true
+    },
+    "fit_receipt_sha256": "6437e8a01a1233bd9c93686518ca668495af554dcb34e8254c2f251f97a6962a",
+    "fourth_C01_fit_completed": true,
+    "resource_measurement": {
+      "durable_free_bytes": 185606426624,
+      "durable_free_min_bytes": 185606365184,
+      "host_available_bytes": 14280597504,
+      "host_available_min_bytes": 14134239232,
+      "study_rss_bytes": 2918203392,
+      "study_rss_peak_bytes": 2918203392,
+      "utc": "2026-09-20T23:11:52.585469+00:00",
+      "worker_rss_peak_bytes": 2877415424
+    },
+    "seed": 314159,
+    "source": "6bba"
+  },
+  "stage": "train-compact",
+  "status": "waiting_for_memory",
+  "target_scores_opened": false,
+  "trigger": {
+    "exit_code": -15,
+    "measured_available_gib": 9.949775695800781,
+    "measured_study_rss_gib": 5.0770111083984375,
+    "required_available_gib": 10.0,
+    "resource_violation": {
+      "durable_free_bytes": 185674973184,
+      "durable_free_min_bytes": 185671479296,
+      "host_available_bytes": 10683490304,
+      "host_available_min_bytes": 10683490304,
+      "study_rss_bytes": 5451399168,
+      "study_rss_peak_bytes": 5451399168,
+      "utc": "2026-09-20T23:04:52.052146+00:00",
+      "worker_rss_peak_bytes": 5388050432
+    },
+    "worker_rss_peak_gib": 5.018013000488281
+  },
+  "updates_to_replay": 27,
+  "weights_changed_by_recovery": false
+}

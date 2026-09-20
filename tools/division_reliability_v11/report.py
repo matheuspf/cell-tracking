@@ -415,6 +415,7 @@ def run():
     if (WORK/'checks/controller_archive_reuse.json').exists():validation['controller_archive_reuse']=read(WORK/'checks/controller_archive_reuse.json')
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
     if (RESULTS/'host_restart_resume.json').exists():validation['host_restart_resume']=read(RESULTS/'host_restart_resume.json')
+    if (RESULTS/'host_memory_interruption.json').exists():validation['host_memory_interruption']=read(RESULTS/'host_memory_interruption.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
@@ -454,7 +455,10 @@ def run():
     blocked=[]
     for p in (WORK/'controller/jobs').glob('*.json'):
         r=read(p)
-        if r.get('status') in ('failed','blocked'):blocked.append({k:r.get(k) for k in ('stage','source','seed','arm','clip','status','exit_code','log_sha256')})
+        if r.get('status') in ('failed','blocked'):
+            item={k:r.get(k) for k in ('stage','source','seed','arm','clip','status','exit_code','log_sha256')}
+            if r.get('resource_violation'):item['resource_violation']=r['resource_violation']
+            blocked.append(item)
     for p in (WORK/'blocked_cells').glob('*.json'):blocked.append(read(p))
     command='PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11'
     milestone=complete and all(r['status']=='scored' and r['score']>=.95 for r in pooled if r['arm']=='C11')
@@ -464,6 +468,8 @@ def run():
         (r.get('newly_recovered_division_tp',0)>0 or r['edge_tp']>base_by_cell[r['source'],r['seed']]['edge_tp'] or
          r['edge_fp']<base_by_cell[r['source'],r['seed']]['edge_fp']) for r in directional if r['arm']=='C11')
     promising=complete and all(r['delta_C01']>=.002 for r in pooled if r['arm']=='C11') and all(r['delta_C01']>=-.001 and r['delta_C00']>=-.001 for r in directional if r['arm']=='C11') and beneficial
+    memory=read(RESULTS/'host_memory_interruption.json') if (RESULTS/'host_memory_interruption.json').exists() else None
+    waiting_for_memory=bool(memory and memory['status']=='waiting_for_memory' and blocked and not active)
     status=dict(status='complete' if complete else 'running' if active else 'blocked' if blocked else 'partial',updated_utc=now(),
         trained=trained,scored=scored,clean_provenance_passed=provenance,target_freeze_passed=frozen,all_four_cells_complete=complete,
         cold_inference_passed=cold_pass,upstream_reused_cells=[],blocked_stages=blocked,verified_active_processes=active,
@@ -476,6 +482,10 @@ def run():
         resume_proof='Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.',
         artifacts=dict(training='training_summary.json',predictions='prediction_manifest.json',resources='resource.json',exposure='exposure_manifest.json',interpretation='interpretation.json'),
         P0_modified=False,submitted_to_kaggle=False,weights_published=False)
+    if waiting_for_memory:
+        status['resource_resume_precondition']=memory['resume_admission']
+        status['next_command']=command+' report'
+        status['artifacts']['resource_interruption']='host_memory_interruption.json'
     write(RESULTS/'STATUS.json',public(status))
     lines=[f'# Division reliability v11 — {status["status"]}',
         '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits, {status["linear_completed_cells"]}/4 C01 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
@@ -488,6 +498,19 @@ def run():
         '', 'Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.',
         '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Early pilot witnesses bypassed the global 2% cap. Later witnesses on retained C00 graphs use the registered solver and cap. Both kinds use labels to choose diagnostic edits and are not learned policies or achievable score bounds. Runtime tests and planning contracts are not evidence of trained accuracy.',
         '']
+    if memory:
+        paragraph=(f'The host-memory guard stopped {memory["source"]}/{memory["seed"]} C11 at recorded update {memory["last_recorded_update"]} '
+            f'when available RAM reached {memory["trigger"]["measured_available_gib"]:.3f} GiB, below the registered 10 GiB floor. '
+            f'The durable checkpoint is update {memory["durable_checkpoint_update"]}; {memory["updates_to_replay"]} updates require replay. '
+            f'Recovery status: {memory["status"]}; interruption-specific replay check: {memory["replay_status"]}. '
+            'All closed GPU leases remain charged, and no unclosed lease required an extra charge. '
+            'host_memory_interruption.json contains preservation hashes, the resource trigger and recovery evidence.')
+        if waiting_for_memory:
+            paragraph += (f' Restart admission requires at least {memory["resume_admission"]["minimum_idle_host_available_gib"]:g} GiB '
+                f'of idle available host RAM for {memory["resume_admission"]["stable_seconds"]} seconds, plus no existing owner. '
+                'This is a measured restart buffer; the active-worker floor remains 10 GiB. Completion ETA is unresolved while memory blocks training.')
+            lines[3:3]=['',paragraph]
+        else:lines += [paragraph,'']
     if (RESULTS/'compact_precision_repair.json').exists():
         lines += ['A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.', '']
     if (RESULTS/'host_restart_resume.json').exists():

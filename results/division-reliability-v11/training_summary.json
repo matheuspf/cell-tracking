@@ -453,19 +453,133 @@
     },
     {
       "compact": {
-        "history_summary": {},
+        "durable_step": 294,
+        "history_summary": {
+          "actual_event_supervised_updates": 0,
+          "actual_identity_only_supervised_updates": 321,
+          "eligible_group_denominator_totals": {
+            "consistency": 10272,
+            "identity": 10272,
+            "occurrence": 0,
+            "ranking": 0
+          },
+          "first": {
+            "denominators": {
+              "consistency": 32,
+              "identity": 32,
+              "occurrence": 0,
+              "ranking": 0
+            },
+            "losses": {
+              "consistency": 1.4560980656083081e-09,
+              "identity": 0.6473436411470175,
+              "occurrence": 0.0,
+              "ranking": 0.0
+            },
+            "lr": 1.4999999999999998e-06,
+            "step": 1
+          },
+          "full_history_committed": false,
+          "group_selection_probability_range": [
+            5.035449564937158e-06,
+            4.817419789960497e-05
+          ],
+          "history_sha256": "8c614e1ec04f2105a7e2efc4653799a1478916636374cf6c0b0cee1ca631a8b5",
+          "identity_prefix_scope": "Identity supervision with the separately logged label-free image consistency term.",
+          "last": {
+            "denominators": {
+              "consistency": 32,
+              "identity": 32,
+              "occurrence": 0,
+              "ranking": 0
+            },
+            "losses": {
+              "consistency": 4.721564915755039e-05,
+              "identity": 0.009526197470222542,
+              "occurrence": 0.0,
+              "ranking": 0.0
+            },
+            "lr": 0.0002992526013747579,
+            "step": 321
+          },
+          "objective_updates": {
+            "consistency": 321,
+            "identity": 321
+          },
+          "observation_cache_peak_bytes": 3455302157,
+          "proposal_incoming_groups": 0,
+          "query_fallback_batches": 0,
+          "recorded_updates": 321,
+          "sampled_slot_totals": {
+            "identity": 10272
+          },
+          "supervised_incoming_groups": 0,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
+          "totals": {
+            "gpu_lease_seconds": 65.882457631953,
+            "input_seconds": 8.00641769696449
+          },
+          "uniform_hard_slot_fallback_groups": 0,
+          "unique_group_visits": 9572,
+          "unique_group_visits_scope": "Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots."
+        },
+        "horizon": 4000,
         "interrupted_update_attempts": {
           "archived_segments": 0,
           "recorded_gpu_lease_seconds": 0,
           "recorded_updates": 0,
           "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
+        "mined": false,
+        "pid": 1325409,
         "process_verified_alive": false,
-        "resume": null,
-        "status": "pending"
+        "reason": "Registered host available-memory floor crossed; see host_memory_interruption.json",
+        "resume": {
+          "bytes": 2270325,
+          "durable_step": 294,
+          "file_creation_to_last_write_seconds": 0.005406719,
+          "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+          "optimizer_present": true,
+          "path": "work/division-reliability-v11/fits/6bba/20260918/compact/resume.pt",
+          "sampler_and_rng_present": true,
+          "scheduler": {
+            "horizon": 4000,
+            "step": 294
+          },
+          "seed": 20260918,
+          "sha256": "958a846921661f2e05f8a7634ba4d0f047eac3198081dddf832caa85831097a3",
+          "source": "6bba",
+          "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
+        },
+        "status": "blocked",
+        "step": 321,
+        "updated_utc": "2026-09-20T23:08:42.174205+00:00",
+        "updates_to_replay": 27
       },
       "linear": {
-        "status": "pending"
+        "census": {
+          "negative_groups": 86898,
+          "positive_events": 101,
+          "positive_groups": 227
+        },
+        "diagnostics": [
+          {
+            "converged": true,
+            "gradient_max": 6.179518996659271e-07,
+            "iterations": 17,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 0.009003920003398539
+          },
+          {
+            "converged": true,
+            "gradient_max": 4.222068930858757e-06,
+            "iterations": 7,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 2.070535849725345
+          }
+        ],
+        "sha256": "760de346a4db31885839c754e4ae982fcb5827e06fad394044ccbf2fb482041a",
+        "status": "fitted"
       },
       "seed": 20260918,
       "source": "6bba",
@@ -555,7 +669,29 @@
         "status": "pending"
       },
       "linear": {
-        "status": "pending"
+        "census": {
+          "negative_groups": 83349,
+          "positive_events": 101,
+          "positive_groups": 230
+        },
+        "diagnostics": [
+          {
+            "converged": true,
+            "gradient_max": 4.860716033387616e-06,
+            "iterations": 16,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 0.009336063314994657
+          },
+          {
+            "converged": true,
+            "gradient_max": 2.5951030836008845e-06,
+            "iterations": 7,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 2.0752292605905773
+          }
+        ],
+        "sha256": "6437e8a01a1233bd9c93686518ca668495af554dcb34e8254c2f251f97a6962a",
+        "status": "fitted"
       },
       "seed": 314159,
       "source": "6bba",
