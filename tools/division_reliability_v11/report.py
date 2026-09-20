@@ -355,6 +355,7 @@ def run():
         proof=read(WORK/'checks/empty_graph/receipt.json')
         validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
+    if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')
@@ -377,6 +378,9 @@ def run():
         r=read(p)
         for key in ('controller_pid','worker_pid'):
             if alive(r.get(key)):active.append(dict(role=p.stem+'/'+key,pid=r[key]))
+    for p in (WORK/'controller/source-prefetch').glob('*/*/progress.json'):
+        r=read(p)
+        if alive(r.get('pid')):active.append(dict(role='source-prefetch/'+r['source']+'/'+str(r['seed']),pid=r['pid']))
     blocked=[]
     for p in (WORK/'controller/jobs').glob('*.json'):
         r=read(p)

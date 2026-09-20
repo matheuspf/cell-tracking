@@ -6,6 +6,14 @@ from .provenance import artifact,validate,seal
 
 
 def run(source,seed,arm='C00'):
+    if arm!='C00':return _build(source,seed,arm)
+    from .source_prefetch import ownership,await_workers
+    with ownership(source,seed):
+        await_workers(source,seed)
+        return _build(source,seed,arm)
+
+
+def _build(source,seed,arm='C00'):
     from .readiness import require_production
     require_production('package');lock=read(RESULTS/'execution_lock.json')
     fit=WORK/'fits'/source/str(seed);up=read(fit/'upstream/final.json')

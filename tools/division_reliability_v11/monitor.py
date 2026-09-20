@@ -46,7 +46,11 @@ def run():
                     r=final or progress
                     fits.append(dict(source=source,seed=seed,kind=kind,status=r['status'],
                         step=r.get('updates',r.get('step')),process_verified_alive=alive((progress or {}).get('pid'))))
-    return dict(utc=now(),pipeline=optional(WORK/'controller/pipeline.json'),jobs=dict(jobs),fits=fits,running_jobs=running,
+    prepared=[]
+    for path in (WORK/'controller/source-prefetch').glob('*/*/progress.json'):
+        r=optional(path)
+        if r:prepared.append({**r,'process_verified_alive':alive(r.get('pid'))})
+    return dict(utc=now(),pipeline=optional(WORK/'controller/pipeline.json'),jobs=dict(jobs),fits=fits,running_jobs=running,source_preparation=prepared,
         sampled_study_rss_peak_gib=max((r['study_rss_peak_bytes']/2**30 for r in resources),default=None),
         sampled_host_available_min_gib=min((r['host_available_min_bytes']/2**30 for r in resources),default=None))
 

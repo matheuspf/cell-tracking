@@ -45,6 +45,21 @@ per-worker memory headroom; the 44 GiB study RSS limit, 10 GiB available-host
 floor and durable-space floor continue to apply. Changes affect newly dispatched
 jobs and never terminate existing workers. GPU work still shares one lease lock.
 
+A completed C00 cell later in the schedule can prepare its source observations
+while an earlier cell trains C11:
+
+```sh
+"$study_python" -m division_reliability_v11.source_prefetch --source 44b6 --seed 314159 --workers 3
+```
+
+Start this only after that cell's C00 final receipt exists. A per-cell ownership
+barrier makes the normal queue wait at its C00 package entry until preparation
+finishes. The helper runs the same guarded source predictions, action banks and
+diagnostics; it starts no training and opens no target data. Completed receipts
+are reused after parent verification, and original job/resource receipts are
+archived before the normal queue reuses them. It refuses a cell the live normal
+queue has already reached. Inspect `controller/source-prefetch/` for its state.
+
 Each upstream update is random full-source sampling. Durable state contains the
 optimizer, learning-rate step, Python/NumPy/CPU/CUDA RNG, and sampler state.
 Checkpoints occur every 250 updates or five minutes and at phase boundaries.
