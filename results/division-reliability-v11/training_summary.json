@@ -25,7 +25,7 @@
             1.2400486099055083e-05,
             0.05263157894736842
           ],
-          "history_sha256": "e691dbe613a4df4c44b2a207b652f0e21b36b39607cb5d88a8712cfc637c18ab",
+          "history_sha256": "43e2a93c8545df7d050f72696ca636726dfca3db18c1cb7d407d8a63729e6f77",
           "last": {
             "denominators": {
               "consistency": 32,
@@ -34,50 +34,50 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 0.00013995332845073705,
-              "identity": 0.0012795314313507333,
-              "occurrence": 0.3536855233833194,
-              "ranking": 0.08460402488708496
+              "consistency": 0.00015298494191640089,
+              "identity": 0.014703794064530484,
+              "occurrence": 0.2369122907257406,
+              "ranking": 0.0643194280564785
             },
-            "lr": 0.0001337262199419357,
-            "step": 2236
+            "lr": 8.897860338853625e-05,
+            "step": 2613
           },
           "observation_cache_peak_bytes": 815597464,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 2236,
+          "recorded_updates": 2613,
           "supervised_incoming_groups": 0,
           "totals": {
-            "gpu_lease_seconds": 415.4199524029573,
-            "input_seconds": 11.098700277903845
+            "gpu_lease_seconds": 484.3696155869875,
+            "input_seconds": 12.859431029919506
           },
           "uniform_hard_slot_fallback_groups": 6400,
-          "unique_group_visits": 24247
+          "unique_group_visits": 26250
         },
         "horizon": 4000,
         "mined": true,
         "pid": 2151729,
         "process_verified_alive": true,
         "resume": {
-          "bytes": 3876099,
-          "durable_step": 2217,
-          "file_creation_to_last_write_seconds": 0.011653347,
+          "bytes": 3943107,
+          "durable_step": 2561,
+          "file_creation_to_last_write_seconds": 0.013485144,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/20260918/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 2217
+            "step": 2561
           },
           "seed": 20260918,
-          "sha256": "cd8556d9b51f84f0a18817800f5e187ea355d81ef15d645d191f239cc42c4919",
+          "sha256": "6d0d4ff39b7c248a64e340ce598b8f2a19395e1f71cc00a3235d44f76fd0109d",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 2236,
-        "updated_utc": "2026-09-20T05:48:45.161703+00:00"
+        "step": 2613,
+        "updated_utc": "2026-09-20T06:04:37.864771+00:00"
       },
       "linear": {
         "census": {
@@ -262,7 +262,13 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "charged_gpu_lease_seconds": 8367.964862722816,
+        "charged_gpu_lease_seconds": 8854.984691042977,
+        "guard": {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
         "history_summary": {
           "first": {
             "association": 0.6719422340393066,
@@ -273,49 +279,50 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "53c81186b814ff03098213ea84451a5499da72e47c31c00cc17e1c367d9a1e9b",
+          "history_sha256": "5b99620ff50ebd0c500d3280120a5fd76b712efcd746925fc19c584cbdd33942",
           "last": {
-            "association": 0.0015285087283700705,
-            "detection": 0.6082622408866882,
-            "loss": 0.6097907423973083,
-            "lr": 1.7980971842500422e-06,
-            "step": 7565
+            "association": 0.0021782962139695883,
+            "detection": 0.6043412089347839,
+            "loss": 0.6065195202827454,
+            "lr": 1e-06,
+            "step": 8000
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 455272,
-          "query_fallback_batches": 7573,
-          "recorded_updates": 7565,
-          "supervised_incoming_groups": 511309,
+          "proposal_incoming_groups": 485091,
+          "query_fallback_batches": 7631,
+          "recorded_updates": 8000,
+          "supervised_incoming_groups": 541131,
           "totals": {
-            "gpu_lease_seconds": 8367.964862722816,
-            "input_seconds": 78.97769750752923
+            "gpu_lease_seconds": 8854.984691042977,
+            "input_seconds": 82.59321342452313
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
         },
-        "horizon": 8000,
-        "pid": 1410333,
-        "process_verified_alive": true,
+        "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+        "process_verified_alive": false,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 7483,
-          "file_creation_to_last_write_seconds": 0.014253985,
+          "durable_step": 8000,
+          "file_creation_to_last_write_seconds": 0.01452762,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/20260918/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 7483
+            "one_based_step": 8000
           },
           "seed": 20260918,
-          "sha256": "e116c1f38c383b065bcbbd2083f00b5e685295507e22f5cc21d63225b62624e6",
+          "sha256": "238e2d69eea7f61ededb966ef70ded146ca566c30b5cac614d42581bea881f76",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "status": "running",
-        "step": 7565,
-        "updated_utc": "2026-09-20T05:48:46.295272+00:00"
+        "seed": 20260918,
+        "source": "6bba",
+        "status": "trained",
+        "updates": 8000,
+        "weights_sha256": "0fc206f7390c540a6e1c42d3760200f07dbe35934d4f7dd18907aeba9c70ad14"
       }
     },
     {
@@ -332,10 +339,60 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "history_summary": {},
-        "process_verified_alive": false,
-        "resume": null,
-        "status": "pending"
+        "charged_gpu_lease_seconds": 231.43552759709564,
+        "history_summary": {
+          "first": {
+            "association": 0.7250267267227173,
+            "detection": 0.87176114320755,
+            "loss": 1.596787929534912,
+            "lr": 2.5e-07,
+            "step": 1
+          },
+          "full_history_committed": false,
+          "group_selection_probability_range": null,
+          "history_sha256": "bedb729afd8be651a458f468591bb13a440a885c87e84db95044a15a69e51dd2",
+          "last": {
+            "association": 0.4710354506969452,
+            "detection": 0.6421478390693665,
+            "loss": 1.1131832599639893,
+            "lr": 7.975000000000001e-05,
+            "step": 319
+          },
+          "observation_cache_peak_bytes": 0,
+          "proposal_incoming_groups": 0,
+          "query_fallback_batches": 2552,
+          "recorded_updates": 319,
+          "supervised_incoming_groups": 22137,
+          "totals": {
+            "gpu_lease_seconds": 231.43552759709564,
+            "input_seconds": 3.186539310059743
+          },
+          "uniform_hard_slot_fallback_groups": 0,
+          "unique_group_visits": 0
+        },
+        "horizon": 8000,
+        "pid": 2253280,
+        "process_verified_alive": true,
+        "resume": {
+          "bytes": 25070425,
+          "durable_step": 250,
+          "file_creation_to_last_write_seconds": 0.015808465,
+          "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+          "optimizer_present": true,
+          "path": "work/division-reliability-v11/fits/6bba/314159/upstream/resume.pt",
+          "sampler_and_rng_present": true,
+          "scheduler": {
+            "horizon": 8000,
+            "one_based_step": 250
+          },
+          "seed": 314159,
+          "sha256": "c90b04f7a316df355577decc0c09e213eb566d8f593c6e441785c1800176ba24",
+          "source": "6bba",
+          "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
+        },
+        "status": "running",
+        "step": 319,
+        "updated_utc": "2026-09-20T06:04:38.545124+00:00"
       }
     }
   ],

@@ -2,8 +2,8 @@
 from pathlib import Path
 import tempfile
 import unittest
-from .cold import compare
-from .common import read,write,sha
+from .cold import compare,execute_groups
+from .common import read,write,sha,Blocked
 
 
 class ColdComparisonTests(unittest.TestCase):
@@ -55,6 +55,37 @@ class ColdComparisonTests(unittest.TestCase):
 
     def test_changed_graph_artifact_fails(self):
         (self.cold/'graph.npz').write_bytes(b'changed');self.assertIn('cold_artifact_hashes_exact',self.result()['failed_checks'])
+
+
+class ColdDispatchTests(unittest.TestCase):
+    def test_bounded_workers_and_stable_complete_population(self):
+        import threading,time
+        lock=threading.Lock();barrier=threading.Barrier(3);active=set();seen=[];peaks=[];records=[]
+        parent=threading.get_ident()
+        def operation(group):
+            with lock:
+                self.assertNotIn(group,active);active.add(group);seen.append(group);peaks.append(len(active))
+            if group<3:barrier.wait(timeout=2)
+            time.sleep((6-group)*.002)
+            with lock:active.remove(group)
+            return [(group,'median'),(group,'crowded')]
+        def record(rows):
+            self.assertEqual(threading.get_ident(),parent);records.append(rows)
+            self.assertEqual(rows,sorted(rows,key=lambda x:x[0]))
+        expected=[(group,stratum) for group in range(6) for stratum in ('median','crowded')]
+        actual=execute_groups(range(6),operation,record)
+        self.assertEqual(actual,expected);self.assertEqual(sorted(seen),list(range(6)))
+        self.assertEqual(max(peaks),3);self.assertEqual(records[-1],expected);self.assertFalse(active)
+
+    def test_worker_failure_cannot_be_reported_as_completion(self):
+        def fail(group):raise RuntimeError('retained failure evidence')
+        with self.assertRaisesRegex(RuntimeError,'retained failure evidence'):
+            execute_groups([0],fail,lambda rows:self.fail('Failed group was recorded as complete'))
+
+    def test_unmeasured_concurrency_rejected_before_dispatch(self):
+        for workers in (0,4,8,1.5):
+            with self.assertRaises(Blocked):
+                execute_groups([0],lambda group:self.fail('Invalid concurrency dispatched work'),lambda rows:None,workers=workers)
 
 
 if __name__=='__main__':unittest.main()

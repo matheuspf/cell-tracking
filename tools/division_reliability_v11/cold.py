@@ -1,6 +1,7 @@
 """Renamed complete clips, image-only density strata, independent cold workers."""
 from pathlib import Path
 import sys,subprocess,shutil,hashlib,csv
+from concurrent.futures import ThreadPoolExecutor,as_completed
 from .common import REPO,DATA,WORK,RESULTS,Blocked,read,write,sha,now
 
 
@@ -72,38 +73,65 @@ def compare(reference,output,original_name,renamed_name):
         inference_implementation_sha256=new['inference_implementation_sha256'])
 
 
+def execute_groups(groups,operation,record,*,workers=3):
+    """Bound independent model groups; keep each group's two strata sequential."""
+    if not isinstance(workers,int) or not 1<=workers<=3:
+        raise Blocked('Cold validation permits one to three bounded workers')
+    completed={}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        pending={pool.submit(operation,group):index for index,group in enumerate(groups)}
+        for future in as_completed(pending):
+            completed[pending[future]]=future.result()
+            record([row for index in sorted(completed) for row in completed[index]])
+    return [row for index in sorted(completed) for row in completed[index]]
+
+
 def run():
     from .freeze import verify
     frozen=verify();folder=WORK/'cold';folder.mkdir(parents=True,exist_ok=True)
     log=folder/'selection.log'
     with log.open('a') as f:
         subprocess.run([sys.executable,'-m','division_reliability_v11','cold-select'],cwd=REPO,stdout=f,stderr=subprocess.STDOUT,check=True)
-    selected=read(folder/'selection/receipt.json');results=[]
+    selected=read(folder/'selection/receipt.json');groups=[]
+    # Copy each selected image once, before independent workers can read it.
+    # A model group runs its strata sequentially even if both select one clip.
+    images={}
+    for choices in selected['chosen'].values():
+        for clip in choices.values():
+            renamed='clip_'+hashlib.sha256(('v11-cold:'+clip).encode()).hexdigest()[:12]
+            image=folder/'inputs'/f'{renamed}.zarr'
+            if not image.exists():
+                image.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(DATA/'train'/f'{clip}.zarr',image)
+            images[clip]=(renamed,image)
     for source in ('44b6','6bba'):
         target='6bba' if source=='44b6' else '44b6'
         for seed in (20260918,314159):
             for arm in ('C00','C01','C11'):
                 if f'{source}/{seed}/{arm}' not in frozen['models']:continue
-                package=WORK/'packages'/source/str(seed)/arm
-                for stratum,clip in selected['chosen'][target].items():
-                    key=f'{source}/{seed}/{arm}/{clip}';verify(key)
-                    renamed='clip_'+hashlib.sha256(('v11-cold:'+clip).encode()).hexdigest()[:12]
-                    image=folder/'inputs'/f'{renamed}.zarr'
-                    if not image.exists():
-                        image.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(DATA/'train'/f'{clip}.zarr',image)
-                    out=folder/'predictions'/source/str(seed)/arm/renamed;out.mkdir(parents=True,exist_ok=True)
-                    command=[sys.executable,'-m','division_reliability_v11','infer','--package',str(package),
-                             '--images',str(image),'--output',str(out),'--cold']
-                    with (out/'worker.log').open('a') as f:code=subprocess.run(command,cwd=REPO,stdout=f,stderr=subprocess.STDOUT).returncode
-                    result=dict(source=source,target=target,seed=seed,arm=arm,stratum=stratum,original_clip=clip,renamed_clip=renamed,
-                                status='failed',exit_code=code,worker_log_sha256=sha(out/'worker.log'),freeze_identity=frozen['identity'])
-                    if code==0:
-                        reference=WORK/'predictions'/arm/source/str(seed)/clip
-                        result.update(compare(reference,out,clip,renamed))
-                    write(out/'comparison.json',result);results.append(result)
-                    write(folder/'progress.json',dict(completed=len(results),results=results,updated_utc=now()))
+                groups.append((source,target,seed,arm))
+    def execute(group):
+        source,target,seed,arm=group;results=[]
+        package=WORK/'packages'/source/str(seed)/arm
+        for stratum,clip in selected['chosen'][target].items():
+            key=f'{source}/{seed}/{arm}/{clip}';verify(key)
+            renamed,image=images[clip]
+            out=folder/'predictions'/source/str(seed)/arm/renamed;out.mkdir(parents=True,exist_ok=True)
+            command=[sys.executable,'-m','division_reliability_v11','infer','--package',str(package),
+                     '--images',str(image),'--output',str(out),'--cold']
+            with (out/'worker.log').open('a') as f:code=subprocess.run(command,cwd=REPO,stdout=f,stderr=subprocess.STDOUT).returncode
+            result=dict(source=source,target=target,seed=seed,arm=arm,stratum=stratum,original_clip=clip,renamed_clip=renamed,
+                        status='failed',exit_code=code,worker_log_sha256=sha(out/'worker.log'),freeze_identity=frozen['identity'])
+            if code==0:
+                reference=WORK/'predictions'/arm/source/str(seed)/clip
+                result.update(compare(reference,out,clip,renamed))
+            write(out/'comparison.json',result);results.append(result)
+        return results
+    def record(results):
+        write(folder/'progress.json',dict(completed=len(results),results=results,max_workers=3,updated_utc=now()))
+    results=execute_groups(groups,execute,record)
     result=dict(status='passed' if results and all(r['status']=='passed' for r in results) else 'failed',
         expected_runs=sum(2 for _ in frozen['models']),completed_runs=len(results),results=results,
+        max_workers=3,concurrent_scope='Independent explicit-package workers; two strata sequential within each model; shared GPU lease lock',
         selection_sha256=sha(folder/'selection/receipt.json'),all_four_cells_tested=len({(r['source'],r['seed']) for r in results})==4,
         raw_worker_input_contract='Explicit immutable package and one renamed Zarr only; no baseline cache, GT, network or historical predictions',finished_utc=now())
     write(folder/'receipt.json',result)

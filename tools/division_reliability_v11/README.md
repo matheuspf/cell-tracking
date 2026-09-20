@@ -122,6 +122,9 @@ The cold comparison requires all 100 raw-frame hashes, the explicit package and
 dataset names, clean worker guards, output artifact hashes, graph equality and
 actual CSV byte equality after replacing only the dataset column. A mismatch
 leaves its comparison receipt and stops the queue before target scoring.
+Up to three independent package workers run concurrently; each package's two
+strata stay sequential. Selected images are copied before workers start. The
+same GPU lease lock and aggregate resource guards remain active.
 
 Useful checks and explicit stage entry points:
 

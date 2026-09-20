@@ -40,6 +40,31 @@
     "target_cold_validation_complete": false,
     "utc": "2026-09-20T04:36:16.791989+00:00"
   },
+  "cold_dispatch_contract": {
+    "comparison_tests": 8,
+    "files": {
+      "cold.py": "c1250891106c91570d90e993496a79de1349767edf267d24b1efe81a08215fa1",
+      "test_cold.py": "0a55889b5f42fb0a74ce7b2930f12babd3fcbf93e392b5fe209f7218b646cc43"
+    },
+    "frozen_core_unchanged": true,
+    "max_workers": 3,
+    "measured_stage_peak_gib": {
+      "compact_policy": 3.6345787048339844,
+      "image_prediction": 2.0782737731933594
+    },
+    "new_dispatch_tests": 3,
+    "numerical_inference_unchanged": true,
+    "observed_unittest_seconds": 0.021,
+    "projection_gib": 24.42319679260254,
+    "projection_rule": "Three workers, each reserving the sum of measured image-prediction and compact-policy peaks plus 25 percent; three GiB parent/selection reserve. Cold starts after all models and predictions are frozen.",
+    "resource_guard_unchanged": true,
+    "retained_package_runtime_unchanged": true,
+    "scope": "Scheduling and negative-control proof only; post-freeze target cold validation remains pending",
+    "status": "passed",
+    "test_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m unittest tools.division_reliability_v11.test_cold -v",
+    "tests_passed": 11,
+    "utc": "2026-09-20T06:04:16.053150+00:00"
+  },
   "compact_precision_repair": {
     "active_compact_implementation_unchanged": true,
     "baseline_probe": {
