@@ -311,6 +311,36 @@
     "target_scores_opened": false
   },
   "scientific_recipe_unchanged": true,
+  "source_execution_monitoring": {
+    "bank_concurrency": {
+      "measured_jobs": 3,
+      "new_workers": 8,
+      "numerical_recipe_unchanged": true,
+      "projected_study_rss_with_2x_bank_margin_bytes": 40070086656,
+      "recorded_utc": "2026-09-20T00:17:26.941479+00:00",
+      "worker_peak_bytes": 960876544
+    },
+    "files": {
+      "monitor.py": "198da201223bf52553b4d294daa8bccc91a7d2da4128d0e36a2145eb57f87e0e",
+      "report.py": "ccab0285c9b099ef0b1323260015c230e3ed1b0c3ba06c6da0642f263302bf8e"
+    },
+    "historical_preservation_check": {
+      "P0_write_actions": 0,
+      "checked_utc": "2026-09-20T00:27:17.653094+00:00",
+      "historical_v10_artifacts_changed": [],
+      "historical_v10_artifacts_checked": 107,
+      "initial_user_file_hashes_unchanged": true,
+      "scope": "Hash every recorded historical v10 artifact and preserved user CSV; verify all execution commits change v11 paths only.",
+      "status": "passed",
+      "tracked_execution_changes_confined_to_v11": true
+    },
+    "numerical_recipe_unchanged": true,
+    "production_head_fits_started": 0,
+    "read_only_monitor_tested_on_live_processes": true,
+    "recorded_utc": "2026-09-20T00:42:40.101158+00:00",
+    "retained_positive_control_sha256": "7544cd109e2a12d3784a8741388d797476a572ca01c601d53f10dc16974c789b",
+    "target_scores_opened": false
+  },
   "source_fit_cell_44b6_20260918_is_active": true,
   "status": "integrated_before_production_head_fitting",
   "target_scores_opened": false,

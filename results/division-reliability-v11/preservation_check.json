@@ -1,0 +1,10 @@
+{
+  "P0_write_actions": 0,
+  "checked_utc": "2026-09-20T00:27:17.653094+00:00",
+  "historical_v10_artifacts_changed": [],
+  "historical_v10_artifacts_checked": 107,
+  "initial_user_file_hashes_unchanged": true,
+  "scope": "Hash every recorded historical v10 artifact and preserved user CSV; verify all execution commits change v11 paths only.",
+  "status": "passed",
+  "tracked_execution_changes_confined_to_v11": true
+}

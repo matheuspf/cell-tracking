@@ -120,7 +120,7 @@ def resources():
     maxima={k:max((r.get(k,0) for r in rows),default=0) for k in ('total_device_peak_bytes','rss_peak_bytes','peak_reserved_bytes','peak_allocated_bytes')}
     minima={k:min((r[k] for r in rows if k in r),default=None) for k in ('device_free_min_bytes','host_available_min_bytes')}
     inherited=read(WORK/'preservation/inherited_compute.json')
-    cpu=[read(p) for p in (WORK/'controller/jobs').glob('*.resources.json')]
+    cpu=[read(p) for p in (WORK/'controller/jobs').rglob('*.resources.json')]
     value=dict(new_study_gpu_lease_hours=total/3600,new_study_measured_journal_hours=sum(by_stage.values())/3600,
         pre_journal_conservative_charge_hours=upper/3600,pre_journal_accounting=prior,
         hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
@@ -334,6 +334,9 @@ def run():
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')
         validation['retained_source_witness_control']={k:v for k,v in control.items() if k!='parents'}
+    if (WORK/'checks/retained_positive_witness/receipt.json').exists():
+        control=read(WORK/'checks/retained_positive_witness/receipt.json')
+        validation['retained_source_positive_witness_control']={k:v for k,v in control.items() if k!='parents'}
     write(RESULTS/'validation.json',public(validation))
     write(RESULTS/'exposure_manifest.json',dict(exposure_class='source_isolated_reused_embryos',
         pristine_independent_generalization=False,seeds_are_not_new_animals=True,source_calibration_acquisition_independence_proven=False,

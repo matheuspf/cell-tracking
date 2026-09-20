@@ -180,6 +180,142 @@
     "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
   },
   "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
+  "retained_source_positive_witness_control": {
+    "finished_utc": "2026-09-20T00:21:44.396475+00:00",
+    "fit_clips_inspected": 1,
+    "full_source_fit_population": false,
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "implementation_sha256": "92471632164343d08f6dedecf9f9952be75a7774154387009118ed7ea586d6ab",
+    "interpretation": "Label-guided local controls, not learned predictions or achievable policy scores; registered solver and global edit cap applied.",
+    "retained_C00": true,
+    "seed": 20260918,
+    "selection": "Lexically first clip and first canonical supported positive/fully supported negative parent/action",
+    "source": "44b6",
+    "source_only": true,
+    "status": "complete",
+    "wall_seconds": 11.25045155800035,
+    "witnesses": {
+      "negative": {
+        "accepted_actions": 1,
+        "achievable_policy_bound": false,
+        "baseline": {
+          "adj_edge_jaccard": 0.48027367323349424,
+          "counts": {
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 74,
+            "edge_fp": 116,
+            "edge_tp": 203,
+            "num_pred_nodes": 32561
+          },
+          "division_fn": 1,
+          "division_fp": 0,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.5165394402035624,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 0.9785714285714285,
+          "score": 0.48027367323349424
+        },
+        "changed_edges": 3,
+        "clip": "44b6_267148e4",
+        "csv_sha256": "b9a336f3021c28f5829826b2ca4b2d3b0468435ba223041a4dd30c65ae1dff5a",
+        "deployment_edit_cap": 566,
+        "detail_sha256": "3311f31c1c995127da9d8521bf70aee4297e7c1f82d7d4cc1d64c779e976caa7",
+        "edited": {
+          "adj_edge_jaccard": 0.4790547045197036,
+          "counts": {
+            "division_fn": 1,
+            "division_fp": 1,
+            "division_tp": 0,
+            "edge_fn": 74,
+            "edge_fp": 117,
+            "edge_tp": 203,
+            "num_pred_nodes": 32561
+          },
+          "division_fn": 1,
+          "division_fp": 1,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.5152284263959391,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 0.9785714285714285,
+          "score": 0.4790547045197036
+        },
+        "label_guided_not_model": true,
+        "legal_actions": 263,
+        "risk": 0,
+        "score_delta": -0.0012189687137906247,
+        "solver_and_global_edit_cap_applied": true,
+        "status": "measured"
+      },
+      "positive": {
+        "accepted_actions": 1,
+        "achievable_policy_bound": false,
+        "baseline": {
+          "adj_edge_jaccard": 0.48027367323349424,
+          "counts": {
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 74,
+            "edge_fp": 116,
+            "edge_tp": 203,
+            "num_pred_nodes": 32561
+          },
+          "division_fn": 1,
+          "division_fp": 0,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.5165394402035624,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 0.9785714285714285,
+          "score": 0.48027367323349424
+        },
+        "changed_edges": 9,
+        "clip": "44b6_267148e4",
+        "csv_sha256": "dfde32128305cbbae565b426f766eb45c8775784a9ccea536d1854658b2fc8ee",
+        "deployment_edit_cap": 566,
+        "detail_sha256": "d3a4d6abcf772f63fbd42de1cdccc433a9c182b9da3d13fb6b205088efd7d1f7",
+        "edited": {
+          "adj_edge_jaccard": 0.4695677682715722,
+          "counts": {
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 1,
+            "edge_fn": 76,
+            "edge_fp": 121,
+            "edge_tp": 201,
+            "num_pred_nodes": 32561
+          },
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_jaccard": 1.0,
+          "division_tp": 1,
+          "edge_jaccard": 0.5050251256281407,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 0.9785714285714285,
+          "score": 0.5695677682715722
+        },
+        "label_guided_not_model": true,
+        "legal_actions": 280,
+        "risk": 1,
+        "score_delta": 0.08929409503807795,
+        "solver_and_global_edit_cap_applied": true,
+        "status": "measured"
+      }
+    }
+  },
   "retained_source_witness_control": {
     "finished_utc": "2026-09-20T00:12:51.215843+00:00",
     "fit_clips_inspected": 1,

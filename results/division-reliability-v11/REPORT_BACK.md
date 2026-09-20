@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-20T00:14:59.746266+00:00: 1/4 C00 fits and 0/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-20T00:39:27.854961+00:00: 1/4 C00 fits and 0/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -12,7 +12,7 @@ C01/C11 independently edit their own C00 graph. Their comparison tests practical
 
 The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.
 
-New v11 GPU lease accounting: 3.0626 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
+New v11 GPU lease accounting: 3.4564 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
 
 Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Label-guided witness edits bypassed the global 2% cap and are local legal diagnostics only, not achievable policy scores. Runtime tests and planning contracts are not evidence of trained accuracy.
 

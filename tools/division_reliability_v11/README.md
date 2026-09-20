@@ -20,6 +20,13 @@ state, and refreshes sanitized results. Its timestamps alone do not prove that
 training is running. Private stage logs, checkpoints, complete predictions and
 telemetry are under `work/division-reliability-v11/`.
 
+For a lightweight read-only view of live process identities, frame progress and
+completed jobs without refreshing the report files:
+
+```sh
+"$study_python" -m division_reliability_v11.monitor
+```
+
 When no existing pipeline controller is running, resume the dependency queue:
 
 ```sh
