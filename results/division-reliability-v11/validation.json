@@ -180,6 +180,89 @@
     "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
   },
   "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
+  "retained_source_witness_control": {
+    "finished_utc": "2026-09-20T00:12:51.215843+00:00",
+    "fit_clips_inspected": 1,
+    "full_source_fit_population": false,
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "implementation_sha256": "92471632164343d08f6dedecf9f9952be75a7774154387009118ed7ea586d6ab",
+    "interpretation": "Label-guided local controls, not learned predictions or achievable policy scores; registered solver and global edit cap applied.",
+    "retained_C00": true,
+    "seed": 20260918,
+    "selection": "Lexically first clip and first canonical supported positive/fully supported negative parent/action",
+    "source": "44b6",
+    "source_only": true,
+    "status": "complete",
+    "wall_seconds": 4.121958519001055,
+    "witnesses": {
+      "negative": {
+        "accepted_actions": 1,
+        "achievable_policy_bound": false,
+        "baseline": {
+          "adj_edge_jaccard": 0.9218407180084525,
+          "counts": {
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 1,
+            "edge_fp": 2,
+            "edge_tp": 49,
+            "num_pred_nodes": 31349
+          },
+          "division_fn": 0,
+          "division_fp": 0,
+          "division_jaccard": null,
+          "division_tp": 0,
+          "edge_jaccard": 0.9423076923076923,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 1.0,
+          "score": 0.9218407180084525
+        },
+        "changed_edges": 7,
+        "clip": "44b6_0113de3b",
+        "csv_sha256": "e14de231fba035f740a96dabf243e9bfcc3c07398314b0461003bae47fe57220",
+        "deployment_edit_cap": 568,
+        "detail_sha256": "a3c46ffed38878690cec5b25c697edcbbeae4e9ad2f8f30f53cd20df68dd47e9",
+        "edited": {
+          "adj_edge_jaccard": 0.8537715889235983,
+          "counts": {
+            "division_fn": 0,
+            "division_fp": 1,
+            "division_tp": 0,
+            "edge_fn": 2,
+            "edge_fp": 5,
+            "edge_tp": 48,
+            "num_pred_nodes": 31349
+          },
+          "division_fn": 0,
+          "division_fp": 1,
+          "division_jaccard": 0.0,
+          "division_tp": 0,
+          "edge_jaccard": 0.8727272727272727,
+          "n": 1,
+          "n_adj": 1,
+          "node_recall": 1.0,
+          "score": 0.8537715889235983
+        },
+        "label_guided_not_model": true,
+        "legal_actions": 295,
+        "risk": 0,
+        "score_delta": -0.06806912908485419,
+        "solver_and_global_edit_cap_applied": true,
+        "status": "measured"
+      },
+      "positive": {
+        "reason": "No supported positive parent group in the inspected complete banks",
+        "status": "unavailable"
+      }
+    }
+  },
   "runtime_tests": {
     "count": 17,
     "exit_code": 0,

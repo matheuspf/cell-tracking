@@ -294,6 +294,22 @@
       "synthetic_contract_only": true
     }
   },
+  "retained_source_witness_diagnostics": {
+    "files": {
+      "diagnostics.py": "ad78f3b130d6e7b28026d40ca474ca127945c5f7c6a1be59636dafebac19c636",
+      "report.py": "fffc4f4f4b229d8847d82856da5441785c6d9776cfb3420fbc515d15b385e8d9",
+      "source_witnesses.py": "92471632164343d08f6dedecf9f9952be75a7774154387009118ed7ea586d6ab"
+    },
+    "fitting_and_inference_recipe_unchanged": true,
+    "full_source_witnesses": "Automatic after each complete fit bank census",
+    "production_head_fits_started": 0,
+    "recorded_utc": "2026-09-20T00:14:29.786916+00:00",
+    "registered_solver_and_global_edit_cap_applied": true,
+    "selection": "First lexical supported positive and completely supported negative parent/action, no model or threshold selection",
+    "source_control_receipt_sha256": "893fa2dd9f8dd7e54a4cf8e3b66c1adb58d89798abbbf37eb186a43709646fea",
+    "source_control_resume": "Passed with unchanged parents and exact output hashes",
+    "target_scores_opened": false
+  },
   "scientific_recipe_unchanged": true,
   "source_fit_cell_44b6_20260918_is_active": true,
   "status": "integrated_before_production_head_fitting",

@@ -81,7 +81,10 @@ def source_summary(source,seed):
             if key in r:per_clip[clip][key]=r[key]
     result=dict(status='complete',source=source,seed=seed,fit_clips=len(clips),census=dict(counts),
         distinct_positive_events=len(events),per_clip=per_clip,scope='complete source-fit C00 observation bank',finished_utc=now())
-    write(folder/'summary.json',result);return result
+    write(folder/'summary.json',result)
+    from .source_witnesses import run as witnesses
+    controls=witnesses(source,seed)
+    return {**result,'retained_source_witnesses':controls['witnesses']}
 
 
 def target_details(source,seed,arm,clip,nodes,edges,events):

@@ -226,6 +226,9 @@ def diagnostics(details):
                 for n,d in r['per_clip'].items():
                     clean['clips'][n]={k:v for k,v in d.items() if k!='funnel'}
                     if 'funnel' in d:clean['clips'][n]['funnel']={k:v for k,v in d['funnel'].items() if k!='events'}
+                wp=p.parent/'witnesses/receipt.json'
+                if wp.exists():
+                    w=read(wp);clean['retained_source_witnesses']={k:v for k,v in w.items() if k!='parents'}
                 source.append(clean)
         for p in (WORK/'source_evaluation'/s/'20260918').glob('*/receipt.json'):
             r=read(p);r={k:v for k,v in r.items() if k not in ('positive_witness','negative_witness')}
@@ -328,6 +331,9 @@ def run():
         validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
+    if (WORK/'checks/retained_witness/receipt.json').exists():
+        control=read(WORK/'checks/retained_witness/receipt.json')
+        validation['retained_source_witness_control']={k:v for k,v in control.items() if k!='parents'}
     write(RESULTS/'validation.json',public(validation))
     write(RESULTS/'exposure_manifest.json',dict(exposure_class='source_isolated_reused_embryos',
         pristine_independent_generalization=False,seeds_are_not_new_animals=True,source_calibration_acquisition_independence_proven=False,
