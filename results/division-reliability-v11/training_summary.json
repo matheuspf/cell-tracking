@@ -3,10 +3,81 @@
   "cells": [
     {
       "compact": {
-        "history_summary": {},
-        "process_verified_alive": false,
-        "resume": null,
-        "status": "pending"
+        "history_summary": {
+          "first": {
+            "denominators": {
+              "consistency": 32,
+              "identity": 32,
+              "occurrence": 0,
+              "ranking": 0
+            },
+            "losses": {
+              "consistency": 2.882449600619813e-09,
+              "identity": 0.6462987940758467,
+              "occurrence": 0.0,
+              "ranking": 0.0
+            },
+            "lr": 1.4999999999999998e-06,
+            "step": 1
+          },
+          "full_history_committed": false,
+          "group_selection_probability_range": [
+            1.2400486099055083e-05,
+            0.05263157894736842
+          ],
+          "history_sha256": "15307c56c2c722352af44bd65069fe14db32dde396411ea918ab7dbdda39f249",
+          "last": {
+            "denominators": {
+              "consistency": 32,
+              "identity": 16,
+              "occurrence": 16,
+              "ranking": 8
+            },
+            "losses": {
+              "consistency": 6.335685664282664e-05,
+              "identity": 0.0034372639620414702,
+              "occurrence": 0.4203970325179398,
+              "ranking": 0.2735908180475235
+            },
+            "lr": 0.000263939533219881,
+            "step": 1058
+          },
+          "observation_cache_peak_bytes": 815597464,
+          "proposal_incoming_groups": 0,
+          "query_fallback_batches": 0,
+          "recorded_updates": 1058,
+          "supervised_incoming_groups": 0,
+          "totals": {
+            "gpu_lease_seconds": 193.15853923905524,
+            "input_seconds": 4.553321555940784
+          },
+          "uniform_hard_slot_fallback_groups": 2632,
+          "unique_group_visits": 15509
+        },
+        "horizon": 4000,
+        "mined": false,
+        "pid": 1036628,
+        "process_verified_alive": true,
+        "resume": {
+          "bytes": 3532163,
+          "durable_step": 1051,
+          "file_creation_to_last_write_seconds": 0.008001792,
+          "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+          "optimizer_present": true,
+          "path": "work/division-reliability-v11/fits/44b6/20260918/compact/resume.pt",
+          "sampler_and_rng_present": true,
+          "scheduler": {
+            "horizon": 4000,
+            "step": 1051
+          },
+          "seed": 20260918,
+          "sha256": "c2ff7a128a650d1d94375eb0a1445d6c0378a310e404778f7b3ff41eed00fba3",
+          "source": "44b6",
+          "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
+        },
+        "status": "running",
+        "step": 1058,
+        "updated_utc": "2026-09-20T02:21:25.601535+00:00"
       },
       "linear": {
         "census": {
@@ -114,7 +185,7 @@
       "source": "44b6",
       "target": "6bba",
       "upstream": {
-        "charged_gpu_lease_seconds": 3525.097071067117,
+        "charged_gpu_lease_seconds": 6739.433457326879,
         "history_summary": {
           "first": {
             "association": 0.704526424407959,
@@ -125,22 +196,22 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "c6213658fbecc7dada49b51233fa38931d76ac7150b8fb659dc7199015f52b56",
+          "history_sha256": "6c1ccbf8bfac10bd3c02102f1e901b5fbae0ce76537252620e523038051c9254",
           "last": {
-            "association": 0.0876680463552475,
-            "detection": 0.6236473321914673,
-            "loss": 0.711315393447876,
-            "lr": 6.405442157937329e-05,
-            "step": 3529
+            "association": 0.0005528712645173073,
+            "detection": 0.6119294762611389,
+            "loss": 0.6124823689460754,
+            "lr": 1.2138810917712521e-05,
+            "step": 6345
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 55879,
-          "query_fallback_batches": 10015,
-          "recorded_updates": 3529,
-          "supervised_incoming_groups": 76592,
+          "proposal_incoming_groups": 119704,
+          "query_fallback_batches": 12443,
+          "recorded_updates": 6345,
+          "supervised_incoming_groups": 140642,
           "totals": {
-            "gpu_lease_seconds": 3525.097071067117,
-            "input_seconds": 19.85686097309008
+            "gpu_lease_seconds": 6739.433457326879,
+            "input_seconds": 34.10019129212378
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
@@ -150,24 +221,24 @@
         "process_verified_alive": true,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 3475,
-          "file_creation_to_last_write_seconds": 0.012317999,
+          "durable_step": 6135,
+          "file_creation_to_last_write_seconds": 0.01440987,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 3475
+            "one_based_step": 6135
           },
           "seed": 314159,
-          "sha256": "c0bc73db394778aa8de8500aa355e4a47b274cc2725a5c0a0d4b8315d3c41943",
+          "sha256": "44ba983e06c498960bd31717512ce1d81b00ac1f0ff38e0ef5762df23acf720c",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 3529,
-        "updated_utc": "2026-09-20T01:17:43.764886+00:00"
+        "step": 6345,
+        "updated_utc": "2026-09-20T02:21:25.346748+00:00"
       }
     },
     {

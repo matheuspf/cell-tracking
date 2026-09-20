@@ -31,6 +31,10 @@ def run():
             if policy:item['policy_progress']=policy
         elif r['stage']=='prepare-actions':
             item['bank_progress']=optional(WORK/'banks'/r['source']/str(r['seed'])/r['part']/r['clip']/'progress.json')
+        elif r['stage']=='calibration-predict':
+            item['policy_progress']=optional(WORK/'fits'/r['source']/str(r['seed'])/'calibration'/r['arm']/r['clip']/'progress.json')
+        elif r['stage']=='mine':
+            item['policy_progress']=optional(WORK/'fits'/r['source']/str(r['seed'])/'compact/mining'/r['clip']/'progress.json')
         running.append(item)
     fits=[]
     for source in ('44b6','6bba'):

@@ -383,8 +383,8 @@ def run():
         if r.get('status') in ('failed','blocked'):blocked.append({k:r.get(k) for k in ('stage','source','seed','arm','clip','status','exit_code','log_sha256')})
     for p in (WORK/'blocked_cells').glob('*.json'):blocked.append(read(p))
     command='PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11'
-    milestone=all(r['status']=='scored' and r['score']>=.95 for r in pooled if r['arm']=='C11')
-    strong=all(r['status']=='scored' and r['score']>=.95 for r in directional if r['arm']=='C11')
+    milestone=complete and all(r['status']=='scored' and r['score']>=.95 for r in pooled if r['arm']=='C11')
+    strong=complete and all(r['status']=='scored' and r['score']>=.95 for r in directional if r['arm']=='C11')
     base_by_cell={(r['source'],r['seed']):r for r in directional if r['arm']=='C00'}
     beneficial=any(r['status']=='scored' and base_by_cell[r['source'],r['seed']]['status']=='scored' and r.get('accepted_actions',0)>0 and
         (r.get('newly_recovered_division_tp',0)>0 or r['edge_tp']>base_by_cell[r['source'],r['seed']]['edge_tp'] or
@@ -411,8 +411,18 @@ def run():
         '', 'C01/C11 independently edit their own C00 graph. Their comparison tests practical model-family value, not the isolated causal effect of factorization or one loss. Unknown legal forks remain in deployment denominators and do not become negative biological labels. Source safety and no-op outcomes are reported separately. CSV coordinates and IDs, full populations, official empty-division behavior and the pinned scorer are used; clip scores are never averaged.',
         '', 'The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.',
         '',f'New v11 GPU lease accounting: {res["new_study_gpu_lease_hours"]:.4f} hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: {res["inherited_hours"]:.4f} hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.',
-        '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Label-guided witness edits bypassed the global 2% cap and are local legal diagnostics only, not achievable policy scores. Runtime tests and planning contracts are not evidence of trained accuracy.',
+        '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Early pilot witnesses bypassed the global 2% cap. Later witnesses on retained C00 graphs use the registered solver and cap. Both kinds use labels to choose diagnostic edits and are not learned policies or achievable score bounds. Runtime tests and planning contracts are not evidence of trained accuracy.',
         '']
+    for cal in read(RESULTS/'calibration.json')['cells']:
+        label=f'{cal["source"]}/{cal["seed"]}/{cal["arm"]}'
+        if cal['disabled_policy']:
+            outcome='disabled: no registered margin passed source graph safety'
+        else:
+            trial=next(t for t in cal['trials'] if t['margin']==cal['margin'])
+            outcome=f'margin {cal["margin"]}, {trial["accepted_actions"]} source calibration edits, score change {trial["combined_delta"]:+.6f}'
+            if not trial['accepted_actions']:outcome+='; selected policy made no calibration edits'
+        lines.append(f'- Source safety {label}: {outcome}. Occurrence support: {cal["distinct_positive_events"]} distinct positive events and {cal["negative_groups"]} negative groups; insufficient-support fallback {cal["insufficient_support"]}.')
+    if read(RESULTS/'calibration.json')['cells']:lines.append('')
     available=[r for r in pooled if r['status']=='scored']
     if available:
         for r in available:
