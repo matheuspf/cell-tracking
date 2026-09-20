@@ -199,6 +199,79 @@
       "tests_are_not_model_results": true
     }
   },
+  "reporting_followup_after_first_C00": {
+    "c00_cpu_concurrency": {
+      "additional_upstream_allowance_bytes": 10737418240,
+      "aggregate_limit_bytes": 47244640256,
+      "measured_jobs": [
+        {
+          "durable_free_bytes": 210937495552,
+          "durable_free_min_bytes": 210937495552,
+          "host_available_bytes": 49135083520,
+          "host_available_min_bytes": 45469495296,
+          "job": "predict-44b6-20260918-C00-fit-44b6_0113de3b",
+          "study_rss_bytes": 7917981696,
+          "study_rss_peak_bytes": 12086980608,
+          "utc": "2026-09-20T00:06:23.876671+00:00",
+          "worker_rss_peak_bytes": 2064719872
+        },
+        {
+          "durable_free_bytes": 210948378624,
+          "durable_free_min_bytes": 210948378624,
+          "host_available_bytes": 46093717504,
+          "host_available_min_bytes": 45469495296,
+          "job": "predict-44b6-20260918-C00-fit-44b6_0b24845f",
+          "study_rss_bytes": 11845193728,
+          "study_rss_peak_bytes": 12086980608,
+          "utc": "2026-09-20T00:06:22.831246+00:00",
+          "worker_rss_peak_bytes": 2104492032
+        },
+        {
+          "durable_free_bytes": 210946195456,
+          "durable_free_min_bytes": 210946195456,
+          "host_available_bytes": 46118735872,
+          "host_available_min_bytes": 45495083008,
+          "job": "predict-44b6-20260918-C00-fit-44b6_0c582fdc",
+          "study_rss_bytes": 11845193728,
+          "study_rss_peak_bytes": 12041056256,
+          "utc": "2026-09-20T00:06:22.876275+00:00",
+          "worker_rss_peak_bytes": 2090749952
+        }
+      ],
+      "new_workers": 6,
+      "old_workers": 3,
+      "projected_workers_rss_with_2x_margin_bytes": 25253904384,
+      "recorded_utc": "2026-09-20T00:07:17.638261+00:00",
+      "registered_floors_still_enforced": true,
+      "stage": "predict:C00"
+    },
+    "changes": [
+      "One-inode durable checkpoint hash/state snapshots during live reporting",
+      "Latest checkpoint write-window samples and explicit CUDA-kernel/transfer timing limitation",
+      "Complete-population error attribution and model-family interpretation"
+    ],
+    "files": {
+      "report.py": "5fe1a05d75d59215f1b3ff806331d7c8d0b3eda33a12e39f9de685a1096f71af"
+    },
+    "first_retained_upstream": {
+      "charged_gpu_lease_seconds": 7753.117581256871,
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+      "seed": 20260918,
+      "source": "44b6",
+      "status": "trained",
+      "updates": 8000,
+      "weights_sha256": "90a114294e2bc070cc175c4774c1c0c1c1c5f6b084e6bb811d96d4ce1f47b4cd"
+    },
+    "numerical_recipe_unchanged": true,
+    "recorded_utc": "2026-09-20T00:09:37.513812+00:00",
+    "target_scores_opened": false
+  },
   "resume_integrity_followup": {
     "changes": [
       "Midpoint source-bank and normalizer hashes checked on training resume",

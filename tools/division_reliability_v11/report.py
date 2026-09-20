@@ -48,11 +48,23 @@ def clip_summary(metrics,clip):
 def checkpoint(folder):
     path=folder/'resume.pt'
     if not path.exists():return None
-    import torch
-    state=torch.load(path,map_location='cpu',weights_only=True)
-    result=dict(path=str(path.relative_to(REPO)),sha256=sha(path),durable_step=state['step'],source=state['source'],seed=state['seed'],
+    import torch,io,hashlib,subprocess
+    # Atomic checkpoint replacement may occur during a live status refresh.
+    # Read bytes, metadata and timing from one open inode so its hash and update
+    # count always describe the same durable checkpoint.
+    with path.open('rb') as stream:
+        blob=stream.read();metadata=os.fstat(stream.fileno())
+        born,stamp=subprocess.check_output(['stat','-L','--printf=%W|%w',f'/proc/self/fd/{stream.fileno()}'],
+            text=True,pass_fds=(stream.fileno(),)).split('|',1)
+    state=torch.load(io.BytesIO(blob),map_location='cpu',weights_only=True)
+    result=dict(path=str(path.relative_to(REPO)),sha256=hashlib.sha256(blob).hexdigest(),durable_step=state['step'],source=state['source'],seed=state['seed'],
                 lock_identity=state['lock_identity'],scheduler=state.get('scheduler'),optimizer_present='optimizer' in state,
                 sampler_and_rng_present=all(k in state for k in ('sampler','cpu_rng','cuda_rng')))
+    result['bytes']=metadata.st_size
+    if born!='0' and '.' in stamp:
+        birth_ns=int(born)*10**9+int(stamp.split('.',1)[1].split()[0].ljust(9,'0'))
+        result['file_creation_to_last_write_seconds']=max(0.,(metadata.st_mtime_ns-birth_ns)/1e9)
+        result['write_timing_scope']='Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency'
     del state
     return result
 
@@ -119,6 +131,10 @@ def resources():
         inherited_hours=inherited['charged_seconds']/3600,lifetime_v10_plus_v11_conservative_hours=(inherited['charged_seconds']+total)/3600,
         limits=read(RESULTS/'execution_lock.json')['limits'],reserve_hours=16,
         accounting_note='Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.',
+        timing_scope=dict(lease='Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease',
+            input_io='Measured separately in optimizer histories and training_summary.json',
+            checkpoint='Latest closed-file creation-to-last-write samples in training_summary.json; early overwritten checkpoints are not retrospectively timed',
+            limitation='No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours'),
         hardware=dict(gpu='NVIDIA RTX 4090',gpu_memory_gib=24,cpu='AMD Ryzen 9 7950X3D'),updated_utc=now())
     write(RESULTS/'resource.json',public(value));return value
 
@@ -249,9 +265,45 @@ def diagnostics(details):
     write(RESULTS/'source_diagnostics.json',public(value));return value
 
 
+def interpretation(pooled,directional,details):
+    """Describe complete populations without selecting or fitting another model."""
+    evidence=[];by_key={(r['source'],r['seed'],r['arm']):r for r in directional}
+    for r in directional:
+        if r['status']!='scored':continue
+        records=[v for (s,seed,arm,_),v in details.items() if (s,seed,arm)==(r['source'],r['seed'],r['arm'])]
+        if len(records)!=r['clips_expected']:raise Blocked('Interpretation population differs from the scored population')
+        det=Counter();stages=Counter();selected=Counter();solver=Counter()
+        for record in records:
+            d=record.get('diagnostics',{})
+            for k,v in d.get('detection',{}).items():
+                if isinstance(v,int) and not isinstance(v,bool):det[k]+=v
+            stages.update(d.get('funnel',{}).get('stages',{}));stages.update(d.get('stage_counts',{}))
+            selected.update(d.get('selected_action_local_risk',{}))
+            for k,v in d.get('solver',{}).items():
+                if isinstance(v,(int,float)) and not isinstance(v,bool) and not k.startswith('max_'):solver[k]+=v
+        base=by_key[r['source'],r['seed'],'C00']
+        keys=('score','delta_C00','delta_C01','edge_tp','edge_fp','edge_fn','division_tp','division_fp','division_fn',
+              'edge_jaccard','adj_edge_jaccard','num_pred_nodes','estimated_total','accepted_actions','changed_edges',
+              'introduced_division_fp','newly_recovered_division_tp','lost_division_tp','disabled_policy')
+        row=dict(source=r['source'],target=r['target'],seed=r['seed'],arm=r['arm'],clips=len(records),
+            metrics={k:r.get(k) for k in keys},detection=dict(det),fork_stages=dict(stages),
+            selected_local_risk=dict(selected),solver=dict(solver))
+        if base['status']=='scored':
+            row['edge_count_deltas_C00']={k:r[k]-base[k] for k in ('edge_tp','edge_fp','edge_fn')}
+            row['fraction_C00_missed_divisions_newly_recovered']=r.get('newly_recovered_division_tp',0)/base['division_fn'] if base['division_fn'] else None
+        evidence.append(row)
+    value=dict(status='complete' if len(evidence)==12 else 'partial',cells=evidence,
+        comparison_scope='Practical model-family value of C11 versus C01; not the isolated causal effect of factorization or one loss.',
+        aggregation_scope='Each direction and seed is separate. Event counts refer to clip occurrences; seeds are not independent animals.',
+        attribution_scope='Sparse matched endpoint/link counts and overlapping local division stages; these are not additive achievable score repairs.',
+        unmatched_prediction_scope='Unmatched predictions are not automatically false positives. Node totals affect the official adjustment separately.')
+    write(RESULTS/'interpretation.json',public(value));return value
+
+
 def run():
     RESULTS.mkdir(parents=True,exist_ok=True)
     lock=read(RESULTS/'execution_lock.json');tr=training();res=resources();pooled,directional,per_clip,details=score_rows();diag=diagnostics(details)
+    interpreted=interpretation(pooled,directional,details)
     packages={};clean=True
     from .provenance import unseal
     from .stage_provenance import validate_stages
@@ -313,7 +365,7 @@ def run():
         execution_lock_identity=lock['identity'],next_command=command+(' report' if active or complete else ' run --workers 3'),
         resume_command_when_no_existing_owner=command+' run --workers 3',
         resume_proof='Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.',
-        artifacts=dict(training='training_summary.json',predictions='prediction_manifest.json',resources='resource.json',exposure='exposure_manifest.json'),
+        artifacts=dict(training='training_summary.json',predictions='prediction_manifest.json',resources='resource.json',exposure='exposure_manifest.json',interpretation='interpretation.json'),
         P0_modified=False,submitted_to_kaggle=False,weights_published=False)
     write(RESULTS/'STATUS.json',public(status))
     lines=[f'# Division reliability v11 — {status["status"]}',
@@ -321,7 +373,7 @@ def run():
         '',f'The immutable schedule is U={lock["upstream_updates"]:,} and E={lock["event_updates"]:,} for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.',
         '', 'The local v10 work was preserved. Neither completed nor partial v10 weights qualified for reuse because the matching trainer source and recursive ancestry were unavailable. Every retained v11 neural component starts randomly. P0 and the two pre-existing user-modified public946 reports remain unchanged.',
         '', 'Both embryos have historical research exposure. The claim is source_isolated_reused_embryos, not pristine independent generalization. Multiple seeds do not add embryos; calibration clips are not proven acquisition-independent. The original grouped split was retained. One persisted division event occurs in two source44 fit clips and receives one event unit across both.',
-        '', 'C01/C11 independently edit their own C00 graph. Unknown legal forks remain in deployment denominators and do not become negative biological labels. Source safety and no-op outcomes are reported separately. CSV coordinates and IDs, full populations, official empty-division behavior and the pinned scorer are used; clip scores are never averaged.',
+        '', 'C01/C11 independently edit their own C00 graph. Their comparison tests practical model-family value, not the isolated causal effect of factorization or one loss. Unknown legal forks remain in deployment denominators and do not become negative biological labels. Source safety and no-op outcomes are reported separately. CSV coordinates and IDs, full populations, official empty-division behavior and the pinned scorer are used; clip scores are never averaged.',
         '', 'The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.',
         '',f'New v11 GPU lease accounting: {res["new_study_gpu_lease_hours"]:.4f} hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: {res["inherited_hours"]:.4f} hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.',
         '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Label-guided witness edits bypassed the global 2% cap and are local legal diagnostics only, not achievable policy scores. Runtime tests and planning contracts are not evidence of trained accuracy.',
@@ -338,6 +390,24 @@ def run():
     if scored:
         lines += ['',f'The pooled 0.95 milestone is {"reached" if milestone else "not reached"}; the per-embryo/both-seed milestone is {"reached" if strong else "not reached"}. The compact promotion gate is {"passed" if promising else "not passed"}. These are local measurements, not a public/private leaderboard guarantee.']
     else:lines += ['Comparisons for unfinished arms/populations remain unmeasured. Available complete-population scores are retained; missing comparisons are blank with a reason in the three score CSVs. No 0.95 milestone is claimed from an incomplete matrix.']
+    for row in pooled:
+        if row['arm']!='C01' or row['status']!='scored':continue
+        base=next(r for r in pooled if r['arm']=='C00' and r['seed']==row['seed'])
+        if base['status']!='scored':continue
+        lines += ['',f'C01 fork recovery, seed {row["seed"]}: {row["newly_recovered_division_tp"]} newly recovered out of {base["division_fn"]} C00-missed annotated division occurrences, {row["lost_division_tp"]} lost recoveries and {row["introduced_division_fp"]} introduced division FP. Its pooled score change is {row["delta_C00"]:+.6f}. This quantifies how much the linear comparator solves without interpreting a disabled policy as learned improvement.']
+    comparisons=[r for r in directional if r['arm']=='C11' and r['status']=='scored' and r.get('delta_C01') is not None]
+    if comparisons:
+        better=sum(r['delta_C01']>0 for r in comparisons);worse=sum(r['delta_C01']<0 for r in comparisons)
+        lines += ['',f'C11 versus C01: {len(comparisons)}/4 direction/seed comparisons are measured; {better} improve, {worse} regress and {len(comparisons)-better-worse} tie. The registered practical promotion gate is {"passed" if promising else "not passed"}. Seeds remain optimization replications on the same two embryos.']
+    for cell in interpreted['cells']:
+        label=f'source {cell["source"]} → target {cell["target"]}, seed {cell["seed"]}'
+        if cell['arm']=='C00':
+            d=cell['detection'];m=cell['metrics']
+            if d:
+                lines += ['',f'C00 error attribution ({label}): {d.get("matched_nodes_7um",0)}/{d.get("gt_nodes",0)} annotated nodes matched at 7 µm and {d.get("matched_nodes_3um",0)} at 3 µm. Among annotated edges, {d.get("gt_edges_missing_endpoint",0)} lack a matched endpoint and {d.get("gt_edges_endpoints_present_link_missing",0)} have matched endpoints but no recovered link. Raw/adjusted edge Jaccard is {m["edge_jaccard"]:.6f}/{m["adj_edge_jaccard"]:.6f}; predicted/estimated node totals are {m["num_pred_nodes"]}/{m["estimated_total"]:g}. Unmatched predictions are not automatically false positives.']
+        elif cell['arm']=='C11':
+            f=cell['fork_stages'];m=cell['metrics']
+            lines += ['',f'C11 division funnel ({label}): {m["division_tp"]+m["division_fn"]} annotated event occurrences; {f.get("endpoint_window_present",0)} have endpoint windows, {f.get("anchor_present",0)} anchors, {f.get("daughter_paths_present",0)} daughter paths and {f.get("legal_compatible_action",0)} legal compatible actions. Compatible actions rank first in {f.get("conditional_top1",0)} events; {f.get("positive_calibrated_margin_gain",0)} have positive calibrated gain and {f.get("actually_recovered",0)} are recovered in the final graph. These diagnostic groups overlap and cannot be added as independent repairs.']
     lines += ['',f'Global target freeze: {frozen}. Complete cold validation: {cold_pass}. Clean provenance for all twelve packages: {provenance}.',
         '', 'Resume from the repository root after verifying no existing controller owns the study:', '', '```sh',command+' run --workers 3','```',
         '', 'While a controller is active, use the same command with `report` in place of `run --workers 3` to refresh STATUS. Cell owner locks prevent duplicate training. Durable checkpoint paths, SHA-256 hashes, exact saved update counts, and optimizer/RNG availability are in training_summary.json. Each stage uses atomic output receipts and can be invoked individually with `--source`, `--seed`, and the relevant arm/clip/partition.',

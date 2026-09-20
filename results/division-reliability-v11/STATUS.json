@@ -3,6 +3,7 @@
   "all_four_cells_complete": false,
   "artifacts": {
     "exposure": "exposure_manifest.json",
+    "interpretation": "interpretation.json",
     "predictions": "prediction_manifest.json",
     "resources": "resource.json",
     "training": "training_summary.json"
@@ -25,12 +26,12 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-19T23:18:42.654639+00:00",
-  "upstream_completed_cells": 0,
+  "updated_utc": "2026-09-20T00:08:53.385838+00:00",
+  "upstream_completed_cells": 1,
   "upstream_reused_cells": [],
   "verified_active_processes": [
     {
-      "pid": 528606,
+      "pid": 581921,
       "role": "pipeline/controller_pid"
     },
     {
@@ -38,7 +39,7 @@
       "role": "upstream/controller_pid"
     },
     {
-      "pid": 417791,
+      "pid": 680366,
       "role": "upstream/worker_pid"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
-  "cpu_job_resource_samples": 0,
-  "current_durable_free_bytes": 212395458560,
+  "cpu_job_resource_samples": 11,
+  "current_durable_free_bytes": 210576134144,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -9,9 +9,9 @@
   },
   "hours_by_stage": {
     "cold": 0.005678152065273328,
-    "inference": 0.005689343033888387,
+    "inference": 0.024062969974998447,
     "pilot": 0.045588012047780166,
-    "upstream": 1.5197705923302414
+    "upstream": 2.22395309774774
   },
   "inherited_hours": 19.307391920998594,
   "inherited_lifetime": {
@@ -78,11 +78,11 @@
       "leased": 3
     }
   },
-  "lease_count": 6938,
+  "lease_count": 10624,
   "lease_status_counts": {
-    "complete": 6938
+    "complete": 10624
   },
-  "lifetime_v10_plus_v11_conservative_hours": 21.550387448268562,
+  "lifetime_v10_plus_v11_conservative_hours": 22.272943580627167,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -103,8 +103,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 1.9124937489996228,
-  "new_study_gpu_lease_hours": 2.2429955272699664,
-  "new_study_measured_journal_hours": 1.5767260994771832,
+  "new_study_gpu_lease_hours": 2.9655516596285745,
+  "new_study_measured_journal_hours": 2.2992822318357917,
   "pre_journal_accounting": {
     "conservative_gpu_lease_seconds": 2398.569940054019,
     "records": [
@@ -215,14 +215,20 @@
   "sampled_maxima": {
     "peak_allocated_bytes": 7324696064,
     "peak_reserved_bytes": 8980004864,
-    "rss_peak_bytes": 19219484672,
-    "total_device_peak_bytes": 11086987264
+    "rss_peak_bytes": 20270440448,
+    "total_device_peak_bytes": 14892531712
   },
   "sampled_minima": {
-    "device_free_min_bytes": 14226292736,
-    "host_available_min_bytes": 48869744640
+    "device_free_min_bytes": 10420748288,
+    "host_available_min_bytes": 41370542080
   },
-  "study_cpu_rss_peak_bytes": null,
-  "study_host_available_min_bytes": null,
-  "updated_utc": "2026-09-19T23:18:42.632956+00:00"
+  "study_cpu_rss_peak_bytes": 20648095744,
+  "study_host_available_min_bytes": 41421242368,
+  "timing_scope": {
+    "checkpoint": "Latest closed-file creation-to-last-write samples in training_summary.json; early overwritten checkpoints are not retrospectively timed",
+    "input_io": "Measured separately in optimizer histories and training_summary.json",
+    "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
+    "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
+  },
+  "updated_utc": "2026-09-20T00:08:53.352727+00:00"
 }
