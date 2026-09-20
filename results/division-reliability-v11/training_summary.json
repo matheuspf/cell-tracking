@@ -76,6 +76,7 @@
             "positive": 28800
           },
           "supervised_incoming_groups": 0,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
             "gpu_lease_seconds": 724.9154206649655,
             "input_seconds": 19.229335571868432
@@ -92,6 +93,12 @@
           "models.py": "ff078c40815d5f1e9f76b06d898232bb2ab83b1344fa8be7cc3bb4299d6c769b",
           "policy.py": "b3a6b1d59c3b68b593df2ad5584feddd39d694a7421c5112dc1208f770365397",
           "train_compact.py": "0a18a39543bac79c881fb2ff82b0eaabf84869e962b1ff08be8869038eaffc9e"
+        },
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
         "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
         "mining_passes": 1,
@@ -179,12 +186,19 @@
           "query_fallback_batches": 13679,
           "recorded_updates": 8000,
           "supervised_incoming_groups": 179790,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
             "gpu_lease_seconds": 7753.117581256871,
             "input_seconds": 38.9473943450339
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
+        },
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
         "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
         "process_verified_alive": false,
@@ -280,6 +294,7 @@
             "positive": 12800
           },
           "supervised_incoming_groups": 0,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
             "gpu_lease_seconds": 340.7092595939248,
             "input_seconds": 8.980013295120443
@@ -289,6 +304,12 @@
           "unique_group_visits_scope": "Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots."
         },
         "horizon": 4000,
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
+        },
         "process_verified_alive": false,
         "resume": {
           "bytes": 3807363,
@@ -372,12 +393,19 @@
           "query_fallback_batches": 13819,
           "recorded_updates": 8000,
           "supervised_incoming_groups": 178715,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
             "gpu_lease_seconds": 8632.704648473933,
             "input_seconds": 42.305460327133915
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
+        },
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
         "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
         "process_verified_alive": false,
@@ -408,6 +436,12 @@
     {
       "compact": {
         "history_summary": {},
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
+        },
         "process_verified_alive": false,
         "resume": null,
         "status": "pending"
@@ -449,12 +483,19 @@
           "query_fallback_batches": 7631,
           "recorded_updates": 8000,
           "supervised_incoming_groups": 541131,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
             "gpu_lease_seconds": 8854.984691042977,
             "input_seconds": 82.59321342452313
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
+        },
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
         "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
         "process_verified_alive": false,
@@ -485,6 +526,12 @@
     {
       "compact": {
         "history_summary": {},
+        "interrupted_update_attempts": {
+          "archived_segments": 0,
+          "recorded_gpu_lease_seconds": 0,
+          "recorded_updates": 0,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
+        },
         "process_verified_alive": false,
         "resume": null,
         "status": "pending"
@@ -496,7 +543,13 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "charged_gpu_lease_seconds": 6426.2121664370125,
+        "charged_gpu_lease_seconds": 8609.208302976023,
+        "guard": {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
         "history_summary": {
           "first": {
             "association": 0.7250267267227173,
@@ -507,49 +560,57 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "33e27dcebe89c12531e22cc7aad4e5d24c4709dc9762233f38142d883895121d",
+          "history_sha256": "20b28e7db02c14ee50db05d5c9861e63c75befd24da1c62185df6758ae225295",
           "last": {
-            "association": 0.0046308934688568115,
-            "detection": 0.6170556545257568,
-            "loss": 0.621686577796936,
-            "lr": 1.366872759911981e-05,
-            "step": 6230
+            "association": 0.0009584322106093168,
+            "detection": 0.6032693982124329,
+            "loss": 0.6042278409004211,
+            "lr": 1e-06,
+            "step": 8000
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 358905,
-          "query_fallback_batches": 7426,
-          "recorded_updates": 6230,
-          "supervised_incoming_groups": 415064,
+          "proposal_incoming_groups": 478751,
+          "query_fallback_batches": 7725,
+          "recorded_updates": 8000,
+          "supervised_incoming_groups": 534938,
+          "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
-            "gpu_lease_seconds": 6426.2121664370125,
-            "input_seconds": 57.00148630989975
+            "gpu_lease_seconds": 8609.208302976023,
+            "input_seconds": 78.47643539989599
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
         },
-        "horizon": 8000,
-        "pid": 21862,
-        "process_verified_alive": true,
+        "interrupted_update_attempts": {
+          "archived_segments": 1,
+          "recorded_gpu_lease_seconds": 231.6434942320193,
+          "recorded_updates": 213,
+          "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
+        },
+        "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+        "process_verified_alive": false,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 6155,
-          "file_creation_to_last_write_seconds": 0.014255964,
+          "durable_step": 8000,
+          "file_creation_to_last_write_seconds": 0.015000391,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 6155
+            "one_based_step": 8000
           },
           "seed": 314159,
-          "sha256": "79e8f081a82f6f41fc2d25aaf35828514f83c3e0f6cd06665cad82581964b0c6",
+          "sha256": "ff4315d32a856e88f09364670fd335d24256f6072cdc7f421df3d520eddf4707",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "status": "running",
-        "step": 6230,
-        "updated_utc": "2026-09-20T16:01:12.238201+00:00"
+        "seed": 314159,
+        "source": "6bba",
+        "status": "trained",
+        "updates": 8000,
+        "weights_sha256": "a8c3184e960c9c28f552a5279f7989c70a977b1b89c70e184a281108246f52f2"
       }
     }
   ],

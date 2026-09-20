@@ -1075,6 +1075,173 @@
       }
     }
   },
+  "retained_upstream_final_audits": [
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "all_optimizer_attempt_gpu_lease_seconds": 7753.117581256871,
+      "all_optimizer_samples_source_fit": true,
+      "audit_implementation_sha256": "4e0e4007b53da3d0b53a3043984d7db663962ff485e153a7910c9d45dc614db4",
+      "batch_size": 8,
+      "discarded_update_attempts": 0,
+      "discarded_update_gpu_lease_seconds": 0,
+      "distinct_sampled_fit_clips": 61,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T16:35:50.071560+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "optimizer_lease_records_sha256": "e5ec87d96f7e24cd4723e014df6a4b4de6f88d62f742230dbe4ae4016f77936e",
+      "optimizer_lease_status_counts": {
+        "complete": 8000
+      },
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "f5b35a0057951edb9bde38b8e6a8b4cd37519b5112208100e41667c6ccf95a23",
+        "final.pt": "90a114294e2bc070cc175c4774c1c0c1c1c5f6b084e6bb811d96d4ce1f47b4cd",
+        "history.jsonl": "06125052f60395d3e2c12d8d2ae9dfc34f1931e9e3677a3ff72309a590fbe88a",
+        "resume.pt": "fd9fbeef8e6ed962b8e5103fc1d8e30c8cd9da921ca30d6e8d7219f9239b3b1c"
+      },
+      "retained_model_equals_final_resume": true,
+      "retained_trajectory_gpu_lease_seconds": 7753.117581256871,
+      "samples_per_clip_range": [
+        981,
+        1152
+      ],
+      "scope": "Complete actual C00 training, final artifacts and optimizer charge reconciliation; no accuracy claim",
+      "seed": 20260918,
+      "source": "44b6",
+      "source_fit_clips": 61,
+      "status": "passed",
+      "updates": 8000
+    },
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "all_optimizer_attempt_gpu_lease_seconds": 8632.704648473933,
+      "all_optimizer_samples_source_fit": true,
+      "audit_implementation_sha256": "4e0e4007b53da3d0b53a3043984d7db663962ff485e153a7910c9d45dc614db4",
+      "batch_size": 8,
+      "discarded_update_attempts": 0,
+      "discarded_update_gpu_lease_seconds": 0,
+      "distinct_sampled_fit_clips": 61,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T16:35:50.105104+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "optimizer_lease_records_sha256": "1893683749df31e4a130aa1424594ffd2a250f446a91e0f181e598a7166c4bd6",
+      "optimizer_lease_status_counts": {
+        "complete": 8000
+      },
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "a4099c30a18203a9865c13458810100552c523a0bbae34205d4f82c92052bc4c",
+        "final.pt": "57e677efdfbf75ac8a41d967933fdcc90aa59a2447fdf8f038525c5c51fff547",
+        "history.jsonl": "4218256c5909ac4f753c54bc269c5d7457a9899a02dd8d7673890c73b3f6edbf",
+        "resume.pt": "28e2f93b6b6fe0df3f0440c46fc8f49311911358ea3b0976d9911abdabb93177"
+      },
+      "retained_model_equals_final_resume": true,
+      "retained_trajectory_gpu_lease_seconds": 8632.704648473933,
+      "samples_per_clip_range": [
+        971,
+        1115
+      ],
+      "scope": "Complete actual C00 training, final artifacts and optimizer charge reconciliation; no accuracy claim",
+      "seed": 314159,
+      "source": "44b6",
+      "source_fit_clips": 61,
+      "status": "passed",
+      "updates": 8000
+    },
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "all_optimizer_attempt_gpu_lease_seconds": 8854.984691042977,
+      "all_optimizer_samples_source_fit": true,
+      "audit_implementation_sha256": "4e0e4007b53da3d0b53a3043984d7db663962ff485e153a7910c9d45dc614db4",
+      "batch_size": 8,
+      "discarded_update_attempts": 0,
+      "discarded_update_gpu_lease_seconds": 0,
+      "distinct_sampled_fit_clips": 107,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T16:35:50.049897+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "optimizer_lease_records_sha256": "51c78fcd6411d001a89d7f1b8691a91b38b5b47879dcc8086544cc59ebff0b88",
+      "optimizer_lease_status_counts": {
+        "complete": 8000
+      },
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "75c1cf22ea965a6f2f137dd7860fc7a9601f1969fcd47ab13ac9b7701e76a0a1",
+        "final.pt": "0fc206f7390c540a6e1c42d3760200f07dbe35934d4f7dd18907aeba9c70ad14",
+        "history.jsonl": "5b99620ff50ebd0c500d3280120a5fd76b712efcd746925fc19c584cbdd33942",
+        "resume.pt": "238e2d69eea7f61ededb966ef70ded146ca566c30b5cac614d42581bea881f76"
+      },
+      "retained_model_equals_final_resume": true,
+      "retained_trajectory_gpu_lease_seconds": 8854.984691042977,
+      "samples_per_clip_range": [
+        524,
+        647
+      ],
+      "scope": "Complete actual C00 training, final artifacts and optimizer charge reconciliation; no accuracy claim",
+      "seed": 20260918,
+      "source": "6bba",
+      "source_fit_clips": 107,
+      "status": "passed",
+      "updates": 8000
+    },
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "all_optimizer_attempt_gpu_lease_seconds": 8840.851797208028,
+      "all_optimizer_samples_source_fit": true,
+      "audit_implementation_sha256": "4e0e4007b53da3d0b53a3043984d7db663962ff485e153a7910c9d45dc614db4",
+      "batch_size": 8,
+      "discarded_update_attempts": 213,
+      "discarded_update_gpu_lease_seconds": 231.6434942320193,
+      "distinct_sampled_fit_clips": 107,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T16:44:32.822820+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "optimizer_lease_records_sha256": "e85c7457c9008610395bea00541c213e5f13f01629c5d2fee26a42c981169954",
+      "optimizer_lease_status_counts": {
+        "complete": 8213
+      },
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "b51407b1b2a71a3d857950b82266cf6b40634701edd479e124fdb38951a63b40",
+        "final.pt": "a8c3184e960c9c28f552a5279f7989c70a977b1b89c70e184a281108246f52f2",
+        "history.jsonl": "20b28e7db02c14ee50db05d5c9861e63c75befd24da1c62185df6758ae225295",
+        "interrupted_updates/1789919659181087056.json": "d95e133d3b9a8b23e267e4731d95d0d7725e6f1c53126433cdc12a25b33270e2",
+        "resume.pt": "ff4315d32a856e88f09364670fd335d24256f6072cdc7f421df3d520eddf4707"
+      },
+      "retained_model_equals_final_resume": true,
+      "retained_trajectory_gpu_lease_seconds": 8609.208302976023,
+      "samples_per_clip_range": [
+        524,
+        665
+      ],
+      "scope": "Complete actual C00 training, final artifacts and optimizer charge reconciliation; no accuracy claim",
+      "seed": 314159,
+      "source": "6bba",
+      "source_fit_clips": 107,
+      "status": "passed",
+      "updates": 8000
+    }
+  ],
   "runtime_tests": {
     "count": 17,
     "exit_code": 0,

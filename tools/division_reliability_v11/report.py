@@ -80,6 +80,11 @@ def training():
                 result=read(p) if p.exists() else progress
                 result={**result,'process_verified_alive':alive(progress.get('pid')),
                         'resume':checkpoint(folder),'history_summary':{}}
+                interrupted=[read(p) for p in sorted((folder/'interrupted_updates').glob('*.json'))]
+                result['interrupted_update_attempts']=dict(
+                    archived_segments=len(interrupted),recorded_updates=sum(len(rows) for rows in interrupted),
+                    recorded_gpu_lease_seconds=sum(r.get('gpu_lease_seconds',0) for rows in interrupted for r in rows),
+                    scope='Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge.')
                 hp=folder/'history.jsonl'
                 if hp.exists():
                     count=0;sums=Counter();first=last=None;fallback=supervised=proposal=hard_fallback=0;visits=set();cache_peak=0;probabilities=[]
@@ -107,6 +112,7 @@ def training():
                         uniform_hard_slot_fallback_groups=hard_fallback,observation_cache_peak_bytes=cache_peak,
                         group_selection_probability_range=[min(probabilities),max(probabilities)] if probabilities else None,
                         history_sha256=sha(hp),full_history_committed=False)
+                    result['history_summary']['timing_scope']='Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.'
                     if kind=='compact':
                         result['history_summary'].update(
                             unique_group_visits_scope='Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots.',
@@ -186,6 +192,8 @@ def resources():
         hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
         maximum_lease_seconds=max((r['seconds'] for r in rows),default=0),sampled_maxima=maxima,sampled_minima=minima,
         current_durable_free_bytes=shutil.disk_usage(WORK).free,inherited_lifetime=inherited,
+        current_cpu_dispatch_options=read(WORK/'controller/options.json') if (WORK/'controller/options.json').exists() else {},
+        cpu_dispatch_scope='Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.',
         cpu_job_resource_samples=len(cpu),cpu_job_resource_receipt_files=len(cpu_files),
         study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
         completed_job_wall_time=job_summary,
@@ -412,6 +420,7 @@ def run():
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
     if (WORK/'checks/training_phase_accounting.json').exists():validation['actual_training_phase_accounting']=read(WORK/'checks/training_phase_accounting.json')
     validation['retained_compact_final_audits']=[read(p) for p in sorted((WORK/'checks/compact_final').glob('*/*/receipt.json'))]
+    validation['retained_upstream_final_audits']=[read(p) for p in sorted((WORK/'checks/upstream_final').glob('*/*/receipt.json'))]
     validation['complete_mining_and_resume_audits']=[read(p) for p in sorted((WORK/'checks/mining_complete').glob('*/*/receipt.json'))]
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
@@ -483,6 +492,9 @@ def run():
     if (RESULTS/'host_restart_resume.json').exists():
         restart=read(RESULTS/'host_restart_resume.json')
         lines += [f'A host restart interrupted the fourth upstream fit and source clip workers. Preserved state resumed at update {restart["checkpoint_step"]}; {restart["replayed_updates_compared"]} replayed update records were compared with their pre-interruption records, with exact agreement {restart["all_compared_fields_exact"]} for samples, group selections, learning rates, loss components and gradient norms. There was no checkpoint at the last compared update, so this comparison does not establish model tensor equality there. The unclosed GPU lease was conservatively charged {restart["conservative_unclosed_lease_seconds"]:g} seconds. Complete clip receipts were verified and reused; incomplete clips restarted from unchanged parents. host_restart_resume.json records the preservation hashes and tested recovery.', '']
+    upstream_audits=validation['retained_upstream_final_audits']
+    if upstream_audits:
+        lines += [f'{len(upstream_audits)}/4 complete upstream artifacts passed full-history audits: every optimizer sample belongs to source-fit clip/time support, all recorded losses/gradients and retained weights are finite, and final weights exactly equal the final resumable model. The resource journal reconciles the retained trajectories plus {sum(r["discarded_update_attempts"] for r in upstream_audits)} discarded update attempts. These artifact checks establish execution consistency, not predictive accuracy; validation.json retains the receipts.', '']
     for cal in read(RESULTS/'calibration.json')['cells']:
         label=f'{cal["source"]}/{cal["seed"]}/{cal["arm"]}'
         if cal['disabled_policy']:

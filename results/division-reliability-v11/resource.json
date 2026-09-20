@@ -57,16 +57,16 @@
       "sum_seconds": 13.30238835999944
     },
     "mine": {
-      "executions": 76,
-      "maximum_seconds": 1102.5367351089953,
-      "median_seconds": 420.95007914899907,
+      "executions": 86,
+      "maximum_seconds": 1210.6383088140003,
+      "median_seconds": 472.677634933003,
       "minimum_seconds": 1.0884506249999504,
-      "p95_seconds": 893.8724440500009,
+      "p95_seconds": 898.861422386,
       "status_counts": {
-        "complete": 73,
+        "complete": 83,
         "failed": 3
       },
-      "sum_seconds": 34838.315820109994
+      "sum_seconds": 41750.45584811299
     },
     "mining-finish": {
       "executions": 1,
@@ -135,15 +135,15 @@
       "sum_seconds": 3120.7791415620013
     },
     "predict/C00/fit": {
-      "executions": 494,
+      "executions": 507,
       "maximum_seconds": 314.4771287659969,
-      "median_seconds": 3.1596741799985466,
+      "median_seconds": 3.162142146997212,
       "minimum_seconds": 3.0445569779985817,
-      "p95_seconds": 301.80787811499613,
+      "p95_seconds": 302.2763098620053,
       "status_counts": {
-        "complete": 494
+        "complete": 507
       },
-      "sum_seconds": 44333.73330728399
+      "sum_seconds": 47725.26043420999
     },
     "prepare-actions/calibration": {
       "executions": 50,
@@ -157,15 +157,15 @@
       "sum_seconds": 4061.8520023399997
     },
     "prepare-actions/fit": {
-      "executions": 328,
+      "executions": 338,
       "maximum_seconds": 697.3771959009973,
-      "median_seconds": 1.0534187379998912,
+      "median_seconds": 1.0549812319989087,
       "minimum_seconds": 1.0156883810050203,
-      "p95_seconds": 478.12972069300304,
+      "p95_seconds": 488.64747043399984,
       "status_counts": {
-        "complete": 328
+        "complete": 338
       },
-      "sum_seconds": 27158.494613440973
+      "sum_seconds": 30927.00060548897
     },
     "report": {
       "executions": 1,
@@ -202,9 +202,20 @@
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
-  "cpu_job_resource_receipt_files": 1734,
-  "cpu_job_resource_samples": 1098,
-  "current_durable_free_bytes": 199760465920,
+  "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
+  "cpu_job_resource_receipt_files": 1878,
+  "cpu_job_resource_samples": 1135,
+  "current_cpu_dispatch_options": {
+    "workers": 3,
+    "workers_by_stage": {
+      "calibration-predict:C01": 3,
+      "calibration-predict:C11": 3,
+      "mine": 4,
+      "predict:C00": 4,
+      "prepare-actions": 2
+    }
+  },
+  "current_durable_free_bytes": 199590760448,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -212,10 +223,10 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 0.4222072320869134,
-    "inference": 0.655868969071387,
+    "event_mining": 0.44817355988858215,
+    "inference": 0.6992042720413921,
     "pilot": 0.045588012047780166,
-    "upstream": 8.860739605956338
+    "upstream": 9.467127421661619
   },
   "inherited_hours": 19.307391920998594,
   "inherited_lifetime": {
@@ -283,13 +294,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 89899,
+  "lease_count": 95849,
   "lease_status_counts": {
-    "complete": 89895,
+    "complete": 95845,
     "failed": 3,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 29.966172383757943,
+  "lifetime_v10_plus_v11_conservative_hours": 30.641861830234895,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -310,8 +321,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 10.658780462759351,
-  "new_study_measured_journal_hours": 9.992511034966567,
+  "new_study_gpu_lease_hours": 11.334469909236304,
+  "new_study_measured_journal_hours": 10.668200481443522,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T06:13:22.283744+00:00",
@@ -390,15 +401,15 @@
     },
     {
       "first_lease_started_utc": "2026-09-20T15:54:19.500869+00:00",
-      "gpu_lease_seconds": 346.5648735380007,
-      "last_lease_finished_utc": "2026-09-20T16:01:12.232381+00:00",
+      "gpu_lease_seconds": 2529.5610100769977,
+      "last_lease_finished_utc": "2026-09-20T16:44:20.886066+00:00",
       "lease_status_counts": {
-        "complete": 272
+        "complete": 2042
       },
-      "observed_elapsed_seconds": 412.731512,
+      "observed_elapsed_seconds": 3001.385197,
       "pid": 21862,
-      "process_verified_alive": true,
-      "recorded_optimizer_leases": 272,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 2042,
       "seed": 314159,
       "source": "6bba",
       "stage": "upstream"
@@ -451,11 +462,18 @@
       "sum_seconds": 18785.190865835008
     },
     "C00/6bba/20260918": {
-      "completed_clips": 96,
+      "completed_clips": 107,
       "maximum_seconds": 312.3059863660019,
-      "median_seconds": 278.87114613450467,
-      "p95_seconds": 309.22627617900434,
-      "sum_seconds": 27125.70948333603
+      "median_seconds": 279.8446235369993,
+      "p95_seconds": 308.7889258609939,
+      "sum_seconds": 30367.72234270603
+    },
+    "C00/6bba/314159": {
+      "completed_clips": 3,
+      "maximum_seconds": 64.51293606599984,
+      "median_seconds": 64.28688844799944,
+      "p95_seconds": 64.51293606599984,
+      "sum_seconds": 186.24832434399923
     }
   },
   "original_source_bank_wall_time": {
@@ -486,6 +504,13 @@
       "median_seconds": 318.7877455609996,
       "p95_seconds": 606.4226308970028,
       "sum_seconds": 21403.162823282015
+    },
+    "6bba/20260918/fit": {
+      "completed_clips": 10,
+      "maximum_seconds": 605.2464948940001,
+      "median_seconds": 341.65011123299973,
+      "p95_seconds": 605.2464948940001,
+      "sum_seconds": 3676.7008087009995
     }
   },
   "pre_journal_accounting": {
@@ -604,16 +629,16 @@
   },
   "sampled_minima": {
     "device_free_min_bytes": 9965207552,
-    "host_available_min_bytes": 32764567552
+    "host_available_min_bytes": 28931112960
   },
   "source_bank_timing_scope": "One original preparation per completed clip, excluding verified-cache reuse. Includes enumeration, crops, labels and full source scoring; sums overlap for concurrent clips.",
   "study_cpu_rss_peak_bytes": 38490300416,
-  "study_host_available_min_bytes": 32729440256,
+  "study_host_available_min_bytes": 29063892992,
   "timing_scope": {
     "checkpoint": "Latest closed-file creation-to-last-write samples in training_summary.json; early overwritten checkpoints are not retrospectively timed",
     "input_io": "Measured separately in optimizer histories and training_summary.json",
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-20T16:01:13.288041+00:00"
+  "updated_utc": "2026-09-20T16:46:34.242903+00:00"
 }

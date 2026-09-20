@@ -91,6 +91,17 @@ with their preserved records. Samples, groups, learning rates, losses and
 gradient norms matched exactly; `host_restart_resume.json` records the scope,
 preserved hashes and conservative charge for the interrupted GPU lease.
 
+After an upstream final is retained, validate its full sampling history, finite
+losses and weights, final checkpoint equality, and optimizer charge accounting:
+
+```sh
+"$study_python" -m division_reliability_v11.upstream_final_audit --source 44b6 --seed 20260918
+```
+
+This distinguishes the retained trajectory from discarded updates replayed after
+an interruption. All attempts remain in the resource journal. The audit's
+immutable receipt is included in `validation.json` by `report`.
+
 C11 pauses at its registered midpoint. Independent source-fit mining workers
 read one immutable midpoint snapshot; their completed clip receipts can be
 reused only with identical parents. The merged pool is consumed once on resume.
