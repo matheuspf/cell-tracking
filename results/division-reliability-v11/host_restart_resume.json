@@ -1,0 +1,131 @@
+{
+  "all_compared_fields_exact": true,
+  "checkpoint_guard": {
+    "denied": 0,
+    "installed_before_numerical": true,
+    "network_denied": 0,
+    "subprocess_denied": 0
+  },
+  "checkpoint_step": 5958,
+  "comparison_fields": [
+    "lr",
+    "loss",
+    "detection",
+    "association",
+    "gradient_norm",
+    "groups",
+    "samples"
+  ],
+  "conservative_unclosed_lease_seconds": 60.0,
+  "different_fields": [],
+  "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+  "interrupted_clip_workers": "Complete clip receipts are verified and reused. Incomplete source predictions/mining clips restart from their original parents.",
+  "last_pre_interruption_history_step": 6171,
+  "observed_utc": "2026-09-20T15:59:45.175140+00:00",
+  "preservation_check": {
+    "locked_core_hash_mismatches": [],
+    "observed_utc": "2026-09-20T15:56:13.717312+00:00",
+    "user_files_hash_matches": {
+      "experiment_matrix.csv": true,
+      "per_embryo_scores.csv": true
+    },
+    "v10_artifacts_checked": 107,
+    "v10_hash_mismatches": []
+  },
+  "preserved_artifacts": [
+    {
+      "bytes": 436,
+      "path": "controller/upstream.json",
+      "sha256": "543d29c63015da00c75eaa0e01be8eaebfded7e1fc68e6fd364bfbede770ffc7"
+    },
+    {
+      "bytes": 202,
+      "path": "controller/pipeline.json",
+      "sha256": "7ac5b28e7178e1e7fe804d2160f9252b9b42869565dbe644c6587b22f9419005"
+    },
+    {
+      "bytes": 563,
+      "path": "controller/source-prefetch-queue.json",
+      "sha256": "8d78d350ea1560c27151cb6768383f4b26ae4fb8ea268378700c61da0571e85d"
+    },
+    {
+      "bytes": 142,
+      "path": "controller/receipt-observer.json",
+      "sha256": "6967e015fd7e056d200fffed5901e2da739d55a54cfa8c0b1e8aba07ea34ea27"
+    },
+    {
+      "bytes": 161,
+      "path": "resources/active_lease.json",
+      "sha256": "449b7bb74ff884a7a4343ff7c12448c0310321a18cce658c82dbd720212eb6f6"
+    },
+    {
+      "bytes": 259,
+      "path": "resources/totals.json",
+      "sha256": "ef1712d08974d74c416804444aa4479ed9dd1e27692e2c861cd7b19b2c87757b"
+    },
+    {
+      "bytes": 182,
+      "path": "fits/6bba/314159/upstream/progress.json",
+      "sha256": "31f52024afc41b06b7d9fe76bbe010f2367bf7211fb6ccda23bb9473281d0dc2"
+    },
+    {
+      "bytes": 25070425,
+      "path": "fits/6bba/314159/upstream/resume.pt",
+      "sha256": "48cf029f22a9168fdb8290df22d37306547487974856d2880b8525bde38257f7"
+    },
+    {
+      "bytes": 6705906,
+      "path": "fits/6bba/314159/upstream/history.jsonl",
+      "sha256": "4f681767f18cb06279989cad44c6e92f5872d2d1ad8ef21ec7818b63c17d39ce"
+    },
+    {
+      "bytes": 3807363,
+      "path": "fits/44b6/314159/compact/resume.pt",
+      "sha256": "71a0b99a72053e0e73c4d9af674491a9fbff542521422989afe168d9a4f13b8f"
+    },
+    {
+      "bytes": 445,
+      "path": "controller/jobs/mine-44b6-314159-44b6_1d530831.json",
+      "sha256": "97d78d3ca57b8b02f4ef4779a172d04370c04e36e9a0c339eeb6415e9bf5bc5d"
+    },
+    {
+      "bytes": 506,
+      "path": "controller/jobs/predict-6bba-20260918-C00-fit-6bba_ed9377fd.json",
+      "sha256": "041491d609e7c76ada748457c3a7c1468a7fdf69e41ab78f2e9fc7a0b3cb14f5"
+    },
+    {
+      "bytes": 445,
+      "path": "controller/jobs/mine-44b6-314159-44b6_267148e4.json",
+      "sha256": "6eec174b202f5dced006919e2f2e4b236ebf3ed13351edbbc019c64a1f857bab"
+    },
+    {
+      "bytes": 445,
+      "path": "controller/jobs/mine-44b6-314159-44b6_341df25f.json",
+      "sha256": "e650ba6ed1c3ce74a588ff58db3080bc1c9826813fdda6617fe695e8d7fd93d3"
+    },
+    {
+      "bytes": 506,
+      "path": "controller/jobs/predict-6bba-20260918-C00-fit-6bba_edf14583.json",
+      "sha256": "967033819efc915084850f5dc2d617315abb54f2331d9721b779eb3704c8b776"
+    },
+    {
+      "bytes": 506,
+      "path": "controller/jobs/predict-6bba-20260918-C00-fit-6bba_ebff6e76.json",
+      "sha256": "76c70e53e290fa997c6cba359f34bef060aa0e9b7d7c08dcecfd1718b901abd4"
+    },
+    {
+      "bytes": 445,
+      "path": "controller/jobs/mine-44b6-314159-44b6_12dfb391.json",
+      "sha256": "134bb0afd94b2f4a826fe6d6019d8d29af5c2948e901d77a3af3fdb647aa7714"
+    }
+  ],
+  "reason": "No study processes survived the host restart; the existing resumable queues were restarted after preservation and ownership checks.",
+  "replayed_history_sha256": "20cf2a253c8b0b6527443d2e2811e0bd33f97d992b9db2d1947d21e29ad343f0",
+  "replayed_updates_compared": 213,
+  "scientific_recipe_changed": false,
+  "scope": "Exact replay of recorded update samples, groups, loss components, learning rates and gradient norms. No old model checkpoint existed at the final compared update, so this does not assert tensor equality there.",
+  "seed": 314159,
+  "source": "6bba",
+  "status": "passed",
+  "target_scores_opened": false
+}

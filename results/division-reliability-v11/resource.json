@@ -2,71 +2,71 @@
   "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
   "completed_job_wall_time": {
     "calibrate/C01": {
-      "executions": 2,
-      "maximum_seconds": 325.1461892999978,
-      "median_seconds": 163.0818656745014,
-      "minimum_seconds": 1.0175420490049873,
-      "p95_seconds": 325.1461892999978,
-      "status_counts": {
-        "complete": 2
-      },
-      "sum_seconds": 326.1637313490028
-    },
-    "calibrate/C11": {
-      "executions": 1,
-      "maximum_seconds": 346.51106672100286,
-      "median_seconds": 346.51106672100286,
-      "minimum_seconds": 346.51106672100286,
-      "p95_seconds": 346.51106672100286,
-      "status_counts": {
-        "complete": 1
-      },
-      "sum_seconds": 346.51106672100286
-    },
-    "calibration-predict/C01": {
-      "executions": 20,
-      "maximum_seconds": 978.9900511670021,
-      "median_seconds": 88.74593584549984,
-      "minimum_seconds": 3.067999172002601,
-      "p95_seconds": 835.4920600309997,
-      "status_counts": {
-        "complete": 20
-      },
-      "sum_seconds": 5235.719348248007
-    },
-    "calibration-predict/C11": {
-      "executions": 10,
-      "maximum_seconds": 1073.7013936449948,
-      "median_seconds": 524.1733961655009,
-      "minimum_seconds": 184.74831886599713,
-      "p95_seconds": 1073.7013936449948,
-      "status_counts": {
-        "complete": 10
-      },
-      "sum_seconds": 5615.261552984994
-    },
-    "fit-linear": {
       "executions": 3,
-      "maximum_seconds": 5.148077881000063,
-      "median_seconds": 4.078921498999989,
-      "minimum_seconds": 1.0190512639965164,
-      "p95_seconds": 5.148077881000063,
+      "maximum_seconds": 325.1461892999978,
+      "median_seconds": 1.0175420490049873,
+      "minimum_seconds": 1.016712765999955,
+      "p95_seconds": 325.1461892999978,
       "status_counts": {
         "complete": 3
       },
-      "sum_seconds": 10.246050643996568
+      "sum_seconds": 327.18044411500273
+    },
+    "calibrate/C11": {
+      "executions": 2,
+      "maximum_seconds": 346.51106672100286,
+      "median_seconds": 173.76432152750147,
+      "minimum_seconds": 1.0175763340000685,
+      "p95_seconds": 346.51106672100286,
+      "status_counts": {
+        "complete": 2
+      },
+      "sum_seconds": 347.52864305500293
+    },
+    "calibration-predict/C01": {
+      "executions": 30,
+      "maximum_seconds": 978.9900511670021,
+      "median_seconds": 5.106071418499823,
+      "minimum_seconds": 3.067999172002601,
+      "p95_seconds": 835.4920600309997,
+      "status_counts": {
+        "complete": 30
+      },
+      "sum_seconds": 5276.4010065900075
+    },
+    "calibration-predict/C11": {
+      "executions": 20,
+      "maximum_seconds": 1073.7013936449948,
+      "median_seconds": 95.04927243699865,
+      "minimum_seconds": 3.062208670000018,
+      "p95_seconds": 888.2086347950026,
+      "status_counts": {
+        "complete": 20
+      },
+      "sum_seconds": 5653.956885774994
+    },
+    "fit-linear": {
+      "executions": 6,
+      "maximum_seconds": 5.148077881000063,
+      "median_seconds": 1.0205743039982735,
+      "minimum_seconds": 1.0168689100028132,
+      "p95_seconds": 5.148077881000063,
+      "status_counts": {
+        "complete": 6
+      },
+      "sum_seconds": 13.30238835999944
     },
     "mine": {
-      "executions": 64,
+      "executions": 76,
       "maximum_seconds": 1102.5367351089953,
-      "median_seconds": 464.91009147450313,
-      "minimum_seconds": 6.6451224659977015,
+      "median_seconds": 420.95007914899907,
+      "minimum_seconds": 1.0884506249999504,
       "p95_seconds": 893.8724440500009,
       "status_counts": {
-        "complete": 61,
+        "complete": 73,
         "failed": 3
       },
-      "sum_seconds": 31167.591558378976
+      "sum_seconds": 34838.315820109994
     },
     "mining-finish": {
       "executions": 1,
@@ -80,92 +80,92 @@
       "sum_seconds": 1.0176988910025102
     },
     "mining-prepare": {
-      "executions": 1,
-      "maximum_seconds": 1.0180469839979196,
-      "median_seconds": 1.0180469839979196,
+      "executions": 3,
+      "maximum_seconds": 2.03276398700109,
+      "median_seconds": 1.0191844590001438,
       "minimum_seconds": 1.0180469839979196,
-      "p95_seconds": 1.0180469839979196,
+      "p95_seconds": 2.03276398700109,
       "status_counts": {
-        "complete": 1
+        "complete": 3
       },
-      "sum_seconds": 1.0180469839979196
+      "sum_seconds": 4.069995429999153
     },
     "package/C00": {
-      "executions": 2,
-      "maximum_seconds": 1.0311359129991615,
-      "median_seconds": 1.0237355280005431,
+      "executions": 4,
+      "maximum_seconds": 1.0322897380000313,
+      "median_seconds": 1.023971817999609,
       "minimum_seconds": 1.0163351430019247,
-      "p95_seconds": 1.0311359129991615,
+      "p95_seconds": 1.0322897380000313,
       "status_counts": {
-        "complete": 2
+        "complete": 4
       },
-      "sum_seconds": 2.0474710560010863
+      "sum_seconds": 4.096568517001174
     },
     "package/C01": {
-      "executions": 2,
+      "executions": 3,
       "maximum_seconds": 1.020820002999244,
-      "median_seconds": 1.0179778614965471,
+      "median_seconds": 1.017091414999868,
       "minimum_seconds": 1.0151357199938502,
       "p95_seconds": 1.020820002999244,
       "status_counts": {
-        "complete": 2
+        "complete": 3
       },
-      "sum_seconds": 2.0359557229930942
+      "sum_seconds": 3.0530471379929622
     },
     "package/C11": {
-      "executions": 1,
-      "maximum_seconds": 1.0159844790032366,
-      "median_seconds": 1.0159844790032366,
+      "executions": 2,
+      "maximum_seconds": 1.0204675379998207,
+      "median_seconds": 1.0182260085015287,
       "minimum_seconds": 1.0159844790032366,
-      "p95_seconds": 1.0159844790032366,
+      "p95_seconds": 1.0204675379998207,
       "status_counts": {
-        "complete": 1
+        "complete": 2
       },
-      "sum_seconds": 1.0159844790032366
+      "sum_seconds": 2.0364520170030573
     },
     "predict/C00/calibration": {
-      "executions": 20,
+      "executions": 50,
       "maximum_seconds": 309.4748384620034,
-      "median_seconds": 139.84783611649982,
-      "minimum_seconds": 3.0569275969974115,
-      "p95_seconds": 308.6133688129994,
+      "median_seconds": 3.1853939075008384,
+      "minimum_seconds": 3.047473489998083,
+      "p95_seconds": 308.5673296609966,
       "status_counts": {
-        "complete": 20
+        "complete": 50
       },
-      "sum_seconds": 3022.834200444995
+      "sum_seconds": 3120.7791415620013
     },
     "predict/C00/fit": {
-      "executions": 258,
+      "executions": 494,
       "maximum_seconds": 314.4771287659969,
-      "median_seconds": 183.5470817275018,
+      "median_seconds": 3.1596741799985466,
       "minimum_seconds": 3.0445569779985817,
-      "p95_seconds": 304.4971164189992,
+      "p95_seconds": 301.80787811499613,
       "status_counts": {
-        "complete": 258
+        "complete": 494
       },
-      "sum_seconds": 37976.342847272004
+      "sum_seconds": 44333.73330728399
     },
     "prepare-actions/calibration": {
-      "executions": 20,
+      "executions": 50,
       "maximum_seconds": 560.8634896930016,
-      "median_seconds": 80.61377677450218,
-      "minimum_seconds": 1.0192267640013597,
-      "p95_seconds": 524.1703838130052,
+      "median_seconds": 1.0942543180026405,
+      "minimum_seconds": 1.0157775959960418,
+      "p95_seconds": 513.4790071899988,
       "status_counts": {
-        "complete": 20
+        "complete": 50
       },
-      "sum_seconds": 4029.640905365006
+      "sum_seconds": 4061.8520023399997
     },
     "prepare-actions/fit": {
-      "executions": 151,
+      "executions": 328,
       "maximum_seconds": 697.3771959009973,
-      "median_seconds": 155.95635777500138,
-      "minimum_seconds": 1.0163982150043012,
-      "p95_seconds": 538.4848969009981,
+      "median_seconds": 1.0534187379998912,
+      "minimum_seconds": 1.0156883810050203,
+      "p95_seconds": 478.12972069300304,
       "status_counts": {
-        "complete": 151
+        "complete": 328
       },
-      "sum_seconds": 26972.681645671983
+      "sum_seconds": 27158.494613440973
     },
     "report": {
       "executions": 1,
@@ -179,32 +179,32 @@
       "sum_seconds": 2.0404011659993557
     },
     "source-diagnostics": {
-      "executions": 3,
+      "executions": 6,
       "maximum_seconds": 53.93525021700043,
-      "median_seconds": 34.7082955099977,
-      "minimum_seconds": 31.597589823002636,
+      "median_seconds": 32.12806971500129,
+      "minimum_seconds": 31.512443954001355,
       "p95_seconds": 53.93525021700043,
       "status_counts": {
-        "complete": 3
+        "complete": 6
       },
-      "sum_seconds": 120.24113555000076
+      "sum_seconds": 215.95390154300208
     },
     "train-compact": {
-      "executions": 3,
+      "executions": 6,
       "maximum_seconds": 5649.757518372004,
-      "median_seconds": 5381.532455732995,
-      "minimum_seconds": 10.20379536999826,
+      "median_seconds": 10.201257034499122,
+      "minimum_seconds": 1.0170146339999064,
       "p95_seconds": 5649.757518372004,
       "status_counts": {
-        "complete": 3
+        "complete": 6
       },
-      "sum_seconds": 11041.493769474997
+      "sum_seconds": 11061.856394075996
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
-  "cpu_job_resource_receipt_files": 1174,
-  "cpu_job_resource_samples": 569,
-  "current_durable_free_bytes": 200248889344,
+  "cpu_job_resource_receipt_files": 1734,
+  "cpu_job_resource_samples": 1098,
+  "current_durable_free_bytes": 199760465920,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -212,10 +212,10 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 0.40217030824302025,
-    "inference": 0.5799426336668866,
+    "event_mining": 0.4222072320869134,
+    "inference": 0.655868969071387,
     "pilot": 0.045588012047780166,
-    "upstream": 8.411375460131103
+    "upstream": 8.860739605956338
   },
   "inherited_hours": 19.307391920998594,
   "inherited_lifetime": {
@@ -283,12 +283,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 83591,
+  "lease_count": 89899,
   "lease_status_counts": {
-    "complete": 83588,
-    "failed": 3
+    "complete": 89895,
+    "failed": 3,
+    "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 29.420844978684315,
+  "lifetime_v10_plus_v11_conservative_hours": 29.966172383757943,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -308,9 +309,9 @@
     "study_rss_limit_gib": 44,
     "total_device_limit_gib": 20
   },
-  "maximum_lease_seconds": 3.075348024998675,
-  "new_study_gpu_lease_hours": 10.113453057685721,
-  "new_study_measured_journal_hours": 9.447183629892939,
+  "maximum_lease_seconds": 60.0,
+  "new_study_gpu_lease_hours": 10.658780462759351,
+  "new_study_measured_journal_hours": 9.992511034966567,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T06:13:22.283744+00:00",
@@ -388,16 +389,31 @@
       "stage": "upstream"
     },
     {
-      "first_lease_started_utc": "2026-09-20T05:59:30.212593+00:00",
-      "gpu_lease_seconds": 5040.144735698188,
-      "last_lease_finished_utc": "2026-09-20T07:51:16.529407+00:00",
+      "first_lease_started_utc": "2026-09-20T15:54:19.500869+00:00",
+      "gpu_lease_seconds": 346.5648735380007,
+      "last_lease_finished_utc": "2026-09-20T16:01:12.232381+00:00",
       "lease_status_counts": {
-        "complete": 5001
+        "complete": 272
       },
-      "observed_elapsed_seconds": 6706.316814,
-      "pid": 2253280,
+      "observed_elapsed_seconds": 412.731512,
+      "pid": 21862,
       "process_verified_alive": true,
-      "recorded_optimizer_leases": 5001,
+      "recorded_optimizer_leases": 272,
+      "seed": 314159,
+      "source": "6bba",
+      "stage": "upstream"
+    },
+    {
+      "first_lease_started_utc": "2026-09-20T05:59:30.212593+00:00",
+      "gpu_lease_seconds": 6311.290787131031,
+      "last_lease_finished_utc": "2026-09-20T08:17:12.428410+00:00",
+      "lease_status_counts": {
+        "complete": 6171
+      },
+      "observed_elapsed_seconds": 8262.215817,
+      "pid": 2253280,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 6171,
       "seed": 314159,
       "source": "6bba",
       "stage": "upstream"
@@ -435,11 +451,11 @@
       "sum_seconds": 18785.190865835008
     },
     "C00/6bba/20260918": {
-      "completed_clips": 75,
+      "completed_clips": 96,
       "maximum_seconds": 312.3059863660019,
-      "median_seconds": 280.2272148100019,
-      "p95_seconds": 310.57827674099826,
-      "sum_seconds": 21506.09448704803
+      "median_seconds": 278.87114613450467,
+      "p95_seconds": 309.22627617900434,
+      "sum_seconds": 27125.70948333603
     }
   },
   "original_source_bank_wall_time": {
@@ -582,7 +598,7 @@
   "reserve_hours": 16,
   "sampled_maxima": {
     "peak_allocated_bytes": 7324746240,
-    "peak_reserved_bytes": 8980004864,
+    "peak_reserved_bytes": 8982102016,
     "rss_peak_bytes": 38418751488,
     "total_device_peak_bytes": 15348072448
   },
@@ -599,5 +615,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-20T07:51:17.857700+00:00"
+  "updated_utc": "2026-09-20T16:01:13.288041+00:00"
 }

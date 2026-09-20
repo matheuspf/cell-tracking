@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    "Uninterrupted execution on this host",
+    "Memory-qualified graph worker concurrency increased after the fourth upstream fit exits",
+    "No additional implementation failure or resource blocker"
+  ],
+  "estimated_utc": "2026-09-20T16:01:43.173243+00:00",
+  "measured_completed_source_job_mean_seconds": {
+    "C00_prediction": {
+      "44b6": 266.6,
+      "6bba": 289.1
+    },
+    "C01_calibration_raw_scores": 519.5,
+    "C11_calibration_raw_scores": 561.5,
+    "source_mining": 519.5
+  },
+  "measurement_scope": "Completed source workers, including CPU work and shared-GPU waiting; target runtime can differ. These are planning estimates, not target results.",
+  "remaining_C00_target_predictions": 398,
+  "remaining_cold_runs": 24,
+  "remaining_learned_policy_target_predictions": 796,
+  "remaining_official_scores": 1194,
+  "remaining_other_work": "Second source44 C11 mining, remaining compact fits, both source6 preparations and mining, remaining source calibrations, packaging, global freeze, diagnostics and final reporting.",
+  "remaining_target_clip_arm_predictions": 1194,
+  "remaining_wall_hours_range": [
+    24,
+    40
+  ],
+  "status": "estimate_not_completion",
+  "target_scores_opened": false
+}

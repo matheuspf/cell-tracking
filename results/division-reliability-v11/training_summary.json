@@ -293,7 +293,7 @@
         "resume": {
           "bytes": 3807363,
           "durable_step": 2000,
-          "file_creation_to_last_write_seconds": 0.010000219,
+          "file_creation_to_last_write_seconds": 0.010800961,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/compact/resume.pt",
@@ -303,7 +303,7 @@
             "step": 2000
           },
           "seed": 314159,
-          "sha256": "d39daa420cfc844d4b870930cf0e6a9af026759a421263111dbde22674b9dd17",
+          "sha256": "71a0b99a72053e0e73c4d9af674491a9fbff542521422989afe168d9a4f13b8f",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
@@ -311,7 +311,7 @@
         "source": "44b6",
         "status": "waiting_for_mining",
         "step": 2000,
-        "updated_utc": "2026-09-20T07:47:18.855089+00:00"
+        "updated_utc": "2026-09-20T15:59:27.781503+00:00"
       },
       "linear": {
         "census": {
@@ -496,7 +496,7 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "charged_gpu_lease_seconds": 5040.144735698188,
+        "charged_gpu_lease_seconds": 6426.2121664370125,
         "history_summary": {
           "first": {
             "association": 0.7250267267227173,
@@ -507,49 +507,49 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "6fc5669e4d26d29c2fa804938d58b2f6941ec9645351fd85739a259071cbab03",
+          "history_sha256": "33e27dcebe89c12531e22cc7aad4e5d24c4709dc9762233f38142d883895121d",
           "last": {
-            "association": 0.00920037180185318,
-            "detection": 0.6137741804122925,
-            "loss": 0.6229745745658875,
-            "lr": 3.4408024629860603e-05,
-            "step": 5001
+            "association": 0.0046308934688568115,
+            "detection": 0.6170556545257568,
+            "loss": 0.621686577796936,
+            "lr": 1.366872759911981e-05,
+            "step": 6230
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 275777,
-          "query_fallback_batches": 7243,
-          "recorded_updates": 5001,
-          "supervised_incoming_groups": 331914,
+          "proposal_incoming_groups": 358905,
+          "query_fallback_batches": 7426,
+          "recorded_updates": 6230,
+          "supervised_incoming_groups": 415064,
           "totals": {
-            "gpu_lease_seconds": 5040.144735698188,
-            "input_seconds": 42.42686398898513
+            "gpu_lease_seconds": 6426.2121664370125,
+            "input_seconds": 57.00148630989975
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
         },
         "horizon": 8000,
-        "pid": 2253280,
+        "pid": 21862,
         "process_verified_alive": true,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 4817,
-          "file_creation_to_last_write_seconds": 0.013070603,
+          "durable_step": 6155,
+          "file_creation_to_last_write_seconds": 0.014255964,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 4817
+            "one_based_step": 6155
           },
           "seed": 314159,
-          "sha256": "346c40c1fb91cf1458ad8d449df158001872af9f7712b8372f99ae337c0b41d3",
+          "sha256": "79e8f081a82f6f41fc2d25aaf35828514f83c3e0f6cd06665cad82581964b0c6",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 5001,
-        "updated_utc": "2026-09-20T07:51:16.535455+00:00"
+        "step": 6230,
+        "updated_utc": "2026-09-20T16:01:12.238201+00:00"
       }
     }
   ],

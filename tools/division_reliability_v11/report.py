@@ -406,6 +406,7 @@ def run():
     if (WORK/'checks/receipt_preservation.json').exists():validation['resource_receipt_preservation']=read(WORK/'checks/receipt_preservation.json')
     if (WORK/'checks/controller_archive_reuse.json').exists():validation['controller_archive_reuse']=read(WORK/'checks/controller_archive_reuse.json')
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
+    if (RESULTS/'host_restart_resume.json').exists():validation['host_restart_resume']=read(RESULTS/'host_restart_resume.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
@@ -479,6 +480,9 @@ def run():
         '']
     if (RESULTS/'compact_precision_repair.json').exists():
         lines += ['A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.', '']
+    if (RESULTS/'host_restart_resume.json').exists():
+        restart=read(RESULTS/'host_restart_resume.json')
+        lines += [f'A host restart interrupted the fourth upstream fit and source clip workers. Preserved state resumed at update {restart["checkpoint_step"]}; {restart["replayed_updates_compared"]} replayed update records were compared with their pre-interruption records, with exact agreement {restart["all_compared_fields_exact"]} for samples, group selections, learning rates, loss components and gradient norms. There was no checkpoint at the last compared update, so this comparison does not establish model tensor equality there. The unclosed GPU lease was conservatively charged {restart["conservative_unclosed_lease_seconds"]:g} seconds. Complete clip receipts were verified and reused; incomplete clips restarted from unchanged parents. host_restart_resume.json records the preservation hashes and tested recovery.', '']
     for cal in read(RESULTS/'calibration.json')['cells']:
         label=f'{cal["source"]}/{cal["seed"]}/{cal["arm"]}'
         if cal['disabled_policy']:

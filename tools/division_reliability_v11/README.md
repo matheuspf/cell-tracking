@@ -86,6 +86,10 @@ Checkpoints occur every 250 updates or five minutes and at phase boundaries.
 On restart, uncommitted history rows are archived before replay. Final weights
 are retained only after the registered horizon. Fresh-process 10+10 versus 20
 update proofs and compact mixed-objective replay are recorded in the results.
+The actual host-restart recovery also compared 213 replayed production updates
+with their preserved records. Samples, groups, learning rates, losses and
+gradient norms matched exactly; `host_restart_resume.json` records the scope,
+preserved hashes and conservative charge for the interrupted GPU lease.
 
 C11 pauses at its registered midpoint. Independent source-fit mining workers
 read one immutable midpoint snapshot; their completed clip receipts can be
