@@ -42,6 +42,8 @@ def _build(source,seed,arm='C00'):
     runtime_names=('inference.py','upstream.py','deterministic.py','data.py','graphs.py','models.py','features.py','policy.py',
                    'actions.py','guard.py','provenance.py','stage_provenance.py','common.py','resources.py')
     runtime_code={n:sha(Path(__file__).with_name(n)) for n in runtime_names}
+    if arm=='C11':
+        runtime_code.update({n:sha(Path(__file__).with_name(n)) for n in ('execution_precision.py','__main__.py')})
     ancestry['code']=artifact('code',files=runtime_code,fitting_core_files=lock['implementation_sha256']);parents.append('code')
     architecture={}
     for name in ('temporal_unet.py','simple_node_transformer.py'):
@@ -81,13 +83,18 @@ def _build(source,seed,arm='C00'):
                 raise Blocked('Final compact mining ancestry changed')
             ancestry['midpoint']=artifact('model',['compact_code','fit_bank','normalizer'],source=source,initialization='random',
                 seed=seed,updates=lock['event_updates']//2,sha256=sha(mining/'frozen_checkpoint.pt'))
-            ancestry['mining_pool']=artifact('preprocessing',['midpoint','fit_bank','normalizer'],source=source,partition='fit',
+            repair=read(RESULTS/'compact_precision_repair.json')
+            if repair['status']!='passed':raise Blocked('Compact evaluation precision proof is missing')
+            ancestry['compact_evaluation_runtime']=artifact('code',files={n:runtime_code[n] for n in ('execution_precision.py','__main__.py')},
+                environment={'NVIDIA_TF32_OVERRIDE':'0'},repair_sha256=sha(RESULTS/'compact_precision_repair.json'))
+            ancestry['mining_pool']=artifact('preprocessing',['midpoint','fit_bank','normalizer','compact_evaluation_runtime'],source=source,partition='fit',
                 sha256=sha(mining/'receipt.json'),passes=1,source_only=True)
             ancestry['head']=artifact('model',['compact_code','fit_bank','normalizer','mining_pool'],source=source,initialization='random',
                                       seed=seed,sha256=final['weights_sha256'],updates=final['updates'])
             shutil.copy2(fit/'compact/final.pt',folder/'compact.pt')
         else:raise Blocked('Unregistered arm')
-        ancestry['calibrator_code']=artifact('code',files=cal['implementation_sha256'],scorer_revision=lock['metric_revision'])
+        ancestry['calibrator_code']=artifact('code',['compact_evaluation_runtime'] if arm=='C11' else [],
+            files=cal['implementation_sha256'],scorer_revision=lock['metric_revision'])
         cp=['head','normalizer','calibrator_code']
         for clip in source_split['calibration']:
             for kind in ('raw_images','raw_labels'):
@@ -109,4 +116,5 @@ def _build(source,seed,arm='C00'):
                runtime_code_sha256=runtime_code,
                lock_identity=lock['identity'],label_exposure_class='source_isolated_reused_embryos',
                inference_requires_explicit_package=True,recipe_sha256=sha(REPO/'handover/division-reliability-v11/study.json'))
+    if arm=='C11':value['inference_environment']={'NVIDIA_TF32_OVERRIDE':'0'}
     seal(folder,value);return {**value,'path':str(folder.relative_to(REPO))}

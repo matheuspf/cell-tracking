@@ -41,6 +41,8 @@ def main():
                    'mining-prepare','mine','mining-finish'):
         if a.source is None or a.seed is None:p.error('--source and --seed are required')
     try:
+        from .execution_precision import configure
+        configure(a.stage,a.arm,a.package,source=a.source,seed=a.seed,clip=a.clip)
         if a.stage=='reconcile':
             from .reconcile import run
             result=run()
@@ -147,7 +149,8 @@ def main():
         return 0
     except Blocked as e:
         receipt=dict(status='blocked',stage=a.stage,source=a.source,seed=a.seed,reason=str(e),utc=now())
-        write(WORK/'command_receipts'/f'{__import__("time").time_ns()}.json',receipt)
+        try:write(WORK/'command_receipts'/f'{__import__("time").time_ns()}.json',receipt)
+        except PermissionError:receipt['command_receipt_write_denied']=True
         print(json.dumps(receipt),file=sys.stderr)
         return 2
 

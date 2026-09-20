@@ -3,6 +3,7 @@
   "cells": [
     {
       "compact": {
+        "durable_step": 2000,
         "history_summary": {
           "first": {
             "denominators": {
@@ -25,7 +26,7 @@
             1.2400486099055083e-05,
             0.05263157894736842
           ],
-          "history_sha256": "15307c56c2c722352af44bd65069fe14db32dde396411ea918ab7dbdda39f249",
+          "history_sha256": "0249fcb58b88bf4c2ed91d0b37f0e5595ccc83407211d249c6f826a5172fa467",
           "last": {
             "denominators": {
               "consistency": 32,
@@ -34,50 +35,50 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 6.335685664282664e-05,
-              "identity": 0.0034372639620414702,
-              "occurrence": 0.4203970325179398,
-              "ranking": 0.2735908180475235
+              "consistency": 0.0001174815159146192,
+              "identity": 0.004185574993698538,
+              "occurrence": 0.1706124625634402,
+              "ranking": 0.15946656465530396
             },
-            "lr": 0.000263939533219881,
-            "step": 1058
+            "lr": 0.00016284561214811367,
+            "step": 2000
           },
           "observation_cache_peak_bytes": 815597464,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 1058,
+          "recorded_updates": 2000,
           "supervised_incoming_groups": 0,
           "totals": {
-            "gpu_lease_seconds": 193.15853923905524,
-            "input_seconds": 4.553321555940784
+            "gpu_lease_seconds": 369.3610526419907,
+            "input_seconds": 8.804855630933162
           },
-          "uniform_hard_slot_fallback_groups": 2632,
-          "unique_group_visits": 15509
+          "uniform_hard_slot_fallback_groups": 6400,
+          "unique_group_visits": 22812
         },
         "horizon": 4000,
-        "mined": false,
-        "pid": 1036628,
-        "process_verified_alive": true,
+        "process_verified_alive": false,
         "resume": {
-          "bytes": 3532163,
-          "durable_step": 1051,
-          "file_creation_to_last_write_seconds": 0.008001792,
+          "bytes": 3800835,
+          "durable_step": 2000,
+          "file_creation_to_last_write_seconds": 0.012000241,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/20260918/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 1051
+            "step": 2000
           },
           "seed": 20260918,
-          "sha256": "c2ff7a128a650d1d94375eb0a1445d6c0378a310e404778f7b3ff41eed00fba3",
+          "sha256": "c8da03e23f7426d76784b6dbc799b6cafc9edeb69a096594fb50009792770a90",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "status": "running",
-        "step": 1058,
-        "updated_utc": "2026-09-20T02:21:25.601535+00:00"
+        "seed": 20260918,
+        "source": "44b6",
+        "status": "waiting_for_mining",
+        "step": 2000,
+        "updated_utc": "2026-09-20T03:23:45.669651+00:00"
       },
       "linear": {
         "census": {
@@ -185,7 +186,13 @@
       "source": "44b6",
       "target": "6bba",
       "upstream": {
-        "charged_gpu_lease_seconds": 6739.433457326879,
+        "charged_gpu_lease_seconds": 8632.704648473933,
+        "guard": {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
         "history_summary": {
           "first": {
             "association": 0.704526424407959,
@@ -196,49 +203,50 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "6c1ccbf8bfac10bd3c02102f1e901b5fbae0ce76537252620e523038051c9254",
+          "history_sha256": "4218256c5909ac4f753c54bc269c5d7457a9899a02dd8d7673890c73b3f6edbf",
           "last": {
-            "association": 0.0005528712645173073,
-            "detection": 0.6119294762611389,
-            "loss": 0.6124823689460754,
-            "lr": 1.2138810917712521e-05,
-            "step": 6345
+            "association": 0.005000653211027384,
+            "detection": 0.6054544448852539,
+            "loss": 0.6104550957679749,
+            "lr": 1e-06,
+            "step": 8000
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 119704,
-          "query_fallback_batches": 12443,
-          "recorded_updates": 6345,
-          "supervised_incoming_groups": 140642,
+          "proposal_incoming_groups": 157717,
+          "query_fallback_batches": 13819,
+          "recorded_updates": 8000,
+          "supervised_incoming_groups": 178715,
           "totals": {
-            "gpu_lease_seconds": 6739.433457326879,
-            "input_seconds": 34.10019129212378
+            "gpu_lease_seconds": 8632.704648473933,
+            "input_seconds": 42.305460327133915
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
         },
-        "horizon": 8000,
-        "pid": 680366,
-        "process_verified_alive": true,
+        "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+        "process_verified_alive": false,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 6135,
-          "file_creation_to_last_write_seconds": 0.01440987,
+          "durable_step": 8000,
+          "file_creation_to_last_write_seconds": 0.01383658,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 6135
+            "one_based_step": 8000
           },
           "seed": 314159,
-          "sha256": "44ba983e06c498960bd31717512ce1d81b00ac1f0ff38e0ef5762df23acf720c",
+          "sha256": "28e2f93b6b6fe0df3f0440c46fc8f49311911358ea3b0976d9911abdabb93177",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "status": "running",
-        "step": 6345,
-        "updated_utc": "2026-09-20T02:21:25.346748+00:00"
+        "seed": 314159,
+        "source": "44b6",
+        "status": "trained",
+        "updates": 8000,
+        "weights_sha256": "57e677efdfbf75ac8a41d967933fdcc90aa59a2447fdf8f038525c5c51fff547"
       }
     },
     {
@@ -255,10 +263,60 @@
       "source": "6bba",
       "target": "44b6",
       "upstream": {
-        "history_summary": {},
-        "process_verified_alive": false,
-        "resume": null,
-        "status": "pending"
+        "charged_gpu_lease_seconds": 1289.7736821609724,
+        "history_summary": {
+          "first": {
+            "association": 0.6719422340393066,
+            "detection": 0.6874553561210632,
+            "loss": 1.3593976497650146,
+            "lr": 2.5e-07,
+            "step": 1
+          },
+          "full_history_committed": false,
+          "group_selection_probability_range": null,
+          "history_sha256": "eeeb0599ce04fbaab4d43063b922e8653958349cbaabbfd5e63dfa49954935bf",
+          "last": {
+            "association": 0.06879445165395737,
+            "detection": 0.6311846971511841,
+            "loss": 0.6999791264533997,
+            "lr": 9.520143505104342e-05,
+            "step": 1474
+          },
+          "observation_cache_peak_bytes": 0,
+          "proposal_incoming_groups": 43352,
+          "query_fallback_batches": 6524,
+          "recorded_updates": 1474,
+          "supervised_incoming_groups": 99297,
+          "totals": {
+            "gpu_lease_seconds": 1290.961508871973,
+            "input_seconds": 20.062192210069043
+          },
+          "uniform_hard_slot_fallback_groups": 0,
+          "unique_group_visits": 0
+        },
+        "horizon": 8000,
+        "pid": 1410333,
+        "process_verified_alive": true,
+        "resume": {
+          "bytes": 25070425,
+          "durable_step": 1264,
+          "file_creation_to_last_write_seconds": 0.013692718,
+          "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+          "optimizer_present": true,
+          "path": "work/division-reliability-v11/fits/6bba/20260918/upstream/resume.pt",
+          "sampler_and_rng_present": true,
+          "scheduler": {
+            "horizon": 8000,
+            "one_based_step": 1264
+          },
+          "seed": 20260918,
+          "sha256": "ddde9b55b896c2aae120e47a8bb37717aca4c5e32a0a3caefbcb6b76d65271c9",
+          "source": "6bba",
+          "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
+        },
+        "status": "running",
+        "step": 1473,
+        "updated_utc": "2026-09-20T03:26:21.303290+00:00"
       }
     },
     {

@@ -356,6 +356,7 @@ def run():
         validation['official_empty_graph_control']={k:v for k,v in proof.items() if k!='events'}
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
+    if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')
@@ -417,6 +418,8 @@ def run():
         '',f'New v11 GPU lease accounting: {res["new_study_gpu_lease_hours"]:.4f} hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: {res["inherited_hours"]:.4f} hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.',
         '', 'Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Early pilot witnesses bypassed the global 2% cap. Later witnesses on retained C00 graphs use the registered solver and cap. Both kinds use labels to choose diagnostic edits and are not learned policies or achievable score bounds. Runtime tests and planning contracts are not evidence of trained accuracy.',
         '']
+    if (RESULTS/'compact_precision_repair.json').exists():
+        lines += ['A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.', '']
     for cal in read(RESULTS/'calibration.json')['cells']:
         label=f'{cal["source"]}/{cal["seed"]}/{cal["arm"]}'
         if cal['disabled_policy']:

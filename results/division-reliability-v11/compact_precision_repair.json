@@ -1,0 +1,297 @@
+{
+  "active_compact_implementation_unchanged": true,
+  "baseline_probe": {
+    "NVIDIA_TF32_OVERRIDE": null,
+    "checkpoint_sha256": "ed6954e33f0daa0bbb4f57bbcc95a6adc3f7af6dd84474594abcb65b1a22a588",
+    "checkpoint_unchanged": true,
+    "default_precision": {
+      "cudnn_tf32": true,
+      "matmul_tf32": false
+    },
+    "finished_utc": "2026-09-20T03:12:09.759920+00:00",
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "model_selection": false,
+    "rows": [
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0113de3b",
+        "legacy_all_sampled_maximum_difference": 4.076957702636719e-05,
+        "legacy_allclose_atol_1e5_rtol_1e5": false,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 3.4794696213147347e-07,
+        "legacy_batch_sha256": "4351269afc65b8cb000eeae65afbeef5b87f03e9b4de8ca122ff08a6c31a262f",
+        "legacy_first_maximum_difference": 1.8835067749023438e-05,
+        "legacy_maximum_scaled_error": 1.9355074167251587,
+        "legacy_relative_to_global_scale": 3.364238727954216e-05,
+        "legacy_scalar_maximum_error_vs_float64": 4.061736530225346e-05,
+        "maximum_embedding_magnitude": 1.676404595375061,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 3.4794696213147347e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 3.5762786865234375e-07
+      },
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0b24845f",
+        "legacy_all_sampled_maximum_difference": 0.0001049041748046875,
+        "legacy_allclose_atol_1e5_rtol_1e5": false,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 5.735070105483686e-07,
+        "legacy_batch_sha256": "406d389bfeccbcec60da1973a9ab5967be99fc715f860e8772e1b23707f90fe2",
+        "legacy_first_maximum_difference": 3.218650817871094e-05,
+        "legacy_maximum_scaled_error": 4.3421630859375,
+        "legacy_relative_to_global_scale": 6.552317063324153e-05,
+        "legacy_scalar_maximum_error_vs_float64": 0.00010477235068662161,
+        "maximum_embedding_magnitude": 1.8453741073608398,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 5.735070105483686e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 5.364418029785156e-07
+      },
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0c582fdc",
+        "legacy_all_sampled_maximum_difference": 0.00011086463928222656,
+        "legacy_allclose_atol_1e5_rtol_1e5": false,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 4.139226047472633e-07,
+        "legacy_batch_sha256": "8856241a6b1b0003dfbceaec459bd5b535a16272937661b99f1840d0ebaafeda",
+        "legacy_first_maximum_difference": 2.193450927734375e-05,
+        "legacy_maximum_scaled_error": 4.5036091804504395,
+        "legacy_relative_to_global_scale": 7.093995372997597e-05,
+        "legacy_scalar_maximum_error_vs_float64": 0.00011081161727921618,
+        "maximum_embedding_magnitude": 1.796257734298706,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 4.139226047472633e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 4.76837158203125e-07
+      }
+    ],
+    "seed": 20260918,
+    "source": "44b6",
+    "status": "measured",
+    "step": 2000
+  },
+  "checkpoint_sha256": "ed6954e33f0daa0bbb4f57bbcc95a6adc3f7af6dd84474594abcb65b1a22a588",
+  "complete_source_C00_control": {
+    "csv_sha256": "d6f7266455ba8c74c17670ab934901a08d7abf150de4bb4773686a65b737b913",
+    "edges": 28413,
+    "frames": 100,
+    "gpu_lease_seconds": 8.744629459950374,
+    "graph_hash": "aae8d4678dec71222ee5b96d6a299e4c8194d465ccd878184577b7414482ec3d",
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "nodes": 31349,
+    "package_identity": "8236fe009a59aa38e724113c1df0d614d470e56569133863b45cfdd512ffb28e",
+    "wall_seconds": 257.402390837
+  },
+  "corrected_probe": {
+    "NVIDIA_TF32_OVERRIDE": "0",
+    "checkpoint_sha256": "ed6954e33f0daa0bbb4f57bbcc95a6adc3f7af6dd84474594abcb65b1a22a588",
+    "checkpoint_unchanged": true,
+    "default_precision": {
+      "cudnn_tf32": true,
+      "matmul_tf32": false
+    },
+    "finished_utc": "2026-09-20T03:12:09.724042+00:00",
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "model_selection": false,
+    "rows": [
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0113de3b",
+        "legacy_all_sampled_maximum_difference": 3.5762786865234375e-07,
+        "legacy_allclose_atol_1e5_rtol_1e5": true,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 3.4794696213147347e-07,
+        "legacy_batch_sha256": "4351269afc65b8cb000eeae65afbeef5b87f03e9b4de8ca122ff08a6c31a262f",
+        "legacy_first_maximum_difference": 1.7881393432617188e-07,
+        "legacy_maximum_scaled_error": 0.0204705111682415,
+        "legacy_relative_to_global_scale": 2.951086628399935e-07,
+        "legacy_scalar_maximum_error_vs_float64": 1.5221172411372663e-07,
+        "maximum_embedding_magnitude": 1.676404595375061,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 3.4794696213147347e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 3.5762786865234375e-07
+      },
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0b24845f",
+        "legacy_all_sampled_maximum_difference": 5.364418029785156e-07,
+        "legacy_allclose_atol_1e5_rtol_1e5": true,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 5.735070105483686e-07,
+        "legacy_batch_sha256": "406d389bfeccbcec60da1973a9ab5967be99fc715f860e8772e1b23707f90fe2",
+        "legacy_first_maximum_difference": 2.384185791015625e-07,
+        "legacy_maximum_scaled_error": 0.028247816488146782,
+        "legacy_relative_to_global_scale": 3.3506168506391987e-07,
+        "legacy_scalar_maximum_error_vs_float64": 2.1040158659779706e-07,
+        "maximum_embedding_magnitude": 1.8453741073608398,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 5.735070105483686e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 5.364418029785156e-07
+      },
+      {
+        "batch_size": 4096,
+        "clip": "44b6_0c582fdc",
+        "legacy_all_sampled_maximum_difference": 4.76837158203125e-07,
+        "legacy_allclose_atol_1e5_rtol_1e5": true,
+        "legacy_batch_equals_strict_fp32": true,
+        "legacy_batch_maximum_difference_vs_strict_fp32": 0.0,
+        "legacy_batch_maximum_error_vs_float64": 4.139226047472633e-07,
+        "legacy_batch_sha256": "8856241a6b1b0003dfbceaec459bd5b535a16272937661b99f1840d0ebaafeda",
+        "legacy_first_maximum_difference": 7.450580596923828e-08,
+        "legacy_maximum_scaled_error": 0.020769868046045303,
+        "legacy_relative_to_global_scale": 3.05118078358646e-07,
+        "legacy_scalar_maximum_error_vs_float64": 1.4143788384934908e-07,
+        "maximum_embedding_magnitude": 1.796257734298706,
+        "reference_indices": [
+          0,
+          1,
+          7,
+          31,
+          127,
+          511,
+          1023,
+          2047,
+          4095
+        ],
+        "strict_batch_maximum_error_vs_float64": 4.139226047472633e-07,
+        "strict_fp32_maximum_batch_scalar_difference": 4.76837158203125e-07
+      }
+    ],
+    "seed": 20260918,
+    "source": "44b6",
+    "status": "measured",
+    "step": 2000
+  },
+  "error_logging_failure": "The CLI tried to write its failure receipt outside the worker output allowlist; the original exception is now preserved on stderr if that write is denied. The input guard is unchanged.",
+  "existing_package_identities_unchanged": {
+    "packages/44b6/20260918/C00": "8236fe009a59aa38e724113c1df0d614d470e56569133863b45cfdd512ffb28e",
+    "packages/44b6/20260918/C01": "9d73e01c3d42ec6748537adb0376caac8d0e0e9685dad74cd33017b4b582a69e",
+    "packages/44b6/314159/C00": "669250718af566ee6b595763c77116070507fa6fb71347a72e9f531fa532ff5f"
+  },
+  "failed_job_receipts": [
+    {
+      "clip": "44b6_0113de3b",
+      "exit_code": 1,
+      "log_sha256": "5316ebe2556ba0fe16962f8efb85c18a00acce8a06cd9b2a34c8b79e346b71f0",
+      "wall_seconds": 6.6451224659977015
+    },
+    {
+      "clip": "44b6_0c582fdc",
+      "exit_code": 1,
+      "log_sha256": "88e30df02bb437f2d2998dc05576a21de1703c62fa0cacbc8b38d112677bc4c1",
+      "wall_seconds": 7.687595164999948
+    },
+    {
+      "clip": "44b6_0b24845f",
+      "exit_code": 1,
+      "log_sha256": "d7679ddf832d14ca07fe1585fe9d524a02e26d2be7ba2fdb871decc9ff577e61",
+      "wall_seconds": 7.683640882001782
+    }
+  ],
+  "failure": "cuDNN selected a reduced-precision TF32 kernel for singleton encoder inference while the large batch used float32; the unchanged absolute 1e-5 embedding check rejected the reference.",
+  "failure_artifacts": "work/division-reliability-v11/failures/compact-tf32-reference/",
+  "failure_count": 3,
+  "implementation_sha256": {
+    "__main__.py": "66ad43f9ad46851d1aa88ae6704a0fe7ed527c705b201f961f61796b14433dba",
+    "embedding_parity_probe.py": "5d78205b37bf755a371b675494c8e75904f0d8462595809277dddac58d955b9a",
+    "execution_precision.py": "60e7e202c0f7912202b18324ed8fe87f8287968977df4fbb8a55cdd3bf125818",
+    "packaging.py": "7880e364e30b18a9466ea65581b9da13464d04d13fc94c7d376ebe7178c2fe0d",
+    "test_execution_precision.py": "f7b52c5e8b8893b7bf30b39eac42c22896645cc9fe35641685d5ecb9cd98c6c4"
+  },
+  "locked_upstream_core_unchanged": true,
+  "model_selection": false,
+  "name": "compact_tf32_batch_reference",
+  "preimport_routing_tests": 3,
+  "recorded_utc": "2026-09-20T03:20:54.810335+00:00",
+  "repair": {
+    "C00_C01_environment_changed": false,
+    "absolute_tolerance_unchanged": 1e-05,
+    "all_four_cells_same_setting": true,
+    "applied_before_numerical_imports": true,
+    "checkpoint_or_optimizer_changed": false,
+    "environment": {
+      "NVIDIA_TF32_OVERRIDE": "0"
+    },
+    "scientific_hyperparameters_changed": false,
+    "scope": [
+      "C11 midpoint mining",
+      "C11 source calibration",
+      "C11 target inference",
+      "C11 cold inference"
+    ],
+    "training_environment_changed": false
+  },
+  "source_control_graph_csv_confidence_and_edge_scores_exact": true,
+  "source_control_scope": "One complete source-fit clip; this is not the required post-freeze target cold validation.",
+  "status": "passed",
+  "target_metrics_opened": false
+}

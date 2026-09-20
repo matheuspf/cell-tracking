@@ -73,6 +73,15 @@ reused only with identical parents. The merged pool is consumed once on resume.
 Source-calibration score caches likewise retain complete legal denominators and
 verify their parent hashes. A fitted head cannot read calibration data.
 
+The CLI automatically sets `NVIDIA_TF32_OVERRIDE=0` before numerical imports for
+C11 mining, calibration, prediction and cold inference. A trained midpoint
+encoder exposed a TF32 singleton-reference discrepancy in the original parity
+check. The source probes and complete C00 control in
+`results/division-reliability-v11/compact_precision_repair.json` validate this
+evaluation-only correction. Training and ordinary C00/C01 workers keep their
+original settings. Do not export this override globally when resuming training.
+C11 packages record the evaluation environment and entry-point hashes.
+
 Target prediction stays locked until every registered cell is a retained package
 or has an explicit scientific blocker. All retained target predictions freeze
 together before target labels are opened. Missing arms remain null; a calibrated
