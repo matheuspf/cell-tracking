@@ -104,6 +104,17 @@ midpoint and bank hashes, all clip receipts, and recorded hard-slot draws and
 their selection probabilities. It preserves the first observed resume snapshot;
 reruns recheck the current artifacts while retaining that original timestamp.
 
+After a compact final is retained, audit every recorded update and compare its
+weights with the final resumable checkpoint:
+
+```sh
+"$study_python" -m division_reliability_v11.compact_final_audit --source 44b6 --seed 20260918
+```
+
+This checks the complete phase/group counts, finite losses and weights, final
+learning rate, one mining pass, and optimizer/scheduler/sampler/RNG state. The
+private immutable receipt is included in `validation.json` by `report`.
+
 The CLI automatically sets `NVIDIA_TF32_OVERRIDE=0` before numerical imports for
 C11 mining, calibration, prediction and cold inference. A trained midpoint
 encoder exposed a TF32 singleton-reference discrepancy in the original parity

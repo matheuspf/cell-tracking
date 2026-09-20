@@ -1,4 +1,68 @@
 {
+  "actual_training_phase_accounting": {
+    "cells": [
+      {
+        "eligible_group_denominator_totals": {
+          "consistency": 107168,
+          "identity": 59984,
+          "occurrence": 47184,
+          "ranking": 23592
+        },
+        "event_supervised_updates": 2949,
+        "identity_supervised_prefix_updates": 400,
+        "objective_updates": {
+          "consistency": 3349,
+          "identity": 3349,
+          "occurrence": 2949,
+          "ranking": 2949
+        },
+        "recorded_updates": 3349,
+        "sampled_slot_totals": {
+          "hard": 11796,
+          "identity": 59984,
+          "negative": 11796,
+          "positive": 23592
+        },
+        "seed": 20260918,
+        "source": "44b6"
+      },
+      {
+        "eligible_group_denominator_totals": {
+          "consistency": 15008,
+          "identity": 13904,
+          "occurrence": 1104,
+          "ranking": 552
+        },
+        "event_supervised_updates": 69,
+        "identity_supervised_prefix_updates": 400,
+        "objective_updates": {
+          "consistency": 469,
+          "identity": 469,
+          "occurrence": 69,
+          "ranking": 69
+        },
+        "recorded_updates": 469,
+        "sampled_slot_totals": {
+          "hard": 276,
+          "identity": 13904,
+          "negative": 276,
+          "positive": 552
+        },
+        "seed": 314159,
+        "source": "44b6"
+      }
+    ],
+    "checks": [
+      "400 supported-identity prefix updates",
+      "16 identity / 8 positive / 4 uniform negative / 4 hard slots after prefix",
+      "independent 16 identity / 16 occurrence / 8 ranking / 32 consistency denominators",
+      "recorded row count equals last recorded update"
+    ],
+    "report_implementation_sha256": "c552bdb213dbaba706d08815182a4ba42b5fa4b356aabd11a0cc476278b07844",
+    "scope": "Actual recorded source training histories; partial running fits, not accuracy measurements",
+    "status": "passed",
+    "utc": "2026-09-20T06:37:38.021577+00:00"
+  },
   "cold": {
     "status": "pending"
   },
@@ -614,6 +678,53 @@
     "source_only": true,
     "status": "passed"
   },
+  "retained_compact_final_audits": [
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "audit_implementation_sha256": "89e9233b8b08e2b09f1ac63eb218ed9202a886610167e7c65b184cca293a0e74",
+      "denominator_totals": {
+        "consistency": 128000,
+        "identity": 70400,
+        "occurrence": 57600,
+        "ranking": 28800
+      },
+      "event_supervised_updates": 3600,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-20T07:10:45.324201+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "hard_slot_fallback_totals": {
+        "after_mining": 0,
+        "before_mining": 6400
+      },
+      "identity_supervised_prefix_updates": 400,
+      "mining_passes": 1,
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "bfc62532492e8d3893d5ba52c7b9c90dfe9adbdef156d3f78db0f6ff42bbc5ea",
+        "final.pt": "26df64b68898abd809878010ec3349e7a75da6024a0687af0ecd1a1c458f3d8f",
+        "history.jsonl": "52cccffd36afc951d8cec4a6d08d69ed521fa742695411e7313563505743fc72",
+        "mining/receipt.json": "237f2a494a445b888ff0f923d0e4144a485e7d2ae256f0097fccfd1e51877f4e",
+        "resume.pt": "bb335f8c48557ac0a748e229d39ac2150c67e744987c6d8c6f120faf8be2df6f"
+      },
+      "retained_model_equals_final_resume": true,
+      "sampled_slot_totals": {
+        "hard": 14400,
+        "identity": 70400,
+        "negative": 14400,
+        "positive": 28800
+      },
+      "scope": "Complete actual source training and retained artifacts; no accuracy claim",
+      "seed": 20260918,
+      "source": "44b6",
+      "status": "passed",
+      "updates": 4000
+    }
+  ],
   "retained_source_positive_witness_control": {
     "finished_utc": "2026-09-20T00:21:44.396475+00:00",
     "fit_clips_inspected": 1,

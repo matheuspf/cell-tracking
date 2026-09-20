@@ -409,6 +409,8 @@ def run():
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
+    if (WORK/'checks/training_phase_accounting.json').exists():validation['actual_training_phase_accounting']=read(WORK/'checks/training_phase_accounting.json')
+    validation['retained_compact_final_audits']=[read(p) for p in sorted((WORK/'checks/compact_final').glob('*/*/receipt.json'))]
     validation['complete_mining_and_resume_audits']=[read(p) for p in sorted((WORK/'checks/mining_complete').glob('*/*/receipt.json'))]
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
