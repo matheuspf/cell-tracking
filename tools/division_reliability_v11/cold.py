@@ -86,7 +86,16 @@ def execute_groups(groups,operation,record,*,workers=3):
     return [row for index in sorted(completed) for row in completed[index]]
 
 
+def configured_workers():
+    options=WORK/'controller/options.json'
+    workers=read(options).get('cold_workers',3) if options.exists() else 3
+    if type(workers) is not int or not 1<=workers<=3:
+        raise Blocked('Cold validation permits one to three bounded workers')
+    return workers
+
+
 def run():
+    workers=configured_workers()
     from .freeze import verify
     frozen=verify();folder=WORK/'cold';folder.mkdir(parents=True,exist_ok=True)
     log=folder/'selection.log'
@@ -127,11 +136,11 @@ def run():
             write(out/'comparison.json',result);results.append(result)
         return results
     def record(results):
-        write(folder/'progress.json',dict(completed=len(results),results=results,max_workers=3,updated_utc=now()))
-    results=execute_groups(groups,execute,record)
+        write(folder/'progress.json',dict(completed=len(results),results=results,max_workers=workers,updated_utc=now()))
+    results=execute_groups(groups,execute,record,workers=workers)
     result=dict(status='passed' if results and all(r['status']=='passed' for r in results) else 'failed',
         expected_runs=sum(2 for _ in frozen['models']),completed_runs=len(results),results=results,
-        max_workers=3,concurrent_scope='Independent explicit-package workers; two strata sequential within each model; shared GPU lease lock',
+        max_workers=workers,concurrent_scope='Independent explicit-package workers; two strata sequential within each model; shared GPU lease lock',
         selection_sha256=sha(folder/'selection/receipt.json'),all_four_cells_tested=len({(r['source'],r['seed']) for r in results})==4,
         raw_worker_input_contract='Explicit immutable package and one renamed Zarr only; no baseline cache, GT, network or historical predictions',finished_utc=now())
     write(folder/'receipt.json',result)

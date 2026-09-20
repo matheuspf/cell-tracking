@@ -129,6 +129,28 @@
     "tests_passed": 11,
     "utc": "2026-09-20T06:04:16.053150+00:00"
   },
+  "cold_resource_dispatch_contract": {
+    "implementation_sha256": {
+      "cold.py": "5eccf68fe7e98ea1a5e16dc8fb5caff174095ba8ed52052372cfc9c6130562d9",
+      "test_cold.py": "ca30b3d4daf861411d389a868f1b56e3e6d1e204bbc2ea308ca7667ef23eb6ef"
+    },
+    "new_tests": 3,
+    "observed_utc": "2026-09-20T22:22:29.043868+00:00",
+    "retained_comparison_and_dispatch_tests": 11,
+    "scientific_changes": false,
+    "scope": "Dispatch contract only; actual post-freeze cold inference remains pending",
+    "status": "passed",
+    "target_outcomes_opened": false,
+    "test_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m unittest division_reliability_v11.test_cold -v",
+    "test_log_sha256": "5fdff522e70290ae521141d039bc10c11315887b7ee40793b0421036249f3f61",
+    "tests": 14,
+    "tests_cover": [
+      "All 24 model/stratum controls retained with one worker",
+      "Explicit limits 1, 2 and 3 and default 3",
+      "Invalid option rejected before freeze verification or dispatch",
+      "Existing strict comparison negative controls and bounded dispatch"
+    ]
+  },
   "compact_precision_repair": {
     "active_compact_implementation_unchanged": true,
     "baseline_probe": {

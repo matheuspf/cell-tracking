@@ -150,7 +150,10 @@ actual CSV byte equality after replacing only the dataset column. A mismatch
 leaves its comparison receipt and stops the queue before target scoring.
 Up to three independent package workers run concurrently; each package's two
 strata stay sequential. Selected images are copied before workers start. The
-same GPU lease lock and aggregate resource guards remain active.
+same GPU lease lock and aggregate resource guards remain active. Set
+`cold_workers` to 1, 2 or 3 in `controller/options.json` before the cold stage
+to match measured host headroom. This changes dispatch only; every selected
+model/stratum still runs with the same input and equality requirements.
 
 Useful checks and explicit stage entry points:
 

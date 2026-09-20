@@ -2,7 +2,7 @@
 from pathlib import Path
 import tempfile
 import unittest
-from .cold import compare,execute_groups
+from .cold import compare,execute_groups,configured_workers
 from .common import read,write,sha,Blocked
 
 
@@ -58,6 +58,35 @@ class ColdComparisonTests(unittest.TestCase):
 
 
 class ColdDispatchTests(unittest.TestCase):
+    def test_one_worker_preserves_every_model_and_stratum(self):
+        import threading
+        seen=[];threads=set();records=[]
+        def operation(group):
+            seen.append(group);threads.add(threading.get_ident())
+            return [(group,'median'),(group,'crowded')]
+        expected=[(group,stratum) for group in range(12) for stratum in ('median','crowded')]
+        result=execute_groups(range(12),operation,records.append,workers=1)
+        self.assertEqual(result,expected);self.assertEqual(records[-1],expected)
+        self.assertEqual(seen,list(range(12)));self.assertEqual(len(threads),1)
+
+    def test_explicit_resource_option_and_default(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as tmp,patch('division_reliability_v11.cold.WORK',Path(tmp)):
+            self.assertEqual(configured_workers(),3)
+            for workers in (1,2,3):
+                write(Path(tmp)/'controller/options.json',dict(workers=8,cold_workers=workers))
+                self.assertEqual(configured_workers(),workers)
+
+    def test_invalid_resource_option_rejected_before_freeze_or_dispatch(self):
+        from unittest.mock import patch
+        from .cold import run
+        with tempfile.TemporaryDirectory() as tmp,patch('division_reliability_v11.cold.WORK',Path(tmp)):
+            for workers in (True,0,4,'2',1.5):
+                write(Path(tmp)/'controller/options.json',dict(cold_workers=workers))
+                with patch('division_reliability_v11.freeze.verify') as verify:
+                    with self.assertRaises(Blocked):run()
+                    verify.assert_not_called()
+
     def test_bounded_workers_and_stable_complete_population(self):
         import threading,time
         lock=threading.Lock();barrier=threading.Barrier(3);active=set();seen=[];peaks=[];records=[]

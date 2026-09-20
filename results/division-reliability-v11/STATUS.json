@@ -27,33 +27,17 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T20:18:22.100615+00:00",
+  "updated_utc": "2026-09-20T22:22:31.884198+00:00",
   "upstream_completed_cells": 4,
   "upstream_reused_cells": [],
   "verified_active_processes": [
     {
+      "pid": 1225560,
+      "role": "source6-head-overlap/controller_pid"
+    },
+    {
       "pid": 22068,
       "role": "pipeline/controller_pid"
-    },
-    {
-      "pid": 133580,
-      "role": "source-bank-overlap/controller_pid"
-    },
-    {
-      "pid": 87435,
-      "role": "post-upstream-concurrency/controller_pid"
-    },
-    {
-      "pid": 113376,
-      "role": "post-upstream-concurrency/worker_pid"
-    },
-    {
-      "pid": 21938,
-      "role": "source-prefetch/6bba/20260918"
-    },
-    {
-      "pid": 113376,
-      "role": "source-prefetch/6bba/314159"
     }
   ],
   "weights_published": false

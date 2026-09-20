@@ -1,30 +1,55 @@
 {
+  "central_serial_phase_projection_hours": 129.53649946427967,
   "conditions": [
-    "Uninterrupted execution on this host",
-    "Memory-qualified graph worker concurrency increased after the fourth upstream fit exits",
-    "No additional implementation failure or resource blocker"
+    "Uninterrupted host execution",
+    "Current available memory and approximately two graph workers",
+    "Target graph cost comparable to measured source passes",
+    "No new implementation or resource failure"
   ],
-  "estimated_utc": "2026-09-20T16:01:43.173243+00:00",
-  "measured_completed_source_job_mean_seconds": {
-    "C00_prediction": {
-      "44b6": 266.6,
-      "6bba": 289.1
-    },
-    "C01_calibration_raw_scores": 519.5,
-    "C11_calibration_raw_scores": 561.5,
-    "source_mining": 519.5
+  "estimated_utc": "2026-09-20T22:19:51.541445+00:00",
+  "forecast_worker_counts": {
+    "C00_prediction": 4,
+    "cold": 2,
+    "mining": 2,
+    "policy_prediction": 2,
+    "source_calibration": 2
   },
-  "measurement_scope": "Completed source workers, including CPU work and shared-GPU waiting; target runtime can differ. These are planning estimates, not target results.",
-  "remaining_C00_target_predictions": 398,
+  "forecast_worker_counts_scope": "Timing assumptions. Actual dispatch remains separately qualified against current memory and stage peak measurements; these values do not change the scientific protocol.",
+  "limitations": [
+    "No target throughput or score has been observed. Cross-embryo graph density can change runtime.",
+    "Greater available memory may permit more qualified workers and shorten the estimate.",
+    "Phase sums are a planning projection; permitted source overlap can reduce elapsed time."
+  ],
+  "measured_completed_source_job_mean_seconds": {
+    "C00_prediction_post_upstream_first_30_source6_second_seed": 62.7,
+    "second_seed_source44_C01_raw_calibration": 851.5991635293001,
+    "second_seed_source44_C11_raw_calibration_partial_8_of_10": 789.3410540540003,
+    "second_seed_source44_mining": 612.2022875918689
+  },
+  "observed_host_memory": {
+    "allowable_projected_study_gib": 12.006935119628906,
+    "host_available_gib": 20.17959213256836,
+    "study_rss_gib": 3.827342987060547
+  },
+  "projected_phase_wall_hours": {
+    "C00_target_prediction": 1.7329583333333334,
+    "C01_target_prediction": 47.07450931731409,
+    "C11_target_prediction": 43.63301937687391,
+    "cold_allowance": 2.8333333333333335,
+    "compact_training_allowance": 4.5,
+    "official_scoring_reporting_allowance": 2.0,
+    "remaining_source6_mining": 18.196012436758327,
+    "remaining_source6_raw_calibration": 9.566666666666666
+  },
+  "reason_for_revision": "Measured second-seed graph passes are slower than the first source estimate. Current shared-host memory limits the concurrency previously anticipated after upstream training.",
   "remaining_cold_runs": 24,
-  "remaining_learned_policy_target_predictions": 796,
   "remaining_official_scores": 1194,
-  "remaining_other_work": "Second source44 C11 mining, remaining compact fits, both source6 preparations and mining, remaining source calibrations, packaging, global freeze, diagnostics and final reporting.",
   "remaining_target_clip_arm_predictions": 1194,
   "remaining_wall_hours_range": [
-    24,
-    40
+    96,
+    144
   ],
   "status": "estimate_not_completion",
+  "supersedes": "runtime_estimate_20260920_1601.json",
   "target_scores_opened": false
 }
