@@ -15,7 +15,7 @@
   "compact_promotion_gate_passed": false,
   "completed_score_rows": 0,
   "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
-  "linear_completed_cells": 1,
+  "linear_completed_cells": 2,
   "next_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 report",
   "pooled_095_milestone_reached": false,
   "required_score_rows": 1194,
@@ -27,7 +27,7 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T06:04:39.555297+00:00",
+  "updated_utc": "2026-09-20T06:32:10.259550+00:00",
   "upstream_completed_cells": 3,
   "upstream_reused_cells": [],
   "verified_active_processes": [
@@ -57,7 +57,11 @@
     },
     {
       "pid": 1297641,
-      "role": "source-prefetch/44b6/314159"
+      "role": "source-prefetch/6bba/20260918"
+    },
+    {
+      "pid": 1817138,
+      "role": "head-prefetch/44b6/314159"
     }
   ],
   "weights_published": false
