@@ -944,6 +944,321 @@
           }
         }
       ]
+    },
+    {
+      "arm": "C11",
+      "baseline": {
+        "adj_edge_jaccard": 0.6058586484074124,
+        "counts": {
+          "division_fn": 4,
+          "division_fp": 0,
+          "division_tp": 0,
+          "edge_fn": 424,
+          "edge_fp": 544,
+          "edge_tp": 1780,
+          "num_pred_nodes": 652314
+        },
+        "division_fn": 4,
+        "division_fp": 0,
+        "division_jaccard": 0.0,
+        "division_tp": 0,
+        "edge_jaccard": 0.6477438136826783,
+        "n": 10,
+        "n_adj": 10,
+        "node_recall": 0.9683602536577034,
+        "score": 0.6058586484074124
+      },
+      "calibrated_occurrence_reliability": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "mean_probability": 0.0018623512275035756,
+            "n": 1467,
+            "observed_rate": 0.0027266530334014998,
+            "positive": 4,
+            "upper": 0.01
+          },
+          {
+            "lower": 0.01,
+            "mean_probability": 0.03485468656368217,
+            "n": 508,
+            "observed_rate": 0.007874015748031496,
+            "positive": 4,
+            "upper": 0.1
+          },
+          {
+            "lower": 0.1,
+            "mean_probability": 0.22539680326058362,
+            "n": 151,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.5
+          },
+          {
+            "lower": 0.5,
+            "mean_probability": 0.6427085967223705,
+            "n": 15,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.9
+          },
+          {
+            "lower": 0.9,
+            "mean_probability": 0.9263526748351667,
+            "n": 1,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.99
+          },
+          {
+            "lower": 0.99,
+            "mean_probability": null,
+            "n": 0,
+            "observed_rate": null,
+            "positive": 0,
+            "upper": 1.0
+          }
+        ],
+        "brier": 0.011767365319070897,
+        "known_groups": 2142,
+        "log_loss": 0.057340298628421923,
+        "negative": 2134,
+        "positive": 8,
+        "scope": "Supported deployed parent census only; sparse metric-risk labels are not dense biological truth"
+      },
+      "conditional_rank": {
+        "legal_actions_in_positive_groups": 2807,
+        "positive_groups": 8,
+        "top1_all_legal": 2,
+        "top1_supported_only": 2,
+        "unknown_actions_in_positive_groups": 0
+      },
+      "disabled_policy": false,
+      "distinct_positive_events": 4,
+      "finished_utc": "2026-09-20T22:34:45.653919+00:00",
+      "full_parent_census": {
+        "empty": 9451,
+        "incomplete": 1,
+        "negative": 2134,
+        "positive": 8,
+        "unknown": 638512
+      },
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "head_sha256": "4e3033cb4faf8a38fd1ba34df5f7b73989971b54565bed92bf53a8db5d26072d",
+      "implementation_sha256": {
+        "actions.py": "3d70aa94dbf88c519e0aa7e74df6ff59c256dda222dcfe6ab2c2703d2315b554",
+        "calibrate.py": "c38cc0afe733c5cb00682bd2972139a349a764afba537b07218409e8d636cd40",
+        "calibration.py": "87da2999c21b49448a451daec5118563e26f987d3ca996c770a7f270803736c3",
+        "calibration_cache.py": "646cc3b086e604700a070e85d3aec0f93c7b46960f68f03fc1d5c1a4e890aed9",
+        "features.py": "dfd1753d9b53beca32bbebdd877dea4bbcddbbd0d24ffe65d9fd6c7bcdd50577",
+        "models.py": "ff078c40815d5f1e9f76b06d898232bb2ab83b1344fa8be7cc3bb4299d6c769b",
+        "policy.py": "b3a6b1d59c3b68b593df2ad5584feddd39d694a7421c5112dc1208f770365397"
+      },
+      "insufficient_support": false,
+      "intercept": -1.3315021831015197,
+      "known_parent_groups": 2142,
+      "margin": 8,
+      "margins": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "negative_groups": 2134,
+      "objective": 0.07780726283823217,
+      "raw_occurrence_reliability": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "mean_probability": 0.0010200195658015727,
+            "n": 1613,
+            "observed_rate": 0.0024798512089274642,
+            "positive": 4,
+            "upper": 0.01
+          },
+          {
+            "lower": 0.01,
+            "mean_probability": 0.03615553645288541,
+            "n": 291,
+            "observed_rate": 0.013745704467353952,
+            "positive": 4,
+            "upper": 0.1
+          },
+          {
+            "lower": 0.1,
+            "mean_probability": 0.22939152472423588,
+            "n": 149,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.5
+          },
+          {
+            "lower": 0.5,
+            "mean_probability": 0.690890646764057,
+            "n": 73,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.9
+          },
+          {
+            "lower": 0.9,
+            "mean_probability": 0.9415707185811345,
+            "n": 12,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 0.99
+          },
+          {
+            "lower": 0.99,
+            "mean_probability": 0.9947563792617388,
+            "n": 4,
+            "observed_rate": 0.0,
+            "positive": 0,
+            "upper": 1.0
+          }
+        ],
+        "brier": 0.031990558764973726,
+        "known_groups": 2142,
+        "log_loss": 0.11985732674107315,
+        "negative": 2134,
+        "positive": 8,
+        "scope": "Supported deployed parent census only; sparse metric-risk labels are not dense biological truth"
+      },
+      "seed": 314159,
+      "source": "44b6",
+      "status": "calibrated",
+      "temperature": 1.687515701759593,
+      "trials": [
+        {
+          "accepted_actions": 1314,
+          "adjusted_edge_delta": -0.001659482100800247,
+          "combined_delta": -0.001659482100800247,
+          "introduced_fp": 3,
+          "lost_tp": 0,
+          "margin": 2,
+          "newly_recovered_tp": 0,
+          "score": 0.6041991663066122,
+          "summary": {
+            "adj_edge_jaccard": 0.6041991663066122,
+            "counts": {
+              "division_fn": 4,
+              "division_fp": 3,
+              "division_tp": 0,
+              "edge_fn": 424,
+              "edge_fp": 552,
+              "edge_tp": 1780,
+              "num_pred_nodes": 652314
+            },
+            "division_fn": 4,
+            "division_fp": 3,
+            "division_jaccard": 0.0,
+            "division_tp": 0,
+            "edge_jaccard": 0.6458635703918723,
+            "n": 10,
+            "n_adj": 10,
+            "node_recall": 0.9683602536577034,
+            "score": 0.6041991663066122
+          }
+        },
+        {
+          "accepted_actions": 385,
+          "adjusted_edge_delta": -0.0014739981650347955,
+          "combined_delta": -0.0014739981650347955,
+          "introduced_fp": 0,
+          "lost_tp": 0,
+          "margin": 4,
+          "newly_recovered_tp": 0,
+          "score": 0.6043846502423776,
+          "summary": {
+            "adj_edge_jaccard": 0.6043846502423776,
+            "counts": {
+              "division_fn": 4,
+              "division_fp": 0,
+              "division_tp": 0,
+              "edge_fn": 426,
+              "edge_fp": 548,
+              "edge_tp": 1778,
+              "num_pred_nodes": 652314
+            },
+            "division_fn": 4,
+            "division_fp": 0,
+            "division_jaccard": 0.0,
+            "division_tp": 0,
+            "edge_jaccard": 0.6460755813953488,
+            "n": 10,
+            "n_adj": 10,
+            "node_recall": 0.9683602536577034,
+            "score": 0.6043846502423776
+          }
+        },
+        {
+          "accepted_actions": 64,
+          "adjusted_edge_delta": 0.0,
+          "combined_delta": 0.0,
+          "introduced_fp": 0,
+          "lost_tp": 0,
+          "margin": 6,
+          "newly_recovered_tp": 0,
+          "score": 0.6058586484074124,
+          "summary": {
+            "adj_edge_jaccard": 0.6058586484074124,
+            "counts": {
+              "division_fn": 4,
+              "division_fp": 0,
+              "division_tp": 0,
+              "edge_fn": 424,
+              "edge_fp": 544,
+              "edge_tp": 1780,
+              "num_pred_nodes": 652314
+            },
+            "division_fn": 4,
+            "division_fp": 0,
+            "division_jaccard": 0.0,
+            "division_tp": 0,
+            "edge_jaccard": 0.6477438136826783,
+            "n": 10,
+            "n_adj": 10,
+            "node_recall": 0.9683602536577034,
+            "score": 0.6058586484074124
+          }
+        },
+        {
+          "accepted_actions": 10,
+          "adjusted_edge_delta": 0.0,
+          "combined_delta": 0.0,
+          "introduced_fp": 0,
+          "lost_tp": 0,
+          "margin": 8,
+          "newly_recovered_tp": 0,
+          "score": 0.6058586484074124,
+          "summary": {
+            "adj_edge_jaccard": 0.6058586484074124,
+            "counts": {
+              "division_fn": 4,
+              "division_fp": 0,
+              "division_tp": 0,
+              "edge_fn": 424,
+              "edge_fp": 544,
+              "edge_tp": 1780,
+              "num_pred_nodes": 652314
+            },
+            "division_fn": 4,
+            "division_fp": 0,
+            "division_jaccard": 0.0,
+            "division_tp": 0,
+            "edge_jaccard": 0.6477438136826783,
+            "n": 10,
+            "n_adj": 10,
+            "node_recall": 0.9683602536577034,
+            "score": 0.6058586484074124
+          }
+        }
+      ]
     }
   ],
   "status": "partial"

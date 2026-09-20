@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-20T22:22:31.884198+00:00: 4/4 C00 fits, 2/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-20T22:35:28.706082+00:00: 4/4 C00 fits, 2/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -12,7 +12,7 @@ C01/C11 independently edit their own C00 graph. Their comparison tests practical
 
 The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.
 
-New v11 GPU lease accounting: 11.8489 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
+New v11 GPU lease accounting: 11.8495 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
 
 Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.
 
@@ -27,6 +27,7 @@ A host restart interrupted the fourth upstream fit and source clip workers. Pres
 - Source safety 44b6/20260918/C01: margin 2, 126 source calibration edits, score change +0.000332. Occurrence support: 4 distinct positive events and 2114 negative groups; insufficient-support fallback False.
 - Source safety 44b6/20260918/C11: margin 8, 3 source calibration edits, score change +0.000000. Occurrence support: 4 distinct positive events and 2114 negative groups; insufficient-support fallback False.
 - Source safety 44b6/314159/C01: margin 8, 0 source calibration edits, score change +0.000000; selected policy made no calibration edits. Occurrence support: 4 distinct positive events and 2134 negative groups; insufficient-support fallback False.
+- Source safety 44b6/314159/C11: margin 8, 10 source calibration edits, score change +0.000000. Occurrence support: 4 distinct positive events and 2134 negative groups; insufficient-support fallback False.
 
 Comparisons for unfinished arms/populations remain unmeasured. Available complete-population scores are retained; missing comparisons are blank with a reason in the three score CSVs. No 0.95 milestone is claimed from an incomplete matrix.
 
