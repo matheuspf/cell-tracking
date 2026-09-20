@@ -107,6 +107,10 @@ or has an explicit scientific blocker. All retained target predictions freeze
 together before target labels are opened. Missing arms remain null; a calibrated
 disabled policy remains a separately labeled measured no-op. Cold validation
 uses renamed complete clips, starts from images, and forbids the C00 cache.
+The cold comparison requires all 100 raw-frame hashes, the explicit package and
+dataset names, clean worker guards, output artifact hashes, graph equality and
+actual CSV byte equality after replacing only the dataset column. A mismatch
+leaves its comparison receipt and stops the queue before target scoring.
 
 Useful checks and explicit stage entry points:
 

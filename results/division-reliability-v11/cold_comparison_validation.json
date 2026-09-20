@@ -1,0 +1,38 @@
+{
+  "complete_existing_source_cold_comparison": {
+    "cold_artifact_hashes_exact": true,
+    "cold_csv_sha256": "d4506154c4a3f32f2a025d165d0b82090d7376daab03fc6028e99900bc556ce9",
+    "cold_graph_sha256": "2f810bcb512cc377ca948b7154931962e5d3811768e0207ed606604578ffd3c3",
+    "compared_csv_rows": 278060,
+    "complete_frame_population": true,
+    "complete_frames": 100,
+    "csv_bytes_differ_only_by_dataset_name": true,
+    "csv_exact_after_dataset_rename": true,
+    "explicit_dataset_names_exact": true,
+    "explicit_package_exact": true,
+    "failed_checks": [],
+    "gpu_lease_seconds": 20.44134743498398,
+    "graph_exact": true,
+    "guard": {
+      "denied": 0,
+      "installed_before_numerical": true,
+      "network_denied": 0,
+      "subprocess_denied": 0
+    },
+    "image_only_cold_contract": true,
+    "inference_implementation_sha256": "0b9552502d00baf2fd5a904fcc9ae5b5f63d463ecd58469eaeba777f43169197",
+    "raw_image_frames_exact": true,
+    "status": "passed",
+    "wall_seconds": 223.5693861159998,
+    "worker_guard_passed": true
+  },
+  "negative_control_unit_tests": 8,
+  "new_model_inference_run": false,
+  "original_receipt_sha256": "3817b6a0b76f6e259dd4e751705dec11a85e690f1370604d932502eae827f143",
+  "purpose": "Require all 100 raw frame identities, explicit package and image-only guard, artifact hashes and actual CSV byte equality after dataset-column rename; failures stop the queue before target scoring.",
+  "renamed_receipt_sha256": "4dbf84517f3f52e0c3bdf3374b7cbec34742a992292ec9d9a5371ad1222a5988",
+  "source_only": true,
+  "status": "passed",
+  "target_cold_validation_complete": false,
+  "utc": "2026-09-20T04:36:16.791989+00:00"
+}

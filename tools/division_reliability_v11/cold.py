@@ -31,6 +31,47 @@ def select():
     write(folder/'receipt.json',result,immutable=True);return result
 
 
+def compare(reference,output,original_name,renamed_name):
+    """Require the complete cold contract, including actual CSV byte equality."""
+    from itertools import zip_longest
+    old=read(reference/'receipt.json');new=read(output/'receipt.json')
+    exact=True;rows=0
+    with (reference/'submission.csv').open(newline='') as a,(output/'submission.csv').open(newline='') as b:
+        aa=csv.DictReader(a);bb=csv.DictReader(b)
+        for x,y in zip_longest(aa,bb):
+            if x is None or y is None or x['dataset']!=original_name or y['dataset']!=renamed_name:
+                exact=False;break
+            y['dataset']=original_name
+            if x!=y:exact=False;break
+            rows+=1
+    # The exported schema has a simple, unquoted dataset identifier in column 2.
+    # Replace only that column; preserve headers, quoting and line-ending bytes.
+    byte_exact=True
+    with (reference/'submission.csv').open('rb') as a,(output/'submission.csv').open('rb') as b:
+        if a.readline()!=b.readline():byte_exact=False
+        for x,y in zip_longest(a,b):
+            if x is None or y is None:byte_exact=False;break
+            fields=y.split(b',',2)
+            if len(fields)!=3 or fields[1]!=renamed_name.encode():byte_exact=False;break
+            renamed=fields[0]+b','+original_name.encode()+b','+fields[2]
+            if x!=renamed:byte_exact=False;break
+    guard=new['guard'];frames=set(map(str,range(100)))
+    conditions=dict(graph_exact=old['graph_hash']==new['graph_hash'],
+        csv_exact_after_dataset_rename=exact,csv_bytes_differ_only_by_dataset_name=byte_exact,
+        raw_image_frames_exact=old['frame_hashes']==new['frame_hashes'] and set(new['frame_hashes'])==frames,
+        complete_frame_population=old['frames']==new['frames']==100,
+        explicit_package_exact=old['package_identity']==new['package_identity'],
+        explicit_dataset_names_exact=old['dataset']==original_name and new['dataset']==renamed_name,
+        image_only_cold_contract=new.get('cold') is True and new.get('shared_C00') is False,
+        worker_guard_passed=guard.get('installed_before_numerical') is True and all(guard.get(k)==0 for k in ('denied','network_denied','subprocess_denied')),
+        cold_artifact_hashes_exact=sha(output/'submission.csv')==new['csv_sha256'] and sha(output/'graph.npz')==new['graph_sha256'])
+    return dict(status='passed' if all(conditions.values()) else 'mismatch',**conditions,
+        failed_checks=[k for k,v in conditions.items() if not v],complete_frames=new['frames'],compared_csv_rows=rows,
+        guard=guard,gpu_lease_seconds=new['gpu_lease_seconds'],wall_seconds=new['wall_seconds'],
+        cold_csv_sha256=new['csv_sha256'],cold_graph_sha256=new['graph_sha256'],
+        inference_implementation_sha256=new['inference_implementation_sha256'])
+
+
 def run():
     from .freeze import verify
     frozen=verify();folder=WORK/'cold';folder.mkdir(parents=True,exist_ok=True)
@@ -58,27 +99,13 @@ def run():
                                 status='failed',exit_code=code,worker_log_sha256=sha(out/'worker.log'),freeze_identity=frozen['identity'])
                     if code==0:
                         reference=WORK/'predictions'/arm/source/str(seed)/clip
-                        old=read(reference/'receipt.json');new=read(out/'receipt.json')
-                        with (reference/'submission.csv').open() as a,(out/'submission.csv').open() as b:
-                            aa=csv.DictReader(a);bb=csv.DictReader(b);exact=True;rows=0
-                            from itertools import zip_longest
-                            for x,y in zip_longest(aa,bb):
-                                if x is None or y is None:exact=False;break
-                                y['dataset']=clip
-                                if x!=y:exact=False;break
-                                rows+=1
-                        exact_graph=old['graph_hash']==new['graph_hash']
-                        result.update(status='passed' if exact and exact_graph else 'mismatch',
-                            complete_frames=new['frames'],graph_exact=exact_graph,csv_exact_after_dataset_rename=exact,
-                            compared_csv_rows=rows,csv_bytes_differ_only_by_dataset_name=exact,
-                            raw_image_frames_exact=old['frame_hashes']==new['frame_hashes'],guard=new['guard'],
-                            gpu_lease_seconds=new['gpu_lease_seconds'],wall_seconds=new['wall_seconds'],
-                            cold_csv_sha256=new['csv_sha256'],cold_graph_sha256=new['graph_sha256'],
-                            inference_implementation_sha256=new['inference_implementation_sha256'])
+                        result.update(compare(reference,out,clip,renamed))
                     write(out/'comparison.json',result);results.append(result)
                     write(folder/'progress.json',dict(completed=len(results),results=results,updated_utc=now()))
     result=dict(status='passed' if results and all(r['status']=='passed' for r in results) else 'failed',
         expected_runs=sum(2 for _ in frozen['models']),completed_runs=len(results),results=results,
         selection_sha256=sha(folder/'selection/receipt.json'),all_four_cells_tested=len({(r['source'],r['seed']) for r in results})==4,
         raw_worker_input_contract='Explicit immutable package and one renamed Zarr only; no baseline cache, GT, network or historical predictions',finished_utc=now())
-    write(folder/'receipt.json',result);return result
+    write(folder/'receipt.json',result)
+    if result['status']!='passed':raise Blocked('Cold image-to-CSV validation failed; inspect retained comparison receipts before target scoring')
+    return result
