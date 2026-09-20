@@ -357,6 +357,7 @@ def run():
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
+    if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')

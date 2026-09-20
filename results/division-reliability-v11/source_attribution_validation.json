@@ -1,0 +1,77 @@
+{
+  "attribution_code_sha256": "ad78f3b130d6e7b28026d40ca474ca127945c5f7c6a1be59636dafebac19c636",
+  "finished_utc": "2026-09-20T03:38:01.425248+00:00",
+  "guard": {
+    "denied": 0,
+    "installed_before_numerical": true,
+    "network_denied": 0,
+    "subprocess_denied": 0
+  },
+  "implementation_sha256": "b8a5b54d227c157e35609c8be7e146ebe7f5391cbb3ee68a24495f404c42b0ba",
+  "model_parameters_updated": false,
+  "results": [
+    {
+      "accepted_actions": 18,
+      "calibration_graph_metrics_reproduced": true,
+      "clip": "44b6_2a2eff9f",
+      "details_sha256": "19a7f3e285c692697665c688ae9c8588a1d000cd56cbd5dfd0cb418c7b5365cd",
+      "official_counts": {
+        "division_fn": 1,
+        "division_fp": 0,
+        "division_tp": 0,
+        "edge_fn": 31,
+        "edge_fp": 47,
+        "edge_tp": 179
+      },
+      "raw_tail_groups": 50,
+      "selected_action_local_risk": {
+        "introduced_interior_births": 0,
+        "introduced_interior_terminations": 0,
+        "unknown": 18
+      },
+      "stage_counts": {
+        "actually_recovered": 0,
+        "conditional_top1": 1,
+        "conditional_top1_supported_only": 1,
+        "legal_events": 1,
+        "positive_calibrated_margin_gain": 0,
+        "positive_raw_gain": 0
+      }
+    },
+    {
+      "accepted_actions": 16,
+      "calibration_graph_metrics_reproduced": true,
+      "clip": "44b6_81c256f0",
+      "details_sha256": "f489f1a181cd56dc7a07c9e063d3fc8a1ee4c9b18254d98a206bcda923ccc202",
+      "official_counts": {
+        "division_fn": 0,
+        "division_fp": 1,
+        "division_tp": 0,
+        "edge_fn": 18,
+        "edge_fp": 23,
+        "edge_tp": 179
+      },
+      "raw_tail_groups": 50,
+      "selected_action_local_risk": {
+        "introduced_interior_births": 0,
+        "introduced_interior_terminations": 0,
+        "supported_incorrect": 1,
+        "unknown": 15
+      },
+      "stage_counts": {
+        "actually_recovered": 0,
+        "conditional_top1": 0,
+        "conditional_top1_supported_only": 0,
+        "legal_events": 0,
+        "positive_calibrated_margin_gain": 0,
+        "positive_raw_gain": 0
+      }
+    }
+  ],
+  "scope": "Two retained source calibration diagnostic cases only",
+  "seed": 20260918,
+  "source": "44b6",
+  "source_calibration_selection_changed": false,
+  "status": "passed",
+  "target_labels_opened": false
+}
