@@ -299,6 +299,17 @@
     "status": "passed",
     "target_metrics_opened": false
   },
+  "controller_archive_reuse": {
+    "actual_verified_reuse_status": "complete",
+    "completed_original_receipt_preserved": true,
+    "resource_receipt_preserved": true,
+    "seed": 20260918,
+    "source": "44b6",
+    "source_only": true,
+    "stage": "source-diagnostics",
+    "status": "passed",
+    "utc": "2026-09-20T04:11:15.801682+00:00"
+  },
   "crop_parity": {
     "sources": [
       {
@@ -477,6 +488,14 @@
     "train_code_sha256": "9ef75fbe72865f01b75124d29189d82aecc35868aced148a021aca73302e0d1e"
   },
   "read_guard_limit": "Python audit allowlist and fresh processes; tested direct/symlink/dirfd/subprocess denial, not an operating-system sandbox.",
+  "resource_receipt_preservation": {
+    "duplicate_snapshot_is_noop": true,
+    "metadata_only": true,
+    "newer_process_resource_sample_not_misattributed": true,
+    "preserves_original_and_reuse_durations": true,
+    "status": "passed",
+    "utc": "2026-09-20T04:09:36.900651+00:00"
+  },
   "resource_timing_reconciliation": {
     "completed_compact_prefix_lease_count": 2000,
     "completed_upstream_lease_counts": [

@@ -45,6 +45,13 @@ per-worker memory headroom; the 44 GiB study RSS limit, 10 GiB available-host
 floor and durable-space floor continue to apply. Changes affect newly dispatched
 jobs and never terminate existing workers. GPU work still shares one lease lock.
 
+The controller preserves prior job/resource receipts before reusing a stage's
+outputs. A temporary metadata observer also snapshots completed receipts from
+the queue processes that were already running when this archival repair was
+installed. It starts no model or data work and exits when those owners finish.
+Resource reporting deduplicates archived copies and distinguishes original
+execution timings from short verification/reuse processes.
+
 A completed C00 cell later in the schedule can prepare its source observations
 while an earlier cell trains C11:
 

@@ -120,7 +120,8 @@ def resources():
     maxima={k:max((r.get(k,0) for r in rows),default=0) for k in ('total_device_peak_bytes','rss_peak_bytes','peak_reserved_bytes','peak_allocated_bytes')}
     minima={k:min((r[k] for r in rows if k in r),default=None) for k in ('device_free_min_bytes','host_available_min_bytes')}
     inherited=read(WORK/'preservation/inherited_compute.json')
-    cpu=[read(p) for p in (WORK/'controller/jobs').rglob('*.resources.json')]
+    cpu_files=list((WORK/'controller/jobs').rglob('*.resources.json'))
+    cpu=list({json.dumps(r,sort_keys=True):r for r in (read(p) for p in cpu_files)}.values())
     from statistics import median
     from math import ceil
     job_times=defaultdict(list);seen_jobs=set();job_status=defaultdict(Counter)
@@ -171,7 +172,8 @@ def resources():
         hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
         maximum_lease_seconds=max((r['seconds'] for r in rows),default=0),sampled_maxima=maxima,sampled_minima=minima,
         current_durable_free_bytes=shutil.disk_usage(WORK).free,inherited_lifetime=inherited,
-        cpu_job_resource_samples=len(cpu),study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
+        cpu_job_resource_samples=len(cpu),cpu_job_resource_receipt_files=len(cpu_files),
+        study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
         completed_job_wall_time=job_summary,
         original_source_bank_wall_time=bank_summary,
         original_prediction_wall_time=prediction_summary,
@@ -386,6 +388,8 @@ def run():
     if (WORK/'checks/mining_merge.json').exists():validation['mining_merge_contract']=read(WORK/'checks/mining_merge.json')
     if (WORK/'checks/source_prefetch.json').exists():validation['source_preparation_ownership']=read(WORK/'checks/source_prefetch.json')
     if (WORK/'checks/resource_timing_reconciliation.json').exists():validation['resource_timing_reconciliation']=read(WORK/'checks/resource_timing_reconciliation.json')
+    if (WORK/'checks/receipt_preservation.json').exists():validation['resource_receipt_preservation']=read(WORK/'checks/receipt_preservation.json')
+    if (WORK/'checks/controller_archive_reuse.json').exists():validation['controller_archive_reuse']=read(WORK/'checks/controller_archive_reuse.json')
     if (RESULTS/'compact_precision_repair.json').exists():validation['compact_precision_repair']=read(RESULTS/'compact_precision_repair.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')

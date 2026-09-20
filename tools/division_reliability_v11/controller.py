@@ -24,9 +24,10 @@ def worker(stage,source=None,seed=None,arm=None,clip=None,part=None):
     folder=FOLDER/'jobs';folder.mkdir(parents=True,exist_ok=True);log=folder/(name+'.log')
     previous=folder/(name+'.json')
     if previous.exists():
-        old=read(previous)
-        if old.get('status') in ('failed','blocked','running'):
-            write(folder/'history'/f'{name}-{time.time_ns()}.json',old,immutable=True)
+        history=folder/'history/previous-executions'/str(time.time_ns())
+        write(history/previous.name,read(previous),immutable=True)
+        old_resources=folder/(name+'.resources.json')
+        if old_resources.exists():write(history/old_resources.name,read(old_resources),immutable=True)
     tick=time.monotonic()
     with log.open('a') as stream:
         process=subprocess.Popen(args,cwd=REPO,stdout=stream,stderr=subprocess.STDOUT)

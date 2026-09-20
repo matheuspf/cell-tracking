@@ -27,7 +27,7 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T04:03:56.489291+00:00",
+  "updated_utc": "2026-09-20T04:12:03.231975+00:00",
   "upstream_completed_cells": 2,
   "upstream_reused_cells": [],
   "verified_active_processes": [
@@ -46,6 +46,10 @@
     {
       "pid": 1297641,
       "role": "source-prefetch-queue/controller_pid"
+    },
+    {
+      "pid": 1759412,
+      "role": "receipt-observer/controller_pid"
     },
     {
       "pid": 1297641,
