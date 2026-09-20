@@ -27,6 +27,10 @@ def run():
             if progress:
                 item.update(frames=progress.get('frames'),nodes=progress.get('nodes'),edges=progress.get('edges'),
                     progress_age_seconds=round((datetime.now(timezone.utc)-datetime.fromisoformat(progress['updated_utc'])).total_seconds(),1))
+            policy=optional(WORK/'predictions'/r['arm']/r['source']/str(r['seed'])/r['clip']/'policy_progress.json')
+            if policy:item['policy_progress']=policy
+        elif r['stage']=='prepare-actions':
+            item['bank_progress']=optional(WORK/'banks'/r['source']/str(r['seed'])/r['part']/r['clip']/'progress.json')
         running.append(item)
     fits=[]
     for source in ('44b6','6bba'):

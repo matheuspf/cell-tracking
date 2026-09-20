@@ -102,6 +102,49 @@
     }
   },
   "execution_lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
+  "first_complete_source_census_and_C01": {
+    "added_measurements": [
+      "Original source bank preparation time",
+      "Distinct worker execution wall time including GPU waiting",
+      "Separate C01 fit completion count"
+    ],
+    "completed_source_fit_clips": 61,
+    "fitted_C01_sha256": "e64ea429dc6d8bfcdcc5e7b62d057d6e91db3192c612f7a3257a043b2e8b00cc",
+    "neural_fitting_and_prediction_code_unchanged": true,
+    "optimizer_diagnostics": [
+      {
+        "converged": true,
+        "gradient_max": 6.395162918546244e-07,
+        "iterations": 16,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "objective": 0.008699998378501536
+      },
+      {
+        "converged": true,
+        "gradient_max": 8.96175096012572e-07,
+        "iterations": 8,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "objective": 2.2145107504129036
+      }
+    ],
+    "recorded_utc": "2026-09-20T01:21:15.457529+00:00",
+    "reporting_files": {
+      "monitor.py": "0219c1b715650ea88c928af19f3897a875f547845ae78d20d31f9af8efee27d4",
+      "report.py": "3728e578ef81f23e4a067d1a1e4c29047e92c08152544a785133bb9319c297d1"
+    },
+    "retained_C00_source": "44b6",
+    "seed": 20260918,
+    "source_census": {
+      "empty": 47866,
+      "identity_groups": 17178,
+      "incomplete": 0,
+      "negative": 17007,
+      "positive": 52,
+      "unknown": 2576148
+    },
+    "source_witness_receipt_sha256": "ff2d3b87d25350f28364bffaa6e35e8ceff29afd0847c3ff4bb555d72633fa4f",
+    "target_scores_opened": false
+  },
   "followup_before_head_fits": {
     "cache_scope": "Immutable source observation arrays only; trainable embeddings recomputed for every accumulated group",
     "changes": [

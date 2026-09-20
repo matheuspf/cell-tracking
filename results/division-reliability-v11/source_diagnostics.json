@@ -196,7 +196,4067 @@
   ],
   "pilot_collapse_disclosed": true,
   "raw_selected_target_tail_counts": {},
-  "source_cells": [],
+  "source_cells": [
+    {
+      "census": {
+        "empty": 47866,
+        "identity_groups": 17178,
+        "incomplete": 0,
+        "negative": 17007,
+        "positive": 52,
+        "unknown": 2576148
+      },
+      "clips": {
+        "44b6_0113de3b": {
+          "census": {
+            "empty": 578,
+            "incomplete": 0,
+            "negative": 50,
+            "positive": 0,
+            "unknown": 30406
+          },
+          "complete_group_fork_count": 7395762,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 50,
+            "gt_edges_both_endpoints_matched": 50,
+            "gt_edges_endpoints_present_link_missing": 1,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 49,
+            "gt_nodes": 52,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.8125,
+              1.6750116604071745,
+              1.86167137607581,
+              1.86167137607581
+            ],
+            "matched_nodes_3um": 52,
+            "matched_nodes_7um": 52,
+            "predicted_nodes": 31349,
+            "recall_3um": 1.0,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.9218407180084525,
+            "dataset": "44b6_0113de3b",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 1,
+            "edge_fp": 2,
+            "edge_jaccard": 0.9423076923076923,
+            "edge_tp": 49,
+            "estimated_total": 25755,
+            "graph_hash": "1c56335132ce6669f1ea2974e4776e1a8af977813be59ba3d84c12e417933583",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 52,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 31349,
+            "total_node_ratio": 0.21720054358377014
+          },
+          "total_parent_count": 31034
+        },
+        "44b6_0b24845f": {
+          "census": {
+            "empty": 1543,
+            "incomplete": 0,
+            "negative": 39,
+            "positive": 0,
+            "unknown": 34206
+          },
+          "complete_group_fork_count": 8353330,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 49,
+            "gt_edges_both_endpoints_matched": 41,
+            "gt_edges_endpoints_present_link_missing": 11,
+            "gt_edges_missing_endpoint": 8,
+            "gt_edges_recovered_with_full_matching": 30,
+            "gt_nodes": 51,
+            "matched_distance_quantiles_um": [
+              0.40625,
+              3.325206961348854,
+              5.841700638157973,
+              6.5668332140911545,
+              6.600781203766718
+            ],
+            "matched_nodes_3um": 21,
+            "matched_nodes_7um": 46,
+            "predicted_nodes": 35861,
+            "recall_3um": 0.4117647058823529,
+            "recall_7um": 0.9019607843137255
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4502959153973028,
+            "dataset": "44b6_0b24845f",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 19,
+            "edge_fp": 17,
+            "edge_jaccard": 0.45454545454545453,
+            "edge_tp": 30,
+            "estimated_total": 32795,
+            "graph_hash": "2d132ef9aff8dfe73ae8471c0ce5e2d2807aa0342d9c3986116d658fbcf493c6",
+            "gt_node_recall": 0.9019607843137255,
+            "matched_nodes": 46,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9019607843137255,
+            "num_pred_nodes": 35861,
+            "total_node_ratio": 0.09348986125933831
+          },
+          "total_parent_count": 35788
+        },
+        "44b6_0c582fdc": {
+          "census": {
+            "empty": 552,
+            "incomplete": 0,
+            "negative": 69,
+            "positive": 0,
+            "unknown": 34993
+          },
+          "complete_group_fork_count": 8564512,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 70,
+            "gt_edges_both_endpoints_matched": 68,
+            "gt_edges_endpoints_present_link_missing": 4,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 64,
+            "gt_nodes": 71,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              1.9902104160113323,
+              4.412079881576538,
+              5.701990469344894
+            ],
+            "matched_nodes_3um": 66,
+            "matched_nodes_7um": 70,
+            "predicted_nodes": 35728,
+            "recall_3um": 0.9295774647887324,
+            "recall_7um": 0.9859154929577465
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.81870173681575,
+            "dataset": "44b6_0c582fdc",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 6,
+            "edge_fp": 6,
+            "edge_jaccard": 0.8421052631578947,
+            "edge_tp": 64,
+            "estimated_total": 27958,
+            "graph_hash": "50f2719744820dc0587341d9b5678419c0842ae0af8c5d5be742a5e2df3e72cf",
+            "gt_node_recall": 0.9859154929577465,
+            "matched_nodes": 70,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9859154929577465,
+            "num_pred_nodes": 35728,
+            "total_node_ratio": 0.27791687531296944
+          },
+          "total_parent_count": 35614
+        },
+        "44b6_0db75fae": {
+          "census": {
+            "empty": 438,
+            "incomplete": 0,
+            "negative": 148,
+            "positive": 0,
+            "unknown": 27467
+          },
+          "complete_group_fork_count": 7407507,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 151,
+            "gt_edges_both_endpoints_matched": 147,
+            "gt_edges_endpoints_present_link_missing": 24,
+            "gt_edges_missing_endpoint": 4,
+            "gt_edges_recovered_with_full_matching": 123,
+            "gt_nodes": 157,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              2.0714766773970688,
+              4.585793095075418,
+              5.28125
+            ],
+            "matched_nodes_3um": 141,
+            "matched_nodes_7um": 153,
+            "predicted_nodes": 28124,
+            "recall_3um": 0.8980891719745223,
+            "recall_7um": 0.9745222929936306
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5965191154170613,
+            "dataset": "44b6_0db75fae",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 28,
+            "edge_fp": 38,
+            "edge_jaccard": 0.6507936507936508,
+            "edge_tp": 123,
+            "estimated_total": 15335,
+            "graph_hash": "4938d2d5c4e1ee829407fffe38ed55b7df05af5c923c41403f59515d2719a4b0",
+            "gt_node_recall": 0.9745222929936306,
+            "matched_nodes": 153,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9745222929936306,
+            "num_pred_nodes": 28124,
+            "total_node_ratio": 0.8339745679817411
+          },
+          "total_parent_count": 28053
+        },
+        "44b6_12dfb391": {
+          "census": {
+            "empty": 797,
+            "incomplete": 0,
+            "negative": 765,
+            "positive": 2,
+            "unknown": 57385
+          },
+          "complete_group_fork_count": 15980454,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 773,
+            "gt_edges_both_endpoints_matched": 768,
+            "gt_edges_endpoints_present_link_missing": 57,
+            "gt_edges_missing_endpoint": 5,
+            "gt_edges_recovered_with_full_matching": 711,
+            "gt_nodes": 788,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.284675299443404,
+              2.368824207280903,
+              5.215132292047916,
+              6.761347521944128
+            ],
+            "matched_nodes_3um": 725,
+            "matched_nodes_7um": 785,
+            "predicted_nodes": 59140,
+            "recall_3um": 0.9200507614213198,
+            "recall_7um": 0.9961928934010152
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8213096733717848,
+            "dataset": "44b6_12dfb391",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 62,
+            "edge_fp": 92,
+            "edge_jaccard": 0.8219653179190751,
+            "edge_tp": 711,
+            "estimated_total": 58672,
+            "graph_hash": "e55ee0b1b58679f41226ee798545a942fa3fa85456794443a82bb6ac888cd53c",
+            "gt_node_recall": 0.9961928934010152,
+            "matched_nodes": 785,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9961928934010152,
+            "num_pred_nodes": 59140,
+            "total_node_ratio": 0.007976547586583038
+          },
+          "total_parent_count": 58949
+        },
+        "44b6_144b256d": {
+          "census": {
+            "empty": 1074,
+            "incomplete": 0,
+            "negative": 84,
+            "positive": 0,
+            "unknown": 63738
+          },
+          "complete_group_fork_count": 17633030,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 119,
+            "gt_edges_both_endpoints_matched": 100,
+            "gt_edges_endpoints_present_link_missing": 10,
+            "gt_edges_missing_endpoint": 19,
+            "gt_edges_recovered_with_full_matching": 90,
+            "gt_nodes": 121,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.284675299443404,
+              3.339251409453901,
+              6.394526350705031,
+              6.894291116568838
+            ],
+            "matched_nodes_3um": 96,
+            "matched_nodes_7um": 109,
+            "predicted_nodes": 65106,
+            "recall_3um": 0.7933884297520661,
+            "recall_7um": 0.9008264462809917
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6296305566680016,
+            "dataset": "44b6_144b256d",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 29,
+            "edge_fp": 24,
+            "edge_jaccard": 0.6293706293706294,
+            "edge_tp": 90,
+            "estimated_total": 65376,
+            "graph_hash": "e6a6a2026643c31e7de7beb16e9cb3a13347ecd15e0ce0d970661f7e1c8699c6",
+            "gt_node_recall": 0.9008264462809917,
+            "matched_nodes": 109,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9008264462809917,
+            "num_pred_nodes": 65106,
+            "total_node_ratio": -0.004129955947136564
+          },
+          "total_parent_count": 64896
+        },
+        "44b6_1574802b": {
+          "census": {
+            "empty": 586,
+            "incomplete": 0,
+            "negative": 151,
+            "positive": 0,
+            "unknown": 26864
+          },
+          "complete_group_fork_count": 7402118,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 153,
+            "gt_edges_both_endpoints_matched": 151,
+            "gt_edges_endpoints_present_link_missing": 10,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 141,
+            "gt_nodes": 155,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.4647552056572457,
+              2.0714766773970688,
+              4.410482725377973,
+              5.025034981221523
+            ],
+            "matched_nodes_3um": 146,
+            "matched_nodes_7um": 154,
+            "predicted_nodes": 27641,
+            "recall_3um": 0.9419354838709677,
+            "recall_7um": 0.9935483870967742
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.782660286380774,
+            "dataset": "44b6_1574802b",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 12,
+            "edge_fp": 17,
+            "edge_jaccard": 0.8294117647058824,
+            "edge_tp": 141,
+            "estimated_total": 17677,
+            "graph_hash": "5de1f18d5bc4328a933336383da5efa7e9ea0242ef396e3ae1f94ac9cc2626e3",
+            "gt_node_recall": 0.9935483870967742,
+            "matched_nodes": 154,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9935483870967742,
+            "num_pred_nodes": 27641,
+            "total_node_ratio": 0.5636703060474062
+          },
+          "total_parent_count": 27601
+        },
+        "44b6_1d530831": {
+          "census": {
+            "empty": 1064,
+            "incomplete": 0,
+            "negative": 268,
+            "positive": 0,
+            "unknown": 45622
+          },
+          "complete_group_fork_count": 12157915,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 271,
+            "gt_edges_both_endpoints_matched": 266,
+            "gt_edges_endpoints_present_link_missing": 50,
+            "gt_edges_missing_endpoint": 5,
+            "gt_edges_recovered_with_full_matching": 216,
+            "gt_nodes": 276,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.86167137607581,
+              4.225664365130147,
+              6.1140575357068965,
+              6.989389279472134
+            ],
+            "matched_nodes_3um": 201,
+            "matched_nodes_7um": 273,
+            "predicted_nodes": 47092,
+            "recall_3um": 0.7282608695652174,
+            "recall_7um": 0.9891304347826086
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5827486835378571,
+            "dataset": "44b6_1d530831",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 55,
+            "edge_fp": 88,
+            "edge_jaccard": 0.6016713091922006,
+            "edge_tp": 216,
+            "estimated_total": 35825,
+            "graph_hash": "3941c35805739531900136406a8bf8e924cb63446c3cc11290b34cd971d707b2",
+            "gt_node_recall": 0.9891304347826086,
+            "matched_nodes": 273,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9891304347826086,
+            "num_pred_nodes": 47092,
+            "total_node_ratio": 0.3145010467550593
+          },
+          "total_parent_count": 46954
+        },
+        "44b6_267148e4": {
+          "census": {
+            "empty": 628,
+            "incomplete": 0,
+            "negative": 268,
+            "positive": 2,
+            "unknown": 31625
+          },
+          "complete_group_fork_count": 8897272,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 277,
+            "gt_edges_both_endpoints_matched": 265,
+            "gt_edges_endpoints_present_link_missing": 62,
+            "gt_edges_missing_endpoint": 12,
+            "gt_edges_recovered_with_full_matching": 203,
+            "gt_nodes": 280,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8392383038971944,
+              3.6720001486578284,
+              6.765563831692755,
+              6.989389279472134
+            ],
+            "matched_nodes_3um": 202,
+            "matched_nodes_7um": 274,
+            "predicted_nodes": 32561,
+            "recall_3um": 0.7214285714285714,
+            "recall_7um": 0.9785714285714285
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4802736732334942,
+            "dataset": "44b6_267148e4",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 74,
+            "edge_fp": 116,
+            "edge_jaccard": 0.5165394402035624,
+            "edge_tp": 203,
+            "estimated_total": 19130,
+            "graph_hash": "f4904f013df14cb141f033b4ab132dbeff6bd947b548e29c92e307f4bdac9cdb",
+            "gt_node_recall": 0.9785714285714285,
+            "matched_nodes": 274,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9785714285714285,
+            "num_pred_nodes": 32561,
+            "total_node_ratio": 0.7020909566126503
+          },
+          "total_parent_count": 32523
+        },
+        "44b6_341df25f": {
+          "census": {
+            "empty": 467,
+            "incomplete": 0,
+            "negative": 204,
+            "positive": 3,
+            "unknown": 18427
+          },
+          "complete_group_fork_count": 4652814,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 209,
+            "gt_edges_both_endpoints_matched": 209,
+            "gt_edges_endpoints_present_link_missing": 16,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 193,
+            "gt_nodes": 216,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              1.9902104160113323,
+              3.374565944310468,
+              3.447145558284419
+            ],
+            "matched_nodes_3um": 203,
+            "matched_nodes_7um": 216,
+            "predicted_nodes": 19145,
+            "recall_3um": 0.9398148148148148,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7069978599995324,
+            "dataset": "44b6_341df25f",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 16,
+            "edge_fp": 21,
+            "edge_jaccard": 0.8391304347826087,
+            "edge_tp": 193,
+            "estimated_total": 7436,
+            "graph_hash": "00c434f1ce5708d6826932b94c184616100203f4d4d0b4c735da1ac9140c7397",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 216,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 19145,
+            "total_node_ratio": 1.5746369015599784
+          },
+          "total_parent_count": 19101
+        },
+        "44b6_3a861e03": {
+          "census": {
+            "empty": 795,
+            "incomplete": 0,
+            "negative": 914,
+            "positive": 0,
+            "unknown": 42046
+          },
+          "complete_group_fork_count": 11256414,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 919,
+            "gt_edges_both_endpoints_matched": 909,
+            "gt_edges_endpoints_present_link_missing": 68,
+            "gt_edges_missing_endpoint": 10,
+            "gt_edges_recovered_with_full_matching": 841,
+            "gt_nodes": 935,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.1490485194281397,
+              2.368824207280903,
+              5.169988688367644,
+              6.797862715589364
+            ],
+            "matched_nodes_3um": 862,
+            "matched_nodes_7um": 930,
+            "predicted_nodes": 43984,
+            "recall_3um": 0.9219251336898395,
+            "recall_7um": 0.9946524064171123
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8095814989471386,
+            "dataset": "44b6_3a861e03",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 78,
+            "edge_fp": 111,
+            "edge_jaccard": 0.816504854368932,
+            "edge_tp": 841,
+            "estimated_total": 40546,
+            "graph_hash": "daac1e9ee9a9e19a6727e54dc2552f7696224bc991e74d96194b224feb02d9db",
+            "gt_node_recall": 0.9946524064171123,
+            "matched_nodes": 930,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9946524064171123,
+            "num_pred_nodes": 43984,
+            "total_node_ratio": 0.08479258126572288
+          },
+          "total_parent_count": 43755
+        },
+        "44b6_3bb3690f": {
+          "census": {
+            "empty": 606,
+            "incomplete": 0,
+            "negative": 380,
+            "positive": 0,
+            "unknown": 36763
+          },
+          "complete_group_fork_count": 10721364,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 10,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 396,
+            "gt_edges_both_endpoints_matched": 374,
+            "gt_edges_endpoints_present_link_missing": 68,
+            "gt_edges_missing_endpoint": 22,
+            "gt_edges_recovered_with_full_matching": 306,
+            "gt_nodes": 400,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8168052317185792,
+              4.9221402784106,
+              6.71713377540127,
+              6.90625
+            ],
+            "matched_nodes_3um": 288,
+            "matched_nodes_7um": 387,
+            "predicted_nodes": 37992,
+            "recall_3um": 0.72,
+            "recall_7um": 0.9675
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6016001693715263,
+            "dataset": "44b6_3bb3690f",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 90,
+            "edge_fp": 103,
+            "edge_jaccard": 0.6132264529058116,
+            "edge_tp": 306,
+            "estimated_total": 31937,
+            "graph_hash": "44754f6d8c81d4518aafc7f8b4c98078058dab9849fddedf812aca0853a9c02c",
+            "gt_node_recall": 0.9675,
+            "matched_nodes": 387,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9675,
+            "num_pred_nodes": 37992,
+            "total_node_ratio": 0.18959200926824685
+          },
+          "total_parent_count": 37749
+        },
+        "44b6_40c45f5a": {
+          "census": {
+            "empty": 710,
+            "incomplete": 0,
+            "negative": 197,
+            "positive": 0,
+            "unknown": 43102
+          },
+          "complete_group_fork_count": 12715525,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 198,
+            "gt_edges_both_endpoints_matched": 196,
+            "gt_edges_endpoints_present_link_missing": 31,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 165,
+            "gt_nodes": 200,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.451916750934585,
+              5.2254042312894,
+              6.563169608695177
+            ],
+            "matched_nodes_3um": 167,
+            "matched_nodes_7um": 199,
+            "predicted_nodes": 44149,
+            "recall_3um": 0.835,
+            "recall_7um": 0.995
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6445750214284643,
+            "dataset": "44b6_40c45f5a",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 33,
+            "edge_fp": 49,
+            "edge_jaccard": 0.6680161943319838,
+            "edge_tp": 165,
+            "estimated_total": 32681,
+            "graph_hash": "314e050f594f284b072a8311fcaf9f0bcee88773df394ffb41586ee4a36eb2de",
+            "gt_node_recall": 0.995,
+            "matched_nodes": 199,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.995,
+            "num_pred_nodes": 44149,
+            "total_node_ratio": 0.3509072549799578
+          },
+          "total_parent_count": 44009
+        },
+        "44b6_415c0a3a": {
+          "census": {
+            "empty": 733,
+            "incomplete": 0,
+            "negative": 313,
+            "positive": 0,
+            "unknown": 60893
+          },
+          "complete_group_fork_count": 16978677,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 322,
+            "gt_edges_both_endpoints_matched": 309,
+            "gt_edges_endpoints_present_link_missing": 35,
+            "gt_edges_missing_endpoint": 13,
+            "gt_edges_recovered_with_full_matching": 274,
+            "gt_nodes": 331,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              4.054333963599698,
+              6.624976408893681,
+              6.953879874753374
+            ],
+            "matched_nodes_3um": 254,
+            "matched_nodes_7um": 323,
+            "predicted_nodes": 62079,
+            "recall_3um": 0.7673716012084593,
+            "recall_7um": 0.9758308157099698
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7343529967864953,
+            "dataset": "44b6_415c0a3a",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 48,
+            "edge_fp": 48,
+            "edge_jaccard": 0.7405405405405405,
+            "edge_tp": 274,
+            "estimated_total": 57292,
+            "graph_hash": "3cb0bd8e5735521985b805986bf524e7da8c77ee1a90b19ccf5db60cd29b6067",
+            "gt_node_recall": 0.9758308157099698,
+            "matched_nodes": 323,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9758308157099698,
+            "num_pred_nodes": 62079,
+            "total_node_ratio": 0.08355442295608462
+          },
+          "total_parent_count": 61939
+        },
+        "44b6_53f95252": {
+          "census": {
+            "empty": 603,
+            "incomplete": 0,
+            "negative": 68,
+            "positive": 0,
+            "unknown": 47081
+          },
+          "complete_group_fork_count": 12451892,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 68,
+            "gt_edges_both_endpoints_matched": 68,
+            "gt_edges_endpoints_present_link_missing": 5,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 63,
+            "gt_nodes": 70,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.0287255676437146,
+              2.0718750000000004,
+              5.076554377892174,
+              5.154734625807618
+            ],
+            "matched_nodes_3um": 64,
+            "matched_nodes_7um": 70,
+            "predicted_nodes": 47847,
+            "recall_3um": 0.9142857142857143,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8093943595913456,
+            "dataset": "44b6_53f95252",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 5,
+            "edge_fp": 8,
+            "edge_jaccard": 0.8289473684210527,
+            "edge_tp": 63,
+            "estimated_total": 38715,
+            "graph_hash": "96c526d7c01da479c11e9f629f98d5562622b7baeecc1fea5edb78a3e0937860",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 70,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 47847,
+            "total_node_ratio": 0.23587756683456024
+          },
+          "total_parent_count": 47752
+        },
+        "44b6_551a5dba": {
+          "census": {
+            "empty": 842,
+            "incomplete": 0,
+            "negative": 221,
+            "positive": 0,
+            "unknown": 68373
+          },
+          "complete_group_fork_count": 19901894,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 48,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 224,
+            "gt_edges_both_endpoints_matched": 220,
+            "gt_edges_endpoints_present_link_missing": 40,
+            "gt_edges_missing_endpoint": 4,
+            "gt_edges_recovered_with_full_matching": 180,
+            "gt_nodes": 228,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.667500106184163,
+              6.104296862004144,
+              6.662995408410545
+            ],
+            "matched_nodes_3um": 183,
+            "matched_nodes_7um": 226,
+            "predicted_nodes": 69663,
+            "recall_3um": 0.8026315789473685,
+            "recall_7um": 0.9912280701754386
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5994575246934633,
+            "dataset": "44b6_551a5dba",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 44,
+            "edge_fp": 70,
+            "edge_jaccard": 0.6122448979591837,
+            "edge_tp": 180,
+            "estimated_total": 57627,
+            "graph_hash": "fc3c194db24835bfac3250076a1192f15bef36720f8008207c9ff3f7cbf06c02",
+            "gt_node_recall": 0.9912280701754386,
+            "matched_nodes": 226,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9912280701754386,
+            "num_pred_nodes": 69663,
+            "total_node_ratio": 0.20886043000676766
+          },
+          "total_parent_count": 69436
+        },
+        "44b6_5740d24b": {
+          "census": {
+            "empty": 1061,
+            "incomplete": 0,
+            "negative": 169,
+            "positive": 0,
+            "unknown": 21179
+          },
+          "complete_group_fork_count": 5248786,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 170,
+            "gt_edges_both_endpoints_matched": 168,
+            "gt_edges_endpoints_present_link_missing": 5,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 163,
+            "gt_nodes": 173,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.21875,
+              2.0714766773970688,
+              3.374565944310468,
+              3.917733121653388
+            ],
+            "matched_nodes_3um": 165,
+            "matched_nodes_7um": 172,
+            "predicted_nodes": 22656,
+            "recall_3um": 0.953757225433526,
+            "recall_7um": 0.9942196531791907
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.907246757783753,
+            "dataset": "44b6_5740d24b",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 7,
+            "edge_fp": 7,
+            "edge_jaccard": 0.9209039548022598,
+            "edge_tp": 163,
+            "estimated_total": 19730,
+            "graph_hash": "5788553c7b51ba76a3b256cfd9ae8b0a7245f8ec9567112f089ef86f96942ffb",
+            "gt_node_recall": 0.9942196531791907,
+            "matched_nodes": 172,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9942196531791907,
+            "num_pred_nodes": 22656,
+            "total_node_ratio": 0.14830207805372528
+          },
+          "total_parent_count": 22409
+        },
+        "44b6_587a1e22": {
+          "census": {
+            "empty": 629,
+            "incomplete": 0,
+            "negative": 368,
+            "positive": 3,
+            "unknown": 28290
+          },
+          "complete_group_fork_count": 6798931,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 371,
+            "gt_edges_both_endpoints_matched": 371,
+            "gt_edges_endpoints_present_link_missing": 36,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 335,
+            "gt_nodes": 381,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              1.86167137607581,
+              3.3392514094538983,
+              5.28125
+            ],
+            "matched_nodes_3um": 375,
+            "matched_nodes_7um": 381,
+            "predicted_nodes": 29411,
+            "recall_3um": 0.984251968503937,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7340568332715844,
+            "dataset": "44b6_587a1e22",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 36,
+            "edge_fp": 57,
+            "edge_jaccard": 0.7827102803738317,
+            "edge_tp": 335,
+            "estimated_total": 18137,
+            "graph_hash": "ae30cf0a8c56c71e6db97604654dcd9eb027cf36bdad179a0f28a1b7e5672fdb",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 381,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 29411,
+            "total_node_ratio": 0.6216022495451288
+          },
+          "total_parent_count": 29290
+        },
+        "44b6_5f15d135": {
+          "census": {
+            "empty": 847,
+            "incomplete": 0,
+            "negative": 242,
+            "positive": 4,
+            "unknown": 33968
+          },
+          "complete_group_fork_count": 8619552,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 273,
+            "gt_edges_both_endpoints_matched": 234,
+            "gt_edges_endpoints_present_link_missing": 39,
+            "gt_edges_missing_endpoint": 39,
+            "gt_edges_recovered_with_full_matching": 195,
+            "gt_nodes": 278,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.99276194594704,
+              6.77895282234387,
+              6.9181882111576005
+            ],
+            "matched_nodes_3um": 196,
+            "matched_nodes_7um": 252,
+            "predicted_nodes": 35141,
+            "recall_3um": 0.7050359712230215,
+            "recall_7um": 0.9064748201438849
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5528501580347879,
+            "dataset": "44b6_5f15d135",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 78,
+            "edge_fp": 73,
+            "edge_jaccard": 0.5635838150289018,
+            "edge_tp": 195,
+            "estimated_total": 29519,
+            "graph_hash": "0304e88adffe1fcddc8126c24512b9dc9cc99602b5e2bfea37b7a3958b69c627",
+            "gt_node_recall": 0.9064748201438849,
+            "matched_nodes": 252,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9064748201438849,
+            "num_pred_nodes": 35141,
+            "total_node_ratio": 0.1904536061519699
+          },
+          "total_parent_count": 35061
+        },
+        "44b6_668e0cc7": {
+          "census": {
+            "empty": 637,
+            "incomplete": 0,
+            "negative": 626,
+            "positive": 0,
+            "unknown": 41347
+          },
+          "complete_group_fork_count": 11094301,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 44,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 631,
+            "gt_edges_both_endpoints_matched": 631,
+            "gt_edges_endpoints_present_link_missing": 27,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 604,
+            "gt_nodes": 643,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.1490485194281397,
+              2.03125,
+              3.364258042442099,
+              4.1429533547941375
+            ],
+            "matched_nodes_3um": 632,
+            "matched_nodes_7um": 643,
+            "predicted_nodes": 42771,
+            "recall_3um": 0.9828926905132193,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8852723591862466,
+            "dataset": "44b6_668e0cc7",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 27,
+            "edge_fp": 46,
+            "edge_jaccard": 0.8921713441654358,
+            "edge_tp": 604,
+            "estimated_total": 39701,
+            "graph_hash": "3fbda2aa0ec485740d34c14de07bb28b327786ff0653367977fb76c746df1001",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 643,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 42771,
+            "total_node_ratio": 0.07732802700183875
+          },
+          "total_parent_count": 42610
+        },
+        "44b6_66f9292d": {
+          "census": {
+            "empty": 736,
+            "incomplete": 0,
+            "negative": 175,
+            "positive": 0,
+            "unknown": 56314
+          },
+          "complete_group_fork_count": 15875848,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 198,
+            "gt_edges_both_endpoints_matched": 161,
+            "gt_edges_endpoints_present_link_missing": 7,
+            "gt_edges_missing_endpoint": 37,
+            "gt_edges_recovered_with_full_matching": 154,
+            "gt_nodes": 200,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.403597789900049,
+              6.258398359897622,
+              6.662995408410545
+            ],
+            "matched_nodes_3um": 155,
+            "matched_nodes_7um": 177,
+            "predicted_nodes": 57370,
+            "recall_3um": 0.775,
+            "recall_7um": 0.885
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6969795096630221,
+            "dataset": "44b6_66f9292d",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 44,
+            "edge_fp": 21,
+            "edge_jaccard": 0.7031963470319634,
+            "edge_tp": 154,
+            "estimated_total": 52710,
+            "graph_hash": "d6f9cbd3b6efe3bad58d41c4ebb298af406398cfe01f3192bd9f138325bb0685",
+            "gt_node_recall": 0.885,
+            "matched_nodes": 177,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.885,
+            "num_pred_nodes": 57370,
+            "total_node_ratio": 0.08840827167520394
+          },
+          "total_parent_count": 57225
+        },
+        "44b6_706092f0": {
+          "census": {
+            "empty": 1025,
+            "incomplete": 0,
+            "negative": 110,
+            "positive": 3,
+            "unknown": 68235
+          },
+          "complete_group_fork_count": 18983784,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 16,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 117,
+            "gt_edges_both_endpoints_matched": 111,
+            "gt_edges_endpoints_present_link_missing": 7,
+            "gt_edges_missing_endpoint": 6,
+            "gt_edges_recovered_with_full_matching": 104,
+            "gt_nodes": 118,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.374565944310468,
+              5.18682476830551,
+              5.420051026051323
+            ],
+            "matched_nodes_3um": 94,
+            "matched_nodes_7um": 115,
+            "predicted_nodes": 69611,
+            "recall_3um": 0.7966101694915254,
+            "recall_7um": 0.9745762711864406
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8257357319304728,
+            "dataset": "44b6_706092f0",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 13,
+            "edge_fp": 9,
+            "edge_jaccard": 0.8253968253968254,
+            "edge_tp": 104,
+            "estimated_total": 69898,
+            "graph_hash": "444858694c3b0d7e04927ff7a31f588eace3d6b26c472d6732ac05726eec11c9",
+            "gt_node_recall": 0.9745762711864406,
+            "matched_nodes": 115,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9745762711864406,
+            "num_pred_nodes": 69611,
+            "total_node_ratio": -0.004105983003805545
+          },
+          "total_parent_count": 69373
+        },
+        "44b6_71a4179f": {
+          "census": {
+            "empty": 983,
+            "incomplete": 0,
+            "negative": 119,
+            "positive": 0,
+            "unknown": 66624
+          },
+          "complete_group_fork_count": 18589631,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 119,
+            "gt_edges_both_endpoints_matched": 119,
+            "gt_edges_endpoints_present_link_missing": 9,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 110,
+            "gt_nodes": 121,
+            "matched_distance_quantiles_um": [
+              0.40625,
+              1.7235727791422095,
+              3.6336104634371584,
+              5.259143667485326,
+              5.296851954227152
+            ],
+            "matched_nodes_3um": 95,
+            "matched_nodes_7um": 121,
+            "predicted_nodes": 68021,
+            "recall_3um": 0.7851239669421488,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8204916720616278,
+            "dataset": "44b6_71a4179f",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 9,
+            "edge_fp": 15,
+            "edge_jaccard": 0.8208955223880597,
+            "edge_tp": 110,
+            "estimated_total": 67688,
+            "graph_hash": "d3193c79f8776a5148f69baa39477a2178e96d9589c98e6b866526eddd9d26d9",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 121,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 68021,
+            "total_node_ratio": 0.004919631249261316
+          },
+          "total_parent_count": 67726
+        },
+        "44b6_74d0c52e": {
+          "census": {
+            "empty": 1155,
+            "incomplete": 0,
+            "negative": 135,
+            "positive": 0,
+            "unknown": 10709
+          },
+          "complete_group_fork_count": 1850009,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 139,
+            "gt_edges_both_endpoints_matched": 131,
+            "gt_edges_endpoints_present_link_missing": 14,
+            "gt_edges_missing_endpoint": 8,
+            "gt_edges_recovered_with_full_matching": 117,
+            "gt_nodes": 140,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.300390601883359,
+              4.780383905156076,
+              5.759587794495366
+            ],
+            "matched_nodes_3um": 118,
+            "matched_nodes_7um": 136,
+            "predicted_nodes": 12243,
+            "recall_3um": 0.8428571428571429,
+            "recall_7um": 0.9714285714285714
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.722469184890656,
+            "dataset": "44b6_74d0c52e",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 22,
+            "edge_fp": 26,
+            "edge_jaccard": 0.7090909090909091,
+            "edge_tp": 117,
+            "estimated_total": 15090,
+            "graph_hash": "da337e6366c93df905aa8821d38e2d904ce6a11b9563da42c8a2eb68e3e0c9eb",
+            "gt_node_recall": 0.9714285714285714,
+            "matched_nodes": 136,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9714285714285714,
+            "num_pred_nodes": 12243,
+            "total_node_ratio": -0.18866799204771373
+          },
+          "total_parent_count": 11999
+        },
+        "44b6_7a302da0": {
+          "census": {
+            "empty": 1108,
+            "incomplete": 0,
+            "negative": 496,
+            "positive": 3,
+            "unknown": 73313
+          },
+          "complete_group_fork_count": 20749973,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 507,
+            "gt_edges_both_endpoints_matched": 493,
+            "gt_edges_endpoints_present_link_missing": 73,
+            "gt_edges_missing_endpoint": 14,
+            "gt_edges_recovered_with_full_matching": 420,
+            "gt_nodes": 516,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.625,
+              3.5648292823780494,
+              6.408750244665215,
+              6.724634051381532
+            ],
+            "matched_nodes_3um": 425,
+            "matched_nodes_7um": 508,
+            "predicted_nodes": 75083,
+            "recall_3um": 0.8236434108527132,
+            "recall_7um": 0.9844961240310077
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6574216783884135,
+            "dataset": "44b6_7a302da0",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 87,
+            "edge_fp": 124,
+            "edge_jaccard": 0.6656101426307448,
+            "edge_tp": 420,
+            "estimated_total": 66858,
+            "graph_hash": "1c8a25cb4e1dd52afda56e7674ae867b56d811e2b10ac11a4772c475f4ba6dfe",
+            "gt_node_recall": 0.9844961240310077,
+            "matched_nodes": 508,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9844961240310077,
+            "num_pred_nodes": 75083,
+            "total_node_ratio": 0.12302192706931107
+          },
+          "total_parent_count": 74920
+        },
+        "44b6_7e557709": {
+          "census": {
+            "empty": 774,
+            "incomplete": 0,
+            "negative": 549,
+            "positive": 0,
+            "unknown": 53258
+          },
+          "complete_group_fork_count": 14276935,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 30,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 560,
+            "gt_edges_both_endpoints_matched": 560,
+            "gt_edges_endpoints_present_link_missing": 24,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 536,
+            "gt_nodes": 570,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              2.03125,
+              3.5931697048408493,
+              6.563169608695177
+            ],
+            "matched_nodes_3um": 550,
+            "matched_nodes_7um": 570,
+            "predicted_nodes": 54924,
+            "recall_3um": 0.9649122807017544,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.9026657992487042,
+            "dataset": "44b6_7e557709",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 24,
+            "edge_fp": 35,
+            "edge_jaccard": 0.9008403361344538,
+            "edge_tp": 536,
+            "estimated_total": 56060,
+            "graph_hash": "c9e652e860d5203c2ce13d574b49c1e993a846168e03bf84b30633e6661b719c",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 570,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 54924,
+            "total_node_ratio": -0.02026400285408491
+          },
+          "total_parent_count": 54581
+        },
+        "44b6_808952d6": {
+          "census": {
+            "empty": 989,
+            "incomplete": 0,
+            "negative": 121,
+            "positive": 0,
+            "unknown": 19725
+          },
+          "complete_group_fork_count": 4061861,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 179,
+            "gt_edges_both_endpoints_matched": 179,
+            "gt_edges_endpoints_present_link_missing": 8,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 171,
+            "gt_nodes": 181,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.2752922102462856,
+              4.935275925154992,
+              5.090297909995052
+            ],
+            "matched_nodes_3um": 161,
+            "matched_nodes_7um": 181,
+            "predicted_nodes": 21370,
+            "recall_3um": 0.8895027624309392,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.872415316018416,
+            "dataset": "44b6_808952d6",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 8,
+            "edge_fp": 10,
+            "edge_jaccard": 0.9047619047619048,
+            "edge_tp": 171,
+            "estimated_total": 15742,
+            "graph_hash": "d822f810417fcf903f8f112c97a148a37b586e3635e13ef51509eb8b1762d0a8",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 181,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 21370,
+            "total_node_ratio": 0.3575149282175073
+          },
+          "total_parent_count": 20835
+        },
+        "44b6_87bba6c4": {
+          "census": {
+            "empty": 660,
+            "incomplete": 0,
+            "negative": 144,
+            "positive": 0,
+            "unknown": 36539
+          },
+          "complete_group_fork_count": 8944201,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 149,
+            "gt_edges_both_endpoints_matched": 142,
+            "gt_edges_endpoints_present_link_missing": 53,
+            "gt_edges_missing_endpoint": 7,
+            "gt_edges_recovered_with_full_matching": 89,
+            "gt_nodes": 153,
+            "matched_distance_quantiles_um": [
+              0.0,
+              2.2980970388562794,
+              5.109628924738822,
+              6.411276300413282,
+              6.423376497217021
+            ],
+            "matched_nodes_3um": 80,
+            "matched_nodes_7um": 148,
+            "predicted_nodes": 37428,
+            "recall_3um": 0.5228758169934641,
+            "recall_7um": 0.9673202614379085
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.34696138605678395,
+            "dataset": "44b6_87bba6c4",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 60,
+            "edge_fp": 99,
+            "edge_jaccard": 0.3588709677419355,
+            "edge_tp": 89,
+            "estimated_total": 28102,
+            "graph_hash": "6d7aaba33da845d9f23d714db18c57ecde3b5c040068a9e25c490bc3f3a0ca87",
+            "gt_node_recall": 0.9673202614379085,
+            "matched_nodes": 148,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9673202614379085,
+            "num_pred_nodes": 37428,
+            "total_node_ratio": 0.3318625008896164
+          },
+          "total_parent_count": 37343
+        },
+        "44b6_8cc6506c": {
+          "census": {
+            "empty": 545,
+            "incomplete": 0,
+            "negative": 387,
+            "positive": 0,
+            "unknown": 39165
+          },
+          "complete_group_fork_count": 11348139,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 396,
+            "gt_edges_both_endpoints_matched": 384,
+            "gt_edges_endpoints_present_link_missing": 32,
+            "gt_edges_missing_endpoint": 12,
+            "gt_edges_recovered_with_full_matching": 352,
+            "gt_nodes": 400,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.1490485194281397,
+              2.7877701478829575,
+              5.104756693091298,
+              6.749131888620936
+            ],
+            "matched_nodes_3um": 356,
+            "matched_nodes_7um": 394,
+            "predicted_nodes": 40213,
+            "recall_3um": 0.89,
+            "recall_7um": 0.985
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.774722772546771,
+            "dataset": "44b6_8cc6506c",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 44,
+            "edge_fp": 47,
+            "edge_jaccard": 0.7945823927765236,
+            "edge_tp": 352,
+            "estimated_total": 32172,
+            "graph_hash": "7b244485b8d936f8a6a880b11e380838acb17bd797eb7d70b381c55aa142eb49",
+            "gt_node_recall": 0.985,
+            "matched_nodes": 394,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.985,
+            "num_pred_nodes": 40213,
+            "total_node_ratio": 0.24993783414148948
+          },
+          "total_parent_count": 40097
+        },
+        "44b6_8f5ab931": {
+          "census": {
+            "empty": 574,
+            "incomplete": 0,
+            "negative": 602,
+            "positive": 0,
+            "unknown": 36834
+          },
+          "complete_group_fork_count": 10306984,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 604,
+            "gt_edges_both_endpoints_matched": 599,
+            "gt_edges_endpoints_present_link_missing": 85,
+            "gt_edges_missing_endpoint": 5,
+            "gt_edges_recovered_with_full_matching": 514,
+            "gt_nodes": 616,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.494694639736067,
+              5.7704587809266865,
+              6.749131888620936
+            ],
+            "matched_nodes_3um": 519,
+            "matched_nodes_7um": 613,
+            "predicted_nodes": 38135,
+            "recall_3um": 0.8425324675324676,
+            "recall_7um": 0.9951298701298701
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6697910170135759,
+            "dataset": "44b6_8f5ab931",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 90,
+            "edge_fp": 134,
+            "edge_jaccard": 0.6964769647696477,
+            "edge_tp": 514,
+            "estimated_total": 27571,
+            "graph_hash": "f242870064770ef40eb98e1239330b8a71dce9050127524f775947a0c7631047",
+            "gt_node_recall": 0.9951298701298701,
+            "matched_nodes": 613,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9951298701298701,
+            "num_pred_nodes": 38135,
+            "total_node_ratio": 0.3831562148634435
+          },
+          "total_parent_count": 38010
+        },
+        "44b6_8f9ecab4": {
+          "census": {
+            "empty": 948,
+            "incomplete": 0,
+            "negative": 369,
+            "positive": 0,
+            "unknown": 76666
+          },
+          "complete_group_fork_count": 21488151,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 370,
+            "gt_edges_both_endpoints_matched": 368,
+            "gt_edges_endpoints_present_link_missing": 42,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 326,
+            "gt_nodes": 374,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.1490485194281397,
+              2.9575446425202108,
+              5.154734625807618,
+              5.816614806956019
+            ],
+            "matched_nodes_3um": 336,
+            "matched_nodes_7um": 373,
+            "predicted_nodes": 78245,
+            "recall_3um": 0.8983957219251337,
+            "recall_7um": 0.9973262032085561
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7375309264386276,
+            "dataset": "44b6_8f9ecab4",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 44,
+            "edge_fp": 70,
+            "edge_jaccard": 0.740909090909091,
+            "edge_tp": 326,
+            "estimated_total": 74833,
+            "graph_hash": "546ff636ba784cec8110a6d5a1d1221a0e0afad6134c2b43dc23c1c8f7dfddd7",
+            "gt_node_recall": 0.9973262032085561,
+            "matched_nodes": 373,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9973262032085561,
+            "num_pred_nodes": 78245,
+            "total_node_ratio": 0.045594857883554045
+          },
+          "total_parent_count": 77983
+        },
+        "44b6_90724892": {
+          "census": {
+            "empty": 560,
+            "incomplete": 0,
+            "negative": 98,
+            "positive": 0,
+            "unknown": 32640
+          },
+          "complete_group_fork_count": 8092692,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 103,
+            "gt_edges_both_endpoints_matched": 95,
+            "gt_edges_endpoints_present_link_missing": 22,
+            "gt_edges_missing_endpoint": 8,
+            "gt_edges_recovered_with_full_matching": 73,
+            "gt_nodes": 105,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8392383038971944,
+              3.8707902902970415,
+              6.361237939942545,
+              6.600781203766718
+            ],
+            "matched_nodes_3um": 68,
+            "matched_nodes_7um": 100,
+            "predicted_nodes": 33404,
+            "recall_3um": 0.6476190476190476,
+            "recall_7um": 0.9523809523809523
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4780356182596509,
+            "dataset": "44b6_90724892",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 30,
+            "edge_fp": 45,
+            "edge_jaccard": 0.49324324324324326,
+            "edge_tp": 73,
+            "estimated_total": 25532,
+            "graph_hash": "79ee46260c5887fc307ea0348978c626b6e2c6433724f13c95649e06af7b35c0",
+            "gt_node_recall": 0.9523809523809523,
+            "matched_nodes": 100,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9523809523809523,
+            "num_pred_nodes": 33404,
+            "total_node_ratio": 0.3083189722700924
+          },
+          "total_parent_count": 33298
+        },
+        "44b6_949adeb1": {
+          "census": {
+            "empty": 937,
+            "incomplete": 0,
+            "negative": 372,
+            "positive": 0,
+            "unknown": 48584
+          },
+          "complete_group_fork_count": 13709963,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 378,
+            "gt_edges_both_endpoints_matched": 369,
+            "gt_edges_endpoints_present_link_missing": 95,
+            "gt_edges_missing_endpoint": 9,
+            "gt_edges_recovered_with_full_matching": 274,
+            "gt_nodes": 388,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              4.076652755772177,
+              6.324718447770453,
+              6.858289350304491
+            ],
+            "matched_nodes_3um": 297,
+            "matched_nodes_7um": 382,
+            "predicted_nodes": 50085,
+            "recall_3um": 0.7654639175257731,
+            "recall_7um": 0.9845360824742269
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4916144951716057,
+            "dataset": "44b6_949adeb1",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 104,
+            "edge_fp": 160,
+            "edge_jaccard": 0.5092936802973977,
+            "edge_tp": 274,
+            "estimated_total": 37179,
+            "graph_hash": "69c9b2dc8bcd6c89cfc930feb6f6179edf726b8c72929e450d001e62109f2c0b",
+            "gt_node_recall": 0.9845360824742269,
+            "matched_nodes": 382,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9845360824742269,
+            "num_pred_nodes": 50085,
+            "total_node_ratio": 0.34713144517066086
+          },
+          "total_parent_count": 49893
+        },
+        "44b6_95029e92": {
+          "census": {
+            "empty": 826,
+            "incomplete": 0,
+            "negative": 197,
+            "positive": 0,
+            "unknown": 21563
+          },
+          "complete_group_fork_count": 5869618,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 198,
+            "gt_edges_both_endpoints_matched": 198,
+            "gt_edges_endpoints_present_link_missing": 37,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 161,
+            "gt_nodes": 200,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.374565944310468,
+              4.892066193925754,
+              5.008586377412294
+            ],
+            "matched_nodes_3um": 152,
+            "matched_nodes_7um": 200,
+            "predicted_nodes": 22690,
+            "recall_3um": 0.76,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4073463591139262,
+            "dataset": "44b6_95029e92",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 37,
+            "edge_fp": 63,
+            "edge_jaccard": 0.6168582375478927,
+            "edge_tp": 161,
+            "estimated_total": 5161,
+            "graph_hash": "428eec1718ee06fac6facd25872470afd903a3ef7cfd8dc59fb437dd16461837",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 200,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 22690,
+            "total_node_ratio": 3.3964347994574693
+          },
+          "total_parent_count": 22586
+        },
+        "44b6_97725144": {
+          "census": {
+            "empty": 864,
+            "incomplete": 0,
+            "negative": 221,
+            "positive": 0,
+            "unknown": 47199
+          },
+          "complete_group_fork_count": 11574989,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 221,
+            "gt_edges_both_endpoints_matched": 221,
+            "gt_edges_endpoints_present_link_missing": 28,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 193,
+            "gt_nodes": 225,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              2.6201882338197535,
+              4.934202844884622,
+              6.550584420492571
+            ],
+            "matched_nodes_3um": 206,
+            "matched_nodes_7um": 225,
+            "predicted_nodes": 48446,
+            "recall_3um": 0.9155555555555556,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.697241505087389,
+            "dataset": "44b6_97725144",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 28,
+            "edge_fp": 46,
+            "edge_jaccard": 0.7228464419475655,
+            "edge_tp": 193,
+            "estimated_total": 35774,
+            "graph_hash": "de6e311b9e777117a0d35ae3cc7705577173feac389412135ee1da731d6ec7ac",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 225,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 48446,
+            "total_node_ratio": 0.3542237379102141
+          },
+          "total_parent_count": 48284
+        },
+        "44b6_996155de": {
+          "census": {
+            "empty": 1176,
+            "incomplete": 0,
+            "negative": 273,
+            "positive": 3,
+            "unknown": 13959
+          },
+          "complete_group_fork_count": 2388607,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 377,
+            "gt_edges_both_endpoints_matched": 373,
+            "gt_edges_endpoints_present_link_missing": 14,
+            "gt_edges_missing_endpoint": 4,
+            "gt_edges_recovered_with_full_matching": 359,
+            "gt_nodes": 380,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              2.1877232028983924,
+              5.2122507474966735,
+              6.858289350304491
+            ],
+            "matched_nodes_3um": 343,
+            "matched_nodes_7um": 378,
+            "predicted_nodes": 16024,
+            "recall_3um": 0.9026315789473685,
+            "recall_7um": 0.9947368421052631
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8033698200653855,
+            "dataset": "44b6_996155de",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 18,
+            "edge_fp": 20,
+            "edge_jaccard": 0.9042821158690176,
+            "edge_tp": 359,
+            "estimated_total": 7573,
+            "graph_hash": "dae5f14fb958c9561d03114270b576d5746b0f6826a0cfb2b35bd0619d26ca7d",
+            "gt_node_recall": 0.9947368421052631,
+            "matched_nodes": 378,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9947368421052631,
+            "num_pred_nodes": 16024,
+            "total_node_ratio": 1.1159382015053478
+          },
+          "total_parent_count": 15411
+        },
+        "44b6_9be80b04": {
+          "census": {
+            "empty": 850,
+            "incomplete": 0,
+            "negative": 214,
+            "positive": 3,
+            "unknown": 68313
+          },
+          "complete_group_fork_count": 19379945,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 86,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 220,
+            "gt_edges_both_endpoints_matched": 216,
+            "gt_edges_endpoints_present_link_missing": 22,
+            "gt_edges_missing_endpoint": 4,
+            "gt_edges_recovered_with_full_matching": 194,
+            "gt_nodes": 222,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.625,
+              3.374565944310468,
+              5.943963482256523,
+              6.410516871711672
+            ],
+            "matched_nodes_3um": 184,
+            "matched_nodes_7um": 219,
+            "predicted_nodes": 69507,
+            "recall_3um": 0.8288288288288288,
+            "recall_7um": 0.9864864864864865
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7573772845793941,
+            "dataset": "44b6_9be80b04",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 26,
+            "edge_fp": 31,
+            "edge_jaccard": 0.7729083665338645,
+            "edge_tp": 194,
+            "estimated_total": 57877,
+            "graph_hash": "926962f6360514941f08d6348d97def7485951fc8de8ebcc3db4df19a2aa08ff",
+            "gt_node_recall": 0.9864864864864865,
+            "matched_nodes": 219,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9864864864864865,
+            "num_pred_nodes": 69507,
+            "total_node_ratio": 0.20094337992639563
+          },
+          "total_parent_count": 69380
+        },
+        "44b6_9bfa6a0a": {
+          "census": {
+            "empty": 753,
+            "incomplete": 0,
+            "negative": 258,
+            "positive": 0,
+            "unknown": 62747
+          },
+          "complete_group_fork_count": 17490477,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 259,
+            "gt_edges_both_endpoints_matched": 257,
+            "gt_edges_endpoints_present_link_missing": 43,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 214,
+            "gt_nodes": 264,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.471001521535247,
+              5.372517773962165,
+              6.423376497217021
+            ],
+            "matched_nodes_3um": 214,
+            "matched_nodes_7um": 263,
+            "predicted_nodes": 64040,
+            "recall_3um": 0.8106060606060606,
+            "recall_7um": 0.9962121212121212
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6669444962783271,
+            "dataset": "44b6_9bfa6a0a",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 45,
+            "edge_fp": 62,
+            "edge_jaccard": 0.6666666666666666,
+            "edge_tp": 214,
+            "estimated_total": 64308,
+            "graph_hash": "45194c2fe9f2c501724e0e601ef473bce3508595e7d28408b0fa19143d76f27d",
+            "gt_node_recall": 0.9962121212121212,
+            "matched_nodes": 263,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9962121212121212,
+            "num_pred_nodes": 64040,
+            "total_node_ratio": -0.004167444174908254
+          },
+          "total_parent_count": 63758
+        },
+        "44b6_a21120c2": {
+          "census": {
+            "empty": 799,
+            "incomplete": 0,
+            "negative": 281,
+            "positive": 4,
+            "unknown": 29763
+          },
+          "complete_group_fork_count": 6918439,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 2,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 286,
+            "gt_edges_both_endpoints_matched": 285,
+            "gt_edges_endpoints_present_link_missing": 23,
+            "gt_edges_missing_endpoint": 1,
+            "gt_edges_recovered_with_full_matching": 262,
+            "gt_nodes": 296,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.8125,
+              1.7235727791422095,
+              3.458333452593584,
+              5.701990469344894
+            ],
+            "matched_nodes_3um": 291,
+            "matched_nodes_7um": 295,
+            "predicted_nodes": 31095,
+            "recall_3um": 0.9831081081081081,
+            "recall_7um": 0.9966216216216216
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 2,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 2,
+              "daughter_paths_present": 2,
+              "endpoint_window_present": 2,
+              "legal_compatible_action": 2
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7876642815420561,
+            "dataset": "44b6_a21120c2",
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 24,
+            "edge_fp": 35,
+            "edge_jaccard": 0.8161993769470405,
+            "edge_tp": 262,
+            "estimated_total": 23040,
+            "graph_hash": "768da48ebf448e04b94a0ae1fb1950098bfded30c1c48f18b25497b354d48f2d",
+            "gt_node_recall": 0.9966216216216216,
+            "matched_nodes": 295,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9966216216216216,
+            "num_pred_nodes": 31095,
+            "total_node_ratio": 0.349609375
+          },
+          "total_parent_count": 30847
+        },
+        "44b6_a2bb48bb": {
+          "census": {
+            "empty": 981,
+            "incomplete": 0,
+            "negative": 398,
+            "positive": 0,
+            "unknown": 83126
+          },
+          "complete_group_fork_count": 25355150,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 72,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 410,
+            "gt_edges_both_endpoints_matched": 388,
+            "gt_edges_endpoints_present_link_missing": 109,
+            "gt_edges_missing_endpoint": 22,
+            "gt_edges_recovered_with_full_matching": 279,
+            "gt_nodes": 416,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.86167137607581,
+              5.038150931191334,
+              6.662995408410545,
+              6.9181882111576005
+            ],
+            "matched_nodes_3um": 280,
+            "matched_nodes_7um": 403,
+            "predicted_nodes": 84543,
+            "recall_3um": 0.6730769230769231,
+            "recall_7um": 0.96875
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.4549831675852062,
+            "dataset": "44b6_a2bb48bb",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 131,
+            "edge_fp": 179,
+            "edge_jaccard": 0.47368421052631576,
+            "edge_tp": 279,
+            "estimated_total": 60613,
+            "graph_hash": "595b31d23d2990ed8a5cc233a02e744497ecec02915fb694e040f21fa2326cf9",
+            "gt_node_recall": 0.96875,
+            "matched_nodes": 403,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.96875,
+            "num_pred_nodes": 84543,
+            "total_node_ratio": 0.394799795423424
+          },
+          "total_parent_count": 84505
+        },
+        "44b6_aaf8b0ea": {
+          "census": {
+            "empty": 1142,
+            "incomplete": 0,
+            "negative": 165,
+            "positive": 0,
+            "unknown": 22044
+          },
+          "complete_group_fork_count": 4692669,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 2,
+            "annotated_nodes_with_other_annotated_node_within_7um": 6,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 206,
+            "gt_edges_both_endpoints_matched": 203,
+            "gt_edges_endpoints_present_link_missing": 14,
+            "gt_edges_missing_endpoint": 3,
+            "gt_edges_recovered_with_full_matching": 189,
+            "gt_nodes": 209,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              2.117975287597599,
+              3.7193171870225226,
+              4.241374519244911
+            ],
+            "matched_nodes_3um": 194,
+            "matched_nodes_7um": 207,
+            "predicted_nodes": 24136,
+            "recall_3um": 0.9282296650717703,
+            "recall_7um": 0.9904306220095693
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8435039252112423,
+            "dataset": "44b6_aaf8b0ea",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 17,
+            "edge_fp": 16,
+            "edge_jaccard": 0.8513513513513513,
+            "edge_tp": 189,
+            "estimated_total": 22099,
+            "graph_hash": "be76a768b8088bcdb7634d0f993d36348e5411564000e6e80cdfbc2f6c914ec2",
+            "gt_node_recall": 0.9904306220095693,
+            "matched_nodes": 207,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9904306220095693,
+            "num_pred_nodes": 24136,
+            "total_node_ratio": 0.09217611656636047
+          },
+          "total_parent_count": 23351
+        },
+        "44b6_abf82518": {
+          "census": {
+            "empty": 641,
+            "incomplete": 0,
+            "negative": 93,
+            "positive": 0,
+            "unknown": 34402
+          },
+          "complete_group_fork_count": 8901836,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 94,
+            "gt_edges_both_endpoints_matched": 94,
+            "gt_edges_endpoints_present_link_missing": 6,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 88,
+            "gt_nodes": 96,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              1.9902104160113323,
+              2.67934694781779,
+              4.162823748671087
+            ],
+            "matched_nodes_3um": 95,
+            "matched_nodes_7um": 96,
+            "predicted_nodes": 35276,
+            "recall_3um": 0.9895833333333334,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8226366301427886,
+            "dataset": "44b6_abf82518",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 6,
+            "edge_fp": 10,
+            "edge_jaccard": 0.8461538461538461,
+            "edge_tp": 88,
+            "estimated_total": 27604,
+            "graph_hash": "1b4613351b1d9e207b23848829385197ee8e5718106e227cdde92a3a5297f7bb",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 96,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 35276,
+            "total_node_ratio": 0.2779307346761339
+          },
+          "total_parent_count": 35136
+        },
+        "44b6_b2c44266": {
+          "census": {
+            "empty": 949,
+            "incomplete": 0,
+            "negative": 167,
+            "positive": 0,
+            "unknown": 60671
+          },
+          "complete_group_fork_count": 16842444,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 168,
+            "gt_edges_both_endpoints_matched": 166,
+            "gt_edges_endpoints_present_link_missing": 26,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 140,
+            "gt_nodes": 170,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.350023320814349,
+              5.515428481812318,
+              6.410516871711672
+            ],
+            "matched_nodes_3um": 141,
+            "matched_nodes_7um": 169,
+            "predicted_nodes": 62081,
+            "recall_3um": 0.8294117647058824,
+            "recall_7um": 0.9941176470588236
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6485986511947179,
+            "dataset": "44b6_b2c44266",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 28,
+            "edge_fp": 47,
+            "edge_jaccard": 0.6511627906976745,
+            "edge_tp": 140,
+            "estimated_total": 59729,
+            "graph_hash": "f44ba1c1c466a9b9a85971f1ea83ebffb8524d1a37c009023ec207a01bac3edc",
+            "gt_node_recall": 0.9941176470588236,
+            "matched_nodes": 169,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9941176470588236,
+            "num_pred_nodes": 62081,
+            "total_node_ratio": 0.03937785665254734
+          },
+          "total_parent_count": 61787
+        },
+        "44b6_c15fded2": {
+          "census": {
+            "empty": 589,
+            "incomplete": 0,
+            "negative": 101,
+            "positive": 0,
+            "unknown": 25730
+          },
+          "complete_group_fork_count": 6181349,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 102,
+            "gt_edges_both_endpoints_matched": 100,
+            "gt_edges_endpoints_present_link_missing": 18,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 82,
+            "gt_nodes": 104,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              1.86167137607581,
+              5.262211500790176,
+              5.773897351442957
+            ],
+            "matched_nodes_3um": 97,
+            "matched_nodes_7um": 103,
+            "predicted_nodes": 26548,
+            "recall_3um": 0.9326923076923077,
+            "recall_7um": 0.9903846153846154
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6172453412114263,
+            "dataset": "44b6_c15fded2",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 20,
+            "edge_fp": 27,
+            "edge_jaccard": 0.6356589147286822,
+            "edge_tp": 82,
+            "estimated_total": 20585,
+            "graph_hash": "ece41be5f180d72bd286c2f1dce676d9b76a4452b71b92a8354a8090e733218e",
+            "gt_node_recall": 0.9903846153846154,
+            "matched_nodes": 103,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9903846153846154,
+            "num_pred_nodes": 26548,
+            "total_node_ratio": 0.28967694923487974
+          },
+          "total_parent_count": 26420
+        },
+        "44b6_c50204e0": {
+          "census": {
+            "empty": 930,
+            "incomplete": 0,
+            "negative": 310,
+            "positive": 5,
+            "unknown": 63057
+          },
+          "complete_group_fork_count": 19210479,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 2,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 325,
+            "gt_edges_both_endpoints_matched": 310,
+            "gt_edges_endpoints_present_link_missing": 74,
+            "gt_edges_missing_endpoint": 15,
+            "gt_edges_recovered_with_full_matching": 236,
+            "gt_nodes": 333,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.9569767068848294,
+              6.334742127976524,
+              6.822097597147082
+            ],
+            "matched_nodes_3um": 266,
+            "matched_nodes_7um": 324,
+            "predicted_nodes": 64387,
+            "recall_3um": 0.7987987987987988,
+            "recall_7um": 0.972972972972973
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 2,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 2,
+              "daughter_paths_present": 2,
+              "endpoint_window_present": 2,
+              "legal_compatible_action": 2
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.509692987327395,
+            "dataset": "44b6_c50204e0",
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 89,
+            "edge_fp": 121,
+            "edge_jaccard": 0.5291479820627802,
+            "edge_tp": 236,
+            "estimated_total": 47078,
+            "graph_hash": "a87cb8ad2448d1906744bd50b8df562ef16c25f8645c341e441f6240ed2f356c",
+            "gt_node_recall": 0.972972972972973,
+            "matched_nodes": 324,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.972972972972973,
+            "num_pred_nodes": 64387,
+            "total_node_ratio": 0.36766642593143295
+          },
+          "total_parent_count": 64302
+        },
+        "44b6_c96cfa10": {
+          "census": {
+            "empty": 856,
+            "incomplete": 0,
+            "negative": 591,
+            "positive": 0,
+            "unknown": 50269
+          },
+          "complete_group_fork_count": 13810837,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 616,
+            "gt_edges_both_endpoints_matched": 585,
+            "gt_edges_endpoints_present_link_missing": 58,
+            "gt_edges_missing_endpoint": 31,
+            "gt_edges_recovered_with_full_matching": 527,
+            "gt_nodes": 629,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.625,
+              3.374565944310468,
+              6.3039279922107045,
+              6.9181882111576005
+            ],
+            "matched_nodes_3um": 516,
+            "matched_nodes_7um": 604,
+            "predicted_nodes": 51801,
+            "recall_3um": 0.8203497615262321,
+            "recall_7um": 0.9602543720190779
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7201341466960594,
+            "dataset": "44b6_c96cfa10",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 89,
+            "edge_fp": 107,
+            "edge_jaccard": 0.7289073305670816,
+            "edge_tp": 527,
+            "estimated_total": 46236,
+            "graph_hash": "78bf07a23f367921c8164854938d986d22f42ea28bd9c3a4a17ed6b042b7da4f",
+            "gt_node_recall": 0.9602543720190779,
+            "matched_nodes": 604,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9602543720190779,
+            "num_pred_nodes": 51801,
+            "total_node_ratio": 0.12036075785102518
+          },
+          "total_parent_count": 51716
+        },
+        "44b6_cf2536e8": {
+          "census": {
+            "empty": 855,
+            "incomplete": 0,
+            "negative": 74,
+            "positive": 0,
+            "unknown": 58265
+          },
+          "complete_group_fork_count": 16861608,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 75,
+            "gt_edges_both_endpoints_matched": 72,
+            "gt_edges_endpoints_present_link_missing": 9,
+            "gt_edges_missing_endpoint": 3,
+            "gt_edges_recovered_with_full_matching": 63,
+            "gt_nodes": 76,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              3.5919357163268315,
+              6.715667865161618,
+              6.724634051381532
+            ],
+            "matched_nodes_3um": 62,
+            "matched_nodes_7um": 74,
+            "predicted_nodes": 59356,
+            "recall_3um": 0.8157894736842105,
+            "recall_7um": 0.9736842105263158
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6978221141318509,
+            "dataset": "44b6_cf2536e8",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 12,
+            "edge_fp": 15,
+            "edge_jaccard": 0.7,
+            "edge_tp": 63,
+            "estimated_total": 57565,
+            "graph_hash": "55452b927c0e9959b57973ba3624e50f2105f75b14d7769c150bcab6acf37c3e",
+            "gt_node_recall": 0.9736842105263158,
+            "matched_nodes": 74,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9736842105263158,
+            "num_pred_nodes": 59356,
+            "total_node_ratio": 0.031112655259272128
+          },
+          "total_parent_count": 59194
+        },
+        "44b6_cf8fed6b": {
+          "census": {
+            "empty": 700,
+            "incomplete": 0,
+            "negative": 188,
+            "positive": 0,
+            "unknown": 46131
+          },
+          "complete_group_fork_count": 11724734,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 188,
+            "gt_edges_both_endpoints_matched": 188,
+            "gt_edges_endpoints_present_link_missing": 11,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 177,
+            "gt_nodes": 191,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              1.86167137607581,
+              2.4669441186342422,
+              3.65625
+            ],
+            "matched_nodes_3um": 189,
+            "matched_nodes_7um": 191,
+            "predicted_nodes": 47074,
+            "recall_3um": 0.9895287958115183,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.852650770289295,
+            "dataset": "44b6_cf8fed6b",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 11,
+            "edge_fp": 18,
+            "edge_jaccard": 0.8592233009708737,
+            "edge_tp": 177,
+            "estimated_total": 43729,
+            "graph_hash": "9342ff33a6a69ceb205b56f437f0e4f2525c75d1ec838e7f9af900a8d2b7c846",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 191,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 47074,
+            "total_node_ratio": 0.07649385990989961
+          },
+          "total_parent_count": 47019
+        },
+        "44b6_d29c9ab2": {
+          "census": {
+            "empty": 655,
+            "incomplete": 0,
+            "negative": 1319,
+            "positive": 0,
+            "unknown": 37844
+          },
+          "complete_group_fork_count": 10141777,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 10,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 1328,
+            "gt_edges_both_endpoints_matched": 1322,
+            "gt_edges_endpoints_present_link_missing": 56,
+            "gt_edges_missing_endpoint": 6,
+            "gt_edges_recovered_with_full_matching": 1266,
+            "gt_nodes": 1353,
+            "matched_distance_quantiles_um": [
+              0.0,
+              0.9084026158592896,
+              1.86167137607581,
+              3.350023320814349,
+              6.953879874753374
+            ],
+            "matched_nodes_3um": 1325,
+            "matched_nodes_7um": 1349,
+            "predicted_nodes": 40069,
+            "recall_3um": 0.9793052475979305,
+            "recall_7um": 0.9970436067997044
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8931204946927319,
+            "dataset": "44b6_d29c9ab2",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 62,
+            "edge_fp": 82,
+            "edge_jaccard": 0.8978723404255319,
+            "edge_tp": 1266,
+            "estimated_total": 38055,
+            "graph_hash": "dc4b033df63a2340dedec55fa206c51d704e579cc7476a4826de543a7ecafe3c",
+            "gt_node_recall": 0.9970436067997044,
+            "matched_nodes": 1349,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9970436067997044,
+            "num_pred_nodes": 40069,
+            "total_node_ratio": 0.052923400341610825
+          },
+          "total_parent_count": 39818
+        },
+        "44b6_d2f34f90": {
+          "census": {
+            "empty": 602,
+            "incomplete": 0,
+            "negative": 274,
+            "positive": 3,
+            "unknown": 30874
+          },
+          "complete_group_fork_count": 9075301,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 281,
+            "gt_edges_both_endpoints_matched": 276,
+            "gt_edges_endpoints_present_link_missing": 24,
+            "gt_edges_missing_endpoint": 5,
+            "gt_edges_recovered_with_full_matching": 252,
+            "gt_nodes": 283,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.2517126497217022,
+              2.1987605864941804,
+              5.10046260042855,
+              6.625736987309412
+            ],
+            "matched_nodes_3um": 256,
+            "matched_nodes_7um": 280,
+            "predicted_nodes": 31829,
+            "recall_3um": 0.9045936395759717,
+            "recall_7um": 0.9893992932862191
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 2,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 2,
+              "daughter_paths_present": 2,
+              "endpoint_window_present": 2,
+              "legal_compatible_action": 2
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7717793659423529,
+            "dataset": "44b6_d2f34f90",
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 29,
+            "edge_fp": 35,
+            "edge_jaccard": 0.7974683544303798,
+            "edge_tp": 252,
+            "estimated_total": 24074,
+            "graph_hash": "33ba48d363fe906d4395a740c688479e4202202c3b2883a14e3e1d6d3b3520bc",
+            "gt_node_recall": 0.9893992932862191,
+            "matched_nodes": 280,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9893992932862191,
+            "num_pred_nodes": 31829,
+            "total_node_ratio": 0.32213176040541663
+          },
+          "total_parent_count": 31753
+        },
+        "44b6_d5e7d891": {
+          "census": {
+            "empty": 951,
+            "incomplete": 0,
+            "negative": 873,
+            "positive": 5,
+            "unknown": 56688
+          },
+          "complete_group_fork_count": 17324368,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 6,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 893,
+            "gt_edges_both_endpoints_matched": 867,
+            "gt_edges_endpoints_present_link_missing": 152,
+            "gt_edges_missing_endpoint": 26,
+            "gt_edges_recovered_with_full_matching": 715,
+            "gt_nodes": 906,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6750116604071745,
+              4.0827619710803615,
+              6.625736987309412,
+              6.989389279472134
+            ],
+            "matched_nodes_3um": 708,
+            "matched_nodes_7um": 891,
+            "predicted_nodes": 58622,
+            "recall_3um": 0.7814569536423841,
+            "recall_7um": 0.9834437086092715
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 2,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 2,
+              "daughter_paths_present": 2,
+              "endpoint_window_present": 2,
+              "legal_compatible_action": 2
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6015976302362052,
+            "dataset": "44b6_d5e7d891",
+            "division_fn": 2,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 178,
+            "edge_fp": 259,
+            "edge_jaccard": 0.6206597222222222,
+            "edge_tp": 715,
+            "estimated_total": 44848,
+            "graph_hash": "97755b8c0a4694508aaabd59f4a5ea99323a9ed17981663588363783f25f03a8",
+            "gt_node_recall": 0.9834437086092715,
+            "matched_nodes": 891,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9834437086092715,
+            "num_pred_nodes": 58622,
+            "total_node_ratio": 0.3071262932572244
+          },
+          "total_parent_count": 58517
+        },
+        "44b6_d754aa59": {
+          "census": {
+            "empty": 692,
+            "incomplete": 0,
+            "negative": 65,
+            "positive": 4,
+            "unknown": 24336
+          },
+          "complete_group_fork_count": 6650278,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 70,
+            "gt_edges_both_endpoints_matched": 70,
+            "gt_edges_endpoints_present_link_missing": 26,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 44,
+            "gt_nodes": 72,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.86167137607581,
+              3.489939731590902,
+              4.966253779220028,
+              5.025034981221523
+            ],
+            "matched_nodes_3um": 47,
+            "matched_nodes_7um": 72,
+            "predicted_nodes": 25161,
+            "recall_3um": 0.6527777777777778,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.23470020936157335,
+            "dataset": "44b6_d754aa59",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 26,
+            "edge_fp": 45,
+            "edge_jaccard": 0.3826086956521739,
+            "edge_tp": 44,
+            "estimated_total": 5171,
+            "graph_hash": "24d423a85f1b9eedf31d96aada2e3c31e09a056887547036eb55bca2c59681d0",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 72,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 25161,
+            "total_node_ratio": 3.865789982595243
+          },
+          "total_parent_count": 25097
+        },
+        "44b6_d78e09d9": {
+          "census": {
+            "empty": 629,
+            "incomplete": 0,
+            "negative": 443,
+            "positive": 0,
+            "unknown": 31732
+          },
+          "complete_group_fork_count": 7981708,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 451,
+            "gt_edges_both_endpoints_matched": 439,
+            "gt_edges_endpoints_present_link_missing": 78,
+            "gt_edges_missing_endpoint": 12,
+            "gt_edges_recovered_with_full_matching": 361,
+            "gt_nodes": 463,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.284675299443404,
+              3.300390601883359,
+              6.186454396474635,
+              6.662995408410545
+            ],
+            "matched_nodes_3um": 401,
+            "matched_nodes_7um": 453,
+            "predicted_nodes": 32934,
+            "recall_3um": 0.8660907127429806,
+            "recall_7um": 0.978401727861771
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5946143863739421,
+            "dataset": "44b6_d78e09d9",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 90,
+            "edge_fp": 127,
+            "edge_jaccard": 0.6245674740484429,
+            "edge_tp": 361,
+            "estimated_total": 22259,
+            "graph_hash": "18bfea1600c4f3bb004428f92f2b63a6d3664f26fcc9ec15c696b415992c6b85",
+            "gt_node_recall": 0.978401727861771,
+            "matched_nodes": 453,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.978401727861771,
+            "num_pred_nodes": 32934,
+            "total_node_ratio": 0.47958129296015095
+          },
+          "total_parent_count": 32804
+        },
+        "44b6_db3c847b": {
+          "census": {
+            "empty": 550,
+            "incomplete": 0,
+            "negative": 161,
+            "positive": 0,
+            "unknown": 23601
+          },
+          "complete_group_fork_count": 5689741,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 162,
+            "gt_edges_both_endpoints_matched": 160,
+            "gt_edges_endpoints_present_link_missing": 10,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 150,
+            "gt_nodes": 165,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.1490485194281397,
+              1.86167137607581,
+              4.95466022669817,
+              5.170718337426629
+            ],
+            "matched_nodes_3um": 158,
+            "matched_nodes_7um": 164,
+            "predicted_nodes": 24398,
+            "recall_3um": 0.9575757575757575,
+            "recall_7um": 0.9939393939393939
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7901087246746,
+            "dataset": "44b6_db3c847b",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 12,
+            "edge_fp": 16,
+            "edge_jaccard": 0.8426966292134831,
+            "edge_tp": 150,
+            "estimated_total": 15023,
+            "graph_hash": "65c891a28924b39b54de39a532e466672183c6096b05f65ffdb82a74acc3ad8c",
+            "gt_node_recall": 0.9939393939393939,
+            "matched_nodes": 164,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9939393939393939,
+            "num_pred_nodes": 24398,
+            "total_node_ratio": 0.6240431338614125
+          },
+          "total_parent_count": 24312
+        },
+        "44b6_deabac95": {
+          "census": {
+            "empty": 459,
+            "incomplete": 0,
+            "negative": 119,
+            "positive": 3,
+            "unknown": 22148
+          },
+          "complete_group_fork_count": 5805264,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 124,
+            "gt_edges_both_endpoints_matched": 122,
+            "gt_edges_endpoints_present_link_missing": 13,
+            "gt_edges_missing_endpoint": 2,
+            "gt_edges_recovered_with_full_matching": 109,
+            "gt_nodes": 126,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.7235727791422095,
+              3.350023320814349,
+              5.107737488147826,
+              6.563169608695177
+            ],
+            "matched_nodes_3um": 106,
+            "matched_nodes_7um": 125,
+            "predicted_nodes": 22807,
+            "recall_3um": 0.8412698412698413,
+            "recall_7um": 0.9920634920634921
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7043390249974733,
+            "dataset": "44b6_deabac95",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 15,
+            "edge_fp": 21,
+            "edge_jaccard": 0.7517241379310344,
+            "edge_tp": 109,
+            "estimated_total": 13989,
+            "graph_hash": "97aa571e4134f113d481248a8155701a35d2e0252774f926b2a98352b91f1ecd",
+            "gt_node_recall": 0.9920634920634921,
+            "matched_nodes": 125,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9920634920634921,
+            "num_pred_nodes": 22807,
+            "total_node_ratio": 0.6303524197583816
+          },
+          "total_parent_count": 22729
+        },
+        "44b6_e29f0176": {
+          "census": {
+            "empty": 422,
+            "incomplete": 0,
+            "negative": 50,
+            "positive": 0,
+            "unknown": 28803
+          },
+          "complete_group_fork_count": 7480171,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 50,
+            "gt_edges_both_endpoints_matched": 50,
+            "gt_edges_endpoints_present_link_missing": 21,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 29,
+            "gt_nodes": 51,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8168052317185792,
+              3.65625,
+              4.305851677397069,
+              4.46875
+            ],
+            "matched_nodes_3um": 41,
+            "matched_nodes_7um": 51,
+            "predicted_nodes": 29326,
+            "recall_3um": 0.803921568627451,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.2912920554141928,
+            "dataset": "44b6_e29f0176",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 21,
+            "edge_fp": 37,
+            "edge_jaccard": 0.3333333333333333,
+            "edge_tp": 29,
+            "estimated_total": 12969,
+            "graph_hash": "6fde9c3e53478fa06794501c329c17ddbc0e822ee7123bdf833f1d5b46b0aa87",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 51,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 29326,
+            "total_node_ratio": 1.2612383375742153
+          },
+          "total_parent_count": 29275
+        },
+        "44b6_e31261b4": {
+          "census": {
+            "empty": 875,
+            "incomplete": 0,
+            "negative": 113,
+            "positive": 0,
+            "unknown": 75568
+          },
+          "complete_group_fork_count": 20412337,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 113,
+            "gt_edges_both_endpoints_matched": 113,
+            "gt_edges_endpoints_present_link_missing": 14,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 99,
+            "gt_nodes": 116,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.6500058302035874,
+              2.1877232028983924,
+              5.378059746942169,
+              5.87308811976289
+            ],
+            "matched_nodes_3um": 108,
+            "matched_nodes_7um": 116,
+            "predicted_nodes": 76587,
+            "recall_3um": 0.9310344827586207,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.7137174999164522,
+            "dataset": "44b6_e31261b4",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 14,
+            "edge_fp": 25,
+            "edge_jaccard": 0.717391304347826,
+            "edge_tp": 99,
+            "estimated_total": 72856,
+            "graph_hash": "359cc07b9363c665510e4c5b771de47711edb2966d5090ddef154be2a5a444b4",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 116,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 76587,
+            "total_node_ratio": 0.051210607225211376
+          },
+          "total_parent_count": 76556
+        },
+        "44b6_e35b117d": {
+          "census": {
+            "empty": 1032,
+            "incomplete": 0,
+            "negative": 240,
+            "positive": 0,
+            "unknown": 41006
+          },
+          "complete_group_fork_count": 11120269,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 266,
+            "gt_edges_both_endpoints_matched": 240,
+            "gt_edges_endpoints_present_link_missing": 30,
+            "gt_edges_missing_endpoint": 26,
+            "gt_edges_recovered_with_full_matching": 210,
+            "gt_nodes": 270,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8168052317185792,
+              3.543788889585456,
+              6.858289350304491,
+              6.894291116568838
+            ],
+            "matched_nodes_3um": 198,
+            "matched_nodes_7um": 254,
+            "predicted_nodes": 42362,
+            "recall_3um": 0.7333333333333333,
+            "recall_7um": 0.9407407407407408
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.6151986528188477,
+            "dataset": "44b6_e35b117d",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 56,
+            "edge_fp": 59,
+            "edge_jaccard": 0.6461538461538462,
+            "edge_tp": 210,
+            "estimated_total": 28641,
+            "graph_hash": "59acbbd611227f385f2b77712f18e3f500e09c43378a5607f75b9544f39f5db5",
+            "gt_node_recall": 0.9407407407407408,
+            "matched_nodes": 254,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9407407407407408,
+            "num_pred_nodes": 42362,
+            "total_node_ratio": 0.4790684682797388
+          },
+          "total_parent_count": 42278
+        },
+        "44b6_e57ff5c6": {
+          "census": {
+            "empty": 823,
+            "incomplete": 0,
+            "negative": 164,
+            "positive": 0,
+            "unknown": 24014
+          },
+          "complete_group_fork_count": 5770311,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 186,
+            "gt_edges_both_endpoints_matched": 155,
+            "gt_edges_endpoints_present_link_missing": 46,
+            "gt_edges_missing_endpoint": 31,
+            "gt_edges_recovered_with_full_matching": 109,
+            "gt_nodes": 193,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.8168052317185792,
+              3.494694639736067,
+              6.211020122955641,
+              6.550584420492571
+            ],
+            "matched_nodes_3um": 133,
+            "matched_nodes_7um": 171,
+            "predicted_nodes": 25057,
+            "recall_3um": 0.689119170984456,
+            "recall_7um": 0.8860103626943006
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.389945132482299,
+            "dataset": "44b6_e57ff5c6",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 77,
+            "edge_fp": 87,
+            "edge_jaccard": 0.3992673992673993,
+            "edge_tp": 109,
+            "estimated_total": 20314,
+            "graph_hash": "8d0b0a506ade775e6dcb5f177a91a86d3af707e0c1364852ee415d9f8f0a1330",
+            "gt_node_recall": 0.8860103626943006,
+            "matched_nodes": 171,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.8860103626943006,
+            "num_pred_nodes": 25057,
+            "total_node_ratio": 0.2334842965442552
+          },
+          "total_parent_count": 25001
+        },
+        "44b6_eb2880fc": {
+          "census": {
+            "empty": 595,
+            "incomplete": 0,
+            "negative": 373,
+            "positive": 2,
+            "unknown": 51085
+          },
+          "complete_group_fork_count": 13659188,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 379,
+            "gt_edges_both_endpoints_matched": 375,
+            "gt_edges_endpoints_present_link_missing": 26,
+            "gt_edges_missing_endpoint": 4,
+            "gt_edges_recovered_with_full_matching": 349,
+            "gt_nodes": 390,
+            "matched_distance_quantiles_um": [
+              0.0,
+              1.625,
+              2.6138818963655353,
+              6.390231318217247,
+              6.953879874753374
+            ],
+            "matched_nodes_3um": 355,
+            "matched_nodes_7um": 387,
+            "predicted_nodes": 52157,
+            "recall_3um": 0.9102564102564102,
+            "recall_7um": 0.9923076923076923
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 1,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 1,
+              "daughter_paths_present": 1,
+              "endpoint_window_present": 1,
+              "legal_compatible_action": 1
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.8318359687454007,
+            "dataset": "44b6_eb2880fc",
+            "division_fn": 1,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 30,
+            "edge_fp": 37,
+            "edge_jaccard": 0.8389423076923077,
+            "edge_tp": 349,
+            "estimated_total": 48084,
+            "graph_hash": "0c999cbd673acfa177c64463f385df28f4294042d97fe0b61ee42fe6664fad3c",
+            "gt_node_recall": 0.9923076923076923,
+            "matched_nodes": 387,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 0.9923076923076923,
+            "num_pred_nodes": 52157,
+            "total_node_ratio": 0.08470593128691456
+          },
+          "total_parent_count": 52055
+        },
+        "44b6_f28707c6": {
+          "census": {
+            "empty": 486,
+            "incomplete": 0,
+            "negative": 61,
+            "positive": 0,
+            "unknown": 28829
+          },
+          "complete_group_fork_count": 6645532,
+          "detection": {
+            "annotated_nodes_with_other_annotated_node_within_3um": 0,
+            "annotated_nodes_with_other_annotated_node_within_7um": 0,
+            "annotation_scope": "Sparse annotation recall and edge support; unmatched predictions are not automatic false positives.",
+            "gt_edges": 61,
+            "gt_edges_both_endpoints_matched": 61,
+            "gt_edges_endpoints_present_link_missing": 12,
+            "gt_edges_missing_endpoint": 0,
+            "gt_edges_recovered_with_full_matching": 49,
+            "gt_nodes": 63,
+            "matched_distance_quantiles_um": [
+              0.40625,
+              1.7235727791422095,
+              3.3597308758250466,
+              4.959160573698972,
+              5.041429918683786
+            ],
+            "matched_nodes_3um": 47,
+            "matched_nodes_7um": 63,
+            "predicted_nodes": 29415,
+            "recall_3um": 0.746031746031746,
+            "recall_7um": 1.0
+          },
+          "fork_count_status": "exact",
+          "funnel": {
+            "division_events": 0,
+            "interpretation": "Overlapping diagnostic stages; local action existence is not an achievable score bound.",
+            "stages": {
+              "anchor_present": 0,
+              "daughter_paths_present": 0,
+              "endpoint_window_present": 0,
+              "legal_compatible_action": 0
+            }
+          },
+          "official_metrics": {
+            "adj_edge_jaccard": 0.5996642561983472,
+            "dataset": "44b6_f28707c6",
+            "division_fn": 0,
+            "division_fp": 0,
+            "division_tp": 0,
+            "edge_fn": 12,
+            "edge_fp": 16,
+            "edge_jaccard": 0.6363636363636364,
+            "edge_tp": 49,
+            "estimated_total": 18656,
+            "graph_hash": "e325b0626803032f34bca9876998a36b74b923fca28d66cfbeadfc36de34ca56",
+            "gt_node_recall": 1.0,
+            "matched_nodes": 63,
+            "metric_revision": "075fc5f5a52d11077f9dc2b074644618f26939e2",
+            "node_recall": 1.0,
+            "num_pred_nodes": 29415,
+            "total_node_ratio": 0.5767045454545454
+          },
+          "total_parent_count": 29376
+        }
+      },
+      "distinct_positive_events": 19,
+      "finished_utc": "2026-09-20T01:14:40.677466+00:00",
+      "fit_clips": 61,
+      "retained_source_witnesses": {
+        "finished_utc": "2026-09-20T01:15:25.901719+00:00",
+        "fit_clips_inspected": 61,
+        "full_source_fit_population": true,
+        "guard": {
+          "denied": 0,
+          "installed_before_numerical": true,
+          "network_denied": 0,
+          "subprocess_denied": 0
+        },
+        "implementation_sha256": "92471632164343d08f6dedecf9f9952be75a7774154387009118ed7ea586d6ab",
+        "interpretation": "Label-guided local controls, not learned predictions or achievable policy scores; registered solver and global edit cap applied.",
+        "retained_C00": true,
+        "seed": 20260918,
+        "selection": "Lexically first clip and first canonical supported positive/fully supported negative parent/action",
+        "source": "44b6",
+        "source_only": true,
+        "status": "complete",
+        "wall_seconds": 18.3200023970021,
+        "witnesses": {
+          "negative": {
+            "accepted_actions": 1,
+            "achievable_policy_bound": false,
+            "baseline": {
+              "adj_edge_jaccard": 0.9218407180084525,
+              "counts": {
+                "division_fn": 0,
+                "division_fp": 0,
+                "division_tp": 0,
+                "edge_fn": 1,
+                "edge_fp": 2,
+                "edge_tp": 49,
+                "num_pred_nodes": 31349
+              },
+              "division_fn": 0,
+              "division_fp": 0,
+              "division_jaccard": null,
+              "division_tp": 0,
+              "edge_jaccard": 0.9423076923076923,
+              "n": 1,
+              "n_adj": 1,
+              "node_recall": 1.0,
+              "score": 0.9218407180084525
+            },
+            "changed_edges": 7,
+            "clip": "44b6_0113de3b",
+            "csv_sha256": "e14de231fba035f740a96dabf243e9bfcc3c07398314b0461003bae47fe57220",
+            "deployment_edit_cap": 568,
+            "detail_sha256": "a3c46ffed38878690cec5b25c697edcbbeae4e9ad2f8f30f53cd20df68dd47e9",
+            "edited": {
+              "adj_edge_jaccard": 0.8537715889235983,
+              "counts": {
+                "division_fn": 0,
+                "division_fp": 1,
+                "division_tp": 0,
+                "edge_fn": 2,
+                "edge_fp": 5,
+                "edge_tp": 48,
+                "num_pred_nodes": 31349
+              },
+              "division_fn": 0,
+              "division_fp": 1,
+              "division_jaccard": 0.0,
+              "division_tp": 0,
+              "edge_jaccard": 0.8727272727272727,
+              "n": 1,
+              "n_adj": 1,
+              "node_recall": 1.0,
+              "score": 0.8537715889235983
+            },
+            "label_guided_not_model": true,
+            "legal_actions": 295,
+            "risk": 0,
+            "score_delta": -0.06806912908485419,
+            "solver_and_global_edit_cap_applied": true,
+            "status": "measured"
+          },
+          "positive": {
+            "accepted_actions": 1,
+            "achievable_policy_bound": false,
+            "baseline": {
+              "adj_edge_jaccard": 0.8213096733717848,
+              "counts": {
+                "division_fn": 1,
+                "division_fp": 0,
+                "division_tp": 0,
+                "edge_fn": 62,
+                "edge_fp": 92,
+                "edge_tp": 711,
+                "num_pred_nodes": 59140
+              },
+              "division_fn": 1,
+              "division_fp": 0,
+              "division_jaccard": 0.0,
+              "division_tp": 0,
+              "edge_jaccard": 0.8219653179190751,
+              "n": 1,
+              "n_adj": 1,
+              "node_recall": 0.9961928934010152,
+              "score": 0.8213096733717848
+            },
+            "changed_edges": 11,
+            "clip": "44b6_12dfb391",
+            "csv_sha256": "1f507bf828cec5cd1d88f49f55307b7f4df7b4a5d9ae32ea9bf4033e9be06d74",
+            "deployment_edit_cap": 1101,
+            "detail_sha256": "6e275adf374d45d73d5303d342631fd4b7cb06455a18d9731d294c06341d3d62",
+            "edited": {
+              "adj_edge_jaccard": 0.8161687359171789,
+              "counts": {
+                "division_fn": 0,
+                "division_fp": 0,
+                "division_tp": 1,
+                "edge_fn": 64,
+                "edge_fp": 95,
+                "edge_tp": 709,
+                "num_pred_nodes": 59140
+              },
+              "division_fn": 0,
+              "division_fp": 0,
+              "division_jaccard": 1.0,
+              "division_tp": 1,
+              "edge_jaccard": 0.8168202764976958,
+              "n": 1,
+              "n_adj": 1,
+              "node_recall": 0.9961928934010152,
+              "score": 0.9161687359171788
+            },
+            "label_guided_not_model": true,
+            "legal_actions": 284,
+            "risk": 1,
+            "score_delta": 0.094859062545394,
+            "solver_and_global_edit_cap_applied": true,
+            "status": "measured"
+          }
+        }
+      },
+      "scope": "complete source-fit C00 observation bank",
+      "seed": 20260918,
+      "source": "44b6",
+      "status": "complete"
+    }
+  ],
   "source_mask_audits": [
     {
       "all_positive_support_overrides_background": true,

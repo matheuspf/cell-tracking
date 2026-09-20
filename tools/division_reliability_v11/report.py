@@ -121,12 +121,37 @@ def resources():
     minima={k:min((r[k] for r in rows if k in r),default=None) for k in ('device_free_min_bytes','host_available_min_bytes')}
     inherited=read(WORK/'preservation/inherited_compute.json')
     cpu=[read(p) for p in (WORK/'controller/jobs').rglob('*.resources.json')]
+    from statistics import median
+    from math import ceil
+    job_times=defaultdict(list);seen_jobs=set();job_status=defaultdict(Counter)
+    for p in (WORK/'controller/jobs').rglob('*.json'):
+        if p.name.endswith('.resources.json'):continue
+        r=read(p)
+        if 'wall_seconds' not in r:continue
+        signature=tuple(r.get(k) for k in ('stage','source','seed','arm','clip','part','finished_utc','wall_seconds','status'))
+        if signature in seen_jobs:continue
+        seen_jobs.add(signature)
+        label='/'.join(str(r[k]) for k in ('stage','arm','part') if r.get(k) is not None)
+        job_times[label].append(r['wall_seconds']);job_status[label][r['status']]+=1
+    job_summary={k:dict(executions=len(v),status_counts=dict(job_status[k]),sum_seconds=sum(v),
+        minimum_seconds=min(v),median_seconds=median(v),p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v))
+        for k,v in sorted(job_times.items())}
+    bank_times=defaultdict(list)
+    for p in (WORK/'banks').glob('*/*/*/*/receipt.json'):
+        r=read(p);key='/'.join(p.relative_to(WORK/'banks').parts[:3])
+        bank_times[key].append(r['wall_seconds'])
+    bank_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),median_seconds=median(v),
+        p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v)) for k,v in sorted(bank_times.items())}
     value=dict(new_study_gpu_lease_hours=total/3600,new_study_measured_journal_hours=sum(by_stage.values())/3600,
         pre_journal_conservative_charge_hours=upper/3600,pre_journal_accounting=prior,
         hours_by_stage={k:v/3600 for k,v in by_stage.items()},lease_count=len(rows),lease_status_counts=dict(status),
         maximum_lease_seconds=max((r['seconds'] for r in rows),default=0),sampled_maxima=maxima,sampled_minima=minima,
         current_durable_free_bytes=shutil.disk_usage(WORK).free,inherited_lifetime=inherited,
         cpu_job_resource_samples=len(cpu),study_cpu_rss_peak_bytes=max((r.get('study_rss_peak_bytes',r['study_rss_bytes']) for r in cpu),default=None),
+        completed_job_wall_time=job_summary,
+        original_source_bank_wall_time=bank_summary,
+        source_bank_timing_scope='One original preparation per completed clip, excluding verified-cache reuse. Includes enumeration, crops, labels and full source scoring; sums overlap for concurrent clips.',
+        job_wall_time_scope='Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.',
         study_host_available_min_bytes=min((r.get('host_available_min_bytes',r['host_available_bytes']) for r in cpu),default=None),
         inherited_hours=inherited['charged_seconds']/3600,lifetime_v10_plus_v11_conservative_hours=(inherited['charged_seconds']+total)/3600,
         limits=read(RESULTS/'execution_lock.json')['limits'],reserve_hours=16,
@@ -369,6 +394,7 @@ def run():
         trained=trained,scored=scored,clean_provenance_passed=provenance,target_freeze_passed=frozen,all_four_cells_complete=complete,
         cold_inference_passed=cold_pass,upstream_reused_cells=[],blocked_stages=blocked,verified_active_processes=active,
         upstream_completed_cells=sum(c['upstream']['status']=='trained' for c in tr['cells']),compact_completed_cells=sum(c['compact']['status']=='trained' for c in tr['cells']),
+        linear_completed_cells=sum(c['linear']['status']=='fitted' for c in tr['cells']),
         completed_score_rows=sum(r['status']=='scored' for r in per_clip),required_score_rows=len(per_clip),
         pooled_095_milestone_reached=milestone,strong_095_milestone_reached=strong,compact_promotion_gate_passed=promising,
         execution_lock_identity=lock['identity'],next_command=command+(' report' if active or complete else ' run --workers 3'),
@@ -378,7 +404,7 @@ def run():
         P0_modified=False,submitted_to_kaggle=False,weights_published=False)
     write(RESULTS/'STATUS.json',public(status))
     lines=[f'# Division reliability v11 — {status["status"]}',
-        '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
+        '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits, {status["linear_completed_cells"]}/4 C01 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
         '',f'The immutable schedule is U={lock["upstream_updates"]:,} and E={lock["event_updates"]:,} for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.',
         '', 'The local v10 work was preserved. Neither completed nor partial v10 weights qualified for reuse because the matching trainer source and recursive ancestry were unavailable. Every retained v11 neural component starts randomly. P0 and the two pre-existing user-modified public946 reports remain unchanged.',
         '', 'Both embryos have historical research exposure. The claim is source_isolated_reused_embryos, not pristine independent generalization. Multiple seeds do not add embryos; calibration clips are not proven acquisition-independent. The original grouped split was retained. One persisted division event occurs in two source44 fit clips and receives one event unit across both.',

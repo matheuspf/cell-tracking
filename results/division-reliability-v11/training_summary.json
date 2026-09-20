@@ -9,7 +9,29 @@
         "status": "pending"
       },
       "linear": {
-        "status": "pending"
+        "census": {
+          "negative_groups": 17007,
+          "positive_events": 19,
+          "positive_groups": 52
+        },
+        "diagnostics": [
+          {
+            "converged": true,
+            "gradient_max": 6.395162918546244e-07,
+            "iterations": 16,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 0.008699998378501536
+          },
+          {
+            "converged": true,
+            "gradient_max": 8.96175096012572e-07,
+            "iterations": 8,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "objective": 2.2145107504129036
+          }
+        ],
+        "sha256": "e64ea429dc6d8bfcdcc5e7b62d057d6e91db3192c612f7a3257a043b2e8b00cc",
+        "status": "fitted"
       },
       "seed": 20260918,
       "source": "44b6",
@@ -92,7 +114,7 @@
       "source": "44b6",
       "target": "6bba",
       "upstream": {
-        "charged_gpu_lease_seconds": 1626.9952061630684,
+        "charged_gpu_lease_seconds": 3525.097071067117,
         "history_summary": {
           "first": {
             "association": 0.704526424407959,
@@ -103,22 +125,22 @@
           },
           "full_history_committed": false,
           "group_selection_probability_range": null,
-          "history_sha256": "defc3c62065b4fb59925c6750a1323f12b7185cb3403e198745e7d034f6c11ea",
+          "history_sha256": "c6213658fbecc7dada49b51233fa38931d76ac7150b8fb659dc7199015f52b56",
           "last": {
-            "association": 0.08968566358089447,
-            "detection": 0.6295570731163025,
-            "loss": 0.7192427515983582,
-            "lr": 9.132512722147383e-05,
-            "step": 1854
+            "association": 0.0876680463552475,
+            "detection": 0.6236473321914673,
+            "loss": 0.711315393447876,
+            "lr": 6.405442157937329e-05,
+            "step": 3529
           },
           "observation_cache_peak_bytes": 0,
-          "proposal_incoming_groups": 20358,
-          "query_fallback_batches": 8122,
-          "recorded_updates": 1854,
-          "supervised_incoming_groups": 40287,
+          "proposal_incoming_groups": 55879,
+          "query_fallback_batches": 10015,
+          "recorded_updates": 3529,
+          "supervised_incoming_groups": 76592,
           "totals": {
-            "gpu_lease_seconds": 1626.9952061630684,
-            "input_seconds": 10.639876225024636
+            "gpu_lease_seconds": 3525.097071067117,
+            "input_seconds": 19.85686097309008
           },
           "uniform_hard_slot_fallback_groups": 0,
           "unique_group_visits": 0
@@ -128,24 +150,24 @@
         "process_verified_alive": true,
         "resume": {
           "bytes": 25070425,
-          "durable_step": 1709,
-          "file_creation_to_last_write_seconds": 0.013335654,
+          "durable_step": 3475,
+          "file_creation_to_last_write_seconds": 0.012317999,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/44b6/314159/upstream/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 8000,
-            "one_based_step": 1709
+            "one_based_step": 3475
           },
           "seed": 314159,
-          "sha256": "1119b6f1e971b3721da587c71f2fb3abcf618973999c1a05cde8ab32dd1ce502",
+          "sha256": "c0bc73db394778aa8de8500aa355e4a47b274cc2725a5c0a0d4b8315d3c41943",
           "source": "44b6",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
         "status": "running",
-        "step": 1854,
-        "updated_utc": "2026-09-20T00:39:27.107844+00:00"
+        "step": 3529,
+        "updated_utc": "2026-09-20T01:17:43.764886+00:00"
       }
     },
     {
