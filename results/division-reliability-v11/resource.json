@@ -2,15 +2,15 @@
   "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
   "completed_job_wall_time": {
     "calibrate/C01": {
-      "executions": 8,
-      "maximum_seconds": 458.8248410519991,
-      "median_seconds": 1.0173778860025209,
+      "executions": 9,
+      "maximum_seconds": 821.3528778580003,
+      "median_seconds": 1.0175420490049873,
       "minimum_seconds": 1.016712765999955,
-      "p95_seconds": 458.8248410519991,
+      "p95_seconds": 821.3528778580003,
       "status_counts": {
-        "complete": 8
+        "complete": 9
       },
-      "sum_seconds": 790.0763009540017
+      "sum_seconds": 1611.429178812002
     },
     "calibrate/C11": {
       "executions": 7,
@@ -24,26 +24,26 @@
       "sum_seconds": 800.420995511005
     },
     "calibration-predict/C01": {
-      "executions": 94,
+      "executions": 108,
       "maximum_seconds": 1172.558487440001,
-      "median_seconds": 5.195365885002104,
+      "median_seconds": 5.314157820499986,
       "minimum_seconds": 2.7614103339999474,
       "p95_seconds": 978.9900511670021,
       "status_counts": {
-        "complete": 94
+        "complete": 108
       },
-      "sum_seconds": 18839.324405979012
+      "sum_seconds": 28022.344796107012
     },
     "calibration-predict/C11": {
-      "executions": 70,
+      "executions": 75,
       "maximum_seconds": 1198.114607372001,
-      "median_seconds": 5.1052408924998645,
+      "median_seconds": 5.129606804000105,
       "minimum_seconds": 3.0548644939999576,
       "p95_seconds": 1028.2102038189987,
       "status_counts": {
-        "complete": 70
+        "complete": 75
       },
-      "sum_seconds": 14223.753876352997
+      "sum_seconds": 17761.92859768
     },
     "fit-linear": {
       "executions": 15,
@@ -102,15 +102,15 @@
       "sum_seconds": 11.249652207002782
     },
     "package/C01": {
-      "executions": 8,
-      "maximum_seconds": 2.054053029998613,
-      "median_seconds": 1.0168707655000162,
+      "executions": 9,
+      "maximum_seconds": 3.057572885999889,
+      "median_seconds": 1.017091414999868,
       "minimum_seconds": 1.0151357199938502,
-      "p95_seconds": 2.054053029998613,
+      "p95_seconds": 3.057572885999889,
       "status_counts": {
-        "complete": 8
+        "complete": 9
       },
-      "sum_seconds": 9.17451012099184
+      "sum_seconds": 12.23208300699173
     },
     "package/C11": {
       "executions": 7,
@@ -204,14 +204,14 @@
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 4400,
-  "cpu_job_resource_samples": 3250,
+  "cpu_job_resource_receipt_files": 4419,
+  "cpu_job_resource_samples": 3269,
   "current_cpu_dispatch_options": {
     "cold_workers": 3,
     "workers": 3,
     "workers_by_stage": {
       "calibration-predict:C01": 8,
-      "calibration-predict:C11": 5,
+      "calibration-predict:C11": 6,
       "mine": 7,
       "predict:C00": 8,
       "predict:C01": 6,
@@ -219,7 +219,7 @@
       "prepare-actions": 7
     }
   },
-  "current_durable_free_bytes": 172337213440,
+  "current_durable_free_bytes": 167365967872,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -228,7 +228,7 @@
   "hours_by_stage": {
     "cold": 0.008107215804148433,
     "event_mining": 1.1466433967641585,
-    "inference": 1.0130429561394145,
+    "inference": 1.025009841383302,
     "pilot": 0.045588012047780166,
     "upstream": 9.467127421661619
   },
@@ -298,13 +298,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 146907,
+  "lease_count": 147557,
   "lease_status_counts": {
-    "complete": 146897,
+    "complete": 147547,
     "failed": 9,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 31.6541703512085,
+  "lifetime_v10_plus_v11_conservative_hours": 31.666137236452386,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -325,8 +325,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 12.346778430209904,
-  "new_study_measured_journal_hours": 11.680509002417121,
+  "new_study_gpu_lease_hours": 12.358745315453792,
+  "new_study_measured_journal_hours": 11.69247588766101,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T18:51:45.565119+00:00",
@@ -740,5 +740,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-21T17:48:59.971897+00:00"
+  "updated_utc": "2026-09-21T18:40:19.690508+00:00"
 }
