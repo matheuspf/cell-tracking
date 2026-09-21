@@ -57,16 +57,16 @@
       "sum_seconds": 55.67311855999765
     },
     "mine": {
-      "executions": 251,
+      "executions": 292,
       "maximum_seconds": 1223.24010662,
-      "median_seconds": 571.6490919710013,
+      "median_seconds": 534.5504985160014,
       "minimum_seconds": 1.0884506249999504,
-      "p95_seconds": 1009.3405638969998,
+      "p95_seconds": 1007.142331477,
       "status_counts": {
-        "complete": 242,
+        "complete": 283,
         "failed": 9
       },
-      "sum_seconds": 143406.032848975
+      "sum_seconds": 160189.41730101898
     },
     "mining-finish": {
       "executions": 3,
@@ -190,36 +190,36 @@
       "sum_seconds": 566.9583545760008
     },
     "train-compact": {
-      "executions": 12,
-      "maximum_seconds": 5782.619250542,
-      "median_seconds": 673.750834930499,
+      "executions": 13,
+      "maximum_seconds": 5796.872848426003,
+      "median_seconds": 1337.2978744909997,
       "minimum_seconds": 1.0160764349998317,
-      "p95_seconds": 5782.619250542,
+      "p95_seconds": 5796.872848426003,
       "status_counts": {
-        "complete": 11,
+        "complete": 12,
         "failed": 1
       },
-      "sum_seconds": 28130.079912425997
+      "sum_seconds": 33926.952760852
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 3736,
-  "cpu_job_resource_samples": 2586,
+  "cpu_job_resource_receipt_files": 3778,
+  "cpu_job_resource_samples": 2628,
   "current_cpu_dispatch_options": {
     "cold_workers": 3,
     "workers": 3,
     "workers_by_stage": {
-      "calibration-predict:C01": 2,
-      "calibration-predict:C11": 1,
-      "mine": 6,
+      "calibration-predict:C01": 7,
+      "calibration-predict:C11": 5,
+      "mine": 8,
       "predict:C00": 8,
       "predict:C01": 6,
       "predict:C11": 5,
       "prepare-actions": 8
     }
   },
-  "current_durable_free_bytes": 173781999616,
+  "current_durable_free_bytes": 173758697472,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -227,7 +227,7 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 1.0308525141144327,
+    "event_mining": 1.1466433967641585,
     "inference": 1.0130429561394145,
     "pilot": 0.045588012047780166,
     "upstream": 9.467127421661619
@@ -298,13 +298,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 143466,
+  "lease_count": 146907,
   "lease_status_counts": {
-    "complete": 143456,
+    "complete": 146897,
     "failed": 9,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 31.53837946855877,
+  "lifetime_v10_plus_v11_conservative_hours": 31.6541703512085,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -325,8 +325,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 12.230987547560177,
-  "new_study_measured_journal_hours": 11.564718119767395,
+  "new_study_gpu_lease_hours": 12.346778430209904,
+  "new_study_measured_journal_hours": 11.680509002417121,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T18:51:45.565119+00:00",
@@ -420,15 +420,15 @@
     },
     {
       "first_lease_started_utc": "2026-09-21T15:30:56.883955+00:00",
-      "gpu_lease_seconds": 79.72378167104762,
-      "last_lease_finished_utc": "2026-09-21T15:52:10.261693+00:00",
+      "gpu_lease_seconds": 362.2840172300166,
+      "last_lease_finished_utc": "2026-09-21T17:07:13.976282+00:00",
       "lease_status_counts": {
-        "complete": 449
+        "complete": 2000
       },
-      "observed_elapsed_seconds": 1273.377738,
+      "observed_elapsed_seconds": 5777.092327,
       "pid": 523123,
-      "process_verified_alive": true,
-      "recorded_optimizer_leases": 449,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 2000,
       "seed": 20260918,
       "source": "6bba",
       "stage": "event_mining"
@@ -740,5 +740,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-21T15:52:12.922022+00:00"
+  "updated_utc": "2026-09-21T17:08:53.093457+00:00"
 }

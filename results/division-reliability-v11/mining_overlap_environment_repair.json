@@ -3,6 +3,39 @@
   "all_failure_leases_charged_in_journal": true,
   "all_six_original_workers_passed_embedding_parity": true,
   "bounded_overlap_admission_sha256": "07593a3a7778c4f9cf5c00fe016eeeaabda8c8690a4a22fd2f1ac853e56bf037",
+  "bounded_overlap_completion": {
+    "checkpoint_unchanged": true,
+    "complete_all_original_failed_clip_retries": true,
+    "completed_clips": 48,
+    "dispatch_restoration": {
+      "admissible_study_gib": 38.37995910644531,
+      "current_study_rss_gib": 5.244892120361328,
+      "host_available_gib": 45.135066986083984,
+      "per_worker_reserve_gib": {
+        "calibration-predict:C01": 5,
+        "calibration-predict:C11": 6.25,
+        "mine": 4.656047821044922
+      },
+      "projected_study_rss_gib": {
+        "calibration-predict:C01": 36,
+        "calibration-predict:C11": 32.25,
+        "mine": 38.248382568359375
+      },
+      "scientific_changes": false,
+      "scope": "Restore normal queue after bounded optional source mining; hard registered guards continue to monitor live resources",
+      "status": "qualified",
+      "utc": "2026-09-21T16:40:34.140818+00:00",
+      "workers_by_stage": {
+        "calibration-predict:C01": 7,
+        "calibration-predict:C11": 5,
+        "mine": 8
+      }
+    },
+    "finished_utc": "2026-09-21T16:38:15.841067+00:00",
+    "main_queue_will_complete_remaining": 59,
+    "required_total_clips": 107,
+    "signature_unchanged": true
+  },
   "checkpoint_sha256": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
   "completed_clip_results": 0,
   "corrective_scope": "Launcher environment only; unchanged source banks, frozen midpoint, code, sampling and one-pass mining recipe.",
@@ -16,7 +49,7 @@
   },
   "main_training_interrupted": false,
   "mining_parents_unchanged": true,
-  "original_failed_clips_with_complete_retry": 5,
+  "original_failed_clips_with_complete_retry": 6,
   "original_preservation_receipt_sha256": "da7f1cec9b6c19844a50de92f088072d4e9dc284ce873eb0d39ae05257116e19",
   "preserved": [
     {

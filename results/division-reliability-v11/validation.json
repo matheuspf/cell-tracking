@@ -1053,6 +1053,39 @@
     "all_failure_leases_charged_in_journal": true,
     "all_six_original_workers_passed_embedding_parity": true,
     "bounded_overlap_admission_sha256": "07593a3a7778c4f9cf5c00fe016eeeaabda8c8690a4a22fd2f1ac853e56bf037",
+    "bounded_overlap_completion": {
+      "checkpoint_unchanged": true,
+      "complete_all_original_failed_clip_retries": true,
+      "completed_clips": 48,
+      "dispatch_restoration": {
+        "admissible_study_gib": 38.37995910644531,
+        "current_study_rss_gib": 5.244892120361328,
+        "host_available_gib": 45.135066986083984,
+        "per_worker_reserve_gib": {
+          "calibration-predict:C01": 5,
+          "calibration-predict:C11": 6.25,
+          "mine": 4.656047821044922
+        },
+        "projected_study_rss_gib": {
+          "calibration-predict:C01": 36,
+          "calibration-predict:C11": 32.25,
+          "mine": 38.248382568359375
+        },
+        "scientific_changes": false,
+        "scope": "Restore normal queue after bounded optional source mining; hard registered guards continue to monitor live resources",
+        "status": "qualified",
+        "utc": "2026-09-21T16:40:34.140818+00:00",
+        "workers_by_stage": {
+          "calibration-predict:C01": 7,
+          "calibration-predict:C11": 5,
+          "mine": 8
+        }
+      },
+      "finished_utc": "2026-09-21T16:38:15.841067+00:00",
+      "main_queue_will_complete_remaining": 59,
+      "required_total_clips": 107,
+      "signature_unchanged": true
+    },
     "checkpoint_sha256": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
     "completed_clip_results": 0,
     "corrective_scope": "Launcher environment only; unchanged source banks, frozen midpoint, code, sampling and one-pass mining recipe.",
@@ -1066,7 +1099,7 @@
     },
     "main_training_interrupted": false,
     "mining_parents_unchanged": true,
-    "original_failed_clips_with_complete_retry": 5,
+    "original_failed_clips_with_complete_retry": 6,
     "original_preservation_receipt_sha256": "da7f1cec9b6c19844a50de92f088072d4e9dc284ce873eb0d39ae05257116e19",
     "preserved": [
       {
@@ -1424,6 +1457,51 @@
       "scope": "Complete actual source training and retained artifacts; no accuracy claim",
       "seed": 314159,
       "source": "44b6",
+      "status": "passed",
+      "updates": 4000
+    },
+    {
+      "all_losses_gradients_and_weights_finite": true,
+      "audit_implementation_sha256": "89e9233b8b08e2b09f1ac63eb218ed9202a886610167e7c65b184cca293a0e74",
+      "denominator_totals": {
+        "consistency": 128000,
+        "identity": 70400,
+        "occurrence": 57600,
+        "ranking": 28800
+      },
+      "event_supervised_updates": 3600,
+      "final_learning_rate": 1e-06,
+      "finished_utc": "2026-09-21T17:07:15.949742+00:00",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "hard_slot_fallback_totals": {
+        "after_mining": 0,
+        "before_mining": 6400
+      },
+      "identity_supervised_prefix_updates": 400,
+      "mining_passes": 1,
+      "optimizer_scheduler_sampler_rng_present": true,
+      "parents": {
+        "final.json": "8c743a1c38e931efe9cca5c03d48a3dee570d89a425f3a367c2bc20c890cfc66",
+        "final.pt": "891fc1b0b688efe4b606cb28fe14faff9a2f4860bb91d93722cd7a1d03d520d1",
+        "history.jsonl": "a5b8c2c48b743a8730ff474a774915b33ab8386842df9f15b20fed24a3bbc263",
+        "mining/receipt.json": "a9d708e58447af8a55b90ae559831246c4dc4e72615ce54596b025c66fad4b30",
+        "resume.pt": "7a244ed3607ccf41c37b1987a8d09498b777ac148409f8665fbe5e1a478f1c4d"
+      },
+      "retained_model_equals_final_resume": true,
+      "sampled_slot_totals": {
+        "hard": 14400,
+        "identity": 70400,
+        "negative": 14400,
+        "positive": 28800
+      },
+      "scope": "Complete actual source training and retained artifacts; no accuracy claim",
+      "seed": 20260918,
+      "source": "6bba",
       "status": "passed",
       "updates": 4000
     }
