@@ -243,6 +243,29 @@
   },
   "stage": "train-compact",
   "status": "recovered",
+  "subsequent_dispatch_admissions": [
+    {
+      "active_head_prefix": false,
+      "complete_new_source_clips": 6,
+      "controller_allowance_gib": 1,
+      "current_study_rss_gib": 14.547840118408203,
+      "extra_host_buffer_gib": 2,
+      "host_available_gib": 41.143310546875,
+      "host_floor_gib": 10,
+      "measured_per_worker_peak_gib": 3.7248382568359375,
+      "peak_margin_factor": 1.25,
+      "peak_source_receipt": "controller/jobs/history/previous-executions/1789919971063210070/mine-44b6-314159-44b6_12dfb391.resources.json",
+      "peak_source_receipt_sha256": "5bf65c9999aa403378bca76eb4b1c5e2ab31ee12e42030526108b0add8076668",
+      "projected_host_available_gib": 17.442768096923828,
+      "projected_study_rss_gib": 38.248382568359375,
+      "receipt_sha256": "279e04681deec99c26e92a62003429f7887bcb1b7ad4ae0ecbb2ac3645ece534",
+      "scientific_changes": false,
+      "stage": "mine",
+      "status": "qualified",
+      "utc": "2026-09-21T13:16:00.138082+00:00",
+      "workers": 8
+    }
+  ],
   "target_scores_opened": false,
   "trigger": {
     "exit_code": -15,

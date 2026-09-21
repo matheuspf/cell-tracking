@@ -57,16 +57,16 @@
       "sum_seconds": 55.67311855999765
     },
     "mine": {
-      "executions": 131,
-      "maximum_seconds": 1210.6383088140003,
-      "median_seconds": 521.9451490850001,
+      "executions": 186,
+      "maximum_seconds": 1223.24010662,
+      "median_seconds": 565.0093578840006,
       "minimum_seconds": 1.0884506249999504,
-      "p95_seconds": 1050.627617170001,
+      "p95_seconds": 1027.7057188529998,
       "status_counts": {
-        "complete": 128,
+        "complete": 183,
         "failed": 3
       },
-      "sum_seconds": 72175.991796702
+      "sum_seconds": 107717.32316360601
     },
     "mining-finish": {
       "executions": 2,
@@ -80,15 +80,15 @@
       "sum_seconds": 2.0395517140023003
     },
     "mining-prepare": {
-      "executions": 3,
+      "executions": 4,
       "maximum_seconds": 2.03276398700109,
-      "median_seconds": 1.0191844590001438,
+      "median_seconds": 1.524939019999806,
       "minimum_seconds": 1.0180469839979196,
       "p95_seconds": 2.03276398700109,
       "status_counts": {
-        "complete": 3
+        "complete": 4
       },
-      "sum_seconds": 4.069995429999153
+      "sum_seconds": 6.100689010998622
     },
     "package/C00": {
       "executions": 8,
@@ -190,36 +190,36 @@
       "sum_seconds": 566.9583545760008
     },
     "train-compact": {
-      "executions": 10,
-      "maximum_seconds": 5649.757518372004,
-      "median_seconds": 10.201257034499122,
+      "executions": 12,
+      "maximum_seconds": 5782.619250542,
+      "median_seconds": 673.750834930499,
       "minimum_seconds": 1.0160764349998317,
-      "p95_seconds": 5649.757518372004,
+      "p95_seconds": 5782.619250542,
       "status_counts": {
-        "complete": 9,
+        "complete": 11,
         "failed": 1
       },
-      "sum_seconds": 17457.529663073998
+      "sum_seconds": 28130.079912425997
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 3605,
-  "cpu_job_resource_samples": 2455,
+  "cpu_job_resource_receipt_files": 3669,
+  "cpu_job_resource_samples": 2519,
   "current_cpu_dispatch_options": {
     "cold_workers": 3,
     "workers": 3,
     "workers_by_stage": {
-      "calibration-predict:C01": 5,
-      "calibration-predict:C11": 4,
-      "mine": 4,
+      "calibration-predict:C01": 7,
+      "calibration-predict:C11": 6,
+      "mine": 8,
       "predict:C00": 8,
       "predict:C01": 6,
       "predict:C11": 5,
-      "prepare-actions": 6
+      "prepare-actions": 8
     }
   },
-  "current_durable_free_bytes": 181166723072,
+  "current_durable_free_bytes": 175953358848,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -227,7 +227,7 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 0.6778155834769362,
+    "event_mining": 0.9333935900263564,
     "inference": 1.0130429561394145,
     "pilot": 0.045588012047780166,
     "upstream": 9.467127421661619
@@ -298,13 +298,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 130897,
+  "lease_count": 138976,
   "lease_status_counts": {
-    "complete": 130893,
+    "complete": 138972,
     "failed": 3,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 31.185342537921276,
+  "lifetime_v10_plus_v11_conservative_hours": 31.440920544470693,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -325,8 +325,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 11.87795061692268,
-  "new_study_measured_journal_hours": 11.211681189129898,
+  "new_study_gpu_lease_hours": 12.133528623472102,
+  "new_study_measured_journal_hours": 11.46725919567932,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T18:51:45.565119+00:00",
@@ -390,30 +390,30 @@
     },
     {
       "first_lease_started_utc": "2026-09-21T11:28:42.777023+00:00",
-      "gpu_lease_seconds": 28.224134820003428,
-      "last_lease_finished_utc": "2026-09-21T11:36:52.528393+00:00",
+      "gpu_lease_seconds": 334.15275445998464,
+      "last_lease_finished_utc": "2026-09-21T13:04:41.243246+00:00",
       "lease_status_counts": {
-        "complete": 164
+        "complete": 2000
       },
-      "observed_elapsed_seconds": 489.75137,
+      "observed_elapsed_seconds": 5758.466223,
       "pid": 28034,
-      "process_verified_alive": true,
-      "recorded_optimizer_leases": 164,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 2000,
       "seed": 314159,
       "source": "6bba",
       "stage": "event_mining"
     },
     {
       "first_lease_started_utc": "2026-09-21T11:34:25.226149+00:00",
-      "gpu_lease_seconds": 8.421891167000922,
-      "last_lease_finished_utc": "2026-09-21T11:36:52.342328+00:00",
+      "gpu_lease_seconds": 282.2092201970331,
+      "last_lease_finished_utc": "2026-09-21T12:55:35.141633+00:00",
       "lease_status_counts": {
-        "complete": 50
+        "complete": 1706
       },
-      "observed_elapsed_seconds": 147.116179,
+      "observed_elapsed_seconds": 4869.915484,
       "pid": 64090,
-      "process_verified_alive": true,
-      "recorded_optimizer_leases": 50,
+      "process_verified_alive": false,
+      "recorded_optimizer_leases": 1706,
       "seed": 20260918,
       "source": "6bba",
       "stage": "event_mining"
@@ -725,5 +725,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-21T11:36:55.179632+00:00"
+  "updated_utc": "2026-09-21T14:25:27.913814+00:00"
 }
