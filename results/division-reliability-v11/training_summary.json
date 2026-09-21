@@ -762,9 +762,9 @@
         },
         "process_verified_alive": false,
         "resume": {
-          "bytes": 4569795,
+          "bytes": 4569859,
           "durable_step": 2000,
-          "file_creation_to_last_write_seconds": 0.020152179,
+          "file_creation_to_last_write_seconds": 0.016000178,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/314159/compact/resume.pt",
@@ -774,7 +774,7 @@
             "step": 2000
           },
           "seed": 314159,
-          "sha256": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
+          "sha256": "67bd301c1816fe69e4f376906181831cad6b61f7aedbe69523ee1864dc273dd2",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
@@ -782,7 +782,7 @@
         "source": "6bba",
         "status": "waiting_for_mining",
         "step": 2000,
-        "updated_utc": "2026-09-21T13:04:41.319001+00:00"
+        "updated_utc": "2026-09-21T19:32:18.770575+00:00"
       },
       "linear": {
         "census": {

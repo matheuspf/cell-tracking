@@ -1680,6 +1680,18 @@
       "complete": 74,
       "failed": 6
     },
+    "main_queue_reuse": {
+      "frozen_checkpoint_sha256": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
+      "mining_signature_sha256": "de25c37b5b8c2b49ea41918c3685056c4e56308fefe9787426e6ab8edc6be712",
+      "receipt_sha256": "ed4330a22a0d302728f5f243e4192d4aac1d781d3c452f77eba8cc669b6d1f67",
+      "scientific_changes": false,
+      "scope": "Actual main queue reused all 48 previously completed source mining receipts unchanged before dispatching remaining clips",
+      "seed": 314159,
+      "source": "6bba",
+      "status": "passed",
+      "utc": "2026-09-21T19:34:36.399481+00:00",
+      "verified_reused_clips": 48
+    },
     "main_training_interrupted": false,
     "mining_parents_unchanged": true,
     "original_failed_clips_with_complete_retry": 6,

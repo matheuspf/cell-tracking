@@ -1,0 +1,53 @@
+{
+  "central_serial_phase_projection_hours": 52.03068926864975,
+  "conditions": [
+    "Uninterrupted host execution",
+    "Available memory remains sufficient for qualified concurrency",
+    "Target graph cost comparable to measured source passes",
+    "No new implementation or resource failure"
+  ],
+  "estimated_utc": "2026-09-21T11:29:55.724287+00:00",
+  "forecast_worker_counts": {
+    "C00_prediction": 8,
+    "C01_prediction": 6,
+    "C11_prediction": 5,
+    "cold": 3,
+    "mining": 6,
+    "source_C01_calibration": 7,
+    "source_C11_calibration": 6
+  },
+  "forecast_worker_counts_scope": "Projections after the optional compact prefix finishes. Actual limits remain separately qualified against live host memory and measured process peaks.",
+  "limitations": [
+    "Target throughput has not been observed. Cross-embryo graph density can change wall time.",
+    "Source timing measurements were made at different concurrency and host load.",
+    "The registered GPU lease allocation is a compute limit, not a wall-clock ETA."
+  ],
+  "measured_completed_source_job_mean_seconds": {
+    "C00_prediction_post_upstream_first_30_source6_second_seed": 62.7,
+    "second_seed_source44_C01_raw_calibration": 851.5991635293001,
+    "second_seed_source44_C11_raw_calibration_partial_8_of_10": 789.3410540540003,
+    "second_seed_source44_mining": 612.2022875918689
+  },
+  "previous_estimate_sha256": "9f9c927b36c7444ca21f5e1242a87ba7e7ea87c8287e556edfd9884d17410b68",
+  "projected_phase_wall_hours": {
+    "C00_target_prediction": 0.8664791666666667,
+    "C01_target_prediction": 15.69150310577136,
+    "C11_target_prediction": 17.453207750749563,
+    "cold_allowance": 2.5,
+    "compact_training_allowance": 4.5,
+    "official_scoring_reporting_allowance": 2.0,
+    "remaining_source6_mining": 6.065337478919441,
+    "remaining_source6_raw_calibration": 2.954161766542723
+  },
+  "remaining_cold_runs": 24,
+  "remaining_official_scores": 1194,
+  "remaining_target_clip_arm_predictions": 1194,
+  "remaining_wall_hours_range": [
+    48,
+    72
+  ],
+  "resume_admission_sha256": "6c4ae4c1bbd06bc794eddb485f0fc8bba0d18a032a36e0dbd185354f49906bcc",
+  "scientific_changes": false,
+  "status": "provisional_after_memory_recovery",
+  "target_scores_opened": false
+}

@@ -1,0 +1,61 @@
+{
+  "active_jobs_terminated": false,
+  "additional_host_buffer_gib": 2,
+  "admissible_study_gib": 32.69534683227539,
+  "available_gib": 26.12417984008789,
+  "current_study_rss_gib": 18.5711669921875,
+  "estimated_available_without_study_gib": 44.69534683227539,
+  "host_floor_gib": 10,
+  "new_options": {
+    "cold_workers": 3,
+    "workers": 3,
+    "workers_by_stage": {
+      "calibration-predict:C01": 7,
+      "calibration-predict:C11": 5,
+      "mine": 6,
+      "predict:C00": 8,
+      "predict:C01": 6,
+      "predict:C11": 4,
+      "prepare-actions": 6
+    }
+  },
+  "previous_options": {
+    "cold_workers": 3,
+    "workers": 3,
+    "workers_by_stage": {
+      "calibration-predict:C01": 8,
+      "calibration-predict:C11": 6,
+      "mine": 7,
+      "predict:C00": 8,
+      "predict:C01": 6,
+      "predict:C11": 4,
+      "prepare-actions": 7
+    }
+  },
+  "previous_options_sha256": "910f03b91ef4e624494029fba5efae79103712f275bce46efa4c8b24777d1d3f",
+  "private_receipt_sha256": "f89ddbb57f2598af7bd6398c5978f790de1932a8357cb56ddcf009656633550d",
+  "projected_study_rss_gib": {
+    "calibration-predict:C01": 28.94166088104248,
+    "calibration-predict:C11": 29.698205947875977,
+    "mine": 28.93628692626953,
+    "predict:C00": 22.845509999999997,
+    "predict:C01": 31.0,
+    "predict:C11": 31.0,
+    "prepare-actions": 28.227872500000004
+  },
+  "reason": "Observed host memory outside this study increased after earlier six-worker admission",
+  "scientific_changes": false,
+  "status": "qualified_reduction",
+  "study_rss_limit_gib": 44,
+  "utc": "2026-09-21T18:48:11.057798+00:00",
+  "worker_reserve_basis": "Observed per-stage worker peak plus 25 percent; target policy predictions retain larger unmeasured-stage reserves",
+  "worker_reserves_gib": {
+    "calibration-predict:C01": 3.991665840148926,
+    "calibration-predict:C11": 5.739641189575195,
+    "mine": 4.656047821044922,
+    "predict:C00": 2.7306887499999997,
+    "predict:C01": 5.0,
+    "predict:C11": 7.5,
+    "prepare-actions": 4.537978750000001
+  }
+}
