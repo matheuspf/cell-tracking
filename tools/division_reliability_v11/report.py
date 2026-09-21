@@ -384,6 +384,10 @@ def interpretation(pooled,directional,details):
 def run():
     RESULTS.mkdir(parents=True,exist_ok=True)
     lock=read(RESULTS/'execution_lock.json');tr=training();res=resources();pooled,directional,per_clip,details=score_rows();diag=diagnostics(details)
+    predicted=0
+    for row in per_clip:
+        receipt=WORK/'predictions'/row['arm']/row['source']/str(row['seed'])/row['dataset']/'receipt.json'
+        if receipt.exists() and read(receipt).get('status')=='predicted_unscored':predicted+=1
     interpreted=interpretation(pooled,directional,details)
     packages={};clean=True
     from .provenance import unseal
@@ -395,7 +399,7 @@ def run():
                 if (p/'manifest.json').exists():
                     value=unseal(p);validate_stages(value['ancestry'],value['root_artifact'],s)
                     packages[f'{s}/{seed}/{arm}']=dict(path=str(p.relative_to(REPO)),identity=value['identity'],files=value['files'],ancestry=value['ancestry'])
-    freeze=read(WORK/'freeze/public_summary.json') if (WORK/'freeze/public_summary.json').exists() else dict(status='pending',reason='Every retained model and complete target prediction must be frozen before target scoring')
+    freeze=read(WORK/'freeze/public_summary.json') if (WORK/'freeze/public_summary.json').exists() else dict(status='pending',completed_predictions=predicted,required_predictions=len(per_clip),reason='Every retained model and complete target prediction must be frozen before target scoring')
     write(RESULTS/'prediction_manifest.json',freeze)
     cold=read(WORK/'cold/receipt.json') if (WORK/'cold/receipt.json').exists() else dict(status='pending')
     checks=read(WORK/'checks/runtime.json') if (WORK/'checks/runtime.json').exists() else dict(status='unrecorded',count=None)
@@ -418,6 +422,7 @@ def run():
     if (RESULTS/'host_memory_interruption.json').exists():validation['host_memory_interruption']=read(RESULTS/'host_memory_interruption.json')
     if (RESULTS/'mining_overlap_environment_repair.json').exists():validation['mining_overlap_environment_repair']=read(RESULTS/'mining_overlap_environment_repair.json')
     if (RESULTS/'host_restart_20260921.json').exists():validation['host_restart_20260921']=read(RESULTS/'host_restart_20260921.json')
+    if (RESULTS/'target_launch.json').exists():validation['target_prediction_launch']=read(RESULTS/'target_launch.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
@@ -480,6 +485,7 @@ def run():
         upstream_completed_cells=sum(c['upstream']['status']=='trained' for c in tr['cells']),compact_completed_cells=sum(c['compact']['status']=='trained' for c in tr['cells']),
         linear_completed_cells=sum(c['linear']['status']=='fitted' for c in tr['cells']),
         completed_score_rows=sum(r['status']=='scored' for r in per_clip),required_score_rows=len(per_clip),
+        completed_target_predictions=predicted,required_target_predictions=len(per_clip),
         pooled_095_milestone_reached=milestone,strong_095_milestone_reached=strong,compact_promotion_gate_passed=promising,
         execution_lock_identity=lock['identity'],next_command=command+(' report' if active or complete else ' run --workers 3'),
         resume_command_when_no_existing_owner=command+' run --workers 3',
@@ -495,7 +501,7 @@ def run():
         status['next_command']=command+' report'
     write(RESULTS/'STATUS.json',public(status))
     lines=[f'# Division reliability v11 — {status["status"]}',
-        '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits, {status["linear_completed_cells"]}/4 C01 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
+        '',f'Actual status at {status["updated_utc"]}: {status["upstream_completed_cells"]}/4 C00 fits, {status["linear_completed_cells"]}/4 C01 fits and {status["compact_completed_cells"]}/4 C11 fits complete; {predicted}/{len(per_clip)} target predictions complete; {status["completed_score_rows"]}/{status["required_score_rows"]} required target clip/arm scores recorded.',
         '',f'The immutable schedule is U={lock["upstream_updates"]:,} and E={lock["event_updates"]:,} for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.',
         '', 'The local v10 work was preserved. Neither completed nor partial v10 weights qualified for reuse because the matching trainer source and recursive ancestry were unavailable. Every retained v11 neural component starts randomly. P0 and the two pre-existing user-modified public946 reports remain unchanged.',
         '', 'Both embryos have historical research exposure. The claim is source_isolated_reused_embryos, not pristine independent generalization. Multiple seeds do not add embryos; calibration clips are not proven acquisition-independent. The original grouped split was retained. One persisted division event occurs in two source44 fit clips and receives one event unit across both.',
@@ -523,11 +529,12 @@ def run():
         else:lines += [paragraph,'']
     if (RESULTS/'runtime_estimate.json').exists() and not complete:
         estimate=read(RESULTS/'runtime_estimate.json')
-        if estimate.get('status')=='provisional_after_memory_recovery':
+        if estimate.get('status','').startswith('provisional') and estimate.get('remaining_wall_hours_range'):
             low,high=estimate['remaining_wall_hours_range']
+            throughput_scope=estimate.get('target_throughput_scope','Target throughput was not measured for this estimate.')
             lines += [f'At {estimate["estimated_utc"]}, the provisional remaining wall-time estimate was {low}–{high} hours. '
-                'It assumes uninterrupted execution, enough host memory for qualified concurrency, and target graph costs comparable to measured source passes. '
-                'Target throughput has not yet been measured. runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.','']
+                'It assumes uninterrupted execution and enough host memory for the documented worker limits. '
+                f'{throughput_scope} runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.','']
     if (RESULTS/'compact_precision_repair.json').exists():
         lines += ['A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.', '']
     if (RESULTS/'mining_overlap_environment_repair.json').exists():

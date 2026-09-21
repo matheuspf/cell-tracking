@@ -2843,5 +2843,140 @@
     "target_scores_opened": false,
     "unresolved_matrix_freeze_rejected": true
   },
+  "target_prediction_launch": {
+    "all_packages_and_source_calibrations_complete_before_first_target_job": true,
+    "cold_validation_status": "pending",
+    "earliest_still_running_job_at_audit_utc": "2026-09-21T23:40:23.066419+00:00",
+    "first_batch_observed_job": {
+      "arm": "C00",
+      "clip": "6bba_05b6850b",
+      "evidence": "Read directly from the live controller job JSON before that first-batch job completed",
+      "pid": 610872,
+      "seed": 20260918,
+      "source": "44b6",
+      "started_utc": "2026-09-21T23:39:13.786640+00:00"
+    },
+    "first_observed_target_job_started_utc": "2026-09-21T23:39:13.786640+00:00",
+    "global_prediction_freeze_status": "pending",
+    "initial_active_jobs_only_receipt_sha256": "80711d9c06e3fed7cd80133d582b0bba85c45f8d395fc123ef039dd373a461f7",
+    "observed_utc": "2026-09-21T23:40:48.872791+00:00",
+    "private_receipt_sha256": "4942955b92d3fe33100f5b234ebf36332b3ae18a6e972ecd3a87ae5a661576f7",
+    "qualified_packages": {
+      "44b6/20260918/C00": {
+        "identity": "8236fe009a59aa38e724113c1df0d614d470e56569133863b45cfdd512ffb28e",
+        "manifest_sha256": "681865f17c35540d767e8e8dd5381fe95a499e84f0cd5ab01f60d6b97c12ea52"
+      },
+      "44b6/20260918/C01": {
+        "identity": "9d73e01c3d42ec6748537adb0376caac8d0e0e9685dad74cd33017b4b582a69e",
+        "manifest_sha256": "56b7407ecf1735484f51cf6ba2db30e2e85f6b35d29a3d1d3f42de1f4b50b806"
+      },
+      "44b6/20260918/C11": {
+        "identity": "1abee5ed8a53e9fff33867a45e96f9595fd039a147888036a115cc57bc2b4853",
+        "manifest_sha256": "219ae3265b06d752e7e8cb1177fd7cec5602a8715adf4b45268b5a46be24aa6b"
+      },
+      "44b6/314159/C00": {
+        "identity": "669250718af566ee6b595763c77116070507fa6fb71347a72e9f531fa532ff5f",
+        "manifest_sha256": "ffbf7ef2429284f187ef7e6612761f3d87ddcdbac41d9b9ef40d305a1e61650a"
+      },
+      "44b6/314159/C01": {
+        "identity": "df7cf42679b4f78fe3dfe75c94a9eb99d7562596442f585eb94c4c36185bf88e",
+        "manifest_sha256": "c5216eb8bbb3490d141b470ab4072d374cd4aed69e7fe30dc243cfb074b906ba"
+      },
+      "44b6/314159/C11": {
+        "identity": "8023847e41a4551c319110280043a615fa09235054b19ae941ccd740c1098a9f",
+        "manifest_sha256": "d5677245e27e6b60edd37b8dab14de48d82bc829104fd2236f71ee1d11231677"
+      },
+      "6bba/20260918/C00": {
+        "identity": "1e52f4c0bb36d965e4d07e6200624642fb7e1a5d35d54b12a878d5226ca3a124",
+        "manifest_sha256": "ea7cdee88a0fe53230bce3334ceeacf0eba61961222b4801864626068870ace3"
+      },
+      "6bba/20260918/C01": {
+        "identity": "6f76119e187b608e5f7ee9f8a213f755010671dbede1990a008e99572a30bf99",
+        "manifest_sha256": "32c10771ee080cf710374df3cec831f18a0656e88497b685a52879b4304767fc"
+      },
+      "6bba/20260918/C11": {
+        "identity": "d4e860e0eec32e2210bdd6beaa19c62b61ca71d68bd476177a2f522519b06b4d",
+        "manifest_sha256": "5dfcbab94abd2e94083a0f3f231bb84f66204c3e2828b33d3635f64db2bbc872"
+      },
+      "6bba/314159/C00": {
+        "identity": "e388396ee28b05c1f8474b10a793cdeadf21d5b1a24a0cc3ee710dc206a5712c",
+        "manifest_sha256": "bc5bc66db9c1ff158e02d37de5cfdc31cbbbb1715daf032a1caa4c22e12a20d6"
+      },
+      "6bba/314159/C01": {
+        "identity": "179fe8424ffa391320ac55f31ed69e40c7e361506a1331f5850659cb4a860537",
+        "manifest_sha256": "f5c408ba169c255b9fcfbc0d6181d370033cf5ed714be1ba49a8b2165065ee3b"
+      },
+      "6bba/314159/C11": {
+        "identity": "bfbf1f024e64005981c5377b0fef25080d506de6d42015530befbe000d878e8e",
+        "manifest_sha256": "0b548cc0c463470a4d4f0155daf00a66b0e4582dd0eb99dec2ae96fb8f623463"
+      }
+    },
+    "retention_identity": "baa959a412d37fa82368b0025b78ee568c115efcba472e387c1d4bcbafc7ef9c",
+    "retention_resolved_utc": "2026-09-21T23:39:13.784746+00:00",
+    "retention_sha256": "6eb648b96cb1569eee0612f11679578ee09a664c7f0649d111288e372d7b274d",
+    "scientific_changes": false,
+    "scope": "Read-only timing and provenance audit at first target dispatch; not a prediction freeze or measured target score",
+    "source_calibrations": [
+      {
+        "arm": "C01",
+        "finished_utc": "2026-09-20T02:20:53.234815+00:00",
+        "seed": 20260918,
+        "sha256": "2d9927b32ec3f4abef9990f4d11a11fa1ed43af233137debba07b5457eee57a6",
+        "source": "44b6"
+      },
+      {
+        "arm": "C11",
+        "finished_utc": "2026-09-20T07:50:07.486504+00:00",
+        "seed": 20260918,
+        "sha256": "e160d22972aa88f43b0bb7da32a5ba8cc1e790958409faf34f3ce3d641b2069a",
+        "source": "44b6"
+      },
+      {
+        "arm": "C01",
+        "finished_utc": "2026-09-20T21:18:55.309579+00:00",
+        "seed": 314159,
+        "sha256": "f0642081274a49bba23baec9255b278796515dfd8dcbd18f7439385c1cc7f4db",
+        "source": "44b6"
+      },
+      {
+        "arm": "C11",
+        "finished_utc": "2026-09-20T22:34:45.653919+00:00",
+        "seed": 314159,
+        "sha256": "73dc5916da2e6c1e192d7647ab10c7fcaf2012a7f9265be1af50c0f658687f24",
+        "source": "44b6"
+      },
+      {
+        "arm": "C01",
+        "finished_utc": "2026-09-21T18:23:00.598219+00:00",
+        "seed": 20260918,
+        "sha256": "d71bf909939aba09ba05dc450d8e400f342c560aa2d2c1084bb77e71e6c82606",
+        "source": "6bba"
+      },
+      {
+        "arm": "C11",
+        "finished_utc": "2026-09-21T19:29:35.256249+00:00",
+        "seed": 20260918,
+        "sha256": "f83623aa5730185bec1688bc5d32191552bb8235a9d256f79431c9e1c08dcd2d",
+        "source": "6bba"
+      },
+      {
+        "arm": "C01",
+        "finished_utc": "2026-09-21T22:58:13.823013+00:00",
+        "seed": 314159,
+        "sha256": "ccfbc3faf72a081c15c5add8cb63ea58bd90b5d985f40681086bad4dcd5a7c26",
+        "source": "6bba"
+      },
+      {
+        "arm": "C11",
+        "finished_utc": "2026-09-21T23:39:11.605797+00:00",
+        "seed": 314159,
+        "sha256": "b2cc7c353ff8654a2e572ec08288cca487d0642e16dc4c5d792e080e6bbc226e",
+        "source": "6bba"
+      }
+    ],
+    "status": "target_prediction_started",
+    "target_metric_receipts_at_observation": 0,
+    "timing_scope": "Completed controller jobs retain finish and elapsed time rather than their original started_utc. The first-batch timestamp was captured from live job metadata; the later running-job timestamp is retained separately."
+  },
   "tests_are_not_model_results": true
 }
