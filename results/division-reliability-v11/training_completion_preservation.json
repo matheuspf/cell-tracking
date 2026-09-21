@@ -1,0 +1,17 @@
+{
+  "changed_v10_artifacts": [],
+  "frozen_core_files_verified": 10,
+  "frozen_core_unchanged": true,
+  "preexisting_user_report_hashes": {
+    "experiment_matrix.csv": "53b754c9982a4fcd3b8ee0b3ebe687ea7a6f1e2d494c7c1ffea7e2647cd9cb95",
+    "per_embryo_scores.csv": "6749423ab93208459dec208571e27979463e97b31123dac5b067d7cb63836034"
+  },
+  "preexisting_user_reports_unchanged": true,
+  "preserved_v10_artifacts_verified": 107,
+  "private_receipt_sha256": "ead02f232fda35340332bd488ba97af5fec6eafe426d772e1f48034fbbbbe346",
+  "scientific_changes": false,
+  "scope": "Preservation rechecked after all v11 fits completed; target inference/scoring remains pending",
+  "status": "passed",
+  "utc": "2026-09-21T22:28:23.889101+00:00",
+  "v10_preservation_manifest_sha256": "d05565da2455013b97e4c277905d684acb1c3cf899c0440050d9c1469140bcb7"
+}

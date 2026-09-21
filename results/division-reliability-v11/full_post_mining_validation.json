@@ -86,14 +86,43 @@
       "status": "passed",
       "target_metrics_opened": false,
       "worker_log_sha256": "08dbdcc55ff4570fba5263e1641fbfcee55553c5149b791405c12a53809ae3a8"
+    },
+    {
+      "auditor_implementation_sha256": "7baf5afb25fc3f2dbf71e75a60737500cbd4239f9bc5583e3449dbee088cb6a0",
+      "command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11.mining_audit --source 6bba --seed 314159",
+      "complete_history_updates": 4000,
+      "exit_code": 0,
+      "finished_utc": "2026-09-21T22:26:54.534976+00:00",
+      "first_post_mining_update": 2001,
+      "hard_negative_draws_verified": 8000,
+      "last_post_mining_update": 4000,
+      "numerical_code_changed": false,
+      "original_resume_window_receipt_preserved": true,
+      "original_resume_window_receipt_sha256": "73ecb17afd34cdb64afff3d8ad1f840e83804930ca8d935e9d7ec17cf1d4cace",
+      "parents": {
+        "final.json": "7cc7f603a3bc4e26de55519033dbbd5ff77acdba04f44cff19c2748423c50585",
+        "final.pt": "c58e66757593fca83ef6efa9c495294842da51ff7c2b3e609010a0d25f9d707e",
+        "history.jsonl": "14dfbb318b8a2258b5bef51096e45a007bd8909a46bec5808ed642ee3dc83dc6",
+        "mining/frozen_checkpoint.pt": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
+        "mining/receipt.json": "b2f2773f80352d11e1bca725b3ff5317077f8de16a0ea622c0307144a574a8a9",
+        "resume.pt": "5a2159f5b573265ecb1179e00688e813f13546ed4d0b80f990fe1672d369494d"
+      },
+      "post_mining_updates_verified": 2000,
+      "scope": "Successful fresh source-guarded subprocess checked every completed post-mining hard slot, its sampling probability, mixed denominators and finite losses against the verified source-only pool. Original partial-window receipt is preserved.",
+      "seed": 314159,
+      "source": "6bba",
+      "started_utc": "2026-09-21T22:26:53.677096+00:00",
+      "status": "passed",
+      "target_metrics_opened": false,
+      "worker_log_sha256": "73ecb17afd34cdb64afff3d8ad1f840e83804930ca8d935e9d7ec17cf1d4cace"
     }
   ],
-  "completed_cells": 3,
-  "full_post_mining_updates_verified": 6000,
-  "hard_negative_draws_verified": 24000,
+  "completed_cells": 4,
+  "full_post_mining_updates_verified": 8000,
+  "hard_negative_draws_verified": 32000,
   "required_cells": 4,
   "scientific_changes": false,
-  "status": "partial",
+  "status": "passed",
   "target_metrics_opened": false,
-  "updated_utc": "2026-09-21T20:55:53.362016+00:00"
+  "updated_utc": "2026-09-21T22:26:54.553779+00:00"
 }
