@@ -90,6 +90,12 @@ The actual host-restart recovery also compared 213 replayed production updates
 with their preserved records. Samples, groups, learning rates, losses and
 gradient norms matched exactly; `host_restart_resume.json` records the scope,
 preserved hashes and conservative charge for the interrupted GPU lease.
+The later host-memory interruption also replayed 27 recorded compact updates
+from durable update 294. All scientific update fields matched exactly; timing
+and observation-cache occupancy were excluded. `host_memory_interruption.json`
+records the actual recovery, admission measurements and comparison fields.
+Neither production replay comparison asserts tensor equality at a step where
+no pre-interruption tensor checkpoint existed.
 
 After an upstream final is retained, validate its full sampling history, finite
 losses and weights, final checkpoint equality, and optimizer charge accounting:

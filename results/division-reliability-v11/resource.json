@@ -2,59 +2,59 @@
   "accounting_note": "Earlier pilots use recorded wall-time upper bounds plus a 1200-second engineering allowance; subsequent leases include failures. Historical v10 bounds can include idle intervals.",
   "completed_job_wall_time": {
     "calibrate/C01": {
-      "executions": 4,
+      "executions": 6,
       "maximum_seconds": 458.8248410519991,
-      "median_seconds": 163.0818656745014,
+      "median_seconds": 1.017275645002428,
       "minimum_seconds": 1.016712765999955,
       "p95_seconds": 458.8248410519991,
       "status_counts": {
-        "complete": 4
+        "complete": 6
       },
-      "sum_seconds": 786.0052851670018
+      "sum_seconds": 788.0391788550016
     },
     "calibrate/C11": {
-      "executions": 3,
+      "executions": 5,
       "maximum_seconds": 448.8219938530019,
-      "median_seconds": 346.51106672100286,
-      "minimum_seconds": 1.0175763340000685,
+      "median_seconds": 1.0180077680001887,
+      "minimum_seconds": 1.0162253779999446,
       "p95_seconds": 448.8219938530019,
       "status_counts": {
-        "complete": 3
+        "complete": 5
       },
-      "sum_seconds": 796.3506369080048
+      "sum_seconds": 798.384870054005
     },
     "calibration-predict/C01": {
-      "executions": 40,
+      "executions": 60,
       "maximum_seconds": 1172.558487440001,
-      "median_seconds": 88.74593584549984,
+      "median_seconds": 5.1960219140019035,
       "minimum_seconds": 3.067999172002601,
-      "p95_seconds": 1085.6061197950003,
+      "p95_seconds": 1007.6598035579991,
       "status_counts": {
-        "complete": 40
+        "complete": 60
       },
-      "sum_seconds": 13792.392641883009
+      "sum_seconds": 13881.536488901009
     },
     "calibration-predict/C11": {
-      "executions": 30,
+      "executions": 50,
       "maximum_seconds": 1198.114607372001,
-      "median_seconds": 354.5578175619994,
-      "minimum_seconds": 3.062208670000018,
-      "p95_seconds": 1073.7013936449948,
+      "median_seconds": 5.1603766275,
+      "minimum_seconds": 3.0548644939999576,
+      "p95_seconds": 1049.3945292320022,
       "status_counts": {
-        "complete": 30
+        "complete": 50
       },
-      "sum_seconds": 14046.290051257998
+      "sum_seconds": 14134.231756950998
     },
     "fit-linear": {
-      "executions": 8,
+      "executions": 12,
       "maximum_seconds": 23.73516851599925,
-      "median_seconds": 2.55050942150001,
-      "minimum_seconds": 1.0168689100028132,
+      "median_seconds": 1.0205743039982735,
+      "minimum_seconds": 1.0158600700001443,
       "p95_seconds": 23.73516851599925,
       "status_counts": {
-        "complete": 8
+        "complete": 12
       },
-      "sum_seconds": 51.59472172199776
+      "sum_seconds": 55.67311855999765
     },
     "mine": {
       "executions": 131,
@@ -91,81 +91,81 @@
       "sum_seconds": 4.069995429999153
     },
     "package/C00": {
-      "executions": 5,
+      "executions": 8,
       "maximum_seconds": 1.0322897380000313,
-      "median_seconds": 1.0258860040012223,
-      "minimum_seconds": 1.0163351430019247,
+      "median_seconds": 1.0213468635006393,
+      "minimum_seconds": 1.016307443000187,
       "p95_seconds": 1.0322897380000313,
       "status_counts": {
-        "complete": 5
+        "complete": 8
       },
-      "sum_seconds": 5.122454521002396
+      "sum_seconds": 8.18220914500273
     },
     "package/C01": {
-      "executions": 4,
+      "executions": 6,
       "maximum_seconds": 2.054053029998613,
-      "median_seconds": 1.018955708999556,
+      "median_seconds": 1.0168707655000162,
       "minimum_seconds": 1.0151357199938502,
       "p95_seconds": 2.054053029998613,
       "status_counts": {
-        "complete": 4
+        "complete": 6
       },
-      "sum_seconds": 5.107100167991575
+      "sum_seconds": 7.140353276991846
     },
     "package/C11": {
-      "executions": 3,
+      "executions": 5,
       "maximum_seconds": 1.0279241499993077,
-      "median_seconds": 1.0204675379998207,
+      "median_seconds": 1.0164132929999141,
       "minimum_seconds": 1.0159844790032366,
       "p95_seconds": 1.0279241499993077,
       "status_counts": {
-        "complete": 3
+        "complete": 5
       },
-      "sum_seconds": 3.064376167002365
+      "sum_seconds": 5.097189158002266
     },
     "predict/C00/calibration": {
-      "executions": 113,
+      "executions": 154,
       "maximum_seconds": 309.4748384620034,
-      "median_seconds": 3.411970090000068,
+      "median_seconds": 3.482937576500035,
       "minimum_seconds": 3.047473489998083,
-      "p95_seconds": 308.199317822,
+      "p95_seconds": 277.533977952,
       "status_counts": {
-        "complete": 113
+        "complete": 154
       },
-      "sum_seconds": 6635.482849713
+      "sum_seconds": 6777.730034245
     },
     "predict/C00/fit": {
-      "executions": 719,
+      "executions": 948,
       "maximum_seconds": 314.4771287659969,
-      "median_seconds": 3.2252948070017737,
+      "median_seconds": 3.222368397000537,
       "minimum_seconds": 3.0445569779985817,
-      "p95_seconds": 298.25609225699736,
+      "p95_seconds": 290.17383421200066,
       "status_counts": {
-        "complete": 719
+        "complete": 948
       },
-      "sum_seconds": 54841.85434158899
+      "sum_seconds": 55624.23455335799
     },
     "prepare-actions/calibration": {
-      "executions": 113,
+      "executions": 154,
       "maximum_seconds": 700.6536674660019,
-      "median_seconds": 1.1381661529994744,
+      "median_seconds": 1.1433111870001085,
       "minimum_seconds": 1.0157775959960418,
-      "p95_seconds": 524.1703838130052,
+      "p95_seconds": 503.22108330899937,
       "status_counts": {
-        "complete": 113
+        "complete": 154
       },
-      "sum_seconds": 19338.292781882
+      "sum_seconds": 19385.082855613997
     },
     "prepare-actions/fit": {
-      "executions": 649,
+      "executions": 878,
       "maximum_seconds": 789.5522569570003,
-      "median_seconds": 1.1032031530012318,
+      "median_seconds": 1.073443022499987,
       "minimum_seconds": 1.0156883810050203,
-      "p95_seconds": 513.930147823,
+      "p95_seconds": 488.64747043399984,
       "status_counts": {
-        "complete": 649
+        "complete": 878
       },
-      "sum_seconds": 96864.191937566
+      "sum_seconds": 97106.86798366702
     },
     "report": {
       "executions": 2,
@@ -179,47 +179,47 @@
       "sum_seconds": 6.1484540089986695
     },
     "source-diagnostics": {
-      "executions": 9,
+      "executions": 12,
       "maximum_seconds": 88.37158135599748,
-      "median_seconds": 34.7082955099977,
-      "minimum_seconds": 31.512443954001355,
+      "median_seconds": 33.68342255849882,
+      "minimum_seconds": 30.47922974800008,
       "p95_seconds": 88.37158135599748,
       "status_counts": {
-        "complete": 9
+        "complete": 12
       },
-      "sum_seconds": 450.0984263520006
+      "sum_seconds": 566.9583545760008
     },
     "train-compact": {
-      "executions": 8,
+      "executions": 10,
       "maximum_seconds": 5649.757518372004,
-      "median_seconds": 673.750834930499,
-      "minimum_seconds": 1.0170146339999064,
+      "median_seconds": 10.201257034499122,
+      "minimum_seconds": 1.0160764349998317,
       "p95_seconds": 5649.757518372004,
       "status_counts": {
-        "complete": 7,
+        "complete": 9,
         "failed": 1
       },
-      "sum_seconds": 17455.497394473998
+      "sum_seconds": 17457.529663073998
     }
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 3003,
-  "cpu_job_resource_samples": 1853,
+  "cpu_job_resource_receipt_files": 3605,
+  "cpu_job_resource_samples": 2455,
   "current_cpu_dispatch_options": {
-    "cold_workers": 1,
+    "cold_workers": 3,
     "workers": 3,
     "workers_by_stage": {
-      "calibration-predict:C01": 1,
-      "calibration-predict:C11": 1,
-      "mine": 1,
-      "predict:C00": 1,
-      "predict:C01": 1,
-      "predict:C11": 1,
-      "prepare-actions": 3
+      "calibration-predict:C01": 5,
+      "calibration-predict:C11": 4,
+      "mine": 4,
+      "predict:C00": 8,
+      "predict:C01": 6,
+      "predict:C11": 5,
+      "prepare-actions": 6
     }
   },
-  "current_durable_free_bytes": 185554997248,
+  "current_durable_free_bytes": 181166723072,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -227,7 +227,7 @@
   },
   "hours_by_stage": {
     "cold": 0.008107215804148433,
-    "event_mining": 0.6676361318138792,
+    "event_mining": 0.6778155834769362,
     "inference": 1.0130429561394145,
     "pilot": 0.045588012047780166,
     "upstream": 9.467127421661619
@@ -298,13 +298,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 130683,
+  "lease_count": 130897,
   "lease_status_counts": {
-    "complete": 130679,
+    "complete": 130893,
     "failed": 3,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 31.17516308625822,
+  "lifetime_v10_plus_v11_conservative_hours": 31.185342537921276,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -325,8 +325,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 11.867771165259626,
-  "new_study_measured_journal_hours": 11.201501737466842,
+  "new_study_gpu_lease_hours": 11.87795061692268,
+  "new_study_measured_journal_hours": 11.211681189129898,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T18:51:45.565119+00:00",
@@ -386,6 +386,36 @@
       "recorded_optimizer_leases": 2000,
       "seed": 20260918,
       "source": "44b6",
+      "stage": "event_mining"
+    },
+    {
+      "first_lease_started_utc": "2026-09-21T11:28:42.777023+00:00",
+      "gpu_lease_seconds": 28.224134820003428,
+      "last_lease_finished_utc": "2026-09-21T11:36:52.528393+00:00",
+      "lease_status_counts": {
+        "complete": 164
+      },
+      "observed_elapsed_seconds": 489.75137,
+      "pid": 28034,
+      "process_verified_alive": true,
+      "recorded_optimizer_leases": 164,
+      "seed": 314159,
+      "source": "6bba",
+      "stage": "event_mining"
+    },
+    {
+      "first_lease_started_utc": "2026-09-21T11:34:25.226149+00:00",
+      "gpu_lease_seconds": 8.421891167000922,
+      "last_lease_finished_utc": "2026-09-21T11:36:52.342328+00:00",
+      "lease_status_counts": {
+        "complete": 50
+      },
+      "observed_elapsed_seconds": 147.116179,
+      "pid": 64090,
+      "process_verified_alive": true,
+      "recorded_optimizer_leases": 50,
+      "seed": 20260918,
+      "source": "6bba",
       "stage": "event_mining"
     },
     {
@@ -695,5 +725,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-20T23:17:47.020198+00:00"
+  "updated_utc": "2026-09-21T11:36:55.179632+00:00"
 }

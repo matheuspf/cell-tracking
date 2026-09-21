@@ -1,8 +1,6 @@
-# Division reliability v11 — blocked
+# Division reliability v11 — running
 
-Actual status at 2026-09-20T23:17:47.271339+00:00: 4/4 C00 fits, 4/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
-
-The host-memory guard stopped 6bba/20260918 C11 at recorded update 321 when available RAM reached 9.950 GiB, below the registered 10 GiB floor. The durable checkpoint is update 294; 27 updates require replay. Recovery status: waiting_for_memory; interruption-specific replay check: pending_memory_admission. All closed GPU leases remain charged, and no unclosed lease required an extra charge. host_memory_interruption.json contains preservation hashes, the resource trigger and recovery evidence. Restart admission requires at least 18.5 GiB of idle available host RAM for 60 seconds, plus no existing owner. This is a measured restart buffer; the active-worker floor remains 10 GiB. Completion ETA is unresolved while memory blocks training.
+Actual status at 2026-09-21T11:36:55.413392+00:00: 4/4 C00 fits, 4/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -14,11 +12,15 @@ C01/C11 independently edit their own C00 graph. Their comparison tests practical
 
 The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.
 
-New v11 GPU lease accounting: 11.8678 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
+New v11 GPU lease accounting: 11.8780 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
 
 Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.
 
 Source engineering proofs are actual executions, not retained model scores. They include batch-eight optimizer updates, exact resume, mixed 32-group compact gradients, native crop parity, complete source graphs, and official true/false-fork witnesses. The 250-update pilots produced excessive detections and almost no links; those failures are retained. Early pilot witnesses bypassed the global 2% cap. Later witnesses on retained C00 graphs use the registered solver and cap. Both kinds use labels to choose diagnostic edits and are not learned policies or achievable score bounds. Runtime tests and planning contracts are not evidence of trained accuracy.
+
+The host-memory guard stopped 6bba/20260918 C11 at recorded update 321 when available RAM reached 9.950 GiB, below the registered 10 GiB floor. The checkpoint preserved at the interruption is update 294; 27 recorded updates require replay on recovery. Recovery status: recovered; interruption-specific replay check: passed. All closed GPU leases remain charged, and no unclosed lease required an extra charge. host_memory_interruption.json contains preservation hashes, the resource trigger and recovery evidence. Recovery compared all 27 replayed update records exactly for samples, losses, gradients, learning rates and denominators. Timing and observation-cache occupancy are excluded. No checkpoint existed at the last compared update, so this does not establish model tensor equality there.
+
+At 2026-09-21T11:29:55.724287+00:00, the provisional remaining wall-time estimate was 48–72 hours. It assumes uninterrupted execution, enough host memory for qualified concurrency, and target graph costs comparable to measured source passes. Target throughput has not yet been measured. runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.
 
 A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.
 
@@ -48,5 +50,3 @@ The resume proof is a fresh-process 10+10 versus uninterrupted 20-update compari
 Current next decision: Finish the locked matrix using the existing owners/checkpoints; do not select a new model from partial source or target outcomes.
 
 No merge, Kaggle submission, weight publication, all-data refit or unrelated handover study was launched.
-
-1 unresolved stage failure/blocker receipt(s) are listed in STATUS.json; missing metrics have not been replaced by C00 or P0 values.

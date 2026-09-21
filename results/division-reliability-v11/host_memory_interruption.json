@@ -1,5 +1,5 @@
 {
-  "all_compared_fields_exact": null,
+  "all_compared_fields_exact": true,
   "checkpoint": {
     "all_state_present": true,
     "bank_identity": "40a21090fc63d355c9eb8647df9d8eff7fe2933031c194ff03a6a78c0c86db2e",
@@ -33,8 +33,25 @@
     "status": "durable_checkpoint_verified",
     "updates_to_replay": 27
   },
-  "current_available_gib": 12.901893615722656,
+  "comparison_fields": [
+    "denominators",
+    "encoder_gradient_norm",
+    "gradient_norm",
+    "losses",
+    "lr",
+    "selection",
+    "step",
+    "unique_group_visits"
+  ],
+  "current_available_gib": 50.77650451660156,
+  "different_fields": [],
   "durable_checkpoint_update": 294,
+  "excluded_fields": [
+    "gpu_lease_seconds",
+    "io_seconds",
+    "observation_cache_bytes",
+    "observation_cache_clips"
+  ],
   "frozen_reference_files_unchanged": true,
   "interrupted_utc": "2026-09-20T23:04:52.372179+00:00",
   "last_recorded_update": 321,
@@ -117,9 +134,14 @@
     "v10_artifacts_checked": 107,
     "v10_changed": []
   },
-  "previous_resume_proofs": "production_resume.json and validation.json retain the already executed upstream and mixed compact fresh-process proofs. The new 27-update interruption replay has not yet run.",
-  "replay_status": "pending_memory_admission",
-  "replayed_updates_compared": 0,
+  "previous_resume_proofs": "production_resume.json and validation.json retain upstream and mixed compact fresh-process proofs. This recovery also compares the 27 replayed production update records.",
+  "recovered_utc": "2026-09-21T11:35:45.910260+00:00",
+  "recovery_observed_utc": "2026-09-21T11:36:52.759963+00:00",
+  "replay_receipt_private_path": "checks/host_memory_20260921/replayed_history.json",
+  "replay_receipt_sha256": "50cf2ac4c9c90b74c165a8840ceec55b345801843c7aa738c9fc639aaf24683a",
+  "replay_scope": "Exact recorded scientific update fields; no tensor checkpoint existed at update 321.",
+  "replay_status": "passed",
+  "replayed_updates_compared": 27,
   "resource_reconciliation": {
     "additional_conservative_charge_seconds": 0.0,
     "charged_seconds": 65.882457631953,
@@ -139,7 +161,51 @@
     "scope": "Conservative restart admission for one compact trainer, using the measured 5.018 GiB process peak, a 25% margin, controller overhead and spare headroom. The registered active-worker host floor remains 10 GiB.",
     "stable_seconds": 60
   },
+  "resume_admission_measurements": {
+    "minimum_available_gib": 50.593074798583984,
+    "no_existing_study_owner": true,
+    "observations": 7,
+    "observed_seconds": 60.11464391200002,
+    "status": "qualified"
+  },
+  "resume_admission_receipt_sha256": "6c4ae4c1bbd06bc794eddb485f0fc8bba0d18a032a36e0dbd185354f49906bcc",
   "resume_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 run --workers 3",
+  "resume_requested_utc": "2026-09-21T11:28:08.144195+00:00",
+  "resumed_concurrency_admission_sha256": "c58155c573e59fc63712e0d3a39e18605ba66294790199a9c90368c291781ec3",
+  "resumed_dispatch": {
+    "compact_prefix_reserve_gib": 8,
+    "extra_host_buffer_gib": 2,
+    "host_available_floor_gib": 10,
+    "idle_available_gib": 50.77650451660156,
+    "options": {
+      "cold_workers": 3,
+      "workers": 3,
+      "workers_by_stage": {
+        "calibration-predict:C01": 5,
+        "calibration-predict:C11": 4,
+        "mine": 4,
+        "predict:C00": 8,
+        "predict:C01": 6,
+        "predict:C11": 5,
+        "prepare-actions": 6
+      }
+    },
+    "projected_study_rss_gib": {
+      "calibration-predict:C01": 34,
+      "calibration-predict:C11": 34.0,
+      "cold": 23.5,
+      "mine": 34.0,
+      "predict:C00": 30.845509999999997,
+      "predict:C01": 31,
+      "predict:C11": 38.5,
+      "prepare-actions": 36.227872500000004,
+      "two_compact_trainers": 17
+    },
+    "scope": "Dispatch only; frozen numerical code, registered model recipes and horizons unchanged.",
+    "status": "qualified",
+    "study_rss_ceiling_gib": 44,
+    "utc": "2026-09-21T11:28:08.140866+00:00"
+  },
   "scientific_changes": false,
   "seed": 20260918,
   "source": "6bba",
@@ -176,7 +242,7 @@
     "source": "6bba"
   },
   "stage": "train-compact",
-  "status": "waiting_for_memory",
+  "status": "recovered",
   "target_scores_opened": false,
   "trigger": {
     "exit_code": -15,

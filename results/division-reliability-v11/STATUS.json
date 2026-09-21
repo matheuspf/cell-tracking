@@ -9,28 +9,7 @@
     "resources": "resource.json",
     "training": "training_summary.json"
   },
-  "blocked_stages": [
-    {
-      "arm": null,
-      "clip": null,
-      "exit_code": -15,
-      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "resource_violation": {
-        "durable_free_bytes": 185674973184,
-        "durable_free_min_bytes": 185671479296,
-        "host_available_bytes": 10683490304,
-        "host_available_min_bytes": 10683490304,
-        "study_rss_bytes": 5451399168,
-        "study_rss_peak_bytes": 5451399168,
-        "utc": "2026-09-20T23:04:52.052146+00:00",
-        "worker_rss_peak_bytes": 5388050432
-      },
-      "seed": 20260918,
-      "source": "6bba",
-      "stage": "train-compact",
-      "status": "failed"
-    }
-  ],
+  "blocked_stages": [],
   "clean_provenance_passed": false,
   "cold_inference_passed": false,
   "compact_completed_cells": 2,
@@ -41,23 +20,26 @@
   "next_command": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 report",
   "pooled_095_milestone_reached": false,
   "required_score_rows": 1194,
-  "resource_resume_precondition": {
-    "existing_owner_must_be_absent": true,
-    "minimum_idle_host_available_gib": 18.5,
-    "scope": "Conservative restart admission for one compact trainer, using the measured 5.018 GiB process peak, a 25% margin, controller overhead and spare headroom. The registered active-worker host floor remains 10 GiB.",
-    "stable_seconds": 60
-  },
   "resume_command_when_no_existing_owner": "PYTHONNOUSERSITE=1 PYTHONPATH=tools:. CUBLAS_WORKSPACE_CONFIG=:4096:8 /kaggle/envs/cell-tracking-annotation-selection-v1/bin/python -m division_reliability_v11 run --workers 3",
   "resume_proof": "Fresh-process 10+10 updates equal uninterrupted 20 updates, including optimizer/sampler/CPU+CUDA RNG and losses; compact mixed update replay also exact.",
   "scored": false,
-  "status": "blocked",
+  "status": "running",
   "strong_095_milestone_reached": false,
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-20T23:17:47.271339+00:00",
+  "updated_utc": "2026-09-21T11:36:55.413392+00:00",
   "upstream_completed_cells": 4,
   "upstream_reused_cells": [],
-  "verified_active_processes": [],
+  "verified_active_processes": [
+    {
+      "pid": 26855,
+      "role": "pipeline/controller_pid"
+    },
+    {
+      "pid": 28000,
+      "role": "head-prefetch/6bba/314159"
+    }
+  ],
   "weights_published": false
 }
