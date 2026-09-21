@@ -96,6 +96,10 @@ and observation-cache occupancy were excluded. `host_memory_interruption.json`
 records the actual recovery, admission measurements and comparison fields.
 Neither production replay comparison asserts tensor equality at a step where
 no pre-interruption tensor checkpoint existed.
+The September 21 host restart interrupted CPU calibration after the third C11
+final. `host_restart_20260921.json` records eight verified neural states, seven
+complete calibration caches reused unchanged by the resumed queue, 48 preserved
+mining clips, and the restarted source workers. No optimizer updates were lost.
 
 After an upstream final is retained, validate its full sampling history, finite
 losses and weights, final checkpoint equality, and optimizer charge accounting:

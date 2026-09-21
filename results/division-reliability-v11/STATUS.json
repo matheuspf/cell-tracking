@@ -4,6 +4,7 @@
   "artifacts": {
     "exposure": "exposure_manifest.json",
     "interpretation": "interpretation.json",
+    "latest_host_restart": "host_restart_20260921.json",
     "predictions": "prediction_manifest.json",
     "resource_interruption": "host_memory_interruption.json",
     "resources": "resource.json",
@@ -28,12 +29,12 @@
   "submitted_to_kaggle": false,
   "target_freeze_passed": false,
   "trained": false,
-  "updated_utc": "2026-09-21T17:08:53.351274+00:00",
+  "updated_utc": "2026-09-21T17:49:00.279194+00:00",
   "upstream_completed_cells": 4,
   "upstream_reused_cells": [],
   "verified_active_processes": [
     {
-      "pid": 26855,
+      "pid": 21275,
       "role": "pipeline/controller_pid"
     }
   ],

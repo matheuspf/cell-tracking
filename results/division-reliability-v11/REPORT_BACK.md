@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-21T17:08:53.351274+00:00: 4/4 C00 fits, 4/4 C01 fits and 3/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-21T17:49:00.279194+00:00: 4/4 C00 fits, 4/4 C01 fits and 3/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -27,6 +27,8 @@ A midpoint mining implementation failure exposed a TF32 singleton-reference disc
 An optional bounded source-mining overlap launch omitted CUBLAS_WORKSPACE_CONFIG=:4096:8. Deterministic-mode checks stopped 6 clip workers before any complete mining result. The main fit continued; failed attempts retained 80 closed leases totaling 3.050835 seconds, all charged. Recovery status: recovered. The corrected launcher uses the registered environment with unchanged midpoint, banks and numerical code. mining_overlap_environment_repair.json records the preserved failures, lease status breakdown and subsequent execution checks.
 
 A host restart interrupted the fourth upstream fit and source clip workers. Preserved state resumed at update 5958; 213 replayed update records were compared with their pre-interruption records, with exact agreement True for samples, group selections, learning rates, loss components and gradient norms. There was no checkpoint at the last compared update, so this comparison does not establish model tensor equality there. The unclosed GPU lease was conservatively charged 60 seconds. Complete clip receipts were verified and reused; incomplete clips restarted from unchanged parents. host_restart_resume.json records the preservation hashes and tested recovery.
+
+The host boot at 2026-09-21T17:32:33+00:00 followed a second interruption during source C01 calibration. All eight neural states passed hash verification: four C00 finals, three C11 finals and the final C11 midpoint. The preserved state includes 7 complete calibration caches, 48 complete final-seed mining clips and 7 interrupted CPU jobs. No optimizer updates were lost and no unclosed GPU lease required an additional charge. Recovery status: recovered. Exact CPU runtime after the last resource samples is unknown; host_restart_20260921.json preserves those timing limits, hashes and recovery checks.
 
 4/4 complete upstream artifacts passed full-history audits: every optimizer sample belongs to source-fit clip/time support, all recorded losses/gradients and retained weights are finite, and final weights exactly equal the final resumable model. The resource journal reconciles the retained trajectories plus 213 discarded update attempts. These artifact checks establish execution consistency, not predictive accuracy; validation.json retains the receipts.
 

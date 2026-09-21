@@ -417,6 +417,7 @@ def run():
     if (RESULTS/'host_restart_resume.json').exists():validation['host_restart_resume']=read(RESULTS/'host_restart_resume.json')
     if (RESULTS/'host_memory_interruption.json').exists():validation['host_memory_interruption']=read(RESULTS/'host_memory_interruption.json')
     if (RESULTS/'mining_overlap_environment_repair.json').exists():validation['mining_overlap_environment_repair']=read(RESULTS/'mining_overlap_environment_repair.json')
+    if (RESULTS/'host_restart_20260921.json').exists():validation['host_restart_20260921']=read(RESULTS/'host_restart_20260921.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')
@@ -485,6 +486,8 @@ def run():
         P0_modified=False,submitted_to_kaggle=False,weights_published=False)
     if memory:
         status['artifacts']['resource_interruption']='host_memory_interruption.json'
+    if (RESULTS/'host_restart_20260921.json').exists():
+        status['artifacts']['latest_host_restart']='host_restart_20260921.json'
     if waiting_for_memory:
         status['resource_resume_precondition']=memory['resume_admission']
         status['next_command']=command+' report'
@@ -535,6 +538,14 @@ def run():
     if (RESULTS/'host_restart_resume.json').exists():
         restart=read(RESULTS/'host_restart_resume.json')
         lines += [f'A host restart interrupted the fourth upstream fit and source clip workers. Preserved state resumed at update {restart["checkpoint_step"]}; {restart["replayed_updates_compared"]} replayed update records were compared with their pre-interruption records, with exact agreement {restart["all_compared_fields_exact"]} for samples, group selections, learning rates, loss components and gradient norms. There was no checkpoint at the last compared update, so this comparison does not establish model tensor equality there. The unclosed GPU lease was conservatively charged {restart["conservative_unclosed_lease_seconds"]:g} seconds. Complete clip receipts were verified and reused; incomplete clips restarted from unchanged parents. host_restart_resume.json records the preservation hashes and tested recovery.', '']
+    if (RESULTS/'host_restart_20260921.json').exists():
+        restart=read(RESULTS/'host_restart_20260921.json')
+        lines += [f'The host boot at {restart["boot_utc"]} followed a second interruption during source C01 calibration. '
+            f'All eight neural states passed hash verification: four C00 finals, three C11 finals and the final C11 midpoint. '
+            f'The preserved state includes {len(restart["complete_source_calibration_caches"])} complete calibration caches, '
+            f'{len(restart["complete_last_seed_mining_clips"])} complete final-seed mining clips and {len(restart["interrupted_jobs"])} interrupted CPU jobs. '
+            f'No optimizer updates were lost and no unclosed GPU lease required an additional charge. Recovery status: {restart["status"]}. '
+            'Exact CPU runtime after the last resource samples is unknown; host_restart_20260921.json preserves those timing limits, hashes and recovery checks.','']
     upstream_audits=validation['retained_upstream_final_audits']
     if upstream_audits:
         lines += [f'{len(upstream_audits)}/4 complete upstream artifacts passed full-history audits: every optimizer sample belongs to source-fit clip/time support, all recorded losses/gradients and retained weights are finite, and final weights exactly equal the final resumable model. The resource journal reconciles the retained trajectories plus {sum(r["discarded_update_attempts"] for r in upstream_audits)} discarded update attempts. These artifact checks establish execution consistency, not predictive accuracy; validation.json retains the receipts.', '']
