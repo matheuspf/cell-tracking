@@ -426,6 +426,8 @@ def run():
     validation['retained_compact_final_audits']=[read(p) for p in sorted((WORK/'checks/compact_final').glob('*/*/receipt.json'))]
     validation['retained_upstream_final_audits']=[read(p) for p in sorted((WORK/'checks/upstream_final').glob('*/*/receipt.json'))]
     validation['complete_mining_and_resume_audits']=[read(p) for p in sorted((WORK/'checks/mining_complete').glob('*/*/receipt.json'))]
+    if (RESULTS/'full_post_mining_validation.json').exists():
+        validation['full_post_mining_revalidation']=read(RESULTS/'full_post_mining_validation.json')
     if (WORK/'checks/target_gate.json').exists():validation['target_access_gate']=read(WORK/'checks/target_gate.json')
     if (WORK/'checks/retained_witness/receipt.json').exists():
         control=read(WORK/'checks/retained_witness/receipt.json')

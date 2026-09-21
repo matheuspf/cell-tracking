@@ -128,6 +128,10 @@ This verifies every selected negative group's sparse support, the unchanged
 midpoint and bank hashes, all clip receipts, and recorded hard-slot draws and
 their selection probabilities. It preserves the first observed resume snapshot;
 reruns recheck the current artifacts while retaining that original timestamp.
+Rerunning this command after a final fit checks all 2,000 post-mining updates
+and 8,000 hard-negative draws. `full_post_mining_validation.json` records those
+fresh executions, the complete-history hashes, and preservation of the earlier
+receipts; it remains partial until all four final histories have passed.
 
 After a compact final is retained, audit every recorded update and compare its
 weights with the final resumable checkpoint:
