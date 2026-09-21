@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-21T14:25:28.200383+00:00: 4/4 C00 fits, 4/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-21T15:52:13.173233+00:00: 4/4 C00 fits, 4/4 C01 fits and 2/4 C11 fits complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -12,7 +12,7 @@ C01/C11 independently edit their own C00 graph. Their comparison tests practical
 
 The upstream training adapter uses annotation-matched proposal queries for supported incoming groups; complete inference uses dense detections. This leaves a training/inference attention-context difference. Low-intensity background masks are heuristics, not certification that unannotated voxels contain no cells. Full source mask audits and detector-collapse witnesses are retained.
 
-New v11 GPU lease accounting: 12.1335 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
+New v11 GPU lease accounting: 12.2310 hours, including measured failures and conservative early-pilot allowances. Historical v10 accounting is separate: 19.3074 hours, including an 8.4-hour unobserved-tail upper bound that may include idle time. Raw telemetry, private logs, checkpoints, arrays and complete predictions stay in work/division-reliability-v11/.
 
 Resource reporting separates original prediction/bank timings, optimizer lease intervals and later cache-reuse process times. Some original controller wall-time receipts were overwritten during the first restart; their exact process durations are unavailable. All GPU lease charges remain accounted for. Optimizer intervals measured from the journal exclude startup and final serialization, so they are reported as observed intervals, not complete process wall times.
 
@@ -23,6 +23,8 @@ The host-memory guard stopped 6bba/20260918 C11 at recorded update 321 when avai
 At 2026-09-21T11:29:55.724287+00:00, the provisional remaining wall-time estimate was 48–72 hours. It assumes uninterrupted execution, enough host memory for qualified concurrency, and target graph costs comparable to measured source passes. Target throughput has not yet been measured. runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.
 
 A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.
+
+An optional bounded source-mining overlap launch omitted CUBLAS_WORKSPACE_CONFIG=:4096:8. Deterministic-mode checks stopped 6 clip workers before any complete mining result. The main fit continued; failed attempts retained 80 closed leases totaling 3.050835 seconds, all charged. Recovery status: recovered. The corrected launcher uses the registered environment with unchanged midpoint, banks and numerical code. mining_overlap_environment_repair.json records the preserved failures, lease status breakdown and subsequent execution checks.
 
 A host restart interrupted the fourth upstream fit and source clip workers. Preserved state resumed at update 5958; 213 replayed update records were compared with their pre-interruption records, with exact agreement True for samples, group selections, learning rates, loss components and gradient norms. There was no checkpoint at the last compared update, so this comparison does not establish model tensor equality there. The unclosed GPU lease was conservatively charged 60 seconds. Complete clip receipts were verified and reused; incomplete clips restarted from unchanged parents. host_restart_resume.json records the preservation hashes and tested recovery.
 

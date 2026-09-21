@@ -512,6 +512,38 @@
       "target_metrics_opened": false,
       "unknown_used_as_negative": false,
       "utc": "2026-09-20T18:55:40.166580+00:00"
+    },
+    {
+      "all_selected_groups_verified_supported_negative": true,
+      "complete_source_fit_clips": 107,
+      "complete_supported_negative_pool": 86898,
+      "complete_unique_forks": 1689494901,
+      "enumerated_parent_groups": 5931060,
+      "final_model_result": false,
+      "first_post_mining_update": 2001,
+      "frozen_checkpoint_sha256": "6658403002ec9510faa71185fdf06a39b2ae2f1557cebb4a69e4ba0574b377d5",
+      "guard": {
+        "denied": 0,
+        "installed_before_numerical": true,
+        "network_denied": 0,
+        "subprocess_denied": 0
+      },
+      "last_post_mining_update": 2102,
+      "merged_mining_receipt_sha256": "a9d708e58447af8a55b90ae559831246c4dc4e72615ce54596b025c66fad4b30",
+      "mining_passes": 1,
+      "observed_hard_slots_verified_against_merged_pool": true,
+      "post_mining_resume_observed": true,
+      "post_mining_updates_observed": 102,
+      "registered_mixed_denominators_exact": true,
+      "sampled_embedding_parity_max_absolute_difference": 2.384185791015625e-07,
+      "sampled_embedding_parity_tolerance": 1e-05,
+      "seed": 20260918,
+      "selected_supported_negative_groups": 27327,
+      "source": "6bba",
+      "status": "passed",
+      "target_metrics_opened": false,
+      "unknown_used_as_negative": false,
+      "utc": "2026-09-21T15:35:33.976522+00:00"
     }
   ],
   "controller_archive_reuse": {
@@ -1015,6 +1047,158 @@
     "finished_utc": "2026-09-19T22:50:22.725978+00:00",
     "status": "passed",
     "synthetic_contract_only": true
+  },
+  "mining_overlap_environment_repair": {
+    "accounting_clarification": "The 80 closed leases belong to failed clip-worker attempts; individual lease statuses are separated here.",
+    "all_failure_leases_charged_in_journal": true,
+    "all_six_original_workers_passed_embedding_parity": true,
+    "bounded_overlap_admission_sha256": "07593a3a7778c4f9cf5c00fe016eeeaabda8c8690a4a22fd2f1ac853e56bf037",
+    "checkpoint_sha256": "7201e2d9ba20bd54e5b06dc9c5efe12caaa9fbe34b83fd1656065cddff5e0b66",
+    "completed_clip_results": 0,
+    "corrective_scope": "Launcher environment only; unchanged source banks, frozen midpoint, code, sampling and one-pass mining recipe.",
+    "failed_attempt_closed_leases": 80,
+    "failed_attempt_gpu_lease_seconds": 3.0508346329806955,
+    "failed_clip_workers": 6,
+    "failed_lease_seconds": 0.051411866003036266,
+    "lease_status_counts": {
+      "complete": 74,
+      "failed": 6
+    },
+    "main_training_interrupted": false,
+    "mining_parents_unchanged": true,
+    "original_failed_clips_with_complete_retry": 5,
+    "original_preservation_receipt_sha256": "da7f1cec9b6c19844a50de92f088072d4e9dc284ce873eb0d39ae05257116e19",
+    "preserved": [
+      {
+        "bytes": 5794,
+        "path": "controller/division_reliability_v11_mining_prefetch.py",
+        "sha256": "b666da1c7d57cba19e841e9eb44cba6876525693a16e89f5466835611118468c"
+      },
+      {
+        "bytes": 974,
+        "path": "controller/mining-prefetch-6bba-314159.json",
+        "sha256": "23b6f4637e0fcdb55f520c490a0806c7c4340a5f0def5284461af313c45ec810"
+      },
+      {
+        "bytes": 2893,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07477033.json",
+        "sha256": "a0b03204bc4da92a5975e68f818d1514fb0275c7a8a7bd482b427d23853a2a3f"
+      },
+      {
+        "bytes": 322,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07477033.resources.json",
+        "sha256": "c1a0e8497c4382993fb349a2142c2da2b6a8f95664d5a923723e50418d803363"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07477033.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      },
+      {
+        "bytes": 2893,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05b6850b.json",
+        "sha256": "69b3c231c12cb792bbbf6c3be1a185c24839c01a2652e6d4874ede584d86333d"
+      },
+      {
+        "bytes": 322,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05b6850b.resources.json",
+        "sha256": "28248c85d77d93b670934ca69d2d7cf98c1b56dd95dc80d16a9a33e1761a617e"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05b6850b.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      },
+      {
+        "bytes": 2893,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07e24132.json",
+        "sha256": "d44dc6fc15d035781d6d029407a33f670631c42edf7e315cf931ba3fb2cd18a6"
+      },
+      {
+        "bytes": 322,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07e24132.resources.json",
+        "sha256": "03d1e1e64917ba78cafea894e5693a92b1259c90e6ef1428f997046fd9b29359"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_07e24132.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      },
+      {
+        "bytes": 2892,
+        "path": "controller/jobs/mine-6bba-314159-6bba_085bf656.json",
+        "sha256": "88bb22ff4699172698b9677db7a4eb624fa8366a2df45d95ea559ef4585bcdce"
+      },
+      {
+        "bytes": 322,
+        "path": "controller/jobs/mine-6bba-314159-6bba_085bf656.resources.json",
+        "sha256": "3cbab1f456dbbe2966e421261be4fd42d537ecf40d4886dcfe81247922ee8953"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_085bf656.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      },
+      {
+        "bytes": 2892,
+        "path": "controller/jobs/mine-6bba-314159-6bba_062c8d37.json",
+        "sha256": "8738b675494276e4eb38e2f7374dd32376ebaaba2c1ba340e1589e3300a44761"
+      },
+      {
+        "bytes": 322,
+        "path": "controller/jobs/mine-6bba-314159-6bba_062c8d37.resources.json",
+        "sha256": "836ef3af11567660b081b399b5d61c13ed328f3cd37f820cf9bcbd4c86c68162"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_062c8d37.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      },
+      {
+        "bytes": 2892,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05db0fb1.json",
+        "sha256": "e0d9e46c48016b6bed7fb33d2587e01cb7d28f369b95c838aef115e1f8eeb181"
+      },
+      {
+        "bytes": 321,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05db0fb1.resources.json",
+        "sha256": "462f62345ae1d7109277a18d14c9fe9a7e44c3dae2b2856bd1f35485b2f89daa"
+      },
+      {
+        "bytes": 3158,
+        "path": "controller/jobs/mine-6bba-314159-6bba_05db0fb1.log",
+        "sha256": "4db371dec2e4ef7588aca161d5019cb3609f60ae287573e0e2ea03e60881aa3e"
+      }
+    ],
+    "reason": "Optional overlap launcher omitted CUBLAS_WORKSPACE_CONFIG; Torch deterministic-mode checks rejected CuBLAS execution.",
+    "recovered_completed_clips": 7,
+    "recovered_utc": "2026-09-21T15:52:09.984987+00:00",
+    "relaunch_verified_worker_environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "worker_count": 6
+    },
+    "relaunched_utc": "2026-09-21T15:41:25.353663+00:00",
+    "required_environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "retry_complete_clip_receipt_hashes": {
+      "6bba_05b6850b": "a2e4ae185532e150702c6966d9bf265705037770b1b06ee738423f6243aed815",
+      "6bba_062c8d37": "e420ec65c6f1950fd989f4a36a0570b36acfb7a4bc4f22b33f6362809844a10d",
+      "6bba_07477033": "2cb63ca898de35707b4b2a709a5e31fdc2a1d4cf099710a4da5f4f272abb7c00",
+      "6bba_07e24132": "420734112a5bf002bd1a070ef7b8623a4209a350123a8b0d079e589a22380509",
+      "6bba_085bf656": "8a3294bd2d32308a25b7c0c551a85ca60dc798453acc76740ed7e961a271640e",
+      "6bba_09961292": "ceb0a9ed3466df187cb556a2328197f7992f421bcac3ffddf7a2af924b707cc8",
+      "6bba_0e7c0d07": "ac33b03cdd83dc51ba3778b0e11e46904a71223281eba528662550523a7cd6b4"
+    },
+    "retry_embedding_parity_max_absolute_difference": 2.384185791015625e-07,
+    "retry_source_only": true,
+    "scientific_changes": false,
+    "seed": 314159,
+    "signature_sha256": "de25c37b5b8c2b49ea41918c3685056c4e56308fefe9787426e6ab8edc6be712",
+    "source": "6bba",
+    "status": "recovered",
+    "target_scores_opened": false,
+    "utc": "2026-09-21T15:40:32.267965+00:00"
   },
   "official_empty_graph_control": {
     "aggregate": {

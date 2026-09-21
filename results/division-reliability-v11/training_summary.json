@@ -453,15 +453,14 @@
     },
     {
       "compact": {
-        "durable_step": 2000,
         "history_summary": {
-          "actual_event_supervised_updates": 1600,
+          "actual_event_supervised_updates": 2049,
           "actual_identity_only_supervised_updates": 400,
           "eligible_group_denominator_totals": {
-            "consistency": 64000,
-            "identity": 38400,
-            "occurrence": 25600,
-            "ranking": 12800
+            "consistency": 78368,
+            "identity": 45584,
+            "occurrence": 32784,
+            "ranking": 16392
           },
           "first": {
             "denominators": {
@@ -484,7 +483,7 @@
             5.035449564937158e-06,
             0.009900990099009901
           ],
-          "history_sha256": "385e5e370e557bc8474675098988517d35135f2cb5ed17996d961df811bc62a4",
+          "history_sha256": "12baa48a2e8f6fdedb94dbbcf1965361f9b4976ec1988f27d2a27663ce53e9e1",
           "identity_prefix_scope": "Identity supervision with the separately logged label-free image consistency term.",
           "last": {
             "denominators": {
@@ -494,38 +493,38 @@
               "ranking": 8
             },
             "losses": {
-              "consistency": 3.633040021189249e-05,
-              "identity": 0.01437952594892522,
-              "occurrence": 0.4772410821169615,
-              "ranking": 0.6812167018651962
+              "consistency": 2.726607168668238e-05,
+              "identity": 0.023629440636341315,
+              "occurrence": 0.4463479397818446,
+              "ranking": 0.7147523760795593
             },
-            "lr": 0.00016284561214811367,
-            "step": 2000
+            "lr": 0.00010796070767522699,
+            "step": 2449
           },
           "objective_updates": {
-            "consistency": 2000,
-            "identity": 2000,
-            "occurrence": 1600,
-            "ranking": 1600
+            "consistency": 2449,
+            "identity": 2449,
+            "occurrence": 2049,
+            "ranking": 2049
           },
           "observation_cache_peak_bytes": 3455302157,
           "proposal_incoming_groups": 0,
           "query_fallback_batches": 0,
-          "recorded_updates": 2000,
+          "recorded_updates": 2449,
           "sampled_slot_totals": {
-            "hard": 6400,
-            "identity": 38400,
-            "negative": 6400,
-            "positive": 12800
+            "hard": 8196,
+            "identity": 45584,
+            "negative": 8196,
+            "positive": 16392
           },
           "supervised_incoming_groups": 0,
           "timing_scope": "Current resumable trajectory only. All attempts, failures, interrupted leases and repeated updates are charged separately by the append-only journal in resource.json.",
           "totals": {
-            "gpu_lease_seconds": 342.4715680399854,
-            "input_seconds": 19.514716932971623
+            "gpu_lease_seconds": 422.19534971103303,
+            "input_seconds": 25.68098145891736
           },
           "uniform_hard_slot_fallback_groups": 6400,
-          "unique_group_visits": 42883,
+          "unique_group_visits": 50369,
           "unique_group_visits_scope": "Distinct (sampling slot, clip, group key); one parent may appear in uniform and hard slots."
         },
         "horizon": 4000,
@@ -535,29 +534,29 @@
           "recorded_updates": 27,
           "scope": "Discarded updates beyond a durable checkpoint. These attempts remain charged in resource.json; they are excluded from the current trajectory history and final checkpoint cumulative charge."
         },
-        "process_verified_alive": false,
+        "mined": true,
+        "pid": 523123,
+        "process_verified_alive": true,
         "resume": {
-          "bytes": 4579267,
-          "durable_step": 2000,
-          "file_creation_to_last_write_seconds": 0.014962132,
+          "bytes": 4920259,
+          "durable_step": 2425,
+          "file_creation_to_last_write_seconds": 0.02625924,
           "lock_identity": "6968fdbb5fe2799da195d2702bf06eab118bc4196c15385875ec33e69fc8eb6d",
           "optimizer_present": true,
           "path": "work/division-reliability-v11/fits/6bba/20260918/compact/resume.pt",
           "sampler_and_rng_present": true,
           "scheduler": {
             "horizon": 4000,
-            "step": 2000
+            "step": 2425
           },
           "seed": 20260918,
-          "sha256": "6658403002ec9510faa71185fdf06a39b2ae2f1557cebb4a69e4ba0574b377d5",
+          "sha256": "66eac5852ef3984df0745c614e03e4fe3028f250dd5230d8e28e65bc03c17da2",
           "source": "6bba",
           "write_timing_scope": "Linux creation/mtime window of the latest atomic checkpoint; excludes state capture, close, directory sync and disk flush latency"
         },
-        "seed": 20260918,
-        "source": "6bba",
-        "status": "waiting_for_mining",
-        "step": 2000,
-        "updated_utc": "2026-09-21T12:55:35.203217+00:00"
+        "status": "running",
+        "step": 2449,
+        "updated_utc": "2026-09-21T15:52:10.330863+00:00"
       },
       "linear": {
         "census": {
