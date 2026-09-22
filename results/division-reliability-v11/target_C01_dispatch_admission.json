@@ -1,0 +1,22 @@
+{
+  "additional_external_activity_reserve_gib": 9,
+  "controller_allowance_gib": 1,
+  "existing_hard_resource_guards_unchanged": true,
+  "external_activity_reserve_basis": "Covers the approximately 8.8 GiB non-study process observed during source calibration on this boot",
+  "extra_host_buffer_gib": 2,
+  "host_floor_gib": 10,
+  "minimum_estimated_available_without_study_gib": 49.63888168334961,
+  "previous_options_sha256": "3ff025eac9ed0d6ae3d8e101deeee81113196e99d2206d4ccaef2f6d7bf3f4b6",
+  "previous_workers": 6,
+  "private_receipt_sha256": "724aa59ae1c25564761819f7a3aa186ac7d069fe721a1bb90dfd6ac99b637f3c",
+  "projected_study_rss_gib": 28.94166088104248,
+  "proposed_workers": 7,
+  "reserve_factor": 1.25,
+  "scientific_changes": false,
+  "stage": "predict:C01",
+  "status": "not_admitted",
+  "study_rss_limit_gib": 44,
+  "utc": "2026-09-22T00:06:11.837385+00:00",
+  "worker_peak_gib": 3.1933326721191406,
+  "worker_reserve_gib": 3.991665840148926
+}

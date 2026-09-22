@@ -146,15 +146,26 @@
       "sum_seconds": 56846.427320558985
     },
     "predict/C00/target": {
-      "executions": 24,
+      "executions": 128,
       "maximum_seconds": 72.97397056699992,
-      "median_seconds": 68.11095332999867,
-      "minimum_seconds": 65.54234009300126,
-      "p95_seconds": 70.5867893249997,
+      "median_seconds": 67.09423443200103,
+      "minimum_seconds": 63.79724847199759,
+      "p95_seconds": 70.92166973399799,
       "status_counts": {
-        "complete": 24
+        "complete": 128
       },
-      "sum_seconds": 1642.9053096489915
+      "sum_seconds": 8627.663588691972
+    },
+    "predict/C01/target": {
+      "executions": 12,
+      "maximum_seconds": 349.3753774830002,
+      "median_seconds": 181.03418410199993,
+      "minimum_seconds": 87.0843368220012,
+      "p95_seconds": 349.3753774830002,
+      "status_counts": {
+        "complete": 12
+      },
+      "sum_seconds": 2621.5278902760037
     },
     "prepare-actions/calibration": {
       "executions": 216,
@@ -215,8 +226,8 @@
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 4879,
-  "cpu_job_resource_samples": 3729,
+  "cpu_job_resource_receipt_files": 4993,
+  "cpu_job_resource_samples": 3843,
   "current_cpu_dispatch_options": {
     "cold_workers": 3,
     "workers": 3,
@@ -230,7 +241,7 @@
       "prepare-actions": 6
     }
   },
-  "current_durable_free_bytes": 158070198272,
+  "current_durable_free_bytes": 157192474624,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -239,7 +250,7 @@
   "hours_by_stage": {
     "cold": 0.008107215804148433,
     "event_mining": 1.2956017344460964,
-    "inference": 1.1214291268906067,
+    "inference": 1.2923275693814518,
     "pilot": 0.045588012047780166,
     "upstream": 9.467127421661619
   },
@@ -309,13 +320,13 @@
     }
   },
   "job_wall_time_scope": "Elapsed process time including input/output, CPU work and GPU waiting. Sums overlap for concurrent jobs and are not campaign duration. Distinct verified-cache reuse executions remain included; identical archived receipts are deduplicated. p95 uses nearest rank.",
-  "lease_count": 160780,
+  "lease_count": 180035,
   "lease_status_counts": {
-    "complete": 160770,
+    "complete": 180025,
     "failed": 9,
     "unclosed_lease_conservatively_charged": 1
   },
-  "lifetime_v10_plus_v11_conservative_hours": 31.911514859641628,
+  "lifetime_v10_plus_v11_conservative_hours": 32.08241330213247,
   "limits": {
     "checkpoint_every_minutes": 5,
     "checkpoint_every_updates": 250,
@@ -336,8 +347,8 @@
     "total_device_limit_gib": 20
   },
   "maximum_lease_seconds": 60.0,
-  "new_study_gpu_lease_hours": 12.604122938643034,
-  "new_study_measured_journal_hours": 11.937853510850251,
+  "new_study_gpu_lease_hours": 12.775021381133879,
+  "new_study_measured_journal_hours": 12.108751953341097,
   "optimizer_execution_windows": [
     {
       "first_lease_started_utc": "2026-09-20T18:51:45.565119+00:00",
@@ -553,11 +564,11 @@
   "optimizer_window_scope": "First recorded optimizer lease through last closed optimizer lease in each production process. Includes inter-lease waiting; excludes startup, final serialization and time outside that interval. Active runs are partial. Lease counts include failures/replays and are not durable update counts.",
   "original_prediction_wall_time": {
     "C00/44b6/20260918": {
-      "completed_clips": 95,
+      "completed_clips": 199,
       "maximum_seconds": 281.39657179200003,
-      "median_seconds": 244.5328204239995,
-      "p95_seconds": 279.9196566319988,
-      "sum_seconds": 18845.985609536016
+      "median_seconds": 66.24293244600267,
+      "p95_seconds": 268.79679393400147,
+      "sum_seconds": 25603.82631948902
     },
     "C00/44b6/314159": {
       "completed_clips": 71,
@@ -579,6 +590,13 @@
       "median_seconds": 62.49441452850033,
       "p95_seconds": 79.46203914000216,
       "sum_seconds": 8332.781562316999
+    },
+    "C01/44b6/20260918": {
+      "completed_clips": 12,
+      "maximum_seconds": 347.49098633700123,
+      "median_seconds": 178.91691430799983,
+      "p95_seconds": 347.49098633700123,
+      "sum_seconds": 2597.007821207997
     }
   },
   "original_source_bank_wall_time": {
@@ -637,6 +655,26 @@
       "median_seconds": 223.56116638299864,
       "p95_seconds": 482.8714932309995,
       "sum_seconds": 26730.284517937
+    }
+  },
+  "original_target_prediction_wall_time": {
+    "C00/44b6/20260918": {
+      "completed_clips": 128,
+      "maximum_seconds": 70.40826913199999,
+      "mean_seconds": 65.22403569376567,
+      "median_seconds": 64.85659478749767,
+      "minimum_seconds": 61.28153383899917,
+      "p95_seconds": 68.55654970199976,
+      "sum_seconds": 8348.676568802006
+    },
+    "C01/44b6/20260918": {
+      "completed_clips": 12,
+      "maximum_seconds": 347.49098633700123,
+      "mean_seconds": 216.41731843399975,
+      "median_seconds": 178.91691430799983,
+      "minimum_seconds": 84.75170163299845,
+      "p95_seconds": 347.49098633700123,
+      "sum_seconds": 2597.007821207997
     }
   },
   "pre_journal_accounting": {
@@ -760,11 +798,12 @@
   "source_bank_timing_scope": "One original preparation per completed clip, excluding verified-cache reuse. Includes enumeration, crops, labels and full source scoring; sums overlap for concurrent clips.",
   "study_cpu_rss_peak_bytes": 38490300416,
   "study_host_available_min_bytes": 10683490304,
+  "target_prediction_timing_scope": "Only excluded-target clips and original retained prediction receipts. C00 starts from images; C01/C11 include verified shared-C00 loading and the full policy pass. Cold runs separately measure raw image-to-CSV execution. Partial populations can favor faster clips; concurrent durations overlap.",
   "timing_scope": {
     "checkpoint": "Latest closed-file creation-to-last-write samples in training_summary.json; early overwritten checkpoints are not retrospectively timed",
     "input_io": "Measured separately in optimizer histories and training_summary.json",
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-21T23:43:36.575160+00:00"
+  "updated_utc": "2026-09-22T00:07:08.918123+00:00"
 }

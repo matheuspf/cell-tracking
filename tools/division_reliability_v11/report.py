@@ -163,14 +163,19 @@ def resources():
         bank_times[key].append(r['wall_seconds'])
     bank_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),median_seconds=median(v),
         p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v)) for k,v in sorted(bank_times.items())}
-    prediction_times=defaultdict(list)
+    prediction_times=defaultdict(list);target_prediction_times=defaultdict(list)
     for p in (WORK/'predictions').glob('*/*/*/*/receipt.json'):
         r=read(p)
         if r.get('status')!='predicted_unscored':continue
         label='/'.join(p.relative_to(WORK/'predictions').parts[:3])
         prediction_times[label].append(r['wall_seconds'])
+        target='6bba' if r['source']=='44b6' else '44b6'
+        if r['dataset'].startswith(target+'_'):target_prediction_times[label].append(r['wall_seconds'])
     prediction_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),median_seconds=median(v),
         p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v)) for k,v in sorted(prediction_times.items())}
+    target_prediction_summary={k:dict(completed_clips=len(v),sum_seconds=sum(v),mean_seconds=sum(v)/len(v),
+        minimum_seconds=min(v),median_seconds=median(v),p95_seconds=sorted(v)[ceil(.95*len(v))-1],maximum_seconds=max(v))
+        for k,v in sorted(target_prediction_times.items())}
     # Stable prediction receipts and the append-only lease journal survive a
     # controller's verified-cache reuse. Do not mistake the short reuse process
     # for the original optimizer or image-to-graph execution.
@@ -199,6 +204,8 @@ def resources():
         completed_job_wall_time=job_summary,
         original_source_bank_wall_time=bank_summary,
         original_prediction_wall_time=prediction_summary,
+        original_target_prediction_wall_time=target_prediction_summary,
+        target_prediction_timing_scope='Only excluded-target clips and original retained prediction receipts. C00 starts from images; C01/C11 include verified shared-C00 loading and the full policy pass. Cold runs separately measure raw image-to-CSV execution. Partial populations can favor faster clips; concurrent durations overlap.',
         optimizer_execution_windows=optimizer_windows,
         optimizer_window_scope='First recorded optimizer lease through last closed optimizer lease in each production process. Includes inter-lease waiting; excludes startup, final serialization and time outside that interval. Active runs are partial. Lease counts include failures/replays and are not durable update counts.',
         prediction_timing_scope='One original retained prediction receipt per clip/arm, excluding verified-cache reuse. Source and target populations share each arm/source/seed key. Concurrent durations overlap; sums are not campaign duration.',
