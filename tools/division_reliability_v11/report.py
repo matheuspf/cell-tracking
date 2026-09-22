@@ -430,6 +430,8 @@ def run():
     if (RESULTS/'mining_overlap_environment_repair.json').exists():validation['mining_overlap_environment_repair']=read(RESULTS/'mining_overlap_environment_repair.json')
     if (RESULTS/'host_restart_20260921.json').exists():validation['host_restart_20260921']=read(RESULTS/'host_restart_20260921.json')
     if (RESULTS/'target_launch.json').exists():validation['target_prediction_launch']=read(RESULTS/'target_launch.json')
+    if (RESULTS/'target_C01_dispatch_admission.json').exists():validation['initial_target_C01_dispatch_admission']=read(RESULTS/'target_C01_dispatch_admission.json')
+    if (RESULTS/'target_dispatch_requalification.json').exists():validation['target_dispatch_requalification']=read(RESULTS/'target_dispatch_requalification.json')
     if (WORK/'checks/source_attribution/receipt.json').exists():validation['source_attribution_execution']=read(WORK/'checks/source_attribution/receipt.json')
     if (WORK/'checks/cold_comparison.json').exists():validation['cold_comparison_contract']=read(WORK/'checks/cold_comparison.json')
     if (WORK/'checks/cold_dispatch.json').exists():validation['cold_dispatch_contract']=read(WORK/'checks/cold_dispatch.json')

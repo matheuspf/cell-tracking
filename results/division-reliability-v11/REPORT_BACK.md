@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-22T00:21:56.128325+00:00: 4/4 C00 fits, 4/4 C01 fits and 4/4 C11 fits complete; 162/1194 target predictions complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-22T00:53:23.705506+00:00: 4/4 C00 fits, 4/4 C01 fits and 4/4 C11 fits complete; 208/1194 target predictions complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 

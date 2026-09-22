@@ -1784,6 +1784,28 @@
     "status": "passed",
     "target_scores_opened": false
   },
+  "initial_target_C01_dispatch_admission": {
+    "additional_external_activity_reserve_gib": 9,
+    "controller_allowance_gib": 1,
+    "existing_hard_resource_guards_unchanged": true,
+    "external_activity_reserve_basis": "Covers the approximately 8.8 GiB non-study process observed during source calibration on this boot",
+    "extra_host_buffer_gib": 2,
+    "host_floor_gib": 10,
+    "minimum_estimated_available_without_study_gib": 49.63888168334961,
+    "previous_options_sha256": "3ff025eac9ed0d6ae3d8e101deeee81113196e99d2206d4ccaef2f6d7bf3f4b6",
+    "previous_workers": 6,
+    "private_receipt_sha256": "724aa59ae1c25564761819f7a3aa186ac7d069fe721a1bb90dfd6ac99b637f3c",
+    "projected_study_rss_gib": 28.94166088104248,
+    "proposed_workers": 7,
+    "reserve_factor": 1.25,
+    "scientific_changes": false,
+    "stage": "predict:C01",
+    "status": "not_admitted",
+    "study_rss_limit_gib": 44,
+    "utc": "2026-09-22T00:06:11.837385+00:00",
+    "worker_peak_gib": 3.1933326721191406,
+    "worker_reserve_gib": 3.991665840148926
+  },
   "mining_merge_contract": {
     "changed_identity_rejected": true,
     "complete_clip_merge_and_resume": true,
@@ -2842,6 +2864,53 @@
     "status": "passed",
     "target_scores_opened": false,
     "unresolved_matrix_freeze_rejected": true
+  },
+  "target_dispatch_requalification": {
+    "additional_external_activity_reserve_gib": 9,
+    "applies_to": "Sequential target prediction batches only; existing source and cold worker limits are unchanged.",
+    "controller_allowance_gib": 1,
+    "existing_hard_resource_guards_unchanged": true,
+    "external_activity_reserve_basis": "Retains the 9 GiB allowance for the approximately 8.8 GiB non-study process previously observed on this boot.",
+    "extra_host_buffer_gib": 2,
+    "host_floor_gib": 10,
+    "minimum_estimated_available_without_study_gib": 50.21090316772461,
+    "options_changed": true,
+    "previous_C01_nonadmission_sha256": "8fe1a43ec490ccef787632bba32034dacb87803446405ef75fc83ae2f8da7fc0",
+    "previous_options_sha256": "3ff025eac9ed0d6ae3d8e101deeee81113196e99d2206d4ccaef2f6d7bf3f4b6",
+    "private_receipt_sha256": "2ee499eefc95668f206610981fcaa0e37ed0d51f7439ecb33e562a44aa4ff090",
+    "qualification_basis": "New measurements after more than half of the first C01 target population; maximum source-or-target worker RSS retained for every model family.",
+    "reserve_factor": 1.25,
+    "resulting_options_sha256": "ffdefe189e02e32821c87155081be72025105a5a6ad4f8b903bb1d9c5ee502f4",
+    "scientific_changes": false,
+    "stages": [
+      {
+        "previous_workers": 6,
+        "projected_host_available_after_external_reserve_gib": 12.269242286682129,
+        "projected_study_rss_gib": 28.94166088104248,
+        "proposed_workers": 7,
+        "resource_receipt_count": 240,
+        "retained_workers": 7,
+        "stage": "predict:C01",
+        "status": "admitted",
+        "worker_peak_gib": 3.1933326721191406,
+        "worker_reserve_gib": 3.991665840148926
+      },
+      {
+        "previous_workers": 4,
+        "projected_host_available_after_external_reserve_gib": 11.512697219848633,
+        "projected_study_rss_gib": 29.698205947875977,
+        "proposed_workers": 5,
+        "resource_receipt_count": 122,
+        "retained_workers": 4,
+        "stage": "predict:C11",
+        "status": "not_admitted",
+        "worker_peak_gib": 4.591712951660156,
+        "worker_reserve_gib": 5.739641189575195
+      }
+    ],
+    "status": "measured_admission",
+    "study_rss_limit_gib": 44,
+    "utc": "2026-09-22T00:52:48.556880+00:00"
   },
   "target_prediction_launch": {
     "all_packages_and_source_calibrations_complete_before_first_target_job": true,

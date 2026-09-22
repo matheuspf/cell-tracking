@@ -157,15 +157,15 @@
       "sum_seconds": 8627.663588691972
     },
     "predict/C01/target": {
-      "executions": 34,
-      "maximum_seconds": 748.2507693330008,
-      "median_seconds": 202.43281941499845,
-      "minimum_seconds": 87.0843368220012,
-      "p95_seconds": 463.7057548260018,
+      "executions": 80,
+      "maximum_seconds": 987.3827399290021,
+      "median_seconds": 189.17558837099932,
+      "minimum_seconds": 28.537801788999786,
+      "p95_seconds": 619.2198304679987,
       "status_counts": {
-        "complete": 34
+        "complete": 80
       },
-      "sum_seconds": 7950.09608177
+      "sum_seconds": 19475.14867212399
     },
     "prepare-actions/calibration": {
       "executions": 216,
@@ -226,8 +226,8 @@
   },
   "controller_receipt_coverage_note": "Some completed controller receipts were replaced by verified-cache reuse during the first pipeline restart. Their exact original process wall times are unavailable in the current job receipts. Original bank/prediction timings and all GPU lease charges remain available separately; optimizer windows are measured lower-bound intervals, not reconstructed process wall times.",
   "cpu_dispatch_scope": "Limits apply to each active batch. Overlapping source queues also obey the shared 44 GiB RSS and host/disk floors; increases use measured aggregate memory projections.",
-  "cpu_job_resource_receipt_files": 5015,
-  "cpu_job_resource_samples": 3865,
+  "cpu_job_resource_receipt_files": 5062,
+  "cpu_job_resource_samples": 3912,
   "current_cpu_dispatch_options": {
     "cold_workers": 3,
     "workers": 3,
@@ -236,12 +236,12 @@
       "calibration-predict:C11": 5,
       "mine": 6,
       "predict:C00": 8,
-      "predict:C01": 6,
+      "predict:C01": 7,
       "predict:C11": 4,
       "prepare-actions": 6
     }
   },
-  "current_durable_free_bytes": 156181291008,
+  "current_durable_free_bytes": 153949425664,
   "hardware": {
     "cpu": "AMD Ryzen 9 7950X3D",
     "gpu": "NVIDIA RTX 4090",
@@ -592,11 +592,11 @@
       "sum_seconds": 8332.781562316999
     },
     "C01/44b6/20260918": {
-      "completed_clips": 34,
-      "maximum_seconds": 746.2500301,
-      "median_seconds": 200.4650468029995,
-      "p95_seconds": 461.9367384649995,
-      "sum_seconds": 7881.975272182997
+      "completed_clips": 80,
+      "maximum_seconds": 984.9144472570006,
+      "median_seconds": 187.25799097600066,
+      "p95_seconds": 617.2793187419993,
+      "sum_seconds": 19316.421529803003
     }
   },
   "original_source_bank_wall_time": {
@@ -668,13 +668,13 @@
       "sum_seconds": 8348.676568802006
     },
     "C01/44b6/20260918": {
-      "completed_clips": 34,
-      "maximum_seconds": 746.2500301,
-      "mean_seconds": 231.82280212302933,
-      "median_seconds": 200.4650468029995,
-      "minimum_seconds": 84.75170163299845,
-      "p95_seconds": 461.9367384649995,
-      "sum_seconds": 7881.975272182997
+      "completed_clips": 80,
+      "maximum_seconds": 984.9144472570006,
+      "mean_seconds": 241.45526912253754,
+      "median_seconds": 187.25799097600066,
+      "minimum_seconds": 26.63687331500114,
+      "p95_seconds": 617.2793187419993,
+      "sum_seconds": 19316.421529803003
     }
   },
   "pre_journal_accounting": {
@@ -805,5 +805,5 @@
     "lease": "Forward/backward/optimizer, parameter and optimizer-state transfers, and within-update proposal work while owning the GPU lease",
     "limitation": "No separate CUDA-kernel-versus-transfer timing was collected for every production update; lease hours are not pure GPU kernel hours"
   },
-  "updated_utc": "2026-09-22T00:21:55.717313+00:00"
+  "updated_utc": "2026-09-22T00:53:23.323420+00:00"
 }
