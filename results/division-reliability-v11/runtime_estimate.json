@@ -1,118 +1,270 @@
 {
-  "central_serial_phase_projection_hours": 42.51992920508343,
+  "central_serial_phase_projection_hours": 32.602597861624396,
+  "completed_target_predictions": 162,
   "conditional_finish_window_utc": [
-    "2026-09-23T07:33:04.165077+00:00",
-    "2026-09-24T07:33:04.165077+00:00"
+    "2026-09-23T00:21:51.899059+00:00",
+    "2026-09-23T20:21:51.899059+00:00"
   ],
   "conditions": [
     "Uninterrupted host execution",
     "Host memory remains sufficient for the qualified dispatch limits",
-    "Target graph cost comparable to measured source passes",
+    "Remaining graph costs broadly follow the stated measured proxies",
     "No new implementation or resource failure"
   ],
-  "estimated_utc": "2026-09-21T19:33:04.165077+00:00",
+  "estimated_utc": "2026-09-22T00:21:51.899059+00:00",
   "forecast_worker_counts": {
     "C00_prediction": 8,
     "C01_prediction": 6,
     "C11_prediction": 4,
-    "cold": 3,
-    "mining": 6,
-    "source_C01_calibration": 7,
-    "source_C11_calibration": 5
+    "cold": 3
   },
   "limitations": [
-    "Target throughput has not been observed. Cross-embryo graph density and host load can change wall time.",
-    "Per-cell target forecasts use that cell source timing; the uncalibrated last seed uses the other source6 seed timing.",
-    "Source timing measurements were made at different concurrency and host load.",
-    "C00 uses the prior measured 62.7-second source mean; compact suffix and scoring/cold phases retain stated allowances.",
+    "The 24\u201344 hour interval is a judgmental planning range, not a statistical confidence interval.",
+    "Partial target samples can favor fast clips and are ordered by dataset name.",
+    "Unstarted C01/C11 cells use their own completed source calibration process means; cross-embryo graph density can change runtime.",
+    "Source timings reflect different concurrency and host load and include process startup. Target timings come from original prediction receipts.",
+    "C00 uses the completed first target population mean; cold and official-scoring phases retain explicit unmeasured allowances.",
+    "Per-job durations overlap under concurrency; the forecast divides by dispatch limits and may undercount tails.",
     "The registered GPU lease allocation is a compute limit, not a wall-clock ETA."
   ],
   "measured_completed_source_job_statistics": {
-    "calibration-predict/44b6/20260918/C01": {
+    "44b6/20260918/C01": {
+      "completed_clips": 10,
       "maximum_seconds": 978.9900511670021,
       "mean_seconds": 519.5061860366004,
+      "median_seconds": 483.63463749100083,
       "minimum_seconds": 171.17289720500048,
-      "unique_completed_clips": 10
+      "p95_seconds": 978.9900511670021,
+      "sum_seconds": 5195.061860366004
     },
-    "calibration-predict/44b6/20260918/C11": {
+    "44b6/20260918/C11": {
+      "completed_clips": 10,
       "maximum_seconds": 1073.7013936449948,
       "mean_seconds": 561.5261552984994,
+      "median_seconds": 524.1733961655009,
       "minimum_seconds": 184.74831886599713,
-      "unique_completed_clips": 10
+      "p95_seconds": 1073.7013936449948,
+      "sum_seconds": 5615.261552984994
     },
-    "calibration-predict/44b6/314159/C01": {
+    "44b6/314159/C01": {
+      "completed_clips": 10,
       "maximum_seconds": 1172.558487440001,
       "mean_seconds": 851.5991635293001,
+      "median_seconds": 916.3482300639989,
       "minimum_seconds": 340.82322957400174,
-      "unique_completed_clips": 10
+      "p95_seconds": 1172.558487440001,
+      "sum_seconds": 8515.991635293001
     },
-    "calibration-predict/44b6/314159/C11": {
+    "44b6/314159/C11": {
+      "completed_clips": 10,
       "maximum_seconds": 1198.114607372001,
       "mean_seconds": 839.2333165483003,
+      "median_seconds": 906.4345334704994,
       "minimum_seconds": 334.90502722699966,
-      "unique_completed_clips": 10
+      "p95_seconds": 1198.114607372001,
+      "sum_seconds": 8392.333165483004
     },
-    "calibration-predict/6bba/20260918/C01": {
+    "6bba/20260918/C01": {
+      "completed_clips": 21,
       "maximum_seconds": 1069.2918372180002,
       "mean_seconds": 667.1412890074763,
+      "median_seconds": 680.7209038520001,
       "minimum_seconds": 268.6892286740001,
-      "unique_completed_clips": 21
+      "p95_seconds": 835.7038149840009,
+      "sum_seconds": 14009.967069157003
     },
-    "calibration-predict/6bba/20260918/C11": {
+    "6bba/20260918/C11": {
+      "completed_clips": 21,
       "maximum_seconds": 1099.737371401,
       "mean_seconds": 692.965849329762,
+      "median_seconds": 706.0932327610003,
       "minimum_seconds": 267.34691532700026,
-      "unique_completed_clips": 21
+      "p95_seconds": 890.491845904,
+      "sum_seconds": 14552.282835925002
     },
-    "mine/44b6/20260918/None": {
-      "maximum_seconds": 1102.5367351089953,
-      "mean_seconds": 510.58319999780286,
-      "minimum_seconds": 96.49954825400346,
-      "unique_completed_clips": 61
+    "6bba/314159/C01": {
+      "completed_clips": 21,
+      "maximum_seconds": 632.4075748050018,
+      "mean_seconds": 404.4517695987141,
+      "median_seconds": 388.40862556999855,
+      "minimum_seconds": 228.88451327899747,
+      "p95_seconds": 602.6113575419986,
+      "sum_seconds": 8493.487161572997
     },
-    "mine/44b6/314159/None": {
-      "maximum_seconds": 1210.6383088140003,
-      "mean_seconds": 672.1596175706725,
-      "minimum_seconds": 177.74687962500047,
-      "unique_completed_clips": 61
-    },
-    "mine/6bba/20260918/None": {
-      "maximum_seconds": 1223.24010662,
-      "mean_seconds": 638.3075582921309,
-      "minimum_seconds": 207.17587608199938,
-      "unique_completed_clips": 107
-    },
-    "mine/6bba/314159/None": {
-      "maximum_seconds": 1124.6016889460006,
-      "mean_seconds": 405.60014518139536,
-      "minimum_seconds": 216.18126682100046,
-      "unique_completed_clips": 48
+    "6bba/314159/C11": {
+      "completed_clips": 21,
+      "maximum_seconds": 650.2106938069992,
+      "mean_seconds": 414.85841823980894,
+      "median_seconds": 393.52331151399994,
+      "minimum_seconds": 238.78927334899709,
+      "p95_seconds": 614.4385347129974,
+      "sum_seconds": 8712.026783035988
     }
   },
-  "measurement_receipt_sha256": "1704699e200987dc40b9efaea83f5a06475af4bb1612c780f69f9266c5d91e34",
-  "previous_estimate_sha256": "510f7abf01ff74e4c20ee72aa3145ebfdd951f9aa38a66ca75cdab349aa8e332",
+  "measured_target_prediction_statistics": {
+    "C00/44b6/20260918": {
+      "completed_clips": 128,
+      "maximum_seconds": 70.40826913199999,
+      "mean_seconds": 65.22403569376567,
+      "median_seconds": 64.85659478749767,
+      "minimum_seconds": 61.28153383899917,
+      "p95_seconds": 68.55654970199976,
+      "sum_seconds": 8348.676568802006
+    },
+    "C01/44b6/20260918": {
+      "completed_clips": 34,
+      "maximum_seconds": 746.2500301,
+      "mean_seconds": 231.82280212302933,
+      "median_seconds": 200.4650468029995,
+      "minimum_seconds": 84.75170163299845,
+      "p95_seconds": 461.9367384649995,
+      "sum_seconds": 7881.975272182997
+    }
+  },
+  "measurement_receipt_sha256": "fe84d7f8b6a4d749f3a62ddf705d542b68096497268a660fc223cd0d559b6a72",
+  "per_cell_projection": [
+    {
+      "arm": "C00",
+      "basis": "Completed first C00 target population timing",
+      "projected_mean_seconds": 65.22403569376567,
+      "projected_wall_hours": 0.0,
+      "remaining_clips": 0,
+      "seed": 20260918,
+      "source": "44b6",
+      "workers": 8
+    },
+    {
+      "arm": "C01",
+      "basis": "Partial target population timing; completion and clip-order bias possible",
+      "projected_mean_seconds": 231.82280212302933,
+      "projected_wall_hours": 1.0088584907205906,
+      "remaining_clips": 94,
+      "seed": 20260918,
+      "source": "44b6",
+      "workers": 6
+    },
+    {
+      "arm": "C11",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 561.5261552984994,
+      "projected_wall_hours": 4.991343602653328,
+      "remaining_clips": 128,
+      "seed": 20260918,
+      "source": "44b6",
+      "workers": 4
+    },
+    {
+      "arm": "C00",
+      "basis": "Completed first C00 target population timing",
+      "projected_mean_seconds": 65.22403569376567,
+      "projected_wall_hours": 0.28988460308340297,
+      "remaining_clips": 128,
+      "seed": 314159,
+      "source": "44b6",
+      "workers": 8
+    },
+    {
+      "arm": "C01",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 851.5991635293001,
+      "projected_wall_hours": 5.046513561655112,
+      "remaining_clips": 128,
+      "seed": 314159,
+      "source": "44b6",
+      "workers": 6
+    },
+    {
+      "arm": "C11",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 839.2333165483003,
+      "projected_wall_hours": 7.459851702651559,
+      "remaining_clips": 128,
+      "seed": 314159,
+      "source": "44b6",
+      "workers": 4
+    },
+    {
+      "arm": "C00",
+      "basis": "Completed first C00 target population timing",
+      "projected_mean_seconds": 65.22403569376567,
+      "projected_wall_hours": 0.1607953657728251,
+      "remaining_clips": 71,
+      "seed": 20260918,
+      "source": "6bba",
+      "workers": 8
+    },
+    {
+      "arm": "C01",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 667.1412890074763,
+      "projected_wall_hours": 2.192918125904204,
+      "remaining_clips": 71,
+      "seed": 20260918,
+      "source": "6bba",
+      "workers": 6
+    },
+    {
+      "arm": "C11",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 692.965849329762,
+      "projected_wall_hours": 3.4167066182231323,
+      "remaining_clips": 71,
+      "seed": 20260918,
+      "source": "6bba",
+      "workers": 4
+    },
+    {
+      "arm": "C00",
+      "basis": "Completed first C00 target population timing",
+      "projected_mean_seconds": 65.22403569376567,
+      "projected_wall_hours": 0.1607953657728251,
+      "remaining_clips": 71,
+      "seed": 314159,
+      "source": "6bba",
+      "workers": 8
+    },
+    {
+      "arm": "C01",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 404.4517695987141,
+      "projected_wall_hours": 1.3294479463661435,
+      "remaining_clips": 71,
+      "seed": 314159,
+      "source": "6bba",
+      "workers": 6
+    },
+    {
+      "arm": "C11",
+      "basis": "Same package source calibration process timing; target throughput unmeasured",
+      "projected_mean_seconds": 414.85841823980894,
+      "projected_wall_hours": 2.04548247882128,
+      "remaining_clips": 71,
+      "seed": 314159,
+      "source": "6bba",
+      "workers": 4
+    }
+  ],
+  "previous_estimate_sha256": "332ec496e54af98518e6075984c4766db90a75cb5d0c1726fb6fb3beac63a5e4",
   "projected_phase_wall_hours": {
-    "C00_target_prediction": 0.8664791666666667,
-    "C01_target_prediction": 12.510904989976707,
-    "C11_target_prediction": 19.28460854175115,
+    "C00_target_prediction": 0.6114753346290531,
+    "C01_target_prediction": 9.577738124646048,
+    "C11_target_prediction": 17.913384402349298,
     "cold_allowance": 2.5,
-    "official_scoring_freeze_reporting_allowance": 2.0,
-    "remaining_compact_suffix_allowance": 1.75,
-    "remaining_source_margin_checks_allowance": 0.5,
-    "remaining_source_mining": 1.7435252749646166,
-    "remaining_source_raw_calibration": 1.3644112317242858
+    "official_scoring_freeze_reporting_allowance": 2.0
   },
   "remaining_cold_runs": 24,
-  "remaining_compact_updates": 2000,
+  "remaining_compact_updates": 0,
   "remaining_official_scores": 1194,
-  "remaining_source_calibration_clip_arm_jobs": 42,
-  "remaining_source_mining_clips": 59,
-  "remaining_target_clip_arm_predictions": 1194,
+  "remaining_source_calibration_clip_arm_jobs": 0,
+  "remaining_source_mining_clips": 0,
+  "remaining_target_clip_arm_predictions": 1032,
   "remaining_wall_hours_range": [
-    36,
-    60
+    24,
+    44
   ],
+  "required_target_predictions": 1194,
   "scientific_changes": false,
-  "status": "provisional_after_third_cell_source_calibration",
-  "target_scores_opened": false
+  "status": "provisional_after_first_32_C01_target_clips",
+  "target_scores_opened": false,
+  "target_throughput_scope": "Target timing is measured for the complete first C00 population and a partial first C01 population. C11 target timing and all other model cells remain unmeasured."
 }

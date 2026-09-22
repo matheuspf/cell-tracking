@@ -1,6 +1,6 @@
 # Division reliability v11 — running
 
-Actual status at 2026-09-22T00:07:09.322734+00:00: 4/4 C00 fits, 4/4 C01 fits and 4/4 C11 fits complete; 140/1194 target predictions complete; 0/1194 required target clip/arm scores recorded.
+Actual status at 2026-09-22T00:21:56.128325+00:00: 4/4 C00 fits, 4/4 C01 fits and 4/4 C11 fits complete; 162/1194 target predictions complete; 0/1194 required target clip/arm scores recorded.
 
 The immutable schedule is U=8,000 and E=4,000 for both embryos and both seeds. Allocation stays 4/34/18/16 GPU lease-hours for pilots/upstream/event/inference. All six affordability candidates and the 25% margin are in allocation_projection.json. No target outcome selected the schedule.
 
@@ -20,7 +20,7 @@ Source engineering proofs are actual executions, not retained model scores. They
 
 The host-memory guard stopped 6bba/20260918 C11 at recorded update 321 when available RAM reached 9.950 GiB, below the registered 10 GiB floor. The checkpoint preserved at the interruption is update 294; 27 recorded updates require replay on recovery. Recovery status: recovered; interruption-specific replay check: passed. All closed GPU leases remain charged, and no unclosed lease required an extra charge. host_memory_interruption.json contains preservation hashes, the resource trigger and recovery evidence. Recovery compared all 27 replayed update records exactly for samples, losses, gradients, learning rates and denominators. Timing and observation-cache occupancy are excluded. No checkpoint existed at the last compared update, so this does not establish model tensor equality there.
 
-At 2026-09-21T19:33:04.165077+00:00, the provisional remaining wall-time estimate was 36–60 hours. It assumes uninterrupted execution and enough host memory for the documented worker limits. Target throughput was not measured for this estimate. runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.
+At 2026-09-22T00:21:51.899059+00:00, the provisional remaining wall-time estimate was 24–44 hours. It assumes uninterrupted execution and enough host memory for the documented worker limits. Target timing is measured for the complete first C00 population and a partial first C01 population. C11 target timing and all other model cells remain unmeasured. runtime_estimate.json records the phase projections and limitations; this is not a model result or a guaranteed deadline.
 
 A midpoint mining implementation failure exposed a TF32 singleton-reference discrepancy. C11 evaluation workers now set NVIDIA_TF32_OVERRIDE=0 before importing numerical libraries, symmetrically for mining, calibration, prediction and cold inference. Fitting settings, checkpoint parameters, bank definitions and the absolute 1e-5 parity tolerance are unchanged. The three tested 4,096-item embedding batches are bit identical; a complete source C00 image-to-CSV control under the override also matches every graph array and CSV byte. This source precision proof does not replace post-freeze target cold validation. Original failures and compute remain accounted for; compact_precision_repair.json records the correction.
 

@@ -1,0 +1,118 @@
+{
+  "central_serial_phase_projection_hours": 42.51992920508343,
+  "conditional_finish_window_utc": [
+    "2026-09-23T07:33:04.165077+00:00",
+    "2026-09-24T07:33:04.165077+00:00"
+  ],
+  "conditions": [
+    "Uninterrupted host execution",
+    "Host memory remains sufficient for the qualified dispatch limits",
+    "Target graph cost comparable to measured source passes",
+    "No new implementation or resource failure"
+  ],
+  "estimated_utc": "2026-09-21T19:33:04.165077+00:00",
+  "forecast_worker_counts": {
+    "C00_prediction": 8,
+    "C01_prediction": 6,
+    "C11_prediction": 4,
+    "cold": 3,
+    "mining": 6,
+    "source_C01_calibration": 7,
+    "source_C11_calibration": 5
+  },
+  "limitations": [
+    "Target throughput has not been observed. Cross-embryo graph density and host load can change wall time.",
+    "Per-cell target forecasts use that cell source timing; the uncalibrated last seed uses the other source6 seed timing.",
+    "Source timing measurements were made at different concurrency and host load.",
+    "C00 uses the prior measured 62.7-second source mean; compact suffix and scoring/cold phases retain stated allowances.",
+    "The registered GPU lease allocation is a compute limit, not a wall-clock ETA."
+  ],
+  "measured_completed_source_job_statistics": {
+    "calibration-predict/44b6/20260918/C01": {
+      "maximum_seconds": 978.9900511670021,
+      "mean_seconds": 519.5061860366004,
+      "minimum_seconds": 171.17289720500048,
+      "unique_completed_clips": 10
+    },
+    "calibration-predict/44b6/20260918/C11": {
+      "maximum_seconds": 1073.7013936449948,
+      "mean_seconds": 561.5261552984994,
+      "minimum_seconds": 184.74831886599713,
+      "unique_completed_clips": 10
+    },
+    "calibration-predict/44b6/314159/C01": {
+      "maximum_seconds": 1172.558487440001,
+      "mean_seconds": 851.5991635293001,
+      "minimum_seconds": 340.82322957400174,
+      "unique_completed_clips": 10
+    },
+    "calibration-predict/44b6/314159/C11": {
+      "maximum_seconds": 1198.114607372001,
+      "mean_seconds": 839.2333165483003,
+      "minimum_seconds": 334.90502722699966,
+      "unique_completed_clips": 10
+    },
+    "calibration-predict/6bba/20260918/C01": {
+      "maximum_seconds": 1069.2918372180002,
+      "mean_seconds": 667.1412890074763,
+      "minimum_seconds": 268.6892286740001,
+      "unique_completed_clips": 21
+    },
+    "calibration-predict/6bba/20260918/C11": {
+      "maximum_seconds": 1099.737371401,
+      "mean_seconds": 692.965849329762,
+      "minimum_seconds": 267.34691532700026,
+      "unique_completed_clips": 21
+    },
+    "mine/44b6/20260918/None": {
+      "maximum_seconds": 1102.5367351089953,
+      "mean_seconds": 510.58319999780286,
+      "minimum_seconds": 96.49954825400346,
+      "unique_completed_clips": 61
+    },
+    "mine/44b6/314159/None": {
+      "maximum_seconds": 1210.6383088140003,
+      "mean_seconds": 672.1596175706725,
+      "minimum_seconds": 177.74687962500047,
+      "unique_completed_clips": 61
+    },
+    "mine/6bba/20260918/None": {
+      "maximum_seconds": 1223.24010662,
+      "mean_seconds": 638.3075582921309,
+      "minimum_seconds": 207.17587608199938,
+      "unique_completed_clips": 107
+    },
+    "mine/6bba/314159/None": {
+      "maximum_seconds": 1124.6016889460006,
+      "mean_seconds": 405.60014518139536,
+      "minimum_seconds": 216.18126682100046,
+      "unique_completed_clips": 48
+    }
+  },
+  "measurement_receipt_sha256": "1704699e200987dc40b9efaea83f5a06475af4bb1612c780f69f9266c5d91e34",
+  "previous_estimate_sha256": "510f7abf01ff74e4c20ee72aa3145ebfdd951f9aa38a66ca75cdab349aa8e332",
+  "projected_phase_wall_hours": {
+    "C00_target_prediction": 0.8664791666666667,
+    "C01_target_prediction": 12.510904989976707,
+    "C11_target_prediction": 19.28460854175115,
+    "cold_allowance": 2.5,
+    "official_scoring_freeze_reporting_allowance": 2.0,
+    "remaining_compact_suffix_allowance": 1.75,
+    "remaining_source_margin_checks_allowance": 0.5,
+    "remaining_source_mining": 1.7435252749646166,
+    "remaining_source_raw_calibration": 1.3644112317242858
+  },
+  "remaining_cold_runs": 24,
+  "remaining_compact_updates": 2000,
+  "remaining_official_scores": 1194,
+  "remaining_source_calibration_clip_arm_jobs": 42,
+  "remaining_source_mining_clips": 59,
+  "remaining_target_clip_arm_predictions": 1194,
+  "remaining_wall_hours_range": [
+    36,
+    60
+  ],
+  "scientific_changes": false,
+  "status": "provisional_after_third_cell_source_calibration",
+  "target_scores_opened": false
+}
